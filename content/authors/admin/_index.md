@@ -10,32 +10,33 @@ authors:
 superuser: true
 
 # Role/position
-role: Professor of Artificial Intelligence
+role: PhD student, research assistant
 
 # Organizations/Affiliations
 organizations:
-- name: Stanford University
-  url: ""
+- name: Scheffers Lab @ University of Florida
+  url: "schefferslab.com"
 
 # Short bio (displayed in user profile at end of posts)
-bio: My research interests include distributed robotics, mobile computing and programmable matter.
+bio: My research interests include landscape ecology and applied conservation of reptiles and amphibians
 
-interests:
-- Artificial Intelligence
-- Computational Linguistics
-- Information Retrieval
+Interests:
+- species distribution modeling
+- connectivity
+- ecology theory
+- natural history
 
-education:
+Education:
   courses:
-  - course: PhD in Artificial Intelligence
-    institution: Stanford University
-    year: 2012
-  - course: MEng in Artificial Intelligence
-    institution: Massachusetts Institute of Technology
-    year: 2009
-  - course: BSc in Artificial Intelligence
-    institution: Massachusetts Institute of Technology
-    year: 2008
+  - course: PhD, Interdisciplinary Ecology
+    institution: University of Florida
+    year: ~2023
+  - course: MSc, Biology
+    institution: Eastern Kentucky University
+    year: 2017
+  - course: BSc, Biology
+    institution: University of Arkansas
+    year: 2014
 
 # Social/Academic Networking
 # For available icons, see: https://sourcethemes.com/academic/docs/page-builder/#icons
@@ -70,6 +71,4 @@ user_groups:
 - Visitors
 ---
 
-Nelson Bighetti is a professor of artificial intelligence at the Stanford AI Lab. His research interests include distributed robotics, mobile computing and programmable matter. He leads the Robotic Neurobiology group, which develops self-reconfiguring robots, systems of self-organizing robots, and mobile sensor networks.
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate.
+I'm a PhD student in the Scheffers Lab @ University of Florida. I'm native to the foothills of Arkansasâ Ozark Mountains. Reptiles and amphibians are my primary target of scientific curiosity, because, compared to other vertebrates, their nuanced life histories provide unique opportunities for applied and ecological investigations. These things excite me: herping, hiking, swimming & canoeing, coding & data visualization, my fiancÃ©eâKristin, my dogâOllie, cooking, and brewing kombucha. 
