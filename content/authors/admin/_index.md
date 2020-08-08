@@ -18,12 +18,11 @@ organizations:
   url: "schefferslab.com"
 
 # Short bio (displayed in user profile at end of posts)
-bio: My research interests include landscape ecology and applied conservation of reptiles and amphibians
+bio: I like snakes.. salamanders 'n' the like. I write notes. Get data 'n' pictur's too, if'n I can. Ain't much, but it's honest work. 
 
 Interests:
-- species distribution modeling
-- connectivity
-- ecology theory
+- landscape ecology 
+- herpetology
 - natural history
 
 Education:
@@ -45,16 +44,16 @@ Education:
 social:
 - icon: envelope
   icon_pack: fas
-  link: '#contact'  # For a direct email link, use "mailto:test@example.org".
+  link: mailto:jbaecher@ufl.edu 
 - icon: twitter
   icon_pack: fab
-  link: https://twitter.com/GeorgeCushen
+  link: https://twitter.com/AlexBaecher
 - icon: google-scholar
   icon_pack: ai
-  link: https://scholar.google.co.uk/citations?user=sIwtMXoAAAAJ
+  link: https://scholar.google.com/citations?user=zl3lDnEAAAAJ&hl=en
 - icon: github
   icon_pack: fab
-  link: https://github.com/gcushen
+  link: https://github.com/slamander
 # Link to a PDF of your resume/CV from the About widget.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
 # - icon: cv
@@ -71,4 +70,4 @@ user_groups:
 - Visitors
 ---
 
-I'm a PhD student in the Scheffers Lab @ University of Florida. I'm native to the foothills of Arkansasâ Ozark Mountains. Reptiles and amphibians are my primary target of scientific curiosity, because, compared to other vertebrates, their nuanced life histories provide unique opportunities for applied and ecological investigations. These things excite me: herping, hiking, swimming & canoeing, coding & data visualization, my fiancÃ©eâKristin, my dogâOllie, cooking, and brewing kombucha. 
+I'm a PhD student in the Scheffers Lab @ University of Florida. I'm native to the foothills of Arkansas' Ozark Mountains. Reptiles and amphibians are my primary target of scientific curiosity, because, compared to other vertebrates, their nuanced life histories provide unique opportunities for applied and ecological investigations. These things excite me: my fiancée Kristin, my dog Ollie, herping, hiking, swimming & canoeing, coding, cooking, and brewing kombucha. 
