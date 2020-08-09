@@ -1,6 +1,6 @@
 ---
 # Display name
-title: J Alex Baecher
+title: J. Alex Baecher
 
 # Username (this should match the folder name)
 authors:
@@ -10,7 +10,7 @@ authors:
 superuser: true
 
 # Role/position
-role: PhD student, research assistant
+role: PhD student, Research Assistant 
 
 # Organizations/Affiliations
 organizations:
@@ -25,6 +25,7 @@ Interests:
 - connectivity
 - ecology theory
 - natural history
+
 
 Education:
   courses:
@@ -48,27 +49,28 @@ social:
   link: '#contact'  # For a direct email link, use "mailto:test@example.org".
 - icon: twitter
   icon_pack: fab
-  link: https://twitter.com/GeorgeCushen
+  link: https://twitter.com/AlexBaecher
 - icon: google-scholar
   icon_pack: ai
-  link: https://scholar.google.co.uk/citations?user=sIwtMXoAAAAJ
+  link: https://scholar.google.com/citations?user=zl3lDnEAAAAJ&hl=en
 - icon: github
   icon_pack: fab
-  link: https://github.com/gcushen
+  link: https://https://github.com/slamander
 # Link to a PDF of your resume/CV from the About widget.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
-# - icon: cv
-#   icon_pack: ai
-#   link: files/cv.pdf
+- icon: cv
+  icon_pack: ai
+  link: files/cv.pdf
 
 # Enter email to display Gravatar (if Gravatar enabled in Config)
 email: ""
 
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
-user_groups:
-- Researchers
-- Visitors
----
+# user_groups:
+# - Researchers
+# - Visitors
+# ---
 
-I'm a PhD student in the Scheffers Lab @ University of Florida. I'm native to the foothills of Arkansasâ Ozark Mountains. Reptiles and amphibians are my primary target of scientific curiosity, because, compared to other vertebrates, their nuanced life histories provide unique opportunities for applied and ecological investigations. These things excite me: herping, hiking, swimming & canoeing, coding & data visualization, my fiancÃ©eâKristin, my dogâOllie, cooking, and brewing kombucha. 
+I'm a PhD student in the Scheffers Lab @ University of Florida. I'm native to the foothills of Arkansas Ozark Mountains. Reptiles and amphibians are my primary target of scientific curiosity, because, compared to other vertebrates, their nuanced life histories provide unique opportunities for applied and ecological investigations. These things excite me: herping, hiking, swimming & canoeing, coding & data visualization, my fiancee--Kristin, my dog--Ollie, cooking, and brewing kombucha. 
+
