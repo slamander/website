@@ -1,13 +1,25 @@
 +++
 # Hero widget.
-widget = "hero" 
-headless = true  
-active = true 
+widget = "hero"
+active = true
+date = 2020-08-09
+
+title = "weecology"
+
+# Order that this section will appear in.
 weight = 3
 
-#title = ""
+# Overlay a color or image (optional).
+#   Deactivate an option by commenting out the line, prefixing it with `#`.
+[header]
+  overlay_color = "#666"  # An HTML color value.
+  overlay_img = "banner_simple.png"  # Image path relative to your `static/media/` folder.
+  overlay_filter = 0  # Darken the image. Value in range 0-1.
 
-# Hero image (optional). Enter filename of an image in the `static/media/` folder.
-#hero_media = "banner_simple.png"
-overlay_img = "banner_simple.png"
-
+# Call to action button (optional).
+#   Activate the button by specifying a URL and button label below.
+#   Deactivate by commenting out parameters, prefixing lines with `#`.
+[cta]
+  url = ""
+  label = ''
++++
