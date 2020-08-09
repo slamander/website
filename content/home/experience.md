@@ -44,6 +44,14 @@ date_format = "Jan 2006"
   location = "Richmond, KY"
   date_start = "2015-03-15"
   date_end = "2017-12-31"
+  
+[[experience]]
+  title = "Research Assistant"
+  company = "University of Arkansas"
+  company_url = ""
+  location = "Fayetteville, AR"
+  date_start = "2010-08-15"
+  date_end = "2014-12-31"
 
 +++
 
