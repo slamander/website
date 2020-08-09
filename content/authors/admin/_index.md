@@ -54,7 +54,7 @@ social:
   link: https://scholar.google.com/citations?user=zl3lDnEAAAAJ&hl=en
 - icon: github
   icon_pack: fab
-<<<<<<< HEAD
+# <<<<<<< HEAD
   link: https://https://github.com/slamander
   
 # Link to a PDF of your resume/CV from the About widget.
