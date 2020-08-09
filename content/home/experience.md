@@ -18,7 +18,6 @@ date_format = "Jan 2006"
 #   Leave `date_end` empty if it's your current employer.
 #   Begin/end multi-line descriptions with 3 quotes `"""`.
 
-
 [[experience]]
   title = "PhD Student, Research Assistant"
   company = "University of Florida"
@@ -26,13 +25,7 @@ date_format = "Jan 2006"
   location = "Gainesville, FL"
   date_start = "2019-08-19"
   date_end = ""
-  description = """
-  Responsibilities include:
 
-  * Analysing
-  * Modelling
-  * Deploying
-  """
 
 [[experience]]
   title = "Conservation and Research Technician"
@@ -41,13 +34,7 @@ date_format = "Jan 2006"
   location = "Memphis, TN"
   date_start = "2018-01-10"
   date_end = "2019-7-31"
-  description = """
-  Responsibilities include:
 
-  * Analysing
-  * Modelling
-  * Deploying
-  """
 
 
 [[experience]]
@@ -57,12 +44,6 @@ date_format = "Jan 2006"
   location = "Richmond, KY"
   date_start = "2015-03-15"
   date_end = "2017-12-31"
-  description = """
-  Responsibilities include:
 
-  * Analysing
-  * Modelling
-  * Deploying
-  """
 +++
 
