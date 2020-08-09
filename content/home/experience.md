@@ -33,7 +33,7 @@ date_format = "Jan 2006"
   company_url = ""
   location = "Memphis, TN"
   date_start = "2018-01-10"
-  date_end = "2019-7-31"
+  date_end = "2019-07-31"
 
 
 
