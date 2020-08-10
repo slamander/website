@@ -4,7 +4,7 @@ widget = "hero"
 active = true
 date = 2020-08-09
 
-title = "weecology"
+title = "                              Baecher Research"
 
 # Order that this section will appear in.
 weight = 3
