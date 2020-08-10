@@ -24,7 +24,7 @@ math = false
 # Optional featured image (relative to `static/img/` folder).
 [header]
 image = "projects/P_kentucki.jpg"
-caption = "Cumberland Plateau Salamander (Plethodon kentucki) from Lilley Cornett Woods Appalachian Ecological Research Station"
+caption = "Salamanders from Lilley Cornett Woods Appalachian Ecological Research Station"
 
 +++
 
