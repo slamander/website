@@ -15,7 +15,7 @@ role: PhD student, Research Assistant
 # Organizations/Affiliations
 organizations:
 - name: Scheffers Lab @ University of Florida
-  url: "schefferslab.com"
+  url: schefferslab.com
 
 # Short bio (displayed in user profile at end of posts)
 bio: My research interests include landscape ecology and applied conservation of reptiles and amphibians
