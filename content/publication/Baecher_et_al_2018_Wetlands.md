@@ -4,7 +4,7 @@ date = "2020-06-29"
 authors = ["Baecher, J. Alex et al." ]
 publication_types = ["2"]
 
-# Publication name and optional abbreviated version.
+# Publication name and optional abbreviated version
 publication = "Wetlands"
 publication_short = "Wetlands"
 image_preview = "publications/wetlands.png"
