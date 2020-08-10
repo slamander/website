@@ -14,7 +14,7 @@ abstract = "Woodland salamanders are among the most abundant vertebrate animals 
 
 projects = ["Appalachian Salamander Ecology"]
 
-# Links (optional).
+# Links (optional)
 url_custom = [{name = "HTML", url = "https://doi.org/10.1002/ece3.4736"}]
 url_pdf = "https://onlinelibrary.wiley.com/doi/epdf/10.1002/ece3.4736"
 url_preprint = ""
