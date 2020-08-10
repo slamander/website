@@ -15,9 +15,9 @@ abstract = "Gape-limited predators, such as snakes, might rely on phenotypic pla
 projects = ["Reptile and Amphibian Ecology"]
 
 # Links (optional).
-url_custom = [{name = "HTML", url = "https://www.researchgate.net/deref/http%3A%2F%2Fdx.doi.org%2F10.1655%2FHerpetologica-D-18-00007?_sg%5B0%5D=xpoe9uqxfYwxiahCck2i1M4L9uG7qAShK3egQqUMdKwRkf3bXTtXStY-4EFZIh_gakCTDZQ714GmWipYsFcrstSGsQ.hsbdAa2lNySi4rrcZLFcGRlHEb5WL2jzqj1p1sMT-5BqLaNdL6IHTJ3HZce4n9C3V1cUJmTAfOs6HVLR2ByfMA"}]
+url_custom = [{name = "HTML", url = "https://doi.org/10.1655/Herpetologica-D-18-00007"}]
 url_pdf = "https://www.researchgate.net/profile/Joseph_Baecher/publication/339696159_Prey_Size_and_Feeding_Rate_Do_Not_Influence_Trophic_Morphology_of_Juvenile_Water_Snakes_Nerodia_sipedon/links/5e62a3df92851c7ce04ad5ae/Prey-Size-and-Feeding-Rate-Do-Not-Influence-Trophic-Morphology-of-Juvenile-Water-Snakes-Nerodia-sipedon.pdf?_sg%5B0%5D=D2u8l1LcdD1BFuPs9HGNR_pV40cE-PBLGdXQyIjV3swbMp4V8NSahnPxLOSLXmNGHUnJg8qX3Kchr1yYO_M9og.M5aRUPyotQUk6o9AAEysmVXMyGscCEpPPNUqNO_gmeTpE5wytEOAFvv8CxG_rG4LmV_enlatiRbJoGlp6bJQBA&_sg%5B1%5D=8x911DqTWL0I-_guOavKPqh5NvevNHQ4OHyZ4w7zxEWptYvgf3pcTTfrZNdeVDJhICa_H3OpWmiovPxrBU3vOcq715odcNWdGkNtQP7GhQ1m.M5aRUPyotQUk6o9AAEysmVXMyGscCEpPPNUqNO_gmeTpE5wytEOAFvv8CxG_rG4LmV_enlatiRbJoGlp6bJQBA&_iepl="
-url_preprint = "https://www.researchgate.net/profile/Joseph_Baecher/publication/339696159_Prey_Size_and_Feeding_Rate_Do_Not_Influence_Trophic_Morphology_of_Juvenile_Water_Snakes_Nerodia_sipedon/links/5e62a3df92851c7ce04ad5ae/Prey-Size-and-Feeding-Rate-Do-Not-Influence-Trophic-Morphology-of-Juvenile-Water-Snakes-Nerodia-sipedon.pdf?_sg%5B0%5D=D2u8l1LcdD1BFuPs9HGNR_pV40cE-PBLGdXQyIjV3swbMp4V8NSahnPxLOSLXmNGHUnJg8qX3Kchr1yYO_M9og.M5aRUPyotQUk6o9AAEysmVXMyGscCEpPPNUqNO_gmeTpE5wytEOAFvv8CxG_rG4LmV_enlatiRbJoGlp6bJQBA&_sg%5B1%5D=8x911DqTWL0I-_guOavKPqh5NvevNHQ4OHyZ4w7zxEWptYvgf3pcTTfrZNdeVDJhICa_H3OpWmiovPxrBU3vOcq715odcNWdGkNtQP7GhQ1m.M5aRUPyotQUk6o9AAEysmVXMyGscCEpPPNUqNO_gmeTpE5wytEOAFvv8CxG_rG4LmV_enlatiRbJoGlp6bJQBA&_iepl="
+url_preprint = ""
 url_code = ""
 
 math = true
