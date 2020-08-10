@@ -9,7 +9,7 @@ title = "Appalachian Salamander Ecology"
 summary = "Natural History, Ecology, and Conservation of Plethodontid Salamanders"
 
 # Optional image to display on homepage (relative to `static/img/` folder).
-image_preview = "projects/P_kentucki.jpg"
+image_preview = "projects/salamanders.jpg"
 
 # Tags: can be used for filtering projects.
 # Example: `tags = ["machine-learning", "deep-learning"]`
