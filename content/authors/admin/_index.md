@@ -72,4 +72,4 @@ user_groups:
 - Visitors
 ---
 
-I'm a PhD student in the Scheffers Lab @ University of Florida. I'm native to the foothills of Arkansas' Ozark Mountains. Reptiles and amphibians are my primary target of scientific curiosity, because, compared to other vertebrates, their nuanced life histories provide unique opportunities for applied and ecological investigations. These things excite me: herping, hiking, swimming & canoeing, coding & data visualization, my fiancee--Kristin, my dog--Ollie, cooking, and brewing kombucha. 
+I'm native to the foothills of Arkansas' Ozark Mountains. Reptiles and amphibians are my primary target of scientific curiosity, because, compared to other vertebrates, their nuanced life histories provide unique opportunities for applied and ecological investigations. These things excite me: herping, hiking, swimming & canoeing, coding & data visualization, my fiancee--Kristin, my dog--Ollie, cooking, and brewing kombucha. 
