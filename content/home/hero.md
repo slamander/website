@@ -8,7 +8,7 @@ weight = 1  # Order that this section will appear.
 title = "Baecher Research"
 
 # Hero image (optional). Enter filename of an image in the `static/media/` folder.
-hero_media = "banner-wide.png"
+hero_media = "banner.png"
 
 [design.background]
   # Apply a background color, gradient, or image.
