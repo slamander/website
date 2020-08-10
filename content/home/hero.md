@@ -10,7 +10,7 @@ title = "Baecher Research"
 hero_media = "headers/banner_wide.jpg"
 
 # Order that this section will appear in.
-weight = 3
+weight = 2
 
 # Overlay a color or image (optional).
 #   Deactivate an option by commenting out the line, prefixing it with `#`.
