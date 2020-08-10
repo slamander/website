@@ -1,7 +1,7 @@
 +++
 widget = "hero"
 active = true
-headless = true
+headless = true # if commented out, banner disappears
 title = "Baecher Research"
 
 [header]
