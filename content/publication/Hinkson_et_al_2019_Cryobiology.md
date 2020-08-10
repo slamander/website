@@ -1,7 +1,7 @@
 +++
 title = "Cryopreservation and hormonal induction of spermic urine in a novel species: The smooth-sided toad (Rhaebo guttatus)"
 date = "2019-4-04"
-authors = ["Kristin M. Hinkson" "J. Alex Baecher", "Sinlan Poo"]
+authors = ["Kristin M. Hinkson", "J. Alex Baecher", "Sinlan Poo"]
 publication_types = ["2"]
 
 # Publication name and optional abbreviated version.
