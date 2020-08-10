@@ -1,7 +1,7 @@
 +++
 title = "Herpetofaunal Communities in Restored and Unrestored Remnant Tallgrass Prairie and Associated Wetlands in Northwest Arkansas, USA"
 date = "2020-06-29"
-authors = ["Baecher, J. Alex et al." ]
+authors = ["J. Alex Baecher", "Philip N. Vogrinc", "Jacquelyn C. Guzy", "Chelsea S. Kross", "JD Willson"]
 publication_types = ["2"]
 
 # Publication name and optional abbreviated version
