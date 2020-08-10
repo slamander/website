@@ -13,7 +13,7 @@ image_preview = "projects/salamanders.jpg"
 
 # Tags: can be used for filtering projects.
 # Example: `tags = ["machine-learning", "deep-learning"]`
-tags = ["field research"]
+tags = ["field ecology", "Woodland salamanders", "stream ecology", "population ecology", "disturbance", "detection probabilities"]
 
 # Optional external URL for project (replaces project detail page).
 external_link = ""
