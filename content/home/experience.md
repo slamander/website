@@ -26,7 +26,6 @@ date_format = "Jan 2006"
   date_start = "2019-08-19"
   date_end = ""
 
-
 [[experience]]
   title = "Conservation and Research Technician"
   company = "Memphis Zoo"
@@ -35,10 +34,8 @@ date_format = "Jan 2006"
   date_start = "2018-01-10"
   date_end = "2019-07-31"
 
-
-
 [[experience]]
-  title = "Graduate Assistant"
+  title = "MSc Student, Teaching Assistant"
   company = "Eastern Kentucky University"
   company_url = ""
   location = "Richmond, KY"
@@ -46,7 +43,7 @@ date_format = "Jan 2006"
   date_end = "2017-12-31"
   
 [[experience]]
-  title = "Research Assistant"
+  title = "Research Technician"
   company = "University of Arkansas"
   company_url = ""
   location = "Fayetteville, AR"
