@@ -7,13 +7,13 @@ date = 2020-08-10
 title = "Baecher Research"
 
 # Order that this section will appear in.
-weight = 3
+weight = 1
 
 # Overlay a color or image (optional).
 #   Deactivate an option by commenting out the line, prefixing it with `#`.
 [header]
   overlay_color = "#666"  # An HTML color value.
-  overlay_img = "headers/banner-wide.jpg"  # Image path relative to your `static/media/` folder.
+  overlay_img = "banner-wide.jpg"  # Image path relative to your `static/media/` folder.
   overlay_filter = 0.01  # Darken the image. Value in range 0-1.
 
 # Call to action button (optional).
