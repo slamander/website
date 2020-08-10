@@ -4,7 +4,7 @@ active = true
 headless = true
 title = "Baecher Research"
 
-[design.background]
+[background]
 
 image = "headers/banner_wide.jpg"
 
