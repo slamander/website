@@ -24,7 +24,7 @@ math = false
 # Optional featured image (relative to `static/img/` folder).
 [header]
 image = "projects/herps.png"
-caption = "Salamanders from Lilley Cornett Woods Appalachian Ecological Research Station"
+caption = ""
 
 +++
 
