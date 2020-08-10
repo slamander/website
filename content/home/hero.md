@@ -8,7 +8,7 @@ weight = 1  # Order that this section will appear.
 title = "Baecher Research"
 
 # Hero image (optional). Enter filename of an image in the `static/media/` folder.
-hero_media = "headers/banner-wide.png"
+hero_media = "banner-wide.png"
 
 [design.background]
   # Apply a background color, gradient, or image.
@@ -20,11 +20,11 @@ hero_media = "headers/banner-wide.png"
   # color = "navy"
   
   # Background gradient.
-  gradient_start = "#4bb4e3"
-  gradient_end = "#2b94c3"
+  # gradient_start = "#4bb4e3"
+  # gradient_end = "#2b94c3"
   
   # Background image.
-  image = "headers/banner-wide.png"  # Name of image in `static/media/`.
+  image = "banner-wide.png"  # Name of image in `static/media/`.
   # image_darken = 0.6  # Darken the image? Range 0-1 where 0 is transparent and 1 is opaque.
   image_size = "contain"  #  Options are `cover` (default), `contain`, or `actual` size.
   # image_position = "center"  # Options include `left`, `center` (default), or `right`.
