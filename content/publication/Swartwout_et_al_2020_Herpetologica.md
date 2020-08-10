@@ -1,7 +1,7 @@
 +++
 title = "Prey Size and Feeding Rate Do Not Influence Trophic Morphology of Juvenile Water Snakes (Nerodia sipedon)"
 date = "2020-03-04"
-authors = ["Meredith C. Swartwout, "Philip Vogrinc", "J. Alex Baecher", "Chelsea Kross", "John D. Willson"]
+authors = ["Meredith C. Swartwout et al."] # + "Philip Vogrinc", "J. Alex Baecher", "Chelsea Kross", "John D. Willson
 publication_types = ["2"]
 
 # Publication name and optional abbreviated version.
