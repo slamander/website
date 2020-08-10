@@ -7,7 +7,7 @@ date = 2020-08-10
 title = "Baecher Research"
 
 # Order that this section will appear in.
-weight = 1
+weight = 3
 
 # Overlay a color or image (optional).
 #   Deactivate an option by commenting out the line, prefixing it with `#`.
