@@ -19,7 +19,6 @@ url_custom = [{name = "HTML", url = "https://doi.org/10.1002/ece3.4736"}]
 url_pdf = "https://onlinelibrary.wiley.com/doi/epdf/10.1002/ece3.4736"
 url_preprint = ""
 url_code = "https://zenodo.org/record/1313705#.XzGokShKhhE"
-url_custom = [{name = "data", url = "https://portal.edirepository.org/nis/mapbrowse?packageid=edi.250.1"}]
 
 
 math = true
