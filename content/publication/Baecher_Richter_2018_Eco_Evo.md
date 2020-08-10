@@ -16,9 +16,11 @@ projects = ["Appalachian Salamander Ecology"]
 
 # Links (optional).
 url_custom = [{name = "HTML", url = "https://doi.org/10.1002/ece3.4736"}]
-url_pdf = "https://www.researchgate.net/profile/Joseph_Baecher/publication/329399882_Environmental_gradients_in_old-growth_Appalachian_forest_predict_fine-scale_distribution_co-occurrence_and_density_of_woodland_salamanders/links/5c069544a6fdcc315f9c0d22/Environmental-gradients-in-old-growth-Appalachian-forest-predict-fine-scale-distribution-co-occurrence-and-density-of-woodland-salamanders.pdf?_sg%5B0%5D=4RjqlBuMq5yszQS48hK4FXhDP1jj5DenXCoFCexKhtAcw0lxBMQWQ2yemP_nFqckHUANym1I752oS5b4AqJayw.oqG1fz8BMIPlCymAMbM8kG5f0rIlhbZY6qB_kDELAFkmtEnY3xWNUVuRmH-9ExYhKGkEIfYD-NkGsNTNZM1J5g&_sg%5B1%5D=LRXJlZ08P8xMKV9fIF3BGQq_o_dSCY9gvuavPT_Dg3nlVQPMnV6uj2_5qCyhQqMq16fjYVZTrjxW8Bfj5qn5ilQDdmSFWygVjOU7T7NMPB0D.oqG1fz8BMIPlCymAMbM8kG5f0rIlhbZY6qB_kDELAFkmtEnY3xWNUVuRmH-9ExYhKGkEIfYD-NkGsNTNZM1J5g&_iepl="
-url_preprint = "https://doi.org/10.1002/ece3.4736"
-url_code = ""
+url_pdf = "https://onlinelibrary.wiley.com/doi/epdf/10.1002/ece3.4736"
+url_preprint = ""
+url_code = "https://zenodo.org/record/1313705#.XzGokShKhhE"
+url_custom = [{name = "data", url = "https://portal.edirepository.org/nis/mapbrowse?packageid=edi.250.1"}]
+
 
 math = true
 highlight = true
