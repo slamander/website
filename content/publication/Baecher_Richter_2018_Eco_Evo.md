@@ -24,5 +24,5 @@ math = true
 highlight = true
 [header]
 image = "publications/Eco_evo.png" # title snippet
-caption = "Estimated densities of Appalachian salamanders along environmental gradient"
+caption = ""
 +++
