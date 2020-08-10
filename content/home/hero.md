@@ -1,16 +1,14 @@
 +++
-# Hero widget.
 widget = "hero"
 active = true
-
 headless = true
-
 title = "Baecher Research"
 
-hero_media = "headers/banner_wide.jpg"
+[design.background]
 
-# Order that this section will appear in.
-weight = 4
+image = "headers/banner_wide.jpg"
+
+weight = 10 # Order that this section will appear in.
 
 # Overlay a color or image (optional).
 #   Deactivate an option by commenting out the line, prefixing it with `#`.
