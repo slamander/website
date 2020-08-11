@@ -12,9 +12,8 @@ title = "Baecher Research"
 
 [design.background]
 
-  
   # Background image.
-   image = "arizona.jpg"  # Name of image in `static/media/`.
+   image = "arizona_wide.jpg"  # Name of image in `static/media/`.
   # padding = ["25px", "0", "200px", "0"]
   # image_darken = 0.0  # Darken the image? Range 0-1 where 0 is transparent and 1 is opaque.
   # image_size = "actual"  #  Options are `cover` (default), `contain`, or `actual` size.
@@ -25,5 +24,3 @@ title = "Baecher Research"
   text_color_light = false
 
 +++
-
-
