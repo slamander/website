@@ -9,7 +9,7 @@ title = "Baecher Research"
 subtitle = "Interdisciplinary Ecology"
 
 # Hero image (optional). Enter filename of an image in the `static/media/` folder.
- hero_media = "doesnt_exist.png"
+ hero_media = "hero_image.png"
 
 [design.background]
   # Apply a background color, gradient, or image.
@@ -25,7 +25,7 @@ subtitle = "Interdisciplinary Ecology"
   # gradient_end = "#2b94c3"
   
   # Background image.
-   image = "banner_wide_comp.png"  # Name of image in `static/media/`.
+   image = "herp_comp.png"  # Name of image in `static/media/`.
   # image_darken = 0.6  # Darken the image? Range 0-1 where 0 is transparent and 1 is opaque.
   # image_size = "cover"  #  Options are `cover` (default), `contain`, or `actual` size.
   # image_position = "center"  # Options include `left`, `center` (default), or `right`.
