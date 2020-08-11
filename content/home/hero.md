@@ -9,7 +9,7 @@ title = "Baecher Research"
 subtitle = "Interdisciplinary Ecology"
 
 # Hero image (optional). Enter filename of an image in the `static/media/` folder.
-# hero_media = "banner.png"
+ hero_media = "doesnt_exist.png"
 
 [design.background]
   # Apply a background color, gradient, or image.
