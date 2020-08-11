@@ -25,7 +25,7 @@ subtitle = "Interdisciplinary Ecology"
   # gradient_end = "#2b94c3"
   
   # Background image.
-   image = "herp_comp.png"  # Name of image in `static/media/`.
+   image = "herp_comp_small.png"  # Name of image in `static/media/`.
   # padding = ["25px", "0", "200px", "0"]
   # image_darken = 0.0  # Darken the image? Range 0-1 where 0 is transparent and 1 is opaque.
   # image_size = "actual"  #  Options are `cover` (default), `contain`, or `actual` size.
@@ -37,4 +37,4 @@ subtitle = "Interdisciplinary Ecology"
 
 +++
 
-<div style="height: 256px"></div>
+<div style="height: 100px"></div>
