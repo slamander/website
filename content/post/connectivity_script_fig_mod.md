@@ -47,9 +47,7 @@ For this tutorial, you're going to need the following libraries installed:
 * `spocc` 
 * `raster` 
 * `viridis` 
-* `ggthemes` 
-
-<!--more-->
+* `ggthemes`
 
 
 Lets get started
