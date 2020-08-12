@@ -1,5 +1,5 @@
 ---
-title: "Mapping Eoclogical Flow in R (pt 1)"
+title: "Mapping Ecological Flow in R (pt 1)"
 subtitle: "A tutorial on randomized shortest-path (or random walk, a la circuit theory)"
 author: J. Alex Baecher
 date: '2020-08-12'
@@ -97,7 +97,7 @@ that they can be biased. Don’t @ me.
               limit=1000,                                  # limiting query to *the first* 1000 records
               has_coords = T)                              # limiting those 1000 records to those that have geo-referenced data
 
-Now that we have the data, let’s get organized.. Luckily, `spocc` has
+Now that we have the data, let’s get organized. Luckily, `spocc` has
 improved their naming system by removing the species’ binomial name from
 EVERY LAST column, so this is easier to do now. Just to save space, I’m
 also going to do a few cleaning measures.
