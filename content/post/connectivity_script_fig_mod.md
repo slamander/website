@@ -1,7 +1,17 @@
-Mapping Eoclogical Flow in R (pt 1)
+---
+title: "Mapping Eoclogical Flow in R (pt 1)"
+subtitle: "a tutorial on randomized shortest-path"
+author: J. Alex Baecher
+date: '2020-08-12'
+slug: connectivity script
+categories: ["r tutorials"]
+tags: ["Circuit Scape", "Random Walks", "Conductance", "Ecological Modeling"]
+---
+
+*Mapping Eoclogical Flow in R* (pt 1)
 ===================================
 
-a tutorial on randomized shortest-path (or random walk, a la circuit theory) between multiple locations (or populations, or habitats, etc)
+A tutorial on randomized shortest-path (or random walk, a la circuit theory) between multiple locations (or populations, or habitats, etc)
 ------------------------------------------------------------------------------------------------------------------------------------------
 
 *Note* This is simply a tutorial. I’m not (for now) providing a review
