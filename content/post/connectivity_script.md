@@ -132,7 +132,7 @@ Let’s plot our points
 
     ## Regions defined for each Polygons
 
-![](connectivity_script_files/figure-markdown_strict/plot%20presences-1.png)
+![](static/media/posts/figure-markdown_strict/plot%20presences-1.png)
 
 To create a custom study area, shaped to our occurrence points, we can
 create a convex hull around our points using ‘chull’
@@ -170,7 +170,7 @@ Now, we will create a buffer around those points using ‘gBuffer’ in the
 
     ## Warning: Ignoring unknown aesthetics: grou
 
-![](connectivity_script_files/figure-markdown_strict/buffer%20study%20area-1.png)
+![](static/media/posts/figure-markdown_strict/buffer%20study%20area-1.png)
 
 To create our resistance layers for the connectivity analysis, let’s
 download a digital elevation model (DEM) using package ‘elevatr’.
