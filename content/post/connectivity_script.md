@@ -133,7 +133,7 @@ Let’s plot our points
     ## Regions defined for each Polygons
 
 ![](connectivity_script_files/figure-markdown_strict/plot_presences-1.png)
-{{< figure src="connectivity_script_files/figure-markdown_strict/plot_presences-1.png" title="" >}}
+{{< figure library="true" src="posts/connectivity_script_files/figure-markdown_strict/plot_presences-1.png" title="" >}}
 
 To create a custom study area, shaped to our occurrence points, we can
 create a convex hull around our points using ‘chull’
@@ -172,7 +172,7 @@ Now, we will create a buffer around those points using ‘gBuffer’ in the
     ## Warning: Ignoring unknown aesthetics: grou
 
 ![](connectivity_script_files/figure-markdown_strict/buffer_study_area-1.png)
-{{< figure src="connectivity_script_files/figure-markdown_strict/buffer_study_area-1.png" title="" >}}
+{{< figure library="true" src="posts/connectivity_script_files/figure-markdown_strict/buffer_study_area-1.png" title="" >}}
 
 
 To create our resistance layers for the connectivity analysis, let’s
@@ -200,7 +200,7 @@ its surroundings (in a neighborhood of 8 points).
     ## Warning: Removed 18361 rows containing missing values (geom_raster).
 
 ![](connectivity_script_files/figure-markdown_strict/create_layers-1.png)
-{{< figure src="connectivity_script_files/figure-markdown_strict/create_layers-1.png" title="" >}}
+{{< figure library="true" src="posts/connectivity_script_files/figure-markdown_strict/create_layers-1.png" title="" >}}
 
 
     ggplot(as.data.frame(tri, xy=T)) + geom_raster(aes(x=x, y=y, fill=tri)) + 
@@ -209,7 +209,7 @@ its surroundings (in a neighborhood of 8 points).
     ## Warning: Removed 18361 rows containing missing values (geom_raster).
 
 ![](connectivity_script_files/figure-markdown_strict/create_layers-2.png)
-{{< figure src="connectivity_script_files/figure-markdown_strict/create_layers-2.png" title="" >}}
+{{< figure library="true" src="posts/connectivity_script_files/figure-markdown_strict/create_layers-2.png" title="" >}}
 
 
 To simplify our analysis for this demonstration, I’m going to cut down
@@ -227,7 +227,7 @@ calculate 10 paths.
     ## Warning: Removed 18361 rows containing missing values (geom_raster).
 
 ![](connectivity_script_files/figure-markdown_strict/gather_random_sample_of_sites-1.png)
-{{< figure src="connectivity_script_files/figure-markdown_strict/gather_random_sample_of_sites-1.png" title="" >}}
+{{< figure library="true" src="posts/connectivity_script_files/figure-markdown_strict/gather_random_sample_of_sites-1.png" title="" >}}
 
 
 To make our pairwise random walks, we have to create a side index.
@@ -352,7 +352,7 @@ I supplied a value somewhere in the middle.
     ## Warning: Removed 18361 rows containing missing values (geom_raster).
 
 ![](connectivity_script_files/figure-markdown_strict/plot_flow-1.png)
-{{< figure src="connectivity_script_files/figure-markdown_strict/plot_flow-1.png" title="" >}}
+{{< figure library="true" src="posts/connectivity_script_files/figure-markdown_strict/plot_flow-1.png" title="" >}}
 
 
 There you have it!
