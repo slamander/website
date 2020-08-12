@@ -1,34 +1,32 @@
 ---
 title: "Mapping Eoclogical Flow in R (pt 1)"
-subtitle: "a tutorial on randomized shortest-path"
+subtitle: "A tutorial on randomized shortest-path (or random walk, a la circuit theory)"
 author: J. Alex Baecher
 date: '2020-08-12'
 slug: connectivity script
 categories: ["r tutorials"]
-tags: ["Circuit Scape", "Random Walks", "Conductance", "Ecological Modeling"]
+tags: ["Circuitscape", "Random Walks", "Conductance", "Ecological Modeling"]
 ---
 
-*Mapping Eoclogical Flow in R* (pt 1)
-===================================
 
-A tutorial on randomized shortest-path (or random walk, a la circuit theory) between multiple locations (or populations, or habitats, etc)
-------------------------------------------------------------------------------------------------------------------------------------------
+Focusing on randomized paths between multiple locations (or populations, habitats, etc)
+---------------------------------------------------------------------------------------
 
-*Note* This is simply a tutorial. I’m not (for now) providing a review
+**Note** This is simply a tutorial. I’m not (for now) providing a review
 of the literature surrounding ecological connectivity, or commenting the
 different meanings of “connectivity”). This tutorial is strictly for
 demonstrating how to perform such an analysis, because–to my
 knowledge–such a tutorial doesn’t exist. That being said, please let me
 know if you find one!
 
-This analysis can be done in R using one of three methods: 1. using the
-R package `gdistance`, which performs the analysis natively 2. calling
-Circuitscape, an external GUI-based software widely used in ecology,
+This analysis can be done in R using one of two methods: 
+1. using the R package `gdistance`, which performs the analysis natively 
+2. calling Circuitscape, an external GUI-based software widely used in ecology,
 from R
 
 In the future, I will post about using Circuitscape in R, making use of
 command prompt and a combination of packages, including Bill Peterman’s
-`ResistanceGA` For now, I’m going to focus on performing the analysis
+`ResistanceGA`. For now, I’m going to focus on performing the analysis
 natively using gdistance. Although, gdistance is only programmed to
 analysis randomized shortest-path between two locations (a problem
 Circuitscape doesn’t have), I will demonstrate how, through the use of a
@@ -38,6 +36,21 @@ For the analysis I will *only* use widely publically available data
 sets. As for a species, I’ve chosen the very charasmatic Jordan’s Red
 Cheeked Salamander, endemic to the Great Smoky Mountains National Park
 (USA).
+
+For this tutorial, you're going to need the following libraries installed:
+* `gdistance`
+* `tidyverse` 
+* `rgeos`
+* `elevatr` 
+* `ggplot2`
+* `tigris`
+* `spocc` 
+* `raster` 
+* `viridis` 
+* `ggthemes` 
+
+<!--more-->
+
 
 Lets get started
 ----------------
@@ -106,7 +119,7 @@ also going to do a few cleaning measures.
                     latitude) %>%
       SpatialPoints(proj4string = crs(se)) 
 
-*Notes* To remove stacked points, or points that are clustered very
+**Notes** To remove stacked points, or points that are clustered very
 closely, rounded the points to the second decimal place and removed
 duplicates. This step is actually very biologically meaningful. Because
 I want to map potential flow between populations of JRCS, I want each
@@ -346,9 +359,9 @@ the probabilities of passages based on randomized shortest-paths.
     passages <- stack(passages)                                            # create a raster stack of all the passage probabilities
     passages_overlay <- sum(passages)/nrow(Pj_combn)                       # calculate average
 
-*Notes* In our passage function, we set theta, (*θ*), a tuning parameter.
+**Notes** In our passage function, we set theta, (θ), a tuning parameter.
 Extremely low values result in a random walk (equivilant to Circuit
-Theory), but as *θ* increases, the passage converges on least cost path.
+Theory), but as θ increases, the passage converges on least cost path.
 I supplied a value somewhere in the middle.
 
     ggplot(as.data.frame(passages_overlay, xy=T)) + geom_raster(aes(x=x,y=y,fill=layer)) +
