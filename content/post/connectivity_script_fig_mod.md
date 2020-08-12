@@ -30,7 +30,7 @@ command prompt and a combination of packages, including Bill Peterman’s
 natively using gdistance. Although, gdistance is only programmed to
 analysis randomized shortest-path between two locations (a problem
 Circuitscape doesn’t have), I will demonstrate how, through the use of a
-simple loop, you can perform a Circuitscape-esk analysis in R.
+simple loop, you can perform a Circuitscape-esque analysis in R.
 
 For the analysis I will *only* use widely publically available data
 sets. As for a species, I’ve chosen the very charasmatic Jordan’s Red
