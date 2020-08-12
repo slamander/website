@@ -170,7 +170,7 @@ Now, we will create a buffer around those points using ‘gBuffer’ in the
 
     ## Warning: Ignoring unknown aesthetics: grou
 
-![](static/media/posts/figure-markdown_strict/buffer%20study%20area-1.png)
+![](posts/figure-markdown_strict/buffer%20study%20area-1.png)
 
 To create our resistance layers for the connectivity analysis, let’s
 download a digital elevation model (DEM) using package ‘elevatr’.
@@ -196,14 +196,14 @@ its surroundings (in a neighborhood of 8 points).
 
     ## Warning: Removed 18361 rows containing missing values (geom_raster).
 
-![](connectivity_script_files/figure-markdown_strict/create%20layers-1.png)
+![](posts/figure-markdown_strict/create%20layers-1.png)
 
     ggplot(as.data.frame(tri, xy=T)) + geom_raster(aes(x=x, y=y, fill=tri)) + 
       scale_fill_continuous(na.value=NA) + theme_map()
 
     ## Warning: Removed 18361 rows containing missing values (geom_raster).
 
-![](connectivity_script_files/figure-markdown_strict/create%20layers-2.png)
+![](posts/figure-markdown_strict/create%20layers-2.png)
 
 To simplify our analysis for this demonstration, I’m going to cut down
 the number of presence points to only 5. Because we will be calculating
@@ -219,7 +219,7 @@ calculate 10 paths.
 
     ## Warning: Removed 18361 rows containing missing values (geom_raster).
 
-![](connectivity_script_files/figure-markdown_strict/gather%20random%20sample%20of%20sites-1.png)
+![](posts/figure-markdown_strict/gather%20random%20sample%20of%20sites-1.png)
 
 To make our pairwise random walks, we have to create a side index.
 Here’s quick little solution I made which creates a matrix of every
@@ -342,7 +342,7 @@ I supplied a value somewhere in the middle.
 
     ## Warning: Removed 18361 rows containing missing values (geom_raster).
 
-![](connectivity_script_files/figure-markdown_strict/plot%20flow-1.png)
+![](posts/figure-markdown_strict/plot%20flow-1.png)
 
 There you have it!
 
