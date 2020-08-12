@@ -12,13 +12,13 @@ knowledge–such a tutorial doesn’t exist. That being said, please let me
 know if you find one!
 
 This analysis can be done in R using one of three methods: 1. using the
-R package ‘gdistance’, which performs the analysis natively 2. calling
+R package `gdistance`, which performs the analysis natively 2. calling
 Circuitscape, an external GUI-based software widely used in ecology,
 from R
 
 In the future, I will post about using Circuitscape in R, making use of
 command prompt and a combination of packages, including Bill Peterman’s
-‘ResistanceGA’ For now, I’m going to focus on performing the analysis
+`ResistanceGA` For now, I’m going to focus on performing the analysis
 natively using gdistance. Although, gdistance is only programmed to
 analysis randomized shortest-path between two locations (a problem
 Circuitscape doesn’t have), I will demonstrate how, through the use of a
@@ -46,7 +46,7 @@ First, lets download a shapefile to work with
 
 Next, lets download some species occurrence records for Jordan’s Red
 Cheeked Salamander (JRCS) from the Global Biodiversity Information
-Facility using the R package ‘spocc’. In this query, I will pull *only
+Facility using the R package `spocc`. In this query, I will pull *only
 the first* 1000 records. Yes, that means in no particular order, and
 that they can be biased. Don’t @ me.
 
@@ -76,7 +76,7 @@ that they can be biased. Don’t @ me.
               limit=1000,                                  # limiting query to *the first* 1000 records
               has_coords = T)                              # limiting those 1000 records to those that have geo-referenced data
 
-Now that we have the data, let’s get organized.. Luckily, ‘spocc’ has
+Now that we have the data, let’s get organized.. Luckily, `spocc` has
 improved their naming system by removing the species’ binomial name from
 EVERY LAST column, so this is easier to do now. Just to save space, I’m
 also going to do a few cleaning measures.
@@ -107,9 +107,9 @@ from one another (approximately the resolution of the second decimal
 point of a gps coordinate).
 
 I removed points that were suspiciously far outside the cluster of
-presences by creating new variables: “lon” and “lat”, which are Z-scores
+presences by creating new variables: `lon` and `lat`, which are Z-scores
 of the latitude and longitude variables (by subtracting the mean and
-dividing by standard deviation, or using the ‘scale’ function). I them
+dividing by standard deviation, or using the `scale` function). I them
 removed values greater that 2, which represent points that are two
 standard deviations from the mean latitude and mean longitude.
 
@@ -132,11 +132,10 @@ Let’s plot our points
 
     ## Regions defined for each Polygons
 
-![](connectivity_script_files/figure-markdown_strict/plot_presences-1.png)
 {{< figure library="true" src="posts/connectivity_script_files/figure-markdown_strict/plot_presences-1.png" title="" >}}
 
 To create a custom study area, shaped to our occurrence points, we can
-create a convex hull around our points using ‘chull’
+create a convex hull around our points using `chull`
 
     Pj_coords <- Pj_sp@coords                                                  
     Pj_chull <- chull(Pj_sp@coords)                           # Creating convex hull
@@ -147,8 +146,7 @@ create a convex hull around our points using ‘chull’
         list(Polygon(Pj_chull_ends)), ID=1)),
                                  proj4string = crs(se))       # convert coords to SpatialPolygons 
 
-Now, we will create a buffer around those points using ‘gBuffer’ in the
-‘rgeos’ package
+Now, we will create a buffer around those points using `rgeos::gBuffer()`
 
     library(rgeos)
 
@@ -171,18 +169,18 @@ Now, we will create a buffer around those points using ‘gBuffer’ in the
 
     ## Warning: Ignoring unknown aesthetics: grou
 
-![](connectivity_script_files/figure-markdown_strict/buffer_study_area-1.png)
+
 {{< figure library="true" src="posts/connectivity_script_files/figure-markdown_strict/buffer_study_area-1.png" title="" >}}
 
 
 To create our resistance layers for the connectivity analysis, let’s
-download a digital elevation model (DEM) using package ‘elevatr’.
+download a digital elevation model (DEM) using package `elevatr`.
 
     library(elevatr)
     elevation <- get_elev_raster(Pj_poly_buff, z = 8)         # This will find a DEM tile nearest to our polygon 
 
 While elevation is important, we can derive other biologically important
-variables using the ‘raster::terrain()’, inlcuding aspect (direction a
+variables using the `raster::terrain()`, inlcuding aspect (direction a
 hillside is facing) and topographic roughness index (TRI). In very
 simple terms, TRI calculates the change in elevation between a point and
 its surroundings (in a neighborhood of 8 points).
@@ -199,7 +197,7 @@ its surroundings (in a neighborhood of 8 points).
 
     ## Warning: Removed 18361 rows containing missing values (geom_raster).
 
-![](connectivity_script_files/figure-markdown_strict/create_layers-1.png)
+
 {{< figure library="true" src="posts/connectivity_script_files/figure-markdown_strict/create_layers-1.png" title="" >}}
 
 
@@ -208,7 +206,6 @@ its surroundings (in a neighborhood of 8 points).
 
     ## Warning: Removed 18361 rows containing missing values (geom_raster).
 
-![](connectivity_script_files/figure-markdown_strict/create_layers-2.png)
 {{< figure library="true" src="posts/connectivity_script_files/figure-markdown_strict/create_layers-2.png" title="" >}}
 
 
@@ -226,7 +223,6 @@ calculate 10 paths.
 
     ## Warning: Removed 18361 rows containing missing values (geom_raster).
 
-![](connectivity_script_files/figure-markdown_strict/gather_random_sample_of_sites-1.png)
 {{< figure library="true" src="posts/connectivity_script_files/figure-markdown_strict/gather_random_sample_of_sites-1.png" title="" >}}
 
 
@@ -239,7 +235,7 @@ conceivable combination of points:
       as.matrix()
 
 To perform a random walks analysis, we have to create a transition
-matrix using ‘gdistance::transition()’, as well as perform a
+matrix using `gdistance::transition()`, as well as perform a
 geocorrection
 
     library(gdistance)
@@ -305,7 +301,7 @@ geocorrection
         geoCorrection(type="c",multpl=F)
 
 Now comes the fun part. This loop will perform the random walk routine
-using ‘gdistance:passage()’ for each pairwise path, generating a flow
+using `gdistance:passage()` for each pairwise path, generating a flow
 map. This flow map can be considered “conductance” a la Circuitscape, or
 the probabilities of passages based on randomized shortest-paths.
 
@@ -340,7 +336,7 @@ the probabilities of passages based on randomized shortest-paths.
     passages <- stack(passages)                                            # create a raster stack of all the passage probabilities
     passages_overlay <- sum(passages)/nrow(Pj_combn)                       # calculate average
 
-*Notes* In our passage function, we set theta,(*θ*), a tuning parameter.
+*Notes* In our passage function, we set theta, (*θ*), a tuning parameter.
 Extremely low values result in a random walk (equivilant to Circuit
 Theory), but as *θ* increases, the passage converges on least cost path.
 I supplied a value somewhere in the middle.
@@ -351,7 +347,6 @@ I supplied a value somewhere in the middle.
 
     ## Warning: Removed 18361 rows containing missing values (geom_raster).
 
-![](connectivity_script_files/figure-markdown_strict/plot_flow-1.png)
 {{< figure library="true" src="posts/connectivity_script_files/figure-markdown_strict/plot_flow-1.png" title="" >}}
 
 
