@@ -132,7 +132,7 @@ Let’s plot our points
 
     ## Regions defined for each Polygons
 
-![](static/media/posts/figure-markdown_strict/plot%20presences-1.png)
+![Jordan's Red Cheek Salamander occurrence datain Great Smoky Mountian National Park](connectivity_script_files/figure-markdown_strict/plot%20presences-1.png)
 
 To create a custom study area, shaped to our occurrence points, we can
 create a convex hull around our points using ‘chull’
@@ -170,7 +170,7 @@ Now, we will create a buffer around those points using ‘gBuffer’ in the
 
     ## Warning: Ignoring unknown aesthetics: grou
 
-![](posts/figure-markdown_strict/buffer%20study%20area-1.png)
+![Buffering study area](connectivity_script_files/figure-markdown_strict/buffer%20study%20area-1.png)
 
 To create our resistance layers for the connectivity analysis, let’s
 download a digital elevation model (DEM) using package ‘elevatr’.
@@ -196,14 +196,14 @@ its surroundings (in a neighborhood of 8 points).
 
     ## Warning: Removed 18361 rows containing missing values (geom_raster).
 
-![](posts/figure-markdown_strict/create%20layers-1.png)
+![create aspect layer](connectivity_script_files/figure-markdown_strict/create%20layers-1.png)
 
     ggplot(as.data.frame(tri, xy=T)) + geom_raster(aes(x=x, y=y, fill=tri)) + 
       scale_fill_continuous(na.value=NA) + theme_map()
 
     ## Warning: Removed 18361 rows containing missing values (geom_raster).
 
-![](posts/figure-markdown_strict/create%20layers-2.png)
+![create roughness layer](connectivity_script_files/figure-markdown_strict/create%20layers-2.png)
 
 To simplify our analysis for this demonstration, I’m going to cut down
 the number of presence points to only 5. Because we will be calculating
@@ -219,7 +219,7 @@ calculate 10 paths.
 
     ## Warning: Removed 18361 rows containing missing values (geom_raster).
 
-![](posts/figure-markdown_strict/gather%20random%20sample%20of%20sites-1.png)
+![plot newly sampled presence points](connectivity_script_files/figure-markdown_strict/gather%20random%20sample%20of%20sites-1.png)
 
 To make our pairwise random walks, we have to create a side index.
 Here’s quick little solution I made which creates a matrix of every
@@ -326,7 +326,7 @@ the probabilities of passages based on randomized shortest-paths.
     ## [1] "100 % complete"
 
     ##    user  system elapsed 
-    ##   16.47    2.49   18.95
+    ##   16.11    2.46   18.58
 
     passages <- stack(passages)                                            # create a raster stack of all the passage probabilities
     passages_overlay <- sum(passages)/nrow(Pj_combn)                       # calculate average
@@ -342,7 +342,7 @@ I supplied a value somewhere in the middle.
 
     ## Warning: Removed 18361 rows containing missing values (geom_raster).
 
-![](posts/figure-markdown_strict/plot%20flow-1.png)
+![Ecological flow of Jordan's Red Cheek Salamander in the Smokies](connectivity_script_files/figure-markdown_strict/plot%20flow-1.png)
 
 There you have it!
 
