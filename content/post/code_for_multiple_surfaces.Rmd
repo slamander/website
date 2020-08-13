@@ -1,0 +1,46 @@
+---
+title: "Connectivity (working progress)"
+author: "Alex Baecher"
+date: "8/12/2020"
+output: html_document
+---
+
+# ```{r message=FALSE, warning=FALSE}
+# vars_tr <- list()
+# passages <- list()
+# passage_layers <- list()
+# 
+# for(i in 1:nlayers(vars)){
+#   vars_tr[[paste(layers[i])]] <- transition(vars[[i]], transitionFunction = mean, 4) %>%
+#     geoCorrection(type="c",multpl=F)
+#   
+#   if(length(vars_tr) == nlayers(vars)){
+#     print("Completed transition layers")
+#     
+#     for (j in 1:nrow(Pj_combn)){
+#       locations <- SpatialPoints(rbind(Pj_coords[Pj_combn[j,1],1:2],
+#                                        Pj_coords[Pj_combn[j,2],1:2]),
+#                                  crs(Pj_asp))
+#       passages[[j]] <- passage(vars_tr[[i]],
+#                                origin=locations[1],
+#                                goal=locations[2], theta = 0.01)
+#       if(length(passages) == nrow(Pj_combn)){
+#         passages_layer <- stack(passages)
+#         passage_layers[[paste(layers[i])]] <- sum(passages_layer)/nrow(Pj_combn) 
+#       } else{
+#         print(paste((j/nrow(Pj_combn))*100, "% complete"))
+#       }
+#     }
+#   } 
+# }
+# 
+# 
+# passage_layers
+# 
+# ```
+# 
+# ```{r}
+# ggplot(as.data.frame(passages_overlay, xy=T)) + geom_raster(aes(x=x,y=y,fill=layer)) +
+#   scale_fill_viridis("Probability of Passage", na.value = NA) + theme_map() + 
+#   theme(legend.position = "right")
+# ```
