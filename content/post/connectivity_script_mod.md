@@ -161,7 +161,7 @@ Let’s plot our points
     ## Warning: Ignoring unknown aesthetics: grou
 
     ## Regions defined for each Polygons
-{{< figure src="connectivity_script_files/figure-markdown_strict/plot_presences-1.png" title="Jordan's Red Cheeked Salamander" >}}
+{{< figure library="true" src="connectivity_script_files/figure-markdown_strict/plot_presences-1.png" title="Jordan's Red Cheeked Salamander" >}}
 
 To create a custom study area, shaped to our occurrence points, we can
 create a convex hull around our points using `chull()`.
@@ -215,7 +215,7 @@ its surroundings (in a neighborhood of 8 points).
       scale_fill_continuous(na.value=NA) + theme_map() + theme(legend.position = "right")
 
     ## Warning: Removed 18361 rows containing missing values (geom_raster).
-{{< figure src="connectivity_script_files/figure-markdown_strict/create_layers-1.png" title="creating gis layers for the Great Smoky Mtns" >}}
+{{< figure library="true" src="connectivity_script_files/figure-markdown_strict/create_layers-1.png" title="creating gis layers for the Great Smoky Mtns" >}}
 
 To simplify our analysis for this demonstration, I’m going to cut down
 the number of presence points to only 5. Because we will be calculating
