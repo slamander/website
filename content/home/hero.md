@@ -13,7 +13,7 @@ title = "Baecher Research"
 [design.background]
 
   # Background color.
-  color = "blue"
+  color = "#2962ff"
   
 
   # Background image.
