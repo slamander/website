@@ -153,8 +153,7 @@ Let’s plot our points
     ## Warning: Ignoring unknown aesthetics: grou
 
     ## Regions defined for each Polygons
-
-![](connectivity_script_files/figure-markdown_strict/plot_presences-1.png)
+{{< figure src="connectivity_script_files/figure-markdown_strict/plot_presences-1.png" title="Jordan's Red Cheeked Salamander" >}}
 
 To create a custom study area, shaped to our occurrence points, we can
 create a convex hull around our points using `chull()`.
@@ -184,8 +183,7 @@ Let’s have a look at your buffered polygon:
     ## Regions defined for each Polygons
 
     ## Warning: Ignoring unknown aesthetics: grou
-
-![](connectivity_script_files/figure-markdown_strict/unnamed-chunk-1-1.png)
+{{< figure src="connectivity_script_files/figure-markdown_strict/unnamed-chunk-1-1.png" title="Buffered polygon" >}}
 
 To create our resistance layers for the connectivity analysis, let’s
 download a digital elevation model (DEM) using package `elevatr`.
@@ -209,8 +207,7 @@ its surroundings (in a neighborhood of 8 points).
       scale_fill_continuous(na.value=NA) + theme_map() + theme(legend.position = "right")
 
     ## Warning: Removed 18361 rows containing missing values (geom_raster).
-
-![](connectivity_script_files/figure-markdown_strict/create_layers-1.png)
+{{< figure src="connectivity_script_files/figure-markdown_strict/create_layers-1.png" title="creating gis layers for the Great Smoky Mtns" >}}
 
 To simplify our analysis for this demonstration, I’m going to cut down
 the number of presence points to only 5. Because we will be calculating
@@ -225,8 +222,7 @@ calculate 10 paths.
       scale_fill_continuous(na.value=NA) + theme_map()
 
     ## Warning: Removed 18361 rows containing missing values (geom_raster).
-
-![](connectivity_script_files/figure-markdown_strict/gather_random_sample_of_sites-1.png)
+{{< figure src="connectivity_script_files/figure-markdown_strict/gather_random_sample_of_sites-1.png" title="random sample of sites in the Great Smoky Mtns" >}}
 
 To make our pairwise random walks, we have to create a side index.
 Here’s quick little solution I made which creates a matrix of every
@@ -291,8 +287,7 @@ cost path. I supplied a value somewhere in the middle.
       theme_map() +   theme(legend.position = "right")
 
     ## Warning: Removed 18361 rows containing missing values (geom_raster).
-
-![](connectivity_script_files/figure-markdown_strict/plot_flow-1.png)
+{{< figure src="connectivity_script_files/figure-markdown_strict/plot_flow-1.png" title="Ecological Flow of Jordan's Red Cheeked Salamander" >}}
 
 There you have it!
 
