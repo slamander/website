@@ -9,28 +9,23 @@
   weight = 10
 
 [[main]]
-  name = "CV"
-  url = "files/cv.pdf"
-  weight = 20
-
-[[main]]
   name = "Projects"
   url = "#projects"
-  weight = 30
+  weight = 20
 
 [[main]]
   name = "Publications"
   url = "#publications"
-  weight = 40
+  weight = 30
 
 [[main]]
-  name = "Posts"
+  name = "R projects"
   url = "#posts"
-  weight = 50
+  weight = 40
 
 [[main]]
   name = "Contact"
   url = "#contact"
-  weight = 60
+  weight = 50
 
 

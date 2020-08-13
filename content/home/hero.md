@@ -27,23 +27,17 @@ title = "Baecher Research"
   # Text color (true=light or false=dark).
   text_color_light = true
   
-#   [cta]
-#   url = "https://jbaecher.netlify.app/#posts"
-#   label = "Get my CV"
-#   icon_pack = "fas"
-#   icon = "download"
-#   
-#   [cta]
-#   url = "files/cv.pdf"
-#   label = "Get my CV"
-#   icon_pack = "fas"
-#   icon = "download"
-# #   
-# [cta_alt]
-#   # url = "https://sourcethemes.com/academic/"
-#   url = "#contact"
-#   label = "Contact me"
+   [cta]
+   url = "files/cv.pdf"
+   label = "Get my CV"
+   icon_pack = "fas"
+   icon = "download"
+
+
+ [cta_alt]
+   # url = "https://sourcethemes.com/academic/"
+   url = "#contact"
+   label = "Contact me"
 
 +++
 
-jbaecher@ufl.edu
