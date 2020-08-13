@@ -41,8 +41,16 @@ Cheeked Salamander, endemic to the Great Smoky Mountains National Park
 
 For this tutorial, you’re going to need the following libraries
 installed: 
-* `gdistance` \* `tidyverse` \* `rgeos` \* `elevatr` \*
-`ggplot2` \* `tigris` \* `spocc` \* `raster` \* `viridis` \* `ggthemes`
+* `gdistance` 
+* `tidyverse` 
+* `rgeos` 
+* `elevatr` 
+* `ggplot2` 
+* `tigris` 
+* `spocc` 
+* `raster` 
+* `viridis` 
+* `ggthemes`
 
 To save space and reduce the amount of intermediate variables, I will
 make use of the `tidyverse` syntax. This includes using data processing
