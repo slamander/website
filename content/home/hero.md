@@ -13,7 +13,7 @@ title = "Baecher Research"
 [design.background]
 
   # Background color.
-  # color = "blue"
+  color = "blue"
   
 
   # Background image.
@@ -46,4 +46,4 @@ title = "Baecher Research"
 
 +++
 
-** landscape ecology, natural history, r projects **
+jbaecher@ufl.edu
