@@ -6,9 +6,9 @@
 widget = "featured"  # See https://sourcethemes.com/academic/docs/page-builder/
 headless = true  # This file represents a page section.
 active = true  # Activate this widget? true/false
-weight = 20  # Order that this section will appear.
+weight = 15  # Order that this section will appear.
 
-title = "Featured"
+title = "Featured content"
 subtitle = ""
 
 [content]
@@ -27,7 +27,7 @@ subtitle = ""
   # Filter posts by a taxonomy term.
   [content.filters]
     tag = ""
-    category = "r tutorial"
+    category = ""
     publication_type = ""
     author = "J. Alex Baecher"
   
