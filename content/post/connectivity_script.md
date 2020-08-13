@@ -1,3 +1,14 @@
+---
+title: "Mapping Ecological Flow in R (pt 1)"
+subtitle: "A tutorial on randomized shortest-path (or random walk, a la circuit theory)"
+author: J. Alex Baecher
+date: '2020-08-12'
+slug: connectivity script
+categories: ["r tutorials"]
+tags: ["Circuitscape", "Random Walks", "Conductance", "Ecological Modeling"]
+---
+
+
 Focusing on randomized paths between multiple locations (or populations, habitats, etc)
 ---------------------------------------------------------------------------------------
 
@@ -86,9 +97,11 @@ particular order, and that they can be biased. Don’t @ me.
               limit=1000,                                  # limiting query to *the first* 1000 records
               has_coords = T)                              # limiting those 1000 records to those that have geo-referenced data
 
+
 Now that we have the data, we need to organize and clean it using
 `dplyr`. Luckily, `spocc` has improved their naming system, so this is
 easier to do now.
+
 
     Pj_sp <- Pj$gbif$data$Plethodon_jordani %>%            # Grabbing the Darwin-core data from the spocc object
       dplyr::select(longitude,                             # Keep locations and year, discard the rest
