@@ -16,7 +16,10 @@ height = "500px"
 # Slides.
 # Duplicate an `[[item]]` block to add more slides.
 [[item]]
-  title = "Featured R tutorial"
+  title = " 
+   
+    
+     Featured R tutorial"
   content = "Mappling Ecological Flow in R"
   align = "center"  # Choose `center`, `left`, or `right`.
 
