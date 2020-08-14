@@ -29,7 +29,7 @@ height = "375px"
   # Call to action button (optional).
   #   Activate the button by specifying a URL and button label below.
   #   Deactivate by commenting out parameters, prefixing lines with `#`.
-  # cta_label = "Get Academic"
+   cta_label = "take me there"
   cta_url = "https://jbaecher.netlify.app/post/connectivity-script/"
   # cta_icon_pack = "fas"
   # cta_icon = "graduation-cap"
