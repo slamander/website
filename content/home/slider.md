@@ -30,7 +30,7 @@ height = "375px"
   #   Activate the button by specifying a URL and button label below.
   #   Deactivate by commenting out parameters, prefixing lines with `#`.
   # cta_label = "Get Academic"
-  # cta_url = "https://sourcethemes.com/academic/"
+  cta_url = "https://jbaecher.netlify.app/post/connectivity-script/"
   # cta_icon_pack = "fas"
   # cta_icon = "graduation-cap"
   
@@ -41,7 +41,8 @@ height = "375px"
 # 
 #   overlay_color = "#555"  # An HTML color value.
  overlay_img = "publications/Herpetologica.png" 
-   overlay_filter = 0.5  # Darken the image. Value in range 0-1.
+ overlay_filter = 0.5  # Darken the image. Value in range 0-1.
+ cta_url = "https://jbaecher.netlify.app/publication/swartwout_et_al_2020_herpetologica/"
 # 
 [[item]]
   title = "New papers"
@@ -50,5 +51,6 @@ height = "375px"
 # 
 #   overlay_color = "#333"  # An HTML color value.
   overlay_img = "publications/thb.png"
+  cta_url = "https://jbaecher.netlify.app/publication/baecher_et_al_2020_thb/"
   overlay_filter = 0.5  # Darken the image. Value in range 0-1.
 +++
