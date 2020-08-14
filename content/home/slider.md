@@ -16,7 +16,7 @@ height = "500px"
 # Slides.
 # Duplicate an `[[item]]` block to add more slides.
 [[item]]
-  title = "Featured r tutorial"
+  title = "Featured R tutorial"
   content = "Mappling Ecological Flow in R"
   align = "center"  # Choose `center`, `left`, or `right`.
 
@@ -26,6 +26,7 @@ height = "500px"
   overlay_img = "posts/connectivity_script_files/figure-markdown_strict/plot_flow-1.png" 
   #   overlay_filter = 0.1  # Darken the image. Value in range 0-1.
 
+text_color_light = false
   # Call to action button (optional).
   #   Activate the button by specifying a URL and button label below.
   #   Deactivate by commenting out parameters, prefixing lines with `#`.
