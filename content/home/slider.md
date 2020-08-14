@@ -49,6 +49,6 @@ height = "375px"
    align = "left"
 # 
 #   overlay_color = "#333"  # An HTML color value.
-  overlay_img = "publication/thb.png"
+  overlay_img = "publications/thb.png"
   overlay_filter = 0.5  # Darken the image. Value in range 0-1.
 +++
