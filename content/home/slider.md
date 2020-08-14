@@ -7,7 +7,7 @@ weight = 2  # Order that this section will appear.
 
 # Slide interval.
 # Use `false` to disable animation or enter a time in ms, e.g. `5000` (5s).
-interval = false
+interval = '20000'
 
 # Slide height (optional).
 # E.g. `500px` for 500 pixels or `calc(100vh - 70px)` for full screen.
@@ -26,7 +26,6 @@ height = "375px"
   overlay_img = "posts/connectivity_script_files/figure-markdown_strict/plot_flow-1.png" 
   #   overlay_filter = 0.1  # Darken the image. Value in range 0-1.
 
-text_color_light = false
   # Call to action button (optional).
   #   Activate the button by specifying a URL and button label below.
   #   Deactivate by commenting out parameters, prefixing lines with `#`.
@@ -36,21 +35,20 @@ text_color_light = false
   # cta_icon = "graduation-cap"
 
 # [[item]]
-#   title = "Left"
-#   content = "I am left aligned :smile:"
+#   title = "New papers"
+#   content = "HERPETOLOGICA 2020"
 #   align = "left"
 # 
 #   overlay_color = "#555"  # An HTML color value.
-#   overlay_img = "posts/connectivity_script_files/figure-markdown_strict/plot_flow-1.png" 
-#   overlay_filter = 0.5  # Darken the image. Value in range 0-1.
+ overlay_img = "publications/Herpetologica.png" 
+ overlay_filter = 0.5  # Darken the image. Value in range 0-1.
 # 
 # [[item]]
-#   title = "Right"
-#   content = "I am right aligned :smile:"
-#   align = "right"
+#   title = "New papers"
+#   content = "Herpetological Bulletin"
+#   align = "left"
 # 
 #   overlay_color = "#333"  # An HTML color value.
-#   overlay_img = ""  # Image path relative to your `static/media/` folder.
-#   overlay_filter = 0.5  # Darken the image. Value in range 0-1.
+  overlay_img = "publication/tbh.png"
+  overlay_filter = 0.5  # Darken the image. Value in range 0-1.
 +++
-Mapping Ecological Flow in R
