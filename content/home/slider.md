@@ -16,8 +16,8 @@ height = "400px"
 # Slides.
 # Duplicate an `[[item]]` block to add more slides.
 [[item]]
-  title = " "
-  content = "Mappling Ecological Flow in R"
+  title = "R tutorial:"
+  content = "Mapping Ecological Flow in R"
   align = "center"  # Choose `center`, `left`, or `right`.
 
   # Overlay a color or image (optional).
