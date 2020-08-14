@@ -3,17 +3,17 @@
 date = "2020-08-10"
 
 # Project title.
-title = "Reptile and Amphibian Ecology"
+title = "Climate-induced species redistribution"
 
 # Project summary to display on homepage.
-summary = "Natural History, Ecology, and Conservation of Herpetofauna"
+summary = "Modeling the spatial dynamics of invasive species"
 
 # Optional image to display on homepage (relative to `static/img/` folder).
-image_preview = "projects/herps.png"
+#image_preview = "projects/herps.png"
 
 # Tags: can be used for filtering projects.
 # Example: `tags = ["machine-learning", "deep-learning"]`
-tags = ["population dynamics", "disturbance", "anurans", "salamanders", "snakes", "wetlands", "forest"]
+tags = ["species distribution modeling", "connectivity", "landscape prioritization", "range shifts", "transboundary"]
 
 # Optional external URL for project (replaces project detail page).
 external_link = ""
