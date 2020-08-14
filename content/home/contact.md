@@ -6,7 +6,7 @@ active = true  # Activate this widget? true/false
 weight = 9  # Order that this section will appear.
 
 title = "Contact"
-subtitle = ""
+subtitle = "jbaecher(at)ufl(dot)edu"
 
 # Automatically link email and phone?
 autolink = true
