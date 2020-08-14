@@ -33,22 +33,22 @@ height = "375px"
   # cta_url = "https://sourcethemes.com/academic/"
   # cta_icon_pack = "fas"
   # cta_icon = "graduation-cap"
-
-# [[item]]
-#   title = "New papers"
-#   content = "HERPETOLOGICA 2020"
-#   align = "left"
+  
+ [[item]]
+   title = "New papers"
+   content = "HERPETOLOGICA 2020"
+   align = "left"
 # 
 #   overlay_color = "#555"  # An HTML color value.
  overlay_img = "publications/Herpetologica.png" 
-#   overlay_filter = 0.5  # Darken the image. Value in range 0-1.
+   overlay_filter = 0.5  # Darken the image. Value in range 0-1.
 # 
-# [[item]]
-#   title = "New papers"
-#   content = "Herpetological Bulletin"
-#   align = "left"
+[[item]]
+  title = "New papers"
+   content = "Herpetological Bulletin 2020"
+   align = "left"
 # 
 #   overlay_color = "#333"  # An HTML color value.
   overlay_img = "publication/tbh.png"
-#   overlay_filter = 0.5  # Darken the image. Value in range 0-1.
+  overlay_filter = 0.5  # Darken the image. Value in range 0-1.
 +++
