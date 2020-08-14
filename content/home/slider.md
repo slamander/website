@@ -41,7 +41,7 @@ height = "375px"
 # 
 #   overlay_color = "#555"  # An HTML color value.
  overlay_img = "publications/Herpetologica.png" 
- overlay_filter = 0.5  # Darken the image. Value in range 0-1.
+#   overlay_filter = 0.5  # Darken the image. Value in range 0-1.
 # 
 # [[item]]
 #   title = "New papers"
@@ -50,5 +50,5 @@ height = "375px"
 # 
 #   overlay_color = "#333"  # An HTML color value.
   overlay_img = "publication/tbh.png"
-  overlay_filter = 0.5  # Darken the image. Value in range 0-1.
+#   overlay_filter = 0.5  # Darken the image. Value in range 0-1.
 +++
