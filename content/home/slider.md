@@ -42,7 +42,7 @@ height = "375px"
 #   overlay_color = "#555"  # An HTML color value.
  overlay_img = "publications/Herpetologica.png" 
  overlay_filter = 0.5  # Darken the image. Value in range 0-1.
- cta_url = "https://jbaecher.netlify.app/publication/swartwout_et_al_2020_herpetologica/"
+# cta_url = "https://jbaecher.netlify.app/publication/swartwout_et_al_2020_herpetologica/"
 # 
 [[item]]
   title = "New papers"
@@ -51,6 +51,6 @@ height = "375px"
 # 
 #   overlay_color = "#333"  # An HTML color value.
   overlay_img = "publications/thb.png"
-  cta_url = "https://jbaecher.netlify.app/publication/baecher_et_al_2020_thb/"
+#  cta_url = "https://jbaecher.netlify.app/publication/baecher_et_al_2020_thb/"
   overlay_filter = 0.5  # Darken the image. Value in range 0-1.
 +++
