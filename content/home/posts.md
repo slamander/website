@@ -7,8 +7,8 @@ headless = true  # This file represents a page section.
 active = true  # Activate this widget? true/false
 weight = 7  # Order that this section will appear.
 
-title = "R projects"
-subtitle = "a sandbox for tutorials and fun projects"
+title = "R sandbox"
+subtitle = "a place tutorials and fun projects"
 
 [content]
   # Page type to display. E.g. post, talk, or publication.
