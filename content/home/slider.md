@@ -3,7 +3,7 @@
 widget = "slider"  # See https://sourcethemes.com/academic/docs/page-builder/
 headless = true  # This file represents a page section.
 active = true  # Activate this widget? true/false
-weight = 12  # Order that this section will appear.
+weight = 2  # Order that this section will appear.
 
 # Slide interval.
 # Use `false` to disable animation or enter a time in ms, e.g. `5000` (5s).
@@ -18,7 +18,7 @@ height = "364px"
 [[item]]
   title = "Featured r tutorial"
   content = "Mappling Ecological Flow in R"
-  align = "left"  # Choose `center`, `left`, or `right`.
+  align = "center"  # Choose `center`, `left`, or `right`.
 
   # Overlay a color or image (optional).
   #   Deactivate an option by commenting out the line, prefixing it with `#`.
