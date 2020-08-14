@@ -9,7 +9,7 @@ title = "Climate-induced species redistribution"
 summary = "Modeling the spatial dynamics of invasive species"
 
 # Optional image to display on homepage (relative to `static/img/` folder).
-#image_preview = "projects/herps.png"
+image_preview = "projects/invasion.png"
 
 # Tags: can be used for filtering projects.
 # Example: `tags = ["machine-learning", "deep-learning"]`
