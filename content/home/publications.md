@@ -8,7 +8,7 @@ active = true  # Activate this widget? true/false
 weight = 6  # Order that this section will appear.
 
 title = "Recent Publications"
-subtitle = ""
+subtitle = "click 'see all publications' for more"
 
 [content]
   # Page type to display. E.g. post, talk, or publication.

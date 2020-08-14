@@ -4,8 +4,8 @@ widget = "projects"
 active = true
 date = "2016-04-20T00:00:00"
 
-title = "Projects"
-subtitle = ""
+title = "Research"
+subtitle = "projects I have goin' on"
 
 # Order that this section will appear in.
 weight = 5

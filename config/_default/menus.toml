@@ -9,7 +9,7 @@
   weight = 10
 
 [[main]]
-  name = "Projects"
+  name = "Research"
   url = "#projects"
   weight = 20
 
@@ -19,7 +19,7 @@
   weight = 30
 
 [[main]]
-  name = "R projects"
+  name = "R sandbox"
   url = "#posts"
   weight = 40
 
