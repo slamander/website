@@ -29,5 +29,5 @@ caption = ""
 +++
 
 
-Interests in Reptile and Amphibian Ecology:
+Interests:
  *****
