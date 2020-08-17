@@ -21,14 +21,22 @@ organizations:
 bio: My research interests include landscape ecology and applied conservation of reptiles and amphibians
 
 Interests:
-- species distribution modeling
-- connectivity
-- ecology theory
-- natural history
+- Reproducible Research
+- Ecology Theory
+- Statistics
+- Landscape & Spatial Ecology
+- Population Ecology
+- Herpetology
+- Conservation 
+- Natural History of the Southeastern US:
+  - wetlands
+  - forests
+  - streams 
+  - grasslands 
 
 Education:
   courses:
-  - course: PhD, Interdisciplinary Ecology
+  - course: PhD, Interdisciplinary Ecology (declared emphasis: Statistics)
     institution: University of Florida
     year: ~2023
   - course: MSc, Biology
