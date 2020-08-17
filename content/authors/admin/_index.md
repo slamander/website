@@ -32,7 +32,7 @@ Interests:
 
 Education:
   courses:
-  - course: PhD, Interdisciplinary Ecology (declared emphasis: Statistics)
+  - course: PhD, Interdisciplinary Ecology, Statistics
     institution: University of Florida
     year: ~2023
   - course: MSc, Biology
