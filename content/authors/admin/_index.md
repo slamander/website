@@ -28,11 +28,7 @@ Interests:
 - Population Ecology
 - Herpetology
 - Conservation 
-- Natural History of the Southeastern US:
-  - wetlands
-  - forests
-  - streams 
-  - grasslands 
+- Natural History of the Southeastern USA
 
 Education:
   courses:
