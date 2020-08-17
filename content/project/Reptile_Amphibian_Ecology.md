@@ -23,8 +23,8 @@ math = false
 
 # Optional featured image (relative to `static/img/` folder).
 [header]
-# image = "projects/herps.png"
-caption = ""
+image = "projects/herps.jpg"
+caption = "Lithobates catesbeianus, Ambystoma tigrinum, Anaxyrus fowleri, Lithobates sevosus, Sibon nebulatus, Chelydra serpentina"
 
 +++
 

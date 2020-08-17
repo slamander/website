@@ -23,8 +23,8 @@ math = false
 
 # Optional featured image (relative to `static/img/` folder).
 [header]
-# image = "projects/herps.png"
-caption = ""
+image = "projects/invasion.jpg" 
+caption = "Visual demonstration of large-scale connectivity analysis"
 
 +++
 
