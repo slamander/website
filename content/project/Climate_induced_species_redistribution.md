@@ -24,7 +24,7 @@ math = false
 # Optional featured image (relative to `static/img/` folder).
 [header]
 image = "projects/invasion.jpg" 
-caption = "Visual demonstration of large-scale connectivity analysis"
+# caption = "Visual demonstration of large-scale connectivity analysis"
 
 +++
 
