@@ -13,7 +13,7 @@ title = "Baecher Research"
 [design.background]
 
   # Background color.
-  color = "#000000"
+  color = "#2962ff"
   
   # Background image.
   # image = "headers/jrcs.jpg"  # Name of image in `static/media/`.
