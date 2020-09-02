@@ -8,7 +8,7 @@ weight = 1  # Order that this section will appear.
 title = "Baecher Research"
 
 # Hero image (optional). Enter filename of an image in the `static/media/` folder.
-# hero_media = "hero_image.png"
+ hero_media = "border_connectivity.gif"
 
 [design.background]
 
