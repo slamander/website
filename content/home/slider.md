@@ -21,19 +21,8 @@ height = "375px"
   content = "a"
   align = "center"  # Choose `center`, `left`, or `right`.
 
-  # Overlay a color or image (optional).
-  #   Deactivate an option by commenting out the line, prefixing it with `#`.
-  #   overlay_color = "#666"  # An HTML color value.
   overlay_img = "baecher_hmts.jpeg" 
-  #   overlay_filter = 0.0  # Darken the image. Value in range 0-1.
 
-  # Call to action button (optional).
-  #   Activate the button by specifying a URL and button label below.
-  #   Deactivate by commenting out parameters, prefixing lines with `#`.
-  # cta_label = "take me there"
-  # cta_url = "https://jbaecher.netlify.app/post/connectivity-script/"
-  # cta_icon_pack = "fas"
-  # cta_icon = "graduation-cap"
   
 [[item]]
   title = "R tutorial:"
