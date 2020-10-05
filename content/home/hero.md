@@ -5,15 +5,15 @@ headless = true
 active = true  
 weight = 1  # Order that this section will appear.
 
-title = "Baecher Research"
+title = "Research page of..."
 
 # Hero image (optional). Enter filename of an image in the `static/media/` folder.
-  hero_media = "black_white_glutinosus_trans.png"
+  hero_media = "baecher_hmts.jpeg"
 
 [design.background]
 
   # Background color.
-  color = "#2962ff"
+  color = "#ffffff"
   
   # Background image.
   # image = "headers/jrcs.jpg"  # Name of image in `static/media/`.
