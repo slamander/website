@@ -11,17 +11,17 @@ interval = '20000'
 
 # Slide height (optional).
 # E.g. `500px` for 500 pixels or `calc(100vh - 70px)` for full screen.
-height = "900px"
+height = "356px"
 
 # Slides.
 # Duplicate an `[[item]]` block to add more slides.
 
-[[item]]
-  title = ""
-  content = ""
-  align = "center"  # Choose `center`, `left`, or `right`.
+# [[item]]
+#  title = ""
+#  content = ""
+#  align = "center"  # Choose `center`, `left`, or `right`.
 
-  overlay_img = "baecher_hmts.jpeg" 
+#  overlay_img = "baecher_hmts.jpeg" 
 
   
 [[item]]
