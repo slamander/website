@@ -21,7 +21,7 @@ height = "400px"
   content = ""
   align = "left"  # Choose `center`, `left`, or `right`.
   text_color_light = false
-  overlay_img = "banner_ecology.png" 
+  overlay_img = "banner_ecology_narrow.png" 
   # Call to action button (optional).
   #   Activate the button by specifying a URL and button label below.
   #   Deactivate by commenting out parameters, prefixing lines with `#`.
