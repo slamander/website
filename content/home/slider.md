@@ -11,7 +11,7 @@ interval = '20000'
 
 # Slide height (optional).
 # E.g. `600px` for 500 pixels or `calc(100vh - 70px)` for full screen.
-height = "350px"
+height = "600px"
 
 # Slides.
 # Duplicate an `[[item]]` block to add more slides.
