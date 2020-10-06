@@ -17,15 +17,15 @@ height = "500px"
 # Duplicate an `[[item]]` block to add more slides.
 
  [[item]]
-  title = "New Project"
-  content = "Climate-induced redistribution of invasive species in southeastern USA"
+  title = ""
+  content = ""
   align = "left"  # Choose `center`, `left`, or `right`.
   text_color_light = false
   overlay_img = "banner_ecology.png" 
   # Call to action button (optional).
   #   Activate the button by specifying a URL and button label below.
   #   Deactivate by commenting out parameters, prefixing lines with `#`.
-  cta_label = "take me to projects"
+  # cta_label = "take me to projects"
   cta_url = "https://www.alexbaecher.com/#projects"
   # cta_icon_pack = "fas"
   # cta_icon = "graduation-cap"
