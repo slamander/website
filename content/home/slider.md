@@ -20,7 +20,7 @@ height = "500px"
   title = "New Project"
   content = "Climate-induced redistribution of invasive species in southeastern USA"
   align = "left"  # Choose `center`, `left`, or `right`.
-
+  text_color_light = false
   overlay_img = "banner_ecology_no_text.png" 
   # Call to action button (optional).
   #   Activate the button by specifying a URL and button label below.
