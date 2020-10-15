@@ -16,19 +16,19 @@ height = "500px"
 # Slides.
 # Duplicate an `[[item]]` block to add more slides.
 
- [[item]]
-  title = ""
-  content = ""
-  align = "left"  # Choose `center`, `left`, or `right`.
-  text_color_light = false
-  overlay_img = "ecology_hmts.jpeg" 
-  # Call to action button (optional).
-  #   Activate the button by specifying a URL and button label below.
-  #   Deactivate by commenting out parameters, prefixing lines with `#`.
-   cta_label = "New Project (click here for more)"
-  cta_url = "https://www.alexbaecher.com/project/climate_induced_species_redistribution/"
-  # cta_icon_pack = "fas"
-  # cta_icon = "graduation-cap"
+# [[item]]
+#  title = ""
+#  content = ""
+#  align = "left"  # Choose `center`, `left`, or `right`.
+#  text_color_light = false
+#  overlay_img = "ecology_hmts.jpeg" 
+#  # Call to action button (optional).
+#  #   Activate the button by specifying a URL and button label below.
+#  #   Deactivate by commenting out parameters, prefixing lines with `#`.
+#   cta_label = "New Project (click here for more)"
+#  cta_url = "https://www.alexbaecher.com/project/climate_induced_species_redistribution/"
+#  # cta_icon_pack = "fas"
+#  # cta_icon = "graduation-cap"
 
   
 [[item]]
