@@ -9,7 +9,8 @@ tags: ["Empirical Dynamic Models", "Machine Learning", "Forecasting", "Time Seri
 categories: ["r tutorials"]
 ---
 
-# Introduction to EDMs
+Introduction to EDMs for Forecasting Non-stationary data
+--------------------------------------------------------
 
 EDMs are a data-driven solution for uncovering hidden dynamic behavior
 in natural systems, which are often complex and dynamic (referred to as
