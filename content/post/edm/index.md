@@ -26,7 +26,7 @@ relationship of a variable, or state, at various time lags vary in sign
 and magnitude). Taken’s theorem–the basis of EDM–states that an original
 system’s dynamics can be reconstructed by exploiting the mathematical
 relationships between historical records of a single variable. These
-relationships can be mapped 1-to-1 using the Lorens Attractor (also
+relationships can be mapped 1-to-1 using the Lorenz Attractor (also
 known as the Butterfly attractor).
 
 {{< figure library="true" src="posts/edm_md_files/figure-markdown_strict/edm2.png" title=" " >}}
@@ -250,6 +250,12 @@ $$\\Large \hat{y}\_t = \mu + \phi\_{1}y\_{t-1} + \phi\_{2}y\_{t-1} + \phi\_{3}y\
 ### Not a very good prediction… Let’s try empirical dynamic models!
 
 # Empirical Dynamic Models for forecasting:
+
+### The model is a system of three ordinary differential equations now known as the Lorenz equations:
+
+$$\frac{dx}{dt} = \sigma(y - x)$$
+$$\frac{dy}{dt} = x(p - x) - y$$
+$$\frac{dz}{dt} = xy - \beta z$$
 
 ### We will use the `simplex` function to determine how many dimensions (time lags) are needed to effectively develope a data-driven mechanistic formulation of the time series
 
