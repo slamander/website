@@ -29,7 +29,7 @@ relating states of a system using such lags, causal relationships
 between variables in the original system may be uncovered–providing a
 number of ecologically relevant applications, including forecasting.
 
-{{< figure library="true" src="posts/emd_md_files/figure-markdown_strict/edm.gif" title="Image 1: Projecting time series data using Empirical Dynamic Models" >}}
+{{< figure library="true" src="posts/edm_md_files/figure-markdown_strict/edm.gif" title="Image 1" >}}
 
 
 To reiterate, EDMs are driven by non-linear dynamics in a system (the
@@ -40,7 +40,7 @@ relationships between historical records of a single variable. These
 relationships can be mapped 1-to-1 using the Lorens Attractor (also
 known as the Butterfly attractor).
 
-{{< figure library="true" src="posts/emd_md_files/figure-markdown_strict/edm2.png" title="Image 2: Creating time lags to form a Lorens Attractor" >}}
+{{< figure library="true" src="posts/edm_md_files/figure-markdown_strict/edm2.png" title="Image 2" >}}
 Tutorial on forecasting with stationary and non-stationary time series
 
 ### Load libraries
