@@ -5,10 +5,6 @@ image:
   caption: Global Analysis of Transboundary Connectivity using Omniscape.
   focal_point: Smart
 links:
-# - icon: file-alt
-#   icon_pack: fas
-#   name: Publication
-#   url: https://onlinelibrary.wiley.com/doi/full/10.1002/ece3.4736
 - icon: github
   icon_pack: fab
   name: Code
