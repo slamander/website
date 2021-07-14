@@ -4,7 +4,7 @@ subtitle: "A tutorial on forcasting with stationary and non-stationary time seri
 author: J. Alex Baecher
 date: July 31, 2016
 output: md_document
-slug: connectivity script
+slug: EDM script
 tags: ["Empirical Dynamic Models", "Machine Learning", "Forecasting", "Time Series"]
 categories: ["r tutorials"]
 ---
