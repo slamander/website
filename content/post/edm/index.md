@@ -138,7 +138,7 @@ $$\\Large \hat{y}\_{t} = \mu + \phi\_{1}y\_{t-1} + \phi\_{2}y\_{t-1} + \epsilon\
 
 #### Autoregressive models, with up to 5 hourly lags:
 
-$$\\Large \hat{y}\_t = \mu + \phi\_{1}y\_{t-1} + \[...\] + \phi\_{2}y\_{t-1} + \epsilon\_{t}$$
+$$\\Large \hat{y}\_t = \mu + \phi\_{1}y\_{t-1} + \[...\] + \phi\_{5}y\_{t-1} + \epsilon\_{t}$$
 
     a3 <- Arima(stationary_y_arima[train], c(3,0,0))
     a4 <- Arima(stationary_y_arima[train], c(4,0,0))
