@@ -12,23 +12,7 @@ categories: ["r tutorials"]
 Introduction to EDMs for Forecasting Non-stationary data
 --------------------------------------------------------
 
-EDMs are a data-driven solution for uncovering hidden dynamic behavior
-in natural systems, which are often complex and dynamic (referred to as
-“non-stationarity” or “non-linearity”). This non-linearity means that
-the sign and magnitude of relationships within a system change with
-time, and therefore linear statistical approaches fail to properly
-represent such changes. Rather than assuming that the system is governed
-by any set of equations (i.e. unlike meteorological systems), EDMs
-reconstruct the dynamics of the system from time series data (hence
-“data-driven”) and provide a mechanistic understanding of the system.
-Under EDMs, the dynamics of a system are encoded in the temporal
-ordering of the time series, and the behavior of such a system can be
-explained by relating various states of a system using time lags
-(i.e. estimating the mathematical relationship of one variable at time
-X(t), to the same variable at other times: X(t+1) and X(t+2). By
-relating states of a system using such lags, causal relationships
-between variables in the original system may be uncovered–providing a
-number of ecologically relevant applications, including forecasting.
+EDMs are a data-driven solution for uncovering hidden dynamic behavior in natural systems, which are often complex and dynamic (referred to as “non-stationarity” or “non-linearity”). This non-linearity means that the sign and magnitude of relationships within a system change with time, and therefore linear statistical approaches fail to properly represent such changes. Rather than assuming that the system is governed by any set of equations (i.e. unlike meteorological systems), EDMs reconstruct the dynamics of the system from time series data (hence “data-driven”) and provide a mechanistic understanding of the system. Under EDMs, the dynamics of a system are encoded in the temporal ordering of the time series, and the behavior of such a system can be explained by relating various states of a system using time lags (i.e. estimating the mathematical relationship of one variable at time $X(t)$, to the same variable at other times: $X(t+1)$ and $X(t+2)$. By relating states of a system using such lags, causal relationships between variables in the original system may be uncovered--providing a number of ecologically relevant applications, including forecasting. 
 
 {{< figure library="true" src="posts/edm_md_files/figure-markdown_strict/edm.gif" title=" " >}}
 
