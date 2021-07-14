@@ -167,7 +167,7 @@ $$\\Large \hat{y}\_t = \mu + \phi\_{1}y\_{t-1} + \[...\] + \phi\_{2}y\_{t-1} + \
 
 #### Autoregressive models, with an hourly- and half-day-time dependency:
 
-$$\\Large \hat{y}\_t = \mu + \phi\_{1}y\_{t-1} + \phi\_{2}y\_{t-1} + \epsilon\_{t}$$
+$$\\Large \hat{y}\_t = \mu + \phi\_{1}y\_{t-1} + \phi\_{3}y\_{t-1} + \phi\_{3}y\_{t-1} + \phi\_{4}y\_{t-1} + \phi\_{5}y\_{t-12} + \epsilon\_{t}$$
 
     a41 <- Arima(stationary_y_arima[train], c(4,0,0), c(1,0,0))
 
