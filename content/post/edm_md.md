@@ -7,6 +7,7 @@ output: md_document
 slug: EDM script
 tags: ["Empirical Dynamic Models", "Machine Learning", "Forecasting", "Time Series"]
 categories: ["r tutorials"]
+
 ---
 
 Introduction to EDMs for Forecasting Non-stationary data
