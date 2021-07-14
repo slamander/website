@@ -62,11 +62,13 @@ train <- 1:(length(time)/2)             # indices for the first 2/3 of the time 
 # Arima models for forecasting:
 
 ### Run a standard Arima model, with no lag dependencies
-#### This model is mathematically identical to a intercept only linear model:
-$$\Large y_t = c + e_t$$
+#### This model is mathematically identical to a intercept only linear model with 
+$\epsilon_t$ as an error term. 
+
+$$\Large \hat{y}_{t} = \mu + \epsilon_t$$
 
 #### Where, the intercept is equal to the mean of the response variable: 
-$$\Large c = \frac{1}{n} \sum_{i=1}^{n} y_{i}$$
+$$\Large \mu = \frac{1}{n} \sum_{i=1}^{n} y_{i}$$
 
 ```{r}
 a <- Arima(stationary_y_arima[train])
@@ -81,9 +83,9 @@ autoplot(forecast(a, h = 48)) + geom_path(data = df_ts, aes(x = x, y = y)) + yla
 ```
 
 ### Autoregressive model, with one time dependency--an hourly lag term:
-$$\Large y_{t} = c + b_{1}y_{t-1} + e_{t}$$
+$$\Large \hat{y}_{t} = \mu + \phi_{1}y_{t-1} + \epsilon_t$$
 
-Where, $\Large b_1$ is a coefficient of lag 
+Where, $\Large \phi_1$ is a coefficient of lag 
 ```{r}
 a1 <- Arima(stationary_y_arima[train], c(1,0,0))
 
@@ -95,7 +97,7 @@ autoplot(forecast(a1, h = 48)) + geom_path(data = df_ts, aes(x = x, y = y)) + yl
 ```
 
 ### Autoregressive model, with two hourly lags:
-$$\Large y_{t} = c + b_{1}y_{t-1} + b_{2}y_{t-1} + e_{t}$$
+$$\Large \hat{y}_{t} = \mu + \phi_{1}y_{t-1} + \phi_{2}y_{t-1} + \epsilon_t$$
 
 ```{r}
 a2 <- Arima(stationary_y_arima[train], c(1,0,0))
@@ -108,7 +110,7 @@ autoplot(forecast(a2, h = 48)) + geom_path(data = df_ts, aes(x = x, y = y)) + yl
 ```
 
 #### Autoregressive models, with up to 5 hourly lags:
-$$\Large y_t = c + b_1y_{t-1} + [...] + b_{j}y_{2-j} + e_t$$
+$$\Large \hat{y}_{t} = \mu + \phi_1y_{t-1} + [...] + \phi_{j}y_{2-j} + \epsilon_t$$
 
 ```{r}
 a3 <- Arima(stationary_y_arima[train], c(3,0,0))
@@ -136,7 +138,7 @@ ggarrange(a1_gg, a2_gg, a3_gg, ncol = 1)
 ### Now, we can move into models with different cycle structures. For this, we will consider half day lags (12 hr periods)
 
 #### Autoregressive models, with an hourly- and half-day-time dependency:
-$$\Large y_t = c + b_1y_{t-1} + b_2y_{t-12} + e_t$$
+$$\Large \hat{y}_{t} = \mu + \phi_1y_{t-1} + \phi_2y_{t-12} + \epsilon_t$$
 
 ```{r}
 a41 <- Arima(stationary_y_arima[train], c(4,0,0), c(1,0,0))

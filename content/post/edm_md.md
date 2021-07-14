@@ -94,11 +94,11 @@ Tutorial on forecasting with stationary and non-stationary time series
 
 #### This model is mathematically identical to a intercept only linear model:
 
-$$\\Large \hat{y}\_t = c + e\_t$$
+$$\\Large \hat{y}\_t = \mu + \epsilon\_{t}$$
 
 #### Where, the intercept is equal to the mean of the response variable:
 
-$$\\Large c = \\frac{1}{n} \\sum\_{i=1}^{n} y\_{i}$$
+$$\\Large \mu = \\frac{1}{n} \\sum\_{i=1}^{n} y\_{i}$$
 
     a <- Arima(stationary_y_arima[train])
 
@@ -116,7 +116,7 @@ $$\\Large c = \\frac{1}{n} \\sum\_{i=1}^{n} y\_{i}$$
 
 ### Autoregressive model, with one time dependency–an hourly lag term:
 
-$$\\Large \hat{y}\_{t} = c + b\_{1}y\_{t-1} + e\_{t}$$
+$$\\Large \hat{y}\_{t} = \mu + \phi\_{1}y\_{t-1} + \epsilon\_{t}$$
 
 Where, $\\Large b\_1$ is a coefficient of lag
 
@@ -134,7 +134,7 @@ Where, $\\Large b\_1$ is a coefficient of lag
 
 ### Autoregressive model, with two hourly lags:
 
-$$\\Large \hat{y}\_{t} = c + b\_{1}y\_{t-1} + b\_{2}y\_{t-1} + e\_{t}$$
+$$\\Large \hat{y}\_{t} = \mu + \phi\_{1}y\_{t-1} + \phi\_{2}y\_{t-1} + \epsilon\_{t}$$
 
     a2 <- Arima(stationary_y_arima[train], c(1,0,0))
 
@@ -150,7 +150,7 @@ $$\\Large \hat{y}\_{t} = c + b\_{1}y\_{t-1} + b\_{2}y\_{t-1} + e\_{t}$$
 
 #### Autoregressive models, with up to 5 hourly lags:
 
-$$\\Large \hat{y}\_t = c + b\_1y\_{t-1} + \[...\] + b\_{j}y\_{2-j} + e\_t$$
+$$\\Large \hat{y}\_t = \mu + \phi\_{1}y\_{t-1} + \[...\] + \phi\_{2}y\_{t-1} + \epsilon\_{t}$$
 
     a3 <- Arima(stationary_y_arima[train], c(3,0,0))
     a4 <- Arima(stationary_y_arima[train], c(4,0,0))
@@ -179,7 +179,7 @@ $$\\Large \hat{y}\_t = c + b\_1y\_{t-1} + \[...\] + b\_{j}y\_{2-j} + e\_t$$
 
 #### Autoregressive models, with an hourly- and half-day-time dependency:
 
-$$\\Large \hat{y}\_t = c + b\_1y\_{t-1} + b\_2y\_{t-12} + e\_t$$
+$$\\Large \hat{y}\_t = \mu + \phi\_{1}y\_{t-1} + \phi\_{2}y\_{t-1} + \epsilon\_{t}$$
 
     a41 <- Arima(stationary_y_arima[train], c(4,0,0), c(1,0,0))
 
