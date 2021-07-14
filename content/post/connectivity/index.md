@@ -6,6 +6,10 @@ date: '2020-08-12'
 slug: connectivity script
 categories: ["r tutorials"]
 tags: ["Circuitscape", "Random Walks", "Conductance", "Ecological Modeling"]
+image:
+  caption: ""
+  focal_point: ""
+  preview_only: true
 ---
 
 
