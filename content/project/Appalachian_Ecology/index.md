@@ -1,29 +1,3 @@
----
-title: 'Appalachian Salamander Ecology'
-summary: ''
-author: "J. Alex Baecher"
-tags: ["field ecology", "Woodland salamanders", "stream ecology", "population ecology", "disturbance", "detection probabilities"]
-categories: []
-date: "2019-11-23"
-featured: false
-draft: false
-
-# Featured image
-# To use, add an image named `featured.jpg/png` to your page's folder.
-# Focal points: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight.
-image:
-  caption: ""
-  focal_point: ""
-  preview_only: true
-
-# Projects (optional).
-#   Associate this post with one or more of your projects.
-#   Simply enter your project's folder or file name without extension.
-#   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
-#   Otherwise, set `projects = []`.
-projects: []
----
-
 +++
 # Date this page was created.
 date = "2020-08-10"
@@ -33,6 +7,11 @@ title = "Appalachian Salamander Ecology"
 
 # Project summary to display on homepage.
 summary = "Natural History, Ecology, and Conservation of Plethodontid Salamanders"
+
+image:
+  caption: ""
+  focal_point: ""
+  preview_only: true
 
 # Optional image to display on homepage (relative to `static/img/` folder).
 image_preview = "projects/salamanders.jpg"
