@@ -86,7 +86,7 @@ $$\\Large \hat{y}\_t = \mu + \epsilon\_{t}$$
 
 #### Where, the intercept is equal to the mean of the response variable:
 
-$$\\Large \mu = \\frac{1}{n} \\sum\_{i=1}^{n} y\_{i}$$
+$$\\Large \mu = \\frac{1}{n} \\sum\_{t=1}^{n} y\_{t}$$
 
     a <- Arima(stationary_y_arima[train])
 
