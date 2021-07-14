@@ -106,7 +106,7 @@ $$\\Large \mu = \\frac{1}{n} \\sum\_{t=1}^{n} y\_{t}$$
 
 $$\\Large \hat{y}\_{t} = \mu + \phi\_{1}y\_{t-1} + \epsilon\_{t}$$
 
-Where, $\\Large b\_1$ is a coefficient of lag
+Where, $\\Large \phi\_1$ is a coefficient of lag
 
     a1 <- Arima(stationary_y_arima[train], c(1,0,0))
 
