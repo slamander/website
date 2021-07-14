@@ -16,7 +16,7 @@ links:
 - icon: table
   icon_pack: fa
   name: Data
-  url: https://www.eddmaps.org/
+  url: https://www.eddmaps.org/distribution/viewmap.cfm?sub=20461
 slides: Climate-induced-species-redistribution
 summary: Modeling the spatial dynamics of invasive species.
 tags:
