@@ -30,9 +30,8 @@ title: Environmental gradients in old‚Äêgrowth Appalachian forest predict fine‚Ä
 url_code: https://github.com/slamander/salamander_ecology
 url_dataset: https://doi.org/10.6073/pasta/d834e12ff12dc23d9319fa9f73e40306
 url_pdf: https://onlinelibrary.wiley.com/doi/epdf/10.1002/ece3.4736
-url_custom = [{name = "HTML", url = "https://doi.org/10.1002/ece3.4736"}]
 #url_poster: '#'
-#url_project: ""
+url_project: ""
 #url_slides: ""
 #url_source: '#'
 #url_video: '#'
