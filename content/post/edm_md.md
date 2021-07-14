@@ -1,3 +1,14 @@
+---
+title: "Empirical Dynamic Models for Forecasting"
+subtitle: "A tutorial on forcasting with stationary and non-stationary time series"
+author: J. Alex Baecher
+date: July 31, 2016
+output: md_document
+slug: connectivity script
+tags: ["Empirical Dynamic Models", "Machine Learning", "Forecasting", "Time Series"]
+categories: ["r tutorials"]
+---
+
 # Introduction to EDMs
 
 EDMs are a data-driven solution for uncovering hidden dynamic behavior
