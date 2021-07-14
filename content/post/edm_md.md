@@ -18,8 +18,8 @@ relating states of a system using such lags, causal relationships
 between variables in the original system may be uncovered–providing a
 number of ecologically relevant applications, including forecasting.
 
-![Image 1: Projecting time series data using Empirical Dynamic
-Models](edm.gif)
+{{< figure library="true" src="posts/emd_mod_files/figure-markdown_strict/edm.gif" title="Image 1: Projecting time series data using Empirical Dynamic Models" >}}
+
 
 To reiterate, EDMs are driven by non-linear dynamics in a system (the
 relationship of a variable, or state, at various time lags vary in sign
@@ -29,7 +29,7 @@ relationships between historical records of a single variable. These
 relationships can be mapped 1-to-1 using the Lorens Attractor (also
 known as the Butterfly attractor).
 
-![Image 2: Creating time lags to form a Lorens Attractor](edm2.png) \#
+{{< figure library="true" src="posts/emd_mod_files/figure-markdown_strict/edm2.png" title="Image 2: Creating time lags to form a Lorens Attractor" >}}
 Tutorial on forecasting with stationary and non-stationary time series
 
 ### Load libraries
@@ -59,17 +59,18 @@ Tutorial on forecasting with stationary and non-stationary time series
 
     autoplot(stationary_y_arima) + ylab("Stationary Time Series")
 
-![](edm_md_files/figure-markdown_strict/unnamed-chunk-3-1.png)
+
+{{< figure library="true" src="edm_md_files/figure-markdown_strict/unnamed-chunk-3-1.png" title="Image 3" >}}
 
 ### Visualize autocorrelation structures using the Parial Autocorrelation Function Estimation feature in the `forecast` package (function `acf()`)
 
     acf(stationary_y_arima)
 
-![](edm_md_files/figure-markdown_strict/unnamed-chunk-4-1.png)
+{{< figure library="true" src="edm_md_files/figure-markdown_strict/unnamed-chunk-4-1.png" title="Image 4.1" >}}
 
     pacf(stationary_y_arima)
 
-![](edm_md_files/figure-markdown_strict/unnamed-chunk-4-2.png)
+{{< figure library="true" src="edm_md_files/figure-markdown_strict/unnamed-chunk-4-2.png" title="Image 4.2" >}}
 
 ### Partition data into training and predicting subsets:
 
@@ -92,13 +93,14 @@ $$\\Large c = \\frac{1}{n} \\sum\_{i=1}^{n} y\_{i}$$
     #plot the fitted values from Arima model
     autoplot(fitted(a), col = "blue") + geom_path(data = df_ts, aes(x = x, y = y)) + ylab("Stationary Time Series")
 
-![](edm_md_files/figure-markdown_strict/unnamed-chunk-6-1.png)
+
+{{< figure library="true" src="edm_md_files/figure-markdown_strict/unnamed-chunk-6-1.png" title="Image 6.1" >}}
 
 ### Perform forecast of prediction data using a no-lag Arima model
 
     autoplot(forecast(a, h = 48)) + geom_path(data = df_ts, aes(x = x, y = y)) + ylab("Stationary Time Series")
 
-![](edm_md_files/figure-markdown_strict/unnamed-chunk-7-1.png)
+{{< figure library="true" src="edm_md_files/figure-markdown_strict/unnamed-chunk-7-1.png" title="Image 7.1" >}}
 
 ### Autoregressive model, with one time dependency–an hourly lag term:
 
@@ -111,12 +113,12 @@ Where, $\\Large b\_1$ is a coefficient of lag
     #plot the fitted values from Arima model
     autoplot(fitted(a1), col = "blue") + geom_path(data = df_ts, aes(x = x, y = y)) + ylab("Stationary Time Series")
 
-![](edm_md_files/figure-markdown_strict/unnamed-chunk-8-1.png)
+{{< figure library="true" src="edm_md_files/figure-markdown_strict/unnamed-chunk-8-1.png" title="Image 8.1" >}}
 
     #plot the forecasted values from Arima model
     autoplot(forecast(a1, h = 48)) + geom_path(data = df_ts, aes(x = x, y = y)) + ylab("Stationary Time Series")
 
-![](edm_md_files/figure-markdown_strict/unnamed-chunk-8-2.png)
+{{< figure library="true" src="edm_md_files/figure-markdown_strict/unnamed-chunk-8-2.png" title="Image 8.2" >}}
 
 ### Autoregressive model, with two hourly lags:
 
@@ -127,12 +129,12 @@ $$\\Large y\_{t} = c + b\_{1}y\_{t-1} + b\_{2}y\_{t-1} + e\_{t}$$
     #plot the fitted values from Arima model
     autoplot(fitted(a2), col = "blue") + geom_path(data = df_ts, aes(x = x, y = y)) + ylab("Stationary Time Series")
 
-![](edm_md_files/figure-markdown_strict/unnamed-chunk-9-1.png)
+{{< figure library="true" src="edm_md_files/figure-markdown_strict/unnamed-chunk-9-1.png" title="Image 9.1" >}}
 
     #plot the forecasted values from Arima model
     autoplot(forecast(a2, h = 48)) + geom_path(data = df_ts, aes(x = x, y = y)) + ylab("Stationary Time Series")
 
-![](edm_md_files/figure-markdown_strict/unnamed-chunk-9-2.png)
+{{< figure library="true" src="edm_md_files/figure-markdown_strict/unnamed-chunk-9-2.png" title="Image 9.2" >}}
 
 #### Autoregressive models, with up to 5 hourly lags:
 
@@ -159,7 +161,7 @@ $$\\Large y\_t = c + b\_1y\_{t-1} + \[...\] + b\_{j}y\_{2-j} + e\_t$$
 
     ggarrange(a1_gg, a2_gg, a3_gg, ncol = 1)
 
-![](edm_md_files/figure-markdown_strict/unnamed-chunk-10-1.png)
+{{< figure library="true" src="edm_md_files/figure-markdown_strict/unnamed-chunk-10-1.png" title="Image 10.1" >}}
 
 ### Now, we can move into models with different cycle structures. For this, we will consider half day lags (12 hr periods)
 
@@ -174,7 +176,7 @@ $$\\Large y\_t = c + b\_1y\_{t-1} + b\_2y\_{t-12} + e\_t$$
       geom_path(aes(x = time[train], y = fitted(a41)[train]), col = "blue") +
       ylab("Stationary Time Series")
 
-![](edm_md_files/figure-markdown_strict/unnamed-chunk-11-1.png)
+{{< figure library="true" src="edm_md_files/figure-markdown_strict/unnamed-chunk-11-1.png" title="Image 11.1" >}}
 
 ### Now, we will let the Arima algorithm choose the time lag parameters, using `auto.arima`:
 
@@ -203,7 +205,7 @@ $$\\Large y\_t = c + b\_1y\_{t-1} + b\_2y\_{t-12} + e\_t$$
     autoplot(forecast(aa, h = 48)) + geom_path(data = df_ts, aes(x = x, y = y)) + 
       ylab("Stationary Time Series")
 
-![](edm_md_files/figure-markdown_strict/unnamed-chunk-12-1.png)
+{{< figure library="true" src="edm_md_files/figure-markdown_strict/unnamed-chunk-12-1.png" title="Image 12.1" >}}
 
 # Non-stationary time series
 
@@ -215,7 +217,7 @@ $$\\Large y\_t = c + b\_1y\_{t-1} + b\_2y\_{t-12} + e\_t$$
 
     autoplot(nonstationary_y) + ylab("Non-stationary Time Series")
 
-![](edm_md_files/figure-markdown_strict/unnamed-chunk-13-1.png)
+{{< figure library="true" src="edm_md_files/figure-markdown_strict/unnamed-chunk-13-1.png" title="Image 13.1" >}}
 
 ### Let’s see what the auto Arima algorithm estimates with non-stationary data:
 
@@ -243,7 +245,7 @@ $$\\Large y\_t = c + b\_1y\_{t-1} + b\_2y\_{t-12} + e\_t$$
       geom_path(data = df_ts_st, aes(x = x, y = y)) + 
       ylab("Non-stationary Time Series"); aa_ns
 
-![](edm_md_files/figure-markdown_strict/unnamed-chunk-15-1.png)
+{{< figure library="true" src="edm_md_files/figure-markdown_strict/unnamed-chunk-15-1.png" title="Image 15.1" >}}
 
 ### Not a very good prediction… Let’s try empirical dynamic models!
 
@@ -282,13 +284,13 @@ $$\\Large y\_t = c + b\_1y\_{t-1} + b\_2y\_{t-12} + e\_t$$
     plot(simplex_output$E, simplex_output$rho, type = "l", lwd = 5, col = "light blue", xlab = "Embedding Dimension (E)", 
          ylab = "Forecast Skill (rho)")
 
-![](edm_md_files/figure-markdown_strict/unnamed-chunk-17-1.png)
+{{< figure library="true" src="edm_md_files/figure-markdown_strict/unnamed-chunk-17-1.png" title="Image 17.1" >}}
 
     simplex_output <- simplex(nonstationary_y, lib, pred, E = 2, tp = 1:10)
     plot(simplex_output$tp, simplex_output$rho, type = "l", lwd = 5, col = "light blue", xlab = "Time to Prediction (tp)", 
          ylab = "Forecast Skill (rho)")
 
-![](edm_md_files/figure-markdown_strict/unnamed-chunk-17-2.png)
+{{< figure library="true" src="edm_md_files/figure-markdown_strict/unnamed-chunk-17-2.png" title="Image 17.2" >}}
 
 ### Run `simplex` to create EDM model for forecasting
 
@@ -300,7 +302,7 @@ $$\\Large y\_t = c + b\_1y\_{t-1} + b\_2y\_{t-12} + e\_t$$
 
     plot(df_ts_st$y~df_ts_st$x, type = "l")
 
-![](edm_md_files/figure-markdown_strict/unnamed-chunk-18-1.png)
+{{< figure library="true" src="edm_md_files/figure-markdown_strict/unnamed-chunk-18-1.png" title="Image 18.1" >}}
 
     edm <- ggplot(data = df_ts_st_pred) + ggtitle("Forecasts from EDM") + xlab("Time") + ylab(" ") + 
       geom_ribbon(aes(x = x, y = y, ymin = y - 1.96*sqrt(pred_var), ymax = y +.96*sqrt(pred_var)), fill = "blue", alpha = 0.2) +
@@ -309,12 +311,12 @@ $$\\Large y\_t = c + b\_1y\_{t-1} + b\_2y\_{t-12} + e\_t$$
       geom_path(data = df_ts_st, aes(x = x, y = y)) + 
       ylab("Non-stationary Time Series"); edm
 
-![](edm_md_files/figure-markdown_strict/unnamed-chunk-18-2.png)
+{{< figure library="true" src="edm_md_files/figure-markdown_strict/unnamed-chunk-18-2.png" title="Image 18.2" >}}
 
     ggarrange(aa_ns + coord_cartesian(ylim = c(-20,8)) + ggtitle("Forecast with ARIMA"),
               edm + coord_cartesian(ylim = c(-20,8)) + ggtitle("Forecast with EDM")) + theme_bw()
 
-![](edm_md_files/figure-markdown_strict/unnamed-chunk-18-3.png)
+{{< figure library="true" src="edm_md_files/figure-markdown_strict/unnamed-chunk-18-3.png" title="Image 18.3" >}}
 
     ggsave("forecasts.jpeg", dpi = 300)
 
