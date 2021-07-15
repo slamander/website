@@ -58,7 +58,7 @@ height = "500px"
  overlay_img = "publications/Herpetologica.png" 
  overlay_filter = 0.5  # Darken the image. Value in range 0-1.
  cta_label = "view publication"
- cta_url = "https://jbaecher.netlify.app/publication/swartwout_et_al_2020_herpetologica/"
+ cta_url = "https://www.alexbaecher.com/publication/swartwout-2020-herp/"
 # 
   
 [[item]]
@@ -76,18 +76,8 @@ height = "500px"
   #   Activate the button by specifying a URL and button label below.
   #   Deactivate by commenting out parameters, prefixing lines with `#`.
    cta_label = "take me there"
-  cta_url = "https://jbaecher.netlify.app/post/connectivity-script/"
+  cta_url = "https://www.alexbaecher.com/post/connectivity-script/"
   # cta_icon_pack = "fas"
   # cta_icon = "graduation-cap"
   
-[[item]]
-  title = "New papers"
-   content = "Herpetological Bulletin 2020"
-   align = "left"
-# 
-#   overlay_color = "#333"  # An HTML color value.
-  overlay_img = "publications/thb.png"
-  cta_label = "view publication"
-  cta_url = "https://jbaecher.netlify.app/publication/baecher_et_al_2020_thb/"
-  overlay_filter = 0.5  # Darken the image. Value in range 0-1.
 +++
