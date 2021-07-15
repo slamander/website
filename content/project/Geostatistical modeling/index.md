@@ -5,18 +5,18 @@ image:
   caption: Diagram of Bayes theorum 
   focal_point: Smart
 links:
-- icon: file-alt
-  icon_pack: fas
-  name: Workshop
-  url: 
-- icon: github
-  icon_pack: fab
-  name: Code
-  url: 
-- icon: table
-  icon_pack: fa
-  name: Data
-  url: 
+# - icon: file-alt
+#   icon_pack: fas
+#   name: Workshop
+#   url: 
+# - icon: github
+#   icon_pack: fab
+#   name: Code
+#   url: 
+# - icon: table
+#   icon_pack: fa
+#   name: Data
+#   url: 
 slides: Geostatistical-Modeling
 summary: Modeling the spatial dynamics of species using Bayesian geostatistical methods
 tags:
