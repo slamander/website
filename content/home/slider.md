@@ -66,4 +66,23 @@ height = "500px"
   # cta_icon_pack = "fas"
   # cta_icon = "graduation-cap"
   
+    [[item]]
+  title = "Like this website?"
+  content = "I used a Hugo Academic template"
+  align = "center"  # Choose `center`, `left`, or `right`.
+
+  # Overlay a color or image (optional).
+  #   Deactivate an option by commenting out the line, prefixing it with `#`.
+  #   overlay_color = "#666"  # An HTML color value.
+  overlay_img = "projects/salamandersjpg" 
+  overlay_filter = 0.5  # Darken the image. Value in range 0-1.
+
+  # Call to action button (optional).
+  #   Activate the button by specifying a URL and button label below.
+  #   Deactivate by commenting out parameters, prefixing lines with `#`.
+  cta_label = "clone my github website repo"
+  cta_url = "https://github.com/slamander/website"
+  cta_icon_pack = "fab"
+  cta_icon = "github"
+  
 +++
