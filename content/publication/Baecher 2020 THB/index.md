@@ -68,14 +68,4 @@ url_project: ""
           data-hide-no-mentions="true" 
           class="altmetric-embed">
         </div>
-    </div>
-    <div id="inner">
-      <script type="text/javascript" src="//cdn.plu.mx/widget-summary.js"></script>
-        <a href="https://plu.mx/plum/a/?doi=10.33256/hb150.2930" 
-          data-orientation="horizontal" 
-          class="plumx-summary" 
-          data-site="plum" 
-          data-hide-when-empty="true">
-        </a>
-    </div>
-  </section>
+</section>
