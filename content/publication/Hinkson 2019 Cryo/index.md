@@ -38,6 +38,7 @@ url_project: ""
 #url_video: '#'
 ---
 
+
 <html>
   <style>
     section {
@@ -57,7 +58,7 @@ url_project: ""
       <script type='text/javascript' src='https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js'></script>
         <span style="float:left"; 
           class="__dimensions_badge_embed__" 
-          data-doi="10.XXXXXX" 
+          data-doi="10.1016/j.cryobiol.2019.05.007" 
           data-hide-zero-citations="true" 
           data-legend="always">
         </span>
