@@ -25,7 +25,7 @@ tags:
 - Natural History
 - Malformation 
 title: Tail bifurcation in two species of Desmognathus salamander (Plethodontidae) in southeastern Kentucky, USA
-# url_code: https://doi.org/10.33256/hb150.2930
+url_code: https://doi.org/10.33256/hb150.2930
 # url_dataset: https://www.dropbox.com/s/0jsfnoliczl5xv3/HR%20Dec%202014%20ebook.pdf?dl=1
 url_pdf: https://www.thebhs.org/publications/the-herpetological-bulletin/issue-number-150-winter-2019/2013-08-tail-bifurcation-in-two-species-of-i-desmognathus-i-salamander-caudata-plethodontidae-in-south-eastern-kentucky-usa/file
 #url_poster: '#'
@@ -68,14 +68,4 @@ url_project: ""
           data-hide-no-mentions="true" 
           class="altmetric-embed">
         </div>
-    </div>
-    <div id="inner">
-      <script type="text/javascript" src="//cdn.plu.mx/widget-summary.js"></script>
-        <a href="https://plu.mx/plum/a/?doi=10.33256/hb150.2930" 
-          data-orientation="horizontal" 
-          class="plumx-summary" 
-          data-site="plum" 
-          data-hide-when-empty="true">
-        </a>
-    </div>
-  </section>
+</section>
