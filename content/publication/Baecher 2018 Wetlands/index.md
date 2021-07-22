@@ -29,7 +29,7 @@ tags:
 - Lithobates areolatus
 - Regina grahamii
 title: Herpetofaunal Communities in Restored and Unrestored Remnant Tallgrass Prairie and Associated Wetlands in Northwest Arkansas, USA
-url_code: https://doi.org/10.1007/s13157-017-0966-5
+# url_code: https://doi.org/10.1007/s13157-017-0966-5
 # url_dataset: https://doi.org/10.6073/pasta/d834e12ff12dc23d9319fa9f73e40306
 url_pdf: https://www.researchgate.net/profile/Joseph-Baecher/publication/321152793_Herpetofaunal_Communities_in_Restored_and_Unrestored_Remnant_Tallgrass_Prairie_and_Associated_Wetlands_in_Northwest_Arkansas_USA/links/5aa149c10f7e9badd9a4302b/Herpetofaunal-Communities-in-Restored-and-Unrestored-Remnant-Tallgrass-Prairie-and-Associated-Wetlands-in-Northwest-Arkansas-USA.pdf?_sg%5B0%5D=HiShPZAPbQzjMZLSBvNpABarwHyNp7H4W3KU34J8VLqr-_5K3OCT6p_Up-UFZ4BYN-u4BUdlBo3MwDYs4KY7hA.2000LMFk3UZTUEvT9w1f_T1YTNfLojQMng0HCoBQ5mb50hh9JHKNiCl8oFcjkvIXgeVG8O-ySQ3RLIsBDKrIOA&_sg%5B1%5D=bpC0MpMWAM6rMwxaONP0vvug7wAEjF0WX4CcUFtNJtX-bMJ8No2g_cAZHL8p-bLxI5XEPuMtsZWC-ggoMtjbOWZtiHr2othzu0s7GVridgct.2000LMFk3UZTUEvT9w1f_T1YTNfLojQMng0HCoBQ5mb50hh9JHKNiCl8oFcjkvIXgeVG8O-ySQ3RLIsBDKrIOA&_sg%5B2%5D=PB76A-6UfxHZ--40A9ajzPZJ8AlSH7xog2j9oadk9OLn997mumcZ6J8ASUBQkg2ANjGPhPOwIhB5tjo.gs6BCksWg9bDf7tSH5fqQF9NTw8Rp51dnMlDe3btJRkv8qLX2wi7x-_4iyG1YeiUi61uEFTAynki0yzS7UHVrQ&_iepl=
 #url_poster: '#'
