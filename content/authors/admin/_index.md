@@ -34,11 +34,11 @@ Education:
   courses:
   - course: PhD, Interdisciplinary Ecology, Statistics
     institution: University of Florida
-    year: ~2023
-  - course: MSc, Biology
+    year: ~2024
+  - course: MS, Biology
     institution: Eastern Kentucky University
     year: 2017
-  - course: BSc, Biology
+  - course: BS, Biology
     institution: University of Arkansas
     year: 2014
 
@@ -51,6 +51,15 @@ social:
   icon_pack: fas
   link: mailto:jbaecher@ufl.edu 
 - icon: twitter
+  icon_pack: fab
+  link: https://www.facebook.com/baechermander
+- icon: instagram
+  icon_pack: fab
+  link: https://www.instagram.com/j_baecher/
+- icon: flickr
+  icon_pack: fab
+  link: https://www.flickr.com/photos/126690066@N08/
+- icon: facebook
   icon_pack: fab
   link: https://twitter.com/AlexBaecher
 - icon: google-scholar
