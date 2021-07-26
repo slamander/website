@@ -21,7 +21,7 @@ publication_types:
 - "2"
 publishDate: "2018-12-08T00:00:00Z"
 slides: Reptile-and-Amphibian-Ecology
-summary: This study sought to determine whether variation in prey size and feeding rate induce head size plasticity in Northern Water Snakes (Nerodia sipedon)
+summary: In *Herpetologica*
 tags:
 - Phenotypic plasticity
 - Reptiles

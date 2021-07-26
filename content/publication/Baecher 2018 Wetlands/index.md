@@ -21,7 +21,7 @@ publication_types:
 - "2"
 publishDate: "2018-2-08T00:00:00Z"
 slides: Reptile-and-Amphibian-Ecology
-summary: Effects of ecosystem restoration on prairie herpetofauna in northwest Arkansas
+summary: In *Wetlands*
 tags:
 - Restoration
 - Prescribed Fire
