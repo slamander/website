@@ -3,7 +3,7 @@ abstract: Wetlands within tallgrass prairie are among the most endangered ecosys
 authors:
 - J. Alex Baecher
 - Philip N. Vogrinc
-- Jacquelyn C. Guzy,
+- Jacquelyn C. Guzy
 - Chelsea S. Kross
 - JD Willson
 date: "2020-10-08T00:00:00Z"
