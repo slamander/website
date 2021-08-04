@@ -3,7 +3,7 @@ abstract: Wetlands within tallgrass prairie are among the most endangered ecosys
 authors:
 - J. Alex Baecher
 - Philip N. Vogrinc
-- Jacquelyn C. Guzy,
+- Jacquelyn C. Guzy
 - Chelsea S. Kross
 - JD Willson
 date: "2020-10-08T00:00:00Z"
@@ -21,7 +21,7 @@ publication_types:
 - "2"
 publishDate: "2018-2-08T00:00:00Z"
 slides: Reptile-and-Amphibian-Ecology
-summary: Effects of ecosystem restoration on prairie herpetofauna in northwest Arkansas
+summary: In *Wetlands*
 tags:
 - Restoration
 - Prescribed Fire

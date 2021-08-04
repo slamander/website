@@ -18,7 +18,7 @@ publication_types:
 - "2"
 publishDate: "2018-12-08T00:00:00Z"
 slides: Appalachian-Salamander-Ecology
-summary: An analysis of woodland salamander distribution, abundance, and co-occurrence in an Appalachian old growth forest
+summary: In *Ecology and Evolution*
 tags:
 - Population dynamics
 - Occupancy

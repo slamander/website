@@ -21,7 +21,7 @@ publication_types:
 - "2"
 publishDate: "2020-10-08T00:00:00Z"
 slides: Crawfish-frog-natural-history
-summary: Natural history observations of sources of mortality of Crawfish frogs in northwest Arkansas.
+summary: In *Herpetological Review* 
 tags:
 - Crawfish Frogs
 - Natural History

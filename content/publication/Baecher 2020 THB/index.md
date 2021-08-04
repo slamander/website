@@ -19,7 +19,7 @@ publication_types:
 - "2"
 publishDate: "2020-1-08T00:00:00Z"
 slides: Appalachian-Slamander-Ecology
-summary: Natural history observations of tail bifurcation of mortality of of Desmognathus fuscus and D. monticola
+summary: In *Herpetological Bulletin*
 tags:
 - Desmognathus fuscus
 - Natural History

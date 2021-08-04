@@ -19,7 +19,7 @@ publication_types:
 - "2"
 publishDate: "2019-08-08T00:00:00Z"
 slides: Reptile-and-Amphibian-Ecology
-summary: Using the smooth-sided toad, Rhaebo guttatus, we present eﬀective methods for collecting and cryopreserving an example of Rhaebo sperm. 
+summary: In *Cryobiology* 
 tags:
 - Amphibian
 - Assisted reproductive technologies
