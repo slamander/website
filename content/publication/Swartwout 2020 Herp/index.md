@@ -33,7 +33,7 @@ tags:
 title: Prey Size and Feeding Rate Do Not Influence Trophic Morphology of Juvenile Water Snakes (Nerodia sipedon)
 # url_code: https://github.com/slamander/salamander_ecology
 # url_dataset: https://doi.org/10.6073/pasta/d834e12ff12dc23d9319fa9f73e40306
-url_pdf: https://bioone.org/journals/herpetologica/volume-76/issue-1/Herpetologica-D-18-00007/Prey-Size-and-Feeding-Rate-Do-Not-Influence-Trophic-Morphology/10.1655/Herpetologica-D-18-00007.full
+url_pdf: https://scholar.google.com/scholar_url?url=https://bioone.org/journals/Herpetologica/volume-76/issue-1/Herpetologica-D-18-00007/Prey-Size-and-Feeding-Rate-Do-Not-Influence-Trophic-Morphology/10.1655/Herpetologica-D-18-00007.pdf%3Fcasa_token%3DJrPKHfnnJZMAAAAA:O9JsDygb16PJ93gdY3xBt3_k07-Cu_ld9b3ZDqg2h029aLrsf6yOH7v8dYOSLNxJsit6GyCBSg&hl=en&sa=T&oi=ucasa&ct=ucasa&ei=e2YdYbGIGMqgmQHcyobgDw&scisig=AAGBfm0eZym6ZuazDiqX0vTZiVxx0xR06w
 #url_poster: '#'
 url_project: ""
 #url_slides: ""
