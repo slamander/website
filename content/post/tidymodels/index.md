@@ -19,31 +19,31 @@ Introduction to machine learning with `tidymodels`
 `Tidymodels` provides a clean, organized, and--most importantly--consistent programming syntax for data pre-processing, model specification, model fitting, model evaluation, and prediction. 
 
 # Anatomy of `tidymodels`:
-## . a meta-package that installs and load the core packages listed below that you need for modeling and machine learning
+## * a meta-package that installs and load the core packages listed below that you need for modeling and machine learning
 
-##`rsamples`:
-### . provides infrastructure for efficient data splitting and resampling
+## `rsamples`:
+### * provides infrastructure for efficient data splitting and resampling
 
 ## `parsnip`:
 ### a tidy, unified interface to models that can be used to try a range of models without getting bogged down in the syntactical minutiae of the underlying packages
 
 ## `recipes`:
-### . tidy interface to data pre-processing tools for feature engineering
+### * tidy interface to data pre-processing tools for feature engineering
 
 ## `workflows`: 
-### . workflows bundle your pre-processing, modeling, and post-processing together
+### * workflows bundle your pre-processing, modeling, and post-processing together
 
 ## `tune`: 
-### . helps you optimize the hyperparameters of your model and pre-processing steps
+### * helps you optimize the hyperparameters of your model and pre-processing steps
 
 ## `yardstick`:
-### . measures the effectiveness of models using performance metrics
+### * measures the effectiveness of models using performance metrics
 
 ## `dials`:
-### . contains tools to create and manage values of tuning parameters and is designed to integrate well with the parsnip package
+### * contains tools to create and manage values of tuning parameters and is designed to integrate well with the parsnip package
 
 ## `broom`:
-### . This package summarizes key information about models in tidy tibble()s.
+### * summarizes key information about models in tidy tibble()s
 
 ### First, lets load the `tidymodels` meta-package:
 
@@ -95,8 +95,8 @@ Introduction to machine learning with `tidymodels`
 ## Data
 
 I'll demonstrate it's features using an existing data set from Bruno Oliveria, `Amphibio`:  
-. Link to publication: <https://www.nature.com/articles/sdata2017123>  
-. Link to data: <https://ndownloader.figstatic.com/files/8828578>
+* Link to publication: <https://www.nature.com/articles/sdata2017123>  
+* Link to data: <https://ndownloader.figstatic.com/files/8828578>
 
 ### Amphibio data
 
@@ -134,10 +134,10 @@ habitat types, diet, size, ect.
 
 Here's the breakdown of taxonomic spread in the data:
 
-. Order: N = 3  
-. Family: N = 61  
-. Genera: N = 531  
-. Species: N = 6776
+* Order: N = 3  
+* Family: N = 61  
+* Genera: N = 531  
+* Species: N = 6776
 
 There are also a lot of missing data, and what data do exist are wildly
 different scales. We'll clean this up:
@@ -180,8 +180,8 @@ Now let's have a peak at the data:
 {{< figure library="true" src="posts/script_files/figure-markdown_strict/unnamed-chunk-4-1.png" title=" " >}}
 
 There are some trends in the data:  
-. caudates are longer  
-. anura have larger litter sizes
+* caudates are longer  
+* anura have larger litter sizes
 
 Given the data, one possible modeling application could be to use data
 to predict order using two models: knn and boosted regression trees.
@@ -235,9 +235,9 @@ All trees in the ensemble are combined to produce a final prediction.
 There are different ways to fit this model. See the engine-specific
 pages for more details:
 
-. xgboost (default)  
-. C5.0  
-. spark
+* xgboost (default)  
+* C5.0  
+* spark
 
     # ?nearest_neighbor
     knitr::include_url("https://parsnip.tidymodels.org/reference/nearest_neighbor.html")
@@ -251,7 +251,7 @@ pages for more details:
 
 ### There are different ways to fit this model. See the engine-specific pages for more details:
 
-. knn (default)
+* knn (default)
 
 Now, let's fit the models:
 
@@ -283,9 +283,9 @@ For boosted regression trees, there are 3 basic parameters:
     ##       min_n      min_n nparam[+]
     ##  learn_rate learn_rate nparam[+]
 
-. `trees`: An integer for the number of trees contained in the ensemble.  
-. `min_n`: An integer for the minimum number of data points in a node that is required for the node to be split further.  
-. `learn_rate`: A number for the rate at which the boosting algorithm adapts from iteration-to-iteration (specific engines only).
+* `trees`: An integer for the number of trees contained in the ensemble.  
+* `min_n`: An integer for the minimum number of data points in a node that is required for the node to be split further.  
+* `learn_rate`: A number for the rate at which the boosting algorithm adapts from iteration-to-iteration (specific engines only).
 
 Knn has a single parameter to tune: the neighbors
 
@@ -296,7 +296,7 @@ Knn has a single parameter to tune: the neighbors
     ##  identifier      type    object
     ##   neighbors neighbors nparam[+]
 
-. `neighbors`: A single integer for the number of neighbors to consider
+* `neighbors`: A single integer for the number of neighbors to consider
 (often called k). For kknn, a value of 5 is used if neighbors is not
 specified.
 
@@ -392,8 +392,8 @@ Implement tuning grid using `tune`:
 
 Now, well try different options from `dials` for parameter tuning, using
 two additional methods for grid specification:  
-. random grid with `dials::grid_random`  
-. maximum entropy grid with `dials::grid_max_entropy`
+* random grid with `dials::grid_random`  
+* maximum entropy grid with `dials::grid_max_entropy`
 
 ## `grid_random`
 
@@ -650,4 +650,3 @@ items from the model, which auto-binds them to the original dataset.
       
 {{< figure library="true" src="posts/script_files/figure-markdown_strict/unnamed-chunk-23-2.png" title=" " >}}
 
-![](script_files/figure-markdown_strict/unnamed-chunk-23-2.png)
