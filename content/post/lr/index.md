@@ -1,3 +1,21 @@
+---
+title: "Linear regression with gradient descent"
+subtitle: "A machine learning approach to standard linear regression"
+author: J. Alex Baecher
+date: September 22, 2021
+output: md_document
+slug: gradient descent
+tags: ["Gradient Descent", "Machine Learning", "Regression", "Modeling"]
+categories: ["r tutorials"]
+image:
+  caption: ""
+  focal_point: ""
+  preview_only: true
+---
+
+Introduction linear regression with gradient descent
+--------------------------------------------------------
+    
     library(tidyverse)
 
     ## -- Attaching packages --------------------------------------- tidyverse 1.3.1 --
@@ -56,7 +74,8 @@
     abline(h = mod$coefficients[1], col = "grey80") # plot horizontal line at intercept value
     abline(a = mod$coefficients[1], b = mod$coefficients[2], col='blue', lwd=2) # use slope and intercept to plot best fit line
 
-![](lr_files/figure-markdown_strict/unnamed-chunk-4-1.png)
+{{< figure library="true" src="posts/lr_files/figure-markdown_strict/unnamed-chunk-4-1.png" title=" " >}}
+
 
 ### Calculate intercept and slope using sum of squares
 
@@ -78,17 +97,13 @@
     plot(x,y, col = "grey80", main='Linear Regression using Ordinary Least Squares', xlim = c(-2, 5), ylim = c(0,10)); 
     abline(a = intercept, b = slope, col='blue', lwd=2)
 
-![](lr_files/figure-markdown_strict/unnamed-chunk-6-1.png)
 
 ### Calculate intercept and slope using gradient descent (Machine Learning):
 
-<figure>
-<img src="hiking_analogy.jpeg" style="width:50.0%" alt="Gradient descent" /><figcaption aria-hidden="true">Gradient descent</figcaption>
-</figure>
+{{< figure library="true" src="posts/lr_files/figure-markdown_strict/hiking_analogy.jpeg" title=" " >}}
 
-<figure>
-<img src="lr_diagram.png" style="width:50.0%" alt="Cost function" /><figcaption aria-hidden="true">Cost function</figcaption>
-</figure>
+{{< figure library="true" src="posts/lr_files/figure-markdown_strict/lr_diagram.png" title=" " >}}
+
 
 ### Squared error cost function (a way to calculate the degree of error for a guess for slope and intercept)
 
@@ -153,16 +168,15 @@
 
 ### Calculate intercept and slope using gradient descent (Machine Learning):
 
-<figure>
-<img src="lrgd.gif" style="width:100.0%" alt="Animation of parameter searching ML algorithm (gradient decent)" /><figcaption aria-hidden="true">Animation of parameter searching ML algorithm (gradient decent)</figcaption>
-</figure>
+{{< figure library="true" src="posts/lr_files/figure-markdown_strict/lrgd.gif" title=" " >}}
 
     plot(cost_history, type='line', col='blue', lwd=2, main='Cost function', ylab='cost', xlab='Iterations')
 
     ## Warning in plot.xy(xy, type, ...): plot type 'line' will be truncated to first
     ## character
 
-![](lr_files/figure-markdown_strict/unnamed-chunk-10-1.png)
+
+{{< figure library="true" src="posts/lr_files/figure-markdown_strict/unnamed-chunk-10-1.png" title=" " >}}
 
 # Linear regression with gradient decent
 
@@ -194,7 +208,7 @@
 
     plot(df$Body_size_mm, df$Size_at_maturity_max_mm, col = "grey80", main='Correlation of amphibian traits', xlab = "Body size (mm)", ylab = "Max size at maturity (mm)"); 
 
-![](lr_files/figure-markdown_strict/unnamed-chunk-11-1.png)
+{{< figure library="true" src="posts/lr_files/figure-markdown_strict/unnamed-chunk-11-1.png" title=" " >}}
 
 ### Fit a linear model
 
@@ -226,7 +240,7 @@
     text(6, 3, paste("Slope = ", round(mod$coefficients[2], 2), sep = ""));
     abline(a = mod$coefficients[1], b = mod$coefficients[2], col='blue', lwd=2) # use slope and intercept to plot best fit line
 
-![](lr_files/figure-markdown_strict/unnamed-chunk-13-1.png)
+{{< figure library="true" src="posts/lr_files/figure-markdown_strict/unnamed-chunk-13-1.png" title=" " >}}
 
 ### Calculate intercept and slope using sum of squares
 
@@ -249,7 +263,7 @@
     plot(x,y, col = "grey80", main='Linear Regression using Ordinary Least Squares', xlab = "Body size (mm)", ylab = "Max size at maturity (mm)"); 
     abline(a = intercept, b = slope, col='blue', lwd=2)
 
-![](lr_files/figure-markdown_strict/unnamed-chunk-14-1.png)
+{{< figure library="true" src="posts/lr_files/figure-markdown_strict/unnamed-chunk-14-1.png" title=" " >}}
 
 ### Calculate intercept and slope using gradient descent (Machine Learning)
 
@@ -292,11 +306,11 @@
     }
     abline(coef=theta, col="blue", lwd = 2)
 
-![](lr_files/figure-markdown_strict/unnamed-chunk-16-1.png)
+{{< figure library="true" src="posts/lr_files/figure-markdown_strict/unnamed-chunk-16-1.png" title=" " >}}
 
     plot(cost_history, type='line', col='blue', lwd=2, main='Cost function', ylab='cost', xlab='Iterations')
 
     ## Warning in plot.xy(xy, type, ...): plot type 'line' will be truncated to first
     ## character
 
-![](lr_files/figure-markdown_strict/unnamed-chunk-17-1.png)
+{{< figure library="true" src="posts/lr_files/figure-markdown_strict/unnamed-chunk-17-1.png" title=" " >}}
