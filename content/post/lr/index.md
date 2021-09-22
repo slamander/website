@@ -69,7 +69,7 @@ This tutorial is a rough introduction into using gradient descent algorithms to 
 
 ### Plot the data and the model
 
-    plot(x,y, col = "grey80", main='Linear Regression using Sum of Squares', xlim = c(-2, 5), ylim = c(0,10)); 
+    plot(x,y, col = "grey80", main='Regression using lm()', xlim = c(-2, 5), ylim = c(0,10)); 
     text(0, 8, paste("Intercept = ", round(mod$coefficients[1], 2), sep = ""));
     text(4, 2, paste("Slope = ", round(mod$coefficients[2], 2), sep = ""));
     abline(v = 0, col = "grey80"); # line for y-intercept
@@ -96,24 +96,29 @@ This tutorial is a rough introduction into using gradient descent algorithms to 
 
 ### Plot data using manually calculated parameters
 
-    plot(x,y, col = "grey80", main='Linear Regression using Ordinary Least Squares', xlim = c(-2, 5), ylim = c(0,10)); 
+    plot(x,y, col = "grey80", main='Regression with manual calculations', xlim = c(-2, 5), ylim = c(0,10)); 
     abline(a = intercept, b = slope, col='blue', lwd=2)
 
+{{< figure library="true" src="posts/lr_files/figure-markdown_strict/unnamed-chunk-6-1.png" title=" " >}}
 
-### Calculate intercept and slope using gradient descent (Machine Learning):
+# Gradient Descent:
+
+## Using the same simulated data as before, we will estimate parameters using a machine learning algorithm
+
+### Here's some figures I found helpful while trying to understand how gradient descent works:
 
 {{< figure library="true" src="posts/lr_files/figure-markdown_strict/hiking_analogy.jpeg" title=" " >}}
 
 {{< figure library="true" src="posts/lr_files/figure-markdown_strict/lr_diagram.png" title=" " >}}
 
 
-### Squared error cost function (a way to calculate the degree of error for a guess for slope and intercept)
+### To determine the goodness of fit for a given set of parameters, we will empliment a Squared error cost function (a way to calculate the degree of error for a guess for slope and intercept)
 
     cost <- function(X, y, theta) {
       sum( (X %*% theta - y)^2 ) / (2*length(y))
     }
 
-### Learning rate and iteration limit
+### We must also set two additional parameters: learning rate and iteration limit
 
     alpha <- 0.01
     num_iters <- 1000
@@ -180,9 +185,20 @@ This tutorial is a rough introduction into using gradient descent algorithms to 
 
 {{< figure library="true" src="posts/lr_files/figure-markdown_strict/unnamed-chunk-10-1.png" title=" " >}}
 
-# Linear regression with gradient decent
+# Using gradient descent with real data
 
-### Load amphibio data!
+I'll demonstrate it's features using an existing dataset from Bruno Oliveria: "Amphibio":  
+• Link to publication: https://www.nature.com/articles/sdata2017123  
+• Link to data: https://ndownloader.figstatic.com/files/8828578  
+
+### Load amphibio data! 
+
+    install.packages("downloader")
+    library(downloader)
+    
+    url <- "https://ndownloader.figstatic.com/files/8828578"
+    download(url, dest="lrgb/amphibio.zip", mode="wb") 
+    unzip("lrgb/amphibio.zip", exdir = "./lrgb")
 
     df <- read_csv("AmphiBIO_v1.csv") %>%
       select("Order",
