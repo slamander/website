@@ -15,6 +15,8 @@ image:
 
 Introduction linear regression with gradient descent
 --------------------------------------------------------
+
+This tutorial is a rough introduction into using gradient descent algorithms to estimate parameters (slope and intercept) for standard linear regressions, as an alternative to ordinary least squares (OLS) regression with a maximum likelihood estimator. To begin, I simulate data to perform a standard OLS regression with maximum likelihood using sums of squares. Once explained, I then demonstrate how to substitute gradient descent simply and interpret results. 
     
     library(tidyverse)
 
