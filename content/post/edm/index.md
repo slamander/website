@@ -122,7 +122,7 @@ Where, $\\Large \phi\_1$ is a coefficient of lag
 
 ### Autoregressive model, with two hourly lags:
 
-$$\\Large \hat{y}\_{t} = \mu + \phi\_{1}y\_{t-1} + \phi\_{2}y\_{t-1} + \epsilon\_{t}$$
+$$\\Large \hat{y}\_{t} = \mu + \phi\_{1}y\_{t-1} + \phi\_{2}y\_{t-2} + \epsilon\_{t}$$
 
     a2 <- Arima(stationary_y_arima[train], c(1,0,0))
 
@@ -138,7 +138,7 @@ $$\\Large \hat{y}\_{t} = \mu + \phi\_{1}y\_{t-1} + \phi\_{2}y\_{t-1} + \epsilon\
 
 #### Autoregressive models, with up to 5 hourly lags:
 
-$$\\Large \hat{y}\_t = \mu + \phi\_{1}y\_{t-1} + \[...\] + \phi\_{5}y\_{t-1} + \epsilon\_{t}$$
+$$\\Large \hat{y}\_t = \mu + \phi\_{1}y\_{t-1} + \[...\] + \phi\_{5}y\_{t-5} + \epsilon\_{t}$$
 
     a3 <- Arima(stationary_y_arima[train], c(3,0,0))
     a4 <- Arima(stationary_y_arima[train], c(4,0,0))
@@ -167,7 +167,7 @@ $$\\Large \hat{y}\_t = \mu + \phi\_{1}y\_{t-1} + \[...\] + \phi\_{5}y\_{t-1} + \
 
 #### Autoregressive models, with an hourly- and half-day-time dependency:
 
-$$\\Large \hat{y}\_t = \mu + \phi\_{1}y\_{t-1} + \phi\_{2}y\_{t-1} + \phi\_{3}y\_{t-1} + \phi\_{4}y\_{t-1} + \phi\_{5}y\_{t-12} + \epsilon\_{t}$$
+$$\\Large \hat{y}\_t = \mu + \phi\_{1}y\_{t-1} + \phi\_{2}y\_{t-2} + \phi\_{3}y\_{t-3} + \phi\_{4}y\_{t-4} + \phi\_{5}y\_{t-12} + \epsilon\_{t}$$
 
     a41 <- Arima(stationary_y_arima[train], c(4,0,0), c(1,0,0))
 
