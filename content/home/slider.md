@@ -52,7 +52,7 @@ height = "500px"
    align = "left"
 # 
 #   overlay_color = "#555"  # An HTML color value.
- overlay_img = "publications/jbr.png" 
+ overlay_img = "publications/br.png" 
  overlay_filter = 0.5  # Darken the image. Value in range 0-1.
  cta_label = "view publication"
  cta_url = "https://www.alexbaecher.com/publication/basham-2022-br/"
