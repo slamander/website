@@ -32,8 +32,8 @@ tags:
 - canopy
 - niche
 - small mammal
-- rainforest
-title: Vertical stratification patterns of tropicalforest vertebrates: a meta-analysis
+- rainforest 
+title: Vertical stratification patterns of tropical forest vertebrates
 # url_code: https://github.com/schefferslab/Vert-Strata-Meta
 # url_dataset: https://github.com/schefferslab/Vert-Strata-Meta
 url_pdf: https://onlinelibrary.wiley.com/doi/epdf/10.1111/brv.12896
