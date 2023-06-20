@@ -16,7 +16,7 @@ height = "500px"
 # Slides.
 # Duplicate an `[[item]]` block to add more slides.
 
-  [[item]]
+    [[item]]
   title = "R tutorial:"
   content = "Emprical Dynamic Models for Forecasting Time Series"
   align = "center"  # Choose `center`, `left`, or `right`.
@@ -34,39 +34,30 @@ height = "500px"
   cta_url = "https://www.alexbaecher.com/post/edm-script/"
   # cta_icon_pack = "fas"
   # cta_icon = "graduation-cap"
-  
-  [[item]]
-  title = "NEW R tutorial:"
-  content = "Linear Regression with Gradient Descent"
-  align = "center"  # Choose `center`, `left`, or `right`.
-
-  # Overlay a color or image (optional).
-  #   Deactivate an option by commenting out the line, prefixing it with `#`.
-  #   overlay_color = "#666"  # An HTML color value.
-  overlay_img = "posts/lr_files/figure-markdown_strict/lrgd.gif" 
-  overlay_filter = 0.5  # Darken the image. Value in range 0-1.
-
-  # Call to action button (optional).
-  #   Activate the button by specifying a URL and button label below.
-  #   Deactivate by commenting out parameters, prefixing lines with `#`.
-   cta_label = "take me there"
-  cta_url = "https://www.alexbaecher.com/post/gradient-descent/"
-  # cta_icon_pack = "fas"
-  # cta_icon = "graduation-cap"
-  
-   [[item]]
+   
+    [[item]]
    title = "New papers"
-   content = "HERPETOLOGICA 2020"
+   content = "Journal of Animal Ecology 2023"
    align = "left"
 # 
 #   overlay_color = "#555"  # An HTML color value.
- overlay_img = "publications/Herpetologica.png" 
+ overlay_img = "publications/jae.png" 
  overlay_filter = 0.5  # Darken the image. Value in range 0-1.
  cta_label = "view publication"
- cta_url = "https://www.alexbaecher.com/publication/swartwout-2020-herp/"
+ cta_url = "https://www.alexbaecher.com/publication/baecher-2023-jae/"
+ 
+    [[item]]
+   title = "New papers"
+   content = "Biological Review 2022"
+   align = "left"
 # 
+#   overlay_color = "#555"  # An HTML color value.
+ overlay_img = "publications/jbr.png" 
+ overlay_filter = 0.5  # Darken the image. Value in range 0-1.
+ cta_label = "view publication"
+ cta_url = "https://www.alexbaecher.com/publication/basham-2022-br/"
   
-[[item]]
+    [[item]]
   title = "R tutorial:"
   content = "Mapping Ecological Flow in R"
   align = "center"  # Choose `center`, `left`, or `right`.
