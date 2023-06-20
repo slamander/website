@@ -5,7 +5,7 @@ authors:
 - Steve A. Johnson
 - Elizabeth A. Roznik
 - Brett R. Scheffers
-date: "2023-3-05T00:00:00Z"
+date: "2023-03-05T00:00:00Z"
 doi: "https://doi.org/10.1111/1365-2656.13899"
 featured: true
 image:
@@ -18,7 +18,7 @@ publication: In *Journal of Animal Ecology*
 publication_short:
 publication_types:
 - "2"
-publishDate: "2023-3-05T00:00:00Z"
+publishDate: "2023-03-05T00:00:00Z"
 slides: Biotic-abiotic-interactions
 summary: In *Journal of Animal Ecology* 
 tags:

@@ -19,7 +19,7 @@ publication: In *Biological Review*
 publication_short:
 publication_types:
 - "2"
-publishDate: "2023-3-05T00:00:00Z"
+publishDate: "2022-10-08T00:00:00Z"
 slides: Vertical stratification
 summary: In *Biological Reviews* 
 tags:
