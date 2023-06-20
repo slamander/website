@@ -8,7 +8,7 @@ authors:
 - John D. Willson
 date: "2020-10-08T00:00:00Z"
 doi: "10.1655/Herpetologica-D-18-00007"
-featured: true
+featured: false
 image:
   caption: Head measurements taken from representative photographs of a juvenile Northern Water Snake (Nerodia sipedon).
   focal_point: ""

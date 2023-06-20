@@ -8,7 +8,7 @@ authors:
 - JD Willson
 date: "2020-10-08T00:00:00Z"
 doi: "10.1007/s13157-017-0966-5"
-featured: true
+featured: false
 image:
   caption: Estimated calling intensity of anurans in restored and unrestored tallgrass prairie wetlands
   focal_point: ""
