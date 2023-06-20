@@ -29,7 +29,7 @@ title = "Baecher Research"
   
    [cta]
    url = "files/cv.pdf"
-   label = "Get my CV"
+   label = "Curriculum Vitae (2023-06-20)"
    icon_pack = "fas"
    icon = "download"
 

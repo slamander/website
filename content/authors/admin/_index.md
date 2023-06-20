@@ -10,7 +10,7 @@ authors:
 superuser: true
 
 # Role/position
-role: PhD student, Research Assistant
+role: PhD candidate, Research Assistant
 
 # Organizations/Affiliations
 organizations:
@@ -21,24 +21,23 @@ organizations:
 bio: My research interests include landscape ecology and applied conservation of reptiles and amphibians
 
 Interests:
-- Reproducible Research
-- Ecology Theory
-- Statistics
-- Landscape & Spatial Ecology
-- Population Ecology
-- Herpetology
 - Conservation 
-- Natural History of the Southeastern USA
+- Ecology Theory
+- Herpetology
+- Landscape & Spatial Ecology
+- Reproducible Research
+- Southeastern USA Natural History
+- Statistics
 
 Education:
   courses:
   - course: PhD, Interdisciplinary Ecology, Statistics
     institution: University of Florida
     year: ~2024
-  - course: MS, Biology
+  - course: MSc, Biology
     institution: Eastern Kentucky University
     year: 2017
-  - course: BS, Biology
+  - course: BSc, Biology
     institution: University of Arkansas
     year: 2014
 
@@ -86,8 +85,8 @@ user_groups:
 ---
 
 *The good bits:*
-I'm native to the foothills of Arkansas' Ozark Mountains. These things excite me: herping, hiking, swimming & canoeing, coding & data visualization, my wife--Kristin, my dog--Ollie, cooking, and brewing kombucha. 
+Native to the foothills of Arkansas' Ozark Mountains. My life consists of... my wife (Kristin), my daughter (Faye), my dog (Ollie), herping, hiking, swimming and canoeing, woodworking, and home DIY projects.
 *The serious bits:*
 I am an ecologist, with training in herpetology and landscape ecology, and I have an interest in research at the interface between conservation, ecology theory, and mathematical modeling. My research is aimed at developing cutting-edge quantitative solutions to model complex data about the ecology of reptiles and amphibians. I primarily work with invasive species and species of conservation concern to determine how landscape attributes affect the dynamics and connectivity of populations, while providing management-relevant recommendations to effectively manage species.
 
-Hopefully you'll find some of the items on my github and website interesting or useful. Please contact me either directly through github, or through my website.
+This website serves to increase the accessibility and reproducibility of my research. As such, I take extra care to ensure my projects (i.e., data, methods, code, and publications) are transparent and easily interpreted on this website. If you do not find this to be true, please contact me via my (many) personal links below!
