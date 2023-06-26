@@ -91,7 +91,3 @@ I am an ecologist, with training in herpetology and landscape ecology, and I hav
 
 This website serves to increase the accessibility and reproducibility of my research. As such, I take extra care to ensure my projects (i.e., data, methods, code, and publications) are transparent and easily interpreted on this website. If you do not find this to be true, please contact me via my (many) personal links below!
 
-## Academic journey
-
-{{< figure src="map.png" caption="" numbered="false" >}}
-
