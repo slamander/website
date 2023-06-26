@@ -1,5 +1,5 @@
 ---
-title: Modeling spread of invasive Burmese pythons: integrating thermoregulation, behavior, and mortality
+title: Modeling spread of invasive Burmese pythons, integrating thermoregulation, behavior, and mortality
 
 event: International Association of Landscape Ecologists (North America)
 event_url: https://www.ialena.org/
