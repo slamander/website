@@ -38,6 +38,15 @@ url_project: ""
 #url_source: '#'
 #url_video: '#'
 ---
+Press coverage: 
+Florida Today
+https://www.floridatoday.com/story/news/local/environment/2023/04/03/cuban-tree-frog-hops-to-new-heights-of-ecological-destruction-in-florida/70064687007/
+Nature Climate Change - Research Highlight 
+https://www.nature.com/articles/s41558-023-01654-z.epdf?sharing_token=3XnTm99a17DVcWMhv13iKNRgN0jAjWel9jnR3ZoTv0MMd4D4RpznrkeWRsgunYu7dzCGDugmPYuA8lqoIfQTHmtQ-tp_uQ2CJKXMzH4cKcJkMgfEVbdniiX4uXaKrAHCZLPQwjVg5hZKpGbAUwr8-fFSRsRcdJO9tuJhYTvvjjw%3D
+Southeastern Climate Adaptation Climate Center
+https://secasc.ncsu.edu/2023/03/13/se-casc-researchers-show-how-climate-change-and-invasive-species-threaten-florida-treefrogs/
+
+
 
 <html>
   <style>
