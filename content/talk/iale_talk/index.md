@@ -8,7 +8,7 @@ location: University of Florida
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.
-date: "2021-11-17T13:00:00Z"
+date: "2021-10-22T13:00:00Z"
 date_end: "2021-10-22T15:00:00Z"
 all_day: false
 
@@ -22,6 +22,7 @@ tags: [invasive species]
 featured: true
 
 url_video: "https://youtu.be/J-WWcCTeMsU"
+url_slides = "https://www.dropbox.com/s/0hm8z1x6d2e8l07/Baecher_et_al_2022_IALE.pdf?dl=0"
 
 projects:
 - [Climate-induced species redistribution]

@@ -1,15 +1,15 @@
 ---
-title: Predicting the spread of invasive Burmese pythons in South Florida
+title: Informing Species Range-shifts with (preliminary) Global Connectivity 
 
-event: Southeast RISCC webinar series
-event_url: https://southeastriscc.org/
+event: Species On The Move, 2023
+event_url: https://pwd.aa.ufl.edu/sotm/
 
-location: University of Florida
+location: Bonita Springs, FL (USA)
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.
-date: "2022-11-17T13:00:00Z"
-date_end: "2022-11-17T15:00:00Z"
+date: "2023-05-17T13:00:00Z"
+date_end: "2023-05-17T15:00:00Z"
 all_day: false
 
 # Schedule page publish date (NOT talk date).
@@ -21,8 +21,8 @@ tags: []
 # Is this a featured talk? (true/false)
 featured: true
 
-url_video: "https://southeastriscc.org/wp-content/uploads/2023/01/November-SE-RISCC-Webinar.mp4"
-url_slides: "https://www.dropbox.com/scl/fi/46hdn24xl2mvle8o4l05g/Baecher_et_al_2022_SERISCC.pptx?dl=0&rlkey=1o60hlxckinyvmzzzt09m9yi4"
+url_video: ""
+url_slides: "https://www.dropbox.com/scl/fi/sb5mq6qbfa83iq01yinjp/Baecher_et_al_2023_SOTM.pptx?dl=0&rlkey=b4tit2c1et8btsfoqrh2n1tpd"
 
 projects:
 - [Climate-induced species redistribution]

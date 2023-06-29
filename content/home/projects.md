@@ -8,7 +8,7 @@ title = "Research"
 subtitle = "projects I have goin' on"
 
 # Order that this section will appear in.
-weight = 8
+weight = 7
 
 # Content.
 # Display content from the following folder.
@@ -18,7 +18,7 @@ folder = "project"
 # View.
 # Customize how projects are displayed.
 # Legend: 0 = list, 1 = cards.
-view = 3
+view = 1
 
 # Filter toolbar.
 
