@@ -22,7 +22,7 @@ tags: [invasive species]
 featured: true
 
 url_video: "https://youtu.be/J-WWcCTeMsU"
-url_slides = "https://www.dropbox.com/s/0hm8z1x6d2e8l07/Baecher_et_al_2022_IALE.pdf?dl=0"
+url_slides: "https://www.dropbox.com/s/0hm8z1x6d2e8l07/Baecher_et_al_2022_IALE.pdf?dl=0"
 
 projects:
 - [Climate-induced species redistribution]
