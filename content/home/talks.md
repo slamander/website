@@ -7,8 +7,8 @@ headless = true  # This file represents a page section.
 active = true  # Activate this widget? true/false
 weight = 5  # Order that this section will appear.
 
-title = "Recent & Upcoming Talks"
-subtitle = ""
+title = "Recent Talks, Seminars, or Workshops"
+subtitle = "Selected from the last 2 years"
 
 [content]
   # Page type to display. E.g. post, talk, or publication.
