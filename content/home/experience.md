@@ -5,8 +5,8 @@ headless = true  # This file represents a page section.
 active = true  # Activate this widget? true/false
 weight = 4  # Order that this section will appear.
 
-title = "Experience"
-subtitle = ""
+title = "Select Experience"
+subtitle = "Formal positions (excluding internships)"
 
 # Date format for experience
 #   Refer to https://sourcethemes.com/academic/docs/customization/#date-format
@@ -20,8 +20,7 @@ date_format = "Jan 2006"
 
 [[experience]]
   title = "PhD Candidate, Research Assistant"
-  company = """University of Florida, Dept. Wildlife Ecology
-  Brett Scheffers, PhD"""
+  company = "University of Florida, Brett Scheffers, PhD"
   company_url = "schefferslab.com"
   location = "Gainesville, FL"
   date_start = "2019-08-19"
@@ -29,8 +28,7 @@ date_format = "Jan 2006"
 
 [[experience]]
   title = "Conservation and Research Technician"
-  company = """Memphis Zoo, Research Department
-  Steve Reichling, PhD"""
+  company = "Memphis Zoo Research and Conservation, Steve Reichling, PhD"
   company_url = "https://www.memphiszoo.org/conservation"
   location = "Memphis, TN"
   date_start = "2018-01-10"
@@ -38,21 +36,27 @@ date_format = "Jan 2006"
 
 [[experience]]
   title = "MSc Student, Teaching Assistant"
-  company = """Eastern Kentucky University, Biology Dept.
-  Stephen Richter, PhD"""
+  company = "Eastern Kentucky University, Stephen Richter, PhD"
   company_url = "https://richterlab.weebly.com/"
   location = "Richmond, KY"
   date_start = "2015-03-15"
   date_end = "2017-12-31"
   
 [[experience]]
-  title = "Research Technician"
-  company = """University of Arkansas, Biology Dept.
-  JD Willson, PhD"""
+  title = "Full Time Research Assistant"
+  company = "University of Arkansas, JD Willson, PhD"
   company_url = "https://www.willsonlab.com/"
   location = "Fayetteville, AR"
+  date_start = "2015-12-01"
+  date_end = "2013-01-15"
+  
+[[experience]]
+  title = "Part Time Research Technician"
+  company = "University of Arkansas, Biology Dept."
+  # company_url = "https://www.willsonlab.com/"
+  location = "Fayetteville, AR"
   date_start = "2010-08-15"
-  date_end = "2014-12-31"
+  date_end = "2012-12-15"
 
 +++
 
