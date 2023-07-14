@@ -20,7 +20,8 @@ date_format = "Jan 2006"
 
 [[experience]]
   title = "PhD Candidate, Research Assistant"
-  company = "University of Florida"
+  company = """University of Florida, Dept. Wildlife Ecology
+    Brett Scheffers, PhD"""
   company_url = "schefferslab.com"
   location = "Gainesville, FL"
   date_start = "2019-08-19"
@@ -28,24 +29,27 @@ date_format = "Jan 2006"
 
 [[experience]]
   title = "Conservation and Research Technician"
-  company = "Memphis Zoo"
-  company_url = ""
+  company = """Memphis Zoo, Research Department
+    Steve Reichling, PhD"""
+  company_url = "https://www.memphiszoo.org/conservation"
   location = "Memphis, TN"
   date_start = "2018-01-10"
   date_end = "2019-07-31"
 
 [[experience]]
   title = "MSc Student, Teaching Assistant"
-  company = "Eastern Kentucky University"
-  company_url = ""
+  company = """Eastern Kentucky University, Biology Dept. 
+    Stephen Richter, PhD"""
+  company_url = "https://richterlab.weebly.com/"
   location = "Richmond, KY"
   date_start = "2015-03-15"
   date_end = "2017-12-31"
   
 [[experience]]
   title = "Research Technician"
-  company = "University of Arkansas"
-  company_url = ""
+  company = """University of Arkansas, Biology Dept.
+    JD Willson, PhD"""
+  company_url = "https://www.willsonlab.com/"
   location = "Fayetteville, AR"
   date_start = "2010-08-15"
   date_end = "2014-12-31"

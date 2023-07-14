@@ -86,6 +86,7 @@ user_groups:
 
 *The good bits:*
 Native to the foothills of Arkansas' Ozark Mountains. My life consists of... my wife (Kristin), my daughter (Faye), my dog (Ollie), herping, hiking, swimming and canoeing, woodworking, and home DIY projects.
+
 *The serious bits:*
 I am an ecologist, with training in herpetology and landscape ecology, and I have an interest in research at the interface between conservation, ecology theory, and mathematical modeling. My research is aimed at developing cutting-edge quantitative solutions to model complex data about the ecology of reptiles and amphibians. I primarily work with invasive species and species of conservation concern to determine how landscape attributes affect the dynamics and connectivity of populations, while providing management-relevant recommendations to effectively manage species.
 
