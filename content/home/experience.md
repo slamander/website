@@ -23,7 +23,7 @@ date_format = "Jan 2006"
   company = "University of Florida, Brett Scheffers, PhD"
   company_url = "schefferslab.com"
   location = "Gainesville, FL"
-  date_start = "2019-08-19"
+  date_start = "2019-08-15"
   date_end = ""
 
 [[experience]]
@@ -31,7 +31,7 @@ date_format = "Jan 2006"
   company = "Memphis Zoo Research and Conservation, Steve Reichling, PhD"
   company_url = "https://www.memphiszoo.org/conservation"
   location = "Memphis, TN"
-  date_start = "2018-01-10"
+  date_start = "2018-01-15"
   date_end = "2019-07-31"
 
 [[experience]]
@@ -47,8 +47,8 @@ date_format = "Jan 2006"
   company = "University of Arkansas, JD Willson, PhD"
   company_url = "https://www.willsonlab.com/"
   location = "Fayetteville, AR"
-  date_start = "2015-12-01"
-  date_end = "2013-01-15"
+  date_start = "2013-01-15"
+  date_end = "2015-12-01"
   
 [[experience]]
   title = "Part Time Research Technician"
@@ -56,7 +56,7 @@ date_format = "Jan 2006"
   # company_url = "https://www.willsonlab.com/"
   location = "Fayetteville, AR"
   date_start = "2010-08-15"
-  date_end = "2012-12-15"
+  date_end = "2012-12-31"
 
 +++
 
