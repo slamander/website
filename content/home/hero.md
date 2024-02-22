@@ -28,7 +28,7 @@ hero_media = "black_white_glutinosus_trans.png"
   
     [cta]
   url = "files/cv.pdf"
-  label = "Curriculum Vitae (2023-06-20)"
+  label = "Curriculum Vitae (02-22-2024)"
   icon_pack = "fas"
   icon = "download"
   
