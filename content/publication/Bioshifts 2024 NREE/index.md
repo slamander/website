@@ -23,7 +23,7 @@ authors:
 - Brit van Amerom
 - Fabricio Villalobos
 - Sarah R. Weiskopf
-- Jennifer Sunday1
+- Jennifer Sunday
 date: "2024-04-18T00:00:00Z"
 doi: "https://doi.org/10.1038/s43017-024-00527-z"
 featured: true
@@ -46,7 +46,7 @@ tags:
 title: Mechanisms, detection and impacts of species redistributions under climate change
 url_code: 
 url_dataset: 
-url_pdf: 
+url_pdf: https://drive.google.com/file/d/1UvcsnLthGnal_5R7qlpjJisZXy3YZh1h/view
 #url_poster: '#'
 url_project: ""
 #url_slides: ""

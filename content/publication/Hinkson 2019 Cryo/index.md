@@ -4,7 +4,7 @@ authors:
 - Kristin M. Hinkson
 - J. Alex Baecher
 - Sinlan Poo
-date: "2014-10-08T00:00:00Z"
+date: "2019-08-08T00:00:00Z"
 doi: "10.1016/j.cryobiol.2019.05.007"
 featured: false
 image:

@@ -44,7 +44,7 @@ height = "300px"
    overlay_img = "publications/GCB.png" 
    overlay_filter = 0.5  # Darken the image. Value in range 0-1.
    cta_label = "view publication"
-   cta_url = "https://onlinelibrary.wiley.com/doi/epdf/10.1111/gcb.17271"
+   cta_url = "https://www.alexbaecher.com/publication/bioshifts-2024-gcb/"
  
     [[item]]
    title = "New papers"
@@ -55,7 +55,7 @@ height = "300px"
    overlay_img = "publications/NREE.png" 
    overlay_filter = 0.5  # Darken the image. Value in range 0-1.
    cta_label = "view publication"
-   cta_url = "https://doi.org/10.1038/s43017-024-00527-z"
+   cta_url = "https://www.alexbaecher.com/publication/bioshifts-2024-nree/"
   
     [[item]]
   title = "R tutorial:"
