@@ -44,8 +44,8 @@ tags:
 - population dynamics
 - research bias
 - species range shift
-- trait-based approaches
-title: Bringing traits back into the equation: A roadmap to understand species redistribution
+- trait-based approaches  
+title: Bringing traits back into the equation, A roadmap to understand species redistribution
 url_code: https://github.com/Bioshifts/TraitPerspective
 url_dataset: https://doi.org/10.6084/m9.figshare.25467664
 url_pdf: https://onlinelibrary.wiley.com/doi/epdf/10.1111/gcb.17271
