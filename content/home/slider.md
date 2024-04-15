@@ -37,25 +37,25 @@ height = "300px"
    
     [[item]]
    title = "New papers"
-   content = "Journal of Animal Ecology 2023"
+   content = "Global Change Biology 2024"
    align = "left"
    
    # overlay_color = "#555"  # An HTML color value.
-   overlay_img = "publications/jae.png" 
+   overlay_img = "publications/GCB.png" 
    overlay_filter = 0.5  # Darken the image. Value in range 0-1.
    cta_label = "view publication"
-   cta_url = "https://www.alexbaecher.com/publication/baecher-2023-jae/"
+   cta_url = "https://onlinelibrary.wiley.com/doi/epdf/10.1111/gcb.17271"
  
     [[item]]
    title = "New papers"
-   content = "Biological Review 2022"
+   content = "Nature Reviews Earth & Environment"
    align = "left"
    
    #   overlay_color = "#555"  # An HTML color value.
-   overlay_img = "publications/br.png" 
+   overlay_img = "publications/NREE.png" 
    overlay_filter = 0.5  # Darken the image. Value in range 0-1.
    cta_label = "view publication"
-   cta_url = "https://www.alexbaecher.com/publication/basham-2022-br/"
+   cta_url = "https://doi.org/10.1038/s43017-024-00527-z"
   
     [[item]]
   title = "R tutorial:"
@@ -75,24 +75,5 @@ height = "300px"
   cta_url = "https://www.alexbaecher.com/post/connectivity-script/"
   # cta_icon_pack = "fas"
   # cta_icon = "graduation-cap"
-  
-    [[item]]
-  title = "Like this website?"
-  content = "I used a Hugo Academic template"
-  align = "center"  # Choose `center`, `left`, or `right`.
-
-  # Overlay a color or image (optional).
-  #   Deactivate an option by commenting out the line, prefixing it with `#`.
-  #   overlay_color = "#666"  # An HTML color value.
-  overlay_img = "projects/salamanders.jpg" 
-  overlay_filter = 0.5  # Darken the image. Value in range 0-1.
-
-  # Call to action button (optional).
-  #   Activate the button by specifying a URL and button label below.
-  #   Deactivate by commenting out parameters, prefixing lines with `#`.
-  cta_label = "clone my github website repo"
-  cta_url = "https://github.com/slamander/website"
-  cta_icon_pack = "fab"
-  cta_icon = "github"
   
 +++
