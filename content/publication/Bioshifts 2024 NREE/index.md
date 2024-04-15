@@ -24,7 +24,7 @@ authors:
 - Fabricio Villalobos
 - Sarah R. Weiskopf
 - Jennifer Sunday
-date: "2024-04-18T00:00:00Z"
+date: "2024-04-14T00:00:00Z"
 doi: "https://doi.org/10.1038/s43017-024-00527-z"
 featured: true
 image:
@@ -37,7 +37,7 @@ publication: In *Nature Reviews Earth and Environment*
 publication_short:
 publication_types:
 - "2"
-publishDate: "2024-04-18T00:00:00Z"
+publishDate: "2024-04-14T00:00:00Z"
 slides: Climate-induced-species-redistribution
 summary: In *Nature Reviews Earth and Environment*
 tags:
