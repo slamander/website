@@ -44,9 +44,9 @@ tags:
 - climate change
 - species range shift
 title: Mechanisms, detection and impacts of species redistribution under climate change
-url_code: https://drive.google.com/file/d/1UvcsnLthGnal_5R7qlpjJisZXy3YZh1h/view
-url_dataset: https://drive.google.com/file/d/1UvcsnLthGnal_5R7qlpjJisZXy3YZh1h/view
-url_pdf: https://drive.google.com/file/d/1UvcsnLthGnal_5R7qlpjJisZXy3YZh1h/view
+#url_code: 
+#url_dataset: 
+url_pdf: https://www.nature.com/articles/s43017-024-00527-z.pdf
 #url_poster: '#'
 url_project: ""
 #url_slides: ""
