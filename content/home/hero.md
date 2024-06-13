@@ -19,7 +19,7 @@ title = "Baecher Research"
   image = "beach.jpg"  # Name of image in `static/media/`.
   # padding = ["25px", "0", "200px", "0"]
   image_darken = 0.2  # Darken the image? Range 0-1 where 0 is transparent and 1 is opaque.
-  image_size = "contain"  #  Options are `cover` (default), `contain`, or `actual` size.
+  image_size = "actual"  #  Options are `cover` (default), `contain`, or `actual` size.
   image_position = "center"  # Options include `left`, `center` (default), or `right`.
   # image_parallax = true  # Use a fun parallax-like fixed background effect? true/false
   
