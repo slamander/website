@@ -17,7 +17,7 @@ title = "Baecher Research"
   color = "#2962ff"
   
   # Background image.
-  image = "cover.jpg"  # Name of image in `static/media/`.
+  image = "cover_cropped.jpg"  # Name of image in `static/media/`.
   padding = ["25px", "0", "200px", "0"]
   image_darken = 0.2  # Darken the image? Range 0-1 where 0 is transparent and 1 is opaque.
   image_size = "cover"  #  Options are `cover` (default), `contain`, or `actual` size.
