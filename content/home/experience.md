@@ -20,8 +20,8 @@ date_format = "Jan 2006"
 
 [[experience]]
   title = "Postdoctoral Associate"
-  company = "Florida Natural History Museum, UF Florida Medical Entomology Laboratory"
-  company_url = "https://www.gurlab.net"
+  company = """Guralnick Lab, Florida Natural History Museum \n Campbell Lab, UF Florida Medical Entomology Laboratory"""
+  company_url = "https://t.co/rKnYtp5jlt"
   location = "Gainesville, FL"
   date_start = "2024-06-01"
   date_end = ""
