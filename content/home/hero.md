@@ -8,7 +8,7 @@ weight = 1  # Order that this section will appear.
 title = "Baecher Research"
 
 # Hero image (optional). Enter filename of an image in the `static/media/` folder.
-hero_media = "init_trans.png"
+hero_media = "inits_trans.png"
 
     [design.background]
     
