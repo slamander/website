@@ -7,7 +7,7 @@ image:
 links:
 - icon: file-alt
   icon_pack: fas
-  name: EcoEvo paper
+  name: paper
   url: https://onlinelibrary.wiley.com/doi/full/10.1002/ece3.4736
   - icon: file-alt
   icon_pack: fas
