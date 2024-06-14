@@ -10,7 +10,7 @@ authors:
 superuser: true
 
 # Role/position
-role: PhD candidate, Research Assistant
+role: Postdoctoral Researcher 
 
 # Organizations/Affiliations
 organizations:
@@ -24,9 +24,9 @@ Interests:
 - Conservation 
 - Ecological theory
 - Herpetology
-- Landscape & Spatial Ecology
+- Spatial Ecology
 - Reproducible Research
-- Southeastern USA Natural History
+- Natural History
 - Statistics
 
 Education:
