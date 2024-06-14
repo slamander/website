@@ -19,24 +19,32 @@ date_format = "Jan 2006"
 #   Begin/end multi-line descriptions with 3 quotes `"""`.
 
 [[experience]]
-  title = "PhD Candidate, Research Assistant"
-  company = "University of Florida, Brett Scheffers, PhD"
-  company_url = "schefferslab.com"
+  title = "Postdoctoral Associate"
+  company = "Florida Natural History Museum, University of Florida"
+  company_url = "gurlab.net"
   location = "Gainesville, FL"
-  date_start = "2019-08-15"
+  date_start = "2024-07-01"
   date_end = ""
 
 [[experience]]
+  title = "Doctoral Preeminence Research Fellow (Ph.D.)"
+  company = "Scheffers Lab, University of Florida"
+  company_url = "schefferslab.com"
+  location = "Gainesville, FL"
+  date_start = "2019-08-15"
+  date_end = "2024-06-31"
+
+[[experience]]
   title = "Conservation and Research Technician"
-  company = "Memphis Zoo Research and Conservation, Steve Reichling, PhD"
+  company = "Dept. Conservation and Research, Memphis Zoo"
   company_url = "https://www.memphiszoo.org/conservation"
   location = "Memphis, TN"
   date_start = "2018-01-15"
   date_end = "2019-07-31"
 
 [[experience]]
-  title = "MSc Student, Teaching Assistant"
-  company = "Eastern Kentucky University, Stephen Richter, PhD"
+  title = "Graduate Teaching Assistant (M.Sc.)"
+  company = "Richter Lab, Eastern Kentucky University"
   company_url = "https://richterlab.weebly.com/"
   location = "Richmond, KY"
   date_start = "2015-03-15"
@@ -44,7 +52,7 @@ date_format = "Jan 2006"
   
 [[experience]]
   title = "Full Time Research Assistant"
-  company = "University of Arkansas, JD Willson, PhD"
+  company = "Willson Lab, University of Arkansas"
   company_url = "https://www.willsonlab.com/"
   location = "Fayetteville, AR"
   date_start = "2013-01-15"
@@ -52,8 +60,8 @@ date_format = "Jan 2006"
   
 [[experience]]
   title = "Part Time Research Technician"
-  company = "University of Arkansas, Biology Dept."
-  # company_url = "https://www.willsonlab.com/"
+  company = "Dept. Biology, University of Arkansas"
+  # company_url = ""
   location = "Fayetteville, AR"
   date_start = "2010-08-15"
   date_end = "2012-12-31"
