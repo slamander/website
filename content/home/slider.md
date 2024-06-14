@@ -60,13 +60,13 @@ height = "300px"
     [[item]]
   title = "R tutorial:"
   content = "Mapping Ecological Flow in R"
-  align = "center"  # Choose `center`, `left`, or `right`.
+  align = "left"  # Choose `center`, `left`, or `right`.
   
   # Overlay a color or image (optional).
   #   Deactivate an option by commenting out the line, prefixing it with `#`.
   #   overlay_color = "#666"  # An HTML color value.
   overlay_img = "posts/connectivity_script_files/figure-markdown_strict/plot_flow-1.png" 
-  #   overlay_filter = 0.1  # Darken the image. Value in range 0-1.
+     overlay_filter = 0.5  # Darken the image. Value in range 0-1.
 
   # Call to action button (optional).
   #   Activate the button by specifying a URL and button label below.
