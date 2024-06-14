@@ -7,11 +7,11 @@ image:
 links:
 - icon: file-alt
   icon_pack: fas
-  name: paper
+  name: Publication
   url: https://onlinelibrary.wiley.com/doi/full/10.1002/ece3.4736
-  - icon: file-alt
+- icon: file-alt
   icon_pack: fas
-  name: Herp Bulletin paper
+  name: Publication
   url: https://doi.org/10.33256/hb150.2930 
 slides: Appalachian-Salamander-Ecology
 summary: Natural History, Ecology, and Conservation of Plethodontid Salamanders.
