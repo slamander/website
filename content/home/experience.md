@@ -21,9 +21,9 @@ date_format = "Jan 2006"
 [[experience]]
   title = "Postdoctoral Associate"
   company = "Florida Natural History Museum, University of Florida"
-  company_url = "gurlab.net"
+  company_url = "https://www.gurlab.net"
   location = "Gainesville, FL"
-  date_start = "2024-07-1"
+  date_start = "July 2024"
   date_end = ""
 
 [[experience]]
