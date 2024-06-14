@@ -7,16 +7,12 @@ image:
 links:
 - icon: file-alt
   icon_pack: fas
-  name: Publication
+  name: Eco&Evo paper
   url: https://onlinelibrary.wiley.com/doi/full/10.1002/ece3.4736
-- icon: github
-  icon_pack: fab
-  name: Code
-  url: https://github.com/slamander/salamander_ecology
-- icon: table
-  icon_pack: fa
-  name: Data
-  url: https://doi.org/10.6073/pasta/d834e12ff12dc23d9319fa9f73e40306
+  - icon: file-alt
+  icon_pack: fas
+  name: Herp Bull. paper
+  url: https://doi.org/10.33256/hb150.2930 
 slides: Appalachian-Salamander-Ecology
 summary: Natural History, Ecology, and Conservation of Plethodontid Salamanders.
 tags:
@@ -35,11 +31,14 @@ url_video: ""
 
 **Appalachian Salamander Ecology**  
 
-The Appalachian Mountians are rich with endemic, Woodland salamanders are among the most abundant vertebrate animals in temperate deciduous forests of eastern North America. Because of their abundance, woodland salamanders are responsible for the transformation of nutrients and translocation of energy between highly disparate levels of trophic organization: detrital food webs and high‐order predators. By predating leaf litter insects (particularly shredders), salamanders are thought to slow the leaf litter decomposition process, resulting in less soil respiration and fewer carbon emmissions. Therefore, salamanders represent one of the most important ecosystem services in forests. Unfortunately, salamanders' predicted sensitivity to climate change suggests these services may not be rendered indefinitely... My research aims to understand how salamanders will respond to natural and anthropogenic disturbances, as well futhering out understand of their natural history. 
+Salamanders are among the most abundant vertebrate animals in temperate deciduous forests of eastern North America. Because of their abundance, salamanders are responsible for the transfer of energy between highly disparate levels of trophic organization: detrital food webs and high‐order predators. By predating leaf litter insects (particularly shredders), salamanders are thought to slow the leaf litter decomposition process, resulting in less soil respiration and fewer carbon emmissions. Therefore, salamanders represent one of the most important ecosystem services in forests. Unfortunately, salamanders' predicted sensitivity to climate change suggests these services may not be rendered indefinitely... My research aims to understand how salamanders will respond to natural and anthropogenic disturbances, as well furthering out understand of their natural history. 
 
 Interests in Appalachian Salamander Research:
-
 * Studying population dynamics of salamanders in relation to natural disturbance (e.g. canopy perforation)
-* Investigating how salamanders respond to a competition-disturbance grandient 
-* Understanding how climate change will affect salamanders across an elevational gradient
+* Investigating how salamanders respond to a competition-disturbance gradient 
+* Understanding how climate change will affect salamanders across elevation gradients
 
+**Publications**  
+***Published***  
+- Baecher, JA, E Jones, SC Richter. *2020*. Tail bifurcation in two species of Desmognathus salamander Caudata: Plethodontidae in southeastern Kentucky, USA. *Herpetological Bulletin* https://doi.org/10.33256/hb150.2930 
+- Baecher, JA, SC Richter. *2018*. Environmental gradients in an old-growth Appalachian Forest predict fine-scale distribution, co-occurrence, and abundance of woodland salamanders. *Ecology and Evolution* https://doi.org/10.1002/ece3.4736

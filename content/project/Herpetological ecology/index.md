@@ -5,7 +5,14 @@ image:
   caption: Two-dimensional mesh structure for spatio-temporal INLA model of Southern Dusky Salamanders 
   focal_point: Smart
 links:
-
+- icon: file-alt
+  icon_pack: fas
+  name: Wetlands paper
+  url: https://doi.org/10.1007/s13157-017-0966-5
+- icon: file-alt
+  icon_pack: fas
+  name: Herpetologica paper
+  url: https://doi.org/10.1655/Herpetologica-D-18-00007 
 slides: Reptile-and-Amphibian-Ecology
 summary: Natural History, Ecology, and Conservation of Herps in the Southeastern US.
 tags:
@@ -21,7 +28,9 @@ url_video: ""
 
 **Reptile and Amphibian Ecology**  
 
-*What’s causing the decline of southern dusky salamanders (Desmognathus auriculatus) in the Southeastern United States?*
-
-Ever since the early 1980’s, the southern dusky salamander has been on a precipitous decline throughout the entirety of their distribution in the southeastern Coastal Plains. While the cause is unknown, hypotheses include: hydrologic disruption of natal habitat (a result of destructive rooting behaviors of feral swine, which were introduced and spread throughout the region where salamanders began to decline); habitat destruction due to widespread and pervasive land use and land cover change; widespread extinctions due to thermal intolerance under climate change; and the presence of a cryptic disease or pathogen.
-Methods: Using a database of presence only and standardized survey data ranging from the mid 1800’s until present, I will model the spatiotemporal dynamics of southern dusky salamander’s distribution in the southeastern US. To model this phenomenon, I will use a quantitative method commonly employed to predict the spread of disease (e.g. Malaria) and for modeling spatial patterns in geologic processes, a marked log-gaussian cox point process model. With this approach, I intend to model the influence of various factors--feral swine, habitat destruction, climate change, transmission of disease--on the prevalence of southern dusky salamanders during the last 100 years.
+**Publications**  
+- Baecher, JA, et al. *2023*. Experimental evaluation of how invasions and climate change interact to alter the vertical assembly of an amphibian community. *Journal of Animal Ecology* https://besjournals.onlinelibrary.wiley.com/doi/10.1111/1365-2656.13899
+- Basham, EW, et al. *2022*. Large, old trees define the vertical, horizontal, and seasonal distributions of a poison frog. *Oecologia*  https://doi.org/10.1007/s00442-022-05108-9
+- Swartwout, M, et al. *2020*. Prey Size and Growth Rate do not Influence Trophic Morphology of Juvenile Water Snakes Nerodia sipedon. *Herpetologica* https://doi.org/10.1655/Herpetologica-D-18-00007
+- Baecher, JA, et al. .*2018*. Herpetofaunal Communities in Restored and Unrestored Remnant Tallgrass Prairie and Associated Wetlands in Northwest Arkansas, USA. *Wetlands* https://doi.org/10.1007/s13157-017-0966-5
+- Baecher, JA, et al. .*2014*. Lithobates areolatus, Predation. *Herpetological Reviews* 45(4):681-682

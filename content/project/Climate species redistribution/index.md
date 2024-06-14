@@ -7,25 +7,19 @@ image:
 links:
 - icon: file-alt
   icon_pack: fas
-  name: Workshop
-  url: https://www.youtube.com/watch?v=manC94PeEQI&feature=emb_title&ab_channel=IALENorthAmerica
-- icon: github
-  icon_pack: fab
-  name: Code
-  url: https://github.com/schefferslab/SAMC_pythons
-- icon: table
-  icon_pack: fa
-  name: Data
-  url: https://www.eddmaps.org/distribution/viewmap.cfm?sub=20461
+  name: Nature Reviews paper
+  url: https://doi.org/10.1038/s43017-024-00527-z 
+- icon: file-alt
+  icon_pack: fas
+  name: GCB paper
+  url: https://doi.org/10.1111/gcb.17271 
 slides: Climate-induced-species-redistribution
-summary: Modeling the spatial dynamics of invasive species.
+summary: Modeling the spatialtemporal dynamics of species' distributions.
 tags:
-- Spatially Absorbing Markov Chains
 - Ecological Modeling
 - Climate Change
 - Invasive Species
 - Connectivity Modeling
-- Resistance Surfaces
 title: Climate-induced species redistribution
 url_code: ""
 url_pdf: ""
