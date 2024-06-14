@@ -22,7 +22,7 @@ bio: My research interests include landscape ecology and applied conservation of
 
 Interests:
 - Conservation 
-- Ecology Theory
+- Ecological theory
 - Herpetology
 - Landscape & Spatial Ecology
 - Reproducible Research
@@ -31,13 +31,13 @@ Interests:
 
 Education:
   courses:
-  - course: PhD, Interdisciplinary Ecology, Statistics
+  - course: Ph.D., Interdisciplinary Ecology
     institution: University of Florida
-    year: ~2024
-  - course: MSc, Biology
+    year: 2024
+  - course: M.Sc., Biology
     institution: Eastern Kentucky University
     year: 2017
-  - course: BSc, Biology
+  - course: B.Sc., Biology
     institution: University of Arkansas
     year: 2014
 
