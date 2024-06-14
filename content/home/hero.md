@@ -16,7 +16,7 @@ hero_media = "black_white_glutinosus_trans.png"
   color = "#2962ff"
   
   # Background image.
- image = "sunset.jpg"  # Name of image in `static/media/`.
+ image = "log.jpg"  # Name of image in `static/media/`.
  padding = ["150px", "0px", "150px", "0px"]
   image_darken = 0.2  # Darken the image? Range 0-1 where 0 is transparent and 1 is opaque.
  image_size = "cover"  #  Options are `cover` (default), `contain`, or `actual` size.
