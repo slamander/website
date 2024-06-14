@@ -7,11 +7,11 @@ image:
 links:
 - icon: file-alt
   icon_pack: fas
-  name: Publication
+  name: Eco&Evo paper
   url: https://onlinelibrary.wiley.com/doi/full/10.1002/ece3.4736
 - icon: file-alt
   icon_pack: fas
-  name: Publication
+  name: Herpetological Bulletin paper
   url: https://doi.org/10.33256/hb150.2930 
 slides: Appalachian-Salamander-Ecology
 summary: Natural History, Ecology, and Conservation of Plethodontid Salamanders.
@@ -39,6 +39,5 @@ Interests in Appalachian Salamander Research:
 * Understanding how climate change will affect salamanders across elevation gradients
 
 **Publications**  
-***Published***  
-- Baecher, JA, E Jones, SC Richter. *2020*. Tail bifurcation in two species of Desmognathus salamander Caudata: Plethodontidae in southeastern Kentucky, USA. *Herpetological Bulletin* https://doi.org/10.33256/hb150.2930 
-- Baecher, JA, SC Richter. *2018*. Environmental gradients in an old-growth Appalachian Forest predict fine-scale distribution, co-occurrence, and abundance of woodland salamanders. *Ecology and Evolution* https://doi.org/10.1002/ece3.4736
+- Baecher, JA, E Jones, SC Richter. **2020**. Tail bifurcation in two species of Desmognathus salamander Caudata: Plethodontidae in southeastern Kentucky, USA. *Herpetological Bulletin* https://doi.org/10.33256/hb150.2930 
+- Baecher, JA, SC Richter. **2018**. Environmental gradients in an old-growth Appalachian Forest predict fine-scale distribution, co-occurrence, and abundance of woodland salamanders. *Ecology and Evolution* https://doi.org/10.1002/ece3.4736

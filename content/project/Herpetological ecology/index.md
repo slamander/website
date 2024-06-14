@@ -7,12 +7,20 @@ image:
 links:
 - icon: file-alt
   icon_pack: fas
-  name: Wetlands paper
-  url: https://doi.org/10.1007/s13157-017-0966-5
+  name: Journal of Animal Ecology paper
+  url: https://besjournals.onlinelibrary.wiley.com/doi/10.1111/1365-2656.13899
+- icon: file-alt
+  icon_pack: fas
+  name: Oecologia paper
+  url: https://doi.org/10.1007/s00442-022-05108-9
 - icon: file-alt
   icon_pack: fas
   name: Herpetologica paper
   url: https://doi.org/10.1655/Herpetologica-D-18-00007 
+- icon: file-alt
+  icon_pack: fas
+  name: Wetlands paper
+  url: https://doi.org/10.1007/s13157-017-0966-5
 slides: Reptile-and-Amphibian-Ecology
 summary: Natural History, Ecology, and Conservation of Herps in the Southeastern US.
 tags:
