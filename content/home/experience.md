@@ -23,7 +23,7 @@ date_format = "Jan 2006"
   company = "Florida Natural History Museum, University of Florida"
   company_url = "gurlab.net"
   location = "Gainesville, FL"
-  date_start = "2024-07-01"
+  date_start = "2024-07-1"
   date_end = ""
 
 [[experience]]
