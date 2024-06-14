@@ -2,7 +2,7 @@
 date: "2019-09-10T00:00:00Z"
 external_link: []
 image:
-  caption: Estimated Net Flow of Burmese Pythons out of the Everglades.
+  caption: Biotic-Abiotic-Mobility diagram of the influence of global change on species' distributions
   focal_point: Smart
 links:
 - icon: file-alt
@@ -33,10 +33,12 @@ url_slides: ""
 url_video: ""
 ---
 
-***Publications***
-**Forthcoming:**
-Lawlor, JA et al. *2024*. Mechanisms, detection and impacts of species redistribution under climate change. *Nature Reviews Earth & Environment*
-- Preprint: https://drive.google.com/file/d/1UvcsnLthGnal_5R7qlpjJisZXy3YZh1h/view
-**Published:** 
-Comte, L, et al. *2024*. Bringing traits back in the equation: A roadmap to understand species redistribution. *Global Change Biology*
+**Publications**  
+***Published***  
+- Lawlor, JA et al. *2024*. Mechanisms, detection and impacts of species redistribution under climate change. *Nature Reviews Earth & Environment* https://doi.org/10.1038/s43017-024-00527-z 
+- Comte, L, et al. *2024*. Bringing traits back in the equation: A roadmap to understand species redistribution. *Global Change Biology* https://doi.org/10.1111/gcb.17271 
+
+***Forthcoming***  
+- Klinges, DK, JA Baecher, et al. *In press*. Proximal microclimate: moving beyond spatiotemporal scale to improve predicted biological responses. *Global Ecology and Biogeography* 
+- Evans, L, JA Baecher, BR Scheffers. *In revision (major)*. Invasion risk posed by the pet trade. *Frontiers in Ecology and the Environment*
 
