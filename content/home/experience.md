@@ -23,7 +23,7 @@ date_format = "Jan 2006"
   company = "Florida Natural History Museum, University of Florida"
   company_url = "https://www.gurlab.net"
   location = "Gainesville, FL"
-  date_start = "2024-07-01"
+  date_start = "2024-06-01"
   date_end = ""
 
 [[experience]]
@@ -32,7 +32,7 @@ date_format = "Jan 2006"
   company_url = "schefferslab.com"
   location = "Gainesville, FL"
   date_start = "2019-08-15"
-  date_end = "2024-06-31"
+  date_end = "2024-05-31"
 
 [[experience]]
   title = "Conservation and Research Technician"
