@@ -16,7 +16,7 @@ hero_media = "black_white_glutinosus_trans.png"
   # color = "#2962ff"
   
   # Background image.
- image = "log_high.jpg"  # Name of image in `static/media/`.
+ image = "forest.jpg"  # Name of image in `static/media/`.
  padding = ["200px", "0px", "200px", "0px"]
 # image_darken = 0.2  # Darken the image? Range 0-1 where 0 is transparent and 1 is opaque.
  image_size = "cover"  #  Options are `cover` (default), `contain`, or `actual` size.
