@@ -13,7 +13,7 @@ image:
   preview_only: false
 projects:
 - Appalachian-Slamander-Ecology
-publication: *Herpetological Bulletin*
+publication: Herpetological Bulletin
 publication_short:
 publication_types:
 - "2"

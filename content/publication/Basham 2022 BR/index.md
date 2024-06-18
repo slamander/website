@@ -15,7 +15,7 @@ image:
   preview_only: false
 projects:
 - Climate-induced-species-redistribution
-publication: *Biological Reviews*
+publication: Biological Reviews
 publication_short:
 publication_types:
 - "2"
