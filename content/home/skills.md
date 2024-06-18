@@ -57,7 +57,7 @@ subtitle = ""
   description = ""
   
 [[feature]]
-  icon = "github"
+  icon = "code-compare"
   icon_pack = "fa"
   name = "Reproducible research"
   description = ""
