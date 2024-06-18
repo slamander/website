@@ -13,7 +13,7 @@ image:
   preview_only: false
 projects:
 - Reptile-and-Amphibian-Ecology
-publication: In **Oceologia**
+publication: *Research Article* in **Oceologia**
 publication_short:
 publication_types:
 - "2"

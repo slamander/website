@@ -14,7 +14,7 @@ image:
   preview_only: false
 projects:
 - Reptile-and-Amphibian-Ecology
-publication: In **Journal of Animal Ecology**
+publication: *Research Article* in **Journal of Animal Ecology**
 publication_short:
 publication_types:
 - "2"

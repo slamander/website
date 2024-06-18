@@ -13,7 +13,7 @@ image:
   preview_only: false
 projects:
 - Reptile-and-Amphibian-Ecology
-publication: In **Cryobiology**
+publication: *Short Communication* in **Cryobiology**
 publication_short:
 publication_types:
 - "2"
