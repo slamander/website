@@ -15,7 +15,7 @@ publication: In press as a **Perspective** at **Journal of Biogeography**
 publication_short:
 publication_types:
 - "2"
-publishDate: "2024-07-08T00:00:00Z"
+publishDate: "2024-06-08T00:00:00Z"
 slides: Extinction Landscapes
 summary: This paper examines the environmental filtering paradigm and proposes an alternative heuristic of community assembly which more readily incorporates interactions between biotic and abiotic factors. 
 tags:
