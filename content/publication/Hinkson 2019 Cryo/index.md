@@ -19,7 +19,7 @@ publication_types:
 - "2"
 publishDate: "2019-08-08T00:00:00Z"
 slides: Reptile-and-Amphibian-Ecology
-summary: In **Cryobiology** 
+summary: This paper tests multiple laboratory protocols for cryoperserving the sperm of sensitive amphibians for assisted reproductive technologies to aid in conserving tropical amphibian taxa. 
 tags:
 - Amphibian
 - Assisted reproductive technologies

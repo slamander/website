@@ -21,7 +21,7 @@ publication_types:
 - "2"
 publishDate: "2018-2-08T00:00:00Z"
 slides: Reptile-and-Amphibian-Ecology
-summary: In **Wetlands**
+summary: This paper looks at how wetland restoration in grassland ecosystems may benefit prairie-adapted reptiles and amphibians. 
 tags:
 - Restoration
 - Prescribed Fire

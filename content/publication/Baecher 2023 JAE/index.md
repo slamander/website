@@ -20,7 +20,7 @@ publication_types:
 - "2"
 publishDate: "2023-03-05T00:00:00Z"
 slides: Biotic-abiotic-interactions
-summary: In **Journal of Animal Ecology** 
+summary: This paper uses a novel experimental system to show how an antagonistic invasive species and climate-induced drought may act jointly to affect the vertical assembly of a common treefrog community in the Southeastern USA. 
 tags:
 - climate change
 - competition

@@ -21,7 +21,7 @@ publication_types:
 - "2"
 publishDate: "2022-10-08T00:00:00Z"
 slides: Vertical stratification
-summary: In **Biological Reviews** 
+summary: This paper describes a thorough meta-analysis on the factors that determine vertical stratification of vertebrate taxa across the global tropics. 
 tags:
 - amphibian
 - arboreal

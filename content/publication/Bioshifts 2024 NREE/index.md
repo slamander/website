@@ -39,7 +39,7 @@ publication_types:
 - "2"
 publishDate: "2024-04-14T00:00:00Z"
 slides: Climate-induced-species-redistribution
-summary: In **Nature Reviews Earth and Environment**
+summary: This paper offers a thorough review of the mechanisms underlying species range shifts, how shifts are detected, and the impacts of range shifts on biodiversity more broadly. 
 tags:
 - climate change
 - species range shift
