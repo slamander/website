@@ -11,13 +11,13 @@ image:
   preview_only: false
 projects:
 - Climate-induced-species-redistribution
-publication: In *Journal of Biogeography*
+publication: In press at *Journal of Biogeography*
 publication_short:
 publication_types:
 - "2"
 publishDate: "2022-10-08T00:00:00Z"
 slides: Extinction Landscapes
-summary: *In press* at **Journal of Biogeography** 
+summary: In press at **Journal of Biogeography** 
 tags:
 - competition
 - coexistence
@@ -25,7 +25,6 @@ tags:
 - niche theory
 - biotic interactions
 - spatial scale
-
 title: The environmental filtering paradigm and non-filtering community assembly processes
 url_code: 
 url_dataset: 
