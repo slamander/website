@@ -2,8 +2,8 @@
 # A Skills section created with the Featurette widget.
 widget = "featurette"  # See https://sourcethemes.com/academic/docs/page-builder/
 headless = true  # This file represents a page section.
-active = false  # Activate this widget? true/false
-weight = 30  # Order that this section will appear.
+active = true  # Activate this widget? true/false
+weight = 4  # Order that this section will appear.
 
 title = "Skills"
 subtitle = ""
@@ -18,34 +18,56 @@ subtitle = ""
   icon = "r-project"
   icon_pack = "fab"
   name = "R"
-  description = "90%"
+  description = "50%"
   
 [[feature]]
   icon = "chart-line"
   icon_pack = "fas"
   name = "Statistics"
-  description = "100%"  
+  description = "50%"  
   
 [[feature]]
-  icon = "camera-retro"
+  icon = "satellite-dish"
   icon_pack = "fas"
-  name = "Photography"
-  description = "10%"
+  name = "GIS"
+  description = "50%"
+  
+[[feature]]
+  icon = "server"
+  icon_pack = "fa"
+  name = "Performance computing"
+  description = "50%"
+  
+[[feature]]
+  icon = "database"
+  icon_pack = "fa"
+  name = "Big data"
+  description = "50%"
+  
+[[feature]]
+  icon = "globe"
+  icon_pack = "fa"
+  name = "Species Distribution Modeling"
+  description = "50%"
 
-# Uncomment to use emoji icons.
-# [[feature]]
-#  icon = ":smile:"
-#  icon_pack = "emoji"
-#  name = "Emojiness"
-#  description = "100%"  
+[[feature]]
+  icon = "frog"
+  icon_pack = "fa"
+  name = "Herpetology"
+  description = "50%"
+  
+[[feature]]
+  icon = "snake"
+  icon_pack = "fa"
+  name = "Invasion Biology"
+  description = "50%"
+  
+[[feature]]
+  icon = "mountains"
+  icon_pack = "fa"
+  name = "Landscape Ecology"
+  description = "50%"
+  
 
-# Uncomment to use custom SVG icons.
-# Place custom SVG icon in `assets/images/icon-pack/`, creating folders if necessary.
-# Reference the SVG icon name (without `.svg` extension) in the `icon` field.
-# [[feature]]
-#  icon = "your-custom-icon-name"
-#  icon_pack = "custom"
-#  name = "Surfing"
-#  description = "90%"
 
 +++
