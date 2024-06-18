@@ -30,13 +30,13 @@ image:
   preview_only: false
 projects:
 - Climate-induced-species-redistribution
-publication: In *Global Change Biology*
+publication: In **Global Change Biology**
 publication_short:
 publication_types:
 - "2"
 publishDate: "2024-04-13T00:00:00Z"
 slides: Traits and species redistribution
-summary: In *Global Change Biology*
+summary: In **Global Change Biology**
 tags:
 - climate change
 - leading edge

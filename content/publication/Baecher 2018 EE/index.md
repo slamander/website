@@ -12,13 +12,13 @@ image:
   preview_only: false
 projects:
 - Appalachian-Salamander-Ecology
-publication: In *Ecology and Evolution*
+publication: In **Ecology and Evolution**
 publication_short:
 publication_types:
 - "2"
 publishDate: "2018-12-08T00:00:00Z"
 slides: Appalachian-Salamander-Ecology
-summary: In *Ecology and Evolution*
+summary: In **Ecology and Evolution**
 tags:
 - Population dynamics
 - Occupancy

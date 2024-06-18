@@ -13,13 +13,13 @@ image:
   preview_only: false
 projects:
 - Reptile-and-Amphibian-Ecology
-publication: In *Cryobiology*
+publication: In **Cryobiology**
 publication_short:
 publication_types:
 - "2"
 publishDate: "2019-08-08T00:00:00Z"
 slides: Reptile-and-Amphibian-Ecology
-summary: In *Cryobiology* 
+summary: In **Cryobiology** 
 tags:
 - Amphibian
 - Assisted reproductive technologies

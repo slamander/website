@@ -15,13 +15,13 @@ image:
   preview_only: false
 projects:
 - Reptile-and-Amphibian-Ecology
-publication: In *Herpetologica*
+publication: In **Herpetologica**
 publication_short:
 publication_types:
 - "2"
 publishDate: "2018-12-08T00:00:00Z"
 slides: Reptile-and-Amphibian-Ecology
-summary: In *Herpetologica*
+summary: In **Herpetologica**
 tags:
 - Phenotypic plasticity
 - Reptiles

@@ -13,13 +13,13 @@ image:
   preview_only: false
 projects:
 - Appalachian-Slamander-Ecology
-publication: In *Herpetological Bulletin*
+publication: In **Herpetological Bulletin**
 publication_short:
 publication_types:
 - "2"
 publishDate: "2020-1-08T00:00:00Z"
 slides: Appalachian-Slamander-Ecology
-summary: In *Herpetological Bulletin*
+summary: In **Herpetological Bulletin**
 tags:
 - Desmognathus fuscus
 - Natural History

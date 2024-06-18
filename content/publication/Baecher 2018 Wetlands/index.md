@@ -15,13 +15,13 @@ image:
   preview_only: false
 projects:
 - Reptile-and-Amphibian-Ecology
-publication: In *Wetlands*
+publication: In **Wetlands**
 publication_short:
 publication_types:
 - "2"
 publishDate: "2018-2-08T00:00:00Z"
 slides: Reptile-and-Amphibian-Ecology
-summary: In *Wetlands*
+summary: In **Wetlands**
 tags:
 - Restoration
 - Prescribed Fire

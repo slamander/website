@@ -13,13 +13,13 @@ image:
   preview_only: false
 projects:
 - Reptile-and-Amphibian-Ecology
-publication: In *Oceologia*
+publication: In **Oceologia**
 publication_short:
 publication_types:
 - "2"
 publishDate: "2022-02-03T00:00:00Z"
 slides: Vertical stratification
-summary: In *Oceologia* 
+summary: In **Oceologia** 
 tags:
 - amphibian
 - biogeography

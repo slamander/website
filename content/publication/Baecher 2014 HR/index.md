@@ -15,13 +15,13 @@ image:
   preview_only: false
 projects:
 - Reptile-and-Amphibian-Ecology
-publication: In *Herpetological Review*
+publication: In **Herpetological Review**
 publication_short:
 publication_types:
 - "2"
 publishDate: "2020-10-08T00:00:00Z"
 slides: Crawfish-frog-natural-history
-summary: In *Herpetological Review* 
+summary: In **Herpetological Review** 
 tags:
 - Crawfish Frogs
 - Natural History

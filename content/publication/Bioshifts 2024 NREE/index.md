@@ -33,13 +33,13 @@ image:
   preview_only: false
 projects:
 - Climate-induced-species-redistribution
-publication: In *Nature Reviews Earth and Environment*
+publication: In **Nature Reviews Earth and Environment**
 publication_short:
 publication_types:
 - "2"
 publishDate: "2024-04-14T00:00:00Z"
 slides: Climate-induced-species-redistribution
-summary: In *Nature Reviews Earth and Environment*
+summary: In **Nature Reviews Earth and Environment**
 tags:
 - climate change
 - species range shift

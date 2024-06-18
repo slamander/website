@@ -15,13 +15,13 @@ image:
   preview_only: false
 projects:
 - Climate-induced-species-redistribution
-publication: In *Biological Review*
+publication: In **Biological Reviews**
 publication_short:
 publication_types:
 - "2"
 publishDate: "2022-10-08T00:00:00Z"
 slides: Vertical stratification
-summary: In *Biological Reviews* 
+summary: In **Biological Reviews** 
 tags:
 - amphibian
 - arboreal

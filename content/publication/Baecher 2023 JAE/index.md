@@ -14,13 +14,13 @@ image:
   preview_only: false
 projects:
 - Reptile-and-Amphibian-Ecology
-publication: In *Journal of Animal Ecology*
+publication: In **Journal of Animal Ecology**
 publication_short:
 publication_types:
 - "2"
 publishDate: "2023-03-05T00:00:00Z"
 slides: Biotic-abiotic-interactions
-summary: In *Journal of Animal Ecology* 
+summary: In **Journal of Animal Ecology** 
 tags:
 - climate change
 - competition
