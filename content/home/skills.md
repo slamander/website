@@ -63,7 +63,7 @@ subtitle = ""
   description = ""
   
 [[feature]]
-  icon = "mountain-city"
+  icon = "mountain"
   icon_pack = "fa"
   name = "Landscape Ecology"
   description = ""
