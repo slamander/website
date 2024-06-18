@@ -51,7 +51,7 @@ social:
   link: mailto:jbaecher@ufl.edu 
 - icon: twitter
   icon_pack: fab
-  link: https://www.facebook.com/baechermander
+  link: https://twitter.com/AlexBaecher
 - icon: instagram
   icon_pack: fab
   link: https://www.instagram.com/j_baecher/
@@ -60,7 +60,7 @@ social:
   link: https://www.flickr.com/photos/126690066@N08/
 - icon: facebook
   icon_pack: fab
-  link: https://twitter.com/AlexBaecher
+  link: https://www.facebook.com/baechermander
 - icon: google-scholar
   icon_pack: ai
   link: https://scholar.google.com/citations?user=zl3lDnEAAAAJ&hl=en
