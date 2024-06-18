@@ -55,7 +55,7 @@ subtitle = ""
   icon_pack = "fas"
   name = "GIS"
   description = ""
-
+  
 [[feature]]
   icon = "github"
   icon_pack = "fa"
@@ -68,6 +68,4 @@ subtitle = ""
   name = "Landscape Ecology"
   description = ""
   
-
-
 +++
