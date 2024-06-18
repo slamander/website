@@ -15,80 +15,33 @@ image:
 
 Introduction to machine learning with `tidymodels`
 --------------------------------------------------------
+  
+  
+## `Tidymodels` provides a clean, organized, and--most importantly--consistent programming syntax for data pre-processing, model specification, model fitting, model evaluation, and prediction. 
 
-`Tidymodels` provides a clean, organized, and--most importantly--consistent programming syntax for data pre-processing, model specification, model fitting, model evaluation, and prediction. 
+# Anatomy of `tidymodels`
+## a meta-package that installs and load the core packages listed below that you need for modeling and machine learning
 
-# Anatomy of `tidymodels`:
-## * a meta-package that installs and load the core packages listed below that you need for modeling and machine learning
+## `rsamples`: provides infrastructure for efficient data splitting and resampling
 
-## `rsamples`:
-### * provides infrastructure for efficient data splitting and resampling
+## `parsnip`: a tidy, unified interface to models that can be used to try a range of models without getting bogged down in the syntactical minutiae of the underlying packages
 
-## `parsnip`:
-### a tidy, unified interface to models that can be used to try a range of models without getting bogged down in the syntactical minutiae of the underlying packages
+## `recipes`: a tidy interface to data pre-processing tools for feature engineering
 
-## `recipes`:
-### * tidy interface to data pre-processing tools for feature engineering
+## `workflows`: workflows bundle your pre-processing, modeling, and post-processing together
 
-## `workflows`: 
-### * workflows bundle your pre-processing, modeling, and post-processing together
+## `tune`: helps you optimize the hyperparameters of your model and pre-processing steps
 
-## `tune`: 
-### * helps you optimize the hyperparameters of your model and pre-processing steps
+## `yardstick`: measures the effectiveness of models using performance metrics
 
-## `yardstick`:
-### * measures the effectiveness of models using performance metrics
+## `dials`: contains tools to create and manage values of tuning parameters and is designed to integrate well with the parsnip package
 
-## `dials`:
-### * contains tools to create and manage values of tuning parameters and is designed to integrate well with the parsnip package
+## `broom`: summarizes key information about models in tidy tibble()s
 
-## `broom`:
-### * summarizes key information about models in tidy tibble()s
-
-### First, lets load the `tidymodels` meta-package:
+First, lets load the `tidymodels` meta-package:
 
     library(tidymodels)
-
-    ## Registered S3 method overwritten by 'tune':
-    ##   method                   from   
-    ##   required_pkgs.model_spec parsnip
-
-    ## -- Attaching packages -------------------------------------- tidymodels 0.1.3 --
-
-    ## v broom        0.7.9         v recipes      0.1.16   
-    ## v dials        0.0.9         v rsample      0.1.0    
-    ## v dplyr        1.0.7         v tibble       3.1.3    
-    ## v ggplot2      3.3.5         v tidyr        1.1.3    
-    ## v infer        1.0.0         v tune         0.1.6    
-    ## v modeldata    0.1.1         v workflows    0.2.3    
-    ## v parsnip      0.1.7.900     v workflowsets 0.1.0    
-    ## v purrr        0.3.4         v yardstick    0.0.8
-
-    ## Warning: package 'infer' was built under R version 4.1.1
-
-    ## -- Conflicts ----------------------------------------- tidymodels_conflicts() --
-    ## x purrr::discard() masks scales::discard()
-    ## x dplyr::filter()  masks stats::filter()
-    ## x dplyr::lag()     masks stats::lag()
-    ## x recipes::step()  masks stats::step()
-    ## * Use tidymodels_prefer() to resolve common conflicts.
-
     library(tidyverse)
-
-    ## -- Attaching packages --------------------------------------- tidyverse 1.3.1 --
-
-    ## v readr   2.0.1     v forcats 0.5.1
-    ## v stringr 1.4.0
-
-    ## Warning: package 'readr' was built under R version 4.1.1
-
-    ## -- Conflicts ------------------------------------------ tidyverse_conflicts() --
-    ## x readr::col_factor() masks scales::col_factor()
-    ## x purrr::discard()    masks scales::discard()
-    ## x dplyr::filter()     masks stats::filter()
-    ## x stringr::fixed()    masks recipes::fixed()
-    ## x dplyr::lag()        masks stats::lag()
-    ## x readr::spec()       masks yardstick::spec()
 
 # Package tutorials:
 
@@ -113,21 +66,6 @@ Download data:
 
     amphibio_raw <- read_csv("AmphiBIO_v1.csv")
 
-    ## Rows: 6776 Columns: 38
-
-    ## -- Column specification --------------------------------------------------------
-    ## Delimiter: ","
-    ## chr  (6): id, Order, Family, Genus, Species, OBS
-    ## dbl (31): Fos, Ter, Aqu, Arb, Leaves, Flowers, Seeds, Arthro, Vert, Diu, Noc...
-    ## lgl  (1): Fruits
-
-    ## 
-    ## i Use `spec()` to retrieve the full column specification for this data.
-    ## i Specify the column types or set `show_col_types = FALSE` to quiet this message.
-
-    library(skimr)
-
-    skim(amphibio_raw)
 
 The data consist of natural history information of amphibians, including
 habitat types, diet, size, ect.
@@ -163,12 +101,6 @@ different scales. We'll clean this up:
       group_by(Order) %>%
       summarize(n = n())
 
-    ## # A tibble: 2 x 2
-    ##   Order       n
-    ##   <chr>   <int>
-    ## 1 Anura     355
-    ## 2 Caudata    56
-
 Now let's have a peak at the data:
 
       amphibio %>% 
@@ -189,8 +121,6 @@ to predict order using two models: knn and boosted regression trees.
 To start the modeling process, we'll use `rsamples` to split the data
 into training and testing sets.
 
-# `rsamples`
-
     set.seed(42)
 
     tidy_split <- initial_split(amphibio, prop = 0.95)
@@ -199,8 +129,6 @@ into training and testing sets.
     tidy_kfolds <- vfold_cv(tidy_train)
 
 We can use `recipes` to preprocess the data:
-
-# `recipes`
 
     # Recipes package 
     ## For preprocessing, feature engineering, and feature elimination 
@@ -212,14 +140,10 @@ We can use `recipes` to preprocess the data:
 Now that we've created a recipe to process the data for modeling, we can
 use `parsnip` to model the data:
 
-# `parsnip`
 First, let's have a look at the model’s description
 
     library("webshot")
     # ?boost_tree
-    knitr::include_url("https://parsnip.tidymodels.org/reference/boost_tree.html")
-
-    ## PhantomJS not found. You can install it with webshot::install_phantomjs(). If it is installed, please make sure the phantomjs executable can be found via the PATH variable.
 
 <iframe src="https://parsnip.tidymodels.org/reference/boost_tree.html" width="100%" height="400px">
 </iframe>
@@ -239,8 +163,7 @@ pages for more details:
 * C5.0  
 * spark
 
-    # ?nearest_neighbor
-    knitr::include_url("https://parsnip.tidymodels.org/reference/nearest_neighbor.html")
+   # ?nearest_neighbors
 
 <iframe src="https://parsnip.tidymodels.org/reference/nearest_neighbor.html" width="100%" height="400px">
 </iframe>
@@ -354,14 +277,6 @@ Implement tuning grid using `tune`:
 
     # install.packages(c("xgboost", "kknn"))
     library(xgboost)
-
-    ## 
-    ## Attaching package: 'xgboost'
-
-    ## The following object is masked from 'package:dplyr':
-    ## 
-    ##     slice
-
     library(kknn)
 
     # Tune pacakge 
