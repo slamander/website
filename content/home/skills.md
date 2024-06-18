@@ -15,58 +15,58 @@ subtitle = ""
 # For available icons, see: https://sourcethemes.com/academic/docs/page-builder/#icons
 
 [[feature]]
+  icon = "database"
+  icon_pack = "fa"
+  name = "Big data"
+  description = ""
+  
+[[feature]]
   icon = "r-project"
   icon_pack = "fab"
   name = "R"
-  description = "50%"
+  description = ""
   
 [[feature]]
-  icon = "chart-line"
-  icon_pack = "fas"
-  name = "Statistics"
-  description = "50%"  
-  
-[[feature]]
-  icon = "satellite-dish"
-  icon_pack = "fas"
-  name = "GIS"
-  description = "50%"
+  icon = "frog"
+  icon_pack = "fa"
+  name = "Herpetology"
+  description = ""
   
 [[feature]]
   icon = "server"
   icon_pack = "fa"
   name = "Performance computing"
-  description = "50%"
-  
+  description = ""
+
 [[feature]]
-  icon = "database"
-  icon_pack = "fa"
-  name = "Big data"
-  description = "50%"
+  icon = "chart-line"
+  icon_pack = "fas"
+  name = "Statistics"
+  description = ""  
   
 [[feature]]
   icon = "globe"
   icon_pack = "fa"
   name = "Species Distribution Modeling"
-  description = "50%"
+  description = ""
+  
+[[feature]]
+  icon = "satellite-dish"
+  icon_pack = "fas"
+  name = "GIS"
+  description = ""
 
 [[feature]]
-  icon = "frog"
+  icon = "github"
   icon_pack = "fa"
-  name = "Herpetology"
-  description = "50%"
+  name = "Reproducible research"
+  description = ""
   
 [[feature]]
-  icon = "snake"
-  icon_pack = "fa"
-  name = "Invasion Biology"
-  description = "50%"
-  
-[[feature]]
-  icon = "mountains"
+  icon = "mountain-city"
   icon_pack = "fa"
   name = "Landscape Ecology"
-  description = "50%"
+  description = ""
   
 
 
