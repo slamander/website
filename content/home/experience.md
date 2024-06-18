@@ -26,8 +26,7 @@ date_format = "Jan 2006"
   location = "Gainesville, FL"
   date_start = "2024-06-01"
   date_end = ""
-  description = |2-
-    * Applying deep learning to understand vector-born disease transmission
+  description = "Applying deep learning to understand vector-born disease transmission"
 
 [[experience]]
   title = "Doctoral Preeminence Research Fellow (Ph.D.)"
@@ -36,8 +35,7 @@ date_format = "Jan 2006"
   location = "Gainesville, FL"
   date_start = "2019-08-15"
   date_end = "2024-05-31"
-  description = |2-
-    * Modeling invasion dynamics in the Southeastern USA
+  description = "Modeling invasion dynamics in the Southeastern USA"
 
 [[experience]]
   title = "Conservation and Research Technician"
@@ -46,8 +44,7 @@ date_format = "Jan 2006"
   location = "Memphis, TN"
   date_start = "2018-01-15"
   date_end = "2019-07-31"
-  description = |2-
-    * Managing ex-situ conservation program for Louisiana pine snake and Dusky gopher frogs
+  description = "Managing ex-situ conservation program for Louisiana pine snake and Dusky gopher frogs"
 
 [[experience]]
   title = "Graduate Teaching Assistant (M.Sc.)"
@@ -56,8 +53,7 @@ date_format = "Jan 2006"
   location = "Richmond, KY"
   date_start = "2015-03-15"
   date_end = "2017-12-31"
-  description = |2-
-    * Modeling the abundance and fine-scale distributions of woodland salamanders
+  description = "Modeling the abundance and fine-scale distributions of woodland salamanders"
   
 [[experience]]
   title = "Full Time Research Assistant"
@@ -66,6 +62,7 @@ date_format = "Jan 2006"
   location = "Fayetteville, AR"
   date_start = "2013-01-15"
   date_end = "2015-12-01"
+  description = "Developing field studies and laboratory experiments in reptile and amphibian ecology"
   
 [[experience]]
   title = "Part Time Research Technician"
@@ -74,8 +71,7 @@ date_format = "Jan 2006"
   location = "Fayetteville, AR"
   date_start = "2010-08-15"
   date_end = "2012-12-31"
-  description = |2-
-    * Developing field and laboratory experiments in reptile and amphibian ecology
+  description = "Assisted in ecological field studies and laboratory experiments"
   
 +++
 
