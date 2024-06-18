@@ -33,7 +33,7 @@ image:
   preview_only: false
 projects:
 - Climate-induced-species-redistribution
-publication: *Review* in **Nature Reviews Earth and Environment**
+publication: *Nature Reviews Earth and Environment*
 publication_short:
 publication_types:
 - "2"

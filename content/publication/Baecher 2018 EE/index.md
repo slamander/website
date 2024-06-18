@@ -12,7 +12,7 @@ image:
   preview_only: false
 projects:
 - Appalachian-Salamander-Ecology
-publication: *Research Article* in **Ecology and Evolution**
+publication: *Ecology and Evolution*
 publication_short:
 publication_types:
 - "2"

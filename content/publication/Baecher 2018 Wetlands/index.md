@@ -15,7 +15,7 @@ image:
   preview_only: false
 projects:
 - Reptile-and-Amphibian-Ecology
-publication: *Research Article* in **Wetlands**
+publication: *Wetlands*
 publication_short:
 publication_types:
 - "2"
