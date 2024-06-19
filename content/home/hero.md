@@ -8,7 +8,7 @@ weight = 1  # Order that this section will appear.
 title = "Baecher Research"
 
   # Hero image (optional). Enter filename of an image in the `static/media/` folder.
-hero_media = "badge_empty.png"
+hero_media = "badge_kentucki.png"
 
     [design.background]
     
