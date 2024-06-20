@@ -11,7 +11,7 @@ image:
   preview_only: false
 projects:
 - Climate-induced-species-redistribution
-publication: "*Journal of Biogeography*""
+publication: "*Journal of Biogeography*"
 publication_short:
 publication_types:
 - "2"
