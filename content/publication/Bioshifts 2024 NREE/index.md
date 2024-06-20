@@ -52,7 +52,7 @@ url_project: https://www.alexbaecher.com/project/climate-species-redistribution/
 #url_slides: ""
 #url_source: '#'
 #url_video: '#'
-[[url_custom]]
+[[links]]
 name: "Project"
 url: "https://www.alexbaecher.com/project/climate-species-redistribution/"
 ---
