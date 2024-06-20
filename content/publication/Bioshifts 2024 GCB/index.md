@@ -30,7 +30,7 @@ image:
   preview_only: false
 projects:
 - Climate-induced-species-redistribution
-publication: "**Global Change Biology**"
+publication: "***Global Change Biology***"
 publication_short:
 publication_types:
 - "2"

@@ -15,7 +15,7 @@ image:
   preview_only: false
 projects:
 - Reptile-and-Amphibian-Ecology
-publication: "**Herpetologica**"
+publication: "***Herpetologica***"
 publication_short:
 publication_types:
 - "2"
