@@ -34,8 +34,8 @@ url_project: https://www.alexbaecher.com/project/appalachian-ecology/
 #url_source: '#'
 #url_video: '#'
 [[url_custom]]
-name = "Project"
-url = "https://www.alexbaecher.com/project/appalachian-ecology/"
+name: "Project"
+url: "https://www.alexbaecher.com/project/appalachian-ecology/"
 ---
 
 <html>

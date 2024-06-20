@@ -37,11 +37,11 @@ url_slides: "https://docs.google.com/presentation/d/1KPeAi7rw_Da7oY3ureW33dJosFX
 #url_source: ""
 #url_video: ""
 [[url_custom]]
-name = "Slides"
-url = "https://docs.google.com/presentation/d/1KPeAi7rw_Da7oY3ureW33dJosFXdfD0L/edit?usp=sharing&ouid=118161165194611535602&rtpof=true&sd=true"
+name: "Slides"
+url: "https://docs.google.com/presentation/d/1KPeAi7rw_Da7oY3ureW33dJosFXdfD0L/edit?usp=sharing&ouid=118161165194611535602&rtpof=true&sd=true"
 [[url_custom]]
-name = "Project"
-url = "https://www.alexbaecher.com/project/herpetological-ecology/"
+name: "Project"
+url: "https://www.alexbaecher.com/project/herpetological-ecology/"
 ---
 Press coverage: 
 Florida Today

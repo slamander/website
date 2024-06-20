@@ -55,8 +55,8 @@ url_project: "https://www.alexbaecher.com/project/climate-species-redistribution
 #url_source: '#'
 #url_video: '#'
 [[url_custom]]
-name = "Project"
-url = "https://www.alexbaecher.com/project/climate-species-redistribution/"
+name: "Project"
+url: "https://www.alexbaecher.com/project/climate-species-redistribution/"
 ---
 
 

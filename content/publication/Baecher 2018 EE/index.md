@@ -36,11 +36,11 @@ url_slides: "https://docs.google.com/presentation/d/1AMJepL4ntOlM1lWvi9gAhqwW0rZ
 #url_source: ""
 #url_video: ""
 [[url_custom]]
-name = "Slides"
-url = "https://docs.google.com/presentation/d/1AMJepL4ntOlM1lWvi9gAhqwW0rZf0bII/edit?usp=sharing&ouid=118161165194611535602&rtpof=true&sd=true"
+name: "Slides"
+url: "https://docs.google.com/presentation/d/1AMJepL4ntOlM1lWvi9gAhqwW0rZf0bII/edit?usp=sharing&ouid=118161165194611535602&rtpof=true&sd=true"
 [[url_custom]]
-name = "Project"
-url = "https://www.alexbaecher.com/project/appalachian-ecology/"
+name: "Project"
+url: "https://www.alexbaecher.com/project/appalachian-ecology/"
 ---
 
 <html>
