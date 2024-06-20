@@ -36,12 +36,12 @@ url_project: "https://www.alexbaecher.com/project/herpetological-ecology/"
 url_slides: "https://docs.google.com/presentation/d/1ugv7JZZ8Detykt77R-E1fvUdBK_1gEOj/edit?usp=sharing&ouid=118161165194611535602&rtpof=true&sd=true"
 #url_source: ""
 #url_video: ""
-[[links]]
-name: "Slides"
-url: "https://docs.google.com/presentation/d/1ugv7JZZ8Detykt77R-E1fvUdBK_1gEOj/edit?usp=sharing&ouid=118161165194611535602&rtpof=true&sd=true"
-[[links]]
-name: "Project"
-url: "https://www.alexbaecher.com/project/herpetological-ecology/"
+# [[links]]
+# name: "Slides"
+# url: "https://docs.google.com/presentation/d/1ugv7JZZ8Detykt77R-E1fvUdBK_1gEOj/edit?usp=sharing&ouid=118161165194611535602&rtpof=true&sd=true"
+# [[links]]
+# name: "Project"
+# url: "https://www.alexbaecher.com/project/herpetological-ecology/"
 ---
 
 

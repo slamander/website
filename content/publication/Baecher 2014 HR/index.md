@@ -36,8 +36,8 @@ url_project: ""
 #url_slides: ""
 #url_source: '#'
 #url_video: '#'
-[[links]]
-name: "Project"
-url: "https://www.alexbaecher.com/project/herpetological-ecology/"
+# [[links]]
+# name: "Project"
+# url: "https://www.alexbaecher.com/project/herpetological-ecology/"
 ---
 
