@@ -33,6 +33,9 @@ url_project: https://www.alexbaecher.com/project/appalachian-ecology/
 #url_slides: ""
 #url_source: '#'
 #url_video: '#'
+[[url_custom]]
+name = "Project"
+url = "https://www.alexbaecher.com/project/appalachian-ecology/"
 ---
 
 <html>

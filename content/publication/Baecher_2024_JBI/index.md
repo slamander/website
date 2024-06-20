@@ -35,4 +35,7 @@ url_preprint: "https://drive.google.com/file/d/1d4ugx4lH--Pjo0yQ3kTsTETTzkQX19Os
 url_slides: "https://docs.google.com/presentation/d/1TQPAFnbhCXsUK_AY-UPzkbMXX0erVa8u/edit?usp=sharing&ouid=118161165194611535602&rtpof=true&sd=true"
 url_source: "https://drive.google.com/uc?export=download&id=1RdEJNmTodxNHeI4Ay99SCpf5Fygx0k3g"
 #url_video: '#'
+[[url_custom]]
+name = "Slides"
+url = "https://docs.google.com/presentation/d/1TQPAFnbhCXsUK_AY-UPzkbMXX0erVa8u/edit?usp=sharing&ouid=118161165194611535602&rtpof=true&sd=true"
 ---
