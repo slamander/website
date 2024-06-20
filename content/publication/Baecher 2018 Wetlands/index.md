@@ -31,10 +31,9 @@ tags:
 title: Herpetofaunal Communities in Restored and Unrestored Remnant Tallgrass Prairie and Associated Wetlands in Northwest Arkansas, USA
 # url_code: https://doi.org/10.1007/s13157-017-0966-5
 # url_dataset: https://doi.org/10.6073/pasta/d834e12ff12dc23d9319fa9f73e40306
-url_pdf: https://link.springer.com/content/pdf/10.1007/s13157-017-0966-5.pdf
-#url_poster: https://docs.google.com/presentation/d/1ugv7JZZ8Detykt77R-E1fvUdBK_1gEOj/edit?usp=sharing&ouid=118161165194611535602&rtpof=true&sd=true 
-#url_project: ""
-url_slides: https://docs.google.com/presentation/d/1ugv7JZZ8Detykt77R-E1fvUdBK_1gEOj/edit?usp=sharing&ouid=118161165194611535602&rtpof=true&sd=true
+url_pdf: 'https://link.springer.com/content/pdf/10.1007/s13157-017-0966-5.pdf'
+url_project: 'https://www.alexbaecher.com/project/herpetological-ecology/'
+url_slides: 'https://docs.google.com/presentation/d/1ugv7JZZ8Detykt77R-E1fvUdBK_1gEOj/edit?usp=sharing&ouid=118161165194611535602&rtpof=true&sd=true'
 #url_source: '#'
 #url_video: '#'
 ---

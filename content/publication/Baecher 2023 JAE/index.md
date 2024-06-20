@@ -32,9 +32,8 @@ title: Experimental evaluation of how biological invasions and climate change in
 url_code: https://github.com/slamander/treefrog
 url_dataset: https://doi.org/10.5281/zenodo.7439710
 url_pdf: https://besjournals.onlinelibrary.wiley.com/doi/pdfdirect/10.1111/1365-2656.13899?download=true
-#url_poster: '#'
-url_project: ""
-url_slides: https://docs.google.com/presentation/d/1KPeAi7rw_Da7oY3ureW33dJosFXdfD0L/edit?usp=sharing&ouid=118161165194611535602&rtpof=true&sd=true
+url_project: "https://www.alexbaecher.com/project/herpetological-ecology/"
+url_slides: "https://docs.google.com/presentation/d/1KPeAi7rw_Da7oY3ureW33dJosFXdfD0L/edit?usp=sharing&ouid=118161165194611535602&rtpof=true&sd=true"
 #url_source: '#'
 #url_video: '#'
 ---
