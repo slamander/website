@@ -11,7 +11,7 @@ image:
   preview_only: false
 projects:
 - Climate-induced-species-redistribution
-publication: "*Journal of Biogeography*"
+publication: "**Journal of Biogeography**"
 publication_short:
 publication_types:
 - "2"
@@ -28,11 +28,11 @@ tags:
 title: The environmental filtering paradigm and non-filtering community assembly processes
 url_code: 
 url_dataset: 
-url_pdf: https://drive.google.com/file/d/1d4ugx4lH--Pjo0yQ3kTsTETTzkQX19Os/view?usp=sharing
+#url_pdf: https://drive.google.com/file/d/1d4ugx4lH--Pjo0yQ3kTsTETTzkQX19Os/view?usp=sharing
 url_preprint: https://drive.google.com/file/d/1d4ugx4lH--Pjo0yQ3kTsTETTzkQX19Os/view?usp=sharing
 #url_poster: '#'
-url_project: ""
+#url_project: ""
 #url_slides: ""
-#url_source: 'https://doi.org/10.1111/jbi.14973'
+#url_source: 
 #url_video: '#'
 ---

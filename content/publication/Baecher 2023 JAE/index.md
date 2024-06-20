@@ -14,7 +14,7 @@ image:
   preview_only: false
 projects:
 - Reptile-and-Amphibian-Ecology
-publication: Journal of Animal Ecology
+publication: "**Journal of Animal Ecology**"
 publication_short:
 publication_types:
 - "2"
@@ -31,7 +31,7 @@ tags:
 title: Experimental evaluation of how biological invasions and climate change interact to alter the vertical assembly of an amphibian community
 url_code: https://github.com/slamander/treefrog
 url_dataset: https://doi.org/10.5281/zenodo.7439710
-url_pdf: https://besjournals.onlinelibrary.wiley.com/doi/epdf/10.1111/1365-2656.13899
+url_pdf: https://besjournals.onlinelibrary.wiley.com/doi/pdfdirect/10.1111/1365-2656.13899?download=true
 #url_poster: '#'
 url_project: ""
 #url_slides: ""

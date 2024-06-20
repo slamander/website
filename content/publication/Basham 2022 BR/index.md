@@ -15,7 +15,7 @@ image:
   preview_only: false
 projects:
 - Climate-induced-species-redistribution
-publication: Biological Reviews
+publication: "**Biological Reviews**"
 publication_short:
 publication_types:
 - "2"
@@ -36,9 +36,9 @@ tags:
 title: Vertical stratification patterns of tropical forest vertebrates
 url_code: https://github.com/schefferslab/Vert-Strata-Meta
 url_dataset: https://github.com/schefferslab/Vert-Strata-Meta
-url_pdf: https://onlinelibrary.wiley.com/doi/epdf/10.1111/brv.12896
+url_pdf: https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/brv.12896?download=true
 #url_poster: '#'
-url_project: ""
+url_project: https://www.alexbaecher.com/project/climate-species-redistribution/
 #url_slides: ""
 #url_source: '#'
 #url_video: '#'

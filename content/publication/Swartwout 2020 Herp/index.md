@@ -7,7 +7,7 @@ authors:
 - CHelsea Kross
 - John D. Willson
 date: "2020-10-08T00:00:00Z"
-doi: "10.1655/Herpetologica-D-18-00007"
+doi: "https://doi.org/10.1655/Herpetologica-D-18-00007"
 featured: false
 image:
   caption: Head measurements taken from representative photographs of a juvenile Northern Water Snake (Nerodia sipedon).
@@ -15,7 +15,7 @@ image:
   preview_only: false
 projects:
 - Reptile-and-Amphibian-Ecology
-publication: Herpetologica
+publication: "**Herpetologica**"
 publication_short:
 publication_types:
 - "2"
@@ -31,14 +31,11 @@ tags:
 - Prey size
 - Gape limited predators
 title: Prey Size and Feeding Rate Do Not Influence Trophic Morphology of Juvenile Water Snakes (Nerodia sipedon)
-# url_code: https://github.com/slamander/salamander_ecology
-# url_dataset: https://doi.org/10.6073/pasta/d834e12ff12dc23d9319fa9f73e40306
-url_pdf: https://scholar.google.com/scholar_url?url=https://bioone.org/journals/Herpetologica/volume-76/issue-1/Herpetologica-D-18-00007/Prey-Size-and-Feeding-Rate-Do-Not-Influence-Trophic-Morphology/10.1655/Herpetologica-D-18-00007.pdf%3Fcasa_token%3DJrPKHfnnJZMAAAAA:O9JsDygb16PJ93gdY3xBt3_k07-Cu_ld9b3ZDqg2h029aLrsf6yOH7v8dYOSLNxJsit6GyCBSg&hl=en&sa=T&oi=ucasa&ct=ucasa&ei=e2YdYbGIGMqgmQHcyobgDw&scisig=AAGBfm0eZym6ZuazDiqX0vTZiVxx0xR06w
-#url_poster: '#'
-url_project: ""
-#url_slides: ""
-#url_source: '#'
-#url_video: '#'
+url_code: https://doi.org/10.1655/Herpetologica-D-1800007.S1
+url_dataset: https://doi.org/10.1655/Herpetologica-D-1800007.S1
+url_pdf: https://bioone.org/journals/Herpetologica/volume-76/issue-1/Herpetologica-D-18-00007/Prey-Size-and-Feeding-Rate-Do-Not-Influence-Trophic-Morphology/10.1655/Herpetologica-D-18-00007.pdf?casa_token=JrPKHfnnJZMAAAAA:O9JsDygb16PJ93gdY3xBt3_k07-Cu_ld9b3ZDqg2h029aLrsf6yOH7v8dYOSLNxJsit6GyCBSg
+url_project: https://www.alexbaecher.com/project/herpetological-ecology/
+
 ---
 
 <html>

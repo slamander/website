@@ -13,7 +13,7 @@ image:
   preview_only: false
 projects:
 - Reptile-and-Amphibian-Ecology
-publication: Oceologia
+publication: "**Oceologia**"
 publication_short:
 publication_types:
 - "2"
@@ -32,7 +32,7 @@ url_code: https://github.com/schefferslab/Basham_et_al_2021
 url_dataset: https://github.com/schefferslab/Basham_et_al_2021
 url_pdf: https://link.springer.com/content/pdf/10.1007/s00442-022-05108-9.pdf?pdf=button
 #url_poster: '#'
-url_project: ""
+url_project: https://www.alexbaecher.com/project/herpetological-ecology/
 #url_slides: ""
 #url_source: '#'
 #url_video: '#'

@@ -33,7 +33,7 @@ image:
   preview_only: false
 projects:
 - Climate-induced-species-redistribution
-publication: Nature Reviews Earth and Environment
+publication: "**Nature Reviews Earth and Environment**"
 publication_short:
 publication_types:
 - "2"
@@ -48,7 +48,7 @@ title: Mechanisms, detection and impacts of species redistribution under climate
 #url_dataset: 
 url_pdf: https://www.nature.com/articles/s43017-024-00527-z.pdf
 #url_poster: '#'
-url_project: ""
+url_project: https://www.alexbaecher.com/project/climate-species-redistribution/
 #url_slides: ""
 #url_source: '#'
 #url_video: '#'

@@ -4,7 +4,7 @@ authors:
 - J. Alex Baecher
 - Stephen C. Richter
 date: "2020-10-08T00:00:00Z"
-doi: "10.1002/ece3.4736"
+doi: "https://doi.org/10.1002/ece3.4736"
 featured: true
 image:
   caption: Estimated abundance of Plethodon kentucki and Plethodon richmondi in Appalachian old growth forest.
@@ -12,7 +12,7 @@ image:
   preview_only: false
 projects:
 - Appalachian-Salamander-Ecology
-publication: Ecology and Evolution
+publication: "**Ecology and Evolution**"
 publication_short:
 publication_types:
 - "2"
@@ -29,9 +29,9 @@ tags:
 title: Environmental gradients in old‐growth Appalachian forest predict fine‐scale distribution, co‐occurrence, and density of woodland salamanders
 url_code: https://github.com/slamander/salamander_ecology
 url_dataset: https://doi.org/10.6073/pasta/d834e12ff12dc23d9319fa9f73e40306
-url_pdf: https://onlinelibrary.wiley.com/doi/epdf/10.1002/ece3.4736
+url_pdf: https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/ece3.4736?download=true
 #url_poster: '#'
-url_project: ""
+url_project: https://www.alexbaecher.com/project/appalachian-ecology/
 #url_slides: ""
 #url_source: '#'
 #url_video: '#'
