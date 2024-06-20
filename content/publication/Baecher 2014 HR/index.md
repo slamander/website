@@ -38,6 +38,6 @@ url_project: ""
 #url_video: '#'
 [[links]]
 - name: "Project"
-- url: "https://www.alexbaecher.com/project/herpetological-ecology/"
+  url: "https://www.alexbaecher.com/project/herpetological-ecology/"
 ---
 
