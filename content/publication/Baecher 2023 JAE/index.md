@@ -19,7 +19,7 @@ publication_short:
 publication_types:
 - "2"
 publishDate: "2023-03-05T00:00:00Z"
-slides: Biotic-abiotic-interactions
+slides: "https://docs.google.com/presentation/d/1KPeAi7rw_Da7oY3ureW33dJosFXdfD0L/edit?usp=sharing&ouid=118161165194611535602&rtpof=true&sd=true"
 summary: This paper uses a novel experimental system to show how an antagonistic invasive species and climate-induced drought may act jointly to affect the vertical assembly of a common treefrog community in the Southeastern USA. 
 tags:
 - climate change

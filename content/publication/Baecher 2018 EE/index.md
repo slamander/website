@@ -17,7 +17,7 @@ publication_short:
 publication_types:
 - "2"
 publishDate: "2018-12-08T00:00:00Z"
-slides: Appalachian-Salamander-Ecology
+slides: "https://docs.google.com/presentation/d/1AMJepL4ntOlM1lWvi9gAhqwW0rZf0bII/edit?usp=sharing&ouid=118161165194611535602&rtpof=true&sd=true"
 summary: This paper examines how natural environmental gradients in old growth Appalachian forest determine the abundance and occurrence of sensitive woodland salamanders. 
 tags:
 - Population dynamics
