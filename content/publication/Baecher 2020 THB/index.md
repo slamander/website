@@ -1,7 +1,7 @@
 ---
 abstract: For centuries, amphibian malformations have been documented globally and in veritable detail, particularly in anurans. Although, rarely have malformations been documented in caudates, primarily manifesting as post-larval tail malformations (i.e. bifurcation and duplication). Furthermore, among the caudate families in which malformations have been reported, the Plethodontidae - the largest caudate family - has been apparently underrepresented, with only three of the > 470 species documented to exhibit malformations. Previously, tail bifurcation within the genus Desmognathus (Plethodontidae) has only been reported in D. fuscus (Rafinesque, 1820). We report here tail bifurcation in natural populations of D. ochrophaeus (Cope 1859) and D. monticola (Dunn 1916). To our knowledge, these observations represent the first reports of tail bifurcation in either species.
 authors:
-- J. Alex Baecher
+- admin
 - Emily Jones
 - Stephen C. Richter
 date: "2014-10-08T00:00:00Z"

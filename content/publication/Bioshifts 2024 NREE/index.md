@@ -5,7 +5,7 @@ authors:
 - Lise Comte
 - Gaël Grenouillet
 - Jonathan Lenoir
-- J. Alex Baecher
+- admin
 - R.M.W.J. Bandara
 - Romain Bertrand
 - I-Ching Chen

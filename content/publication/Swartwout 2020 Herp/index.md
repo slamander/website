@@ -3,7 +3,7 @@ abstract: "Gape-limited predators, such as snakes, might rely on phenotypic plas
 authors:
 - Meredith C. Swarthwout
 - Philip Vogrinc
-- J. Alex Baecher
+- admin
 - CHelsea Kross
 - John D. Willson
 date: "2020-10-08T00:00:00Z"
