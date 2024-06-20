@@ -37,7 +37,7 @@ url_pdf: https://bioone.org/journals/Herpetologica/volume-76/issue-1/Herpetologi
 url_project: https://www.alexbaecher.com/project/herpetological-ecology/
 [[links]]
 name: "Project"
-url: "https://www.alexbaecher.com/project/herpetological-ecology/"
+url_project: "https://www.alexbaecher.com/project/herpetological-ecology/"
 ---
 
 <html>
