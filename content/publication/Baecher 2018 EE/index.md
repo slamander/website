@@ -27,14 +27,14 @@ tags:
 - N-mixture models
 - Detection probabilities
 title: Environmental gradients in old‐growth Appalachian forest predict fine‐scale distribution, co‐occurrence, and density of woodland salamanders
-url_code: https://github.com/slamander/salamander_ecology
-url_dataset: https://doi.org/10.6073/pasta/d834e12ff12dc23d9319fa9f73e40306
-url_pdf: https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/ece3.4736?download=true
-url_poster: https://drive.google.com/file/d/1JlKnDZ3R7MZuQd_xWCYEVqtHwWzSs-x-/view?usp=sharing
-url_project: https://www.alexbaecher.com/project/appalachian-ecology/
+url_code: "https://github.com/slamander/salamander_ecology"
+url_dataset: "https://doi.org/10.6073/pasta/d834e12ff12dc23d9319fa9f73e40306"
+url_pdf: "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/ece3.4736?download=true"
+url_poster: "https://drive.google.com/file/d/1JlKnDZ3R7MZuQd_xWCYEVqtHwWzSs-x-/view?usp=sharing"
+url_project: "https://www.alexbaecher.com/project/appalachian-ecology/"
 url_slides: "https://docs.google.com/presentation/d/1AMJepL4ntOlM1lWvi9gAhqwW0rZf0bII/edit?usp=sharing&ouid=118161165194611535602&rtpof=true&sd=true"
-#url_source: '#'
-#url_video: '#'
+#url_source: ""
+#url_video: ""
 ---
 
 <html>
