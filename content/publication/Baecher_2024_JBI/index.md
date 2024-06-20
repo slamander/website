@@ -3,7 +3,7 @@ abstract: Motivation for abandoning the "environmental filtering" metaphor has b
 authors:
 - J. Alex Baecher
 date: "In press for publication in 2024"
-doi: ""
+doi: "https://doi.org/10.1111/jbi.14973"
 featured: true
 image:
   caption: Examples of potential extinction landscapes.
@@ -28,7 +28,7 @@ tags:
 title: The environmental filtering paradigm and non-filtering community assembly processes
 url_code: 
 url_dataset: 
-url_pdf: https://drive.google.com/file/d/1RdEJNmTodxNHeI4Ay99SCpf5Fygx0k3g/view
+url_pdf: https://drive.google.com/file/d/1d4ugx4lH--Pjo0yQ3kTsTETTzkQX19Os/view?usp=sharing
 #url_poster: '#'
 url_project: ""
 #url_slides: ""
