@@ -5,7 +5,7 @@ active = true
 date = "2016-04-20T00:00:00"
 
 title = "Research"
-subtitle = "projects I have goin' on"
+subtitle = "ongoing projects"
 
 # Order that this section will appear in.
 weight = 8
@@ -24,6 +24,14 @@ view = 1
 
 # Default filter index (e.g. 0 corresponds to the first `[[filter]]` instance below).
 filter_default = 0
+
+[design]
+  # Toggle between the various page layout types.
+  #   1 = List
+  #   2 = Compact
+  #   3 = Card
+  #   4 = Citation (publication only)
+  view = 2
 
 # Add or remove as many filters (`[[filter]]` instances) as you like.
 # Use "*" tag to show all projects or an existing tag prefixed with "." to filter by specific tag.
