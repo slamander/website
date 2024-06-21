@@ -35,10 +35,6 @@ subtitle = "Selected from the last 2 years"
   name = "workshop"
   tag = ".workshop"
 
-[[filter]]
-  name = "other"
-  tag = ".demo"
-
 [design]
   # Toggle between the various page layout types.
   #   1 = List
@@ -66,5 +62,5 @@ subtitle = "Selected from the last 2 years"
 
   # Text color (true=light or false=dark).
   # text_color_light = true  
-  
+
 +++
