@@ -4,7 +4,7 @@ title: Modeling spread of invasive Burmese pythons, integrating thermoregulation
 event: International Association of Landscape Ecologists (North America)
 event_url: https://www.ialena.org/
 
-location: University of Florida
+location: International Association of Landscape Ecologists
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.

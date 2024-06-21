@@ -7,8 +7,8 @@ headless = true  # This file represents a page section.
 active = true  # Activate this widget? true/false
 weight = 7  # Order that this section will appear.
 
-title = "Talks and Workshops"
-subtitle = "Selected from the last 2 years"
+title = "Talks, Workshops, and Guest Lectures"
+subtitle = "Selected presentations"
 
 [content]
   # Page type to display. E.g. post, talk, or publication.
@@ -32,6 +32,10 @@ subtitle = "Selected from the last 2 years"
   tag = "talk"
   
 [[content.filter_button]]
+  name = "workshop"
+  tag = "workshop"
+  
+  [[content.filter_button]]
   name = "workshop"
   tag = "workshop"
 

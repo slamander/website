@@ -31,9 +31,3 @@ _[School of Natural Resources and Environment](https://snre.ifas.ufl.edu/)_
 + [Environmental Science Lab (EVS 3000L)](https://drive.google.com/uc?export=download&id=1s5PvpNvZmMlsv4uZKPbbQEY1r2RLO21x) – Instructor of Record (Fall '22, '23)
 
 ![EVS field trip collage](/media/EVS_3000L_pic_collage.png)
-
-_[Department of Wildlife Ecology and Conservation](https://snre.ifas.ufl.edu/)_
-
-+ Wildlife of Florida (WIS 3402): [Grassland Anurans](https://drive.google.com/uc?export=download&id=1lpI3-PvoozaRexnpNn1i_Bzp4lg6ogqW) and [Salamander Ecology](https://drive.google.com/uc?export=download&id=1jsUhEewx3OWyfGIZvX3fCAWCGYeYyffM) – Guest Lecturer (Spr. '20)
-
-+ Ecology of Climate Change (WIS 3410): [Landscape Connectivity](https://drive.google.com/uc?export=download&id=1y8CO9LewVxIXlNU4HLHaNy2BVw_rDE1y) – Guest Lecturer (Spr. '20)
