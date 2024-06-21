@@ -1,6 +1,6 @@
 ---
 title: "Salamander conservation in the Southeastern USA"
-event: "Guest lecture in Wildlife of Florida--Amphibians"
+event: "Guest lecture in Wildlife of Florida--Salamanders"
 location: "University of Florida"
 
 # Talk start and end times.
@@ -25,6 +25,5 @@ projects:
 - [Appalachian Salamander Ecology]
 ---
 
-<h2>University of Florida</h2>
-_[Department of Wildlife Ecology and Conservation](https://snre.ifas.ufl.edu/)_
-+ Wildlife of Florida (WIS 3402): [Salamander Ecology](https://drive.google.com/uc?export=download&id=1jsUhEewx3OWyfGIZvX3fCAWCGYeYyffM) – Guest Lecturer (Spr. '20)
+<h2>University of Florida, Department of Wildlife Ecology and Conservation</h2>
+* Guest Lecturer (Spr. '20): [Salamander Ecology](https://drive.google.com/uc?export=download&id=1jsUhEewx3OWyfGIZvX3fCAWCGYeYyffM)

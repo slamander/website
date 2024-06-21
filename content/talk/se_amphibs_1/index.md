@@ -27,6 +27,5 @@ projects:
 - [Reptile and Amphibian Ecology]
 ---
 
-<h2>University of Florida</h2>
-_[Department of Wildlife Ecology and Conservation](https://snre.ifas.ufl.edu/)_
-+ Wildlife of Florida (WIS 3402): [Grassland Anurans](https://drive.google.com/uc?export=download&id=1lpI3-PvoozaRexnpNn1i_Bzp4lg6ogqW) – Guest Lecturer (Spr. '20)
+<h2>University of Florida, Department of Wildlife Ecology and Conservation</h2>
+* Guest Lecturer (Spr. '20): [Grassland Anurans](https://drive.google.com/uc?export=download&id=1lpI3-PvoozaRexnpNn1i_Bzp4lg6ogqW)

@@ -1,5 +1,6 @@
 ---
 title: "Expert elicitation of key invasive species habitat requirements, prevalence, and life history attributes"
+summary: "Addressing data needs through expert-practioner knowledge co-generation"
 event: "Austin Carey Forest, Gainesville Florida"
 authors:
 - admin
