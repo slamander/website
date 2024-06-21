@@ -8,7 +8,7 @@ date = "2016-04-20T00:00:00"
 
 # Note: a full width section format can be enabled by commenting out the `title` and `subtitle` with a `#`.
 title = "Teaching"
-subtitle = "Graduate teaching assistantships"
+subtitle = ""
 
 
 # Order that this section will appear in.
@@ -21,15 +21,17 @@ weight = 9
 
 _[Department of Biology](https://www.eku.edu/bio/)_
 
-+ Human Anatomy and Physiology Laboratory, BIO 307 – Teaching Assistant, 2-3 sections per week (Spring and Fall '15 - '17)
++ Human Anatomy and Physiology Lab, BIO 307 – Teaching Assistant, 2-3 sections per week (Spring and Fall '15 - '17)
 
 <h2>University of Florida</h2>
 
 _[School of Natural Resources and Environment](https://snre.ifas.ufl.edu/)_
 
-+ Environmental Science, EVS 3000L – Instructor of Record, 1 section per week  (Fall '22, '23)
+![EVS field trip collage](/media/EVS_3000L_pic_collage.png)
+
++ [Environmental Science Lab, (EVS 3000L)](https://drive.google.com/uc?export=download&id=1s5PvpNvZmMlsv4uZKPbbQEY1r2RLO21x) – Instructor of Record, 1 section per week  (Fall '22, '23)
 
 _[Department of Wildlife Ecology and Conservation](https://snre.ifas.ufl.edu/)_
 
-+ Wildlife of Florida: Amphibians of the Southeast, WIS 3402 – Guest Lecturer, 2 weeks (Spring '20)
-+ The Ecology of Climate Change, WIS 3410 – Guest Lecturer, 1 week (Spring '20)
++ Wildlife of Florida: [Grassland Anurans](https://drive.google.com/uc?export=download&id=1lpI3-PvoozaRexnpNn1i_Bzp4lg6ogqW) and [Salamander Conservation](https://drive.google.com/uc?export=download&id=1jsUhEewx3OWyfGIZvX3fCAWCGYeYyffM), WIS 3402 – Guest Lecturer, 2 weeks (Spring '20)
++ [The Ecology of Climate Change, (WIS 3410)](https://drive.google.com/uc?export=download&id=1y8CO9LewVxIXlNU4HLHaNy2BVw_rDE1y) – Guest Lecturer, 1 week (Spring '20)
