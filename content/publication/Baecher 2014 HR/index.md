@@ -31,11 +31,11 @@ title: Lithobates areolatus (crawfish frog) predation
 # url_code: https://www.dropbox.com/s/0jsfnoliczl5xv3/HR%20Dec%202014%20ebook.pdf?dl=1
 # url_dataset: https://www.dropbox.com/s/0jsfnoliczl5xv3/HR%20Dec%202014%20ebook.pdf?dl=1
 url_pdf: https://www.dropbox.com/s/0jsfnoliczl5xv3/HR%20Dec%202014%20ebook.pdf?dl=1
-#url_poster: '#'
-url_project: ""
-#url_slides: ""
-#url_source: '#'
-#url_video: '#'
+# url_poster: '#'
+# url_project: ""
+# url_slides: ""
+# url_source: '#'
+# url_video: '#'
 links:
 - name: "Project"
   url: "https://www.alexbaecher.com/project/herpetological-ecology/"

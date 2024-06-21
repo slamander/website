@@ -31,14 +31,14 @@ title: Large, old trees define the vertical, horizontal, and seasonal distributi
 url_code: https://github.com/schefferslab/Basham_et_al_2021
 url_dataset: https://github.com/schefferslab/Basham_et_al_2021
 url_pdf: https://link.springer.com/content/pdf/10.1007/s00442-022-05108-9.pdf?pdf=button
-#url_poster: '#'
-url_project: https://www.alexbaecher.com/project/herpetological-ecology/
-#url_slides: ""
-#url_source: '#'
-#url_video: '#'
-links: 
-- name = "Project"
-  url = "https://www.alexbaecher.com/project/herpetological-ecology/"
+# url_poster: '#'
+# url_project: https://www.alexbaecher.com/project/herpetological-ecology/
+# url_slides: ""
+# url_source: '#'
+# url_video: '#'
+links:
+- name: "Project"
+  url: "https://www.alexbaecher.com/project/herpetological-ecology/"
 ---
 
 

@@ -49,11 +49,11 @@ title: Bringing traits back into the equation, A roadmap to understand species r
 url_code: https://github.com/Bioshifts/TraitPerspective
 url_dataset: https://doi.org/10.6084/m9.figshare.25467664
 url_pdf: https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/gcb.17271?download=true
-#url_poster: '#'
-url_project: "https://www.alexbaecher.com/project/climate-species-redistribution/"
-#url_slides: ""
-#url_source: '#'
-#url_video: '#'
+# url_poster: '#'
+# url_project: "https://www.alexbaecher.com/project/climate-species-redistribution/"
+# url_slides: ""
+# url_source: '#'
+# url_video: '#'
 links:
 - name: "Project"
   url: "https://www.alexbaecher.com/project/climate-species-redistribution/"

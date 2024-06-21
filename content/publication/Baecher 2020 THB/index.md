@@ -28,11 +28,11 @@ title: Tail bifurcation in two species of Desmognathus salamander (Plethodontida
 # url_code: 
 # url_dataset: 
 url_pdf: https://www.thebhs.org/publications/the-herpetological-bulletin/issue-number-150-winter-2019/2013-08-tail-bifurcation-in-two-species-of-i-desmognathus-i-salamander-caudata-plethodontidae-in-south-eastern-kentucky-usa/file 
-#url_poster: '#'
-url_project: https://www.alexbaecher.com/project/appalachian-ecology/
-#url_slides: ""
-#url_source: '#'
-#url_video: '#'
+# url_poster: '#'
+# url_project: https://www.alexbaecher.com/project/appalachian-ecology/
+# url_slides: ""
+# url_source: '#'
+# url_video: '#'
 links:
 - name: "Project"
   url: "https://www.alexbaecher.com/project/appalachian-ecology/"

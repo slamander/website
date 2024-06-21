@@ -44,14 +44,14 @@ tags:
 - climate change
 - species range shift
 title: Mechanisms, detection and impacts of species redistribution under climate change
-#url_code: 
-#url_dataset: 
+# url_code: 
+# url_dataset: 
 url_pdf: https://www.nature.com/articles/s43017-024-00527-z.pdf
-#url_poster: '#'
-url_project: https://www.alexbaecher.com/project/climate-species-redistribution/
-#url_slides: ""
-#url_source: '#'
-#url_video: '#'
+# url_poster: '#'
+# url_project: https://www.alexbaecher.com/project/climate-species-redistribution/
+# url_slides: ""
+# url_source: '#'
+# url_video: '#'
 links:
 - name: "Project"
   url: "https://www.alexbaecher.com/project/climate-species-redistribution/"
