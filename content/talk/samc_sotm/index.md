@@ -1,6 +1,6 @@
 ---
 title: Species redistribution and connectivity (Intro)
-summary: Application of connectivity modeling to indentify and predict movement and range distribution
+summary: Associated with the Species On The Move (SOTM) meeting
 authors:
 - RJ Fletcher
 - Andrew Marx
@@ -31,7 +31,7 @@ links:
 - icon: twitter
   icon_pack: fab
   name: Follow
-  url: 
+url: "https://andrewmarx.github.io/samc/"
 # url_code: ""
 # url_dataset: ""
 # url_pdf: ""
