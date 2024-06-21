@@ -1,8 +1,7 @@
 ---
-title: Achieving connectivity under rapid change: case studies from niches to distributions
-event: Guest lecture in Ecology of Climate Change
-
-location: University of Florida
+title: "Achieving connectivity under rapid change: case studies from niches to distributions"
+event: "Guest lecture in Ecology of Climate Change"
+location: "University of Florida"
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.

@@ -1,8 +1,7 @@
 ---
-title: Salamander conservation in the Southeastern USA
-event: Guest lecture in Wildlife of Florida--Amphibians
-
-location: University of Florida
+title: "Salamander conservation in the Southeastern USA"
+event: "Guest lecture in Wildlife of Florida--Amphibians"
+location: "University of Florida"
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.

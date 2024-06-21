@@ -1,8 +1,7 @@
 ---
-title: Predicting the spread of invasive Burmese pythons in South Florida
-
-event: Southeast RISCC webinar series
-event_url: https://southeastriscc.org/
+title: "Predicting the spread of invasive Burmese pythons in South Florida"
+event: "Southeast RISCC webinar series"
+event_url: "https://southeastriscc.org/"
 
 location: University of Florida
 
