@@ -46,12 +46,12 @@ filter_default: 0
 # To filter by a specific tag, set `tag` to an existing tag name.
 # To remove the toolbar, delete the entire `filter_button` block.
 filter_button:
-- name: All
-   tag: '*'
-- name: workshop
-   tag: workshop
-- name: talk
-  tag: talk
+- name: "All"
+  tag: "*"
+- name: "workshop"
+  tag: "workshop"
+- name: "talk"
+  tag: "talk"
     
 [design]
   # Toggle between the various page layout types.
