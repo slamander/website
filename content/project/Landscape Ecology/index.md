@@ -16,6 +16,7 @@ tags:
 - Spatially Absorbing Markov Chains
 - Remote sensing
 - Resistance
+- modeling
 title: Landscape connectivity
 url_code: ""
 url_pdf: ""

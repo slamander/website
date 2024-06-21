@@ -33,15 +33,15 @@ filter_default = 0
   tag = "*"
 
 [[filter]]
-  name = "Research"
-  tag = ".research"
+  name = "field ecology"
+  tag = ".field ecology"
 
 [[filter]]
-  name = "Data"
-  tag = ".data"
+  name = "modeling"
+  tag = ".modeling"
 
 [[filter]]
-  name = "Software"
-  tag = ".software"
+  name = "invasions"
+  tag = ".invasions"
 
 +++

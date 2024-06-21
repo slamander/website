@@ -22,10 +22,11 @@ summary: Modeling the spatial dynamics of species using Bayesian geostatistical 
 tags:
 - INLA
 - Bayesian statistics 
-- Stochasticity
-- Landscape ecology
+- stochasticity
+- landscape ecology
 - R
-- Spatial Ecology
+- spatial Ecology
+- modeling
 title: Geostatistical Modeling
 url_code: ""
 url_pdf: ""

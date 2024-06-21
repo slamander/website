@@ -16,10 +16,10 @@ links:
 slides: Climate-induced-species-redistribution
 summary: Modeling the spatialtemporal dynamics of species' distributions.
 tags:
-- Ecological Modeling
-- Climate Change
-- Invasive Species
-- Connectivity Modeling
+- modeling
+- climate Change
+- invasions
+- connectivity Modeling
 title: Climate-induced species redistribution
 url_code: ""
 url_pdf: ""
