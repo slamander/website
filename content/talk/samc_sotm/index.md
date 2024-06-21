@@ -21,7 +21,7 @@ tags: [workshop]
 featured: true
 
 # Optional external URL for project (replaces project detail page).
-external_link: "https://andrewmarx.github.io/samc/"
+# external_link: "https://andrewmarx.github.io/samc/"
 
 image:  
   caption: Species On The Move workshop on landscape connectivity 
