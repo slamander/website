@@ -50,6 +50,9 @@ links:
 **Description:**
 This 1-day workshop will distill the basic principles of connectivity modeling and its relevance to predicting movement and species redistribution with environmental change. Participants will be introduced to connectivity as well as a new framework utilizing spatial-absorbing Markov chains (SAMC), which helps unify other approaches. Along the way, we will discuss how connectivity is relevant to core principles of species ranges and redistribution. We will also discuss the common problems, assumptions, and oversights occurring in published predictions of species range redistribution.
 
+**Software anatomy of `samc`:**
+[`samc`](/media/samc 4.drawio.png)
+
 Topics:
 **Background and motivation**
 - Connectivity and species on the move
