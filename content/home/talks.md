@@ -7,7 +7,7 @@ headless = true  # This file represents a page section.
 active = true  # Activate this widget? true/false
 weight = 7  # Order that this section will appear.
 
-title = "Recent Talks, Seminars, or Workshops"
+title = "Talks and Workshops"
 subtitle = "Selected from the last 2 years"
 
 [content]
@@ -24,14 +24,34 @@ subtitle = "Selected from the last 2 years"
   order = "desc"
 
   # Filter posts by a taxonomy term.
-  [content.filters]
-    tag = ""
-    category = ""
-    publication_type = ""
-    author = ""
-    exclude_featured = false
-    exclude_past = false
-    exclude_future = false
+  # [content.filters]
+  #   tag = ""
+  #   category = ""
+  #   publication_type = ""
+  #   author = ""
+  #   exclude_featured = false
+  #   exclude_past = false
+  #   exclude_future = false
+  
+content:
+# Page type to display. E.g. project.
+page_type: project
+
+# Default filter index (e.g. 0 corresponds to the first `filter_button` instance below).
+filter_default: 0
+
+# Filter toolbar (optional).
+# Add or remove as many filters (`filter_button` instances) as you like.
+# To show all items, set `tag` to "*".
+# To filter by a specific tag, set `tag` to an existing tag name.
+# To remove the toolbar, delete the entire `filter_button` block.
+filter_button:
+- name: All
+   tag: '*'
+- name: workshop
+   tag: workshop
+- name: talk
+  tag: talk
     
 [design]
   # Toggle between the various page layout types.

@@ -7,12 +7,18 @@ authors:
 - Maru Iezzi
 - admin
 tags:
+- workshop
 - Spatial absorbing Markov chains
 - landscape ecology
 - ecological modeling
 - R stats
 - tutorial
 date: "2023-12-19T00:00:00Z"
+
+tags: [workshop]
+
+# Is this a featured talk? (true/false)
+featured: true
 
 # Optional external URL for project (replaces project detail page).
 external_link: "https://andrewmarx.github.io/samc/"
