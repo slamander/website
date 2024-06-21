@@ -5,7 +5,7 @@ authors:
 - J. Alex Baecher
 - Sinlan Poo
 date: "2019-08-08T00:00:00Z"
-doi: "10.1016/j.cryobiol.2019.05.007"
+doi: "https://doi.org/10.1016/j.cryobiol.2019.05.007"
 featured: false
 image:
   caption: Cryopreservation and hormonal induction of spermic urine in smooth-sided toads

@@ -1,0 +1,35 @@
++++
+# Custom widget.
+# An example of using the custom widget to create your own homepage section.
+# To create more sections, duplicate this file and edit the values below as desired.
+widget = "custom"
+active = true
+date = "2016-04-20T00:00:00"
+
+# Note: a full width section format can be enabled by commenting out the `title` and `subtitle` with a `#`.
+title = "Teaching"
+subtitle = "Graduate teaching assistantships"
+
+
+# Order that this section will appear in.
+weight = 9
+
+#One way we could make this different is to present the places of teaching as a smaller list with a click through to course descriptions and why we were teaching at that location. More in line with the project presentation line of reasoning. If we did each teaching engagement independently like a talk, and then aggregate them, then we could use schema.org metadata to describe each teaching engagement.
+
++++
+<h2>Eastern Kentucky University</h2>
+
+_[Department of Biology](https://www.eku.edu/bio/)_
+
++ Human Anatomy and Physiology Laboratory, BIO 307 – Teaching Assistant, 2-3 sections per week (Spring and Fall '15 - '17)
+
+<h2>University of Florida</h2>
+
+_[School of Natural Resources and Environment](https://snre.ifas.ufl.edu/)_
+
++ Environmental Science, EVS 3000L – Instructor of Record, 1 section per week  (Fall '22, '23)
+
+_[Department of Wildlife Ecology and Conservation](https://snre.ifas.ufl.edu/)_
+
++ Wildlife of Florida: Amphibians of the Southeast, WIS 3402 – Guest Lecturer, 2 weeks (Spring '20)
++ The Ecology of Climate Change, WIS 3410 – Guest Lecturer, 1 week (Spring '20)
