@@ -36,8 +36,8 @@ subtitle = "Selected presentations"
   tag = "workshop"
   
   [[content.filter_button]]
-  name = "workshop"
-  tag = "workshop"
+  name = "guest"
+  tag = "guest"
 
 [design]
   # Toggle between the various page layout types.

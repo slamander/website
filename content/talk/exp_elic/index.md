@@ -1,18 +1,17 @@
 ---
-title: Species redistribution and connectivity (Intro)
-summary: Application of connectivity modeling to indentify and predict movement and range distribution
+title: "Expert elicitation of key invasive species habitat requirements, prevalence, and life history attributes"
+event: "Austin Carey Forest, Gainesville Florida"
 authors:
-- RJ Fletcher
-- Andrew Marx
-- Maru Iezzi
+- admin
+- Luke Evans
+- Brett R Scheffers
 - admin
 tags:
 - workshop
-- Spatial absorbing Markov chains
+- invasions
 - landscape ecology
 - ecological modeling
-- R stats
-- tutorial
+
 date: "2023-12-19T00:00:00Z"
 
 tags: [workshop]
@@ -39,43 +38,33 @@ links:
 # url_project: ""
 # url_slides: ""
 # url_source: ""
-url_video: "https://drive.google.com/file/d/1FPql4-_xp_Rj1dqcS4egoyBAivl2JSqK/view?usp=sharing"
 links:
 - name: "Slides"
-  url: "https://docs.google.com/presentation/d/1jsUhEewx3OWyfGIZvX3fCAWCGYeYyffM/edit?usp=sharing&ouid=118161165194611535602&rtpof=true&sd=true"
+  url: "https://drive.google.com/uc?export=download&id=1JeZLANRlh2NcXj3w_hjgRWNqIPKhcGAwCvElYorfSu4"
 - name: "Project"
-  url: "https://www.alexbaecher.com/project/landscape-ecology/"
-
+  url: "https://www.alexbaecher.com/project/climate-species-redistribution/"
+- name: "Software"
+  url: "https://joshcullen.github.io/invasive_spp_expert_elicitation/"
 ---
-**Description:**
-This 1-day workshop will distill the basic principles of connectivity modeling and its relevance to predicting movement and species redistribution with environmental change. Participants will be introduced to connectivity as well as a new framework utilizing spatial-absorbing Markov chains (SAMC), which helps unify other approaches. Along the way, we will discuss how connectivity is relevant to core principles of species ranges and redistribution. We will also discuss the common problems, assumptions, and oversights occurring in published predictions of species range redistribution.
 
-**Software anatomy of `samc`:**
-[`samc`](/media/samc 4.drawio.png)
+**Primary project outputs**
+*Expert evaluation of the invasive species potential in the Southeast United States. * 
+We aim to conduct two workshops leveraging the best academic, management, and legislative knowledge from across the Southeast USA. Workshop one will focus on species occurrences and assessments of traits that will enable robust modelling approaches. Workshop two will focus on management approaches to combat the most deleterious findings across all of the focal species. Both workshops will work iteratively with stakeholders to ensure that findings are both grounded in up to date information, as well as model findings reflect changing invasion realities. 
 
-Topics:
-**Background and motivation**
-- Connectivity and species on the move
-- The state of connectivity modeling
-- R activity —introduction to connectivity using R  
+*Pet trade and its impacts on invasive species release and propagation *
+We assessed diversity in the exotic pet trade throughout the lower 48 states by evaluating three major routes to market - online pet stores, traditional brick & mortar stores, and exotic pet expos. We assessed a species risk to native systems by assessing climatic niche overlap between native and invasive ranges. Composite mapping of niche suitability, as well as high levels of progaule likelihood provide us with ways of determining high risk areas. Assessments of the trade in this manner provide the most complete analysis of the exotic pet trade in the US to date. 
 
-**Markov chains, connectivity, and the SAMC framework**  
-- An introduction to the SAMC and the samc package
-- Relationships of SAMC with other connectivity frameworks
-- R activity—contrasting the SAMC and circuit theory
+*Predicting the spread of Burmese pythons in south Florida: a proof-of-concept to apply to high-risk invasive species identified by experts*
+We modelled the invasion dynamics of Burmese pythons using species’ thermal physiology, behaviour, and ecology, as well as landscape characteristics and management activities. In doing so, we have created a novel workflow which incorporates propagule pressure and other often ignored ecological processes.This workflow integrates data from disparate sources (i.e., citizen science, remote sensing, peer reviewed literature, state and federal agencies, and widely-available/open data) and leverages cutting-edge modelling tools, including both mechanistic and correlative models. The goal of this work is to create a predictive model, capable of estimating spatiotemporal patterns of species migrations, dynamic connectivity, and demographic processes such as survival and mortality. This workflow will be applied to several high priority invasive species, those identified by expert elicitation, in the SE USA.  
 
-**Building connectivity models with the SAMC**
-- Building and tuning a SAMC model
-- What kinds data are needed?
-- R activity—Burmese python spread and potential corridors
-- Modeling dispersal kernels with the SAMC
-- R activity—kernels with black bears
-- Spatial networks and the SAMC
-- R activity—graph example with snail kites
-- Discussion: how to build your own models  
+**Sub-projects/Tertiary Projects**
 
-**Emerging topics**
-- Movement ecology, movement trajectories, and the SAMC
-- Dynamic models for connectivity and species redistribution
-- Scaling models to large regions
-- Discussion of applications, facilitating use, etc.
+*Assessing the dynamics of the exotic pet trade. How do volume, cost and rarity impact a species prevalence in the trade? *
+We assess how the diversity and abundance of species in the trade reflect nuances within the exotic pet trade. In turn we determine the implications of this on how new and emerging species penetrate the market and where new species are likely to get into the hands of inexperienced hobbyists. By characterizing the trade in this manner we can find where the intersection of availability, cost, and invasive potential lead to the highest risk species in the market. 
+
+*Impact climate change and invasive Cuban treefrogs on native treefrog communities in Florida*
+Arboreal amphibians are thought to use vertical gradients to mitigate exposure and seasonal changes to resource availability. However, novel biotic interactions from introduced species may disrupt these seasonal migrations, potentially limiting native species’ abilities to cope with environmental changes. Using experimental vertical enclosures designed to emulate vertical forest gradients, we manipulated water resources and conducted behavioural assays with two native treefrog species and one predatory invader species, the Cuban treefrog. Results from this experiment determined that Cuban treefrogs disrupted native species’ ability to track water resources, resulting in avoidance behaviour and potential subsequent dehydration. 
+
+*Modelling global connectivity of wildlife populations*
+To understand how climate and land use change will affect global patterns of biodiversity, we are developing global maps of major wildlife migration corridors, barriers to species’ movement, and hotspots for biodiversity redistribution. To improve on previous efforts, we consider the effects of both novel climate and habitat types for species movements. Using this information, we can then assess what proportion of expected species’ range shifts will be affected by landscape connectivity, and where those failed shifts will occur. 
+
