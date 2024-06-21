@@ -23,21 +23,21 @@ subtitle = "Selected from the last 2 years"
   # Page order. Descending (desc) or ascending (asc) date.
   order = "desc"
 
-# [[filter]]
-#   name = "All"
-#   tag = "*"
-# 
-# [[filter]]
-#   name = "talk"
-#   tag = ".talk"
-# 
-# [[filter]]
-#   name = "workshop"
-#   tag = ".workshop"
-# 
-# [[filter]]
-#   name = "other"
-#   tag = ".demo"
+[[filter]]
+  name = "All"
+  tag = "*"
+
+[[filter]]
+  name = "talk"
+  tag = ".talk"
+
+[[filter]]
+  name = "workshop"
+  tag = ".workshop"
+
+[[filter]]
+  name = "other"
+  tag = ".demo"
 
 [design]
   # Toggle between the various page layout types.
