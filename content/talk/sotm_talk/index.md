@@ -1,7 +1,6 @@
 ---
-title: Informing Species Range-shifts with (preliminary) Global Connectivity 
-
-event: Species On The Move, 2023
+title: "Informing Species Range-shifts with (preliminary) Global Connectivity "
+event: "Species On The Move, 2023"
 event_url: https://pwd.aa.ufl.edu/sotm/
 
 location: Bonita Springs, FL (USA)
@@ -28,7 +27,4 @@ projects:
 - [Climate-induced species redistribution]
 ---
 
-Integrating multi-scale data with hybrid ecological models to evaluate the role of management, climate, and habitat
 
-
-{{< youtube id=UXe2eGtsmPM >}}
