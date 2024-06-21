@@ -11,37 +11,24 @@ title = "Talks and Workshops"
 subtitle = "Selected from the last 2 years"
 
 [content]
-  # Page type to display. E.g. post, talk, or publication.
-  page_type = "talk"
-  
-  # Choose how much pages you would like to display (0 = all pages)
-  count = 5
-  
-  # Choose how many pages you would like to offset by
-  offset = 0
+  # Page type to display. E.g. project.
+  page_type: project
 
-  # Page order. Descending (desc) or ascending (asc) date.
-  order = "desc"
+  # Default filter index (e.g. 0 corresponds to the first `filter_button` instance below).
+  filter_default: 0
 
-content:
-# Page type to display. E.g. project.
-page_type: project
-
-# Default filter index (e.g. 0 corresponds to the first `filter_button` instance below).
-filter_default: 0
-
-# Filter toolbar (optional).
-# Add or remove as many filters (`filter_button` instances) as you like.
-# To show all items, set `tag` to "*".
-# To filter by a specific tag, set `tag` to an existing tag name.
-# To remove the toolbar, delete the entire `filter_button` block.
-filter_button:
-- name: "All"
-  tag: "*"
-- name: "workshop"
-  tag: "workshop"
-- name: "talk"
-  tag: "talk"
+  # Filter toolbar (optional).
+  # Add or remove as many filters (`filter_button` instances) as you like.
+  # To show all items, set `tag` to "*".
+  # To filter by a specific tag, set `tag` to an existing tag name.
+  # To remove the toolbar, delete the entire `filter_button` block.
+  filter_button:
+  - name: All
+    tag: '*'
+  - name: talk
+    tag: talk
+  - name: workshop
+    tag: workshop
     
 [design]
   # Toggle between the various page layout types.
