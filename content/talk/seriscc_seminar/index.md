@@ -16,7 +16,7 @@ all_day: false
 # publishDate: "2020-10-22T00:00:00Z"
 
 authors: [admin]
-tags: []
+tags: [talk]
 
 # Is this a featured talk? (true/false)
 featured: true
