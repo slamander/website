@@ -23,16 +23,6 @@ subtitle = "Selected from the last 2 years"
   # Page order. Descending (desc) or ascending (asc) date.
   order = "desc"
 
-  # Filter posts by a taxonomy term.
-  # [content.filters]
-  #   tag = ""
-  #   category = ""
-  #   publication_type = ""
-  #   author = ""
-  #   exclude_featured = false
-  #   exclude_past = false
-  #   exclude_future = false
-  
 content:
 # Page type to display. E.g. project.
 page_type: project
