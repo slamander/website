@@ -9,28 +9,33 @@
   weight = 10
 
 [[main]]
-  name = "Research"
-  url = "#projects"
+  name = "Publications"
+  url = "#publications"
   weight = 20
 
 [[main]]
   name = "Talks"
   url = "#talks"
-  weight = 20
+  weight = 30
 
 [[main]]
-  name = "Publications"
-  url = "#publications"
-  weight = 30
+  name = "Research"
+  url = "#projects"
+  weight = 40
+
+[[main]]
+  name = "Teaching"
+  url = "#teaching"
+  weight = 50
 
 [[main]]
   name = "R sandbox"
   url = "#posts"
-  weight = 40
+  weight = 60
 
 [[main]]
   name = "Contact"
   url = "#contact"
-  weight = 50
+  weight = 70
 
 
