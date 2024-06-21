@@ -1,10 +1,11 @@
 ---
-title: Expanding the scope of connectivity modeling with Markov chains: perspectives and applications in R
-summary: Associated with the International Association of Landscape Ecologists (IALE) meeting
+title: "Expanding the scope of connectivity modeling with Markov chains: perspectives and applications in R"
+summary: "Associated with the International Association of Landscape Ecologists (IALE) meeting"
 authors:
-- Robert J Fletcher
+- RJ Fletcher
+- Andrew Marx
+- Maru Iezzi
 - admin
-- Thomas Smith
 tags:
 - workshop
 - Spatial absorbing Markov chains
@@ -23,14 +24,14 @@ featured: true
 # external_link: "https://andrewmarx.github.io/samc/"
 
 image:  
-  caption: International Association of Landscape Ecologists on landscape connectivity 
+  caption: Species On The Move workshop on landscape connectivity 
   focal_point: Smart
 
 links:
 - icon: twitter
   icon_pack: fab
   name: Follow
-url: 
+url: "https://andrewmarx.github.io/samc/"
 # url_code: ""
 # url_dataset: ""
 # url_pdf: ""
@@ -39,6 +40,7 @@ url:
 # url_slides: ""
 # url_source: ""
 url_video: "https://www.youtube.com/watch?v=6A4WQrwyIHI&pp=ygUWUm9iIEZsZXRjaGVyIHNhbWMgaWFsZQ%3D%3D"
+
 links:
 - name: "Slides"
   url: "https://docs.google.com/presentation/d/1jsUhEewx3OWyfGIZvX3fCAWCGYeYyffM/edit?usp=sharing&ouid=118161165194611535602&rtpof=true&sd=true"

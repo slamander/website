@@ -1,6 +1,6 @@
 ---
-title: Species redistribution and connectivity (Intro)
-summary: Associated with the Species On The Move (SOTM) meeting
+title: "Species redistribution and connectivity (Intro)"
+summary: "Associated with the Species On The Move (SOTM) meeting"
 authors:
 - RJ Fletcher
 - Andrew Marx
