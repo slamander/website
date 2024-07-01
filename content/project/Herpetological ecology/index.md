@@ -21,7 +21,7 @@ links:
   icon_pack: fas
   name: Wetlands paper
   url: https://doi.org/10.1007/s13157-017-0966-5
-- icon: presentation-screen
+- icon: person-chalkboard
   icon_pack: fa
   name: Prairie herps lecture
   url: https://www.alexbaecher.com/talk/se_amphibs_1/
