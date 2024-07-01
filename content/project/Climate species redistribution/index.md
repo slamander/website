@@ -13,6 +13,10 @@ links:
   icon_pack: fas
   name: GCB paper
   url: https://doi.org/10.1111/gcb.17271 
+- icon: user-group
+  icon_pack: fa
+  name: Invasion species workshop
+  url: https://www.alexbaecher.com/talk/exp_elic/
 slides: Climate-induced-species-redistribution
 summary: Modeling the spatialtemporal dynamics of species' distributions.
 tags:

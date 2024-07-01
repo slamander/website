@@ -9,6 +9,18 @@ links:
   icon_pack: fa
   name: Modeling tutorial
   url: https://www.alexbaecher.com/post/connectivity-script/
+- icon: presentation-screen
+  icon_pack: fa
+  name: Invasion modeling talk
+  url: https://www.alexbaecher.com/talk/iale_talk/
+- icon: presentation-screen
+  icon_pack: fa
+  name: Global connectivity talk
+  url: https://www.alexbaecher.com/talk/sotm_talk/
+- icon: presentation-screen
+  icon_pack: fa
+  name: Landscape connectivity lecture
+  url: https://www.alexbaecher.com/talk/ecol_cc/
 slides: Landscape connectivity
 summary: Estimating how the landscape influences movement
 tags:

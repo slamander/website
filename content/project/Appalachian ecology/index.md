@@ -13,6 +13,10 @@ links:
   icon_pack: fas
   name: Herpetological Bulletin paper
   url: https://doi.org/10.33256/hb150.2930 
+- icon: presentation-screen
+  icon_pack: fa
+  name: Salamander conservation lecture
+  url: https://www.alexbaecher.com/talk/se_amphibs_2/
 slides: Appalachian-Salamander-Ecology
 summary: Natural History, Ecology, and Conservation of Plethodontid Salamanders.
 tags:
