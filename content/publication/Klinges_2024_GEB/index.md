@@ -26,7 +26,7 @@ tags:
 - distributions
 - spatiotemporal scale
 - data resolution
-title: Proximal microclimate: Moving beyond spatiotemporalresolution improves ecological predictions
+title: "Proximal microclimate: Moving beyond spatiotemporalresolution improves ecological predictions"
 # url_code: 
 # url_dataset: 
 url_pdf: "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/geb.13884?download=true"
