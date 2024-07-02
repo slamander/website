@@ -38,4 +38,6 @@ url_preprint: "https://drive.google.com/file/d/1d4ugx4lH--Pjo0yQ3kTsTETTzkQX19Os
 links:
 - name: "Slides"
   url: "https://docs.google.com/presentation/d/1TQPAFnbhCXsUK_AY-UPzkbMXX0erVa8u/edit?usp=sharing&ouid=118161165194611535602&rtpof=true&sd=true"
+- name: "Project"
+  url: "https://www.alexbaecher.com/project/climate-species-redistribution/"
 ---

@@ -4,7 +4,7 @@ authors:
 - David Klinges
 - admin
 - et al.
-date: "2024-06-28T00:00:00Z"
+date: "2024-06-26T00:00:00Z"
 doi: "https://doi.org/10.1111/geb.13884"
 featured: true
 image:
@@ -17,7 +17,7 @@ publication: "***Global Ecology and Biogeography***"
 publication_short:
 publication_types:
 - "2"
-publishDate: "2024-06-28T00:00:00Z"
+publishDate: "2024-06-26T00:00:00Z"
 slides: Proximal microclimate
 summary: "Redefining the scale of climate throughthe lens of the organism itself helps reveal mechanisms underlying how climateshapes ecological systems."
 tags:
@@ -27,8 +27,8 @@ tags:
 - spatiotemporal scale
 - data resolution
 title: "Proximal microclimate: Moving beyond spatiotemporalresolution improves ecological predictions"
-# url_code: 
-# url_dataset: 
+url_code: https://github.com/ilyamaclean/microclimf
+url_dataset: https://doi.org/10.5281/zenodo.8110832
 url_pdf: "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/geb.13884?download=true"
 # url_preprint: 
 # url_poster: 
@@ -36,7 +36,7 @@ url_pdf: "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/geb.13884?downlo
 # url_slides: 
 # url_source: "https://doi.org/10.1111/geb.13884"
 # url_video: '#'
-# links:
-# - name: "Slides"
-#   url: "https://docs.google.com/presentation/d/1TQPAFnbhCXsUK_AY-UPzkbMXX0erVa8u/edit?usp=sharing&ouid=118161165194611535602&rtpof=true&sd=true"
+links:
+- name: "David Klinges"
+  url: "https://natureinparadise.github.io/"
 ---

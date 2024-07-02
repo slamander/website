@@ -25,6 +25,10 @@ links:
   icon_pack: fa
   name: Prairie herps lecture
   url: https://www.alexbaecher.com/talk/se_amphibs_1/
+- icon: projector
+  icon_pack: fa
+  name: Burmese python seminar
+  url: https://www.alexbaecher.com/talk/seriscc_seminar/
 slides: Reptile-and-Amphibian-Ecology
 summary: Natural History, Ecology, and Conservation of Herps in the Southeastern US.
 tags:

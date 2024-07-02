@@ -6,7 +6,7 @@ authors:
 - Jacquelyn C. Guzy
 - Chelsea S. Kross
 - JD Willson
-date: "2020-10-08T00:00:00Z"
+date: "2018-11-18T00:00:00Z"
 doi: "https://link.springer.com/article/10.1007/s13157-017-0966-5"
 featured: false
 image:
@@ -19,7 +19,7 @@ publication: "***Wetlands***"
 publication_short:
 publication_types:
 - "2"
-publishDate: "2018-2-08T00:00:00Z"
+publishDate: "2018-11-18T00:00:00Z"
 slides: Reptile-and-Amphibian-Ecology
 summary: This paper looks at how wetland restoration in grassland ecosystems may benefit prairie-adapted reptiles and amphibians. 
 tags:

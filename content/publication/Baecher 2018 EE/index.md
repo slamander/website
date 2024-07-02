@@ -3,7 +3,7 @@ abstract: Woodland salamanders are among the most abundant vertebrate animals in
 authors:
 - admin
 - Stephen C. Richter
-date: "2020-10-08T00:00:00Z"
+date: "2018-12-04T00:00:00Z"
 doi: "https://doi.org/10.1002/ece3.4736"
 featured: true
 image:
@@ -16,7 +16,7 @@ publication: "***Ecology and Evolution***"
 publication_short:
 publication_types:
 - "2"
-publishDate: "2018-12-08T00:00:00Z"
+publishDate: "2018-12-04T00:00:00Z"
 slides: "https://docs.google.com/presentation/d/1AMJepL4ntOlM1lWvi9gAhqwW0rZf0bII/edit?usp=sharing&ouid=118161165194611535602&rtpof=true&sd=true"
 summary: This paper examines how natural environmental gradients in old growth Appalachian forest determine the abundance and occurrence of sensitive woodland salamanders. 
 tags:

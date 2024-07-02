@@ -17,6 +17,10 @@ links:
   icon_pack: fa
   name: Invasion species workshop
   url: https://www.alexbaecher.com/talk/exp_elic/
+- icon: projector
+  icon_pack: fa
+  name: Invasive spread talk
+  url: https://www.alexbaecher.com/talk/iale_talk/
 slides: Climate-induced-species-redistribution
 summary: Modeling the spatialtemporal dynamics of species' distributions.
 tags:

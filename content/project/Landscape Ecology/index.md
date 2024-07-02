@@ -21,6 +21,14 @@ links:
   icon_pack: fa
   name: Landscape connectivity lecture
   url: https://www.alexbaecher.com/talk/ecol_cc/
+- icon: people
+  icon_pack: fa
+  name: SAMC workshop 1
+  url: https://www.alexbaecher.com/talk/samc_iale/
+- icon: people
+  icon_pack: fa
+  name: SAMC workshop 2
+  url: https://www.alexbaecher.com/talk/samc_sotm/
 slides: Landscape connectivity
 summary: Estimating how the landscape influences movement
 tags:

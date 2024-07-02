@@ -39,6 +39,8 @@ url_pdf: https://link.springer.com/content/pdf/10.1007/s00442-022-05108-9.pdf?pd
 links:
 - name: "Project"
   url: "https://www.alexbaecher.com/project/herpetological-ecology/"
+- name: "Edmund Basham"
+  url: "https://www.edmundbasham.com/"
 ---
 
 

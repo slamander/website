@@ -4,7 +4,7 @@ authors:
 - Kristin M. Hinkson
 - J. Alex Baecher
 - Sinlan Poo
-date: "2019-08-08T00:00:00Z"
+date: "2019-08-01T00:00:00Z"
 doi: "https://doi.org/10.1016/j.cryobiol.2019.05.007"
 featured: false
 image:
@@ -17,7 +17,7 @@ publication: "***Cryobiology***"
 publication_short:
 publication_types:
 - "2"
-publishDate: "2019-08-08T00:00:00Z"
+publishDate: "2019-08-01T00:00:00Z"
 slides: Reptile-and-Amphibian-Ecology
 summary: This paper tests multiple laboratory protocols for cryoperserving the sperm of sensitive amphibians for assisted reproductive technologies to aid in conserving tropical amphibian taxa. 
 tags:

@@ -6,7 +6,7 @@ authors:
 - Steve A. Johnson
 - David H. Klinges
 - Brett R. Scheffers
-date: "2022-10-08T00:00:00Z"
+date: "2022-09-08T00:00:00Z"
 doi: "https://doi.org/10.1111/brv.12896"
 featured: true
 image:
@@ -19,7 +19,7 @@ publication: "***Biological Reviews***"
 publication_short:
 publication_types:
 - "2"
-publishDate: "2022-10-08T00:00:00Z"
+publishDate: "2022-09-08T00:00:00Z"
 slides: Vertical stratification
 summary: This paper describes a thorough meta-analysis on the factors that determine vertical stratification of vertebrate taxa across the global tropics. 
 tags:
@@ -45,6 +45,8 @@ url_pdf: https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/brv.12896?downloa
 links:
 - name: "Project"
   url: "https://www.alexbaecher.com/project/climate-species-redistribution/"
+- name: "Edmund Basham"
+  url: "https://www.edmundbasham.com/"
 ---
 
 <html>

@@ -6,7 +6,7 @@ authors:
 - admin
 - Chelsea Kross
 - John D. Willson
-date: "2020-10-08T00:00:00Z"
+date: "2020-03-04T00:00:00Z"
 doi: "https://doi.org/10.1655/Herpetologica-D-18-00007"
 featured: false
 image:
@@ -19,7 +19,7 @@ publication: "***Herpetologica***"
 publication_short:
 publication_types:
 - "2"
-publishDate: "2018-12-08T00:00:00Z"
+publishDate: "2020-03-04T00:00:00Z"
 slides: Reptile-and-Amphibian-Ecology
 summary: This paper used feeding experiments to test the hypothesis that trophic morphology of common watersnakes is influenced by the size of prey it consumes, by way of phenotypic plasticity. 
 tags:

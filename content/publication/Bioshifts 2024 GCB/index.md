@@ -22,7 +22,7 @@ authors:
 - Sarah R. Weiskopf
 - Jonathan Lenoir
 date: "2024-04-13T00:00:00Z"
-doi: "https://onlinelibrary.wiley.com/doi/10.1111/gcb.17271"
+doi: "https://doi.org/10.1111/gcb.17271"
 featured: true
 image:
   caption: Synthesis of the scientific literature testing for relationships between traits and range shifts.
@@ -57,6 +57,8 @@ url_pdf: https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/gcb.17271?downloa
 links:
 - name: "Project"
   url: "https://www.alexbaecher.com/project/climate-species-redistribution/"
+- name: "Lise Comte"
+  url: "https://csp-inc.org/about-us/core-staff/lise-comte/"  
 ---
 
 

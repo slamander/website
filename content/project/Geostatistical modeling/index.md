@@ -2,7 +2,7 @@
 date: "2019-09-10T00:00:00Z"
 external_link: []
 image:
-  caption: Diagram of Bayes theorum 
+  caption: Mesh for a spatial point-process model using Bayesian INLA SPDE algorithm
   focal_point: Smart
 links:
 - icon: file-alt
