@@ -28,7 +28,7 @@ tags:
 title: The environmental filtering paradigm and non-filtering community assembly processes
 # url_code: 
 # url_dataset: 
-# url_pdf: https://drive.google.com/file/d/1d4ugx4lH--Pjo0yQ3kTsTETTzkQX19Os/view?usp=sharing
+url_pdf: "https://drive.google.com/uc?export=download&id=1OqjBtStpDJ3qUTWFgz04Szo5pmbxA_-X"
 url_preprint: "https://drive.google.com/file/d/1d4ugx4lH--Pjo0yQ3kTsTETTzkQX19Os/view?usp=sharing"
 # url_poster: ""
 # url_project: ""
