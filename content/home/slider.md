@@ -34,6 +34,28 @@ height = "300px"
   cta_url = "https://www.alexbaecher.com/post/edm-script/"
   # cta_icon_pack = "fas"
   # cta_icon = "graduation-cap"
+  
+    [[item]]
+   title = "New papers"
+   content = "Journal of Biogeography 2024"
+   align = "left"
+   
+   # overlay_color = "#555"  # An HTML color value.
+   overlay_img = "publications/JBI.png" 
+   overlay_filter = 0.5  # Darken the image. Value in range 0-1.
+   cta_label = "view publication"
+   cta_url = "https://www.alexbaecher.com/publication/baecher_2024_jbi/"
+   
+    [[item]]
+   title = "New papers"
+   content = "Global Ecology and Biogeography 2024"
+   align = "left"
+   
+   # overlay_color = "#555"  # An HTML color value.
+   overlay_img = "publications/GEB.png" 
+   overlay_filter = 0.5  # Darken the image. Value in range 0-1.
+   cta_label = "view publication"
+   cta_url = "https://www.alexbaecher.com/publication/klinges_2024_geb/"
    
     [[item]]
    title = "New papers"
@@ -50,7 +72,6 @@ height = "300px"
    title = "New papers"
    content = "Nature Reviews Earth & Environment"
    align = "left"
-   
    #   overlay_color = "#555"  # An HTML color value.
    overlay_img = "publications/NREE.png" 
    overlay_filter = 0.5  # Darken the image. Value in range 0-1.
