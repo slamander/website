@@ -36,7 +36,7 @@ publication_types:
 - "2"
 publishDate: "2024-04-13T00:00:00Z"
 slides: Traits and species redistribution
-summary: This paper provides a review of the role of species traits in determining the outcomes of climate-induced range shifts. 
+summary: Published as a *Review* at ***Global Change Biology*** in April, **2024**
 tags: climate change
 tags: leading edge
 tags: mechanism

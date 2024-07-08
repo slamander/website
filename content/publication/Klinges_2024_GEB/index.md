@@ -46,7 +46,7 @@ publication_types:
 - "2"
 publishDate: "2024-06-26T00:00:00Z"
 slides: Proximal microclimate
-summary: "Redefining the scale of climate throughthe lens of the organism itself helps reveal mechanisms underlying how climateshapes ecological systems."
+summary: Published as a *Original Research* at ***Global Ecology and Biogeography*** in July, **2024**
 tags: [microclimate]
 tags: [mechanistic modeling]
 tags: [distributions]
