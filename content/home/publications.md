@@ -25,11 +25,11 @@ subtitle = "from 2024"
 
   # Filter posts by a taxonomy term.
 [content.filters]
-    tag = "published"
+    tag = ""
     category = ""
-    publication_type = ""
+    publication_type = "2"
     author = ""
-    exclude_featured = true
+    exclude_featured = false
   
 [design]
   # Toggle between the various page layout types.
