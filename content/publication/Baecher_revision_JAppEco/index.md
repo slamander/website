@@ -24,7 +24,6 @@ publication_types:
 publishDate: "2024-07-08T00:00:00Z"
 slides: 
 summary: This study leverages disparate information sources, including remote sensing, demographic data, and management programs to map the potential movement corridors of Burmese pythons in south Florida. 
-tags: [forthcoming]
 tags: [Burmese pythons]
 tags: [Circuit theory]
 tags: [Landscape connectivity]

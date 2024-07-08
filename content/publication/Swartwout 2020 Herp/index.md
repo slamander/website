@@ -22,7 +22,6 @@ publication_types:
 publishDate: "2020-03-04T00:00:00Z"
 slides: Reptile-and-Amphibian-Ecology
 summary: This paper used feeding experiments to test the hypothesis that trophic morphology of common watersnakes is influenced by the size of prey it consumes, by way of phenotypic plasticity. 
-tags: [published]
 tags: [Phenotypic plasticity]
 tags: [Reptiles]
 tags: [Experiment]

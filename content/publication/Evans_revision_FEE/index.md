@@ -20,7 +20,6 @@ publication_types:
 publishDate: "2024-07-04T00:00:00Z"
 slides: 
 summary: Examining the potential risk of invasion caused by the exotic pet trade in America by tracking both online and in-person markets and evaluating the climate suitability for each species. 
-tags: [forthcoming]
 tags: [invasive species]
 tags: [climate change]
 tags: [pet trade]

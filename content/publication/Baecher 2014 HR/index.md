@@ -22,7 +22,6 @@ publication_types:
 publishDate: "2020-10-08T00:00:00Z"
 slides: Crawfish-frog-natural-history
 summary: A description of Loggerhead Shrike predation in Crawfish frogs, a species of conservation concern in Arkansas.  
-tags: [published]
 tags: [Crawfish Frogs]
 tags: [Natural History]
 tags: [Mortality] 

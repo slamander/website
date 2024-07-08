@@ -20,7 +20,6 @@ publication_types:
 publishDate: "2022-02-03T00:00:00Z"
 slides: Vertical stratification
 summary: This paper shows the importance of large, dominant, old-growth trees to sensitive arboreal poison frogs in tropical ecosystems, by providing core habitat that species use intermittently across seasons. 
-tags: [published]
 tags: [amphibian]
 tags: [biogeography]
 tags: [migration]
