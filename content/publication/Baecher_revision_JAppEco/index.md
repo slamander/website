@@ -1,5 +1,5 @@
 ---
-abstract: Rapid environmental change and human activity has dramatically facilitated the spread of invasive species, expanding their impacts beyond the original recipient communities. Predicting the potential spread of invasive species and ways to stop it remain challenging, as several abiotic, biotic, and management factors may alter outcomes. Among the most problematic invasive species globally, Burmese pythons (Python bivittatus) have established throughout much of south Florida (USA) and pose substantial ecological, economic, and societal threats to the region. To understand the invasion process, we use a new spatiotemporal modeling framework, the spatial absorbing Markov chain (SAMC), to model future spread of pythons while accounting for propagule pressure and mortality risk from three hypothesized sources: (i) cold exposure, (ii) vehicle strikes on roads, and (iii) removal management programs. To parameterize this model, we integrated empirical and model-derived data of python occurrence, movement, and behavior, and physiology using coupled correlative-mechanistic models. In a simulated invasion scenario, we found that removal management programs may have the greatest potential for limiting future spread through long-term mortality—accounting for 93.6% of all expected mortality and exceeding both cold exposure (<0.1%) and road mortality (6.3%). Furthermore, we demonstrate that circuit theory, a model which does not account for demographic processes, likely overestimates spatial patterns of connectivity. By examining invasions in a spatiotemporal framework, SAMC can provide novel information—including spatial patterns of survival, time-specific movements, and evaluation of different types of removal management strategies—to guide the management of invasive species.
+abstract: Rapid environmental change and human activity has dramatically facilitated the spread of invasive species, expanding their impacts beyond the original recipient communities. Predicting the potential spread of invasive species and ways to stop it remain challenging, as several abiotic, biotic, and management factors may alter outcomes. Among the most problematic invasive species globally, Burmese pythons (Python bivittatus) have established throughout much of south Florida (USA) and pose substantial ecological, economic, and societal threats to the region. To understand the invasion process, we use a new spatiotemporal modeling framework, the spatial absorbing Markov chain (SAMC), to model future spread of pythons while accounting for propagule pressure and mortality risk from three hypothesized sources: (i) cold exposure, (ii) vehicle strikes on roads, and (iii) removal management programs. To parameterize this model, we integrated empirical and model-derived data of python occurrence, movement, and behavior, and physiology using coupled correlative-mechanistic models. In a simulated invasion scenario, we found that removal management programs may have the greatest potential for limiting future spread through long-term mortality--accounting for 93.6% of all expected mortality and exceeding both cold exposure (<0.1%) and road mortality (6.3%). Furthermore, we demonstrate that circuit theory, a model which does not account for demographic processes, likely overestimates spatial patterns of connectivity. By examining invasions in a spatiotemporal framework, SAMC can provide novel information—including spatial patterns of survival, time-specific movements, and evaluation of different types of removal management strategies—to guide the management of invasive species.
 authors:
 - admin
 - David H. Klinges
@@ -69,7 +69,7 @@ links:
       <script type='text/javascript' src='https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js'></script>
         <span style="float:left"; 
           class="__dimensions_badge_embed__" 
-          data-doi="10.1111/jbi.14973" 
+          data-doi="10.22541/au.171248322.23946990/v1" 
           data-hide-zero-citations="true" 
           data-legend="always">
         </span>
@@ -78,7 +78,7 @@ links:
           data-link-target="_blank" 
           data-badge-details="right" 
           data-badge-type="medium-donut"
-          data-doi="10.1111/jbi.14973"   
+          data-doi="10.22541/au.171248322.23946990/v1"   
           data-condensed="true" 
           data-hide-no-mentions="true" 
           class="altmetric-embed">
