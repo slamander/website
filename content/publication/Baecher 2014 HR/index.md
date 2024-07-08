@@ -15,7 +15,7 @@ image:
   preview_only: false
 projects:
 - Reptile-and-Amphibian-Ecology
-publication: As a *Natural History Note* in **Herpetological Review**
+publication: As a *Natural History Note* in ***Herpetological Review***
 publication_short:
 publication_types:
 - "2"

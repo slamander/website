@@ -33,13 +33,14 @@ image:
   preview_only: false
 projects:
 - Climate-induced-species-redistribution
-publication: "***Nature Reviews Earth and Environment***"
+publication: "***Nature Reviews Earth & Environment***"
 publication_short:
 publication_types:
 - "2"
 publishDate: "2024-04-18T00:00:00Z"
 slides: Climate-induced-species-redistribution
-summary: Published as a *Review* at ***Nature Reviews Earth and Environment*** in April **2024**
+# summary: Published as a *Review* at ***Nature Reviews Earth and Environment*** in April **2024**
+summary: "(**2024**) *Nature Reviews Earth & Environment* **5**, 351-368"
 tags: [climate change]
 tags: [species range shift]
 title: Mechanisms, detection and impacts of species redistribution under climate change
