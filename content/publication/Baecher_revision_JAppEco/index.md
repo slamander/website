@@ -17,7 +17,7 @@ image:
 projects:
 - Climate-induced-species-redistribution
 - Landscape connectivity
-publication: "In revision at ***Journal of Applied Ecology***"
+publication: "**In revision** at ***Journal of Applied Ecology***"
 publication_short:
 publication_types:
 - "3"
