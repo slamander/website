@@ -24,13 +24,12 @@ subtitle = "from 2024"
   order = "desc"
 
   # Filter posts by a taxonomy term.
-[[content.filter_button]]
-  name = "published"
-  tag = "published"
-  
-[[content.filter_button]]
-  name = "forthcoming"
-  tag = "forthcoming"
+[content.filters]
+    tag = "published"
+    category = ""
+    publication_type = ""
+    author = ""
+    exclude_featured = true
   
 [design]
   # Toggle between the various page layout types.
