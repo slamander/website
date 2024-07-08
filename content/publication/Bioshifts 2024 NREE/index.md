@@ -40,7 +40,7 @@ publication_types:
 publishDate: "2024-04-18T00:00:00Z"
 slides: Climate-induced-species-redistribution
 # summary: Published as a *Review* at ***Nature Reviews Earth and Environment*** in April **2024**
-summary: "(**2024**) *Nature Reviews Earth & Environment* **5**, 351-368"
+summary: "(**2024**) *Nature Reviews Earth & Environment* **5**, 351-368, DOI: [10.1038/s43017-024-00527-z](https://doi.org/10.1038/s43017-024-00527-z)"
 tags: [climate change]
 tags: [species range shift]
 title: Mechanisms, detection and impacts of species redistribution under climate change

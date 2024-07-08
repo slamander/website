@@ -37,7 +37,7 @@ publication_types:
 publishDate: "2024-04-13T00:00:00Z"
 slides: Traits and species redistribution
 # summary: Published as a *Review* at ***Global Change Biology*** in April, **2024**
-summary: "(**2024**) *Global Change Biology* **30(4)**, 1-21"
+summary: "(**2024**) *Global Change Biology* **30**(4), 1-21, DOI: [10.1111/gcb.17271](https://doi.org/10.1111/gcb.17271)"
 tags: climate change
 tags: leading edge
 tags: mechanism

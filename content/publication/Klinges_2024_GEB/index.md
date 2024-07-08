@@ -47,7 +47,7 @@ publication_types:
 publishDate: "2024-06-26T00:00:00Z"
 slides: Proximal microclimate
 # summary: Published as a *Original Research* at ***Global Ecology and Biogeography*** in July, **2024**
-summary: "(**2024**) *Global Ecology and Biogeography* **33(7)**, 1-16"
+summary: "(**2024**) *Global Ecology and Biogeography* **33**(7), 1-16, DOI: [10.1111/geb.13884](https://doi.org/10.1111/geb.13884)"
 tags: [microclimate]
 tags: [mechanistic modeling]
 tags: [distributions]

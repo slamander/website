@@ -18,7 +18,7 @@ publication_types:
 publishDate: "2024-07-04T00:00:00Z"
 slides: Extinction Landscapes
 # summary: Published as a *Perspective* at the ***Journal of Biogeography*** in July, **2024**
-summary: "(**2024**) *Journal of Biogeography* **51(7)**, 1-8"
+summary: "(**2024**) *Journal of Biogeography* **51**(7), 1-8, DOI: [10.1111/geb.13884](https://doi.org/10.1111/jbi.14973)"
 tags:
 - competition
 - coexistence
