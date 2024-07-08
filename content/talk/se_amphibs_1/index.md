@@ -1,6 +1,6 @@
 ---
-title: Restoration Ecology of Grassland Herpetofauna in SEUSA
-event: Guest lecture in Wildlife of Florida--Amphibians
+title: "Restoration Ecology of Grassland Herpetofauna in SEUSA"
+summary: "Guest lecture in Wildlife of Florida--Amphibians"
 
 location: University of Florida
 

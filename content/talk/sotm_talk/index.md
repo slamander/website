@@ -1,6 +1,6 @@
 ---
 title: "Informing Species Range-shifts with (preliminary) Global Connectivity "
-event: "Species On The Move, 2023"
+summary: "3rd Species On The Move conference, 2023"
 event_url: https://pwd.aa.ufl.edu/sotm/
 
 location: Bonita Springs, FL (USA)

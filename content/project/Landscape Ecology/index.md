@@ -13,19 +13,19 @@ links:
   icon_pack: fa
   name: Invasion modeling talk
   url: https://www.alexbaecher.com/talk/iale_talk/
-- icon: projector
+- icon: chalkboard
   icon_pack: fa
   name: Global connectivity talk
   url: https://www.alexbaecher.com/talk/sotm_talk/
-- icon: projector
+- icon: chalkboard
   icon_pack: fa
   name: Landscape connectivity lecture
   url: https://www.alexbaecher.com/talk/ecol_cc/
-- icon: people
+- icon: wrench
   icon_pack: fa
   name: SAMC workshop 1
   url: https://www.alexbaecher.com/talk/samc_iale/
-- icon: people
+- icon: wrench
   icon_pack: fa
   name: SAMC workshop 2
   url: https://www.alexbaecher.com/talk/samc_sotm/

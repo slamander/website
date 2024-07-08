@@ -17,7 +17,7 @@ links:
   icon_pack: fa
   name: Invasion species workshop
   url: https://www.alexbaecher.com/talk/exp_elic/
-- icon: projector
+- icon: chalkboard
   icon_pack: fa
   name: Invasive spread talk
   url: https://www.alexbaecher.com/talk/iale_talk/

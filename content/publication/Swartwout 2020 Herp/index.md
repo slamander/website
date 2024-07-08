@@ -38,6 +38,8 @@ url_pdf: https://bioone.org/journals/Herpetologica/volume-76/issue-1/Herpetologi
 links:
 - name: "Project"
   url: "https://www.alexbaecher.com/project/herpetological-ecology/"
+- name: "Supplimental Info"
+  url: "https://bioone.org/journals/supplementalcontent/10.1655//Herpetologica-D-18-00007/53_herp-76-01-07_s01.docx"
 ---
 
 <html>

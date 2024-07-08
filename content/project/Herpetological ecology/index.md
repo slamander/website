@@ -2,7 +2,7 @@
 date: "2019-09-10T00:00:00Z"
 external_link: []
 image:
-  caption: Two-dimensional mesh structure for spatio-temporal INLA model of Southern Dusky Salamanders 
+  caption: Spring salamander (Gyrinophilus porphyriticus) from eastern Kentucky
   focal_point: Smart
 links:
 - icon: file-alt
@@ -21,11 +21,11 @@ links:
   icon_pack: fas
   name: Wetlands paper
   url: https://doi.org/10.1007/s13157-017-0966-5
-- icon: projector
+- icon: chalkboard
   icon_pack: fa
   name: Prairie herps lecture
   url: https://www.alexbaecher.com/talk/se_amphibs_1/
-- icon: projector
+- icon: chalkboard
   icon_pack: fa
   name: Burmese python seminar
   url: https://www.alexbaecher.com/talk/seriscc_seminar/

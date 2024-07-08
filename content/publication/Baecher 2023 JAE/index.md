@@ -41,6 +41,8 @@ links:
   url: "https://docs.google.com/presentation/d/1KPeAi7rw_Da7oY3ureW33dJosFXdfD0L/edit?usp=sharing&ouid=118161165194611535602&rtpof=true&sd=true"
 - name: "Project"
   url: "https://www.alexbaecher.com/project/herpetological-ecology/"
+- name: "Supplimental Info"
+  url: "https://besjournals.onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2F1365-2656.13899&file=jane13899-sup-0001-AppendixS1.docx"
 - name: "Press: Florida Today"
   url: "https://www.floridatoday.com/story/news/local/environment/2023/04/03/cuban-tree-frog-hops-to-new-heights-of-ecological-destruction-in-florida/70064687007/"
 - name: "Press: Nature CC"

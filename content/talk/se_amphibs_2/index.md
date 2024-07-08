@@ -1,6 +1,6 @@
 ---
 title: "Salamander conservation in the Southeastern USA"
-event: "Guest lecture in Wildlife of Florida--Salamanders"
+summary: "Guest lecture in Wildlife of Florida--Salamanders"
 location: "University of Florida"
 
 # Talk start and end times.

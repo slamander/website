@@ -7,8 +7,8 @@ headless = true  # This file represents a page section.
 active = true  # Activate this widget? true/false
 weight = 6  # Order that this section will appear.
 
-title = "Recent Publications"
-subtitle = "click 'see all publications' for more"
+title = "Recent publications"
+subtitle = "from 2024"
 
 [content]
   # Page type to display. E.g. post, talk, or publication.
@@ -68,5 +68,5 @@ subtitle = "click 'see all publications' for more"
 +++
 
 {{% alert note %}}
-Quickly discover relevant content by [filtering publications]({{< ref "/publication/_index.md" >}}).
+[See all publications]({{< ref "/publication/_index.md" >}}).
 {{% /alert %}}

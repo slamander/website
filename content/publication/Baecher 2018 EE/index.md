@@ -40,6 +40,8 @@ links:
   url: "https://docs.google.com/presentation/d/1AMJepL4ntOlM1lWvi9gAhqwW0rZf0bII/edit?usp=sharing&ouid=118161165194611535602&rtpof=true&sd=true"
 - name: "Project"
   url: "https://www.alexbaecher.com/project/appalachian-ecology/"
+- name: "Supplimental Info"
+  url: "https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1002%2Fece3.4736&file=ece34736-sup-0001-AppendixS1-S5.docx"
 ---
 
 <html>
