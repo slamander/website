@@ -24,10 +24,6 @@ subtitle = "Selected presentations"
   order = "desc"
   
 [[content.filter_button]]
-  name = "All"
-  tag = "*"
-  
-[[content.filter_button]]
   name = "talk"
   tag = "talk"
   
@@ -35,9 +31,13 @@ subtitle = "Selected presentations"
   name = "workshop"
   tag = "workshop"
   
-  [[content.filter_button]]
+[[content.filter_button]]
   name = "guest"
   tag = "guest"
+  
+[[content.filter_button]]
+  name = "All"
+  tag = "*"
 
 [design]
   # Toggle between the various page layout types.

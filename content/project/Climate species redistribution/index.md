@@ -13,7 +13,7 @@ links:
   icon_pack: fas
   name: GCB paper
   url: https://doi.org/10.1111/gcb.17271 
-- icon: people
+- icon: wrench
   icon_pack: fa
   name: Invasion species workshop
   url: https://www.alexbaecher.com/talk/exp_elic/

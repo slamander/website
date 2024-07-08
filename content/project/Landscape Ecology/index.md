@@ -9,7 +9,7 @@ links:
   icon_pack: fa
   name: Modeling tutorial
   url: https://www.alexbaecher.com/post/connectivity-script/
-- icon: projector
+- icon: chalkboard
   icon_pack: fa
   name: Invasion modeling talk
   url: https://www.alexbaecher.com/talk/iale_talk/

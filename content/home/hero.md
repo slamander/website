@@ -28,14 +28,9 @@ hero_media = "badge_kentucki.png"
   
     [cta]
   url = "files/cv.pdf"
-  label = "Curriculum Vitae (06-13-2024)"
+  label = "Curriculum Vitae (07-08-2024)"
   icon_pack = "fas"
   icon = "download"
-  
-    [cta_alt]
-  # url = "https://sourcethemes.com/academic/"
-  url = "#contact"
-  label = "Contact me"
 
 +++
 
