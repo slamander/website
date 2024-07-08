@@ -21,13 +21,13 @@ publication_types:
 publishDate: "2023-03-05T00:00:00Z"
 slides: "https://docs.google.com/presentation/d/1KPeAi7rw_Da7oY3ureW33dJosFXdfD0L/edit?usp=sharing&ouid=118161165194611535602&rtpof=true&sd=true"
 summary: This paper uses a novel experimental system to show how an antagonistic invasive species and climate-induced drought may act jointly to affect the vertical assembly of a common treefrog community in the Southeastern USA. 
-tags:
-- climate change
-- competition
-- Cuban treefrogs 
-- Hylidae
-- invasive species
-- niche partitioning
+tags: [published]
+tags: [climate change]
+tags: [competition]
+tags: [Cuban treefrogs] 
+tags: [Hylidae]
+tags: [invasive species]
+tags: [niche partitioning]
 title: Experimental evaluation of how biological invasions and climate change interact to alter the vertical assembly of an amphibian community
 url_code: https://github.com/slamander/treefrog
 url_dataset: https://doi.org/10.5281/zenodo.7439710

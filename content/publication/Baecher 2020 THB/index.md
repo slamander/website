@@ -20,10 +20,10 @@ publication_types:
 publishDate: "2019-12-01T00:00:00Z"
 slides: Appalachian-Slamander-Ecology
 summary: A description of morphological abnormalities (tail bifurcation) in Plethodontid salamanders. 
-tags:
-- Desmognathus fuscus
-- Natural History
-- Malformation 
+tags: [published]
+tags: [Desmognathus fuscus]
+tags: [Natural History]
+tags: [Malformation] 
 title: Tail bifurcation in two species of Desmognathus salamander (Plethodontidae) in southeastern Kentucky, USA
 # url_code: 
 # url_dataset: 

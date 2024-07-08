@@ -22,14 +22,14 @@ publication_types:
 publishDate: "2020-03-04T00:00:00Z"
 slides: Reptile-and-Amphibian-Ecology
 summary: This paper used feeding experiments to test the hypothesis that trophic morphology of common watersnakes is influenced by the size of prey it consumes, by way of phenotypic plasticity. 
-tags:
-- Phenotypic plasticity
-- Reptiles
-- Experiment
-- Growth rate
-- Nerodia sipedon
-- Prey size
-- Gape limited predators
+tags: [published]
+tags: [Phenotypic plasticity]
+tags: [Reptiles]
+tags: [Experiment]
+tags: [Growth rate]
+tags: [Nerodia sipedon]
+tags: [Prey size]
+tags: [Gape limited predators]
 title: Prey Size and Feeding Rate Do Not Influence Trophic Morphology of Juvenile Water Snakes (Nerodia sipedon)
 url_code: https://doi.org/10.1655/Herpetologica-D-1800007.S1
 url_dataset: https://doi.org/10.1655/Herpetologica-D-1800007.S1

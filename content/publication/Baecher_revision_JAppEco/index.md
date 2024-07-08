@@ -7,7 +7,7 @@ authors:
 - Christina Romagosa
 - Robert J. Fletcher, Jr.
 - Brett R. Scheffers
-date: "2024-07-08T00:00:00Z"
+date: "***In revision***"
 doi: "http://dx.doi.org/10.22541/au.171248322.23946990/v1"
 featured: false
 image:
@@ -17,20 +17,20 @@ image:
 projects:
 - Climate-induced-species-redistribution
 - Landscape connectivity
-publication: "***Journal of Applied Ecology***"
+publication: "In revision at ***Journal of Applied Ecology***"
 publication_short:
 publication_types:
 - "2"
 publishDate: "2024-07-08T00:00:00Z"
 slides: 
 summary: This study leverages disparate information sources, including remote sensing, demographic data, and management programs to map the potential movement corridors of Burmese pythons in south Florida. 
-tags:
-- Burmese pythons
-- Circuit theory
-- Landscape connectivity
-- Management
-- Markov chains
-- Mortality
+tags: [forthcoming]
+tags: [Burmese pythons]
+tags: [Circuit theory]
+tags: [Landscape connectivity]
+tags: [Management]
+tags: [Markov chains]
+tags: [Mortality]
 title: "Simulating what limits the spread of a high-profile invasive predator"
 # url_code: 
 # url_dataset: 

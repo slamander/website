@@ -19,13 +19,13 @@ publication_types:
 publishDate: "2018-12-04T00:00:00Z"
 slides: "https://docs.google.com/presentation/d/1AMJepL4ntOlM1lWvi9gAhqwW0rZf0bII/edit?usp=sharing&ouid=118161165194611535602&rtpof=true&sd=true"
 summary: This paper examines how natural environmental gradients in old growth Appalachian forest determine the abundance and occurrence of sensitive woodland salamanders. 
-tags:
-- Population dynamics
-- Occupancy
-- Abundance 
-- Conservation
-- N-mixture models
-- Detection probabilities
+tags: [published]
+tags: [Population dynamics]
+tags: [Occupancy]
+tags: [Abundance] 
+tags: [Conservation]
+tags: [N-mixture models]
+tags: [Detection probabilities]
 title: Environmental gradients in old‐growth Appalachian forest predict fine‐scale distribution, co‐occurrence, and density of woodland salamanders
 url_code: "https://github.com/slamander/salamander_ecology"
 url_dataset: "https://doi.org/10.6073/pasta/d834e12ff12dc23d9319fa9f73e40306"

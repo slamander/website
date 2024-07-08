@@ -22,17 +22,17 @@ publication_types:
 publishDate: "2022-09-08T00:00:00Z"
 slides: Vertical stratification
 summary: This paper describes a thorough meta-analysis on the factors that determine vertical stratification of vertebrate taxa across the global tropics. 
-tags:
-- amphibian
-- arboreal
-- bat
-- biodiversity
-- biogeography
-- bird
-- canopy
-- niche
-- small mammal
-- rainforest 
+tags: [published]
+tags: [amphibian]
+tags: [arboreal]
+tags: [bat]
+tags: [biodiversity]
+tags: [biogeography]
+tags: [bird]
+tags: [canopy]
+tags: [niche]
+tags: [small mammal]
+tags: [rainforest ]
 title: Vertical stratification patterns of tropical forest vertebrates
 url_code: https://github.com/schefferslab/Vert-Strata-Meta
 url_dataset: https://github.com/schefferslab/Vert-Strata-Meta

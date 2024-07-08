@@ -4,7 +4,7 @@ authors:
 - Luke Evans
 - admin
 - Brett R. Scheffers
-date: "2024-07-08T00:00:00Z"
+date: "***In revision***"
 doi: ""
 featured: false
 image:
@@ -13,20 +13,20 @@ image:
   preview_only: false
 projects:
 - Climate-induced-species-redistribution
-publication: "***Frontiers in Ecology and the Environment***"
+publication: "In revision at ***Frontiers in Ecology and the Environment***"
 publication_short:
 publication_types:
 - "2"
 publishDate: "2024-07-04T00:00:00Z"
 slides: 
 summary: Examining the potential risk of invasion caused by the exotic pet trade in America by tracking both online and in-person markets and evaluating the climate suitability for each species. 
-tags:
-- invasive species
-- climate change
-- pet trade
-- climate shifts
-- invasion risk
-- management
+tags: [forthcoming]
+tags: [invasive species]
+tags: [climate change]
+tags: [pet trade]
+tags: [climate shifts]
+tags: [invasion risk]
+tags: [management]
 title: Invasion risk posed by the pet trade
 # url_code: 
 # url_dataset: 
@@ -38,45 +38,11 @@ title: Invasion risk posed by the pet trade
 # url_source: "https://drive.google.com/uc?export=download&id=1RdEJNmTodxNHeI4Ay99SCpf5Fygx0k3g"
 # url_video: '#'
 links:
-# - name: "Slides"
-#   url: "https://docs.google.com/presentation/d/1TQPAFnbhCXsUK_AY-UPzkbMXX0erVa8u/edit?usp=sharing&ouid=118161165194611535602&rtpof=true&sd=true"
+- name: "Luke Evans"
+  url: "https://scholar.google.co.uk/citations?user=9jYlHVgAAAAJ&hl=en"
 # - name: "Project"
 #   url: "https://www.alexbaecher.com/project/climate-species-redistribution/"
 # - name: "Supplimental Figure"
 #   url: "https://doi.org/10.6084/m9.figshare.25917511.v1"
 ---
 
-<html>
-  <style>
-    section {
-        background: white;
-        color: black;
-        border-radius: 1em;
-        padding: 1em;
-        left: 50% }
-    #inner {
-        display: inline-block;
-        display: flex;
-        align-items: center;
-        justify-content: center }
-  </style>
-  <section>
-    <div id="inner">
-      <script type='text/javascript' src='https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js'></script>
-        <span style="float:left"; 
-          class="__dimensions_badge_embed__" 
-          data-doi="10.1111/jbi.14973" 
-          data-hide-zero-citations="true" 
-          data-legend="always">
-        </span>
-      <script async src="https://badge.dimensions.ai/badge.js" charset="utf-8"></script>
-        <div  style="float:right"; 
-          data-link-target="_blank" 
-          data-badge-details="right" 
-          data-badge-type="medium-donut"
-          data-doi="10.1111/jbi.14973"   
-          data-condensed="true" 
-          data-hide-no-mentions="true" 
-          class="altmetric-embed">
-        </div>
-  </section>

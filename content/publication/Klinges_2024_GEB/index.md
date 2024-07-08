@@ -47,12 +47,12 @@ publication_types:
 publishDate: "2024-06-26T00:00:00Z"
 slides: Proximal microclimate
 summary: "Redefining the scale of climate throughthe lens of the organism itself helps reveal mechanisms underlying how climateshapes ecological systems."
-tags:
-- microclimate
-- mechanistic modeling
-- distributions
-- spatiotemporal scale
-- data resolution
+tags: [published]
+tags: [microclimate]
+tags: [mechanistic modeling]
+tags: [distributions]
+tags: [spatiotemporal scale]
+tags: [data resolution]
 title: "Proximal microclimate: Moving beyond spatiotemporalresolution improves ecological predictions"
 url_code: https://github.com/ilyamaclean/microclimf
 url_dataset: https://doi.org/10.5281/zenodo.8110832

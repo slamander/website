@@ -20,13 +20,13 @@ publication_types:
 publishDate: "2022-02-03T00:00:00Z"
 slides: Vertical stratification
 summary: This paper shows the importance of large, dominant, old-growth trees to sensitive arboreal poison frogs in tropical ecosystems, by providing core habitat that species use intermittently across seasons. 
-tags:
-- amphibian
-- biogeography
-- migration
-- philopatry
-- pond-breeding
-- Dendrobatid
+tags: [published]
+tags: [amphibian]
+tags: [biogeography]
+tags: [migration]
+tags: [philopatry]
+tags: [pond-breeding]
+tags: [Dendrobatid]
 title: Large, old trees define the vertical, horizontal, and seasonal distributions of a poison frog
 url_code: https://github.com/schefferslab/Basham_et_al_2021
 url_dataset: https://github.com/schefferslab/Basham_et_al_2021

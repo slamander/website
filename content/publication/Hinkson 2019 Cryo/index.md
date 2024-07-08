@@ -20,13 +20,13 @@ publication_types:
 publishDate: "2019-08-01T00:00:00Z"
 slides: Reptile-and-Amphibian-Ecology
 summary: This paper tests multiple laboratory protocols for cryoperserving the sperm of sensitive amphibians for assisted reproductive technologies to aid in conserving tropical amphibian taxa. 
-tags:
-- Amphibian
-- Assisted reproductive technologies
-- Anura
-- Spermatozoa
-- Bufonidae
-- HCG
+tags: [published]
+tags: [Amphibian]
+tags: [Assisted reproductive technologies]
+tags: [Anura]
+tags: [Spermatozoa]
+tags: [Bufonidae]
+tags: [HCG]
 title: Cryopreservation and hormonal induction of spermic urine in smooth-sided toads
 url_code: https://osf.io/5ucsx/
 url_dataset: https://osf.io/5ucsx/

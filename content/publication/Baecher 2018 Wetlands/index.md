@@ -22,12 +22,12 @@ publication_types:
 publishDate: "2018-11-18T00:00:00Z"
 slides: Reptile-and-Amphibian-Ecology
 summary: This paper looks at how wetland restoration in grassland ecosystems may benefit prairie-adapted reptiles and amphibians. 
-tags:
-- Restoration
-- Prescribed Fire
-- Amphibian 
-- Lithobates areolatus
-- Regina grahamii
+tags: [published]
+tags: [Restoration]
+tags: [Prescribed Fire]
+tags: [Amphibian] 
+tags: [Lithobates areolatus]
+tags: [Regina grahamii]
 title: Herpetofaunal Communities in Restored and Unrestored Remnant Tallgrass Prairie and Associated Wetlands in Northwest Arkansas, USA
 # url_code: ""
 # url_dataset: ""
