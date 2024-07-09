@@ -27,7 +27,7 @@ subtitle = "from 2024"
 [content.filters]
     tag = ""
     category = ""
-    publication_type = "2"
+    publication_type = ""
     author = ""
     exclude_featured = false
   
@@ -37,7 +37,7 @@ subtitle = "from 2024"
   #   2 = Compact
   #   3 = Card
   #   4 = Citation (publication only)
-  view = 2
+  view = 3
   
 [design.background]
   # Apply a background color, gradient, or image.
