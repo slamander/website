@@ -20,7 +20,7 @@ date_format = "Jan 2006"
 
 [[experience]]
   title = "Postdoctoral Research Associate"
-  company = University of Florida
+  company = "University of Florida"
   company_url = "https://www.ufl.edu/"
   location = "Gainesville, Florida (USA)"
   date_start = "2024-06-01"
