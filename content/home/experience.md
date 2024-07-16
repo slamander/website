@@ -71,7 +71,7 @@ date_format = "Jan 2006"
   location = "Fayetteville, Arkansas (USA)"
   date_start = "2010-08-15"
   date_end = "2012-12-31"
-  description = [Dept. of Biology](https://biology.uark.edu/)
+  description = "[Dept. of Biology](https://biology.uark.edu/)"
   
 +++
 
