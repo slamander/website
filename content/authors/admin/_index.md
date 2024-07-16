@@ -14,8 +14,8 @@ role: Postdoctoral Researcher
 
 # Organizations/Affiliations
 organizations:
-- name: @ University of Florida
-  link: https://www.ufl.edu/
+- name: "@ University of Florida"
+  link: "https://www.ufl.edu/"
 
 # Short bio (displayed in user profile at end of posts)
 bio: My research interests include landscape ecology and applied conservation of reptiles and amphibians
