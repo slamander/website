@@ -14,8 +14,8 @@ role: Postdoctoral Researcher
 
 # Organizations/Affiliations
 organizations:
-- name: Scheffers Lab @ University of Florida
-  link: https://www.schefferslab.com/
+- name: @ University of Florida
+  link: https://www.ufl.edu/
 
 # Short bio (displayed in user profile at end of posts)
 bio: My research interests include landscape ecology and applied conservation of reptiles and amphibians
@@ -49,24 +49,27 @@ social:
 - icon: envelope
   icon_pack: fas
   link: mailto:jbaecher@ufl.edu 
-- icon: twitter
-  icon_pack: fab
-  link: https://twitter.com/AlexBaecher
-- icon: instagram
-  icon_pack: fab
-  link: https://www.instagram.com/j_baecher/
-- icon: flickr
-  icon_pack: fab
-  link: https://www.flickr.com/photos/126690066@N08/
-- icon: facebook
-  icon_pack: fab
-  link: https://www.facebook.com/baechermander
 - icon: google-scholar
   icon_pack: ai
   link: https://scholar.google.com/citations?user=zl3lDnEAAAAJ&hl=en
 - icon: github
   icon_pack: fab
   link: https://github.com/slamander
+- icon: researchgate
+  icon_pack: fa
+  link: https://www.researchgate.net/profile/Joseph-Baecher
+- icon: twitter
+  icon_pack: fab
+  link: https://twitter.com/AlexBaecher
+- icon: instagram
+  icon_pack: fab
+  link: https://www.instagram.com/j_baecher/
+- icon: facebook
+  icon_pack: fab
+  link: https://www.facebook.com/baechermander
+- icon: flickr
+  icon_pack: fab
+  link: https://www.flickr.com/photos/126690066@N08/
   
 # Link to a PDF of your resume/CV from the About widget.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
