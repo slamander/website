@@ -74,4 +74,3 @@ date_format = "Jan 2006"
   description = "[Dept. of Biology](https://biology.uark.edu/)"
   
 +++
-
