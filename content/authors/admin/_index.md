@@ -56,7 +56,7 @@ social:
   icon_pack: ai
   link: https://orcid.org/0000-0003-0247-5758
 - icon: linkedin
-  icon_pack: fa
+  icon_pack: ai
   link: https://www.linkedin.com/in/alex-baecher-5972a43b/
 - icon: github
   icon_pack: fab
