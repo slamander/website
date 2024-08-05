@@ -56,7 +56,7 @@ social:
   icon_pack: fab
   link: https://github.com/slamander
 - icon: researchgate
-  icon_pack: fa
+  icon_pack: ai
   link: https://www.researchgate.net/profile/Joseph-Baecher
 - icon: twitter
   icon_pack: fab
