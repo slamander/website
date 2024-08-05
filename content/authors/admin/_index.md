@@ -24,9 +24,9 @@ Interests:
 - Conservation 
 - Ecological theory
 - Herpetology
-- Spatial Ecology
-- Reproducible Research
 - Natural History
+- Reproducible Research
+- Spatial Ecology
 - Statistics
 
 Education:
@@ -52,6 +52,12 @@ social:
 - icon: google-scholar
   icon_pack: ai
   link: https://scholar.google.com/citations?user=zl3lDnEAAAAJ&hl=en
+- icon: orcid
+  icon_pack: ai
+  link: https://orcid.org/0000-0003-0247-5758
+- icon: linkedin
+  icon_pack: fa
+  link: https://www.linkedin.com/in/alex-baecher-5972a43b/
 - icon: github
   icon_pack: fab
   link: https://github.com/slamander
