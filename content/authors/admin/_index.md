@@ -99,7 +99,5 @@ Native to the foothills of Arkansas' Ozark Mountains. My life consists of... my 
 *The serious bits:*
 I am a landscape ecologist, with interest in research at the interface between conservation, ecological theory, and mathematical modeling. I primarily work with reptiles and amphibians, but am interested in the processes determining the distribution of biodiversity more broadly. 
 
-![Research topics by keywords listed in Alex's publications](/media/keywords.png)
-
 {{< icon name="download" pack="fas" >}} Download my {{< staticref "files/cv.pdf" "newtab" >}}CV{{< /staticref >}}.
 
