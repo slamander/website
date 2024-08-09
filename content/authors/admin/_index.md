@@ -101,3 +101,6 @@ I am a landscape ecologist, with interest in research at the interface between c
 
 {{< icon name="download" pack="fas" >}} Download my {{< staticref "files/cv.pdf" "newtab" >}}CV{{< /staticref >}}.
 
+{{</* plotly json="radial_sunburst.json" */>}}
+
+
