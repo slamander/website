@@ -16,4 +16,4 @@ subtitle = "By keywords in publications"
   
 +++
 
-![Research topics by keywords listed in Alex's publications](/media/keywords.png)
+![Research topics by keywords listed in Alex's publications](/media/keywords_background.png)
