@@ -17,7 +17,7 @@ hero_media = "badge_kentucki.png"
   
   # Background image.
  image = "log_extended.png"  # Name of image in `static/media/`.
- padding = ["200px", "0px", "200px", "0px"]
+ padding = ["0px", "0px", "0px", "0px"] # 200, 0, 200, 0
    image_darken = 0.1  # Darken the image? Range 0-1 where 0 is transparent and 1 is opaque.
  image_size = "cover"  #  Options are `cover` (default), `contain`, or `actual` size.
  image_position = "center"  # Options include `left`, `center` (default), or `right`.
