@@ -38,10 +38,10 @@ enableEmoji = true
 footnotereturnlinkcontents = "<sup>^</sup>"
 ignoreFiles = ["\\.ipynb$", ".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 
-module:
-  imports:
-    - path: github.com/HugoBlox/hugo-blox-builder/modules/blox-plugin-reveal
-    - path: github.com/HugoBlox/hugo-blox-builder/modules/blox-bootstrap/v5
+[module]
+  [[imports]]
+    path = "github.com/HugoBlox/hugo-blox-builder/modules/blox-plugin-reveal"
+    path = "github.com/HugoBlox/hugo-blox-builder/modules/blox-bootstrap/v5"
 
 # Workaround Hugo publishing taxonomy URLs as plurals - consistently use singular across Academic.
 [permalinks]
