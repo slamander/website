@@ -24,9 +24,9 @@ Interests:
 - Conservation 
 - Ecological theory
 - Herpetology
-- Spatial Ecology
-- Reproducible Research
 - Natural History
+- Reproducible Research
+- Spatial Ecology
 - Statistics
 
 Education:
@@ -52,11 +52,17 @@ social:
 - icon: google-scholar
   icon_pack: ai
   link: https://scholar.google.com/citations?user=zl3lDnEAAAAJ&hl=en
+- icon: orcid
+  icon_pack: ai
+  link: https://orcid.org/0000-0003-0247-5758
+- icon: linkedin
+  icon_pack: ai
+  link: https://www.linkedin.com/in/alex-baecher-5972a43b/
 - icon: github
   icon_pack: fab
   link: https://github.com/slamander
 - icon: researchgate
-  icon_pack: fa
+  icon_pack: ai
   link: https://www.researchgate.net/profile/Joseph-Baecher
 - icon: twitter
   icon_pack: fab
@@ -94,4 +100,3 @@ Native to the foothills of Arkansas' Ozark Mountains. My life consists of... my 
 I am a landscape ecologist, with interest in research at the interface between conservation, ecological theory, and mathematical modeling. I primarily work with reptiles and amphibians, but am interested in the processes determining the distribution of biodiversity more broadly. 
 
 {{< icon name="download" pack="fas" >}} Download my {{< staticref "files/cv.pdf" "newtab" >}}CV{{< /staticref >}}.
-

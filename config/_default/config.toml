@@ -68,6 +68,9 @@ ignoreFiles = ["\\.ipynb$", ".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "
     startLevel = 2
     endLevel = 3
 
+[params.plotly]
+   enable = true
+
 [imaging]
   resampleFilter = "lanczos"
   quality = 90
