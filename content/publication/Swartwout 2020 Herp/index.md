@@ -32,7 +32,7 @@ tags: [Gape limited predators]
 title: Prey Size and Feeding Rate Do Not Influence Trophic Morphology of Juvenile Water Snakes (Nerodia sipedon)
 url_code: https://doi.org/10.1655/Herpetologica-D-1800007.S1
 url_dataset: https://doi.org/10.1655/Herpetologica-D-1800007.S1
-url_pdf: https://bioone.org/journals/Herpetologica/volume-76/issue-1/Herpetologica-D-18-00007/Prey-Size-and-Feeding-Rate-Do-Not-Influence-Trophic-Morphology/10.1655/Herpetologica-D-18-00007.pdf?casa_token=JrPKHfnnJZMAAAAA:O9JsDygb16PJ93gdY3xBt3_k07-Cu_ld9b3ZDqg2h029aLrsf6yOH7v8dYOSLNxJsit6GyCBSg
+url_pdf: https://drive.google.com/uc?export=download&id=1QLdpK0d1k3fEqUHtLrN4H8rV0kjbA-Tc
 # url_project: https://www.alexbaecher.com/project/herpetological-ecology/
 links:
 - name: "Project"
