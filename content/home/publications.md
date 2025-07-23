@@ -68,5 +68,5 @@ subtitle = "from 2024"
 +++
 
 {{% alert note %}}
-[See all publications]({{< ref "/publication/_index.md" >}}).
+[See all publications]({{% ref . "/publication/_index.md" %}}).
 {{% /alert %}}
