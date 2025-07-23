@@ -67,6 +67,3 @@ subtitle = "from 2024"
  css_class = ""
 +++
 
-{{% alert note %}}
-[See all publications]({{% ref . "/publication/_index.md" %}}).
-{{% /alert %}}
