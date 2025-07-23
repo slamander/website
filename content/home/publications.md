@@ -1,4 +1,3 @@
-
 ---
 widget: pages
 headless: true
