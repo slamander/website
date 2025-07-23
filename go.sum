@@ -4,8 +4,12 @@ github.com/HugoBlox/hugo-blox-builder/modules/blox-analytics v0.1.3 h1:RlzYOopMW
 github.com/HugoBlox/hugo-blox-builder/modules/blox-analytics v0.1.3/go.mod h1:0YQtVvRLCzZOpPmbVNk7WDx8t19/QfRTFO+pwyqQNk8=
 github.com/HugoBlox/hugo-blox-builder/modules/blox-plugin-netlify v1.1.1 h1:qlDCZWq7OhuwLr7/rDPXe8iGxam2t1kgLabZ9EP0VqM=
 github.com/HugoBlox/hugo-blox-builder/modules/blox-plugin-netlify v1.1.1/go.mod h1:C7jfxMLv1bEUqbM9XDSmEpfOpS8w06OgqNDEcbuRgL4=
+github.com/HugoBlox/hugo-blox-builder/modules/blox-plugin-netlify v1.1.2-0.20250301201144-44e75541f7be h1:uKN53b/E8UE/5pbfKrOI/G52Kphw4qolhSrzEb/UHGk=
+github.com/HugoBlox/hugo-blox-builder/modules/blox-plugin-netlify v1.1.2-0.20250301201144-44e75541f7be/go.mod h1:C7jfxMLv1bEUqbM9XDSmEpfOpS8w06OgqNDEcbuRgL4=
 github.com/HugoBlox/hugo-blox-builder/modules/blox-tailwind v0.3.2 h1:Rh9CLgt4GpcWOoFJ0XyryvGjK/czOAa0eXuhjDisIC0=
 github.com/HugoBlox/hugo-blox-builder/modules/blox-tailwind v0.3.2/go.mod h1:bUQKSt1XQhk60nSpI6D+MibQi6v8s7HghF5qoAtlhws=
+github.com/HugoBlox/hugo-blox-builder/modules/blox-tailwind v0.3.3-0.20250301201144-44e75541f7be h1:6/X9MqK+zX1kizfAC5YjPfsSoO06aMzu2MsM+MdBiw8=
+github.com/HugoBlox/hugo-blox-builder/modules/blox-tailwind v0.3.3-0.20250301201144-44e75541f7be/go.mod h1:bUQKSt1XQhk60nSpI6D+MibQi6v8s7HghF5qoAtlhws=
 github.com/gohugoio/hugo-mod-jslibs/instantpage v0.5.1 h1:Aig+0MOPXiuQNZpnxOMS4uwUsnyq41JnQzGW4Gk3o7Y=
 github.com/gohugoio/hugo-mod-jslibs/instantpage v0.5.1/go.mod h1:N4EUbbL7Cw4Yq+GHeK3MUSiOJQbzfuUFRyvBKvnVBR8=
 github.com/instantpage/instant.page v5.1.0+incompatible/go.mod h1:GXVDktwI+K4T9o5mcK2NYDqPFxAUrB9U9goR9oG1SaI=

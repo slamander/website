@@ -19,7 +19,6 @@ build:
   writeStats: true
 
 # Page settings
-paginate: 10
 summaryLength: 30
 enableEmoji: true
 enableGitInfo: false
@@ -43,6 +42,9 @@ permalinks:
 outputs:
   home: ['HTML', 'RSS', 'headers', 'redirects']
   section: ['HTML', 'RSS']
+  
+params:
+  pagination.pagerSize: 10
 
 # Media types
 mediaTypes:
