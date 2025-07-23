@@ -2,7 +2,7 @@
 title: "Machine Learning the 'Tidy' Way"
 subtitle: "A tutorial on K-nearest neighbor and boosted trees using the `tidymodels` framework"
 author: J. Alex Baecher
-date: September 22, 2021
+date: 2021-10-22T00:40:04-07:00
 output: md_document
 slug: ML tidymodels
 tags: ["tidymodels", "Machine Learning", "KNN", "xgboost", "boosted tree"]

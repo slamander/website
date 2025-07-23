@@ -2,7 +2,7 @@
 title: "Mapping Ecological Flow in R (pt 1)"
 subtitle: "A tutorial on randomized shortest-path (or random walk, a la circuit theory)"
 author: J. Alex Baecher
-date: '2020-08-12'
+date: 2020-08-12T00:40:04-07:00
 slug: connectivity script
 categories: ["r tutorials"]
 tags: ["Circuitscape", "Random Walks", "Conductance", "Ecological Modeling"]
