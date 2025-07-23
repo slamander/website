@@ -6,7 +6,7 @@ authors:
 - Jacquelyn C. Guzy
 - Joseph C. Neal
 - JD Willson
-date: "2014-10-08T00:00:00Z"
+date: 2014-10-08T00:00:00Z
 doi: ""
 featured: false
 image:
@@ -19,7 +19,8 @@ publication: As a *Natural History Note* in ***Herpetological Review***
 publication_short:
 publication_types:
 - "2"
-publishDate: "2020-10-08T00:00:00Z"
+view: 4
+publishDate: 2020-10-08T00:00:00Z
 slides: Crawfish-frog-natural-history
 summary: A description of Loggerhead Shrike predation in Crawfish frogs, a species of conservation concern in Arkansas.  
 tags: [Crawfish Frogs]

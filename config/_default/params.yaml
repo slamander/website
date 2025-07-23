@@ -92,23 +92,23 @@ contact:
       # Enable CAPTCHA challenge to reduce spam?
       captcha: false
   # Email for contact form and footer
-  email: jbaecher@ufl.edu
+  email: jbaecher@gmail.com
   phone: '352-226-3983'
   address:
-    street: '354 Newins-Ziegler Hall'
+    street: 
     city: Gainesville
     region: FL
     postcode: '32601'
     country: United States
     country_code: US
   coordinates:
-    latitude: '29.645365'
-    longitude: '-82.345756'
+    latitude: 
+    longitude: 
   contact_links:
     - icon: envelope
       icon_pack: fas
       name: Email
-      link: 'mailto:jbaecher@ufl.edu'
+      link: 'mailto:jbaecher@gmail.com'
     - icon: twitter
       icon_pack: fab
       name: Twitter

@@ -42,9 +42,10 @@ permalinks:
 outputs:
   home: ['HTML', 'RSS', 'headers', 'redirects']
   section: ['HTML', 'RSS']
-  
+ 
+# Page limits 
 params:
-  pagination.pagerSize: 10
+  'pagination.pagerSize': 10
 
 # Media types
 mediaTypes:

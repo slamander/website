@@ -16,8 +16,9 @@ module:
     - path: github.com/HugoBlox/hugo-blox-builder/modules/blox-tailwind
 
 # Page settings
-paginate: 10
-summaryLength: 30
+params:
+  'pagination.pagerSize': 10
+  
 enableEmoji: true
 enableGitInfo: false
 footnoteReturnLinkContents: '<sup>^</sup>'
