@@ -12,8 +12,11 @@ removePathAccents: true
 # Hugo Modules
 module:
   imports:
-    - path: https://github.com/HugoBlox/hugo-blox-builder/tree/main/modules/blox-plugin-netlify
-    - path: https://github.com/HugoBlox/hugo-blox-builder/tree/main/modules/blox-tailwind
+    - path: github.com/HugoBlox/hugo-blox-builder/tree/main/modules/blox-plugin-netlify
+    - path: github.com/HugoBlox/hugo-blox-builder/tree/main/modules/blox-tailwind
+
+build:
+  writeStats: true
 
 # Page settings
 paginate: 10
