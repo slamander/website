@@ -1,6 +1,5 @@
 
 ---
-type: "widget_page"
+type: "landing"
 headless: true  
-active: true
 ---
