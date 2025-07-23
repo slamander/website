@@ -1,24 +1,160 @@
-# Alex Baecher's research website Github repo
+# Hugo Academic to Hugo Blox Migration Guide
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/fe8a33d9-545e-4ffe-96c6-ba27329c3bfc/deploy-status)](https://app.netlify.com/sites/jbaecher/deploys)
+This README explains the migration from Hugo Academic theme to Hugo Blox (formerly Wowchemy) using Hugo Modules instead of Git submodules.
 
-### Github repo for my [personal research website](alexbaecher.com)
+## What Changed
 
-<img src="static/media/repo_image.jpg" width="500px">
+### 1. Theme Evolution
+- **Hugo Academic** → **Wowchemy** (Oct 2020) → **Hugo Blox** (2023)
+- The theme is now distributed as Hugo Modules instead of a Git submodule
+- Configuration has moved from TOML to YAML format
+- Many widgets and shortcodes have been updated
 
-## Welcome
+### 2. Technical Changes
+- **Git Submodules** → **Hugo Modules** (requires Go)
+- **TOML config** → **YAML config**
+- **Hugo 0.74.3** → **Hugo 0.124.1+**
+- **No Go requirement** → **Go 1.21+ required**
 
-Hi everyone, 
+## Files to Update/Replace
 
-My name is Alex Baecher, I'm a phd student in the School of Natural Resources and Environment at the University of Florida. I belong to the [Scheffers lab](https://www.schefferslab.com/), which is housed in the Department of Wildlife Ecology and Conservation. Please see our [lab github](https://github.com/schefferslab) for some collaborative projects, or the webpages/RG/scholar pages of my advisor, [Brett Scheffers](https://scholar.google.com/citations?user=4HfsgFUAAAAJ&hl=en) and lab mates: [Dave Klinges, phd student](https://natureinparadise.github.io/), [Dr. Ed Basham, graduated](https://www.edmundbasham.com/), and [Dr. Luke Evans, post-doc](https://www.researchgate.net/profile/Luke-Evans-2) for more info on our research group!
+### New Files to Create
+1. **`go.mod`** - Defines Hugo modules (replaces git submodule)
+2. **`config/_default/hugo.yaml`** - Main Hugo configuration (replaces `config.toml`)
+3. **`config/_default/params.yaml`** - Site parameters (replaces `params.toml`)
+4. **`config/_default/menus.yaml`** - Navigation menus (replaces `menus.toml`)
 
-My Github account, [`slamander`](github.com/slamander) (a joke on how many times I've misspelled "Salamander"), is a home to some--mostly unfinished--projects, with varying degrees of functionality and reproducibility. This repo is for my personal research website: [www.alexbaecher.com](www.alexbaecher.com). You may also see my [Research Gate](https://www.researchgate.net/profile/Joseph-Baecher), [Google Scholar](https://www.linkedin.com/in/alex-baecher-5972a43b/), and [LinkedIn](https://www.linkedin.com/in/alex-baecher-5972a43b/); and if you have social media, find me on [facebook](https://www.facebook.com/baechermander), [instagram](https://www.instagram.com/j_baecher/), and [twitter](https://twitter.com/AlexBaecher). 
+### Files to Remove
+1. **`.gitmodules`** - No longer needed with Hugo modules
+2. **`themes/` directory** - Theme files are now handled by Hugo modules
+3. **`config/_default/config.toml`** - Replaced by `hugo.yaml`
+4. **`config/_default/params.toml`** - Replaced by `params.yaml`
+5. **`config/_default/menus.toml`** - Replaced by `menus.yaml`
+6. **`config/_default/languages.toml`** - Can be removed if only using English
 
-### Research interests
-I am an ecologist, with training in herpetology and landscape ecology, and I have an interest in research at the interface between conservation, ecology theory, and mathematical modeling. My research is aimed at developing cutting-edge quantitative solutions to model complex data about the ecology of reptiles and amphibians. I primarily work with invasive species and species of conservation concern to determine how landscape attributes affect the dynamics and connectivity of populations, while providing management-relevant reccomendations to effectively manage species. 
+### Files to Update
+1. **`netlify.toml`** - Updated Hugo/Go versions and build settings
+2. **`README.md`** - Update links and documentation
 
-Hopefully you'll find some of the items on my github and website interesting or useful. Please contact me either directly through github, or through my website. 
+## Migration Steps
 
-Cheers, 
+### Step 1: Clean Up Old Files
+```bash
+# Remove git submodule
+git submodule deinit themes/academic
+git rm themes/academic
+rm -rf .git/modules/themes/academic
+rm .gitmodules
 
--Alex. 
+# Remove old config files
+rm config/_default/config.toml
+rm config/_default/params.toml  
+rm config/_default/menus.toml
+rm config/_default/languages.toml  # if present
+```
+
+### Step 2: Add New Files
+Copy the new configuration files to your repository:
+- `go.mod` → root directory
+- `config/_default/hugo.yaml`
+- `config/_default/params.yaml`
+- `config/_default/menus.yaml`
+- Update `netlify.toml`
+
+### Step 3: Initialize Hugo Modules
+```bash
+# Initialize as Hugo module
+hugo mod init github.com/yourusername/your-repo-name
+
+# Download module dependencies
+hugo mod get -u
+```
+
+### Step 4: Test Locally
+```bash
+# Install Hugo extended version (0.124.1+)
+# Install Go (1.21+)
+
+# Test the site
+hugo server --buildDrafts
+```
+
+### Step 5: Deploy
+1. Update your repository with the new files
+2. Remove old files from git
+3. Push to GitHub
+4. Netlify should automatically detect the new configuration
+
+## Key Configuration Changes
+
+### Hugo Modules
+The new `go.mod` file replaces the git submodule approach:
+```go
+module github.com/slamander/alexbaecher-website
+
+go 1.21
+
+require (
+    github.com/HugoBlox/hugo-blox-builder/modules/blox-plugin-netlify v1.1.2-0.20231108143325-448ed0e3bd2b
+    github.com/HugoBlox/hugo-blox-builder/modules/blox-tailwind v0.2.1-0.20240602131307-11c94a319c59
+)
+```
+
+### YAML vs TOML
+Configuration is now in YAML format, which is more readable:
+```yaml
+# YAML (new)
+title: 'Baecher Research'
+baseURL: 'https://alexbaecher.com'
+```
+
+Instead of:
+```toml
+# TOML (old)  
+title = "Baecher Research"
+baseurl = "https://alexbaecher.com"
+```
+
+### Widget Updates
+Some widgets may need updating. Common changes:
+- `hero.md` → `slider.md` 
+- Some widget parameters have changed
+- Check Hugo Blox documentation for current widget syntax
+
+## Troubleshooting
+
+### Common Issues
+1. **"module not found"** → Run `hugo mod get -u`
+2. **"template not found"** → Widget syntax may have changed
+3. **CSS not loading** → Check if Tailwind module is included
+4. **Build fails** → Ensure Hugo Extended version is installed
+
+### Content Migration
+Your content files (publications, posts, etc.) should work with minimal changes, but you may need to update:
+- Front matter parameters that have changed
+- Widget configurations in `content/home/`
+- Shortcode syntax that has been updated
+
+### Getting Help
+- [Hugo Blox Documentation](https://docs.hugoblox.com/)
+- [Hugo Blox GitHub](https://github.com/HugoBlox/hugo-blox-builder)
+- [Hugo Modules Documentation](https://gohugo.io/hugo-modules/)
+
+## Next Steps After Migration
+
+1. **Review widgets** - Check `content/home/` files for any deprecated parameters
+2. **Update content** - Review publications, posts, and projects for any formatting issues
+3. **Test features** - Verify search, comments, and other interactive features work
+4. **Customize theme** - Use the new Hugo Blox theming system if needed
+5. **Performance** - The new system should be faster and more maintainable
+
+## Backup Recommendation
+
+Before making these changes, create a backup branch:
+```bash
+git checkout -b backup-before-migration
+git push origin backup-before-migration
+git checkout main
+```
+
+This allows you to revert if needed while working through the migration.
