@@ -1,3 +1,5 @@
+github.com/HugoBlox/hugo-blox-builder v4.8.0+incompatible h1:oMwV/skr0Abv0X6G2sEhqMJpEP08BZtHKcuJDdE6xJE=
+github.com/HugoBlox/hugo-blox-builder v4.8.0+incompatible/go.mod h1:3C9hKOYOtf0+znF3c7FXNSOgeORqT8bZyDDH1Y9CW1k=
 github.com/HugoBlox/hugo-blox-builder/modules/blox-analytics v0.1.3 h1:RlzYOopMWua7wFWZr565QvvxkWaowal/aWsHlGMsSoY=
 github.com/HugoBlox/hugo-blox-builder/modules/blox-analytics v0.1.3/go.mod h1:0YQtVvRLCzZOpPmbVNk7WDx8t19/QfRTFO+pwyqQNk8=
 github.com/HugoBlox/hugo-blox-builder/modules/blox-plugin-netlify v1.1.1 h1:qlDCZWq7OhuwLr7/rDPXe8iGxam2t1kgLabZ9EP0VqM=
