@@ -1,0 +1,2789 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts | Baecher Research</title>
+    <link>http://localhost:1313/post/</link>
+      <atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
+    <description>Posts</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><copyright>© 2025 Alex Baecher</copyright><lastBuildDate>Fri, 22 Oct 2021 00:40:04 -0700</lastBuildDate>
+    <image>
+      <url>http://localhost:1313/media/logo_hu2039277577754200582.png</url>
+      <title>Posts</title>
+      <link>http://localhost:1313/post/</link>
+    </image>
+    
+    <item>
+      <title>Machine Learning the &#39;Tidy&#39; Way</title>
+      <link>http://localhost:1313/post/ml-tidymodels/</link>
+      <pubDate>Fri, 22 Oct 2021 00:40:04 -0700</pubDate>
+      <guid>http://localhost:1313/post/ml-tidymodels/</guid>
+      <description>&lt;h2 id=&#34;introduction-to-machine-learning-with-tidymodels&#34;&gt;Introduction to machine learning with &lt;code&gt;tidymodels&lt;/code&gt;&lt;/h2&gt;
+&lt;h2 id=&#34;tidymodels-provides-a-clean-organized-and--most-importantly--consistent-programming-syntax-for-data-pre-processing-model-specification-model-fitting-model-evaluation-and-prediction&#34;&gt;&lt;code&gt;Tidymodels&lt;/code&gt; provides a clean, organized, and&amp;ndash;most importantly&amp;ndash;consistent programming syntax for data pre-processing, model specification, model fitting, model evaluation, and prediction.&lt;/h2&gt;
+&lt;h1 id=&#34;anatomy-of-tidymodels&#34;&gt;Anatomy of &lt;code&gt;tidymodels&lt;/code&gt;&lt;/h1&gt;
+&lt;h2 id=&#34;a-meta-package-that-installs-and-load-the-core-packages-listed-below-that-you-need-for-modeling-and-machine-learning&#34;&gt;a meta-package that installs and load the core packages listed below that you need for modeling and machine learning&lt;/h2&gt;
+&lt;h2 id=&#34;rsamples-provides-infrastructure-for-efficient-data-splitting-and-resampling&#34;&gt;&lt;code&gt;rsamples&lt;/code&gt;: provides infrastructure for efficient data splitting and resampling&lt;/h2&gt;
+&lt;h2 id=&#34;parsnip-a-tidy-unified-interface-to-models-that-can-be-used-to-try-a-range-of-models-without-getting-bogged-down-in-the-syntactical-minutiae-of-the-underlying-packages&#34;&gt;&lt;code&gt;parsnip&lt;/code&gt;: a tidy, unified interface to models that can be used to try a range of models without getting bogged down in the syntactical minutiae of the underlying packages&lt;/h2&gt;
+&lt;h2 id=&#34;recipes-a-tidy-interface-to-data-pre-processing-tools-for-feature-engineering&#34;&gt;&lt;code&gt;recipes&lt;/code&gt;: a tidy interface to data pre-processing tools for feature engineering&lt;/h2&gt;
+&lt;h2 id=&#34;workflows-workflows-bundle-your-pre-processing-modeling-and-post-processing-together&#34;&gt;&lt;code&gt;workflows&lt;/code&gt;: workflows bundle your pre-processing, modeling, and post-processing together&lt;/h2&gt;
+&lt;h2 id=&#34;tune-helps-you-optimize-the-hyperparameters-of-your-model-and-pre-processing-steps&#34;&gt;&lt;code&gt;tune&lt;/code&gt;: helps you optimize the hyperparameters of your model and pre-processing steps&lt;/h2&gt;
+&lt;h2 id=&#34;yardstick-measures-the-effectiveness-of-models-using-performance-metrics&#34;&gt;&lt;code&gt;yardstick&lt;/code&gt;: measures the effectiveness of models using performance metrics&lt;/h2&gt;
+&lt;h2 id=&#34;dials-contains-tools-to-create-and-manage-values-of-tuning-parameters-and-is-designed-to-integrate-well-with-the-parsnip-package&#34;&gt;&lt;code&gt;dials&lt;/code&gt;: contains tools to create and manage values of tuning parameters and is designed to integrate well with the parsnip package&lt;/h2&gt;
+&lt;h2 id=&#34;broom-summarizes-key-information-about-models-in-tidy-tibbles&#34;&gt;&lt;code&gt;broom&lt;/code&gt;: summarizes key information about models in tidy tibble()s&lt;/h2&gt;
+&lt;p&gt;First, lets load the &lt;code&gt;tidymodels&lt;/code&gt; meta-package:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;library(tidymodels)
+library(tidyverse)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;package-tutorials&#34;&gt;Package tutorials:&lt;/h1&gt;
+&lt;h2 id=&#34;data&#34;&gt;Data&lt;/h2&gt;
+&lt;p&gt;I&amp;rsquo;ll demonstrate it&amp;rsquo;s features using an existing data set from Bruno Oliveria, &lt;code&gt;Amphibio&lt;/code&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Link to publication: &lt;a href=&#34;https://www.nature.com/articles/sdata2017123&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.nature.com/articles/sdata2017123&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Link to data: &lt;a href=&#34;https://ndownloader.figstatic.com/files/8828578&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://ndownloader.figstatic.com/files/8828578&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;amphibio-data&#34;&gt;Amphibio data&lt;/h3&gt;
+&lt;p&gt;Download data:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# install.packages(&amp;quot;downloader&amp;quot;)
+# library(downloader)
+# 
+# url &amp;lt;- &amp;quot;https://ndownloader.figstatic.com/files/8828578&amp;quot;
+# download(url, dest=&amp;quot;dial_broom/amphibio.zip&amp;quot;, mode=&amp;quot;wb&amp;quot;) 
+# unzip(&amp;quot;dial_broom/amphibio.zip&amp;quot;, exdir = &amp;quot;./dial_broom&amp;quot;)
+
+library(readr)
+
+amphibio_raw &amp;lt;- read_csv(&amp;quot;AmphiBIO_v1.csv&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The data consist of natural history information of amphibians, including
+habitat types, diet, size, ect.&lt;/p&gt;
+&lt;p&gt;Here&amp;rsquo;s the breakdown of taxonomic spread in the data:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Order: N = 3&lt;/li&gt;
+&lt;li&gt;Family: N = 61&lt;/li&gt;
+&lt;li&gt;Genera: N = 531&lt;/li&gt;
+&lt;li&gt;Species: N = 6776&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;There are also a lot of missing data, and what data do exist are wildly
+different scales. We&amp;rsquo;ll clean this up:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# Check how many NA&#39;s for each row
+amphibio &amp;lt;- amphibio_raw %&amp;gt;%
+  select(&amp;quot;Order&amp;quot;
+         ,&amp;quot;Body_mass_g&amp;quot;
+         ,&amp;quot;Body_size_mm&amp;quot;
+         ,&amp;quot;Litter_size_min_n&amp;quot;
+         ,&amp;quot;Litter_size_max_n&amp;quot;
+         ,&amp;quot;Reproductive_output_y&amp;quot;
+         ) %&amp;gt;%
+  na.omit %&amp;gt;%
+  mutate(Body_mass_g = log(Body_mass_g),
+         Body_size_mm = log(Body_size_mm),
+         Litter_size_min_n = log(Litter_size_min_n),
+         Litter_size_max_n = log(Litter_size_max_n),
+         Reproductive_output_y = log(Reproductive_output_y)) %&amp;gt;%
+  filter(!Order == &amp;quot;Gymnophiona&amp;quot;)
+  
+amphibio %&amp;gt;%
+  group_by(Order) %&amp;gt;%
+  summarize(n = n())
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now let&amp;rsquo;s have a peak at the data:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;  amphibio %&amp;gt;% 
+  pivot_longer(!Order, names_to = &amp;quot;Metric&amp;quot;, values_to = &amp;quot;Value&amp;quot;) %&amp;gt;%
+  ggplot(aes(Order, Value, col = Order)) + 
+    geom_boxplot() + 
+    facet_wrap(~Metric)
+&lt;/code&gt;&lt;/pre&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34; &#34; srcset=&#34;
+               /media/posts/script_files/figure-markdown_strict/unnamed-chunk-4-1_hu414051968656277047.webp 400w,
+               /media/posts/script_files/figure-markdown_strict/unnamed-chunk-4-1_hu16502879561273140279.webp 760w,
+               /media/posts/script_files/figure-markdown_strict/unnamed-chunk-4-1_hu16367533267459427282.webp 1200w&#34;
+               src=&#34;http://localhost:1313/media/posts/script_files/figure-markdown_strict/unnamed-chunk-4-1_hu414051968656277047.webp&#34;
+               width=&#34;672&#34;
+               height=&#34;480&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      
+    &lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;There are some trends in the data:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;caudates are longer&lt;/li&gt;
+&lt;li&gt;anura have larger litter sizes&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Given the data, one possible modeling application could be to use data
+to predict order using two models: knn and boosted regression trees.&lt;/p&gt;
+&lt;p&gt;To start the modeling process, we&amp;rsquo;ll use &lt;code&gt;rsamples&lt;/code&gt; to split the data
+into training and testing sets.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;set.seed(42)
+
+tidy_split &amp;lt;- initial_split(amphibio, prop = 0.95)
+tidy_train &amp;lt;- training(tidy_split)
+tidy_test &amp;lt;- testing(tidy_split)
+tidy_kfolds &amp;lt;- vfold_cv(tidy_train)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;We can use &lt;code&gt;recipes&lt;/code&gt; to preprocess the data:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# Recipes package 
+## For preprocessing, feature engineering, and feature elimination 
+tidy_rec &amp;lt;- recipe(Order ~ ., data = tidy_train) %&amp;gt;% 
+  step_dummy(all_nominal(), -all_outcomes()) %&amp;gt;% 
+  step_normalize(all_predictors()) %&amp;gt;%
+  prep()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now that we&amp;rsquo;ve created a recipe to process the data for modeling, we can
+use &lt;code&gt;parsnip&lt;/code&gt; to model the data:&lt;/p&gt;
+&lt;p&gt;First, let&amp;rsquo;s have a look at the model’s description&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;library(&amp;quot;webshot&amp;quot;)
+# ?boost_tree
+&lt;/code&gt;&lt;/pre&gt;
+&lt;iframe src=&#34;https://parsnip.tidymodels.org/reference/boost_tree.html&#34; width=&#34;100%&#34; height=&#34;400px&#34;&gt;
+&lt;/iframe&gt;
+&lt;h2 id=&#34;boost_tree&#34;&gt;&lt;code&gt;boost_tree()&lt;/code&gt;&lt;/h2&gt;
+&lt;h3 id=&#34;description&#34;&gt;Description&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;boost_tree()&lt;/code&gt; defines a model that creates a series of decision trees
+forming an ensemble. Each tree depends on the results of previous trees.
+All trees in the ensemble are combined to produce a final prediction.&lt;/p&gt;
+&lt;p&gt;There are different ways to fit this model. See the engine-specific
+pages for more details:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;xgboost (default)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;C5.0&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;spark&lt;/p&gt;
+&lt;h1 id=&#34;nearest_neighbors&#34;&gt;?nearest_neighbors&lt;/h1&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;iframe src=&#34;https://parsnip.tidymodels.org/reference/nearest_neighbor.html&#34; width=&#34;100%&#34; height=&#34;400px&#34;&gt;
+&lt;/iframe&gt;
+&lt;h2 id=&#34;nearest_neighbor&#34;&gt;&lt;code&gt;nearest_neighbor()&lt;/code&gt;:&lt;/h2&gt;
+&lt;h3 id=&#34;defines-a-model-that-uses-the-k-most-similar-data-points-from-the-training-set-to-predict-new-samples&#34;&gt;defines a model that uses the K most similar data points from the training set to predict new samples.&lt;/h3&gt;
+&lt;h3 id=&#34;there-are-different-ways-to-fit-this-model-see-the-engine-specific-pages-for-more-details&#34;&gt;There are different ways to fit this model. See the engine-specific pages for more details:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;knn (default)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Now, let&amp;rsquo;s fit the models:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# Parsnip package 
+## Standardized api for creating models 
+tidy_boosted_model &amp;lt;- boost_tree(trees = tune(),
+                                min_n = tune(),
+                                learn_rate = tune()) %&amp;gt;% 
+  set_mode(&amp;quot;classification&amp;quot;) %&amp;gt;% 
+  set_engine(&amp;quot;xgboost&amp;quot;)
+
+tidy_knn_model &amp;lt;- nearest_neighbor(neighbors = tune()) %&amp;gt;% 
+  set_mode(&amp;quot;classification&amp;quot;) %&amp;gt;% 
+  set_engine(&amp;quot;kknn&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Our basic model recipe is complete, but now we want to use &lt;code&gt;dials&lt;/code&gt; to
+tune parameters.&lt;/p&gt;
+&lt;h1 id=&#34;dials&#34;&gt;&lt;code&gt;dials&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;For boosted regression trees, there are 3 basic parameters:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;parameters(tidy_boosted_model)
+
+## Collection of 3 parameters for tuning
+## 
+##  identifier       type    object
+##       trees      trees nparam[+]
+##       min_n      min_n nparam[+]
+##  learn_rate learn_rate nparam[+]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;trees&lt;/code&gt;: An integer for the number of trees contained in the ensemble.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;min_n&lt;/code&gt;: An integer for the minimum number of data points in a node that is required for the node to be split further.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;learn_rate&lt;/code&gt;: A number for the rate at which the boosting algorithm adapts from iteration-to-iteration (specific engines only).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Knn has a single parameter to tune: the neighbors&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;parameters(tidy_knn_model)
+
+## Collection of 1 parameters for tuning
+## 
+##  identifier      type    object
+##   neighbors neighbors nparam[+]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;neighbors&lt;/code&gt;: A single integer for the number of neighbors to consider
+(often called k). For kknn, a value of 5 is used if neighbors is not
+specified.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;So, we can use &lt;code&gt;dials&lt;/code&gt; to set the possible parameter values, which can
+then be tuned using &lt;code&gt;tune&lt;/code&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# Dials creates the parameter grids 
+# Tune applies the parameter grid to the models 
+# Dials pacakge 
+boosted_params &amp;lt;- 5
+knn_params &amp;lt;- 10
+
+?grid_regular
+
+## starting httpd help server ... done
+
+boosted_grid &amp;lt;- grid_regular(parameters(tidy_boosted_model), levels = boosted_params)
+boosted_grid
+
+## # A tibble: 125 x 3
+##    trees min_n   learn_rate
+##    &amp;lt;int&amp;gt; &amp;lt;int&amp;gt;        &amp;lt;dbl&amp;gt;
+##  1     1     2 0.0000000001
+##  2   500     2 0.0000000001
+##  3  1000     2 0.0000000001
+##  4  1500     2 0.0000000001
+##  5  2000     2 0.0000000001
+##  6     1    11 0.0000000001
+##  7   500    11 0.0000000001
+##  8  1000    11 0.0000000001
+##  9  1500    11 0.0000000001
+## 10  2000    11 0.0000000001
+## # ... with 115 more rows
+
+knn_grid &amp;lt;- grid_regular(parameters(tidy_knn_model), levels = knn_params)
+knn_grid
+
+## # A tibble: 10 x 1
+##    neighbors
+##        &amp;lt;int&amp;gt;
+##  1         1
+##  2         2
+##  3         4
+##  4         5
+##  5         7
+##  6         8
+##  7        10
+##  8        11
+##  9        13
+## 10        15
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Implement tuning grid using &lt;code&gt;tune&lt;/code&gt;:&lt;/p&gt;
+&lt;h1 id=&#34;tune&#34;&gt;&lt;code&gt;tune&lt;/code&gt;&lt;/h1&gt;
+&lt;pre&gt;&lt;code&gt;# install.packages(c(&amp;quot;xgboost&amp;quot;, &amp;quot;kknn&amp;quot;))
+library(xgboost)
+library(kknn)
+
+# Tune pacakge 
+# system.time(
+#   boosted_tune &amp;lt;- tune_grid(tidy_boosted_model,
+#                             tidy_rec,
+#                             resamples = tidy_kfolds,
+#                             grid = boosted_grid)
+# )
+# write_rds(boosted_tune, &amp;quot;boosted_tune.rds&amp;quot;)
+boosted_tune &amp;lt;- read_rds(&amp;quot;boosted_tune.rds&amp;quot;)
+
+# system.time(
+#   knn_tune &amp;lt;- tune_grid(tidy_knn_model,
+#                         tidy_rec,
+#                         resamples = tidy_kfolds,
+#                         grid = knn_grid)
+# ) 
+# write_rds(knn_tune, &amp;quot;knn_tune.rds&amp;quot;)
+knn_tune &amp;lt;- read_rds(&amp;quot;knn_tune.rds&amp;quot;)
+
+#Use Tune package to extract best parameters using ROC_AUC handtill
+boosted_param &amp;lt;- boosted_tune %&amp;gt;% select_best(&amp;quot;roc_auc&amp;quot;)
+knn_param &amp;lt;- knn_tune %&amp;gt;% select_best(&amp;quot;roc_auc&amp;quot;)
+#Apply parameters to the models
+tidy_boosted_model_final &amp;lt;- finalize_model(tidy_boosted_model, boosted_param)
+tidy_knn_model_final &amp;lt;- finalize_model(tidy_knn_model, knn_param)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now, well try different options from &lt;code&gt;dials&lt;/code&gt; for parameter tuning, using
+two additional methods for grid specification:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;random grid with &lt;code&gt;dials::grid_random&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;maximum entropy grid with &lt;code&gt;dials::grid_max_entropy&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;grid_random&#34;&gt;&lt;code&gt;grid_random&lt;/code&gt;&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;boosted_grid_rand &amp;lt;- grid_random(parameters(tidy_boosted_model), size = boosted_params)
+boosted_grid_rand
+
+## # A tibble: 5 x 3
+##   trees min_n learn_rate
+##   &amp;lt;int&amp;gt; &amp;lt;int&amp;gt;      &amp;lt;dbl&amp;gt;
+## 1   190    21   2.32e- 5
+## 2  1816    12   3.60e- 8
+## 3   293    28   3.14e-10
+## 4   314     8   2.52e- 7
+## 5  1363     5   5.92e- 6
+
+knn_grid_rand &amp;lt;- grid_random(parameters(tidy_knn_model), size = knn_params)
+knn_grid_rand
+
+## # A tibble: 7 x 1
+##   neighbors
+##       &amp;lt;int&amp;gt;
+## 1         1
+## 2        10
+## 3         5
+## 4         3
+## 5        11
+## 6         8
+## 7         2
+
+# system.time(
+#   boosted_tune_rand &amp;lt;- tune_grid(tidy_boosted_model,
+#                                  tidy_rec,
+#                                  resamples = tidy_kfolds,
+#                                  grid = boosted_grid_rand)
+# )
+# write_rds(boosted_tune_rand, &amp;quot;boosted_tune_rand.rds&amp;quot;)
+boosted_tune_rand &amp;lt;- read_rds(&amp;quot;boosted_tune_rand.rds&amp;quot;)
+
+# system.time(
+#   knn_tune_rand &amp;lt;- tune_grid(tidy_knn_model,
+#                              tidy_rec,
+#                              resamples = tidy_kfolds,
+#                              grid = knn_grid_rand)
+# )
+# write_rds(knn_tune_rand, &amp;quot;knn_tune_rand.rds&amp;quot;)
+knn_tune_rand &amp;lt;- read_rds(&amp;quot;knn_tune_rand.rds&amp;quot;)
+
+#Use Tune package to extract best parameters using ROC_AUC handtill
+boosted_param_rand &amp;lt;- boosted_tune_rand %&amp;gt;% select_best(&amp;quot;roc_auc&amp;quot;)
+knn_param_rand &amp;lt;- knn_tune_rand %&amp;gt;% select_best(&amp;quot;roc_auc&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;grid_max_entropy&#34;&gt;&lt;code&gt;grid_max_entropy&lt;/code&gt;&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;boosted_grid_maxent &amp;lt;- grid_max_entropy(parameters(tidy_boosted_model), size = boosted_params)
+boosted_grid_maxent
+
+## # A tibble: 5 x 3
+##   trees min_n learn_rate
+##   &amp;lt;int&amp;gt; &amp;lt;int&amp;gt;      &amp;lt;dbl&amp;gt;
+## 1   433    25   4.27e-10
+## 2  1671    13   3.28e-10
+## 3  1520     3   3.21e- 6
+## 4   672     3   3.06e-10
+## 5  1371    22   2.32e- 5
+
+knn_grid_maxent &amp;lt;- grid_max_entropy(parameters(tidy_knn_model), size = knn_params)
+knn_grid_maxent
+
+## # A tibble: 10 x 1
+##    neighbors
+##        &amp;lt;int&amp;gt;
+##  1         3
+##  2        10
+##  3         1
+##  4        15
+##  5        13
+##  6         4
+##  7         6
+##  8         8
+##  9         9
+## 10        11
+
+# system.time(
+#   boosted_tune_maxent &amp;lt;- tune_grid(tidy_boosted_model,
+#                                    tidy_rec,
+#                                    resamples = tidy_kfolds,
+#                                    grid = boosted_grid_maxent)
+# )
+# write_rds(boosted_tune_maxent, &amp;quot;boosted_tune_maxent.rds&amp;quot;)
+boosted_tune_maxent &amp;lt;- read_rds(&amp;quot;boosted_tune_maxent.rds&amp;quot;)
+
+# system.time(
+#   knn_tune_maxent &amp;lt;- tune_grid(tidy_knn_model,
+#                                tidy_rec,
+#                                resamples = tidy_kfolds,
+#                                grid = knn_grid_maxent)
+# )
+# write_rds(knn_tune_maxent, &amp;quot;knn_tune_maxent.rds&amp;quot;)
+knn_tune_maxent &amp;lt;- read_rds(&amp;quot;knn_tune.rds&amp;quot;)
+
+#Use Tune package to extract best parameters using ROC_AUC handtill
+boosted_param_maxent &amp;lt;- boosted_tune_maxent %&amp;gt;% select_best(&amp;quot;roc_auc&amp;quot;)
+knn_param_maxent &amp;lt;- knn_tune_maxent %&amp;gt;% select_best(&amp;quot;roc_auc&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;workflows&#34;&gt;&lt;code&gt;workflows&lt;/code&gt;&lt;/h1&gt;
+&lt;h3 id=&#34;for-combining-model-parameters-and-preprocessing&#34;&gt;For combining model, parameters, and preprocessing&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;boosted_wf &amp;lt;- workflow() %&amp;gt;% 
+  add_model(tidy_boosted_model_final) %&amp;gt;% 
+  add_recipe(tidy_rec)
+
+knn_wf &amp;lt;- workflow() %&amp;gt;% 
+  add_model(tidy_knn_model_final) %&amp;gt;% 
+  add_recipe(tidy_rec)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;yardstick&#34;&gt;&lt;code&gt;yardstick&lt;/code&gt;&lt;/h1&gt;
+&lt;h3 id=&#34;for-extracting-metrics-from-the-model&#34;&gt;For extracting metrics from the model&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;boosted_res &amp;lt;- last_fit(boosted_wf, tidy_split)
+knn_res &amp;lt;- last_fit(knn_wf, tidy_split)
+
+mods &amp;lt;- bind_rows(
+  boosted_res %&amp;gt;% mutate(model = &amp;quot;xgb&amp;quot;),
+  knn_res %&amp;gt;% mutate(model = &amp;quot;knn&amp;quot;)) %&amp;gt;% 
+  unnest(.metrics)
+
+ggplot(bind_rows(mods$.predictions), aes(Order, .pred_Anura)) + 
+  geom_boxplot()
+&lt;/code&gt;&lt;/pre&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34; &#34; srcset=&#34;
+               /media/posts/script_files/figure-markdown_strict/unnamed-chunk-17-1_hu4668447301989144043.webp 400w,
+               /media/posts/script_files/figure-markdown_strict/unnamed-chunk-17-1_hu12140637065517628874.webp 760w,
+               /media/posts/script_files/figure-markdown_strict/unnamed-chunk-17-1_hu14879292936314113267.webp 1200w&#34;
+               src=&#34;http://localhost:1313/media/posts/script_files/figure-markdown_strict/unnamed-chunk-17-1_hu4668447301989144043.webp&#34;
+               width=&#34;672&#34;
+               height=&#34;480&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      
+    &lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;pre&gt;&lt;code&gt;ggplot(bind_rows(mods$.predictions), aes(Order, .pred_Caudata)) + 
+  geom_boxplot()
+&lt;/code&gt;&lt;/pre&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34; &#34; srcset=&#34;
+               /media/posts/script_files/figure-markdown_strict/unnamed-chunk-17-2_hu14706677157536861233.webp 400w,
+               /media/posts/script_files/figure-markdown_strict/unnamed-chunk-17-2_hu17734957877442164994.webp 760w,
+               /media/posts/script_files/figure-markdown_strict/unnamed-chunk-17-2_hu3054777465481101903.webp 1200w&#34;
+               src=&#34;http://localhost:1313/media/posts/script_files/figure-markdown_strict/unnamed-chunk-17-2_hu14706677157536861233.webp&#34;
+               width=&#34;672&#34;
+               height=&#34;480&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      
+    &lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;pre&gt;&lt;code&gt;ggplot(mods, aes(x = model, y = .estimate, col = model)) + 
+  geom_point() + 
+  facet_wrap(~.metric)
+&lt;/code&gt;&lt;/pre&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34; &#34; srcset=&#34;
+               /media/posts/script_files/figure-markdown_strict/unnamed-chunk-17-3_hu7929835404271128727.webp 400w,
+               /media/posts/script_files/figure-markdown_strict/unnamed-chunk-17-3_hu5960965889861658502.webp 760w,
+               /media/posts/script_files/figure-markdown_strict/unnamed-chunk-17-3_hu8034350242501598142.webp 1200w&#34;
+               src=&#34;http://localhost:1313/media/posts/script_files/figure-markdown_strict/unnamed-chunk-17-3_hu7929835404271128727.webp&#34;
+               width=&#34;672&#34;
+               height=&#34;480&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      
+    &lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;Confusion matrix to visualize model predictions against truth&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;boosted_res %&amp;gt;% unnest(.predictions) %&amp;gt;% 
+  conf_mat(truth = Order, estimate = .pred_class) %&amp;gt;%
+  autoplot()
+&lt;/code&gt;&lt;/pre&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34; &#34; srcset=&#34;
+               /media/posts/script_files/figure-markdown_strict/unnamed-chunk-18-1_hu925915619049730072.webp 400w,
+               /media/posts/script_files/figure-markdown_strict/unnamed-chunk-18-1_hu1067537527602828794.webp 760w,
+               /media/posts/script_files/figure-markdown_strict/unnamed-chunk-18-1_hu17114581279966710681.webp 1200w&#34;
+               src=&#34;http://localhost:1313/media/posts/script_files/figure-markdown_strict/unnamed-chunk-18-1_hu925915619049730072.webp&#34;
+               width=&#34;672&#34;
+               height=&#34;480&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      
+    &lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;h3 id=&#34;fit-the-entire-data-set-using-the-final-wf&#34;&gt;Fit the entire data set using the final wf&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;final_boosted_model &amp;lt;- fit(boosted_wf, amphibio)
+
+## [15:25:37] WARNING: amalgamation/../src/learner.cc:1095: Starting in XGBoost 1.3.0, the default evaluation metric used with the objective &#39;binary:logistic&#39; was changed from &#39;error&#39; to &#39;logloss&#39;. Explicitly set eval_metric if you&#39;d like to restore the old behavior.
+
+final_knn_model &amp;lt;- fit(knn_wf, amphibio)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;broom&#34;&gt;&lt;code&gt;broom&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;Now we can use &lt;code&gt;broom&lt;/code&gt; to tidy the results from these models, and
+provide an intuitive view of their meaning!&lt;/p&gt;
+&lt;h2 id=&#34;augment&#34;&gt;&lt;code&gt;augment()&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;First, we’ll use &lt;code&gt;augment&lt;/code&gt; to obtain predictions, residuals, and other
+items from the model, which auto-binds them to the original dataset.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;boosted_aug &amp;lt;- augment(final_boosted_model, new_data = amphibio[,-1])
+knn_aug &amp;lt;- augment(final_knn_model, new_data = amphibio[,-1])
+
+boosted_aug_long &amp;lt;- boosted_aug %&amp;gt;%
+  pivot_longer(-c(.pred_class, .pred_Anura, .pred_Caudata), names_to = &amp;quot;predictor&amp;quot;, values_to = &amp;quot;value&amp;quot;) 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;now-we-can-evaluate-the-models-using-yardstick&#34;&gt;Now we can evaluate the models using &lt;code&gt;yardstick&lt;/code&gt;!&lt;/h2&gt;
+&lt;h1 id=&#34;yardstick-1&#34;&gt;&lt;code&gt;yardstick&lt;/code&gt;&lt;/h1&gt;
+&lt;pre&gt;&lt;code&gt;final_boosted_model %&amp;gt;%
+  predict(bake(tidy_rec, new_data = tidy_test), type = &amp;quot;prob&amp;quot;) %&amp;gt;%
+  bind_cols(tidy_test) %&amp;gt;%
+  roc_auc(factor(Order), .pred_Anura)
+
+## # A tibble: 1 x 3
+##   .metric .estimator .estimate
+##   &amp;lt;chr&amp;gt;   &amp;lt;chr&amp;gt;          &amp;lt;dbl&amp;gt;
+## 1 roc_auc binary         0.759
+
+final_boosted_model %&amp;gt;%
+  predict(bake(tidy_rec, new_data = tidy_test), type = &amp;quot;prob&amp;quot;) %&amp;gt;%
+  bind_cols(tidy_test) %&amp;gt;%
+  roc_curve(factor(Order), .pred_Anura) %&amp;gt;%
+  autoplot() 
+&lt;/code&gt;&lt;/pre&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34; &#34; srcset=&#34;
+               /media/posts/script_files/figure-markdown_strict/unnamed-chunk-21-1_hu6876896358977779037.webp 400w,
+               /media/posts/script_files/figure-markdown_strict/unnamed-chunk-21-1_hu15580196728854118655.webp 760w,
+               /media/posts/script_files/figure-markdown_strict/unnamed-chunk-21-1_hu3457540179927346600.webp 1200w&#34;
+               src=&#34;http://localhost:1313/media/posts/script_files/figure-markdown_strict/unnamed-chunk-21-1_hu6876896358977779037.webp&#34;
+               width=&#34;672&#34;
+               height=&#34;480&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      
+    &lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;h2 id=&#34;evaluating-knn-model&#34;&gt;Evaluating knn model&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;final_knn_model %&amp;gt;%
+  predict(bake(tidy_rec, new_data = tidy_test), type = &amp;quot;prob&amp;quot;) %&amp;gt;%
+  bind_cols(tidy_test) %&amp;gt;%
+  roc_auc(factor(Order), .pred_Anura)
+
+## # A tibble: 1 x 3
+##   .metric .estimator .estimate
+##   &amp;lt;chr&amp;gt;   &amp;lt;chr&amp;gt;          &amp;lt;dbl&amp;gt;
+## 1 roc_auc binary           0.5
+
+final_knn_model %&amp;gt;%
+  predict(bake(tidy_rec, new_data = tidy_test), type = &amp;quot;prob&amp;quot;) %&amp;gt;%
+  bind_cols(tidy_test) %&amp;gt;%
+  roc_curve(factor(Order), .pred_Anura) %&amp;gt;%
+  autoplot()
+&lt;/code&gt;&lt;/pre&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34; &#34; srcset=&#34;
+               /media/posts/script_files/figure-markdown_strict/unnamed-chunk-22-1_hu15917107705313701047.webp 400w,
+               /media/posts/script_files/figure-markdown_strict/unnamed-chunk-22-1_hu18171846850144008820.webp 760w,
+               /media/posts/script_files/figure-markdown_strict/unnamed-chunk-22-1_hu11196280528281156913.webp 1200w&#34;
+               src=&#34;http://localhost:1313/media/posts/script_files/figure-markdown_strict/unnamed-chunk-22-1_hu15917107705313701047.webp&#34;
+               width=&#34;672&#34;
+               height=&#34;480&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      
+    &lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;pre&gt;&lt;code&gt;final_knn_model %&amp;gt;%
+  predict(bake(tidy_rec, new_data = tidy_test), type = &amp;quot;prob&amp;quot;) %&amp;gt;%
+  bind_cols(tidy_test) %&amp;gt;%
+  roc_auc(factor(Order), .pred_Anura)
+
+## # A tibble: 1 x 3
+##   .metric .estimator .estimate
+##   &amp;lt;chr&amp;gt;   &amp;lt;chr&amp;gt;          &amp;lt;dbl&amp;gt;
+## 1 roc_auc binary           0.5
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;visualizing-predictions&#34;&gt;Visualizing predictions:&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;library(viridis)
+
+## Loading required package: viridisLite
+
+## 
+## Attaching package: &#39;viridis&#39;
+
+## The following object is masked from &#39;package:scales&#39;:
+## 
+##     viridis_pal
+
+ggplot(boosted_aug_long, aes(x = value, y = .pred_Anura, col = .pred_class)) + 
+  geom_point() + 
+  facet_wrap(~predictor) + 
+  scale_color_viridis_d(&amp;quot;Truth&amp;quot;, option = &amp;quot;D&amp;quot;) +
+  theme_bw()
+&lt;/code&gt;&lt;/pre&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34; &#34; srcset=&#34;
+               /media/posts/script_files/figure-markdown_strict/unnamed-chunk-23-1_hu9070272248444432199.webp 400w,
+               /media/posts/script_files/figure-markdown_strict/unnamed-chunk-23-1_hu16889084873753849499.webp 760w,
+               /media/posts/script_files/figure-markdown_strict/unnamed-chunk-23-1_hu4124343322066363760.webp 1200w&#34;
+               src=&#34;http://localhost:1313/media/posts/script_files/figure-markdown_strict/unnamed-chunk-23-1_hu9070272248444432199.webp&#34;
+               width=&#34;672&#34;
+               height=&#34;480&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      
+    &lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;pre&gt;&lt;code&gt;ggplot(boosted_aug_long, aes(x = value, y = .pred_Caudata, col = .pred_class)) + 
+  geom_point() + 
+  facet_wrap(~predictor) + 
+  scale_color_viridis_d(&amp;quot;Truth&amp;quot;, option = &amp;quot;D&amp;quot;) +
+  theme_bw()
+&lt;/code&gt;&lt;/pre&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34; &#34; srcset=&#34;
+               /media/posts/script_files/figure-markdown_strict/unnamed-chunk-23-2_hu17258803858476358636.webp 400w,
+               /media/posts/script_files/figure-markdown_strict/unnamed-chunk-23-2_hu6041234132259651925.webp 760w,
+               /media/posts/script_files/figure-markdown_strict/unnamed-chunk-23-2_hu6316135883687380815.webp 1200w&#34;
+               src=&#34;http://localhost:1313/media/posts/script_files/figure-markdown_strict/unnamed-chunk-23-2_hu17258803858476358636.webp&#34;
+               width=&#34;672&#34;
+               height=&#34;480&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      
+    &lt;/figcaption&gt;&lt;/figure&gt;
+
+</description>
+    </item>
+    
+    <item>
+      <title>Linear regression with gradient descent</title>
+      <link>http://localhost:1313/post/gradient-descent/</link>
+      <pubDate>Wed, 22 Sep 2021 00:40:04 -0700</pubDate>
+      <guid>http://localhost:1313/post/gradient-descent/</guid>
+      <description>&lt;h2 id=&#34;introduction-linear-regression-with-gradient-descent&#34;&gt;Introduction linear regression with gradient descent&lt;/h2&gt;
+&lt;p&gt;This tutorial is a rough introduction into using gradient descent algorithms to estimate parameters (slope and intercept) for standard linear regressions, as an alternative to ordinary least squares (OLS) regression with a maximum likelihood estimator. To begin, I simulate data to perform a standard OLS regression with maximum likelihood using sums of squares. Once explained, I then demonstrate how to substitute gradient descent simply and interpret results.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;library(tidyverse)
+
+## -- Attaching packages --------------------------------------- tidyverse 1.3.1 --
+
+## v ggplot2 3.3.5     v purrr   0.3.4
+## v tibble  3.1.3     v dplyr   1.0.7
+## v tidyr   1.1.3     v stringr 1.4.0
+## v readr   2.0.1     v forcats 0.5.1
+
+## Warning: package &#39;readr&#39; was built under R version 4.1.1
+
+## -- Conflicts ------------------------------------------ tidyverse_conflicts() --
+## x dplyr::filter() masks stats::filter()
+## x dplyr::lag()    masks stats::lag()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;ordinary-least-square-regression&#34;&gt;Ordinary Least Square Regression&lt;/h1&gt;
+&lt;h2 id=&#34;simulate-data&#34;&gt;Simulate data&lt;/h2&gt;
+&lt;h3 id=&#34;generate-random-data-in-which-y-is-a-noisy-function-of-x&#34;&gt;Generate random data in which y is a noisy function of x&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;set.seed(123)
+
+x &amp;lt;- runif(1000, -5, 5)
+y &amp;lt;- x + rnorm(1000) + 3
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;fit-a-linear-model&#34;&gt;Fit a linear model&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;lm &amp;lt;- lm( y ~ x ) # Ordinary Least Squares regression with General Linear Model 
+mod &amp;lt;- print(lm)
+
+## 
+## Call:
+## lm(formula = y ~ x)
+## 
+## Coefficients:
+## (Intercept)            x  
+##      3.0118       0.9942
+
+mod
+
+## 
+## Call:
+## lm(formula = y ~ x)
+## 
+## Coefficients:
+## (Intercept)            x  
+##      3.0118       0.9942
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;plot-the-data-and-the-model&#34;&gt;Plot the data and the model&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;plot(x,y, col = &amp;quot;grey80&amp;quot;, main=&#39;Regression using lm()&#39;, xlim = c(-2, 5), ylim = c(0,10)); 
+text(0, 8, paste(&amp;quot;Intercept = &amp;quot;, round(mod$coefficients[1], 2), sep = &amp;quot;&amp;quot;));
+text(4, 2, paste(&amp;quot;Slope = &amp;quot;, round(mod$coefficients[2], 2), sep = &amp;quot;&amp;quot;));
+abline(v = 0, col = &amp;quot;grey80&amp;quot;); # line for y-intercept
+abline(h = mod$coefficients[1], col = &amp;quot;grey80&amp;quot;) # plot horizontal line at intercept value
+abline(a = mod$coefficients[1], b = mod$coefficients[2], col=&#39;blue&#39;, lwd=2) # use slope and intercept to plot best fit line
+&lt;/code&gt;&lt;/pre&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34; &#34; srcset=&#34;
+               /media/posts/lr_files/figure-markdown_strict/unnamed-chunk-4-1_hu9860427820259539071.webp 400w,
+               /media/posts/lr_files/figure-markdown_strict/unnamed-chunk-4-1_hu9486235095446895088.webp 760w,
+               /media/posts/lr_files/figure-markdown_strict/unnamed-chunk-4-1_hu8859505797292339637.webp 1200w&#34;
+               src=&#34;http://localhost:1313/media/posts/lr_files/figure-markdown_strict/unnamed-chunk-4-1_hu9860427820259539071.webp&#34;
+               width=&#34;672&#34;
+               height=&#34;480&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      
+    &lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;h3 id=&#34;calculate-intercept-and-slope-using-sum-of-squares&#34;&gt;Calculate intercept and slope using sum of squares&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;x_bar &amp;lt;- mean(x) # calculate mean of independent variable
+y_bar &amp;lt;- mean(y) # calculate mean of dependent variable
+
+slope &amp;lt;- sum((x - x_bar)*(y - y_bar))/sum((x - x_bar)^2) # calculate sum of differences between x &amp;amp; y, and divide by sum of squares of x
+slope
+
+## [1] 0.9941662
+
+intercept &amp;lt;- y_bar - (slope * x_bar) # calculate difference of y_bar across the linear predictor
+intercept
+
+## [1] 3.011774
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;plot-data-using-manually-calculated-parameters&#34;&gt;Plot data using manually calculated parameters&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;plot(x,y, col = &amp;quot;grey80&amp;quot;, main=&#39;Regression with manual calculations&#39;, xlim = c(-2, 5), ylim = c(0,10)); 
+abline(a = intercept, b = slope, col=&#39;blue&#39;, lwd=2)
+&lt;/code&gt;&lt;/pre&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34; &#34; srcset=&#34;
+               /media/posts/lr_files/figure-markdown_strict/unnamed-chunk-6-1_hu6747094844812128651.webp 400w,
+               /media/posts/lr_files/figure-markdown_strict/unnamed-chunk-6-1_hu15171377414764716868.webp 760w,
+               /media/posts/lr_files/figure-markdown_strict/unnamed-chunk-6-1_hu14793946180658159100.webp 1200w&#34;
+               src=&#34;http://localhost:1313/media/posts/lr_files/figure-markdown_strict/unnamed-chunk-6-1_hu6747094844812128651.webp&#34;
+               width=&#34;672&#34;
+               height=&#34;480&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      
+    &lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;h1 id=&#34;gradient-descent&#34;&gt;Gradient Descent:&lt;/h1&gt;
+&lt;h2 id=&#34;using-the-same-simulated-data-as-before-we-will-estimate-parameters-using-a-machine-learning-algorithm&#34;&gt;Using the same simulated data as before, we will estimate parameters using a machine learning algorithm&lt;/h2&gt;
+&lt;h3 id=&#34;heres-some-figures-i-found-helpful-while-trying-to-understand-how-gradient-descent-works&#34;&gt;Here&amp;rsquo;s some figures I found helpful while trying to understand how gradient descent works:&lt;/h3&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34; &#34; srcset=&#34;
+               /media/posts/lr_files/figure-markdown_strict/hiking_analogy_hu16707482620612177528.webp 400w,
+               /media/posts/lr_files/figure-markdown_strict/hiking_analogy_hu8643088186133544508.webp 760w,
+               /media/posts/lr_files/figure-markdown_strict/hiking_analogy_hu16647294568684891759.webp 1200w&#34;
+               src=&#34;http://localhost:1313/media/posts/lr_files/figure-markdown_strict/hiking_analogy_hu16707482620612177528.webp&#34;
+               width=&#34;700&#34;
+               height=&#34;465&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      
+    &lt;/figcaption&gt;&lt;/figure&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34; &#34; srcset=&#34;
+               /media/posts/lr_files/figure-markdown_strict/lr_diagram_hu4875460031701007284.webp 400w,
+               /media/posts/lr_files/figure-markdown_strict/lr_diagram_hu12845061643091946287.webp 760w,
+               /media/posts/lr_files/figure-markdown_strict/lr_diagram_hu17409504747599895843.webp 1200w&#34;
+               src=&#34;http://localhost:1313/media/posts/lr_files/figure-markdown_strict/lr_diagram_hu4875460031701007284.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;473&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      
+    &lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;h3 id=&#34;to-determine-the-goodness-of-fit-for-a-given-set-of-parameters-we-will-empliment-a-squared-error-cost-function-a-way-to-calculate-the-degree-of-error-for-a-guess-for-slope-and-intercept&#34;&gt;To determine the goodness of fit for a given set of parameters, we will empliment a Squared error cost function (a way to calculate the degree of error for a guess for slope and intercept)&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;cost &amp;lt;- function(X, y, theta) {
+  sum( (X %*% theta - y)^2 ) / (2*length(y))
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;we-must-also-set-two-additional-parameters-learning-rate-and-iteration-limit&#34;&gt;We must also set two additional parameters: learning rate and iteration limit&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;alpha &amp;lt;- 0.01
+num_iters &amp;lt;- 1000
+
+# keep history
+cost_history &amp;lt;- double(num_iters)
+theta_history &amp;lt;- list(num_iters)
+
+# initialize coefficients
+theta &amp;lt;- matrix(c(0,0), nrow=2)
+
+# add a column of 1&#39;s for the intercept coefficient
+X &amp;lt;- cbind(1, matrix(x))
+
+# gradient descent
+for (i in 1:num_iters) {
+  error &amp;lt;- (X %*% theta - y)
+  delta &amp;lt;- t(X) %*% error / length(y)
+  theta &amp;lt;- theta - alpha * delta
+  cost_history[i] &amp;lt;- cost(X, y, theta)
+  theta_history[[i]] &amp;lt;- theta
+}
+
+print(theta)
+
+##           [,1]
+## [1,] 3.0116439
+## [2,] 0.9941657
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;plot-data-and-converging-fit&#34;&gt;Plot data and converging fit&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;iters &amp;lt;- c((1:31)^2, 1000)
+cols &amp;lt;- rev(terrain.colors(num_iters))
+library(gifski)
+png(&amp;quot;frame%03d.png&amp;quot;)
+par(ask = FALSE)
+
+for (i in iters) {
+  plot(x,y, col=&amp;quot;grey80&amp;quot;, main=&#39;Linear regression using Gradient Descent&#39;)
+  text(x = -3, y = 10, paste(&amp;quot;slope = &amp;quot;, round(theta_history[[i]][2], 3), sep = &amp;quot; &amp;quot;), adj = 0)
+  text(x = -3, y = 8, paste(&amp;quot;intercept = &amp;quot;, round(theta_history[[i]][1], 3), sep = &amp;quot; &amp;quot;), adj = 0)
+  abline(coef=theta_history[[i]], col=cols[i], lwd = 2)
+}
+
+dev.off()
+
+## png 
+##   2
+
+png_files &amp;lt;- sprintf(&amp;quot;frame%03d.png&amp;quot;, 1:32)
+gif_file &amp;lt;- gifski(png_files, delay = 0.1)
+unlink(png_files)
+utils::browseURL(gif_file)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;calculate-intercept-and-slope-using-gradient-descent-machine-learning&#34;&gt;Calculate intercept and slope using gradient descent (Machine Learning):&lt;/h3&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34; &#34;
+           src=&#34;http://localhost:1313/media/posts/lr_files/figure-markdown_strict/lrgd.gif&#34;
+           loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      
+    &lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;pre&gt;&lt;code&gt;plot(cost_history, type=&#39;line&#39;, col=&#39;blue&#39;, lwd=2, main=&#39;Cost function&#39;, ylab=&#39;cost&#39;, xlab=&#39;Iterations&#39;)
+
+## Warning in plot.xy(xy, type, ...): plot type &#39;line&#39; will be truncated to first
+## character
+&lt;/code&gt;&lt;/pre&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34; &#34; srcset=&#34;
+               /media/posts/lr_files/figure-markdown_strict/unnamed-chunk-10-1_hu10201080256720931723.webp 400w,
+               /media/posts/lr_files/figure-markdown_strict/unnamed-chunk-10-1_hu13749904028915559076.webp 760w,
+               /media/posts/lr_files/figure-markdown_strict/unnamed-chunk-10-1_hu11794761284791704341.webp 1200w&#34;
+               src=&#34;http://localhost:1313/media/posts/lr_files/figure-markdown_strict/unnamed-chunk-10-1_hu10201080256720931723.webp&#34;
+               width=&#34;672&#34;
+               height=&#34;480&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      
+    &lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;h1 id=&#34;using-gradient-descent-with-real-data&#34;&gt;Using gradient descent with real data&lt;/h1&gt;
+&lt;p&gt;I&amp;rsquo;ll demonstrate it&amp;rsquo;s features using an existing dataset from Bruno Oliveria: &amp;ldquo;Amphibio&amp;rdquo;:&lt;br&gt;
+• Link to publication: &lt;a href=&#34;https://www.nature.com/articles/sdata2017123&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.nature.com/articles/sdata2017123&lt;/a&gt;&lt;br&gt;
+• Link to data: &lt;a href=&#34;https://ndownloader.figstatic.com/files/8828578&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://ndownloader.figstatic.com/files/8828578&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;load-amphibio-data&#34;&gt;Load amphibio data!&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;install.packages(&amp;quot;downloader&amp;quot;)
+library(downloader)
+
+url &amp;lt;- &amp;quot;https://ndownloader.figstatic.com/files/8828578&amp;quot;
+download(url, dest=&amp;quot;lrgb/amphibio.zip&amp;quot;, mode=&amp;quot;wb&amp;quot;) 
+unzip(&amp;quot;lrgb/amphibio.zip&amp;quot;, exdir = &amp;quot;./lrgb&amp;quot;)
+
+df &amp;lt;- read_csv(&amp;quot;AmphiBIO_v1.csv&amp;quot;) %&amp;gt;%
+  select(&amp;quot;Order&amp;quot;,
+         &amp;quot;Body_mass_g&amp;quot;,
+         &amp;quot;Body_size_mm&amp;quot;,
+         &amp;quot;Size_at_maturity_min_mm&amp;quot;,
+         &amp;quot;Size_at_maturity_max_mm&amp;quot;,
+         &amp;quot;Litter_size_min_n&amp;quot;,
+         &amp;quot;Litter_size_max_n&amp;quot;,
+         &amp;quot;Reproductive_output_y&amp;quot;) %&amp;gt;%
+  na.omit %&amp;gt;%
+  mutate_if(is.numeric, ~ log(.))
+
+## Rows: 6776 Columns: 38
+
+## -- Column specification --------------------------------------------------------
+## Delimiter: &amp;quot;,&amp;quot;
+## chr  (6): id, Order, Family, Genus, Species, OBS
+## dbl (31): Fos, Ter, Aqu, Arb, Leaves, Flowers, Seeds, Arthro, Vert, Diu, Noc...
+## lgl  (1): Fruits
+
+## 
+## i Use `spec()` to retrieve the full column specification for this data.
+## i Specify the column types or set `show_col_types = FALSE` to quiet this message.
+
+plot(df$Body_size_mm, df$Size_at_maturity_max_mm, col = &amp;quot;grey80&amp;quot;, main=&#39;Correlation of amphibian traits&#39;, xlab = &amp;quot;Body size (mm)&amp;quot;, ylab = &amp;quot;Max size at maturity (mm)&amp;quot;); 
+&lt;/code&gt;&lt;/pre&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34; &#34; srcset=&#34;
+               /media/posts/lr_files/figure-markdown_strict/unnamed-chunk-11-1_hu13958201193534220825.webp 400w,
+               /media/posts/lr_files/figure-markdown_strict/unnamed-chunk-11-1_hu13026316878176312818.webp 760w,
+               /media/posts/lr_files/figure-markdown_strict/unnamed-chunk-11-1_hu14878789998347573284.webp 1200w&#34;
+               src=&#34;http://localhost:1313/media/posts/lr_files/figure-markdown_strict/unnamed-chunk-11-1_hu13958201193534220825.webp&#34;
+               width=&#34;672&#34;
+               height=&#34;480&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      
+    &lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;h3 id=&#34;fit-a-linear-model-1&#34;&gt;Fit a linear model&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;lm &amp;lt;- lm(Size_at_maturity_max_mm ~ Body_size_mm, data = df) # Ordinary Least Squares regression with General Linear Model 
+mod &amp;lt;- print(lm)
+
+## 
+## Call:
+## lm(formula = Size_at_maturity_max_mm ~ Body_size_mm, data = df)
+## 
+## Coefficients:
+##  (Intercept)  Body_size_mm  
+##       0.6237        0.7265
+
+mod
+
+## 
+## Call:
+## lm(formula = Size_at_maturity_max_mm ~ Body_size_mm, data = df)
+## 
+## Coefficients:
+##  (Intercept)  Body_size_mm  
+##       0.6237        0.7265
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;plot-the-data-and-the-model-1&#34;&gt;Plot the data and the model&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;plot(df$Body_size_mm, df$Size_at_maturity_max_mm, col = &amp;quot;grey80&amp;quot;, main=&#39;Linear Regression using Sum of Squares&#39;, xlab = &amp;quot;Body size (mm)&amp;quot;, ylab = &amp;quot;Max size at maturity (mm)&amp;quot;); 
+text(4, 5, paste(&amp;quot;Intercept = &amp;quot;, round(mod$coefficients[1], 2), sep = &amp;quot;&amp;quot;));
+text(6, 3, paste(&amp;quot;Slope = &amp;quot;, round(mod$coefficients[2], 2), sep = &amp;quot;&amp;quot;));
+abline(a = mod$coefficients[1], b = mod$coefficients[2], col=&#39;blue&#39;, lwd=2) # use slope and intercept to plot best fit line
+&lt;/code&gt;&lt;/pre&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34; &#34; srcset=&#34;
+               /media/posts/lr_files/figure-markdown_strict/unnamed-chunk-13-1_hu8194321120596918564.webp 400w,
+               /media/posts/lr_files/figure-markdown_strict/unnamed-chunk-13-1_hu12803367816218472457.webp 760w,
+               /media/posts/lr_files/figure-markdown_strict/unnamed-chunk-13-1_hu3570476343014275261.webp 1200w&#34;
+               src=&#34;http://localhost:1313/media/posts/lr_files/figure-markdown_strict/unnamed-chunk-13-1_hu8194321120596918564.webp&#34;
+               width=&#34;672&#34;
+               height=&#34;480&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      
+    &lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;h3 id=&#34;calculate-intercept-and-slope-using-sum-of-squares-1&#34;&gt;Calculate intercept and slope using sum of squares&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;x &amp;lt;- df$Body_size_mm
+y &amp;lt;- df$Size_at_maturity_max_mm
+x_bar &amp;lt;- mean(x) # calculate mean of independent variable
+y_bar &amp;lt;- mean(y) # calculate mean of dependent variable
+
+slope &amp;lt;- sum((x - x_bar)*(y - y_bar))/sum((x - x_bar)^2) # calculate sum of differences between x &amp;amp; y, and divide by sum of squares of x
+slope
+
+## [1] 0.7264703
+
+intercept &amp;lt;- y_bar - (slope * x_bar) # calculate difference of y_bar across the linear predictor
+intercept
+
+## [1] 0.6237047
+
+### plot data using manually calculated parameters
+plot(x,y, col = &amp;quot;grey80&amp;quot;, main=&#39;Linear Regression using Ordinary Least Squares&#39;, xlab = &amp;quot;Body size (mm)&amp;quot;, ylab = &amp;quot;Max size at maturity (mm)&amp;quot;); 
+abline(a = intercept, b = slope, col=&#39;blue&#39;, lwd=2)
+&lt;/code&gt;&lt;/pre&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34; &#34; srcset=&#34;
+               /media/posts/lr_files/figure-markdown_strict/unnamed-chunk-14-1_hu749059795355048884.webp 400w,
+               /media/posts/lr_files/figure-markdown_strict/unnamed-chunk-14-1_hu11796089762525742180.webp 760w,
+               /media/posts/lr_files/figure-markdown_strict/unnamed-chunk-14-1_hu6382700030778350265.webp 1200w&#34;
+               src=&#34;http://localhost:1313/media/posts/lr_files/figure-markdown_strict/unnamed-chunk-14-1_hu749059795355048884.webp&#34;
+               width=&#34;672&#34;
+               height=&#34;480&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      
+    &lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;h3 id=&#34;calculate-intercept-and-slope-using-gradient-descent-machine-learning-1&#34;&gt;Calculate intercept and slope using gradient descent (Machine Learning)&lt;/h3&gt;
+&lt;h3 id=&#34;squared-error-cost-function-a-way-to-calculate-the-degree-of-error-for-a-guess-for-slope-and-intercept&#34;&gt;Squared error cost function (a way to calculate the degree of error for a guess for slope and intercept)&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;### learning rate and iteration limit
+alpha &amp;lt;- 0.001
+num_iters &amp;lt;- 1000
+
+### keep history
+cost_history &amp;lt;- double(num_iters)
+theta_history &amp;lt;- list(num_iters)
+
+### initialize coefficients
+theta &amp;lt;- matrix(c(0,0), nrow=2)
+
+### add a column of 1&#39;s for the intercept coefficient
+X &amp;lt;- cbind(1, matrix(x))
+
+# gradient descent
+for (i in 1:num_iters) {
+  error &amp;lt;- (X %*% theta - y)
+  delta &amp;lt;- t(X) %*% error / length(y)
+  theta &amp;lt;- theta - alpha * delta
+  cost_history[i] &amp;lt;- cost(X, y, theta)
+  theta_history[[i]] &amp;lt;- theta
+}
+
+print(theta)
+
+##           [,1]
+## [1,] 0.1816407
+## [2,] 0.8175962
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;plot-data-and-converging-fit-1&#34;&gt;Plot data and converging fit&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;plot(x,y, col=&amp;quot;grey80&amp;quot;, main=&#39;Linear regression using Gradient Descent&#39;, xlab = &amp;quot;Body size (mm)&amp;quot;, ylab = &amp;quot;Max size at maturity (mm)&amp;quot;)
+for (i in c((1:31)^2, 1000)) {
+  abline(coef=theta_history[[i]], col=&amp;quot;red&amp;quot;)
+}
+abline(coef=theta, col=&amp;quot;blue&amp;quot;, lwd = 2)
+&lt;/code&gt;&lt;/pre&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34; &#34; srcset=&#34;
+               /media/posts/lr_files/figure-markdown_strict/unnamed-chunk-16-1_hu10359579081162880653.webp 400w,
+               /media/posts/lr_files/figure-markdown_strict/unnamed-chunk-16-1_hu3901677043462376067.webp 760w,
+               /media/posts/lr_files/figure-markdown_strict/unnamed-chunk-16-1_hu8737325766736597265.webp 1200w&#34;
+               src=&#34;http://localhost:1313/media/posts/lr_files/figure-markdown_strict/unnamed-chunk-16-1_hu10359579081162880653.webp&#34;
+               width=&#34;672&#34;
+               height=&#34;480&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      
+    &lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;pre&gt;&lt;code&gt;plot(cost_history, type=&#39;line&#39;, col=&#39;blue&#39;, lwd=2, main=&#39;Cost function&#39;, ylab=&#39;cost&#39;, xlab=&#39;Iterations&#39;)
+
+## Warning in plot.xy(xy, type, ...): plot type &#39;line&#39; will be truncated to first
+## character
+&lt;/code&gt;&lt;/pre&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34; &#34; srcset=&#34;
+               /media/posts/lr_files/figure-markdown_strict/unnamed-chunk-17-1_hu5439497402357073159.webp 400w,
+               /media/posts/lr_files/figure-markdown_strict/unnamed-chunk-17-1_hu11148887372339103562.webp 760w,
+               /media/posts/lr_files/figure-markdown_strict/unnamed-chunk-17-1_hu14433026510257978825.webp 1200w&#34;
+               src=&#34;http://localhost:1313/media/posts/lr_files/figure-markdown_strict/unnamed-chunk-17-1_hu5439497402357073159.webp&#34;
+               width=&#34;672&#34;
+               height=&#34;480&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      
+    &lt;/figcaption&gt;&lt;/figure&gt;
+
+</description>
+    </item>
+    
+    <item>
+      <title>Mapping Ecological Flow in R (pt 1)</title>
+      <link>http://localhost:1313/post/connectivity-script/</link>
+      <pubDate>Wed, 12 Aug 2020 00:40:04 -0700</pubDate>
+      <guid>http://localhost:1313/post/connectivity-script/</guid>
+      <description>&lt;h2 id=&#34;focusing-on-randomized-paths-between-multiple-locations-or-populations-habitats-etc&#34;&gt;Focusing on randomized paths between multiple locations (or populations, habitats, etc)&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt; This is simply a tutorial. I’m not (for now) providing a review
+of the literature surrounding ecological connectivity, or commenting the
+different meanings of connectivity). This tutorial is strictly for
+demonstrating how to perform such an analysis, because–to my
+knowledge–such a tutorial doesn’t exist. That being said, please let me
+know if you find one!&lt;/p&gt;
+&lt;p&gt;This analysis can be done in R using one of two methods: 1. using the R
+package &lt;code&gt;gdistance&lt;/code&gt;, which performs the analysis natively 2. calling
+Circuitscape, an external GUI-based software widely used in ecology,
+from R&lt;/p&gt;
+&lt;p&gt;In the future, I will post about using Circuitscape in R, making use of
+command prompt and a combination of packages, including Bill Peterman’s
+&lt;code&gt;ResistanceGA&lt;/code&gt;. For now, I’m going to focus on performing the analysis
+natively using &lt;code&gt;gdistance&lt;/code&gt;. Although, &lt;code&gt;gdistance&lt;/code&gt; is only programmed to
+analysis randomized shortest-path between two locations, I will
+demonstrate how, through the use of a simple loop, you can perform the
+analysis in R.&lt;/p&gt;
+&lt;p&gt;For the analysis, I will &lt;em&gt;only&lt;/em&gt; use widely publically available data
+sets. As for a species, I’ve chosen the very charasmatic Jordan’s Red
+Cheeked Salamander, endemic to the Great Smoky Mountains National Park
+(USA).&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-jordans-red-cheeked-salamander&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Jordan&amp;#39;s Red Cheeked Salamander&#34; srcset=&#34;
+               /media/posts/connectivity_script_files/figure-markdown_strict/jrcs_hu8748387886065202433.webp 400w,
+               /media/posts/connectivity_script_files/figure-markdown_strict/jrcs_hu8774435472472496843.webp 760w,
+               /media/posts/connectivity_script_files/figure-markdown_strict/jrcs_hu8093516403498535379.webp 1200w&#34;
+               src=&#34;http://localhost:1313/media/posts/connectivity_script_files/figure-markdown_strict/jrcs_hu8748387886065202433.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;446&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      Jordan&amp;rsquo;s Red Cheeked Salamander
+    &lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;For this tutorial, you’re going to need the following libraries
+installed:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;gdistance&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;tidyverse&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;rgeos&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;elevatr&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ggplot2&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;tigris&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;spocc&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;raster&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;viridis&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ggthemes&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;To save space and reduce the amount of intermediate variables, I will
+make use of the &lt;code&gt;tidyverse&lt;/code&gt; syntax. This includes using data processing
+features of &lt;code&gt;dplyr&lt;/code&gt; as well as pipes (&lt;code&gt;%&amp;gt;%&lt;/code&gt;). If you prefer not to use
+these features, simply focus on the key functions and data sources which
+can easily be incorporated into your own preferred work flow.&lt;/p&gt;
+&lt;h2 id=&#34;lets-get-started&#34;&gt;Let’s get started!&lt;/h2&gt;
+&lt;p&gt;First, lets download a shapefile to work with.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;library(tigris)         # Tigris package for USA census data
+library(tidyverse)
+states &amp;lt;- states()
+
+se &amp;lt;- states %&amp;gt;%
+  subset(REGION == &amp;quot;3&amp;quot;) 
+
+TN_NC &amp;lt;- se %&amp;gt;%     # Subsetting the data to Tennessee and North Carolina
+  subset(NAME %in% c(&amp;quot;Tennessee&amp;quot;, &amp;quot;North Carolina&amp;quot;))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Next, lets download some species occurrence records for Jordan’s Red
+Cheeked Salamander (JRCS) from the Global Biodiversity Information
+Facility using the R package &lt;code&gt;spocc&lt;/code&gt;. In this query, I will pull &lt;em&gt;only
+the first&lt;/em&gt; 1000 records. Yes, that means I’m pulling records in no
+particular order, and that they can be biased. Don’t @ me.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;library(spocc)
+
+## Warning: package &#39;spocc&#39; was built under R version 4.0.2
+
+library(raster)
+
+## Warning: package &#39;raster&#39; was built under R version 4.0.2
+
+## Loading required package: sp
+
+## 
+## Attaching package: &#39;raster&#39;
+
+## The following object is masked from &#39;package:dplyr&#39;:
+## 
+##     select
+
+## The following object is masked from &#39;package:tidyr&#39;:
+## 
+##     extract
+
+Pj &amp;lt;- occ(query = &amp;quot;Plethodon jordani&amp;quot;,                 # JRCS scientific name
+          from = &amp;quot;gbif&amp;quot;,                               # limiting query to *the first* 1000 records
+          limit=1000,                                  # limiting query to *the first* 1000 records
+          has_coords = T)                              # limiting those 1000 records to those that have geo-referenced data
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now that we have the data, we need to organize and clean it using
+&lt;code&gt;dplyr&lt;/code&gt;. Luckily, &lt;code&gt;spocc&lt;/code&gt; has improved their naming system, so this is
+easier to do now.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Pj_sp &amp;lt;- Pj$gbif$data$Plethodon_jordani %&amp;gt;%            # Grabbing the Darwin-core data from the spocc object
+  dplyr::select(longitude,                             # Keep locations and year, discard the rest
+                latitude,
+                year) %&amp;gt;%                   
+  dplyr::filter(year &amp;gt; 2000) %&amp;gt;%                       # Filter records to only those after year 2000
+  filter(!duplicated(round(longitude, 2),              # Remove duplicate records using rounded decimals (this removes points very near to one-another)       
+                     round(latitude, 2)) == TRUE) %&amp;gt;%  # &amp;gt;&amp;gt; See notes below about ^^
+  dplyr::mutate(lon = scale(longitude),                # Remove points far outside the cluster of occurrences
+                lat = scale(latitude)) %&amp;gt;%             # &amp;gt;&amp;gt; See notes below about ^^
+  dplyr::filter(!abs(lon)&amp;gt;2) %&amp;gt;%
+  dplyr::filter(!abs(lat)&amp;gt;2) %&amp;gt;%
+  dplyr::select(longitude,
+                latitude) %&amp;gt;%
+  SpatialPoints(proj4string = crs(se)) 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Notes&lt;/strong&gt; To remove stacked points, or points that are clustered very
+closely, I rounded the decimal points to the second hundreths place and
+removed duplicates. This step is actually very biologically meaningful…
+Because we want to map potential flow between populations of JRCS, we
+want each point to represent a population–meaning each point must be
+sufficiently isolated so as to only be connected through stochastic
+disperal. Because JRCS is dispersal limited, I chose to remove points
+less that ~10 km from one another (approximately the resolution of the
+second decimal point of a gps coordinate).&lt;/p&gt;
+&lt;p&gt;I removed points that were suspiciously far outside the cluster of
+presences by creating new variables: &lt;code&gt;lon&lt;/code&gt; and &lt;code&gt;lat&lt;/code&gt;, which are Z-scores
+of the latitude and longitude variables (by subtracting the mean and
+dividing by standard deviation, or using the &lt;code&gt;scale&lt;/code&gt; function). I them
+removed values greater that 2, which represent points that are two
+standard deviations from the mean latitude and mean longitude.&lt;/p&gt;
+&lt;p&gt;Let’s plot our points&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;library(ggplot2)
+library(viridis)
+
+## Loading required package: viridisLite
+
+library(ggthemes)
+
+ggplot() + geom_polygon(data=se, aes(x=long, y=lat, grou=group), col=&amp;quot;grey40&amp;quot;, fill=&amp;quot;grey80&amp;quot;) +
+  geom_polygon(data=TN_NC, aes(x=long, y=lat), col=&amp;quot;grey40&amp;quot;, fill=&amp;quot;light blue&amp;quot;) + 
+  coord_quickmap() + theme_map()
+
+## Regions defined for each Polygons
+
+## Warning: Ignoring unknown aesthetics: grou
+
+## Regions defined for each Polygons
+&lt;/code&gt;&lt;/pre&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-jordans-red-cheeked-salamander&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Jordan&amp;#39;s Red Cheeked Salamander&#34; srcset=&#34;
+               /media/posts/connectivity_script_files/figure-markdown_strict/plot_presences-1_hu15505977354153264823.webp 400w,
+               /media/posts/connectivity_script_files/figure-markdown_strict/plot_presences-1_hu2728833307136772739.webp 760w,
+               /media/posts/connectivity_script_files/figure-markdown_strict/plot_presences-1_hu18335796353493736808.webp 1200w&#34;
+               src=&#34;http://localhost:1313/media/posts/connectivity_script_files/figure-markdown_strict/plot_presences-1_hu15505977354153264823.webp&#34;
+               width=&#34;672&#34;
+               height=&#34;480&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      Jordan&amp;rsquo;s Red Cheeked Salamander
+    &lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;To create a custom study area, shaped to our occurrence points, we can
+create a convex hull around our points using &lt;code&gt;chull()&lt;/code&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Pj_coords &amp;lt;- Pj_sp@coords                                                  
+Pj_chull &amp;lt;- chull(Pj_sp@coords)                           # Creating convex hull
+
+Pj_chull_ends &amp;lt;- Pj_sp@coords[c(Pj_chull, Pj_chull[1]),]  # generate the end points of polygon. 
+Pj_poly &amp;lt;- SpatialPolygons(
+  list(Polygons(
+    list(Polygon(Pj_chull_ends)), ID=1)),
+                             proj4string = crs(se))       # convert coords to SpatialPolygons 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now, we will create a buffer around those points using
+&lt;code&gt;rgeos::gBuffer()&lt;/code&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;library(rgeos)
+Pj_poly_buff &amp;lt;- gBuffer(Pj_poly, width = 0.05, byid=T)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Let’s have a look at your buffered polygon:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;ggplot() + geom_polygon(data=TN_NC, aes(x=long, y=lat), col=&amp;quot;grey40&amp;quot;, fill=&amp;quot;light blue&amp;quot;) + 
+  geom_polygon(data=Pj_poly_buff, aes(x=long, y=lat, grou=group), col=&amp;quot;grey40&amp;quot;, fill=&amp;quot;pink&amp;quot;) +
+  geom_point(data=as.data.frame(Pj_sp@coords), aes(x=longitude, y=latitude), size=0.01) + 
+  coord_quickmap() + theme_map()
+
+## Regions defined for each Polygons
+
+## Warning: Ignoring unknown aesthetics: grou
+&lt;/code&gt;&lt;/pre&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-buffered-polygon&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Buffered polygon&#34; srcset=&#34;
+               /media/posts/connectivity_script_files/figure-markdown_strict/unnamed-chunk-1-1_hu4160553860264835895.webp 400w,
+               /media/posts/connectivity_script_files/figure-markdown_strict/unnamed-chunk-1-1_hu14299404557036398538.webp 760w,
+               /media/posts/connectivity_script_files/figure-markdown_strict/unnamed-chunk-1-1_hu3578149591007381430.webp 1200w&#34;
+               src=&#34;http://localhost:1313/media/posts/connectivity_script_files/figure-markdown_strict/unnamed-chunk-1-1_hu4160553860264835895.webp&#34;
+               width=&#34;672&#34;
+               height=&#34;480&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      Buffered polygon
+    &lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;To create our resistance layers for the connectivity analysis, let’s
+download a digital elevation model (DEM) using package &lt;code&gt;elevatr&lt;/code&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;library(elevatr)
+elevation &amp;lt;- get_elev_raster(Pj_poly_buff, z = 8)         # This will find a DEM tile nearest to our polygon 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;While elevation is important, we can derive other biologically important
+variables using the &lt;code&gt;raster::terrain()&lt;/code&gt;, inlcuding aspect (direction a
+hillside is facing) and topographic roughness index (TRI). In very
+simple terms, TRI calculates the change in elevation between a point and
+its surroundings (in a neighborhood of 8 points).&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;elv &amp;lt;- elevation %&amp;gt;%                                      # First, lets cut the DEM to our study area 
+  crop(Pj_poly_buff) %&amp;gt;%                                  # crop to the extent
+  mask(Pj_poly_buff)                                      # mask to the edges
+
+asp &amp;lt;- terrain(elv, opt=&amp;quot;aspect&amp;quot;, neighbors = 8)          # Calculate aspect
+
+ggplot(as.data.frame(asp, xy=T)) + geom_raster(aes(x=x, y=y, fill=aspect)) + 
+  scale_fill_continuous(na.value=NA) + theme_map() + theme(legend.position = &amp;quot;right&amp;quot;)
+
+## Warning: Removed 18361 rows containing missing values (geom_raster).
+&lt;/code&gt;&lt;/pre&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-creating-gis-layers-for-the-great-smoky-mtns&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;creating gis layers for the Great Smoky Mtns&#34; srcset=&#34;
+               /media/posts/connectivity_script_files/figure-markdown_strict/create_layers-1_hu1715431012424902423.webp 400w,
+               /media/posts/connectivity_script_files/figure-markdown_strict/create_layers-1_hu14616543833048540915.webp 760w,
+               /media/posts/connectivity_script_files/figure-markdown_strict/create_layers-1_hu17860438836242113234.webp 1200w&#34;
+               src=&#34;http://localhost:1313/media/posts/connectivity_script_files/figure-markdown_strict/create_layers-1_hu1715431012424902423.webp&#34;
+               width=&#34;384&#34;
+               height=&#34;288&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      creating gis layers for the Great Smoky Mtns
+    &lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;To simplify our analysis for this demonstration, I’m going to cut down
+the number of presence points to only 5. Because we will be calculating
+pairwise random shortest-paths (from now on, “random walks”), we will
+calculate 10 paths.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;set.seed(6)                                               # To make your results match mine
+Pj_sample &amp;lt;- Pj_coords[sample(nrow(Pj_coords), 5),]       # Take 5 random locations
+
+ggplot(as.data.frame(asp, xy=T)) + geom_raster(aes(x=x, y=y, fill=aspect)) + 
+  geom_point(data=as.data.frame(Pj_sample), aes(x=longitude, y=latitude), size=2, col=&amp;quot;white&amp;quot;) +
+  scale_fill_continuous(na.value=NA) + theme_map()
+
+## Warning: Removed 18361 rows containing missing values (geom_raster).
+&lt;/code&gt;&lt;/pre&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-random-sample-of-sites-in-the-great-smoky-mtns&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;random sample of sites in the Great Smoky Mtns&#34; srcset=&#34;
+               /media/posts/connectivity_script_files/figure-markdown_strict/gather_random_sample_of_sites-1_hu17435859837055058397.webp 400w,
+               /media/posts/connectivity_script_files/figure-markdown_strict/gather_random_sample_of_sites-1_hu15156685734228406591.webp 760w,
+               /media/posts/connectivity_script_files/figure-markdown_strict/gather_random_sample_of_sites-1_hu15449460719916003691.webp 1200w&#34;
+               src=&#34;http://localhost:1313/media/posts/connectivity_script_files/figure-markdown_strict/gather_random_sample_of_sites-1_hu17435859837055058397.webp&#34;
+               width=&#34;480&#34;
+               height=&#34;384&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      random sample of sites in the Great Smoky Mtns
+    &lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;To make our pairwise random walks, we have to create a side index.
+Here’s quick little solution I made which creates a matrix of every
+conceivable combination of points:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Pj_combn &amp;lt;- combn(nrow(Pj_sample),2) %&amp;gt;%
+  t() %&amp;gt;%
+  as.matrix()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;To perform a random walks analysis, we have to create a transition
+matrix using &lt;code&gt;gdistance::transition()&lt;/code&gt;, as well as perform a
+geocorrection.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;library(gdistance)
+asp_tr &amp;lt;- transition(asp, transitionFunction = mean, 4) %&amp;gt;%
+    geoCorrection(type=&amp;quot;c&amp;quot;,multpl=F)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now comes the fun part. This loop will perform the random walk routine
+using &lt;code&gt;gdistance:passage()&lt;/code&gt; for each pairwise path, generating a flow
+map. This flow map can be considered as “conductance” a la Circuitscape,
+or the “probabilities of passages” based on randomized shortest-paths.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;passages &amp;lt;- list()                                                     # Create a list to store the passage probability rasters in
+system.time(                                                           # Keep track of how long this takes
+  for (i in 1:nrow(Pj_combn)) {           
+    locations &amp;lt;- SpatialPoints(rbind(Pj_sample[Pj_combn[i,1],1:2],     # create origin points
+                                      Pj_sample[Pj_combn[i,2],1:2]),   # create destination (or goal) points, to traverse
+                                crs(se))
+    passages[[i]] &amp;lt;- passage(asp_tr,                                   # run the passage function 
+                                  origin=locations[1],                 # set orgin point
+                                  goal=locations[2],                   # set goal point
+                             theta = 0.00001)                             # set theta (tuning parameter, see notes below)
+    print(paste((i/nrow(Pj_combn))*100, &amp;quot;% complete&amp;quot;))
+  }
+)
+
+## [1] &amp;quot;10 % complete&amp;quot;
+## [1] &amp;quot;20 % complete&amp;quot;
+## [1] &amp;quot;30 % complete&amp;quot;
+## [1] &amp;quot;40 % complete&amp;quot;
+## [1] &amp;quot;50 % complete&amp;quot;
+## [1] &amp;quot;60 % complete&amp;quot;
+## [1] &amp;quot;70 % complete&amp;quot;
+## [1] &amp;quot;80 % complete&amp;quot;
+## [1] &amp;quot;90 % complete&amp;quot;
+## [1] &amp;quot;100 % complete&amp;quot;
+
+##    user  system elapsed 
+##   15.89    2.88   18.76
+
+passages &amp;lt;- stack(passages)                                            # create a raster stack of all the passage probabilities
+passages_overlay &amp;lt;- sum(passages)/nrow(Pj_combn)                       # calculate average
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Notes&lt;/strong&gt; In our passage function, we set theta, (&lt;em&gt;θ&lt;/em&gt;), a tuning
+parameter. Extremely low values result in a random walk (equivilant to
+Circuit Theory), but as &lt;em&gt;θ&lt;/em&gt;¸ increases, the passage converges on least
+cost path. I supplied a value somewhere in the middle.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;colors &amp;lt;- c(&amp;quot;grey60&amp;quot;, viridis_pal(option=&amp;quot;plasma&amp;quot;, begin = 0.3, end = 1)(20))
+ggplot(as.data.frame(passages_overlay, xy=T)) + geom_raster(aes(x=x,y=y,fill=layer)) +
+  scale_fill_gradientn(colors = colors, na.value = NA) + 
+  theme_map() +   theme(legend.position = &amp;quot;right&amp;quot;)
+
+## Warning: Removed 18361 rows containing missing values (geom_raster).
+&lt;/code&gt;&lt;/pre&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-ecological-flow-of-jordans-red-cheeked-salamander&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Ecological Flow of Jordan&amp;#39;s Red Cheeked Salamander&#34; srcset=&#34;
+               /media/posts/connectivity_script_files/figure-markdown_strict/plot_flow-1_hu3668783389650275206.webp 400w,
+               /media/posts/connectivity_script_files/figure-markdown_strict/plot_flow-1_hu1841305405371726403.webp 760w,
+               /media/posts/connectivity_script_files/figure-markdown_strict/plot_flow-1_hu2997340114314834329.webp 1200w&#34;
+               src=&#34;http://localhost:1313/media/posts/connectivity_script_files/figure-markdown_strict/plot_flow-1_hu3668783389650275206.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;136&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      Ecological Flow of Jordan&amp;rsquo;s Red Cheeked Salamander
+    &lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;There you have it!&lt;/p&gt;
+&lt;p&gt;Now, this was an &lt;em&gt;extremely&lt;/em&gt; short demonstration… In the future, I plan
+to make many additional posts on connectivity, what it means, how to use
+it, as well as provide some more tutorials.&lt;/p&gt;
+&lt;p&gt;Best,&lt;/p&gt;
+&lt;p&gt;-Alex.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Empirical Dynamic Models for Forecasting</title>
+      <link>http://localhost:1313/post/edm-script/</link>
+      <pubDate>Fri, 12 Aug 2016 00:40:04 -0700</pubDate>
+      <guid>http://localhost:1313/post/edm-script/</guid>
+      <description>&lt;h2 id=&#34;introduction-to-edms-for-forecasting-non-stationary-data&#34;&gt;Introduction to EDMs for Forecasting Non-stationary data&lt;/h2&gt;
+&lt;p&gt;EDMs are a data-driven solution for uncovering hidden dynamic behavior in natural systems, which are often complex and dynamic (referred to as “non-stationarity” or “non-linearity”). This non-linearity means that the sign and magnitude of relationships within a system change with time, and therefore linear statistical approaches fail to properly represent such changes. Rather than assuming that the system is governed by any set of equations (i.e. unlike meteorological systems), EDMs reconstruct the dynamics of the system from time series data (hence “data-driven”) and provide a mechanistic understanding of the system. Under EDMs, the dynamics of a system are encoded in the temporal ordering of the time series, and the behavior of such a system can be explained by relating various states of a system using time lags (i.e. estimating the mathematical relationship of one variable at time $X(t)$, to the same variable at other times: $X(t+1)$ and $X(t+2)$. By relating states of a system using such lags, causal relationships between variables in the original system may be uncovered&amp;ndash;providing a number of ecologically relevant applications, including forecasting.&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34; &#34;
+           src=&#34;http://localhost:1313/media/posts/edm_md_files/figure-markdown_strict/edm.gif&#34;
+           loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      
+    &lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;To reiterate, EDMs are driven by non-linear dynamics in a system (the
+relationship of a variable, or state, at various time lags vary in sign
+and magnitude). Taken’s theorem–the basis of EDM–states that an original
+system’s dynamics can be reconstructed by exploiting the mathematical
+relationships between historical records of a single variable. These
+relationships can be mapped 1-to-1 using the Lorenz Attractor (also
+known as the Butterfly attractor).&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34; &#34; srcset=&#34;
+               /media/posts/edm_md_files/figure-markdown_strict/edm2_hu17421292258815013971.webp 400w,
+               /media/posts/edm_md_files/figure-markdown_strict/edm2_hu15917479656847315141.webp 760w,
+               /media/posts/edm_md_files/figure-markdown_strict/edm2_hu11645103756732411621.webp 1200w&#34;
+               src=&#34;http://localhost:1313/media/posts/edm_md_files/figure-markdown_strict/edm2_hu17421292258815013971.webp&#34;
+               width=&#34;596&#34;
+               height=&#34;255&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      
+    &lt;/figcaption&gt;&lt;/figure&gt;
+
+Tutorial on forecasting with stationary and non-stationary time series&lt;/p&gt;
+&lt;h3 id=&#34;load-libraries&#34;&gt;Load libraries&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;library(astsa)
+library(rEDM)
+library(tidyverse)
+library(forecast)
+library(ggpubr)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;set-time-series-parameters-where-time--hrs-and-the-temporal-range-is-4-days&#34;&gt;Set time series parameters, where time = hrs and the temporal range is 4 days&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;set.seed(1)
+
+time = 1:96
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;stationary-time-series&#34;&gt;Stationary time series&lt;/h1&gt;
+&lt;h3 id=&#34;simulate-autocorrelated-timeseries-data-with-stationarity-linear-data-with-cyclical-autocorrelation-using-arimasim&#34;&gt;Simulate autocorrelated timeseries data with stationarity (linear data, with cyclical autocorrelation) using &lt;code&gt;arima.sim&lt;/code&gt;&lt;/h3&gt;
+&lt;h4 id=&#34;arima-or-autoregressive-integrated-moving-average-models-necessarily-assume-linearity-because-they-rely-on-a-linear-relationship-to-predict-values-from-one-time-step-to-another&#34;&gt;Arima, or AutoRegressive Integrated Moving Average, models necessarily assume linearity, because they rely on a linear relationship to predict values from one time step to another.&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;stationary_y_arima &amp;lt;- arima.sim(n = length(time), list(ar = c(0.9, -0.8), ma = c(-0.41, 0.2)),
+                                sd = sqrt(0.1))
+
+df_ts &amp;lt;- data.frame(x = time, y = stationary_y_arima)
+
+autoplot(stationary_y_arima) + ylab(&amp;quot;Stationary Time Series&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34; &#34; srcset=&#34;
+               /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-3-1_hu7805694236425696086.webp 400w,
+               /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-3-1_hu12773678633244539661.webp 760w,
+               /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-3-1_hu1549006150885248570.webp 1200w&#34;
+               src=&#34;http://localhost:1313/media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-3-1_hu7805694236425696086.webp&#34;
+               width=&#34;672&#34;
+               height=&#34;480&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      
+    &lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;h3 id=&#34;visualize-autocorrelation-structures-using-the-parial-autocorrelation-function-estimation-feature-in-the-forecast-package-function-acf&#34;&gt;Visualize autocorrelation structures using the Parial Autocorrelation Function Estimation feature in the &lt;code&gt;forecast&lt;/code&gt; package (function &lt;code&gt;acf()&lt;/code&gt;)&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;acf(stationary_y_arima)
+&lt;/code&gt;&lt;/pre&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34; &#34; srcset=&#34;
+               /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-4-1_hu17413134947067390419.webp 400w,
+               /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-4-1_hu8089632433936948208.webp 760w,
+               /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-4-1_hu13483225594687473385.webp 1200w&#34;
+               src=&#34;http://localhost:1313/media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-4-1_hu17413134947067390419.webp&#34;
+               width=&#34;672&#34;
+               height=&#34;480&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      
+    &lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;pre&gt;&lt;code&gt;pacf(stationary_y_arima)
+&lt;/code&gt;&lt;/pre&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34; &#34; srcset=&#34;
+               /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-4-2_hu9890928378724476645.webp 400w,
+               /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-4-2_hu5088554948208542086.webp 760w,
+               /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-4-2_hu8134695697354690722.webp 1200w&#34;
+               src=&#34;http://localhost:1313/media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-4-2_hu9890928378724476645.webp&#34;
+               width=&#34;672&#34;
+               height=&#34;480&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      
+    &lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;h3 id=&#34;partition-data-into-training-and-predicting-subsets&#34;&gt;Partition data into training and predicting subsets:&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;train &amp;lt;- 1:(length(time)/2)             # indices for the first 2/3 of the time series
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;arima-models-for-forecasting&#34;&gt;Arima models for forecasting:&lt;/h1&gt;
+&lt;h3 id=&#34;run-a-standard-arima-model-with-no-lag-dependencies&#34;&gt;Run a standard Arima model, with no lag dependencies&lt;/h3&gt;
+&lt;h4 id=&#34;this-model-is-mathematically-identical-to-a-intercept-only-linear-model&#34;&gt;This model is mathematically identical to a intercept only linear model:&lt;/h4&gt;
+&lt;p&gt;$$\Large \hat{y}_t = \mu + \epsilon_{t}$$&lt;/p&gt;
+&lt;h4 id=&#34;where-the-intercept-is-equal-to-the-mean-of-the-response-variable&#34;&gt;Where, the intercept is equal to the mean of the response variable:&lt;/h4&gt;
+&lt;p&gt;$$\Large \mu = \frac{1}{n} \sum_{t=1}^{n} y_{t}$$&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;a &amp;lt;- Arima(stationary_y_arima[train])
+
+#plot the fitted values from Arima model
+autoplot(fitted(a), col = &amp;quot;blue&amp;quot;) + geom_path(data = df_ts, aes(x = x, y = y)) + ylab(&amp;quot;Stationary Time Series&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34; &#34; srcset=&#34;
+               /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-6-1_hu13386530821916426784.webp 400w,
+               /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-6-1_hu10389263712649820220.webp 760w,
+               /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-6-1_hu11313155472407154891.webp 1200w&#34;
+               src=&#34;http://localhost:1313/media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-6-1_hu13386530821916426784.webp&#34;
+               width=&#34;672&#34;
+               height=&#34;480&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      
+    &lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;h3 id=&#34;perform-forecast-of-prediction-data-using-a-no-lag-arima-model&#34;&gt;Perform forecast of prediction data using a no-lag Arima model&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;autoplot(forecast(a, h = 48)) + geom_path(data = df_ts, aes(x = x, y = y)) + ylab(&amp;quot;Stationary Time Series&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34; &#34; srcset=&#34;
+               /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-7-1_hu6561736302183332671.webp 400w,
+               /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-7-1_hu10895422997864652108.webp 760w,
+               /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-7-1_hu1228392626586771363.webp 1200w&#34;
+               src=&#34;http://localhost:1313/media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-7-1_hu6561736302183332671.webp&#34;
+               width=&#34;672&#34;
+               height=&#34;480&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      
+    &lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;h3 id=&#34;autoregressive-model-with-one-time-dependencyan-hourly-lag-term&#34;&gt;Autoregressive model, with one time dependency–an hourly lag term:&lt;/h3&gt;
+&lt;p&gt;$$\Large \hat{y}_{t} = \mu + \phi_{1}y_{t-1} + \epsilon_{t}$$&lt;/p&gt;
+&lt;p&gt;Where, $\Large \phi_1$ is a coefficient of lag&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;a1 &amp;lt;- Arima(stationary_y_arima[train], c(1,0,0))
+
+#plot the fitted values from Arima model
+autoplot(fitted(a1), col = &amp;quot;blue&amp;quot;) + geom_path(data = df_ts, aes(x = x, y = y)) + ylab(&amp;quot;Stationary Time Series&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34; &#34; srcset=&#34;
+               /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-8-1_hu4619516621146696441.webp 400w,
+               /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-8-1_hu15020323914282561158.webp 760w,
+               /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-8-1_hu1676423677590565393.webp 1200w&#34;
+               src=&#34;http://localhost:1313/media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-8-1_hu4619516621146696441.webp&#34;
+               width=&#34;672&#34;
+               height=&#34;480&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      
+    &lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;pre&gt;&lt;code&gt;#plot the forecasted values from Arima model
+autoplot(forecast(a1, h = 48)) + geom_path(data = df_ts, aes(x = x, y = y)) + ylab(&amp;quot;Stationary Time Series&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34; &#34; srcset=&#34;
+               /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-8-2_hu17926919454351495764.webp 400w,
+               /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-8-2_hu4208741386483684665.webp 760w,
+               /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-8-2_hu3657123997256001945.webp 1200w&#34;
+               src=&#34;http://localhost:1313/media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-8-2_hu17926919454351495764.webp&#34;
+               width=&#34;672&#34;
+               height=&#34;480&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      
+    &lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;h3 id=&#34;autoregressive-model-with-two-hourly-lags&#34;&gt;Autoregressive model, with two hourly lags:&lt;/h3&gt;
+&lt;p&gt;$$\Large \hat{y}_{t} = \mu + \phi_{1}y_{t-1} + \phi_{2}y_{t-2} + \epsilon_{t}$$&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;a2 &amp;lt;- Arima(stationary_y_arima[train], c(1,0,0))
+
+#plot the fitted values from Arima model
+autoplot(fitted(a2), col = &amp;quot;blue&amp;quot;) + geom_path(data = df_ts, aes(x = x, y = y)) + ylab(&amp;quot;Stationary Time Series&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34; &#34; srcset=&#34;
+               /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-9-1_hu4619516621146696441.webp 400w,
+               /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-9-1_hu15020323914282561158.webp 760w,
+               /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-9-1_hu1676423677590565393.webp 1200w&#34;
+               src=&#34;http://localhost:1313/media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-9-1_hu4619516621146696441.webp&#34;
+               width=&#34;672&#34;
+               height=&#34;480&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      
+    &lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;pre&gt;&lt;code&gt;#plot the forecasted values from Arima model
+autoplot(forecast(a2, h = 48)) + geom_path(data = df_ts, aes(x = x, y = y)) + ylab(&amp;quot;Stationary Time Series&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34; &#34; srcset=&#34;
+               /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-9-2_hu17926919454351495764.webp 400w,
+               /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-9-2_hu4208741386483684665.webp 760w,
+               /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-9-2_hu3657123997256001945.webp 1200w&#34;
+               src=&#34;http://localhost:1313/media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-9-2_hu17926919454351495764.webp&#34;
+               width=&#34;672&#34;
+               height=&#34;480&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      
+    &lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;h4 id=&#34;autoregressive-models-with-up-to-5-hourly-lags&#34;&gt;Autoregressive models, with up to 5 hourly lags:&lt;/h4&gt;
+&lt;p&gt;$$\Large \hat{y}_t = \mu + \phi_{1}y_{t-1} + [&amp;hellip;] + \phi_{5}y_{t-5} + \epsilon_{t}$$&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;a3 &amp;lt;- Arima(stationary_y_arima[train], c(3,0,0))
+a4 &amp;lt;- Arima(stationary_y_arima[train], c(4,0,0))
+a5 &amp;lt;- Arima(stationary_y_arima[train], c(5,0,0))
+
+a1_gg &amp;lt;- autoplot(forecast(a3, h = 48)) + ggtitle(&amp;quot;Arima Model Forecast: 3 hourly lags&amp;quot;) +
+  geom_path(data = df_ts, aes(x = x, y = y)) + 
+  geom_path(aes(x = time[train], y = fitted(a3)[train]), col = &amp;quot;blue&amp;quot;) + 
+   ylab(&amp;quot; &amp;quot;)
+
+a2_gg &amp;lt;- autoplot(forecast(a4, h = 48)) + ggtitle(&amp;quot;Arima Model Forecast: 4 hourly lags&amp;quot;) +
+  geom_path(data = df_ts, aes(x = x, y = y)) + 
+  geom_path(aes(x = time[train], y = fitted(a4)[train]), col = &amp;quot;blue&amp;quot;) + 
+   ylab(&amp;quot;Stationary Time Series&amp;quot;)
+
+a3_gg &amp;lt;- autoplot(forecast(a5, h = 48)) + ggtitle(&amp;quot;Arima Model Forecast: 5 hourly lags&amp;quot;) +
+  geom_path(data = df_ts, aes(x = x, y = y)) + 
+  geom_path(aes(x = time[train], y = fitted(a5)[train]), col = &amp;quot;blue&amp;quot;) + 
+   ylab(&amp;quot; &amp;quot;)
+
+ggarrange(a1_gg, a2_gg, a3_gg, ncol = 1)
+&lt;/code&gt;&lt;/pre&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34; &#34; srcset=&#34;
+               /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-10-1_hu16288408043611695195.webp 400w,
+               /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-10-1_hu8895741248900875675.webp 760w,
+               /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-10-1_hu18038795321176125581.webp 1200w&#34;
+               src=&#34;http://localhost:1313/media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-10-1_hu16288408043611695195.webp&#34;
+               width=&#34;672&#34;
+               height=&#34;480&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      
+    &lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;h3 id=&#34;now-we-can-move-into-models-with-different-cycle-structures-for-this-we-will-consider-half-day-lags-12-hr-periods&#34;&gt;Now, we can move into models with different cycle structures. For this, we will consider half day lags (12 hr periods)&lt;/h3&gt;
+&lt;h4 id=&#34;autoregressive-models-with-an-hourly--and-half-day-time-dependency&#34;&gt;Autoregressive models, with an hourly- and half-day-time dependency:&lt;/h4&gt;
+&lt;p&gt;$$\Large \hat{y}_t = \mu + \phi_{1}y_{t-1} + \phi_{2}y_{t-2} + \phi_{3}y_{t-3} + \phi_{4}y_{t-4} + \phi_{5}y_{t-12} + \epsilon_{t}$$&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;a41 &amp;lt;- Arima(stationary_y_arima[train], c(4,0,0), c(1,0,0))
+
+autoplot(forecast(a41, h = 48)) + ggtitle(&amp;quot;Arima Model Forecast: 4 hourly cycle lag&amp;quot;) +
+  geom_path(data = df_ts, aes(x = x, y = y)) + 
+  geom_path(aes(x = time[train], y = fitted(a41)[train]), col = &amp;quot;blue&amp;quot;) +
+  ylab(&amp;quot;Stationary Time Series&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34; &#34; srcset=&#34;
+               /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-11-1_hu2918833627813304264.webp 400w,
+               /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-11-1_hu8642984502335645233.webp 760w,
+               /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-11-1_hu10614276409159835171.webp 1200w&#34;
+               src=&#34;http://localhost:1313/media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-11-1_hu2918833627813304264.webp&#34;
+               width=&#34;672&#34;
+               height=&#34;480&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      
+    &lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;h3 id=&#34;now-we-will-let-the-arima-algorithm-choose-the-time-lag-parameters-using-autoarima&#34;&gt;Now, we will let the Arima algorithm choose the time lag parameters, using &lt;code&gt;auto.arima&lt;/code&gt;:&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;aa &amp;lt;- auto.arima(stationary_y_arima[train])
+summary(aa)
+
+## Series: stationary_y_arima[train] 
+## ARIMA(3,0,0) with zero mean 
+## 
+## Coefficients:
+##          ar1      ar2      ar3
+##       0.4728  -0.1068  -0.5655
+## s.e.  0.1272   0.1513   0.1384
+## 
+## sigma^2 estimated as 0.08692:  log likelihood=-9.02
+## AIC=26.04   AICc=26.97   BIC=33.52
+## 
+## Training set error measures:
+##                      ME      RMSE       MAE      MPE     MAPE      MASE
+## Training set 0.02152847 0.2854554 0.2289932 187.4472 335.9332 0.6855497
+##                     ACF1
+## Training set -0.06089878
+
+# Auto-arima chose a 3-hour lag structure, with no half-day effects
+
+autoplot(forecast(aa, h = 48)) + geom_path(data = df_ts, aes(x = x, y = y)) + 
+  ylab(&amp;quot;Stationary Time Series&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34; &#34; srcset=&#34;
+               /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-12-1_hu14647638126452599805.webp 400w,
+               /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-12-1_hu10553494527365556019.webp 760w,
+               /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-12-1_hu6578880842138778313.webp 1200w&#34;
+               src=&#34;http://localhost:1313/media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-12-1_hu14647638126452599805.webp&#34;
+               width=&#34;672&#34;
+               height=&#34;480&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      
+    &lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;h1 id=&#34;non-stationary-time-series&#34;&gt;Non-stationary time series&lt;/h1&gt;
+&lt;h3 id=&#34;now-we-will-simulate-non-linear-aka-non-stationary-data-where-relationships-change-through-time-using-diffinv&#34;&gt;Now we will simulate non-linear (a.k.a. non-stationary) data, where relationships change through time, using &lt;code&gt;diffinv&lt;/code&gt;:&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;## non-stationary data
+set.seed(44)
+nonstationary_y &amp;lt;- diffinv(rnorm(length(time))) %&amp;gt;% ts()
+
+autoplot(nonstationary_y) + ylab(&amp;quot;Non-stationary Time Series&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34; &#34; srcset=&#34;
+               /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-13-1_hu2076250804214964103.webp 400w,
+               /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-13-1_hu18116198989023368975.webp 760w,
+               /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-13-1_hu13635102975722786926.webp 1200w&#34;
+               src=&#34;http://localhost:1313/media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-13-1_hu2076250804214964103.webp&#34;
+               width=&#34;672&#34;
+               height=&#34;480&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      
+    &lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;h3 id=&#34;lets-see-what-the-auto-arima-algorithm-estimates-with-non-stationary-data&#34;&gt;Let’s see what the auto Arima algorithm estimates with non-stationary data:&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;aa_ns &amp;lt;- auto.arima(nonstationary_y[train])
+
+summary(aa_ns)
+
+## Series: nonstationary_y[train] 
+## ARIMA(0,1,0) 
+## 
+## sigma^2 estimated as 1.137:  log likelihood=-69.71
+## AIC=141.42   AICc=141.51   BIC=143.27
+## 
+## Training set error measures:
+##                      ME     RMSE       MAE       MPE     MAPE      MASE
+## Training set 0.01182676 1.055224 0.7741009 0.9130602 36.00029 0.9791667
+##                    ACF1
+## Training set 0.08409507
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;now-visualize-forecast-of-a-linear-model-with-non-linear-data&#34;&gt;Now, visualize forecast of a linear model with non-linear data!&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;df_ts_st &amp;lt;- data.frame(x = time, y = nonstationary_y[1:96])
+
+aa_ns &amp;lt;- autoplot(forecast(aa_ns, h = 48)) + 
+  geom_path(data = df_ts_st, aes(x = x, y = y)) + 
+  ylab(&amp;quot;Non-stationary Time Series&amp;quot;); aa_ns
+&lt;/code&gt;&lt;/pre&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34; &#34; srcset=&#34;
+               /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-15-1_hu4979699358949114371.webp 400w,
+               /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-15-1_hu15389575923361631140.webp 760w,
+               /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-15-1_hu13320879648571110662.webp 1200w&#34;
+               src=&#34;http://localhost:1313/media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-15-1_hu4979699358949114371.webp&#34;
+               width=&#34;672&#34;
+               height=&#34;480&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      
+    &lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;h3 id=&#34;not-a-very-good-prediction-lets-try-empirical-dynamic-models&#34;&gt;Not a very good prediction… Let’s try empirical dynamic models!&lt;/h3&gt;
+&lt;h1 id=&#34;empirical-dynamic-models-for-forecasting&#34;&gt;Empirical Dynamic Models for forecasting:&lt;/h1&gt;
+&lt;h3 id=&#34;the-model-is-a-system-of-three-ordinary-differential-equations-now-known-as-the-lorenz-equations&#34;&gt;The model is a system of three ordinary differential equations now known as the Lorenz equations:&lt;/h3&gt;
+&lt;p&gt;$$\frac{dx}{dt} = \sigma(y - x)$$
+$$\frac{dy}{dt} = x(p - x) - y$$
+$$\frac{dz}{dt} = xy - \beta z$$&lt;/p&gt;
+&lt;h3 id=&#34;we-will-use-the-simplex-function-to-determine-how-many-dimensions-time-lags-are-needed-to-effectively-develope-a-data-driven-mechanistic-formulation-of-the-time-series&#34;&gt;We will use the &lt;code&gt;simplex&lt;/code&gt; function to determine how many dimensions (time lags) are needed to effectively develope a data-driven mechanistic formulation of the time series&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;# set data for historical record (library) and prediction
+lib &amp;lt;- c(1, 48)
+pred &amp;lt;- c(49, 96)
+
+simplex_output &amp;lt;- simplex(nonstationary_y, lib, pred)
+str(simplex_output)
+
+## &#39;data.frame&#39;:    10 obs. of  16 variables:
+##  $ E                  : int  1 2 3 4 5 6 7 8 9 10
+##  $ tau                : num  1 1 1 1 1 1 1 1 1 1
+##  $ tp                 : num  1 1 1 1 1 1 1 1 1 1
+##  $ nn                 : num  2 3 4 5 6 7 8 9 10 11
+##  $ num_pred           : num  47 46 45 44 43 42 41 40 39 38
+##  $ rho                : num  0.768 0.796 0.682 0.716 0.515 ...
+##  $ mae                : num  2.81 2.76 3.03 3.1 3.38 ...
+##  $ rmse               : num  3.55 3.46 3.89 3.88 4.21 ...
+##  $ perc               : num  0.979 0.978 1 1 1 ...
+##  $ p_val              : num  7.73e-12 5.15e-13 3.37e-08 4.22e-09 1.56e-04 ...
+##  $ const_pred_num_pred: num  47 46 45 44 43 42 41 40 39 38
+##  $ const_pred_rho     : num  0.954 0.954 0.947 0.944 0.939 ...
+##  $ const_pred_mae     : num  1.008 0.988 0.989 0.951 0.966 ...
+##  $ const_pred_rmse    : num  1.23 1.21 1.22 1.17 1.18 ...
+##  $ const_pred_perc    : num  0.979 0.978 0.978 1 1 ...
+##  $ const_p_val        : num  8.26e-36 6.46e-35 1.10e-31 2.88e-30 3.02e-28 ...
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;lets-visualize-the-forecasting-skill-rho&#34;&gt;Let’s visualize the forecasting skill (rho)&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;par(mar = c(4, 4, 1, 1), mgp = c(2.5, 1, 0))  # set margins for plotting
+plot(simplex_output$E, simplex_output$rho, type = &amp;quot;l&amp;quot;, lwd = 5, col = &amp;quot;light blue&amp;quot;, xlab = &amp;quot;Embedding Dimension (E)&amp;quot;, 
+     ylab = &amp;quot;Forecast Skill (rho)&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34; &#34; srcset=&#34;
+               /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-17-1_hu5666518114772278494.webp 400w,
+               /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-17-1_hu8159935374829856186.webp 760w,
+               /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-17-1_hu4627458796794216504.webp 1200w&#34;
+               src=&#34;http://localhost:1313/media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-17-1_hu5666518114772278494.webp&#34;
+               width=&#34;672&#34;
+               height=&#34;480&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      
+    &lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;pre&gt;&lt;code&gt;simplex_output &amp;lt;- simplex(nonstationary_y, lib, pred, E = 2, tp = 1:10)
+plot(simplex_output$tp, simplex_output$rho, type = &amp;quot;l&amp;quot;, lwd = 5, col = &amp;quot;light blue&amp;quot;, xlab = &amp;quot;Time to Prediction (tp)&amp;quot;, 
+     ylab = &amp;quot;Forecast Skill (rho)&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34; &#34; srcset=&#34;
+               /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-17-2_hu5297584271275002942.webp 400w,
+               /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-17-2_hu15716748166257607717.webp 760w,
+               /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-17-2_hu4956583592973100906.webp 1200w&#34;
+               src=&#34;http://localhost:1313/media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-17-2_hu5297584271275002942.webp&#34;
+               width=&#34;672&#34;
+               height=&#34;480&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      
+    &lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;h3 id=&#34;run-simplex-to-create-edm-model-for-forecasting&#34;&gt;Run &lt;code&gt;simplex&lt;/code&gt; to create EDM model for forecasting&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;smap_output &amp;lt;- simplex(nonstationary_y, lib, pred, E = 2, stats_only = FALSE)
+
+predictions &amp;lt;- na.omit(smap_output$model_output[[1]])
+
+df_ts_st_pred &amp;lt;- data.frame(x = time[51:96], y = nonstationary_y[51:96], predictions)
+
+plot(df_ts_st$y~df_ts_st$x, type = &amp;quot;l&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34; &#34; srcset=&#34;
+               /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-18-1_hu13374928150541069539.webp 400w,
+               /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-18-1_hu9112652997378736835.webp 760w,
+               /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-18-1_hu12806932964324019150.webp 1200w&#34;
+               src=&#34;http://localhost:1313/media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-18-1_hu13374928150541069539.webp&#34;
+               width=&#34;672&#34;
+               height=&#34;480&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      
+    &lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;pre&gt;&lt;code&gt;edm &amp;lt;- ggplot(data = df_ts_st_pred) + ggtitle(&amp;quot;Forecasts from EDM&amp;quot;) + xlab(&amp;quot;Time&amp;quot;) + ylab(&amp;quot; &amp;quot;) + 
+  geom_ribbon(aes(x = x, y = y, ymin = y - 1.96*sqrt(pred_var), ymax = y +.96*sqrt(pred_var)), fill = &amp;quot;blue&amp;quot;, alpha = 0.2) +
+  geom_ribbon(aes(x = x, y = y, ymin = y-sqrt(pred_var), ymax = y+sqrt(pred_var)), fill = &amp;quot;blue&amp;quot;, alpha = 0.4) + 
+  geom_path(aes(x = x, y = y)) + 
+  geom_path(data = df_ts_st, aes(x = x, y = y)) + 
+  ylab(&amp;quot;Non-stationary Time Series&amp;quot;); edm
+&lt;/code&gt;&lt;/pre&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34; &#34; srcset=&#34;
+               /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-18-2_hu7396197151765709871.webp 400w,
+               /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-18-2_hu9742329418107655175.webp 760w,
+               /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-18-2_hu6967299816902463539.webp 1200w&#34;
+               src=&#34;http://localhost:1313/media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-18-2_hu7396197151765709871.webp&#34;
+               width=&#34;672&#34;
+               height=&#34;480&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      
+    &lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;pre&gt;&lt;code&gt;ggarrange(aa_ns + coord_cartesian(ylim = c(-20,8)) + ggtitle(&amp;quot;Forecast with ARIMA&amp;quot;),
+          edm + coord_cartesian(ylim = c(-20,8)) + ggtitle(&amp;quot;Forecast with EDM&amp;quot;)) + theme_bw()
+&lt;/code&gt;&lt;/pre&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-image-183&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Image 18.3&#34; srcset=&#34;
+               /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-18-3_hu11618994458072589488.webp 400w,
+               /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-18-3_hu10687812389112784535.webp 760w,
+               /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-18-3_hu12186086929266463582.webp 1200w&#34;
+               src=&#34;http://localhost:1313/media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-18-3_hu11618994458072589488.webp&#34;
+               width=&#34;672&#34;
+               height=&#34;480&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      Image 18.3
+    &lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;pre&gt;&lt;code&gt;ggsave(&amp;quot;forecasts.jpeg&amp;quot;, dpi = 300)
+
+## Saving 7 x 5 in image
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
