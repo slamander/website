@@ -1,5 +1,0 @@
-
----
-type: "landing"
-headless: true  
----
