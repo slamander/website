@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Circuitscape | Baecher Research</title>
+    <link>http://localhost:1313/tag/circuitscape/</link>
+      <atom:link href="http://localhost:1313/tag/circuitscape/index.xml" rel="self" type="application/rss+xml" />
+    <description>Circuitscape</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><copyright>© 2025 Alex Baecher</copyright><lastBuildDate>Wed, 12 Aug 2020 00:40:04 -0700</lastBuildDate>
+    <image>
+      <url>http://localhost:1313/media/icon_hu_f223585795974a85.png</url>
+      <title>Circuitscape</title>
+      <link>http://localhost:1313/tag/circuitscape/</link>
+    </image>
+    
+    <item>
+      <title>Mapping Ecological Flow in R (pt 1)</title>
+      <link>http://localhost:1313/post/connectivity-script/</link>
+      <pubDate>Wed, 12 Aug 2020 00:40:04 -0700</pubDate>
+      <guid>http://localhost:1313/post/connectivity-script/</guid>
+      <description>&lt;h2 id=&#34;focusing-on-randomized-paths-between-multiple-locations-or-populations-habitats-etc&#34;&gt;Focusing on randomized paths between multiple locations (or populations, habitats, etc)&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt; This is simply a tutorial. I’m not (for now) providing a review
+of the literature surrounding ecological connectivity, or commenting the
+different meanings of connectivity). This tutorial is strictly for
+demonstrating how to perform such an analysis, because–to my
+knowledge–such a tutorial doesn’t exist. That being said, please let me
+know if you find one!&lt;/p&gt;
+&lt;p&gt;This analysis can be done in R using one of two methods: 1. using the R
+package &lt;code&gt;gdistance&lt;/code&gt;, which performs the analysis natively 2. calling
+Circuitscape, an external GUI-based software widely used in ecology,
+from R&lt;/p&gt;
+&lt;p&gt;In the future, I will post about using Circuitscape in R, making use of
+command prompt and a combination of packages, including Bill Peterman’s
+&lt;code&gt;ResistanceGA&lt;/code&gt;. For now, I’m going to focus on performing the analysis
+natively using &lt;code&gt;gdistance&lt;/code&gt;. Although, &lt;code&gt;gdistance&lt;/code&gt; is only programmed to
+analysis randomized shortest-path between two locations, I will
+demonstrate how, through the use of a simple loop, you can perform the
+analysis in R.&lt;/p&gt;
+&lt;p&gt;For the analysis, I will &lt;em&gt;only&lt;/em&gt; use widely publically available data
+sets. As for a species, I’ve chosen the very charasmatic Jordan’s Red
+Cheeked Salamander, endemic to the Great Smoky Mountains National Park
+(USA).&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-jordans-red-cheeked-salamander&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;posts/connectivity_script_files/figure-markdown_strict/jrcs.jpg&#34; alt=&#34;Jordan&amp;#39;s Red Cheeked Salamander&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      Jordan&amp;rsquo;s Red Cheeked Salamander
+    &lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;For this tutorial, you’re going to need the following libraries
+installed:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;gdistance&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;tidyverse&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;rgeos&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;elevatr&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ggplot2&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;tigris&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;spocc&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;raster&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;viridis&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ggthemes&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;To save space and reduce the amount of intermediate variables, I will
+make use of the &lt;code&gt;tidyverse&lt;/code&gt; syntax. This includes using data processing
+features of &lt;code&gt;dplyr&lt;/code&gt; as well as pipes (&lt;code&gt;%&amp;gt;%&lt;/code&gt;). If you prefer not to use
+these features, simply focus on the key functions and data sources which
+can easily be incorporated into your own preferred work flow.&lt;/p&gt;
+&lt;h2 id=&#34;lets-get-started&#34;&gt;Let’s get started!&lt;/h2&gt;
+&lt;p&gt;First, lets download a shapefile to work with.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;library(tigris)         # Tigris package for USA census data
+library(tidyverse)
+states &amp;lt;- states()
+
+se &amp;lt;- states %&amp;gt;%
+  subset(REGION == &amp;quot;3&amp;quot;) 
+
+TN_NC &amp;lt;- se %&amp;gt;%     # Subsetting the data to Tennessee and North Carolina
+  subset(NAME %in% c(&amp;quot;Tennessee&amp;quot;, &amp;quot;North Carolina&amp;quot;))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Next, lets download some species occurrence records for Jordan’s Red
+Cheeked Salamander (JRCS) from the Global Biodiversity Information
+Facility using the R package &lt;code&gt;spocc&lt;/code&gt;. In this query, I will pull &lt;em&gt;only
+the first&lt;/em&gt; 1000 records. Yes, that means I’m pulling records in no
+particular order, and that they can be biased. Don’t @ me.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;library(spocc)
+
+## Warning: package &#39;spocc&#39; was built under R version 4.0.2
+
+library(raster)
+
+## Warning: package &#39;raster&#39; was built under R version 4.0.2
+
+## Loading required package: sp
+
+## 
+## Attaching package: &#39;raster&#39;
+
+## The following object is masked from &#39;package:dplyr&#39;:
+## 
+##     select
+
+## The following object is masked from &#39;package:tidyr&#39;:
+## 
+##     extract
+
+Pj &amp;lt;- occ(query = &amp;quot;Plethodon jordani&amp;quot;,                 # JRCS scientific name
+          from = &amp;quot;gbif&amp;quot;,                               # limiting query to *the first* 1000 records
+          limit=1000,                                  # limiting query to *the first* 1000 records
+          has_coords = T)                              # limiting those 1000 records to those that have geo-referenced data
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now that we have the data, we need to organize and clean it using
+&lt;code&gt;dplyr&lt;/code&gt;. Luckily, &lt;code&gt;spocc&lt;/code&gt; has improved their naming system, so this is
+easier to do now.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Pj_sp &amp;lt;- Pj$gbif$data$Plethodon_jordani %&amp;gt;%            # Grabbing the Darwin-core data from the spocc object
+  dplyr::select(longitude,                             # Keep locations and year, discard the rest
+                latitude,
+                year) %&amp;gt;%                   
+  dplyr::filter(year &amp;gt; 2000) %&amp;gt;%                       # Filter records to only those after year 2000
+  filter(!duplicated(round(longitude, 2),              # Remove duplicate records using rounded decimals (this removes points very near to one-another)       
+                     round(latitude, 2)) == TRUE) %&amp;gt;%  # &amp;gt;&amp;gt; See notes below about ^^
+  dplyr::mutate(lon = scale(longitude),                # Remove points far outside the cluster of occurrences
+                lat = scale(latitude)) %&amp;gt;%             # &amp;gt;&amp;gt; See notes below about ^^
+  dplyr::filter(!abs(lon)&amp;gt;2) %&amp;gt;%
+  dplyr::filter(!abs(lat)&amp;gt;2) %&amp;gt;%
+  dplyr::select(longitude,
+                latitude) %&amp;gt;%
+  SpatialPoints(proj4string = crs(se)) 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Notes&lt;/strong&gt; To remove stacked points, or points that are clustered very
+closely, I rounded the decimal points to the second hundreths place and
+removed duplicates. This step is actually very biologically meaningful…
+Because we want to map potential flow between populations of JRCS, we
+want each point to represent a population–meaning each point must be
+sufficiently isolated so as to only be connected through stochastic
+disperal. Because JRCS is dispersal limited, I chose to remove points
+less that ~10 km from one another (approximately the resolution of the
+second decimal point of a gps coordinate).&lt;/p&gt;
+&lt;p&gt;I removed points that were suspiciously far outside the cluster of
+presences by creating new variables: &lt;code&gt;lon&lt;/code&gt; and &lt;code&gt;lat&lt;/code&gt;, which are Z-scores
+of the latitude and longitude variables (by subtracting the mean and
+dividing by standard deviation, or using the &lt;code&gt;scale&lt;/code&gt; function). I them
+removed values greater that 2, which represent points that are two
+standard deviations from the mean latitude and mean longitude.&lt;/p&gt;
+&lt;p&gt;Let’s plot our points&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;library(ggplot2)
+library(viridis)
+
+## Loading required package: viridisLite
+
+library(ggthemes)
+
+ggplot() + geom_polygon(data=se, aes(x=long, y=lat, grou=group), col=&amp;quot;grey40&amp;quot;, fill=&amp;quot;grey80&amp;quot;) +
+  geom_polygon(data=TN_NC, aes(x=long, y=lat), col=&amp;quot;grey40&amp;quot;, fill=&amp;quot;light blue&amp;quot;) + 
+  coord_quickmap() + theme_map()
+
+## Regions defined for each Polygons
+
+## Warning: Ignoring unknown aesthetics: grou
+
+## Regions defined for each Polygons
+&lt;/code&gt;&lt;/pre&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-jordans-red-cheeked-salamander&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;posts/connectivity_script_files/figure-markdown_strict/plot_presences-1.png&#34; alt=&#34;Jordan&amp;#39;s Red Cheeked Salamander&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      Jordan&amp;rsquo;s Red Cheeked Salamander
+    &lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;To create a custom study area, shaped to our occurrence points, we can
+create a convex hull around our points using &lt;code&gt;chull()&lt;/code&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Pj_coords &amp;lt;- Pj_sp@coords                                                  
+Pj_chull &amp;lt;- chull(Pj_sp@coords)                           # Creating convex hull
+
+Pj_chull_ends &amp;lt;- Pj_sp@coords[c(Pj_chull, Pj_chull[1]),]  # generate the end points of polygon. 
+Pj_poly &amp;lt;- SpatialPolygons(
+  list(Polygons(
+    list(Polygon(Pj_chull_ends)), ID=1)),
+                             proj4string = crs(se))       # convert coords to SpatialPolygons 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now, we will create a buffer around those points using
+&lt;code&gt;rgeos::gBuffer()&lt;/code&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;library(rgeos)
+Pj_poly_buff &amp;lt;- gBuffer(Pj_poly, width = 0.05, byid=T)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Let’s have a look at your buffered polygon:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;ggplot() + geom_polygon(data=TN_NC, aes(x=long, y=lat), col=&amp;quot;grey40&amp;quot;, fill=&amp;quot;light blue&amp;quot;) + 
+  geom_polygon(data=Pj_poly_buff, aes(x=long, y=lat, grou=group), col=&amp;quot;grey40&amp;quot;, fill=&amp;quot;pink&amp;quot;) +
+  geom_point(data=as.data.frame(Pj_sp@coords), aes(x=longitude, y=latitude), size=0.01) + 
+  coord_quickmap() + theme_map()
+
+## Regions defined for each Polygons
+
+## Warning: Ignoring unknown aesthetics: grou
+&lt;/code&gt;&lt;/pre&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-buffered-polygon&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;posts/connectivity_script_files/figure-markdown_strict/unnamed-chunk-1-1.png&#34; alt=&#34;Buffered polygon&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      Buffered polygon
+    &lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;To create our resistance layers for the connectivity analysis, let’s
+download a digital elevation model (DEM) using package &lt;code&gt;elevatr&lt;/code&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;library(elevatr)
+elevation &amp;lt;- get_elev_raster(Pj_poly_buff, z = 8)         # This will find a DEM tile nearest to our polygon 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;While elevation is important, we can derive other biologically important
+variables using the &lt;code&gt;raster::terrain()&lt;/code&gt;, inlcuding aspect (direction a
+hillside is facing) and topographic roughness index (TRI). In very
+simple terms, TRI calculates the change in elevation between a point and
+its surroundings (in a neighborhood of 8 points).&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;elv &amp;lt;- elevation %&amp;gt;%                                      # First, lets cut the DEM to our study area 
+  crop(Pj_poly_buff) %&amp;gt;%                                  # crop to the extent
+  mask(Pj_poly_buff)                                      # mask to the edges
+
+asp &amp;lt;- terrain(elv, opt=&amp;quot;aspect&amp;quot;, neighbors = 8)          # Calculate aspect
+
+ggplot(as.data.frame(asp, xy=T)) + geom_raster(aes(x=x, y=y, fill=aspect)) + 
+  scale_fill_continuous(na.value=NA) + theme_map() + theme(legend.position = &amp;quot;right&amp;quot;)
+
+## Warning: Removed 18361 rows containing missing values (geom_raster).
+&lt;/code&gt;&lt;/pre&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-creating-gis-layers-for-the-great-smoky-mtns&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;posts/connectivity_script_files/figure-markdown_strict/create_layers-1.png&#34; alt=&#34;creating gis layers for the Great Smoky Mtns&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      creating gis layers for the Great Smoky Mtns
+    &lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;To simplify our analysis for this demonstration, I’m going to cut down
+the number of presence points to only 5. Because we will be calculating
+pairwise random shortest-paths (from now on, “random walks”), we will
+calculate 10 paths.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;set.seed(6)                                               # To make your results match mine
+Pj_sample &amp;lt;- Pj_coords[sample(nrow(Pj_coords), 5),]       # Take 5 random locations
+
+ggplot(as.data.frame(asp, xy=T)) + geom_raster(aes(x=x, y=y, fill=aspect)) + 
+  geom_point(data=as.data.frame(Pj_sample), aes(x=longitude, y=latitude), size=2, col=&amp;quot;white&amp;quot;) +
+  scale_fill_continuous(na.value=NA) + theme_map()
+
+## Warning: Removed 18361 rows containing missing values (geom_raster).
+&lt;/code&gt;&lt;/pre&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-random-sample-of-sites-in-the-great-smoky-mtns&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;posts/connectivity_script_files/figure-markdown_strict/gather_random_sample_of_sites-1.png&#34; alt=&#34;random sample of sites in the Great Smoky Mtns&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      random sample of sites in the Great Smoky Mtns
+    &lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;To make our pairwise random walks, we have to create a side index.
+Here’s quick little solution I made which creates a matrix of every
+conceivable combination of points:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Pj_combn &amp;lt;- combn(nrow(Pj_sample),2) %&amp;gt;%
+  t() %&amp;gt;%
+  as.matrix()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;To perform a random walks analysis, we have to create a transition
+matrix using &lt;code&gt;gdistance::transition()&lt;/code&gt;, as well as perform a
+geocorrection.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;library(gdistance)
+asp_tr &amp;lt;- transition(asp, transitionFunction = mean, 4) %&amp;gt;%
+    geoCorrection(type=&amp;quot;c&amp;quot;,multpl=F)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now comes the fun part. This loop will perform the random walk routine
+using &lt;code&gt;gdistance:passage()&lt;/code&gt; for each pairwise path, generating a flow
+map. This flow map can be considered as “conductance” a la Circuitscape,
+or the “probabilities of passages” based on randomized shortest-paths.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;passages &amp;lt;- list()                                                     # Create a list to store the passage probability rasters in
+system.time(                                                           # Keep track of how long this takes
+  for (i in 1:nrow(Pj_combn)) {           
+    locations &amp;lt;- SpatialPoints(rbind(Pj_sample[Pj_combn[i,1],1:2],     # create origin points
+                                      Pj_sample[Pj_combn[i,2],1:2]),   # create destination (or goal) points, to traverse
+                                crs(se))
+    passages[[i]] &amp;lt;- passage(asp_tr,                                   # run the passage function 
+                                  origin=locations[1],                 # set orgin point
+                                  goal=locations[2],                   # set goal point
+                             theta = 0.00001)                             # set theta (tuning parameter, see notes below)
+    print(paste((i/nrow(Pj_combn))*100, &amp;quot;% complete&amp;quot;))
+  }
+)
+
+## [1] &amp;quot;10 % complete&amp;quot;
+## [1] &amp;quot;20 % complete&amp;quot;
+## [1] &amp;quot;30 % complete&amp;quot;
+## [1] &amp;quot;40 % complete&amp;quot;
+## [1] &amp;quot;50 % complete&amp;quot;
+## [1] &amp;quot;60 % complete&amp;quot;
+## [1] &amp;quot;70 % complete&amp;quot;
+## [1] &amp;quot;80 % complete&amp;quot;
+## [1] &amp;quot;90 % complete&amp;quot;
+## [1] &amp;quot;100 % complete&amp;quot;
+
+##    user  system elapsed 
+##   15.89    2.88   18.76
+
+passages &amp;lt;- stack(passages)                                            # create a raster stack of all the passage probabilities
+passages_overlay &amp;lt;- sum(passages)/nrow(Pj_combn)                       # calculate average
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Notes&lt;/strong&gt; In our passage function, we set theta, (&lt;em&gt;θ&lt;/em&gt;), a tuning
+parameter. Extremely low values result in a random walk (equivilant to
+Circuit Theory), but as &lt;em&gt;θ&lt;/em&gt;¸ increases, the passage converges on least
+cost path. I supplied a value somewhere in the middle.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;colors &amp;lt;- c(&amp;quot;grey60&amp;quot;, viridis_pal(option=&amp;quot;plasma&amp;quot;, begin = 0.3, end = 1)(20))
+ggplot(as.data.frame(passages_overlay, xy=T)) + geom_raster(aes(x=x,y=y,fill=layer)) +
+  scale_fill_gradientn(colors = colors, na.value = NA) + 
+  theme_map() +   theme(legend.position = &amp;quot;right&amp;quot;)
+
+## Warning: Removed 18361 rows containing missing values (geom_raster).
+&lt;/code&gt;&lt;/pre&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-ecological-flow-of-jordans-red-cheeked-salamander&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;posts/connectivity_script_files/figure-markdown_strict/plot_flow-1.png&#34; alt=&#34;Ecological Flow of Jordan&amp;#39;s Red Cheeked Salamander&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      Ecological Flow of Jordan&amp;rsquo;s Red Cheeked Salamander
+    &lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;There you have it!&lt;/p&gt;
+&lt;p&gt;Now, this was an &lt;em&gt;extremely&lt;/em&gt; short demonstration… In the future, I plan
+to make many additional posts on connectivity, what it means, how to use
+it, as well as provide some more tutorials.&lt;/p&gt;
+&lt;p&gt;Best,&lt;/p&gt;
+&lt;p&gt;-Alex.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

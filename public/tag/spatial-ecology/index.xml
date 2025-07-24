@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Spatial Ecology | Baecher Research</title>
+    <link>http://localhost:1313/tag/spatial-ecology/</link>
+      <atom:link href="http://localhost:1313/tag/spatial-ecology/index.xml" rel="self" type="application/rss+xml" />
+    <description>Spatial Ecology</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><copyright>© 2025 Alex Baecher</copyright><lastBuildDate>Tue, 10 Sep 2019 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>http://localhost:1313/media/icon_hu_f223585795974a85.png</url>
+      <title>Spatial Ecology</title>
+      <link>http://localhost:1313/tag/spatial-ecology/</link>
+    </image>
+    
+    <item>
+      <title>Geostatistical Modeling</title>
+      <link>http://localhost:1313/project/geostatistical-modeling/</link>
+      <pubDate>Tue, 10 Sep 2019 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/project/geostatistical-modeling/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Geostatistical Modeling&lt;/strong&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
