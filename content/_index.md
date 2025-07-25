@@ -15,7 +15,7 @@ sections:
     background:
       color: transparent
     spacing:
-      padding: ["0", "0", "0", "0"]
+      padding: ["0px", "0px", "0px", "0px"]
 
   - block: hero
     content:
