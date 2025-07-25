@@ -1,33 +1,65 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>RJ Fletcher | Baecher Research</title><link>https://alexbaecher.com/author/rj-fletcher/</link><atom:link href="https://alexbaecher.com/author/rj-fletcher/index.xml" rel="self" type="application/rss+xml"/><description>RJ Fletcher</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><copyright>© 2025 Alex Baecher</copyright><lastBuildDate>Tue, 19 Dec 2023 00:00:00 +0000</lastBuildDate><image><url>https://alexbaecher.com/media/logo_hu2039277577754200582.png</url><title>RJ Fletcher</title><link>https://alexbaecher.com/author/rj-fletcher/</link></image><item><title>Expanding the scope of connectivity modeling with Markov chains: perspectives and applications in R</title><link>https://alexbaecher.com/talk/samc_iale/</link><pubDate>Tue, 19 Dec 2023 00:00:00 +0000</pubDate><guid>https://alexbaecher.com/talk/samc_iale/</guid><description/></item><item><title>Species redistribution and connectivity (Intro)</title><link>https://alexbaecher.com/talk/samc_sotm/</link><pubDate>Tue, 19 Dec 2023 00:00:00 +0000</pubDate><guid>https://alexbaecher.com/talk/samc_sotm/</guid><description>&lt;p>&lt;strong>Description:&lt;/strong>
-This 1-day workshop will distill the basic principles of connectivity modeling and its relevance to predicting movement and species redistribution with environmental change. Participants will be introduced to connectivity as well as a new framework utilizing spatial-absorbing Markov chains (SAMC), which helps unify other approaches. Along the way, we will discuss how connectivity is relevant to core principles of species ranges and redistribution. We will also discuss the common problems, assumptions, and oversights occurring in published predictions of species range redistribution.&lt;/p>
-&lt;p>Topics:
-&lt;strong>Background and motivation&lt;/strong>&lt;/p>
-&lt;ul>
-&lt;li>Connectivity and species on the move&lt;/li>
-&lt;li>The state of connectivity modeling&lt;/li>
-&lt;li>R activity —introduction to connectivity using R&lt;/li>
-&lt;/ul>
-&lt;p>&lt;strong>Markov chains, connectivity, and the SAMC framework&lt;/strong>&lt;/p>
-&lt;ul>
-&lt;li>An introduction to the SAMC and the samc package&lt;/li>
-&lt;li>Relationships of SAMC with other connectivity frameworks&lt;/li>
-&lt;li>R activity—contrasting the SAMC and circuit theory&lt;/li>
-&lt;/ul>
-&lt;p>&lt;strong>Building connectivity models with the SAMC&lt;/strong>&lt;/p>
-&lt;ul>
-&lt;li>Building and tuning a SAMC model&lt;/li>
-&lt;li>What kinds data are needed?&lt;/li>
-&lt;li>R activity—Burmese python spread and potential corridors&lt;/li>
-&lt;li>Modeling dispersal kernels with the SAMC&lt;/li>
-&lt;li>R activity—kernels with black bears&lt;/li>
-&lt;li>Spatial networks and the SAMC&lt;/li>
-&lt;li>R activity—graph example with snail kites&lt;/li>
-&lt;li>Discussion: how to build your own models&lt;/li>
-&lt;/ul>
-&lt;p>&lt;strong>Emerging topics&lt;/strong>&lt;/p>
-&lt;ul>
-&lt;li>Movement ecology, movement trajectories, and the SAMC&lt;/li>
-&lt;li>Dynamic models for connectivity and species redistribution&lt;/li>
-&lt;li>Scaling models to large regions&lt;/li>
-&lt;li>Discussion of applications, facilitating use, etc.&lt;/li>
-&lt;/ul></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>RJ Fletcher | Baecher Research</title>
+    <link>https://alexbaecher.com/author/rj-fletcher/</link>
+      <atom:link href="https://alexbaecher.com/author/rj-fletcher/index.xml" rel="self" type="application/rss+xml" />
+    <description>RJ Fletcher</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><copyright>© 2025 Alex Baecher</copyright><lastBuildDate>Tue, 19 Dec 2023 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://alexbaecher.com/media/logo_hu2039277577754200582.png</url>
+      <title>RJ Fletcher</title>
+      <link>https://alexbaecher.com/author/rj-fletcher/</link>
+    </image>
+    
+    <item>
+      <title>Expanding the scope of connectivity modeling with Markov chains: perspectives and applications in R</title>
+      <link>https://alexbaecher.com/talk/samc_iale/</link>
+      <pubDate>Tue, 19 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://alexbaecher.com/talk/samc_iale/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Species redistribution and connectivity (Intro)</title>
+      <link>https://alexbaecher.com/talk/samc_sotm/</link>
+      <pubDate>Tue, 19 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://alexbaecher.com/talk/samc_sotm/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Description:&lt;/strong&gt;
+This 1-day workshop will distill the basic principles of connectivity modeling and its relevance to predicting movement and species redistribution with environmental change. Participants will be introduced to connectivity as well as a new framework utilizing spatial-absorbing Markov chains (SAMC), which helps unify other approaches. Along the way, we will discuss how connectivity is relevant to core principles of species ranges and redistribution. We will also discuss the common problems, assumptions, and oversights occurring in published predictions of species range redistribution.&lt;/p&gt;
+&lt;p&gt;Topics:
+&lt;strong&gt;Background and motivation&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Connectivity and species on the move&lt;/li&gt;
+&lt;li&gt;The state of connectivity modeling&lt;/li&gt;
+&lt;li&gt;R activity —introduction to connectivity using R&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Markov chains, connectivity, and the SAMC framework&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;An introduction to the SAMC and the samc package&lt;/li&gt;
+&lt;li&gt;Relationships of SAMC with other connectivity frameworks&lt;/li&gt;
+&lt;li&gt;R activity—contrasting the SAMC and circuit theory&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Building connectivity models with the SAMC&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Building and tuning a SAMC model&lt;/li&gt;
+&lt;li&gt;What kinds data are needed?&lt;/li&gt;
+&lt;li&gt;R activity—Burmese python spread and potential corridors&lt;/li&gt;
+&lt;li&gt;Modeling dispersal kernels with the SAMC&lt;/li&gt;
+&lt;li&gt;R activity—kernels with black bears&lt;/li&gt;
+&lt;li&gt;Spatial networks and the SAMC&lt;/li&gt;
+&lt;li&gt;R activity—graph example with snail kites&lt;/li&gt;
+&lt;li&gt;Discussion: how to build your own models&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Emerging topics&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Movement ecology, movement trajectories, and the SAMC&lt;/li&gt;
+&lt;li&gt;Dynamic models for connectivity and species redistribution&lt;/li&gt;
+&lt;li&gt;Scaling models to large regions&lt;/li&gt;
+&lt;li&gt;Discussion of applications, facilitating use, etc.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

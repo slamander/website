@@ -1,352 +1,640 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Regression | Baecher Research</title><link>https://alexbaecher.com/tag/regression/</link><atom:link href="https://alexbaecher.com/tag/regression/index.xml" rel="self" type="application/rss+xml"/><description>Regression</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><copyright>© 2025 Alex Baecher</copyright><lastBuildDate>Wed, 22 Sep 2021 00:40:04 -0700</lastBuildDate><image><url>https://alexbaecher.com/media/logo_hu2039277577754200582.png</url><title>Regression</title><link>https://alexbaecher.com/tag/regression/</link></image><item><title>Linear regression with gradient descent</title><link>https://alexbaecher.com/post/gradient-descent/</link><pubDate>Wed, 22 Sep 2021 00:40:04 -0700</pubDate><guid>https://alexbaecher.com/post/gradient-descent/</guid><description>&lt;h2 id="introduction-linear-regression-with-gradient-descent">Introduction linear regression with gradient descent&lt;/h2>
-&lt;p>This tutorial is a rough introduction into using gradient descent algorithms to estimate parameters (slope and intercept) for standard linear regressions, as an alternative to ordinary least squares (OLS) regression with a maximum likelihood estimator. To begin, I simulate data to perform a standard OLS regression with maximum likelihood using sums of squares. Once explained, I then demonstrate how to substitute gradient descent simply and interpret results.&lt;/p>
-&lt;pre>&lt;code>library(tidyverse)
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Regression | Baecher Research</title>
+    <link>https://alexbaecher.com/tag/regression/</link>
+      <atom:link href="https://alexbaecher.com/tag/regression/index.xml" rel="self" type="application/rss+xml" />
+    <description>Regression</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><copyright>© 2025 Alex Baecher</copyright><lastBuildDate>Wed, 22 Sep 2021 00:40:04 -0700</lastBuildDate>
+    <image>
+      <url>https://alexbaecher.com/media/logo_hu2039277577754200582.png</url>
+      <title>Regression</title>
+      <link>https://alexbaecher.com/tag/regression/</link>
+    </image>
+    
+    <item>
+      <title>Linear regression with gradient descent</title>
+      <link>https://alexbaecher.com/post/gradient-descent/</link>
+      <pubDate>Wed, 22 Sep 2021 00:40:04 -0700</pubDate>
+      <guid>https://alexbaecher.com/post/gradient-descent/</guid>
+      <description>&lt;h2 id=&#34;introduction-linear-regression-with-gradient-descent&#34;&gt;Introduction linear regression with gradient descent&lt;/h2&gt;
+&lt;p&gt;This tutorial is a rough introduction into using gradient descent algorithms to estimate parameters (slope and intercept) for standard linear regressions, as an alternative to ordinary least squares (OLS) regression with a maximum likelihood estimator. To begin, I simulate data to perform a standard OLS regression with maximum likelihood using sums of squares. Once explained, I then demonstrate how to substitute gradient descent simply and interpret results.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;library(tidyverse)
+
 ## -- Attaching packages --------------------------------------- tidyverse 1.3.1 --
-## v ggplot2 3.3.5 v purrr 0.3.4
-## v tibble 3.1.3 v dplyr 1.0.7
-## v tidyr 1.1.3 v stringr 1.4.0
-## v readr 2.0.1 v forcats 0.5.1
-## Warning: package 'readr' was built under R version 4.1.1
+
+## v ggplot2 3.3.5     v purrr   0.3.4
+## v tibble  3.1.3     v dplyr   1.0.7
+## v tidyr   1.1.3     v stringr 1.4.0
+## v readr   2.0.1     v forcats 0.5.1
+
+## Warning: package &#39;readr&#39; was built under R version 4.1.1
+
 ## -- Conflicts ------------------------------------------ tidyverse_conflicts() --
 ## x dplyr::filter() masks stats::filter()
-## x dplyr::lag() masks stats::lag()
-&lt;/code>&lt;/pre>
-&lt;h1 id="ordinary-least-square-regression">Ordinary Least Square Regression&lt;/h1>
-&lt;h2 id="simulate-data">Simulate data&lt;/h2>
-&lt;h3 id="generate-random-data-in-which-y-is-a-noisy-function-of-x">Generate random data in which y is a noisy function of x&lt;/h3>
-&lt;pre>&lt;code>set.seed(123)
+## x dplyr::lag()    masks stats::lag()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;ordinary-least-square-regression&#34;&gt;Ordinary Least Square Regression&lt;/h1&gt;
+&lt;h2 id=&#34;simulate-data&#34;&gt;Simulate data&lt;/h2&gt;
+&lt;h3 id=&#34;generate-random-data-in-which-y-is-a-noisy-function-of-x&#34;&gt;Generate random data in which y is a noisy function of x&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;set.seed(123)
+
 x &amp;lt;- runif(1000, -5, 5)
 y &amp;lt;- x + rnorm(1000) + 3
-&lt;/code>&lt;/pre>
-&lt;h3 id="fit-a-linear-model">Fit a linear model&lt;/h3>
-&lt;pre>&lt;code>lm &amp;lt;- lm( y ~ x ) # Ordinary Least Squares regression with General Linear Model
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;fit-a-linear-model&#34;&gt;Fit a linear model&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;lm &amp;lt;- lm( y ~ x ) # Ordinary Least Squares regression with General Linear Model 
 mod &amp;lt;- print(lm)
-##
+
+## 
 ## Call:
 ## lm(formula = y ~ x)
-##
+## 
 ## Coefficients:
-## (Intercept) x
-## 3.0118 0.9942
+## (Intercept)            x  
+##      3.0118       0.9942
+
 mod
-##
+
+## 
 ## Call:
 ## lm(formula = y ~ x)
-##
+## 
 ## Coefficients:
-## (Intercept) x
-## 3.0118 0.9942
-&lt;/code>&lt;/pre>
-&lt;h3 id="plot-the-data-and-the-model">Plot the data and the model&lt;/h3>
-&lt;pre>&lt;code>plot(x,y, col = &amp;quot;grey80&amp;quot;, main='Regression using lm()', xlim = c(-2, 5), ylim = c(0,10));
+## (Intercept)            x  
+##      3.0118       0.9942
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;plot-the-data-and-the-model&#34;&gt;Plot the data and the model&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;plot(x,y, col = &amp;quot;grey80&amp;quot;, main=&#39;Regression using lm()&#39;, xlim = c(-2, 5), ylim = c(0,10)); 
 text(0, 8, paste(&amp;quot;Intercept = &amp;quot;, round(mod$coefficients[1], 2), sep = &amp;quot;&amp;quot;));
 text(4, 2, paste(&amp;quot;Slope = &amp;quot;, round(mod$coefficients[2], 2), sep = &amp;quot;&amp;quot;));
 abline(v = 0, col = &amp;quot;grey80&amp;quot;); # line for y-intercept
 abline(h = mod$coefficients[1], col = &amp;quot;grey80&amp;quot;) # plot horizontal line at intercept value
-abline(a = mod$coefficients[1], b = mod$coefficients[2], col='blue', lwd=2) # use slope and intercept to plot best fit line
-&lt;/code>&lt;/pre>
-&lt;figure >
-&lt;div class="d-flex justify-content-center">
-&lt;div class="w-100" >&lt;img alt=" " srcset="
-/media/posts/lr_files/figure-markdown_strict/unnamed-chunk-4-1_hu9860427820259539071.webp 400w,
-/media/posts/lr_files/figure-markdown_strict/unnamed-chunk-4-1_hu9486235095446895088.webp 760w,
-/media/posts/lr_files/figure-markdown_strict/unnamed-chunk-4-1_hu8859505797292339637.webp 1200w"
-src="https://alexbaecher.com/media/posts/lr_files/figure-markdown_strict/unnamed-chunk-4-1_hu9860427820259539071.webp"
-width="672"
-height="480"
-loading="lazy" data-zoomable />&lt;/div>
-&lt;/div>&lt;figcaption>
-&lt;/figcaption>&lt;/figure>
-&lt;h3 id="calculate-intercept-and-slope-using-sum-of-squares">Calculate intercept and slope using sum of squares&lt;/h3>
-&lt;pre>&lt;code>x_bar &amp;lt;- mean(x) # calculate mean of independent variable
+abline(a = mod$coefficients[1], b = mod$coefficients[2], col=&#39;blue&#39;, lwd=2) # use slope and intercept to plot best fit line
+&lt;/code&gt;&lt;/pre&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34; &#34; srcset=&#34;
+               /media/posts/lr_files/figure-markdown_strict/unnamed-chunk-4-1_hu9860427820259539071.webp 400w,
+               /media/posts/lr_files/figure-markdown_strict/unnamed-chunk-4-1_hu9486235095446895088.webp 760w,
+               /media/posts/lr_files/figure-markdown_strict/unnamed-chunk-4-1_hu8859505797292339637.webp 1200w&#34;
+               src=&#34;https://alexbaecher.com/media/posts/lr_files/figure-markdown_strict/unnamed-chunk-4-1_hu9860427820259539071.webp&#34;
+               width=&#34;672&#34;
+               height=&#34;480&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      
+    &lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;h3 id=&#34;calculate-intercept-and-slope-using-sum-of-squares&#34;&gt;Calculate intercept and slope using sum of squares&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;x_bar &amp;lt;- mean(x) # calculate mean of independent variable
 y_bar &amp;lt;- mean(y) # calculate mean of dependent variable
+
 slope &amp;lt;- sum((x - x_bar)*(y - y_bar))/sum((x - x_bar)^2) # calculate sum of differences between x &amp;amp; y, and divide by sum of squares of x
 slope
+
 ## [1] 0.9941662
+
 intercept &amp;lt;- y_bar - (slope * x_bar) # calculate difference of y_bar across the linear predictor
 intercept
+
 ## [1] 3.011774
-&lt;/code>&lt;/pre>
-&lt;h3 id="plot-data-using-manually-calculated-parameters">Plot data using manually calculated parameters&lt;/h3>
-&lt;pre>&lt;code>plot(x,y, col = &amp;quot;grey80&amp;quot;, main='Regression with manual calculations', xlim = c(-2, 5), ylim = c(0,10));
-abline(a = intercept, b = slope, col='blue', lwd=2)
-&lt;/code>&lt;/pre>
-&lt;figure >
-&lt;div class="d-flex justify-content-center">
-&lt;div class="w-100" >&lt;img alt=" " srcset="
-/media/posts/lr_files/figure-markdown_strict/unnamed-chunk-6-1_hu6747094844812128651.webp 400w,
-/media/posts/lr_files/figure-markdown_strict/unnamed-chunk-6-1_hu15171377414764716868.webp 760w,
-/media/posts/lr_files/figure-markdown_strict/unnamed-chunk-6-1_hu14793946180658159100.webp 1200w"
-src="https://alexbaecher.com/media/posts/lr_files/figure-markdown_strict/unnamed-chunk-6-1_hu6747094844812128651.webp"
-width="672"
-height="480"
-loading="lazy" data-zoomable />&lt;/div>
-&lt;/div>&lt;figcaption>
-&lt;/figcaption>&lt;/figure>
-&lt;h1 id="gradient-descent">Gradient Descent:&lt;/h1>
-&lt;h2 id="using-the-same-simulated-data-as-before-we-will-estimate-parameters-using-a-machine-learning-algorithm">Using the same simulated data as before, we will estimate parameters using a machine learning algorithm&lt;/h2>
-&lt;h3 id="heres-some-figures-i-found-helpful-while-trying-to-understand-how-gradient-descent-works">Here&amp;rsquo;s some figures I found helpful while trying to understand how gradient descent works:&lt;/h3>
-&lt;figure >
-&lt;div class="d-flex justify-content-center">
-&lt;div class="w-100" >&lt;img alt=" " srcset="
-/media/posts/lr_files/figure-markdown_strict/hiking_analogy_hu16707482620612177528.webp 400w,
-/media/posts/lr_files/figure-markdown_strict/hiking_analogy_hu8643088186133544508.webp 760w,
-/media/posts/lr_files/figure-markdown_strict/hiking_analogy_hu16647294568684891759.webp 1200w"
-src="https://alexbaecher.com/media/posts/lr_files/figure-markdown_strict/hiking_analogy_hu16707482620612177528.webp"
-width="700"
-height="465"
-loading="lazy" data-zoomable />&lt;/div>
-&lt;/div>&lt;figcaption>
-&lt;/figcaption>&lt;/figure>
-&lt;figure >
-&lt;div class="d-flex justify-content-center">
-&lt;div class="w-100" >&lt;img alt=" " srcset="
-/media/posts/lr_files/figure-markdown_strict/lr_diagram_hu4875460031701007284.webp 400w,
-/media/posts/lr_files/figure-markdown_strict/lr_diagram_hu12845061643091946287.webp 760w,
-/media/posts/lr_files/figure-markdown_strict/lr_diagram_hu17409504747599895843.webp 1200w"
-src="https://alexbaecher.com/media/posts/lr_files/figure-markdown_strict/lr_diagram_hu4875460031701007284.webp"
-width="760"
-height="473"
-loading="lazy" data-zoomable />&lt;/div>
-&lt;/div>&lt;figcaption>
-&lt;/figcaption>&lt;/figure>
-&lt;h3 id="to-determine-the-goodness-of-fit-for-a-given-set-of-parameters-we-will-empliment-a-squared-error-cost-function-a-way-to-calculate-the-degree-of-error-for-a-guess-for-slope-and-intercept">To determine the goodness of fit for a given set of parameters, we will empliment a Squared error cost function (a way to calculate the degree of error for a guess for slope and intercept)&lt;/h3>
-&lt;pre>&lt;code>cost &amp;lt;- function(X, y, theta) {
-sum( (X %*% theta - y)^2 ) / (2*length(y))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;plot-data-using-manually-calculated-parameters&#34;&gt;Plot data using manually calculated parameters&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;plot(x,y, col = &amp;quot;grey80&amp;quot;, main=&#39;Regression with manual calculations&#39;, xlim = c(-2, 5), ylim = c(0,10)); 
+abline(a = intercept, b = slope, col=&#39;blue&#39;, lwd=2)
+&lt;/code&gt;&lt;/pre&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34; &#34; srcset=&#34;
+               /media/posts/lr_files/figure-markdown_strict/unnamed-chunk-6-1_hu6747094844812128651.webp 400w,
+               /media/posts/lr_files/figure-markdown_strict/unnamed-chunk-6-1_hu15171377414764716868.webp 760w,
+               /media/posts/lr_files/figure-markdown_strict/unnamed-chunk-6-1_hu14793946180658159100.webp 1200w&#34;
+               src=&#34;https://alexbaecher.com/media/posts/lr_files/figure-markdown_strict/unnamed-chunk-6-1_hu6747094844812128651.webp&#34;
+               width=&#34;672&#34;
+               height=&#34;480&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      
+    &lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;h1 id=&#34;gradient-descent&#34;&gt;Gradient Descent:&lt;/h1&gt;
+&lt;h2 id=&#34;using-the-same-simulated-data-as-before-we-will-estimate-parameters-using-a-machine-learning-algorithm&#34;&gt;Using the same simulated data as before, we will estimate parameters using a machine learning algorithm&lt;/h2&gt;
+&lt;h3 id=&#34;heres-some-figures-i-found-helpful-while-trying-to-understand-how-gradient-descent-works&#34;&gt;Here&amp;rsquo;s some figures I found helpful while trying to understand how gradient descent works:&lt;/h3&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34; &#34; srcset=&#34;
+               /media/posts/lr_files/figure-markdown_strict/hiking_analogy_hu16707482620612177528.webp 400w,
+               /media/posts/lr_files/figure-markdown_strict/hiking_analogy_hu8643088186133544508.webp 760w,
+               /media/posts/lr_files/figure-markdown_strict/hiking_analogy_hu16647294568684891759.webp 1200w&#34;
+               src=&#34;https://alexbaecher.com/media/posts/lr_files/figure-markdown_strict/hiking_analogy_hu16707482620612177528.webp&#34;
+               width=&#34;700&#34;
+               height=&#34;465&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      
+    &lt;/figcaption&gt;&lt;/figure&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34; &#34; srcset=&#34;
+               /media/posts/lr_files/figure-markdown_strict/lr_diagram_hu4875460031701007284.webp 400w,
+               /media/posts/lr_files/figure-markdown_strict/lr_diagram_hu12845061643091946287.webp 760w,
+               /media/posts/lr_files/figure-markdown_strict/lr_diagram_hu17409504747599895843.webp 1200w&#34;
+               src=&#34;https://alexbaecher.com/media/posts/lr_files/figure-markdown_strict/lr_diagram_hu4875460031701007284.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;473&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      
+    &lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;h3 id=&#34;to-determine-the-goodness-of-fit-for-a-given-set-of-parameters-we-will-empliment-a-squared-error-cost-function-a-way-to-calculate-the-degree-of-error-for-a-guess-for-slope-and-intercept&#34;&gt;To determine the goodness of fit for a given set of parameters, we will empliment a Squared error cost function (a way to calculate the degree of error for a guess for slope and intercept)&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;cost &amp;lt;- function(X, y, theta) {
+  sum( (X %*% theta - y)^2 ) / (2*length(y))
 }
-&lt;/code>&lt;/pre>
-&lt;h3 id="we-must-also-set-two-additional-parameters-learning-rate-and-iteration-limit">We must also set two additional parameters: learning rate and iteration limit&lt;/h3>
-&lt;pre>&lt;code>alpha &amp;lt;- 0.01
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;we-must-also-set-two-additional-parameters-learning-rate-and-iteration-limit&#34;&gt;We must also set two additional parameters: learning rate and iteration limit&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;alpha &amp;lt;- 0.01
 num_iters &amp;lt;- 1000
+
 # keep history
 cost_history &amp;lt;- double(num_iters)
 theta_history &amp;lt;- list(num_iters)
+
 # initialize coefficients
 theta &amp;lt;- matrix(c(0,0), nrow=2)
-# add a column of 1's for the intercept coefficient
+
+# add a column of 1&#39;s for the intercept coefficient
 X &amp;lt;- cbind(1, matrix(x))
+
 # gradient descent
 for (i in 1:num_iters) {
-error &amp;lt;- (X %*% theta - y)
-delta &amp;lt;- t(X) %*% error / length(y)
-theta &amp;lt;- theta - alpha * delta
-cost_history[i] &amp;lt;- cost(X, y, theta)
-theta_history[[i]] &amp;lt;- theta
+  error &amp;lt;- (X %*% theta - y)
+  delta &amp;lt;- t(X) %*% error / length(y)
+  theta &amp;lt;- theta - alpha * delta
+  cost_history[i] &amp;lt;- cost(X, y, theta)
+  theta_history[[i]] &amp;lt;- theta
 }
+
 print(theta)
-## [,1]
+
+##           [,1]
 ## [1,] 3.0116439
 ## [2,] 0.9941657
-&lt;/code>&lt;/pre>
-&lt;h3 id="plot-data-and-converging-fit">Plot data and converging fit&lt;/h3>
-&lt;pre>&lt;code>iters &amp;lt;- c((1:31)^2, 1000)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;plot-data-and-converging-fit&#34;&gt;Plot data and converging fit&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;iters &amp;lt;- c((1:31)^2, 1000)
 cols &amp;lt;- rev(terrain.colors(num_iters))
 library(gifski)
 png(&amp;quot;frame%03d.png&amp;quot;)
 par(ask = FALSE)
+
 for (i in iters) {
-plot(x,y, col=&amp;quot;grey80&amp;quot;, main='Linear regression using Gradient Descent')
-text(x = -3, y = 10, paste(&amp;quot;slope = &amp;quot;, round(theta_history[[i]][2], 3), sep = &amp;quot; &amp;quot;), adj = 0)
-text(x = -3, y = 8, paste(&amp;quot;intercept = &amp;quot;, round(theta_history[[i]][1], 3), sep = &amp;quot; &amp;quot;), adj = 0)
-abline(coef=theta_history[[i]], col=cols[i], lwd = 2)
+  plot(x,y, col=&amp;quot;grey80&amp;quot;, main=&#39;Linear regression using Gradient Descent&#39;)
+  text(x = -3, y = 10, paste(&amp;quot;slope = &amp;quot;, round(theta_history[[i]][2], 3), sep = &amp;quot; &amp;quot;), adj = 0)
+  text(x = -3, y = 8, paste(&amp;quot;intercept = &amp;quot;, round(theta_history[[i]][1], 3), sep = &amp;quot; &amp;quot;), adj = 0)
+  abline(coef=theta_history[[i]], col=cols[i], lwd = 2)
 }
+
 dev.off()
-## png
-## 2
+
+## png 
+##   2
+
 png_files &amp;lt;- sprintf(&amp;quot;frame%03d.png&amp;quot;, 1:32)
 gif_file &amp;lt;- gifski(png_files, delay = 0.1)
 unlink(png_files)
 utils::browseURL(gif_file)
-&lt;/code>&lt;/pre>
-&lt;h3 id="calculate-intercept-and-slope-using-gradient-descent-machine-learning">Calculate intercept and slope using gradient descent (Machine Learning):&lt;/h3>
-&lt;figure >
-&lt;div class="d-flex justify-content-center">
-&lt;div class="w-100" >&lt;img alt=" "
-src="https://alexbaecher.com/media/posts/lr_files/figure-markdown_strict/lrgd.gif"
-loading="lazy" data-zoomable />&lt;/div>
-&lt;/div>&lt;figcaption>
-&lt;/figcaption>&lt;/figure>
-&lt;pre>&lt;code>plot(cost_history, type='line', col='blue', lwd=2, main='Cost function', ylab='cost', xlab='Iterations')
-## Warning in plot.xy(xy, type, ...): plot type 'line' will be truncated to first
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;calculate-intercept-and-slope-using-gradient-descent-machine-learning&#34;&gt;Calculate intercept and slope using gradient descent (Machine Learning):&lt;/h3&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34; &#34;
+           src=&#34;https://alexbaecher.com/media/posts/lr_files/figure-markdown_strict/lrgd.gif&#34;
+           loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      
+    &lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;pre&gt;&lt;code&gt;plot(cost_history, type=&#39;line&#39;, col=&#39;blue&#39;, lwd=2, main=&#39;Cost function&#39;, ylab=&#39;cost&#39;, xlab=&#39;Iterations&#39;)
+
+## Warning in plot.xy(xy, type, ...): plot type &#39;line&#39; will be truncated to first
 ## character
-&lt;/code>&lt;/pre>
-&lt;figure >
-&lt;div class="d-flex justify-content-center">
-&lt;div class="w-100" >&lt;img alt=" " srcset="
-/media/posts/lr_files/figure-markdown_strict/unnamed-chunk-10-1_hu10201080256720931723.webp 400w,
-/media/posts/lr_files/figure-markdown_strict/unnamed-chunk-10-1_hu13749904028915559076.webp 760w,
-/media/posts/lr_files/figure-markdown_strict/unnamed-chunk-10-1_hu11794761284791704341.webp 1200w"
-src="https://alexbaecher.com/media/posts/lr_files/figure-markdown_strict/unnamed-chunk-10-1_hu10201080256720931723.webp"
-width="672"
-height="480"
-loading="lazy" data-zoomable />&lt;/div>
-&lt;/div>&lt;figcaption>
-&lt;/figcaption>&lt;/figure>
-&lt;h1 id="using-gradient-descent-with-real-data">Using gradient descent with real data&lt;/h1>
-&lt;p>I&amp;rsquo;ll demonstrate it&amp;rsquo;s features using an existing dataset from Bruno Oliveria: &amp;ldquo;Amphibio&amp;rdquo;:&lt;br>
-• Link to publication: &lt;a href="https://www.nature.com/articles/sdata2017123" target="_blank" rel="noopener">https://www.nature.com/articles/sdata2017123&lt;/a>&lt;br>
-• Link to data: &lt;a href="https://ndownloader.figstatic.com/files/8828578" target="_blank" rel="noopener">https://ndownloader.figstatic.com/files/8828578&lt;/a>&lt;/p>
-&lt;h3 id="load-amphibio-data">Load amphibio data!&lt;/h3>
-&lt;pre>&lt;code>install.packages(&amp;quot;downloader&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34; &#34; srcset=&#34;
+               /media/posts/lr_files/figure-markdown_strict/unnamed-chunk-10-1_hu10201080256720931723.webp 400w,
+               /media/posts/lr_files/figure-markdown_strict/unnamed-chunk-10-1_hu13749904028915559076.webp 760w,
+               /media/posts/lr_files/figure-markdown_strict/unnamed-chunk-10-1_hu11794761284791704341.webp 1200w&#34;
+               src=&#34;https://alexbaecher.com/media/posts/lr_files/figure-markdown_strict/unnamed-chunk-10-1_hu10201080256720931723.webp&#34;
+               width=&#34;672&#34;
+               height=&#34;480&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      
+    &lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;h1 id=&#34;using-gradient-descent-with-real-data&#34;&gt;Using gradient descent with real data&lt;/h1&gt;
+&lt;p&gt;I&amp;rsquo;ll demonstrate it&amp;rsquo;s features using an existing dataset from Bruno Oliveria: &amp;ldquo;Amphibio&amp;rdquo;:&lt;br&gt;
+• Link to publication: &lt;a href=&#34;https://www.nature.com/articles/sdata2017123&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.nature.com/articles/sdata2017123&lt;/a&gt;&lt;br&gt;
+• Link to data: &lt;a href=&#34;https://ndownloader.figstatic.com/files/8828578&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://ndownloader.figstatic.com/files/8828578&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;load-amphibio-data&#34;&gt;Load amphibio data!&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;install.packages(&amp;quot;downloader&amp;quot;)
 library(downloader)
+
 url &amp;lt;- &amp;quot;https://ndownloader.figstatic.com/files/8828578&amp;quot;
-download(url, dest=&amp;quot;lrgb/amphibio.zip&amp;quot;, mode=&amp;quot;wb&amp;quot;)
+download(url, dest=&amp;quot;lrgb/amphibio.zip&amp;quot;, mode=&amp;quot;wb&amp;quot;) 
 unzip(&amp;quot;lrgb/amphibio.zip&amp;quot;, exdir = &amp;quot;./lrgb&amp;quot;)
+
 df &amp;lt;- read_csv(&amp;quot;AmphiBIO_v1.csv&amp;quot;) %&amp;gt;%
-select(&amp;quot;Order&amp;quot;,
-&amp;quot;Body_mass_g&amp;quot;,
-&amp;quot;Body_size_mm&amp;quot;,
-&amp;quot;Size_at_maturity_min_mm&amp;quot;,
-&amp;quot;Size_at_maturity_max_mm&amp;quot;,
-&amp;quot;Litter_size_min_n&amp;quot;,
-&amp;quot;Litter_size_max_n&amp;quot;,
-&amp;quot;Reproductive_output_y&amp;quot;) %&amp;gt;%
-na.omit %&amp;gt;%
-mutate_if(is.numeric, ~ log(.))
+  select(&amp;quot;Order&amp;quot;,
+         &amp;quot;Body_mass_g&amp;quot;,
+         &amp;quot;Body_size_mm&amp;quot;,
+         &amp;quot;Size_at_maturity_min_mm&amp;quot;,
+         &amp;quot;Size_at_maturity_max_mm&amp;quot;,
+         &amp;quot;Litter_size_min_n&amp;quot;,
+         &amp;quot;Litter_size_max_n&amp;quot;,
+         &amp;quot;Reproductive_output_y&amp;quot;) %&amp;gt;%
+  na.omit %&amp;gt;%
+  mutate_if(is.numeric, ~ log(.))
+
 ## Rows: 6776 Columns: 38
+
 ## -- Column specification --------------------------------------------------------
 ## Delimiter: &amp;quot;,&amp;quot;
-## chr (6): id, Order, Family, Genus, Species, OBS
+## chr  (6): id, Order, Family, Genus, Species, OBS
 ## dbl (31): Fos, Ter, Aqu, Arb, Leaves, Flowers, Seeds, Arthro, Vert, Diu, Noc...
-## lgl (1): Fruits
-##
+## lgl  (1): Fruits
+
+## 
 ## i Use `spec()` to retrieve the full column specification for this data.
 ## i Specify the column types or set `show_col_types = FALSE` to quiet this message.
-plot(df$Body_size_mm, df$Size_at_maturity_max_mm, col = &amp;quot;grey80&amp;quot;, main='Correlation of amphibian traits', xlab = &amp;quot;Body size (mm)&amp;quot;, ylab = &amp;quot;Max size at maturity (mm)&amp;quot;);
-&lt;/code>&lt;/pre>
-&lt;figure >
-&lt;div class="d-flex justify-content-center">
-&lt;div class="w-100" >&lt;img alt=" " srcset="
-/media/posts/lr_files/figure-markdown_strict/unnamed-chunk-11-1_hu13958201193534220825.webp 400w,
-/media/posts/lr_files/figure-markdown_strict/unnamed-chunk-11-1_hu13026316878176312818.webp 760w,
-/media/posts/lr_files/figure-markdown_strict/unnamed-chunk-11-1_hu14878789998347573284.webp 1200w"
-src="https://alexbaecher.com/media/posts/lr_files/figure-markdown_strict/unnamed-chunk-11-1_hu13958201193534220825.webp"
-width="672"
-height="480"
-loading="lazy" data-zoomable />&lt;/div>
-&lt;/div>&lt;figcaption>
-&lt;/figcaption>&lt;/figure>
-&lt;h3 id="fit-a-linear-model-1">Fit a linear model&lt;/h3>
-&lt;pre>&lt;code>lm &amp;lt;- lm(Size_at_maturity_max_mm ~ Body_size_mm, data = df) # Ordinary Least Squares regression with General Linear Model
+
+plot(df$Body_size_mm, df$Size_at_maturity_max_mm, col = &amp;quot;grey80&amp;quot;, main=&#39;Correlation of amphibian traits&#39;, xlab = &amp;quot;Body size (mm)&amp;quot;, ylab = &amp;quot;Max size at maturity (mm)&amp;quot;); 
+&lt;/code&gt;&lt;/pre&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34; &#34; srcset=&#34;
+               /media/posts/lr_files/figure-markdown_strict/unnamed-chunk-11-1_hu13958201193534220825.webp 400w,
+               /media/posts/lr_files/figure-markdown_strict/unnamed-chunk-11-1_hu13026316878176312818.webp 760w,
+               /media/posts/lr_files/figure-markdown_strict/unnamed-chunk-11-1_hu14878789998347573284.webp 1200w&#34;
+               src=&#34;https://alexbaecher.com/media/posts/lr_files/figure-markdown_strict/unnamed-chunk-11-1_hu13958201193534220825.webp&#34;
+               width=&#34;672&#34;
+               height=&#34;480&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      
+    &lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;h3 id=&#34;fit-a-linear-model-1&#34;&gt;Fit a linear model&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;lm &amp;lt;- lm(Size_at_maturity_max_mm ~ Body_size_mm, data = df) # Ordinary Least Squares regression with General Linear Model 
 mod &amp;lt;- print(lm)
-##
+
+## 
 ## Call:
 ## lm(formula = Size_at_maturity_max_mm ~ Body_size_mm, data = df)
-##
+## 
 ## Coefficients:
-## (Intercept) Body_size_mm
-## 0.6237 0.7265
+##  (Intercept)  Body_size_mm  
+##       0.6237        0.7265
+
 mod
-##
+
+## 
 ## Call:
 ## lm(formula = Size_at_maturity_max_mm ~ Body_size_mm, data = df)
-##
+## 
 ## Coefficients:
-## (Intercept) Body_size_mm
-## 0.6237 0.7265
-&lt;/code>&lt;/pre>
-&lt;h3 id="plot-the-data-and-the-model-1">Plot the data and the model&lt;/h3>
-&lt;pre>&lt;code>plot(df$Body_size_mm, df$Size_at_maturity_max_mm, col = &amp;quot;grey80&amp;quot;, main='Linear Regression using Sum of Squares', xlab = &amp;quot;Body size (mm)&amp;quot;, ylab = &amp;quot;Max size at maturity (mm)&amp;quot;);
+##  (Intercept)  Body_size_mm  
+##       0.6237        0.7265
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;plot-the-data-and-the-model-1&#34;&gt;Plot the data and the model&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;plot(df$Body_size_mm, df$Size_at_maturity_max_mm, col = &amp;quot;grey80&amp;quot;, main=&#39;Linear Regression using Sum of Squares&#39;, xlab = &amp;quot;Body size (mm)&amp;quot;, ylab = &amp;quot;Max size at maturity (mm)&amp;quot;); 
 text(4, 5, paste(&amp;quot;Intercept = &amp;quot;, round(mod$coefficients[1], 2), sep = &amp;quot;&amp;quot;));
 text(6, 3, paste(&amp;quot;Slope = &amp;quot;, round(mod$coefficients[2], 2), sep = &amp;quot;&amp;quot;));
-abline(a = mod$coefficients[1], b = mod$coefficients[2], col='blue', lwd=2) # use slope and intercept to plot best fit line
-&lt;/code>&lt;/pre>
-&lt;figure >
-&lt;div class="d-flex justify-content-center">
-&lt;div class="w-100" >&lt;img alt=" " srcset="
-/media/posts/lr_files/figure-markdown_strict/unnamed-chunk-13-1_hu8194321120596918564.webp 400w,
-/media/posts/lr_files/figure-markdown_strict/unnamed-chunk-13-1_hu12803367816218472457.webp 760w,
-/media/posts/lr_files/figure-markdown_strict/unnamed-chunk-13-1_hu3570476343014275261.webp 1200w"
-src="https://alexbaecher.com/media/posts/lr_files/figure-markdown_strict/unnamed-chunk-13-1_hu8194321120596918564.webp"
-width="672"
-height="480"
-loading="lazy" data-zoomable />&lt;/div>
-&lt;/div>&lt;figcaption>
-&lt;/figcaption>&lt;/figure>
-&lt;h3 id="calculate-intercept-and-slope-using-sum-of-squares-1">Calculate intercept and slope using sum of squares&lt;/h3>
-&lt;pre>&lt;code>x &amp;lt;- df$Body_size_mm
+abline(a = mod$coefficients[1], b = mod$coefficients[2], col=&#39;blue&#39;, lwd=2) # use slope and intercept to plot best fit line
+&lt;/code&gt;&lt;/pre&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34; &#34; srcset=&#34;
+               /media/posts/lr_files/figure-markdown_strict/unnamed-chunk-13-1_hu8194321120596918564.webp 400w,
+               /media/posts/lr_files/figure-markdown_strict/unnamed-chunk-13-1_hu12803367816218472457.webp 760w,
+               /media/posts/lr_files/figure-markdown_strict/unnamed-chunk-13-1_hu3570476343014275261.webp 1200w&#34;
+               src=&#34;https://alexbaecher.com/media/posts/lr_files/figure-markdown_strict/unnamed-chunk-13-1_hu8194321120596918564.webp&#34;
+               width=&#34;672&#34;
+               height=&#34;480&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      
+    &lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;h3 id=&#34;calculate-intercept-and-slope-using-sum-of-squares-1&#34;&gt;Calculate intercept and slope using sum of squares&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;x &amp;lt;- df$Body_size_mm
 y &amp;lt;- df$Size_at_maturity_max_mm
 x_bar &amp;lt;- mean(x) # calculate mean of independent variable
 y_bar &amp;lt;- mean(y) # calculate mean of dependent variable
+
 slope &amp;lt;- sum((x - x_bar)*(y - y_bar))/sum((x - x_bar)^2) # calculate sum of differences between x &amp;amp; y, and divide by sum of squares of x
 slope
+
 ## [1] 0.7264703
+
 intercept &amp;lt;- y_bar - (slope * x_bar) # calculate difference of y_bar across the linear predictor
 intercept
+
 ## [1] 0.6237047
+
 ### plot data using manually calculated parameters
-plot(x,y, col = &amp;quot;grey80&amp;quot;, main='Linear Regression using Ordinary Least Squares', xlab = &amp;quot;Body size (mm)&amp;quot;, ylab = &amp;quot;Max size at maturity (mm)&amp;quot;);
-abline(a = intercept, b = slope, col='blue', lwd=2)
-&lt;/code>&lt;/pre>
-&lt;figure >
-&lt;div class="d-flex justify-content-center">
-&lt;div class="w-100" >&lt;img alt=" " srcset="
-/media/posts/lr_files/figure-markdown_strict/unnamed-chunk-14-1_hu749059795355048884.webp 400w,
-/media/posts/lr_files/figure-markdown_strict/unnamed-chunk-14-1_hu11796089762525742180.webp 760w,
-/media/posts/lr_files/figure-markdown_strict/unnamed-chunk-14-1_hu6382700030778350265.webp 1200w"
-src="https://alexbaecher.com/media/posts/lr_files/figure-markdown_strict/unnamed-chunk-14-1_hu749059795355048884.webp"
-width="672"
-height="480"
-loading="lazy" data-zoomable />&lt;/div>
-&lt;/div>&lt;figcaption>
-&lt;/figcaption>&lt;/figure>
-&lt;h3 id="calculate-intercept-and-slope-using-gradient-descent-machine-learning-1">Calculate intercept and slope using gradient descent (Machine Learning)&lt;/h3>
-&lt;h3 id="squared-error-cost-function-a-way-to-calculate-the-degree-of-error-for-a-guess-for-slope-and-intercept">Squared error cost function (a way to calculate the degree of error for a guess for slope and intercept)&lt;/h3>
-&lt;pre>&lt;code>### learning rate and iteration limit
+plot(x,y, col = &amp;quot;grey80&amp;quot;, main=&#39;Linear Regression using Ordinary Least Squares&#39;, xlab = &amp;quot;Body size (mm)&amp;quot;, ylab = &amp;quot;Max size at maturity (mm)&amp;quot;); 
+abline(a = intercept, b = slope, col=&#39;blue&#39;, lwd=2)
+&lt;/code&gt;&lt;/pre&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34; &#34; srcset=&#34;
+               /media/posts/lr_files/figure-markdown_strict/unnamed-chunk-14-1_hu749059795355048884.webp 400w,
+               /media/posts/lr_files/figure-markdown_strict/unnamed-chunk-14-1_hu11796089762525742180.webp 760w,
+               /media/posts/lr_files/figure-markdown_strict/unnamed-chunk-14-1_hu6382700030778350265.webp 1200w&#34;
+               src=&#34;https://alexbaecher.com/media/posts/lr_files/figure-markdown_strict/unnamed-chunk-14-1_hu749059795355048884.webp&#34;
+               width=&#34;672&#34;
+               height=&#34;480&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      
+    &lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;h3 id=&#34;calculate-intercept-and-slope-using-gradient-descent-machine-learning-1&#34;&gt;Calculate intercept and slope using gradient descent (Machine Learning)&lt;/h3&gt;
+&lt;h3 id=&#34;squared-error-cost-function-a-way-to-calculate-the-degree-of-error-for-a-guess-for-slope-and-intercept&#34;&gt;Squared error cost function (a way to calculate the degree of error for a guess for slope and intercept)&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;### learning rate and iteration limit
 alpha &amp;lt;- 0.001
 num_iters &amp;lt;- 1000
+
 ### keep history
 cost_history &amp;lt;- double(num_iters)
 theta_history &amp;lt;- list(num_iters)
+
 ### initialize coefficients
 theta &amp;lt;- matrix(c(0,0), nrow=2)
-### add a column of 1's for the intercept coefficient
+
+### add a column of 1&#39;s for the intercept coefficient
 X &amp;lt;- cbind(1, matrix(x))
+
 # gradient descent
 for (i in 1:num_iters) {
-error &amp;lt;- (X %*% theta - y)
-delta &amp;lt;- t(X) %*% error / length(y)
-theta &amp;lt;- theta - alpha * delta
-cost_history[i] &amp;lt;- cost(X, y, theta)
-theta_history[[i]] &amp;lt;- theta
+  error &amp;lt;- (X %*% theta - y)
+  delta &amp;lt;- t(X) %*% error / length(y)
+  theta &amp;lt;- theta - alpha * delta
+  cost_history[i] &amp;lt;- cost(X, y, theta)
+  theta_history[[i]] &amp;lt;- theta
 }
+
 print(theta)
-## [,1]
+
+##           [,1]
 ## [1,] 0.1816407
 ## [2,] 0.8175962
-&lt;/code>&lt;/pre>
-&lt;h3 id="plot-data-and-converging-fit-1">Plot data and converging fit&lt;/h3>
-&lt;pre>&lt;code>plot(x,y, col=&amp;quot;grey80&amp;quot;, main='Linear regression using Gradient Descent', xlab = &amp;quot;Body size (mm)&amp;quot;, ylab = &amp;quot;Max size at maturity (mm)&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;plot-data-and-converging-fit-1&#34;&gt;Plot data and converging fit&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;plot(x,y, col=&amp;quot;grey80&amp;quot;, main=&#39;Linear regression using Gradient Descent&#39;, xlab = &amp;quot;Body size (mm)&amp;quot;, ylab = &amp;quot;Max size at maturity (mm)&amp;quot;)
 for (i in c((1:31)^2, 1000)) {
-abline(coef=theta_history[[i]], col=&amp;quot;red&amp;quot;)
+  abline(coef=theta_history[[i]], col=&amp;quot;red&amp;quot;)
 }
 abline(coef=theta, col=&amp;quot;blue&amp;quot;, lwd = 2)
-&lt;/code>&lt;/pre>
-&lt;figure >
-&lt;div class="d-flex justify-content-center">
-&lt;div class="w-100" >&lt;img alt=" " srcset="
-/media/posts/lr_files/figure-markdown_strict/unnamed-chunk-16-1_hu10359579081162880653.webp 400w,
-/media/posts/lr_files/figure-markdown_strict/unnamed-chunk-16-1_hu3901677043462376067.webp 760w,
-/media/posts/lr_files/figure-markdown_strict/unnamed-chunk-16-1_hu8737325766736597265.webp 1200w"
-src="https://alexbaecher.com/media/posts/lr_files/figure-markdown_strict/unnamed-chunk-16-1_hu10359579081162880653.webp"
-width="672"
-height="480"
-loading="lazy" data-zoomable />&lt;/div>
-&lt;/div>&lt;figcaption>
-&lt;/figcaption>&lt;/figure>
-&lt;pre>&lt;code>plot(cost_history, type='line', col='blue', lwd=2, main='Cost function', ylab='cost', xlab='Iterations')
-## Warning in plot.xy(xy, type, ...): plot type 'line' will be truncated to first
+&lt;/code&gt;&lt;/pre&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34; &#34; srcset=&#34;
+               /media/posts/lr_files/figure-markdown_strict/unnamed-chunk-16-1_hu10359579081162880653.webp 400w,
+               /media/posts/lr_files/figure-markdown_strict/unnamed-chunk-16-1_hu3901677043462376067.webp 760w,
+               /media/posts/lr_files/figure-markdown_strict/unnamed-chunk-16-1_hu8737325766736597265.webp 1200w&#34;
+               src=&#34;https://alexbaecher.com/media/posts/lr_files/figure-markdown_strict/unnamed-chunk-16-1_hu10359579081162880653.webp&#34;
+               width=&#34;672&#34;
+               height=&#34;480&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      
+    &lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;pre&gt;&lt;code&gt;plot(cost_history, type=&#39;line&#39;, col=&#39;blue&#39;, lwd=2, main=&#39;Cost function&#39;, ylab=&#39;cost&#39;, xlab=&#39;Iterations&#39;)
+
+## Warning in plot.xy(xy, type, ...): plot type &#39;line&#39; will be truncated to first
 ## character
-&lt;/code>&lt;/pre>
-&lt;figure >
-&lt;div class="d-flex justify-content-center">
-&lt;div class="w-100" >&lt;img alt=" " srcset="
-/media/posts/lr_files/figure-markdown_strict/unnamed-chunk-17-1_hu5439497402357073159.webp 400w,
-/media/posts/lr_files/figure-markdown_strict/unnamed-chunk-17-1_hu11148887372339103562.webp 760w,
-/media/posts/lr_files/figure-markdown_strict/unnamed-chunk-17-1_hu14433026510257978825.webp 1200w"
-src="https://alexbaecher.com/media/posts/lr_files/figure-markdown_strict/unnamed-chunk-17-1_hu5439497402357073159.webp"
-width="672"
-height="480"
-loading="lazy" data-zoomable />&lt;/div>
-&lt;/div>&lt;figcaption>
-&lt;/figcaption>&lt;/figure></description></item></channel></rss>
+&lt;/code&gt;&lt;/pre&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34; &#34; srcset=&#34;
+               /media/posts/lr_files/figure-markdown_strict/unnamed-chunk-17-1_hu5439497402357073159.webp 400w,
+               /media/posts/lr_files/figure-markdown_strict/unnamed-chunk-17-1_hu11148887372339103562.webp 760w,
+               /media/posts/lr_files/figure-markdown_strict/unnamed-chunk-17-1_hu14433026510257978825.webp 1200w&#34;
+               src=&#34;https://alexbaecher.com/media/posts/lr_files/figure-markdown_strict/unnamed-chunk-17-1_hu5439497402357073159.webp&#34;
+               width=&#34;672&#34;
+               height=&#34;480&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      
+    &lt;/figcaption&gt;&lt;/figure&gt;
+
+</description>
+    </item>
+    
+  </channel>
+</rss>

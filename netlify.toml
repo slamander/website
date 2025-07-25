@@ -1,10 +1,10 @@
 [build]
   command = "hugo --gc -b $URL"
-  publish = "public"
+  publish = "dist"
 
 [build.environment]
   HUGO_VERSION = "0.139.0"
-  GO_VERSION = "1.19"
+  GO_VERSION = "1.20"
   HUGO_ENABLEGITINFO = "true"
   HUGO_NUMWORKERMULTIPLIER = "1"
 
