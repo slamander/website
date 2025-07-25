@@ -5,12 +5,20 @@
     <link>http://localhost:1313/tag/conservation/</link>
       <atom:link href="http://localhost:1313/tag/conservation/index.xml" rel="self" type="application/rss+xml" />
     <description>Conservation</description>
-    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><copyright>© 2025 Alex Baecher</copyright><lastBuildDate>Wed, 08 Oct 2014 00:00:00 +0000</lastBuildDate>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><copyright>© 2025 Alex Baecher</copyright><lastBuildDate>Wed, 08 Oct 2025 00:00:00 +0000</lastBuildDate>
     <image>
       <url>http://localhost:1313/media/logo_hu2039277577754200582.png</url>
       <title>Conservation</title>
       <link>http://localhost:1313/tag/conservation/</link>
     </image>
+    
+    <item>
+      <title>Invasion risk posed by the pet trade</title>
+      <link>http://localhost:1313/publication/evans_2025_fee/</link>
+      <pubDate>Wed, 08 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/publication/evans_2025_fee/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Lithobates areolatus (crawfish frog) predation</title>

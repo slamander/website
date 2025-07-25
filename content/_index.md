@@ -7,7 +7,7 @@ sections:
       title: "Baecher Research"
       text: "Landscape ecology and conservation research"
       cta:
-        url: "/files/cv.pdf"
+        url: "files/cv.pdf"
         label: "Download CV"
     design:
       background:

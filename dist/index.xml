@@ -3537,13 +3537,5 @@ plot(df_ts_st$y~df_ts_st$x, type = &amp;quot;l&amp;quot;)
       <description></description>
     </item>
     
-    <item>
-      <title></title>
-      <link>http://localhost:1313/home-deprecated/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/home-deprecated/</guid>
-      <description></description>
-    </item>
-    
   </channel>
 </rss>

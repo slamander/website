@@ -3,12 +3,33 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2024-07-04T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/publication-type/2/</loc>
-    <lastmod>2024-07-04T00:00:00+00:00</lastmod>
+    <lastmod>2025-10-08T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/authors/</loc>
+    <lastmod>2025-10-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/author/brett-r.-scheffers/</loc>
+    <lastmod>2025-10-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tag/conservation/</loc>
+    <lastmod>2025-10-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/publication/evans_2025_fee/</loc>
+    <lastmod>2025-10-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/author/j-alex-baecher/</loc>
+    <lastmod>2025-10-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/author/luke-j.-evans/</loc>
+    <lastmod>2025-10-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/publication/</loc>
+    <lastmod>2025-10-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2025-10-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/publication-type/2/</loc>
     <lastmod>2024-07-04T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tag/biotic-interactions/</loc>
@@ -23,31 +44,19 @@
     <loc>http://localhost:1313/tag/distributions/</loc>
     <lastmod>2024-07-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/author/j-alex-baecher/</loc>
-    <lastmod>2024-07-04T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/tag/niche-theory/</loc>
     <lastmod>2024-07-04T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/publication_types/</loc>
     <lastmod>2024-07-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/publication/</loc>
-    <lastmod>2024-07-04T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/tag/spatial-scale/</loc>
-    <lastmod>2024-07-04T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/</loc>
     <lastmod>2024-07-04T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/publication/baecher_2024_jbi/</loc>
     <lastmod>2024-07-04T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/author/alexey-rubtsov/</loc>
-    <lastmod>2024-06-26T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/author/brett-r.-scheffers/</loc>
     <lastmod>2024-06-26T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/author/caroline-greiser/</loc>
@@ -99,9 +108,6 @@
     <lastmod>2024-06-26T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/author/liesbeth-van-den-brink/</loc>
-    <lastmod>2024-06-26T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/author/luke-j.-evans/</loc>
     <lastmod>2024-06-26T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/author/marcelo-nosetto/</loc>
@@ -521,15 +527,10 @@
     <loc>http://localhost:1313/tag/time-series/</loc>
     <lastmod>2016-08-12T00:40:04-07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tag/conservation/</loc>
-    <lastmod>2014-10-08T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/author/joseph-c.-neal/</loc>
     <lastmod>2014-10-08T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/publication/baecher-2014-hr/</loc>
     <lastmod>2014-10-08T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/home-deprecated/</loc>
   </url>
 </urlset>

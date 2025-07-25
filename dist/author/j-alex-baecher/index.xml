@@ -5,7 +5,7 @@
     <link>http://localhost:1313/author/j-alex-baecher/</link>
       <atom:link href="http://localhost:1313/author/j-alex-baecher/index.xml" rel="self" type="application/rss+xml" />
     <description>J Alex Baecher</description>
-    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><copyright>© 2025 Alex Baecher</copyright><lastBuildDate>Thu, 04 Jul 2024 00:00:00 +0000</lastBuildDate>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><copyright>© 2025 Alex Baecher</copyright><lastBuildDate>Wed, 08 Oct 2025 00:00:00 +0000</lastBuildDate>
     <image>
       <url>http://localhost:1313/author/j-alex-baecher/avatar_hu11040553339854819806.jpg</url>
       <title>J Alex Baecher</title>
@@ -13,9 +13,17 @@
     </image>
     
     <item>
+      <title>Invasion risk posed by the pet trade</title>
+      <link>http://localhost:1313/publication/evans_2025_fee/</link>
+      <pubDate>Wed, 08 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/publication/evans_2025_fee/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>J Alex Baecher</title>
       <link>http://localhost:1313/author/j-alex-baecher/</link>
-      <pubDate>Thu, 04 Jul 2024 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 08 Oct 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/author/j-alex-baecher/</guid>
       <description>&lt;p&gt;&lt;em&gt;The good bits:&lt;/em&gt;
 Native to the foothills of Arkansas&amp;rsquo; Ozark Mountains. My life consists of&amp;hellip; my wife (Kristin), my daughter (Faye), my dog (Ollie), herping, hiking, swimming and canoeing, woodworking, and home DIY projects.&lt;/p&gt;

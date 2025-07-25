@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>I-Ching Chen | Baecher Research</title>
+    <title>I-  Ching  Chen | Baecher Research</title>
     <link>http://localhost:1313/author/i-ching-chen/</link>
       <atom:link href="http://localhost:1313/author/i-ching-chen/index.xml" rel="self" type="application/rss+xml" />
-    <description>I-Ching Chen</description>
-    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><copyright>© 2025 Alex Baecher</copyright><lastBuildDate>Thu, 18 Apr 2024 00:00:00 +0000</lastBuildDate>
+    <description>I-  Ching  Chen</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><copyright>© 2025 Alex Baecher</copyright><lastBuildDate>Sat, 13 Apr 2024 00:00:00 +0000</lastBuildDate>
     <image>
       <url>http://localhost:1313/media/logo_hu2039277577754200582.png</url>
-      <title>I-Ching Chen</title>
+      <title>I-  Ching  Chen</title>
       <link>http://localhost:1313/author/i-ching-chen/</link>
     </image>
     
     <item>
-      <title>Mechanisms, detection and impacts of species redistribution under climate change</title>
-      <link>http://localhost:1313/publication/bioshifts-2024-nree/</link>
-      <pubDate>Thu, 18 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/publication/bioshifts-2024-nree/</guid>
+      <title>Bringing traits back into the equation, A roadmap to understand species redistribution</title>
+      <link>http://localhost:1313/publication/bioshifts-2024-gcb/</link>
+      <pubDate>Sat, 13 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/publication/bioshifts-2024-gcb/</guid>
       <description>&lt;html&gt;
   &lt;style&gt;
     section {
@@ -36,7 +36,7 @@
       &lt;script type=&#39;text/javascript&#39; src=&#39;https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js&#39;&gt;&lt;/script&gt;
         &lt;span style=&#34;float:left&#34;; 
           class=&#34;__dimensions_badge_embed__&#34; 
-          data-doi=&#34;10.1038/s43017-024-00527-z&#34; 
+          data-doi=&#34;10.1111/gcb.17271&#34; 
           data-hide-zero-citations=&#34;true&#34; 
           data-legend=&#34;always&#34;&gt;
         &lt;/span&gt;
@@ -45,7 +45,7 @@
           data-link-target=&#34;_blank&#34; 
           data-badge-details=&#34;right&#34; 
           data-badge-type=&#34;medium-donut&#34;
-          data-doi=&#34;10.1038/s43017-024-00527-z&#34;   
+          data-doi=&#34;10.1111/gcb.17271&#34;   
           data-condensed=&#34;true&#34; 
           data-hide-no-mentions=&#34;true&#34; 
           class=&#34;altmetric-embed&#34;&gt;
