@@ -5,10 +5,22 @@ date: 2025-01-25
 draft: false
 
 sections:
+- block: markdown
+  content:
+    text: |
+      <div style="position: absolute; top: 20px; right: 20px; z-index: 10;">
+        <img src="/media/badge_kentucki.png" alt="Badge" style="width: 100px; height: auto;">
+      </div>
+  design:
+    background:
+      color: transparent
+    spacing:
+      padding: ["0", "0", "0", "0"]
+
   - block: hero
     content:
       title: "Baecher Research"
-      text: "Landscape ecology and conservation research"
+      text: "Spatial ecology and conservation research"
       cta:
         url: "/files/cv.pdf"  # Add leading slash
         label: "Download CV"
