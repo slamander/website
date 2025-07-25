@@ -1,5 +1,8 @@
 ---
+title: "Baecher Research"
 type: landing
+date: 2025-01-25
+draft: false
 
 sections:
   - block: hero
