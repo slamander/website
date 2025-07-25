@@ -1,0 +1,9 @@
+.custom-hero {
+  height: 300px !important; // Adjust to your preferred height
+  max-height: 300px !important;
+  
+  .hero-background {
+    height: 300px !important;
+    object-fit: cover !important;
+  }
+}

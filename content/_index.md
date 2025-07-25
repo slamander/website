@@ -10,19 +10,22 @@ sections:
       title: "Baecher Research"
       text: "Landscape ecology and conservation research"
       cta:
-        url: "files/cv.pdf"
+        url: "/files/cv.pdf"  # Add leading slash
         label: "Download CV"
+        icon: download
+        icon_pack: fas
     design:
       background:
         image:
-          filename: log_high.jpg  # Hugo looks in static/media/
+          filename: log_extended.png  # Hugo looks in static/media/
           filters:
             brightness: 0.6  # Darkens image so text is readable
         position: center
         size: cover
         text_color_light: true
-      spacing:
-        padding: ["50px", "0", "50px", "0"]  # Reduces height
+    css_class: custom-hero
+    spacing:
+      padding: ["20px", "0", "20px", "0"]  # Reduced padding
 
         
   - block: markdown
