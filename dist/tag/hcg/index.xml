@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>HCG | Baecher Research</title>
-    <link>https://alexbaecher.com/tag/hcg/</link>
-      <atom:link href="https://alexbaecher.com/tag/hcg/index.xml" rel="self" type="application/rss+xml" />
+    <link>http://localhost:1313/tag/hcg/</link>
+      <atom:link href="http://localhost:1313/tag/hcg/index.xml" rel="self" type="application/rss+xml" />
     <description>HCG</description>
     <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><copyright>© 2025 Alex Baecher</copyright><lastBuildDate>Thu, 01 Aug 2019 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://alexbaecher.com/media/logo_hu2039277577754200582.png</url>
+      <url>http://localhost:1313/media/logo_hu2039277577754200582.png</url>
       <title>HCG</title>
-      <link>https://alexbaecher.com/tag/hcg/</link>
+      <link>http://localhost:1313/tag/hcg/</link>
     </image>
     
     <item>
       <title>Cryopreservation and hormonal induction of spermic urine in smooth-sided toads</title>
-      <link>https://alexbaecher.com/publication/hinkson-2019-cryo/</link>
+      <link>http://localhost:1313/publication/hinkson-2019-cryo/</link>
       <pubDate>Thu, 01 Aug 2019 00:00:00 +0000</pubDate>
-      <guid>https://alexbaecher.com/publication/hinkson-2019-cryo/</guid>
+      <guid>http://localhost:1313/publication/hinkson-2019-cryo/</guid>
       <description>&lt;html&gt;
   &lt;style&gt;
     section {

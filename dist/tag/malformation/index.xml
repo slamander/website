@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Malformation | Baecher Research</title>
-    <link>https://alexbaecher.com/tag/malformation/</link>
-      <atom:link href="https://alexbaecher.com/tag/malformation/index.xml" rel="self" type="application/rss+xml" />
+    <link>http://localhost:1313/tag/malformation/</link>
+      <atom:link href="http://localhost:1313/tag/malformation/index.xml" rel="self" type="application/rss+xml" />
     <description>Malformation</description>
     <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><copyright>© 2025 Alex Baecher</copyright><lastBuildDate>Sun, 01 Dec 2019 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://alexbaecher.com/media/logo_hu2039277577754200582.png</url>
+      <url>http://localhost:1313/media/logo_hu2039277577754200582.png</url>
       <title>Malformation</title>
-      <link>https://alexbaecher.com/tag/malformation/</link>
+      <link>http://localhost:1313/tag/malformation/</link>
     </image>
     
     <item>
       <title>Tail bifurcation in two species of Desmognathus salamander (Plethodontidae) in southeastern Kentucky, USA</title>
-      <link>https://alexbaecher.com/publication/baecher-2020-thb/</link>
+      <link>http://localhost:1313/publication/baecher-2020-thb/</link>
       <pubDate>Sun, 01 Dec 2019 00:00:00 +0000</pubDate>
-      <guid>https://alexbaecher.com/publication/baecher-2020-thb/</guid>
+      <guid>http://localhost:1313/publication/baecher-2020-thb/</guid>
       <description>&lt;html&gt;
   &lt;style&gt;
     section {

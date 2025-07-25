@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Lise Comte | Baecher Research</title>
-    <link>https://alexbaecher.com/author/lise-comte/</link>
-      <atom:link href="https://alexbaecher.com/author/lise-comte/index.xml" rel="self" type="application/rss+xml" />
+    <link>http://localhost:1313/author/lise-comte/</link>
+      <atom:link href="http://localhost:1313/author/lise-comte/index.xml" rel="self" type="application/rss+xml" />
     <description>Lise Comte</description>
     <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><copyright>© 2025 Alex Baecher</copyright><lastBuildDate>Thu, 18 Apr 2024 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://alexbaecher.com/media/logo_hu2039277577754200582.png</url>
+      <url>http://localhost:1313/media/logo_hu2039277577754200582.png</url>
       <title>Lise Comte</title>
-      <link>https://alexbaecher.com/author/lise-comte/</link>
+      <link>http://localhost:1313/author/lise-comte/</link>
     </image>
     
     <item>
       <title>Mechanisms, detection and impacts of species redistribution under climate change</title>
-      <link>https://alexbaecher.com/publication/bioshifts-2024-nree/</link>
+      <link>http://localhost:1313/publication/bioshifts-2024-nree/</link>
       <pubDate>Thu, 18 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>https://alexbaecher.com/publication/bioshifts-2024-nree/</guid>
+      <guid>http://localhost:1313/publication/bioshifts-2024-nree/</guid>
       <description>&lt;html&gt;
   &lt;style&gt;
     section {
@@ -56,9 +56,9 @@
     
     <item>
       <title>Bringing traits back into the equation, A roadmap to understand species redistribution</title>
-      <link>https://alexbaecher.com/publication/bioshifts-2024-gcb/</link>
+      <link>http://localhost:1313/publication/bioshifts-2024-gcb/</link>
       <pubDate>Sat, 13 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>https://alexbaecher.com/publication/bioshifts-2024-gcb/</guid>
+      <guid>http://localhost:1313/publication/bioshifts-2024-gcb/</guid>
       <description>&lt;html&gt;
   &lt;style&gt;
     section {

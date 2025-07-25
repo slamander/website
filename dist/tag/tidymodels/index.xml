@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tidymodels | Baecher Research</title>
-    <link>https://alexbaecher.com/tag/tidymodels/</link>
-      <atom:link href="https://alexbaecher.com/tag/tidymodels/index.xml" rel="self" type="application/rss+xml" />
+    <link>http://localhost:1313/tag/tidymodels/</link>
+      <atom:link href="http://localhost:1313/tag/tidymodels/index.xml" rel="self" type="application/rss+xml" />
     <description>Tidymodels</description>
     <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><copyright>© 2025 Alex Baecher</copyright><lastBuildDate>Fri, 22 Oct 2021 00:40:04 -0700</lastBuildDate>
     <image>
-      <url>https://alexbaecher.com/media/logo_hu2039277577754200582.png</url>
+      <url>http://localhost:1313/media/logo_hu2039277577754200582.png</url>
       <title>Tidymodels</title>
-      <link>https://alexbaecher.com/tag/tidymodels/</link>
+      <link>http://localhost:1313/tag/tidymodels/</link>
     </image>
     
     <item>
       <title>Machine Learning the &#39;Tidy&#39; Way</title>
-      <link>https://alexbaecher.com/post/ml-tidymodels/</link>
+      <link>http://localhost:1313/post/ml-tidymodels/</link>
       <pubDate>Fri, 22 Oct 2021 00:40:04 -0700</pubDate>
-      <guid>https://alexbaecher.com/post/ml-tidymodels/</guid>
+      <guid>http://localhost:1313/post/ml-tidymodels/</guid>
       <description>&lt;h2 id=&#34;introduction-to-machine-learning-with-tidymodels&#34;&gt;Introduction to machine learning with &lt;code&gt;tidymodels&lt;/code&gt;&lt;/h2&gt;
 &lt;h2 id=&#34;tidymodels-provides-a-clean-organized-and--most-importantly--consistent-programming-syntax-for-data-pre-processing-model-specification-model-fitting-model-evaluation-and-prediction&#34;&gt;&lt;code&gt;Tidymodels&lt;/code&gt; provides a clean, organized, and&amp;ndash;most importantly&amp;ndash;consistent programming syntax for data pre-processing, model specification, model fitting, model evaluation, and prediction.&lt;/h2&gt;
 &lt;h1 id=&#34;anatomy-of-tidymodels&#34;&gt;Anatomy of &lt;code&gt;tidymodels&lt;/code&gt;&lt;/h1&gt;
@@ -116,7 +116,7 @@ amphibio %&amp;gt;%
                /media/posts/script_files/figure-markdown_strict/unnamed-chunk-4-1_hu414051968656277047.webp 400w,
                /media/posts/script_files/figure-markdown_strict/unnamed-chunk-4-1_hu16502879561273140279.webp 760w,
                /media/posts/script_files/figure-markdown_strict/unnamed-chunk-4-1_hu16367533267459427282.webp 1200w&#34;
-               src=&#34;https://alexbaecher.com/media/posts/script_files/figure-markdown_strict/unnamed-chunk-4-1_hu414051968656277047.webp&#34;
+               src=&#34;http://localhost:1313/media/posts/script_files/figure-markdown_strict/unnamed-chunk-4-1_hu414051968656277047.webp&#34;
                width=&#34;672&#34;
                height=&#34;480&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -460,7 +460,7 @@ ggplot(bind_rows(mods$.predictions), aes(Order, .pred_Anura)) +
                /media/posts/script_files/figure-markdown_strict/unnamed-chunk-17-1_hu4668447301989144043.webp 400w,
                /media/posts/script_files/figure-markdown_strict/unnamed-chunk-17-1_hu12140637065517628874.webp 760w,
                /media/posts/script_files/figure-markdown_strict/unnamed-chunk-17-1_hu14879292936314113267.webp 1200w&#34;
-               src=&#34;https://alexbaecher.com/media/posts/script_files/figure-markdown_strict/unnamed-chunk-17-1_hu4668447301989144043.webp&#34;
+               src=&#34;http://localhost:1313/media/posts/script_files/figure-markdown_strict/unnamed-chunk-17-1_hu4668447301989144043.webp&#34;
                width=&#34;672&#34;
                height=&#34;480&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -495,7 +495,7 @@ ggplot(bind_rows(mods$.predictions), aes(Order, .pred_Anura)) +
                /media/posts/script_files/figure-markdown_strict/unnamed-chunk-17-2_hu14706677157536861233.webp 400w,
                /media/posts/script_files/figure-markdown_strict/unnamed-chunk-17-2_hu17734957877442164994.webp 760w,
                /media/posts/script_files/figure-markdown_strict/unnamed-chunk-17-2_hu3054777465481101903.webp 1200w&#34;
-               src=&#34;https://alexbaecher.com/media/posts/script_files/figure-markdown_strict/unnamed-chunk-17-2_hu14706677157536861233.webp&#34;
+               src=&#34;http://localhost:1313/media/posts/script_files/figure-markdown_strict/unnamed-chunk-17-2_hu14706677157536861233.webp&#34;
                width=&#34;672&#34;
                height=&#34;480&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -531,7 +531,7 @@ ggplot(bind_rows(mods$.predictions), aes(Order, .pred_Anura)) +
                /media/posts/script_files/figure-markdown_strict/unnamed-chunk-17-3_hu7929835404271128727.webp 400w,
                /media/posts/script_files/figure-markdown_strict/unnamed-chunk-17-3_hu5960965889861658502.webp 760w,
                /media/posts/script_files/figure-markdown_strict/unnamed-chunk-17-3_hu8034350242501598142.webp 1200w&#34;
-               src=&#34;https://alexbaecher.com/media/posts/script_files/figure-markdown_strict/unnamed-chunk-17-3_hu7929835404271128727.webp&#34;
+               src=&#34;http://localhost:1313/media/posts/script_files/figure-markdown_strict/unnamed-chunk-17-3_hu7929835404271128727.webp&#34;
                width=&#34;672&#34;
                height=&#34;480&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -568,7 +568,7 @@ ggplot(bind_rows(mods$.predictions), aes(Order, .pred_Anura)) +
                /media/posts/script_files/figure-markdown_strict/unnamed-chunk-18-1_hu925915619049730072.webp 400w,
                /media/posts/script_files/figure-markdown_strict/unnamed-chunk-18-1_hu1067537527602828794.webp 760w,
                /media/posts/script_files/figure-markdown_strict/unnamed-chunk-18-1_hu17114581279966710681.webp 1200w&#34;
-               src=&#34;https://alexbaecher.com/media/posts/script_files/figure-markdown_strict/unnamed-chunk-18-1_hu925915619049730072.webp&#34;
+               src=&#34;http://localhost:1313/media/posts/script_files/figure-markdown_strict/unnamed-chunk-18-1_hu925915619049730072.webp&#34;
                width=&#34;672&#34;
                height=&#34;480&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -637,7 +637,7 @@ final_boosted_model %&amp;gt;%
                /media/posts/script_files/figure-markdown_strict/unnamed-chunk-21-1_hu6876896358977779037.webp 400w,
                /media/posts/script_files/figure-markdown_strict/unnamed-chunk-21-1_hu15580196728854118655.webp 760w,
                /media/posts/script_files/figure-markdown_strict/unnamed-chunk-21-1_hu3457540179927346600.webp 1200w&#34;
-               src=&#34;https://alexbaecher.com/media/posts/script_files/figure-markdown_strict/unnamed-chunk-21-1_hu6876896358977779037.webp&#34;
+               src=&#34;http://localhost:1313/media/posts/script_files/figure-markdown_strict/unnamed-chunk-21-1_hu6876896358977779037.webp&#34;
                width=&#34;672&#34;
                height=&#34;480&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -686,7 +686,7 @@ final_knn_model %&amp;gt;%
                /media/posts/script_files/figure-markdown_strict/unnamed-chunk-22-1_hu15917107705313701047.webp 400w,
                /media/posts/script_files/figure-markdown_strict/unnamed-chunk-22-1_hu18171846850144008820.webp 760w,
                /media/posts/script_files/figure-markdown_strict/unnamed-chunk-22-1_hu11196280528281156913.webp 1200w&#34;
-               src=&#34;https://alexbaecher.com/media/posts/script_files/figure-markdown_strict/unnamed-chunk-22-1_hu15917107705313701047.webp&#34;
+               src=&#34;http://localhost:1313/media/posts/script_files/figure-markdown_strict/unnamed-chunk-22-1_hu15917107705313701047.webp&#34;
                width=&#34;672&#34;
                height=&#34;480&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -746,7 +746,7 @@ ggplot(boosted_aug_long, aes(x = value, y = .pred_Anura, col = .pred_class)) +
                /media/posts/script_files/figure-markdown_strict/unnamed-chunk-23-1_hu9070272248444432199.webp 400w,
                /media/posts/script_files/figure-markdown_strict/unnamed-chunk-23-1_hu16889084873753849499.webp 760w,
                /media/posts/script_files/figure-markdown_strict/unnamed-chunk-23-1_hu4124343322066363760.webp 1200w&#34;
-               src=&#34;https://alexbaecher.com/media/posts/script_files/figure-markdown_strict/unnamed-chunk-23-1_hu9070272248444432199.webp&#34;
+               src=&#34;http://localhost:1313/media/posts/script_files/figure-markdown_strict/unnamed-chunk-23-1_hu9070272248444432199.webp&#34;
                width=&#34;672&#34;
                height=&#34;480&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -784,7 +784,7 @@ ggplot(boosted_aug_long, aes(x = value, y = .pred_Anura, col = .pred_class)) +
                /media/posts/script_files/figure-markdown_strict/unnamed-chunk-23-2_hu17258803858476358636.webp 400w,
                /media/posts/script_files/figure-markdown_strict/unnamed-chunk-23-2_hu6041234132259651925.webp 760w,
                /media/posts/script_files/figure-markdown_strict/unnamed-chunk-23-2_hu6316135883687380815.webp 1200w&#34;
-               src=&#34;https://alexbaecher.com/media/posts/script_files/figure-markdown_strict/unnamed-chunk-23-2_hu17258803858476358636.webp&#34;
+               src=&#34;http://localhost:1313/media/posts/script_files/figure-markdown_strict/unnamed-chunk-23-2_hu17258803858476358636.webp&#34;
                width=&#34;672&#34;
                height=&#34;480&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;

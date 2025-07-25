@@ -2,29 +2,29 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>RJ Fletcher | Baecher Research</title>
-    <link>https://alexbaecher.com/author/rj-fletcher/</link>
-      <atom:link href="https://alexbaecher.com/author/rj-fletcher/index.xml" rel="self" type="application/rss+xml" />
+    <link>http://localhost:1313/author/rj-fletcher/</link>
+      <atom:link href="http://localhost:1313/author/rj-fletcher/index.xml" rel="self" type="application/rss+xml" />
     <description>RJ Fletcher</description>
     <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><copyright>© 2025 Alex Baecher</copyright><lastBuildDate>Tue, 19 Dec 2023 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://alexbaecher.com/media/logo_hu2039277577754200582.png</url>
+      <url>http://localhost:1313/media/logo_hu2039277577754200582.png</url>
       <title>RJ Fletcher</title>
-      <link>https://alexbaecher.com/author/rj-fletcher/</link>
+      <link>http://localhost:1313/author/rj-fletcher/</link>
     </image>
     
     <item>
       <title>Expanding the scope of connectivity modeling with Markov chains: perspectives and applications in R</title>
-      <link>https://alexbaecher.com/talk/samc_iale/</link>
+      <link>http://localhost:1313/talk/samc_iale/</link>
       <pubDate>Tue, 19 Dec 2023 00:00:00 +0000</pubDate>
-      <guid>https://alexbaecher.com/talk/samc_iale/</guid>
+      <guid>http://localhost:1313/talk/samc_iale/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Species redistribution and connectivity (Intro)</title>
-      <link>https://alexbaecher.com/talk/samc_sotm/</link>
+      <link>http://localhost:1313/talk/samc_sotm/</link>
       <pubDate>Tue, 19 Dec 2023 00:00:00 +0000</pubDate>
-      <guid>https://alexbaecher.com/talk/samc_sotm/</guid>
+      <guid>http://localhost:1313/talk/samc_sotm/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Description:&lt;/strong&gt;
 This 1-day workshop will distill the basic principles of connectivity modeling and its relevance to predicting movement and species redistribution with environmental change. Participants will be introduced to connectivity as well as a new framework utilizing spatial-absorbing Markov chains (SAMC), which helps unify other approaches. Along the way, we will discuss how connectivity is relevant to core principles of species ranges and redistribution. We will also discuss the common problems, assumptions, and oversights occurring in published predictions of species range redistribution.&lt;/p&gt;
 &lt;p&gt;Topics:

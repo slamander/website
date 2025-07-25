@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>JD Willson | Baecher Research</title>
-    <link>https://alexbaecher.com/author/jd-willson/</link>
-      <atom:link href="https://alexbaecher.com/author/jd-willson/index.xml" rel="self" type="application/rss+xml" />
+    <link>http://localhost:1313/author/jd-willson/</link>
+      <atom:link href="http://localhost:1313/author/jd-willson/index.xml" rel="self" type="application/rss+xml" />
     <description>JD Willson</description>
     <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><copyright>© 2025 Alex Baecher</copyright><lastBuildDate>Sun, 18 Nov 2018 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://alexbaecher.com/media/logo_hu2039277577754200582.png</url>
+      <url>http://localhost:1313/media/logo_hu2039277577754200582.png</url>
       <title>JD Willson</title>
-      <link>https://alexbaecher.com/author/jd-willson/</link>
+      <link>http://localhost:1313/author/jd-willson/</link>
     </image>
     
     <item>
       <title>Herpetofaunal Communities in Restored and Unrestored Remnant Tallgrass Prairie and Associated Wetlands in Northwest Arkansas, USA</title>
-      <link>https://alexbaecher.com/publication/baecher-2018-wetlands/</link>
+      <link>http://localhost:1313/publication/baecher-2018-wetlands/</link>
       <pubDate>Sun, 18 Nov 2018 00:00:00 +0000</pubDate>
-      <guid>https://alexbaecher.com/publication/baecher-2018-wetlands/</guid>
+      <guid>http://localhost:1313/publication/baecher-2018-wetlands/</guid>
       <description>&lt;html&gt;
   &lt;style&gt;
     section {
@@ -56,9 +56,9 @@
     
     <item>
       <title>Lithobates areolatus (crawfish frog) predation</title>
-      <link>https://alexbaecher.com/publication/baecher-2014-hr/</link>
+      <link>http://localhost:1313/publication/baecher-2014-hr/</link>
       <pubDate>Wed, 08 Oct 2014 00:00:00 +0000</pubDate>
-      <guid>https://alexbaecher.com/publication/baecher-2014-hr/</guid>
+      <guid>http://localhost:1313/publication/baecher-2014-hr/</guid>
       <description></description>
     </item>
     

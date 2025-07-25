@@ -5,27 +5,27 @@ date: 2025-01-25
 draft: false
 
 sections:
-- block: markdown
-  content:
-    text: |
-      <div style="position: absolute; top: 20px; right: 20px; z-index: 10;">
-        <img src="/media/badge_kentucki.png" alt="Badge" style="width: 100px; height: auto;">
-      </div>
-  design:
-    background:
-      color: transparent
-    spacing:
-      padding: ["0px", "0px", "0px", "0px"]
+  - block: markdown
+    content:
+      text: |
+        <div style="position: absolute; top: 50px; right: 100px; z-index: 10;">
+          <img src="/media/badge_kentucki.png" alt="Badge" style="width: 500px; height: auto;">
+        </div>
+    design:
+      background:
+        color: transparent
+      spacing:
+        padding: ["0px", "5px", "0px", "5px"]
 
   - block: hero
     content:
       title: "Baecher Research"
       text: "Spatial ecology and conservation research"
       cta:
-        url: "/files/cv.pdf"  # Add leading slash
-        label: "Download CV"
-        icon: download
+        url: "https://drive.google.com/file/d/1zADCDlIiJlx1vXKQ6NdMLwTZm7E6sS29/view?usp=sharing"  # Add leading slash
+        label: Download CV
         icon_pack: fas
+        icon: download
     design:
       background:
         image:
@@ -37,25 +37,11 @@ sections:
         text_color_light: true
     css_class: custom-hero
     spacing:
-      padding: ["20px", "0", "20px", "0"]  # Reduced padding
-
-        
-  - block: markdown
-    content:
-      title: "About me"
-      text: |
-        **The good bits:**
-        Native to the foothills of Arkansas' Ozark Mountains. My life consists of... my wife (Kristin), my daughter (Faye), my dog (Ollie), herping, hiking, swimming and canoeing, woodworking, and home DIY projects.
-
-        **The serious bits:**
-        I am a landscape ecologist, with interest in research at the interface between conservation, ecological theory, and mathematical modeling. I primarily work with reptiles and amphibians, but am interested in the processes determining the distribution of biodiversity more broadly.
-
-        **Current Position:** Postdoctoral Researcher at University of Florida
-        
+      padding: ["20px", "0px", "20px", "0px"]  # Reduced padding
 
   - block: markdown
     content:
-      title: "Connect"
+      title: 
       text: |
         <div class="flex flex-wrap gap-4 justify-center mt-4">
           <a href="mailto:jbaecher@gmail.com" class="inline-flex items-center px-3 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">
@@ -90,7 +76,21 @@ sections:
     design:
       columns: '1'
       spacing:
-        padding: ["10px", "0", "20px", "0"]
+        padding: ["20px", "50px", "10px", "50px"]
+
+        
+  - block: markdown
+    content:
+      title: "About me"
+      text: |
+        **The good bits:**
+        Native to the foothills of Arkansas' Ozark Mountains. My life consists of... my wife (Kristin), my daughter (Faye), my dog (Ollie), herping, hiking, swimming and canoeing, woodworking, and home DIY projects.
+
+        **The serious bits:**
+        I am a spacial ecologist, with interest in research at the interface between conservation, ecological theory, and mathematical modeling. I primarily work with reptiles and amphibians, but am interested in the processes determining the distribution of biodiversity more broadly.
+
+        **Current Position:** Postdoctoral Research Fellow at Utah State University
+        
 
   - block: markdown
     content:
@@ -169,4 +169,23 @@ sections:
       view: card
       columns: 2
 
+
+  - block: collection
+    content:
+      title: "📊 Coding Tutorials & Blog Posts"
+      subtitle: "Data science tutorials and R programming guides"
+      text: ""
+      count: 6
+      archive:
+        enable: true
+        text: "See all tutorials →"
+        link: "post/"
+      filters:
+        folders:
+          - post
+    design:
+      view: card
+      columns: 2
+      spacing:
+        padding: ["20px", "0", "20px", "0"]
 ---

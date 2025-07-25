@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Brett R Scheffers | Baecher Research</title>
-    <link>https://alexbaecher.com/author/brett-r-scheffers/</link>
-      <atom:link href="https://alexbaecher.com/author/brett-r-scheffers/index.xml" rel="self" type="application/rss+xml" />
+    <link>http://localhost:1313/author/brett-r-scheffers/</link>
+      <atom:link href="http://localhost:1313/author/brett-r-scheffers/index.xml" rel="self" type="application/rss+xml" />
     <description>Brett R Scheffers</description>
     <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><copyright>© 2025 Alex Baecher</copyright><lastBuildDate>Tue, 19 Dec 2023 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://alexbaecher.com/media/logo_hu2039277577754200582.png</url>
+      <url>http://localhost:1313/media/logo_hu2039277577754200582.png</url>
       <title>Brett R Scheffers</title>
-      <link>https://alexbaecher.com/author/brett-r-scheffers/</link>
+      <link>http://localhost:1313/author/brett-r-scheffers/</link>
     </image>
     
     <item>
       <title>Expert elicitation of key invasive species habitat requirements, prevalence, and life history attributes</title>
-      <link>https://alexbaecher.com/talk/exp_elic/</link>
+      <link>http://localhost:1313/talk/exp_elic/</link>
       <pubDate>Tue, 19 Dec 2023 00:00:00 +0000</pubDate>
-      <guid>https://alexbaecher.com/talk/exp_elic/</guid>
+      <guid>http://localhost:1313/talk/exp_elic/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Primary project outputs&lt;/strong&gt;
 *Expert evaluation of the invasive species potential in the Southeast United States. *
 We aim to conduct two workshops leveraging the best academic, management, and legislative knowledge from across the Southeast USA. Workshop one will focus on species occurrences and assessments of traits that will enable robust modelling approaches. Workshop two will focus on management approaches to combat the most deleterious findings across all of the focal species. Both workshops will work iteratively with stakeholders to ensure that findings are both grounded in up to date information, as well as model findings reflect changing invasion realities.&lt;/p&gt;

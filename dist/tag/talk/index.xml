@@ -2,29 +2,29 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Talk | Baecher Research</title>
-    <link>https://alexbaecher.com/tag/talk/</link>
-      <atom:link href="https://alexbaecher.com/tag/talk/index.xml" rel="self" type="application/rss+xml" />
+    <link>http://localhost:1313/tag/talk/</link>
+      <atom:link href="http://localhost:1313/tag/talk/index.xml" rel="self" type="application/rss+xml" />
     <description>Talk</description>
     <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><copyright>© 2025 Alex Baecher</copyright><lastBuildDate>Wed, 17 May 2023 13:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://alexbaecher.com/media/logo_hu2039277577754200582.png</url>
+      <url>http://localhost:1313/media/logo_hu2039277577754200582.png</url>
       <title>Talk</title>
-      <link>https://alexbaecher.com/tag/talk/</link>
+      <link>http://localhost:1313/tag/talk/</link>
     </image>
     
     <item>
       <title>Informing Species Range-shifts with (preliminary) Global Connectivity </title>
-      <link>https://alexbaecher.com/talk/sotm_talk/</link>
+      <link>http://localhost:1313/talk/sotm_talk/</link>
       <pubDate>Wed, 17 May 2023 13:00:00 +0000</pubDate>
-      <guid>https://alexbaecher.com/talk/sotm_talk/</guid>
+      <guid>http://localhost:1313/talk/sotm_talk/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Predicting the spread of invasive Burmese pythons in South Florida</title>
-      <link>https://alexbaecher.com/talk/seriscc_seminar/</link>
+      <link>http://localhost:1313/talk/seriscc_seminar/</link>
       <pubDate>Thu, 17 Nov 2022 13:00:00 +0000</pubDate>
-      <guid>https://alexbaecher.com/talk/seriscc_seminar/</guid>
+      <guid>http://localhost:1313/talk/seriscc_seminar/</guid>
       <description>&lt;p&gt;Integrating multi-scale data with hybrid ecological models to evaluate the role of management, climate, and habitat&lt;/p&gt;
 
 
@@ -39,18 +39,18 @@
     
     <item>
       <title>Towards Global Connectivity, applications for BIOSHIFTS</title>
-      <link>https://alexbaecher.com/talk/bioshifts_talk/</link>
+      <link>http://localhost:1313/talk/bioshifts_talk/</link>
       <pubDate>Thu, 17 Nov 2022 13:00:00 +0000</pubDate>
-      <guid>https://alexbaecher.com/talk/bioshifts_talk/</guid>
+      <guid>http://localhost:1313/talk/bioshifts_talk/</guid>
       <description>&lt;p&gt;Modeling global ecological connectivity using biologically relevant data to understand expected patterns of species range shifts&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Modeling spread of invasive Burmese pythons, integrating thermoregulation, behavior, and mortality</title>
-      <link>https://alexbaecher.com/talk/iale_talk/</link>
+      <link>http://localhost:1313/talk/iale_talk/</link>
       <pubDate>Fri, 22 Oct 2021 13:00:00 +0000</pubDate>
-      <guid>https://alexbaecher.com/talk/iale_talk/</guid>
+      <guid>http://localhost:1313/talk/iale_talk/</guid>
       <description>&lt;p&gt;Integrating multi-scale data with hybrid ecological models to evaluate the role of management, climate, and habitat&lt;/p&gt;
 
 

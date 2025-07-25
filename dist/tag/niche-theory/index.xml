@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Niche Theory | Baecher Research</title>
-    <link>https://alexbaecher.com/tag/niche-theory/</link>
-      <atom:link href="https://alexbaecher.com/tag/niche-theory/index.xml" rel="self" type="application/rss+xml" />
+    <link>http://localhost:1313/tag/niche-theory/</link>
+      <atom:link href="http://localhost:1313/tag/niche-theory/index.xml" rel="self" type="application/rss+xml" />
     <description>Niche Theory</description>
     <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><copyright>© 2025 Alex Baecher</copyright><lastBuildDate>Thu, 04 Jul 2024 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://alexbaecher.com/media/logo_hu2039277577754200582.png</url>
+      <url>http://localhost:1313/media/logo_hu2039277577754200582.png</url>
       <title>Niche Theory</title>
-      <link>https://alexbaecher.com/tag/niche-theory/</link>
+      <link>http://localhost:1313/tag/niche-theory/</link>
     </image>
     
     <item>
       <title>The environmental filtering paradigm and non-filtering community assembly processes</title>
-      <link>https://alexbaecher.com/publication/baecher_2024_jbi/</link>
+      <link>http://localhost:1313/publication/baecher_2024_jbi/</link>
       <pubDate>Thu, 04 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>https://alexbaecher.com/publication/baecher_2024_jbi/</guid>
+      <guid>http://localhost:1313/publication/baecher_2024_jbi/</guid>
       <description>&lt;html&gt;
   &lt;style&gt;
     section {

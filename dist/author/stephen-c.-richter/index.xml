@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Stephen C. Richter | Baecher Research</title>
-    <link>https://alexbaecher.com/author/stephen-c.-richter/</link>
-      <atom:link href="https://alexbaecher.com/author/stephen-c.-richter/index.xml" rel="self" type="application/rss+xml" />
+    <link>http://localhost:1313/author/stephen-c.-richter/</link>
+      <atom:link href="http://localhost:1313/author/stephen-c.-richter/index.xml" rel="self" type="application/rss+xml" />
     <description>Stephen C. Richter</description>
     <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><copyright>© 2025 Alex Baecher</copyright><lastBuildDate>Sun, 01 Dec 2019 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://alexbaecher.com/media/logo_hu2039277577754200582.png</url>
+      <url>http://localhost:1313/media/logo_hu2039277577754200582.png</url>
       <title>Stephen C. Richter</title>
-      <link>https://alexbaecher.com/author/stephen-c.-richter/</link>
+      <link>http://localhost:1313/author/stephen-c.-richter/</link>
     </image>
     
     <item>
       <title>Tail bifurcation in two species of Desmognathus salamander (Plethodontidae) in southeastern Kentucky, USA</title>
-      <link>https://alexbaecher.com/publication/baecher-2020-thb/</link>
+      <link>http://localhost:1313/publication/baecher-2020-thb/</link>
       <pubDate>Sun, 01 Dec 2019 00:00:00 +0000</pubDate>
-      <guid>https://alexbaecher.com/publication/baecher-2020-thb/</guid>
+      <guid>http://localhost:1313/publication/baecher-2020-thb/</guid>
       <description>&lt;html&gt;
   &lt;style&gt;
     section {
@@ -56,9 +56,9 @@
     
     <item>
       <title>Environmental gradients in old‐growth Appalachian forest predict fine‐scale distribution, co‐occurrence, and density of woodland salamanders</title>
-      <link>https://alexbaecher.com/publication/baecher-2018-ee/</link>
+      <link>http://localhost:1313/publication/baecher-2018-ee/</link>
       <pubDate>Tue, 04 Dec 2018 00:00:00 +0000</pubDate>
-      <guid>https://alexbaecher.com/publication/baecher-2018-ee/</guid>
+      <guid>http://localhost:1313/publication/baecher-2018-ee/</guid>
       <description>&lt;html&gt;
   &lt;style&gt;
     section {

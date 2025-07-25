@@ -2,29 +2,29 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Recent &amp; Upcoming Talks | Baecher Research</title>
-    <link>https://alexbaecher.com/talk/</link>
-      <atom:link href="https://alexbaecher.com/talk/index.xml" rel="self" type="application/rss+xml" />
+    <link>http://localhost:1313/talk/</link>
+      <atom:link href="http://localhost:1313/talk/index.xml" rel="self" type="application/rss+xml" />
     <description>Recent &amp; Upcoming Talks</description>
     <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><copyright>© 2025 Alex Baecher</copyright><lastBuildDate>Tue, 19 Dec 2023 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://alexbaecher.com/media/logo_hu2039277577754200582.png</url>
+      <url>http://localhost:1313/media/logo_hu2039277577754200582.png</url>
       <title>Recent &amp; Upcoming Talks</title>
-      <link>https://alexbaecher.com/talk/</link>
+      <link>http://localhost:1313/talk/</link>
     </image>
     
     <item>
       <title>Expanding the scope of connectivity modeling with Markov chains: perspectives and applications in R</title>
-      <link>https://alexbaecher.com/talk/samc_iale/</link>
+      <link>http://localhost:1313/talk/samc_iale/</link>
       <pubDate>Tue, 19 Dec 2023 00:00:00 +0000</pubDate>
-      <guid>https://alexbaecher.com/talk/samc_iale/</guid>
+      <guid>http://localhost:1313/talk/samc_iale/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Expert elicitation of key invasive species habitat requirements, prevalence, and life history attributes</title>
-      <link>https://alexbaecher.com/talk/exp_elic/</link>
+      <link>http://localhost:1313/talk/exp_elic/</link>
       <pubDate>Tue, 19 Dec 2023 00:00:00 +0000</pubDate>
-      <guid>https://alexbaecher.com/talk/exp_elic/</guid>
+      <guid>http://localhost:1313/talk/exp_elic/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Primary project outputs&lt;/strong&gt;
 *Expert evaluation of the invasive species potential in the Southeast United States. *
 We aim to conduct two workshops leveraging the best academic, management, and legislative knowledge from across the Southeast USA. Workshop one will focus on species occurrences and assessments of traits that will enable robust modelling approaches. Workshop two will focus on management approaches to combat the most deleterious findings across all of the focal species. Both workshops will work iteratively with stakeholders to ensure that findings are both grounded in up to date information, as well as model findings reflect changing invasion realities.&lt;/p&gt;
@@ -44,9 +44,9 @@ To understand how climate and land use change will affect global patterns of bio
     
     <item>
       <title>Species redistribution and connectivity (Intro)</title>
-      <link>https://alexbaecher.com/talk/samc_sotm/</link>
+      <link>http://localhost:1313/talk/samc_sotm/</link>
       <pubDate>Tue, 19 Dec 2023 00:00:00 +0000</pubDate>
-      <guid>https://alexbaecher.com/talk/samc_sotm/</guid>
+      <guid>http://localhost:1313/talk/samc_sotm/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Description:&lt;/strong&gt;
 This 1-day workshop will distill the basic principles of connectivity modeling and its relevance to predicting movement and species redistribution with environmental change. Participants will be introduced to connectivity as well as a new framework utilizing spatial-absorbing Markov chains (SAMC), which helps unify other approaches. Along the way, we will discuss how connectivity is relevant to core principles of species ranges and redistribution. We will also discuss the common problems, assumptions, and oversights occurring in published predictions of species range redistribution.&lt;/p&gt;
 &lt;p&gt;Topics:
@@ -85,17 +85,17 @@ This 1-day workshop will distill the basic principles of connectivity modeling a
     
     <item>
       <title>Informing Species Range-shifts with (preliminary) Global Connectivity </title>
-      <link>https://alexbaecher.com/talk/sotm_talk/</link>
+      <link>http://localhost:1313/talk/sotm_talk/</link>
       <pubDate>Wed, 17 May 2023 13:00:00 +0000</pubDate>
-      <guid>https://alexbaecher.com/talk/sotm_talk/</guid>
+      <guid>http://localhost:1313/talk/sotm_talk/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Predicting the spread of invasive Burmese pythons in South Florida</title>
-      <link>https://alexbaecher.com/talk/seriscc_seminar/</link>
+      <link>http://localhost:1313/talk/seriscc_seminar/</link>
       <pubDate>Thu, 17 Nov 2022 13:00:00 +0000</pubDate>
-      <guid>https://alexbaecher.com/talk/seriscc_seminar/</guid>
+      <guid>http://localhost:1313/talk/seriscc_seminar/</guid>
       <description>&lt;p&gt;Integrating multi-scale data with hybrid ecological models to evaluate the role of management, climate, and habitat&lt;/p&gt;
 
 
@@ -110,18 +110,18 @@ This 1-day workshop will distill the basic principles of connectivity modeling a
     
     <item>
       <title>Towards Global Connectivity, applications for BIOSHIFTS</title>
-      <link>https://alexbaecher.com/talk/bioshifts_talk/</link>
+      <link>http://localhost:1313/talk/bioshifts_talk/</link>
       <pubDate>Thu, 17 Nov 2022 13:00:00 +0000</pubDate>
-      <guid>https://alexbaecher.com/talk/bioshifts_talk/</guid>
+      <guid>http://localhost:1313/talk/bioshifts_talk/</guid>
       <description>&lt;p&gt;Modeling global ecological connectivity using biologically relevant data to understand expected patterns of species range shifts&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Achieving connectivity under rapid change: case studies from niches to distributions</title>
-      <link>https://alexbaecher.com/talk/ecol_cc/</link>
+      <link>http://localhost:1313/talk/ecol_cc/</link>
       <pubDate>Fri, 22 Oct 2021 13:00:00 +0000</pubDate>
-      <guid>https://alexbaecher.com/talk/ecol_cc/</guid>
+      <guid>http://localhost:1313/talk/ecol_cc/</guid>
       <description>&lt;h2&gt;University of Florida, Department of Wildlife Ecology and Conservation&lt;/h2&gt;
 * Guest Lecturer (Spr. &#39;20): [Landscape Connectivity](https://drive.google.com/uc?export=download&amp;id=1y8CO9LewVxIXlNU4HLHaNy2BVw_rDE1y)
 </description>
@@ -129,9 +129,9 @@ This 1-day workshop will distill the basic principles of connectivity modeling a
     
     <item>
       <title>Modeling spread of invasive Burmese pythons, integrating thermoregulation, behavior, and mortality</title>
-      <link>https://alexbaecher.com/talk/iale_talk/</link>
+      <link>http://localhost:1313/talk/iale_talk/</link>
       <pubDate>Fri, 22 Oct 2021 13:00:00 +0000</pubDate>
-      <guid>https://alexbaecher.com/talk/iale_talk/</guid>
+      <guid>http://localhost:1313/talk/iale_talk/</guid>
       <description>&lt;p&gt;Integrating multi-scale data with hybrid ecological models to evaluate the role of management, climate, and habitat&lt;/p&gt;
 
 
@@ -146,9 +146,9 @@ This 1-day workshop will distill the basic principles of connectivity modeling a
     
     <item>
       <title>Restoration Ecology of Grassland Herpetofauna in SEUSA</title>
-      <link>https://alexbaecher.com/talk/se_amphibs_1/</link>
+      <link>http://localhost:1313/talk/se_amphibs_1/</link>
       <pubDate>Fri, 22 Oct 2021 13:00:00 +0000</pubDate>
-      <guid>https://alexbaecher.com/talk/se_amphibs_1/</guid>
+      <guid>http://localhost:1313/talk/se_amphibs_1/</guid>
       <description>&lt;h2&gt;University of Florida, Department of Wildlife Ecology and Conservation&lt;/h2&gt;
 * Guest Lecturer (Spr. &#39;20): [Grassland Anurans](https://drive.google.com/uc?export=download&amp;id=1lpI3-PvoozaRexnpNn1i_Bzp4lg6ogqW)
 </description>
@@ -156,9 +156,9 @@ This 1-day workshop will distill the basic principles of connectivity modeling a
     
     <item>
       <title>Salamander conservation in the Southeastern USA</title>
-      <link>https://alexbaecher.com/talk/se_amphibs_2/</link>
+      <link>http://localhost:1313/talk/se_amphibs_2/</link>
       <pubDate>Fri, 22 Oct 2021 13:00:00 +0000</pubDate>
-      <guid>https://alexbaecher.com/talk/se_amphibs_2/</guid>
+      <guid>http://localhost:1313/talk/se_amphibs_2/</guid>
       <description>&lt;h2&gt;University of Florida, Department of Wildlife Ecology and Conservation&lt;/h2&gt;
 * Guest Lecturer (Spr. &#39;20): [Salamander Ecology](https://drive.google.com/uc?export=download&amp;id=1jsUhEewx3OWyfGIZvX3fCAWCGYeYyffM)
 </description>

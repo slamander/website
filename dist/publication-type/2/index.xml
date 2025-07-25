@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>2 | Baecher Research</title>
-    <link>https://alexbaecher.com/publication-type/2/</link>
-      <atom:link href="https://alexbaecher.com/publication-type/2/index.xml" rel="self" type="application/rss+xml" />
+    <link>http://localhost:1313/publication-type/2/</link>
+      <atom:link href="http://localhost:1313/publication-type/2/index.xml" rel="self" type="application/rss+xml" />
     <description>2</description>
     <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><copyright>© 2025 Alex Baecher</copyright><lastBuildDate>Thu, 04 Jul 2024 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://alexbaecher.com/media/logo_hu2039277577754200582.png</url>
+      <url>http://localhost:1313/media/logo_hu2039277577754200582.png</url>
       <title>2</title>
-      <link>https://alexbaecher.com/publication-type/2/</link>
+      <link>http://localhost:1313/publication-type/2/</link>
     </image>
     
     <item>
       <title>The environmental filtering paradigm and non-filtering community assembly processes</title>
-      <link>https://alexbaecher.com/publication/baecher_2024_jbi/</link>
+      <link>http://localhost:1313/publication/baecher_2024_jbi/</link>
       <pubDate>Thu, 04 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>https://alexbaecher.com/publication/baecher_2024_jbi/</guid>
+      <guid>http://localhost:1313/publication/baecher_2024_jbi/</guid>
       <description>&lt;html&gt;
   &lt;style&gt;
     section {
@@ -56,9 +56,9 @@
     
     <item>
       <title>Proximal microclimate: Moving beyond spatiotemporalresolution improves ecological predictions</title>
-      <link>https://alexbaecher.com/publication/klinges_2024_geb/</link>
+      <link>http://localhost:1313/publication/klinges_2024_geb/</link>
       <pubDate>Wed, 26 Jun 2024 00:00:00 +0000</pubDate>
-      <guid>https://alexbaecher.com/publication/klinges_2024_geb/</guid>
+      <guid>http://localhost:1313/publication/klinges_2024_geb/</guid>
       <description>&lt;html&gt;
   &lt;style&gt;
     section {
@@ -98,9 +98,9 @@
     
     <item>
       <title>Mechanisms, detection and impacts of species redistribution under climate change</title>
-      <link>https://alexbaecher.com/publication/bioshifts-2024-nree/</link>
+      <link>http://localhost:1313/publication/bioshifts-2024-nree/</link>
       <pubDate>Thu, 18 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>https://alexbaecher.com/publication/bioshifts-2024-nree/</guid>
+      <guid>http://localhost:1313/publication/bioshifts-2024-nree/</guid>
       <description>&lt;html&gt;
   &lt;style&gt;
     section {
@@ -140,9 +140,9 @@
     
     <item>
       <title>Bringing traits back into the equation, A roadmap to understand species redistribution</title>
-      <link>https://alexbaecher.com/publication/bioshifts-2024-gcb/</link>
+      <link>http://localhost:1313/publication/bioshifts-2024-gcb/</link>
       <pubDate>Sat, 13 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>https://alexbaecher.com/publication/bioshifts-2024-gcb/</guid>
+      <guid>http://localhost:1313/publication/bioshifts-2024-gcb/</guid>
       <description>&lt;html&gt;
   &lt;style&gt;
     section {
@@ -182,9 +182,9 @@
     
     <item>
       <title>Experimental evaluation of how biological invasions and climate change interact to alter the vertical assembly of an amphibian community</title>
-      <link>https://alexbaecher.com/publication/baecher-2023-jae/</link>
+      <link>http://localhost:1313/publication/baecher-2023-jae/</link>
       <pubDate>Sun, 05 Mar 2023 00:00:00 +0000</pubDate>
-      <guid>https://alexbaecher.com/publication/baecher-2023-jae/</guid>
+      <guid>http://localhost:1313/publication/baecher-2023-jae/</guid>
       <description>&lt;html&gt;
   &lt;style&gt;
     section {
@@ -224,9 +224,9 @@
     
     <item>
       <title>Vertical stratification patterns of tropical forest vertebrates</title>
-      <link>https://alexbaecher.com/publication/basham-2022-br/</link>
+      <link>http://localhost:1313/publication/basham-2022-br/</link>
       <pubDate>Thu, 08 Sep 2022 00:00:00 +0000</pubDate>
-      <guid>https://alexbaecher.com/publication/basham-2022-br/</guid>
+      <guid>http://localhost:1313/publication/basham-2022-br/</guid>
       <description>&lt;html&gt;
   &lt;style&gt;
     section {
@@ -266,9 +266,9 @@
     
     <item>
       <title>Large, old trees define the vertical, horizontal, and seasonal distributions of a poison frog</title>
-      <link>https://alexbaecher.com/publication/basham-2022-oc/</link>
+      <link>http://localhost:1313/publication/basham-2022-oc/</link>
       <pubDate>Thu, 03 Feb 2022 00:00:00 +0000</pubDate>
-      <guid>https://alexbaecher.com/publication/basham-2022-oc/</guid>
+      <guid>http://localhost:1313/publication/basham-2022-oc/</guid>
       <description>&lt;html&gt;
   &lt;style&gt;
     section {
@@ -308,9 +308,9 @@
     
     <item>
       <title>Prey Size and Feeding Rate Do Not Influence Trophic Morphology of Juvenile Water Snakes (Nerodia sipedon)</title>
-      <link>https://alexbaecher.com/publication/swartwout-2020-herp/</link>
+      <link>http://localhost:1313/publication/swartwout-2020-herp/</link>
       <pubDate>Wed, 04 Mar 2020 00:00:00 +0000</pubDate>
-      <guid>https://alexbaecher.com/publication/swartwout-2020-herp/</guid>
+      <guid>http://localhost:1313/publication/swartwout-2020-herp/</guid>
       <description>&lt;html&gt;
   &lt;style&gt;
     section {
@@ -350,9 +350,9 @@
     
     <item>
       <title>Tail bifurcation in two species of Desmognathus salamander (Plethodontidae) in southeastern Kentucky, USA</title>
-      <link>https://alexbaecher.com/publication/baecher-2020-thb/</link>
+      <link>http://localhost:1313/publication/baecher-2020-thb/</link>
       <pubDate>Sun, 01 Dec 2019 00:00:00 +0000</pubDate>
-      <guid>https://alexbaecher.com/publication/baecher-2020-thb/</guid>
+      <guid>http://localhost:1313/publication/baecher-2020-thb/</guid>
       <description>&lt;html&gt;
   &lt;style&gt;
     section {
@@ -392,9 +392,9 @@
     
     <item>
       <title>Cryopreservation and hormonal induction of spermic urine in smooth-sided toads</title>
-      <link>https://alexbaecher.com/publication/hinkson-2019-cryo/</link>
+      <link>http://localhost:1313/publication/hinkson-2019-cryo/</link>
       <pubDate>Thu, 01 Aug 2019 00:00:00 +0000</pubDate>
-      <guid>https://alexbaecher.com/publication/hinkson-2019-cryo/</guid>
+      <guid>http://localhost:1313/publication/hinkson-2019-cryo/</guid>
       <description>&lt;html&gt;
   &lt;style&gt;
     section {
@@ -434,9 +434,9 @@
     
     <item>
       <title>Environmental gradients in old‐growth Appalachian forest predict fine‐scale distribution, co‐occurrence, and density of woodland salamanders</title>
-      <link>https://alexbaecher.com/publication/baecher-2018-ee/</link>
+      <link>http://localhost:1313/publication/baecher-2018-ee/</link>
       <pubDate>Tue, 04 Dec 2018 00:00:00 +0000</pubDate>
-      <guid>https://alexbaecher.com/publication/baecher-2018-ee/</guid>
+      <guid>http://localhost:1313/publication/baecher-2018-ee/</guid>
       <description>&lt;html&gt;
   &lt;style&gt;
     section {
@@ -476,9 +476,9 @@
     
     <item>
       <title>Herpetofaunal Communities in Restored and Unrestored Remnant Tallgrass Prairie and Associated Wetlands in Northwest Arkansas, USA</title>
-      <link>https://alexbaecher.com/publication/baecher-2018-wetlands/</link>
+      <link>http://localhost:1313/publication/baecher-2018-wetlands/</link>
       <pubDate>Sun, 18 Nov 2018 00:00:00 +0000</pubDate>
-      <guid>https://alexbaecher.com/publication/baecher-2018-wetlands/</guid>
+      <guid>http://localhost:1313/publication/baecher-2018-wetlands/</guid>
       <description>&lt;html&gt;
   &lt;style&gt;
     section {

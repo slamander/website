@@ -2,29 +2,29 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Brett R. Scheffers | Baecher Research</title>
-    <link>https://alexbaecher.com/author/brett-r.-scheffers/</link>
-      <atom:link href="https://alexbaecher.com/author/brett-r.-scheffers/index.xml" rel="self" type="application/rss+xml" />
+    <link>http://localhost:1313/author/brett-r.-scheffers/</link>
+      <atom:link href="http://localhost:1313/author/brett-r.-scheffers/index.xml" rel="self" type="application/rss+xml" />
     <description>Brett R. Scheffers</description>
     <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><copyright>© 2025 Alex Baecher</copyright><lastBuildDate>Wed, 08 Oct 2025 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://alexbaecher.com/media/logo_hu2039277577754200582.png</url>
+      <url>http://localhost:1313/media/logo_hu2039277577754200582.png</url>
       <title>Brett R. Scheffers</title>
-      <link>https://alexbaecher.com/author/brett-r.-scheffers/</link>
+      <link>http://localhost:1313/author/brett-r.-scheffers/</link>
     </image>
     
     <item>
       <title>Invasion risk posed by the pet trade</title>
-      <link>https://alexbaecher.com/publication/evans_2025_fee/</link>
+      <link>http://localhost:1313/publication/evans_2025_fee/</link>
       <pubDate>Wed, 08 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>https://alexbaecher.com/publication/evans_2025_fee/</guid>
+      <guid>http://localhost:1313/publication/evans_2025_fee/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Proximal microclimate: Moving beyond spatiotemporalresolution improves ecological predictions</title>
-      <link>https://alexbaecher.com/publication/klinges_2024_geb/</link>
+      <link>http://localhost:1313/publication/klinges_2024_geb/</link>
       <pubDate>Wed, 26 Jun 2024 00:00:00 +0000</pubDate>
-      <guid>https://alexbaecher.com/publication/klinges_2024_geb/</guid>
+      <guid>http://localhost:1313/publication/klinges_2024_geb/</guid>
       <description>&lt;html&gt;
   &lt;style&gt;
     section {
@@ -64,9 +64,9 @@
     
     <item>
       <title>Bringing traits back into the equation, A roadmap to understand species redistribution</title>
-      <link>https://alexbaecher.com/publication/bioshifts-2024-gcb/</link>
+      <link>http://localhost:1313/publication/bioshifts-2024-gcb/</link>
       <pubDate>Sat, 13 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>https://alexbaecher.com/publication/bioshifts-2024-gcb/</guid>
+      <guid>http://localhost:1313/publication/bioshifts-2024-gcb/</guid>
       <description>&lt;html&gt;
   &lt;style&gt;
     section {
@@ -106,9 +106,9 @@
     
     <item>
       <title>Experimental evaluation of how biological invasions and climate change interact to alter the vertical assembly of an amphibian community</title>
-      <link>https://alexbaecher.com/publication/baecher-2023-jae/</link>
+      <link>http://localhost:1313/publication/baecher-2023-jae/</link>
       <pubDate>Sun, 05 Mar 2023 00:00:00 +0000</pubDate>
-      <guid>https://alexbaecher.com/publication/baecher-2023-jae/</guid>
+      <guid>http://localhost:1313/publication/baecher-2023-jae/</guid>
       <description>&lt;html&gt;
   &lt;style&gt;
     section {
@@ -148,9 +148,9 @@
     
     <item>
       <title>Vertical stratification patterns of tropical forest vertebrates</title>
-      <link>https://alexbaecher.com/publication/basham-2022-br/</link>
+      <link>http://localhost:1313/publication/basham-2022-br/</link>
       <pubDate>Thu, 08 Sep 2022 00:00:00 +0000</pubDate>
-      <guid>https://alexbaecher.com/publication/basham-2022-br/</guid>
+      <guid>http://localhost:1313/publication/basham-2022-br/</guid>
       <description>&lt;html&gt;
   &lt;style&gt;
     section {
@@ -190,9 +190,9 @@
     
     <item>
       <title>Large, old trees define the vertical, horizontal, and seasonal distributions of a poison frog</title>
-      <link>https://alexbaecher.com/publication/basham-2022-oc/</link>
+      <link>http://localhost:1313/publication/basham-2022-oc/</link>
       <pubDate>Thu, 03 Feb 2022 00:00:00 +0000</pubDate>
-      <guid>https://alexbaecher.com/publication/basham-2022-oc/</guid>
+      <guid>http://localhost:1313/publication/basham-2022-oc/</guid>
       <description>&lt;html&gt;
   &lt;style&gt;
     section {

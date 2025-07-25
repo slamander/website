@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Niche Partitioning | Baecher Research</title>
-    <link>https://alexbaecher.com/tag/niche-partitioning/</link>
-      <atom:link href="https://alexbaecher.com/tag/niche-partitioning/index.xml" rel="self" type="application/rss+xml" />
+    <link>http://localhost:1313/tag/niche-partitioning/</link>
+      <atom:link href="http://localhost:1313/tag/niche-partitioning/index.xml" rel="self" type="application/rss+xml" />
     <description>Niche Partitioning</description>
     <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><copyright>© 2025 Alex Baecher</copyright><lastBuildDate>Sun, 05 Mar 2023 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://alexbaecher.com/media/logo_hu2039277577754200582.png</url>
+      <url>http://localhost:1313/media/logo_hu2039277577754200582.png</url>
       <title>Niche Partitioning</title>
-      <link>https://alexbaecher.com/tag/niche-partitioning/</link>
+      <link>http://localhost:1313/tag/niche-partitioning/</link>
     </image>
     
     <item>
       <title>Experimental evaluation of how biological invasions and climate change interact to alter the vertical assembly of an amphibian community</title>
-      <link>https://alexbaecher.com/publication/baecher-2023-jae/</link>
+      <link>http://localhost:1313/publication/baecher-2023-jae/</link>
       <pubDate>Sun, 05 Mar 2023 00:00:00 +0000</pubDate>
-      <guid>https://alexbaecher.com/publication/baecher-2023-jae/</guid>
+      <guid>http://localhost:1313/publication/baecher-2023-jae/</guid>
       <description>&lt;html&gt;
   &lt;style&gt;
     section {

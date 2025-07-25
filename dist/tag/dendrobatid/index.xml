@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Dendrobatid | Baecher Research</title>
-    <link>https://alexbaecher.com/tag/dendrobatid/</link>
-      <atom:link href="https://alexbaecher.com/tag/dendrobatid/index.xml" rel="self" type="application/rss+xml" />
+    <link>http://localhost:1313/tag/dendrobatid/</link>
+      <atom:link href="http://localhost:1313/tag/dendrobatid/index.xml" rel="self" type="application/rss+xml" />
     <description>Dendrobatid</description>
     <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><copyright>© 2025 Alex Baecher</copyright><lastBuildDate>Thu, 03 Feb 2022 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://alexbaecher.com/media/logo_hu2039277577754200582.png</url>
+      <url>http://localhost:1313/media/logo_hu2039277577754200582.png</url>
       <title>Dendrobatid</title>
-      <link>https://alexbaecher.com/tag/dendrobatid/</link>
+      <link>http://localhost:1313/tag/dendrobatid/</link>
     </image>
     
     <item>
       <title>Large, old trees define the vertical, horizontal, and seasonal distributions of a poison frog</title>
-      <link>https://alexbaecher.com/publication/basham-2022-oc/</link>
+      <link>http://localhost:1313/publication/basham-2022-oc/</link>
       <pubDate>Thu, 03 Feb 2022 00:00:00 +0000</pubDate>
-      <guid>https://alexbaecher.com/publication/basham-2022-oc/</guid>
+      <guid>http://localhost:1313/publication/basham-2022-oc/</guid>
       <description>&lt;html&gt;
   &lt;style&gt;
     section {

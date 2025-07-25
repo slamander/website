@@ -2,29 +2,29 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>J Alex Baecher | Baecher Research</title>
-    <link>https://alexbaecher.com/author/j-alex-baecher/</link>
-      <atom:link href="https://alexbaecher.com/author/j-alex-baecher/index.xml" rel="self" type="application/rss+xml" />
+    <link>http://localhost:1313/author/j-alex-baecher/</link>
+      <atom:link href="http://localhost:1313/author/j-alex-baecher/index.xml" rel="self" type="application/rss+xml" />
     <description>J Alex Baecher</description>
     <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><copyright>© 2025 Alex Baecher</copyright><lastBuildDate>Wed, 08 Oct 2025 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://alexbaecher.com/author/j-alex-baecher/avatar_hu11040553339854819806.jpg</url>
+      <url>http://localhost:1313/author/j-alex-baecher/avatar_hu11040553339854819806.jpg</url>
       <title>J Alex Baecher</title>
-      <link>https://alexbaecher.com/author/j-alex-baecher/</link>
+      <link>http://localhost:1313/author/j-alex-baecher/</link>
     </image>
     
     <item>
       <title>Invasion risk posed by the pet trade</title>
-      <link>https://alexbaecher.com/publication/evans_2025_fee/</link>
+      <link>http://localhost:1313/publication/evans_2025_fee/</link>
       <pubDate>Wed, 08 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>https://alexbaecher.com/publication/evans_2025_fee/</guid>
+      <guid>http://localhost:1313/publication/evans_2025_fee/</guid>
       <description></description>
     </item>
     
     <item>
       <title>J Alex Baecher</title>
-      <link>https://alexbaecher.com/author/j-alex-baecher/</link>
+      <link>http://localhost:1313/author/j-alex-baecher/</link>
       <pubDate>Wed, 08 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>https://alexbaecher.com/author/j-alex-baecher/</guid>
+      <guid>http://localhost:1313/author/j-alex-baecher/</guid>
       <description>&lt;p&gt;&lt;em&gt;The good bits:&lt;/em&gt;
 Native to the foothills of Arkansas&amp;rsquo; Ozark Mountains. My life consists of&amp;hellip; my wife (Kristin), my daughter (Faye), my dog (Ollie), herping, hiking, swimming and canoeing, woodworking, and home DIY projects.&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;The serious bits:&lt;/em&gt;
@@ -34,9 +34,9 @@ I am a landscape ecologist, with interest in research at the interface between c
     
     <item>
       <title>The environmental filtering paradigm and non-filtering community assembly processes</title>
-      <link>https://alexbaecher.com/publication/baecher_2024_jbi/</link>
+      <link>http://localhost:1313/publication/baecher_2024_jbi/</link>
       <pubDate>Thu, 04 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>https://alexbaecher.com/publication/baecher_2024_jbi/</guid>
+      <guid>http://localhost:1313/publication/baecher_2024_jbi/</guid>
       <description>&lt;html&gt;
   &lt;style&gt;
     section {
@@ -76,9 +76,9 @@ I am a landscape ecologist, with interest in research at the interface between c
     
     <item>
       <title>Proximal microclimate: Moving beyond spatiotemporalresolution improves ecological predictions</title>
-      <link>https://alexbaecher.com/publication/klinges_2024_geb/</link>
+      <link>http://localhost:1313/publication/klinges_2024_geb/</link>
       <pubDate>Wed, 26 Jun 2024 00:00:00 +0000</pubDate>
-      <guid>https://alexbaecher.com/publication/klinges_2024_geb/</guid>
+      <guid>http://localhost:1313/publication/klinges_2024_geb/</guid>
       <description>&lt;html&gt;
   &lt;style&gt;
     section {
@@ -118,9 +118,9 @@ I am a landscape ecologist, with interest in research at the interface between c
     
     <item>
       <title>Mechanisms, detection and impacts of species redistribution under climate change</title>
-      <link>https://alexbaecher.com/publication/bioshifts-2024-nree/</link>
+      <link>http://localhost:1313/publication/bioshifts-2024-nree/</link>
       <pubDate>Thu, 18 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>https://alexbaecher.com/publication/bioshifts-2024-nree/</guid>
+      <guid>http://localhost:1313/publication/bioshifts-2024-nree/</guid>
       <description>&lt;html&gt;
   &lt;style&gt;
     section {
@@ -160,9 +160,9 @@ I am a landscape ecologist, with interest in research at the interface between c
     
     <item>
       <title>Bringing traits back into the equation, A roadmap to understand species redistribution</title>
-      <link>https://alexbaecher.com/publication/bioshifts-2024-gcb/</link>
+      <link>http://localhost:1313/publication/bioshifts-2024-gcb/</link>
       <pubDate>Sat, 13 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>https://alexbaecher.com/publication/bioshifts-2024-gcb/</guid>
+      <guid>http://localhost:1313/publication/bioshifts-2024-gcb/</guid>
       <description>&lt;html&gt;
   &lt;style&gt;
     section {
@@ -202,17 +202,17 @@ I am a landscape ecologist, with interest in research at the interface between c
     
     <item>
       <title>Expanding the scope of connectivity modeling with Markov chains: perspectives and applications in R</title>
-      <link>https://alexbaecher.com/talk/samc_iale/</link>
+      <link>http://localhost:1313/talk/samc_iale/</link>
       <pubDate>Tue, 19 Dec 2023 00:00:00 +0000</pubDate>
-      <guid>https://alexbaecher.com/talk/samc_iale/</guid>
+      <guid>http://localhost:1313/talk/samc_iale/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Expert elicitation of key invasive species habitat requirements, prevalence, and life history attributes</title>
-      <link>https://alexbaecher.com/talk/exp_elic/</link>
+      <link>http://localhost:1313/talk/exp_elic/</link>
       <pubDate>Tue, 19 Dec 2023 00:00:00 +0000</pubDate>
-      <guid>https://alexbaecher.com/talk/exp_elic/</guid>
+      <guid>http://localhost:1313/talk/exp_elic/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Primary project outputs&lt;/strong&gt;
 *Expert evaluation of the invasive species potential in the Southeast United States. *
 We aim to conduct two workshops leveraging the best academic, management, and legislative knowledge from across the Southeast USA. Workshop one will focus on species occurrences and assessments of traits that will enable robust modelling approaches. Workshop two will focus on management approaches to combat the most deleterious findings across all of the focal species. Both workshops will work iteratively with stakeholders to ensure that findings are both grounded in up to date information, as well as model findings reflect changing invasion realities.&lt;/p&gt;
@@ -232,9 +232,9 @@ To understand how climate and land use change will affect global patterns of bio
     
     <item>
       <title>Species redistribution and connectivity (Intro)</title>
-      <link>https://alexbaecher.com/talk/samc_sotm/</link>
+      <link>http://localhost:1313/talk/samc_sotm/</link>
       <pubDate>Tue, 19 Dec 2023 00:00:00 +0000</pubDate>
-      <guid>https://alexbaecher.com/talk/samc_sotm/</guid>
+      <guid>http://localhost:1313/talk/samc_sotm/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Description:&lt;/strong&gt;
 This 1-day workshop will distill the basic principles of connectivity modeling and its relevance to predicting movement and species redistribution with environmental change. Participants will be introduced to connectivity as well as a new framework utilizing spatial-absorbing Markov chains (SAMC), which helps unify other approaches. Along the way, we will discuss how connectivity is relevant to core principles of species ranges and redistribution. We will also discuss the common problems, assumptions, and oversights occurring in published predictions of species range redistribution.&lt;/p&gt;
 &lt;p&gt;Topics:
@@ -273,17 +273,17 @@ This 1-day workshop will distill the basic principles of connectivity modeling a
     
     <item>
       <title>Informing Species Range-shifts with (preliminary) Global Connectivity </title>
-      <link>https://alexbaecher.com/talk/sotm_talk/</link>
+      <link>http://localhost:1313/talk/sotm_talk/</link>
       <pubDate>Wed, 17 May 2023 13:00:00 +0000</pubDate>
-      <guid>https://alexbaecher.com/talk/sotm_talk/</guid>
+      <guid>http://localhost:1313/talk/sotm_talk/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Experimental evaluation of how biological invasions and climate change interact to alter the vertical assembly of an amphibian community</title>
-      <link>https://alexbaecher.com/publication/baecher-2023-jae/</link>
+      <link>http://localhost:1313/publication/baecher-2023-jae/</link>
       <pubDate>Sun, 05 Mar 2023 00:00:00 +0000</pubDate>
-      <guid>https://alexbaecher.com/publication/baecher-2023-jae/</guid>
+      <guid>http://localhost:1313/publication/baecher-2023-jae/</guid>
       <description>&lt;html&gt;
   &lt;style&gt;
     section {
@@ -323,9 +323,9 @@ This 1-day workshop will distill the basic principles of connectivity modeling a
     
     <item>
       <title>Predicting the spread of invasive Burmese pythons in South Florida</title>
-      <link>https://alexbaecher.com/talk/seriscc_seminar/</link>
+      <link>http://localhost:1313/talk/seriscc_seminar/</link>
       <pubDate>Thu, 17 Nov 2022 13:00:00 +0000</pubDate>
-      <guid>https://alexbaecher.com/talk/seriscc_seminar/</guid>
+      <guid>http://localhost:1313/talk/seriscc_seminar/</guid>
       <description>&lt;p&gt;Integrating multi-scale data with hybrid ecological models to evaluate the role of management, climate, and habitat&lt;/p&gt;
 
 
@@ -340,18 +340,18 @@ This 1-day workshop will distill the basic principles of connectivity modeling a
     
     <item>
       <title>Towards Global Connectivity, applications for BIOSHIFTS</title>
-      <link>https://alexbaecher.com/talk/bioshifts_talk/</link>
+      <link>http://localhost:1313/talk/bioshifts_talk/</link>
       <pubDate>Thu, 17 Nov 2022 13:00:00 +0000</pubDate>
-      <guid>https://alexbaecher.com/talk/bioshifts_talk/</guid>
+      <guid>http://localhost:1313/talk/bioshifts_talk/</guid>
       <description>&lt;p&gt;Modeling global ecological connectivity using biologically relevant data to understand expected patterns of species range shifts&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Vertical stratification patterns of tropical forest vertebrates</title>
-      <link>https://alexbaecher.com/publication/basham-2022-br/</link>
+      <link>http://localhost:1313/publication/basham-2022-br/</link>
       <pubDate>Thu, 08 Sep 2022 00:00:00 +0000</pubDate>
-      <guid>https://alexbaecher.com/publication/basham-2022-br/</guid>
+      <guid>http://localhost:1313/publication/basham-2022-br/</guid>
       <description>&lt;html&gt;
   &lt;style&gt;
     section {
@@ -391,9 +391,9 @@ This 1-day workshop will distill the basic principles of connectivity modeling a
     
     <item>
       <title>Large, old trees define the vertical, horizontal, and seasonal distributions of a poison frog</title>
-      <link>https://alexbaecher.com/publication/basham-2022-oc/</link>
+      <link>http://localhost:1313/publication/basham-2022-oc/</link>
       <pubDate>Thu, 03 Feb 2022 00:00:00 +0000</pubDate>
-      <guid>https://alexbaecher.com/publication/basham-2022-oc/</guid>
+      <guid>http://localhost:1313/publication/basham-2022-oc/</guid>
       <description>&lt;html&gt;
   &lt;style&gt;
     section {
@@ -433,9 +433,9 @@ This 1-day workshop will distill the basic principles of connectivity modeling a
     
     <item>
       <title>Achieving connectivity under rapid change: case studies from niches to distributions</title>
-      <link>https://alexbaecher.com/talk/ecol_cc/</link>
+      <link>http://localhost:1313/talk/ecol_cc/</link>
       <pubDate>Fri, 22 Oct 2021 13:00:00 +0000</pubDate>
-      <guid>https://alexbaecher.com/talk/ecol_cc/</guid>
+      <guid>http://localhost:1313/talk/ecol_cc/</guid>
       <description>&lt;h2&gt;University of Florida, Department of Wildlife Ecology and Conservation&lt;/h2&gt;
 * Guest Lecturer (Spr. &#39;20): [Landscape Connectivity](https://drive.google.com/uc?export=download&amp;id=1y8CO9LewVxIXlNU4HLHaNy2BVw_rDE1y)
 </description>
@@ -443,9 +443,9 @@ This 1-day workshop will distill the basic principles of connectivity modeling a
     
     <item>
       <title>Modeling spread of invasive Burmese pythons, integrating thermoregulation, behavior, and mortality</title>
-      <link>https://alexbaecher.com/talk/iale_talk/</link>
+      <link>http://localhost:1313/talk/iale_talk/</link>
       <pubDate>Fri, 22 Oct 2021 13:00:00 +0000</pubDate>
-      <guid>https://alexbaecher.com/talk/iale_talk/</guid>
+      <guid>http://localhost:1313/talk/iale_talk/</guid>
       <description>&lt;p&gt;Integrating multi-scale data with hybrid ecological models to evaluate the role of management, climate, and habitat&lt;/p&gt;
 
 
@@ -460,9 +460,9 @@ This 1-day workshop will distill the basic principles of connectivity modeling a
     
     <item>
       <title>Restoration Ecology of Grassland Herpetofauna in SEUSA</title>
-      <link>https://alexbaecher.com/talk/se_amphibs_1/</link>
+      <link>http://localhost:1313/talk/se_amphibs_1/</link>
       <pubDate>Fri, 22 Oct 2021 13:00:00 +0000</pubDate>
-      <guid>https://alexbaecher.com/talk/se_amphibs_1/</guid>
+      <guid>http://localhost:1313/talk/se_amphibs_1/</guid>
       <description>&lt;h2&gt;University of Florida, Department of Wildlife Ecology and Conservation&lt;/h2&gt;
 * Guest Lecturer (Spr. &#39;20): [Grassland Anurans](https://drive.google.com/uc?export=download&amp;id=1lpI3-PvoozaRexnpNn1i_Bzp4lg6ogqW)
 </description>
@@ -470,9 +470,9 @@ This 1-day workshop will distill the basic principles of connectivity modeling a
     
     <item>
       <title>Salamander conservation in the Southeastern USA</title>
-      <link>https://alexbaecher.com/talk/se_amphibs_2/</link>
+      <link>http://localhost:1313/talk/se_amphibs_2/</link>
       <pubDate>Fri, 22 Oct 2021 13:00:00 +0000</pubDate>
-      <guid>https://alexbaecher.com/talk/se_amphibs_2/</guid>
+      <guid>http://localhost:1313/talk/se_amphibs_2/</guid>
       <description>&lt;h2&gt;University of Florida, Department of Wildlife Ecology and Conservation&lt;/h2&gt;
 * Guest Lecturer (Spr. &#39;20): [Salamander Ecology](https://drive.google.com/uc?export=download&amp;id=1jsUhEewx3OWyfGIZvX3fCAWCGYeYyffM)
 </description>
@@ -480,9 +480,9 @@ This 1-day workshop will distill the basic principles of connectivity modeling a
     
     <item>
       <title>Prey Size and Feeding Rate Do Not Influence Trophic Morphology of Juvenile Water Snakes (Nerodia sipedon)</title>
-      <link>https://alexbaecher.com/publication/swartwout-2020-herp/</link>
+      <link>http://localhost:1313/publication/swartwout-2020-herp/</link>
       <pubDate>Wed, 04 Mar 2020 00:00:00 +0000</pubDate>
-      <guid>https://alexbaecher.com/publication/swartwout-2020-herp/</guid>
+      <guid>http://localhost:1313/publication/swartwout-2020-herp/</guid>
       <description>&lt;html&gt;
   &lt;style&gt;
     section {
@@ -522,9 +522,9 @@ This 1-day workshop will distill the basic principles of connectivity modeling a
     
     <item>
       <title>Tail bifurcation in two species of Desmognathus salamander (Plethodontidae) in southeastern Kentucky, USA</title>
-      <link>https://alexbaecher.com/publication/baecher-2020-thb/</link>
+      <link>http://localhost:1313/publication/baecher-2020-thb/</link>
       <pubDate>Sun, 01 Dec 2019 00:00:00 +0000</pubDate>
-      <guid>https://alexbaecher.com/publication/baecher-2020-thb/</guid>
+      <guid>http://localhost:1313/publication/baecher-2020-thb/</guid>
       <description>&lt;html&gt;
   &lt;style&gt;
     section {
@@ -564,9 +564,9 @@ This 1-day workshop will distill the basic principles of connectivity modeling a
     
     <item>
       <title>Environmental gradients in old‐growth Appalachian forest predict fine‐scale distribution, co‐occurrence, and density of woodland salamanders</title>
-      <link>https://alexbaecher.com/publication/baecher-2018-ee/</link>
+      <link>http://localhost:1313/publication/baecher-2018-ee/</link>
       <pubDate>Tue, 04 Dec 2018 00:00:00 +0000</pubDate>
-      <guid>https://alexbaecher.com/publication/baecher-2018-ee/</guid>
+      <guid>http://localhost:1313/publication/baecher-2018-ee/</guid>
       <description>&lt;html&gt;
   &lt;style&gt;
     section {
@@ -606,9 +606,9 @@ This 1-day workshop will distill the basic principles of connectivity modeling a
     
     <item>
       <title>Herpetofaunal Communities in Restored and Unrestored Remnant Tallgrass Prairie and Associated Wetlands in Northwest Arkansas, USA</title>
-      <link>https://alexbaecher.com/publication/baecher-2018-wetlands/</link>
+      <link>http://localhost:1313/publication/baecher-2018-wetlands/</link>
       <pubDate>Sun, 18 Nov 2018 00:00:00 +0000</pubDate>
-      <guid>https://alexbaecher.com/publication/baecher-2018-wetlands/</guid>
+      <guid>http://localhost:1313/publication/baecher-2018-wetlands/</guid>
       <description>&lt;html&gt;
   &lt;style&gt;
     section {

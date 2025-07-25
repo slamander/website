@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Jan Wild | Baecher Research</title>
-    <link>https://alexbaecher.com/author/jan-wild/</link>
-      <atom:link href="https://alexbaecher.com/author/jan-wild/index.xml" rel="self" type="application/rss+xml" />
+    <link>http://localhost:1313/author/jan-wild/</link>
+      <atom:link href="http://localhost:1313/author/jan-wild/index.xml" rel="self" type="application/rss+xml" />
     <description>Jan Wild</description>
     <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><copyright>© 2025 Alex Baecher</copyright><lastBuildDate>Wed, 26 Jun 2024 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://alexbaecher.com/media/logo_hu2039277577754200582.png</url>
+      <url>http://localhost:1313/media/logo_hu2039277577754200582.png</url>
       <title>Jan Wild</title>
-      <link>https://alexbaecher.com/author/jan-wild/</link>
+      <link>http://localhost:1313/author/jan-wild/</link>
     </image>
     
     <item>
       <title>Proximal microclimate: Moving beyond spatiotemporalresolution improves ecological predictions</title>
-      <link>https://alexbaecher.com/publication/klinges_2024_geb/</link>
+      <link>http://localhost:1313/publication/klinges_2024_geb/</link>
       <pubDate>Wed, 26 Jun 2024 00:00:00 +0000</pubDate>
-      <guid>https://alexbaecher.com/publication/klinges_2024_geb/</guid>
+      <guid>http://localhost:1313/publication/klinges_2024_geb/</guid>
       <description>&lt;html&gt;
   &lt;style&gt;
     section {

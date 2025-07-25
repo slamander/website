@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Joseph C. Neal | Baecher Research</title>
-    <link>https://alexbaecher.com/author/joseph-c.-neal/</link>
-      <atom:link href="https://alexbaecher.com/author/joseph-c.-neal/index.xml" rel="self" type="application/rss+xml" />
+    <link>http://localhost:1313/author/joseph-c.-neal/</link>
+      <atom:link href="http://localhost:1313/author/joseph-c.-neal/index.xml" rel="self" type="application/rss+xml" />
     <description>Joseph C. Neal</description>
     <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><copyright>© 2025 Alex Baecher</copyright><lastBuildDate>Wed, 08 Oct 2014 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://alexbaecher.com/media/logo_hu2039277577754200582.png</url>
+      <url>http://localhost:1313/media/logo_hu2039277577754200582.png</url>
       <title>Joseph C. Neal</title>
-      <link>https://alexbaecher.com/author/joseph-c.-neal/</link>
+      <link>http://localhost:1313/author/joseph-c.-neal/</link>
     </image>
     
     <item>
       <title>Lithobates areolatus (crawfish frog) predation</title>
-      <link>https://alexbaecher.com/publication/baecher-2014-hr/</link>
+      <link>http://localhost:1313/publication/baecher-2014-hr/</link>
       <pubDate>Wed, 08 Oct 2014 00:00:00 +0000</pubDate>
-      <guid>https://alexbaecher.com/publication/baecher-2014-hr/</guid>
+      <guid>http://localhost:1313/publication/baecher-2014-hr/</guid>
       <description></description>
     </item>
     
