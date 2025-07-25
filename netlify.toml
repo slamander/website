@@ -4,7 +4,7 @@
 
 [build.environment]
   HUGO_VERSION = "0.139.0"
-  GO_VERSION = "1.21"
+  GO_VERSION = "1.24"
   HUGO_ENABLEGITINFO = "true"
   HUGO_EXTENDED = "true"  # Add this line
 
