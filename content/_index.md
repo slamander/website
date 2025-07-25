@@ -15,7 +15,7 @@ sections:
     design:
       background:
         image:
-          filename: log_high.png  # Hugo looks in static/media/
+          filename: log_high.jpg  # Hugo looks in static/media/
           filters:
             brightness: 0.6  # Darkens image so text is readable
         position: center
