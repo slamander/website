@@ -1,1559 +1,89 @@
-<!doctype html>
-<!-- This site was created with Hugo Blox. https://hugoblox.com -->
-<!-- Last Published: July 25, 2025 --><html lang="en-us" dir="ltr"
-      data-wc-theme-default="system">
-  
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="generator" content="Hugo Blox Builder 0.3.2" />
-
-  
-  
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-  
-  
-  
-    
-    
-    
-  
-  
-
-  <meta name="author" content="J Alex Baecher" />
-
-  
-  
-  
-    
-  
-  <meta name="description" content="Focusing on randomized paths between multiple locations (or populations, habitats, etc) Note This is simply a tutorial. I’m not (for now) providing a review of the literature surrounding ecological connectivity, or commenting the different meanings of connectivity). This tutorial is strictly for demonstrating how to perform such an analysis, because–to my knowledge–such a tutorial doesn’t exist. That being said, please let me know if you find one!
-" />
-
-  
-  <link rel="alternate" hreflang="en-us" href="http://localhost:1313/post/connectivity-script/" />
-
-  
-  
-  
-  
-    
-    <link rel="stylesheet" href="/css/themes/blue.min.css" />
-  
-
-  
-  
-    
-    <link href="/dist/wc.min.05570f1deda629d4e2d77f73534a63aa04471f012db6735c59424372f467db85.css" rel="stylesheet" />
-  
-
-  
-  
-  
-
-  
-
-  <script>
-     
-    window.hbb = {
-       defaultTheme: document.documentElement.dataset.wcThemeDefault,
-       setDarkTheme: () => {
-        document.documentElement.classList.add("dark");
-        document.documentElement.style.colorScheme = "dark";
-      },
-       setLightTheme: () => {
-        document.documentElement.classList.remove("dark");
-        document.documentElement.style.colorScheme = "light";
-      }
-    }
-
-    console.debug(`Default Hugo Blox Builder theme is ${window.hbb.defaultTheme}`);
-
-    if ("wc-color-theme" in localStorage) {
-      localStorage.getItem("wc-color-theme") === "dark" ? window.hbb.setDarkTheme() : window.hbb.setLightTheme();
-    } else {
-      window.hbb.defaultTheme === "dark" ? window.hbb.setDarkTheme() : window.hbb.setLightTheme();
-      if (window.hbb.defaultTheme === "system") {
-        window.matchMedia("(prefers-color-scheme: dark)").matches ? window.hbb.setDarkTheme() : window.hbb.setLightTheme();
-      }
-    }
-  </script>
-
-  <script>
-    
-    document.addEventListener('DOMContentLoaded', function () {
-      
-      let checkboxes = document.querySelectorAll('li input[type=\'checkbox\'][disabled]');
-      checkboxes.forEach(e => {
-        e.parentElement.parentElement.classList.add('task-list');
-      });
-
-      
-      const liNodes = document.querySelectorAll('.task-list li');
-      liNodes.forEach(nodes => {
-        let textNodes = Array.from(nodes.childNodes).filter(node => node.nodeType === 3 && node.textContent.trim().length > 1);
-        if (textNodes.length > 0) {
-          const span = document.createElement('label');
-          textNodes[0].after(span);  
-          span.appendChild(nodes.querySelector('input[type=\'checkbox\']'));
-          span.appendChild(textNodes[0]);
-        }
-      });
-    });
-  </script>
-
-  
-  
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-
-  
-  <link rel="icon" type="image/png" href="/media/icon_hu5715557880635774272.png" />
-  <link rel="apple-touch-icon" type="image/png" href="/media/icon_hu6914742598827333628.png" />
-
-  <link rel="canonical" href="http://localhost:1313/post/connectivity-script/" />
-
-  
-  
-  
-  
-  
-  
-  
-  
-    
-  
-  
-
-  
-  
-    
-    
-  
-  <meta property="twitter:card" content="summary_large_image" />
-  
-    <meta property="twitter:site" content="@AlexBaecher" />
-    <meta property="twitter:creator" content="@AlexBaecher" />
-  
-  <meta property="og:site_name" content="Baecher Research" />
-  <meta property="og:url" content="http://localhost:1313/post/connectivity-script/" />
-  <meta property="og:title" content="Mapping Ecological Flow in R (pt 1) | Baecher Research" />
-  <meta property="og:description" content="Focusing on randomized paths between multiple locations (or populations, habitats, etc)
+<!doctype html><html lang=en-us dir=ltr data-wc-theme-default=system><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=generator content="Hugo Blox Builder 0.3.2"><meta name=author content="J Alex Baecher"><meta name=description content="Focusing on randomized paths between multiple locations (or populations, habitats, etc) Note This is simply a tutorial. I’m not (for now) providing a review of the literature surrounding ecological connectivity, or commenting the different meanings of connectivity). This tutorial is strictly for demonstrating how to perform such an analysis, because–to my knowledge–such a tutorial doesn’t exist. That being said, please let me know if you find one!
+"><link rel=alternate hreflang=en-us href=https://alexbaecher.com/post/connectivity-script/><link rel=stylesheet href=/css/themes/blue.min.css><link href=/dist/wc.min.05570f1deda629d4e2d77f73534a63aa04471f012db6735c59424372f467db85.css rel=stylesheet><script>window.hbb={defaultTheme:document.documentElement.dataset.wcThemeDefault,setDarkTheme:()=>{document.documentElement.classList.add("dark"),document.documentElement.style.colorScheme="dark"},setLightTheme:()=>{document.documentElement.classList.remove("dark"),document.documentElement.style.colorScheme="light"}},console.debug(`Default Hugo Blox Builder theme is ${window.hbb.defaultTheme}`),"wc-color-theme"in localStorage?localStorage.getItem("wc-color-theme")==="dark"?window.hbb.setDarkTheme():window.hbb.setLightTheme():(window.hbb.defaultTheme==="dark"?window.hbb.setDarkTheme():window.hbb.setLightTheme(),window.hbb.defaultTheme==="system"&&(window.matchMedia("(prefers-color-scheme: dark)").matches?window.hbb.setDarkTheme():window.hbb.setLightTheme()))</script><script>document.addEventListener("DOMContentLoaded",function(){let e=document.querySelectorAll("li input[type='checkbox'][disabled]");e.forEach(e=>{e.parentElement.parentElement.classList.add("task-list")});const t=document.querySelectorAll(".task-list li");t.forEach(e=>{let t=Array.from(e.childNodes).filter(e=>e.nodeType===3&&e.textContent.trim().length>1);if(t.length>0){const n=document.createElement("label");t[0].after(n),n.appendChild(e.querySelector("input[type='checkbox']")),n.appendChild(t[0])}})})</script><link rel=icon type=image/png href=/media/icon_hu5715557880635774272.png><link rel=apple-touch-icon type=image/png href=/media/icon_hu6914742598827333628.png><link rel=canonical href=https://alexbaecher.com/post/connectivity-script/><meta property="twitter:card" content="summary_large_image"><meta property="twitter:site" content="@AlexBaecher"><meta property="twitter:creator" content="@AlexBaecher"><meta property="og:site_name" content="Baecher Research"><meta property="og:url" content="https://alexbaecher.com/post/connectivity-script/"><meta property="og:title" content="Mapping Ecological Flow in R (pt 1) | Baecher Research"><meta property="og:description" content="Focusing on randomized paths between multiple locations (or populations, habitats, etc)
 Note This is simply a tutorial. I’m not (for now) providing a review
 of the literature surrounding ecological connectivity, or commenting the
 different meanings of connectivity). This tutorial is strictly for
 demonstrating how to perform such an analysis, because–to my
 knowledge–such a tutorial doesn’t exist. That being said, please let me
-know if you find one!" /><meta property="og:image" content="http://localhost:1313/post/connectivity-script/featured.png" />
-    <meta property="twitter:image" content="http://localhost:1313/post/connectivity-script/featured.png" /><meta property="og:locale" content="en-us" />
-  
-    
-      <meta
-        property="article:published_time"
-        content="2020-08-12T00:40:04-07:00"
-      />
-    
-    <meta property="article:modified_time" content="2020-08-12T00:40:04-07:00">
-  
-
-  
-
-
-
-  
-
-
-  <title>Mapping Ecological Flow in R (pt 1) | Baecher Research</title>
-
-  
-  
-  
-  
-  
-    
-    
-  
-  
-  <style>
-    @font-face {
-      font-family: 'Inter var';
-      font-style: normal;
-      font-weight: 100 900;
-      font-display: swap;
-      src: url(/dist/font/Inter.var.woff2) format(woff2);
-    }
-  </style>
-
-  
-
-  
-  
-
-
-  
-    
-      
-      
-        
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-        
-        
-      
-    
-      
-      
-        
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-        
-        
-      
-    
-      
-      
-        
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-        
-        
-      
-    
-      
-      
-        
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-        
-        
-      
-    
-      
-      
-        
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-        
-        
-      
-    
-      
-      
-        
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-        
-        
-      
-    
-      
-      
-        
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-        
-        
-      
-    
-      
-      
-        
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-        
-        
-      
-    
-  
-  
-  
-  
-  
-  
-  
-    
-      
-      
-        
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-        
-        
-      
-    
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-
-
-
-
-
-
-
-<link type="text/css" rel="stylesheet" href="/dist/pagefind/pagefind-ui.be766eb419317a14ec769d216e9779bfe8f3737c80e780f4ba0dafb57a41a482.css" integrity="sha256-vnZutBkxehTsdp0hbpd5v&#43;jzc3yA54D0ug2vtXpBpII=" />
-
-
-<script src="/dist/pagefind/pagefind-ui.87693d7c6f2b3b347ce359d0ede762c033419f0a32b22ce508c335a81d841f1b.js" integrity="sha256-h2k9fG8rOzR841nQ7ediwDNBnwoysizlCMM1qB2EHxs="></script>
-
-
-<script>window.hbb.pagefind = {"baseUrl":"/"};</script>
-
-<style>
-  html.dark {
-    --pagefind-ui-primary: #eeeeee;
-    --pagefind-ui-text: #eeeeee;
-    --pagefind-ui-background: #152028;
-    --pagefind-ui-border: #152028;
-    --pagefind-ui-tag: #152028;
-  }
-
-   
-  .search-close > svg {
-    height: calc(64px * var(--pagefind-ui-scale));
-    width: calc(64px * var(--pagefind-ui-scale));
-  }
-</style>
-
-<script>
-  
-  let searchWrapper = null;
-
-  window.addEventListener('DOMContentLoaded', (event) => {
-    
-    new PagefindUI({
-      element: "#search",
-      showSubResults: true,
-      baseUrl: window.hbb.pagefind.baseUrl,
-      bundlePath: window.hbb.pagefind.baseUrl + "pagefind/",
-    });
-
-    
-    searchWrapper = document.getElementById('search-wrapper');
-
-    
-    let triggers = document.querySelectorAll('[data-search-toggle]');
-    triggers.forEach(trigger =>
-      trigger.addEventListener('click', handleSearchToggle)
-    );
-  });
-
-  function handleSearchToggle(event) {
-    if (!searchWrapper) return;
-
-    const isHidden = searchWrapper.classList.contains('hidden');
-    searchWrapper.classList.toggle('hidden');
-    document.body.style.overflow = isHidden ? 'hidden' : '';
-
-    const searchInput = searchWrapper.querySelector("input");
-    if (searchInput) {
-      searchInput.value = "";
-      searchInput.focus();
-    }
-
-    if (!searchWrapper.classList.contains('hidden')) {
-      let clearTrigger = document.querySelector('.pagefind-ui__search-clear');
-
-      if (clearTrigger && !clearTrigger.hasAttribute('listenerOnClick')) {
-        clearTrigger.setAttribute('listenerOnClick', 'true');
-
-        clearTrigger.addEventListener('click', () => {
-          searchInput.focus();
-        });
-      }
-    }
-  }
-
-  
-  document.addEventListener('keydown', (event) => {
-    if (event.key === 'Escape' && searchWrapper && !searchWrapper.classList.contains('hidden')) {
-      searchWrapper.classList.add('hidden');
-    }
-  });
-</script>
-
-
-
-
-
-
-
-
-
-
-  
-  
-  <link type="text/css" rel="stylesheet" href="/dist/lib/katex/katex.min.505d5f829022bb7b4f24dfee0aa1141cd7bba67afe411d1240335f820960b5c3.css" integrity="sha256-UF1fgpAiu3tPJN/uCqEUHNe7pnr&#43;QR0SQDNfgglgtcM=" />
-  
-  
-  <script defer src="/dist/lib/katex/katex.min.dc84b296ec3e884de093158f760fd9d45b6c7abe58b5381557f4e138f46a58ae.js" integrity="sha256-3ISyluw&#43;iE3gkxWPdg/Z1Ftser5YtTgVV/ThOPRqWK4="></script>
-  
-  
-  
-  
-  <script defer src="/js/katex-renderer.6579ec9683211cfb952064aedf3a3baea5eeb17a061775b32b70917474637c80.js" integrity="sha256-ZXnsloMhHPuVIGSu3zo7rqXusXoGF3WzK3CRdHRjfIA="></script>
-  
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-
-
-
-
-
-
-  
-  
-  
-  
-  
-  
-  
-  <script
-    defer
-    src="/js/hugo-blox-en.min.js"
-    integrity=""
-  ></script>
-
-  
-  
-
-
-
-
-
-
-
-
-
-
-
-</head>
-
-  <body class="dark:bg-hb-dark dark:text-white page-wrapper" id="top">
-    <div id="page-bg"></div>
-    <div class="page-header ">
-      
-      
-      
-        
-        
-        
-          <header id="site-header" class="header">
-  <nav class="navbar px-3 flex justify-left">
-    <div class="order-0 h-100">
-      
-      <a class="navbar-brand" href="/" title="Baecher Research">
-        
-      </a>
-    </div>
-    
-    <input id="nav-toggle" type="checkbox" class="hidden" />
-    <label
-      for="nav-toggle"
-      class="order-3 cursor-pointer flex items-center lg:hidden text-dark dark:text-white lg:order-1">
-      <svg id="show-button" class="h-6 fill-current block" viewBox="0 0 20 20">
-        <title>Open Menu</title>
-        <path d="M0 3h20v2H0V3z m0 6h20v2H0V9z m0 6h20v2H0V0z"></path>
-      </svg>
-      <svg id="hide-button" class="h-6 fill-current hidden" viewBox="0 0 20 20">
-        <title>Close Menu</title>
-        <polygon
-          points="11 9 22 9 22 11 11 11 11 22 9 22 9 11 -2 11 -2 9 9 9 9 -2 11 -2"
-          transform="rotate(45 10 10)"></polygon>
-      </svg>
-    </label>
-    
-
-    
-    
-    <ul
-      id="nav-menu"
-      class="navbar-nav order-3 hidden lg:flex w-full pb-6 lg:order-1 lg:w-auto lg:space-x-2 lg:pb-0 xl:space-x-8 justify-left
-      mr-auto ml-6">
-      
-      
-      
-      
-      
-      
-      <li class="nav-item">
-        <a
-          class="nav-link "
-          
-          href="/"
-        >Home</a
-        >
-      </li>
-      
-      
-      
-      
-      
-      
-      <li class="nav-item">
-        <a
-          class="nav-link "
-          
-          href="/publication/"
-        >Publications</a
-        >
-      </li>
-      
-      
-      
-      
-      
-      
-      <li class="nav-item">
-        <a
-          class="nav-link "
-          
-          href="/talk/"
-        >Talks</a
-        >
-      </li>
-      
-      
-      
-      
-      
-      
-      <li class="nav-item">
-        <a
-          class="nav-link "
-          
-          href="/project/"
-        >Research</a
-        >
-      </li>
-      
-      
-      
-      
-      
-      
-      <li class="nav-item">
-        <a
-          class="nav-link "
-          
-          href="/#contact"
-        >Contact</a
-        >
-      </li>
-      
-      
-      
-    </ul>
-
-    <div class="order-1 ml-auto flex items-center md:order-2 lg:ml-0">
-
-      
-      
-      
-      <button
-        aria-label="toggle search"
-        class="text-black hover:text-primary  inline-block px-3 text-xl dark:text-white"
-        data-search-toggle>
-        <svg xmlns="http://www.w3.org/2000/svg" height="16" width="16" viewBox="0 0 512 512" fill="currentColor"><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/></svg>
-      </button>
-      
-
-      
-      
-      <div class="px-3 text-black hover:text-primary-700 dark:text-white dark:hover:text-primary-300
-            [&.active]:font-bold [&.active]:text-black/90 dark:[&.active]:text-white">
-        <button class="theme-toggle mt-1" accesskey="t" title="appearance">
-          <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
-               fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-               stroke-linejoin="round" class="dark:hidden">
-            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-          </svg>
-          <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
-               fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-               stroke-linejoin="round" class=" dark:block [&:not(dark)]:hidden">
-            <circle cx="12" cy="12" r="5"></circle>
-            <line x1="12" y1="1" x2="12" y2="3"></line>
-            <line x1="12" y1="21" x2="12" y2="23"></line>
-            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-            <line x1="1" y1="12" x2="3" y2="12"></line>
-            <line x1="21" y1="12" x2="23" y2="12"></line>
-            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-          </svg>
-        </button>
-      </div>
-      
-
-      
-      
-
-      
-      
-    </div>
-  </nav>
-</header>
-
-<div
-  id="search-wrapper"
-  class="hidden fixed inset-0 z-50 bg-white dark:bg-gray-900 flex flex-col overflow-hidden"
->
-  <div class="flex justify-end p-3">
-    <button
-      aria-label="search"
-      class="search-close text-black hover:text-primary dark:text-white"
-      data-search-toggle
-    >
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
-      </svg>
-    </button>
-  </div>
-
-  <div id="search" class="flex-1 overflow-y-auto p-3">
-    
-  </div>
-</div>
-
-
-        
-      
-    </div>
-    <div class="page-body  my-10">
-      
-
-
-
-
-
-<div class="mx-auto flex max-w-screen-xl">
-  
-
-
-
-<aside class="hb-sidebar-container max-lg:[transform:translate3d(0,-100%,0)] lg:hidden xl:block">
-  
-  <div class="px-4 pt-4 lg:hidden">
-    
-    
-  </div>
-  <div class="hb-scrollbar lg:h-[calc(100vh-var(--navbar-height))]">
-    <ul class="flex flex-col gap-1 lg:hidden">
-      
-      
-        <li class=""><a
-    class="hb-sidebar-custom-link
-      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
-    href="/publication/"
-    
-  >Publications
-        <span data-hb-sidebar-toggle>
-            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-[18px] min-w-[18px] rounded-sm p-0.5 hover:bg-gray-800/5 dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="origin-center transition-transform rtl:-rotate-180"></path></svg>
-        </span>
-    </a><div class="ltr:pr-0 overflow-hidden">
-        <ul class="hb-sidebar-list"><li class="flex flex-col "><a
-    class="hb-sidebar-custom-link
-      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
-    href="/publication/evans_2025_fee/"
-    
-  >Invasion risk posed by the pet trade
-    </a>
-              
-            </li><li class="flex flex-col "><a
-    class="hb-sidebar-custom-link
-      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
-    href="/publication/baecher_2024_jbi/"
-    
-  >The environmental filtering paradigm and non-filtering community assembly processes
-    </a>
-              
-            </li><li class="flex flex-col "><a
-    class="hb-sidebar-custom-link
-      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
-    href="/publication/klinges_2024_geb/"
-    
-  >Proximal microclimate: Moving beyond spatiotemporalresolution improves ecological predictions
-    </a>
-              
-            </li><li class="flex flex-col "><a
-    class="hb-sidebar-custom-link
-      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
-    href="/publication/bioshifts-2024-nree/"
-    
-  >Mechanisms, detection and impacts of species redistribution under climate change
-    </a>
-              
-            </li><li class="flex flex-col "><a
-    class="hb-sidebar-custom-link
-      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
-    href="/publication/bioshifts-2024-gcb/"
-    
-  >Bringing traits back into the equation, A roadmap to understand species redistribution
-    </a>
-              
-            </li><li class="flex flex-col "><a
-    class="hb-sidebar-custom-link
-      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
-    href="/publication/baecher-2023-jae/"
-    
-  >Experimental evaluation of how biological invasions and climate change interact to alter the vertical assembly of an amphibian community
-    </a>
-              
-            </li><li class="flex flex-col "><a
-    class="hb-sidebar-custom-link
-      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
-    href="/publication/basham-2022-br/"
-    
-  >Vertical stratification patterns of tropical forest vertebrates
-    </a>
-              
-            </li><li class="flex flex-col "><a
-    class="hb-sidebar-custom-link
-      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
-    href="/publication/basham-2022-oc/"
-    
-  >Large, old trees define the vertical, horizontal, and seasonal distributions of a poison frog
-    </a>
-              
-            </li><li class="flex flex-col "><a
-    class="hb-sidebar-custom-link
-      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
-    href="/publication/swartwout-2020-herp/"
-    
-  >Prey Size and Feeding Rate Do Not Influence Trophic Morphology of Juvenile Water Snakes (Nerodia sipedon)
-    </a>
-              
-            </li><li class="flex flex-col "><a
-    class="hb-sidebar-custom-link
-      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
-    href="/publication/baecher-2020-thb/"
-    
-  >Tail bifurcation in two species of Desmognathus salamander (Plethodontidae) in southeastern Kentucky, USA
-    </a>
-              
-            </li><li class="flex flex-col "><a
-    class="hb-sidebar-custom-link
-      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
-    href="/publication/hinkson-2019-cryo/"
-    
-  >Cryopreservation and hormonal induction of spermic urine in smooth-sided toads
-    </a>
-              
-            </li><li class="flex flex-col "><a
-    class="hb-sidebar-custom-link
-      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
-    href="/publication/baecher-2018-ee/"
-    
-  >Environmental gradients in old‐growth Appalachian forest predict fine‐scale distribution, co‐occurrence, and density of woodland salamanders
-    </a>
-              
-            </li><li class="flex flex-col "><a
-    class="hb-sidebar-custom-link
-      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
-    href="/publication/baecher-2018-wetlands/"
-    
-  >Herpetofaunal Communities in Restored and Unrestored Remnant Tallgrass Prairie and Associated Wetlands in Northwest Arkansas, USA
-    </a>
-              
-            </li><li class="flex flex-col "><a
-    class="hb-sidebar-custom-link
-      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
-    href="/publication/baecher-2014-hr/"
-    
-  >Lithobates areolatus (crawfish frog) predation
-    </a>
-              
-            </li></ul>
-      </div></li>
-        <li class=""><a
-    class="hb-sidebar-custom-link
-      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
-    href="/talk/"
-    
-  >Recent &amp; Upcoming Talks
-        <span data-hb-sidebar-toggle>
-            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-[18px] min-w-[18px] rounded-sm p-0.5 hover:bg-gray-800/5 dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="origin-center transition-transform rtl:-rotate-180"></path></svg>
-        </span>
-    </a><div class="ltr:pr-0 overflow-hidden">
-        <ul class="hb-sidebar-list"><li class="flex flex-col "><a
-    class="hb-sidebar-custom-link
-      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
-    href="/talk/samc_iale/"
-    
-  >Expanding the scope of connectivity modeling with Markov chains: perspectives and applications in R
-    </a>
-              
-            </li><li class="flex flex-col "><a
-    class="hb-sidebar-custom-link
-      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
-    href="/talk/exp_elic/"
-    
-  >Expert elicitation of key invasive species habitat requirements, prevalence, and life history attributes
-    </a>
-              
-            </li><li class="flex flex-col "><a
-    class="hb-sidebar-custom-link
-      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
-    href="/talk/samc_sotm/"
-    
-  >Species redistribution and connectivity (Intro)
-    </a>
-              
-            </li><li class="flex flex-col "><a
-    class="hb-sidebar-custom-link
-      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
-    href="/talk/sotm_talk/"
-    
-  >Informing Species Range-shifts with (preliminary) Global Connectivity 
-    </a>
-              
-            </li><li class="flex flex-col "><a
-    class="hb-sidebar-custom-link
-      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
-    href="/talk/seriscc_seminar/"
-    
-  >Predicting the spread of invasive Burmese pythons in South Florida
-    </a>
-              
-            </li><li class="flex flex-col "><a
-    class="hb-sidebar-custom-link
-      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
-    href="/talk/bioshifts_talk/"
-    
-  >Towards Global Connectivity, applications for BIOSHIFTS
-    </a>
-              
-            </li><li class="flex flex-col "><a
-    class="hb-sidebar-custom-link
-      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
-    href="/talk/ecol_cc/"
-    
-  >Achieving connectivity under rapid change: case studies from niches to distributions
-    </a>
-              
-            </li><li class="flex flex-col "><a
-    class="hb-sidebar-custom-link
-      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
-    href="/talk/iale_talk/"
-    
-  >Modeling spread of invasive Burmese pythons, integrating thermoregulation, behavior, and mortality
-    </a>
-              
-            </li><li class="flex flex-col "><a
-    class="hb-sidebar-custom-link
-      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
-    href="/talk/se_amphibs_1/"
-    
-  >Restoration Ecology of Grassland Herpetofauna in SEUSA
-    </a>
-              
-            </li><li class="flex flex-col "><a
-    class="hb-sidebar-custom-link
-      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
-    href="/talk/se_amphibs_2/"
-    
-  >Salamander conservation in the Southeastern USA
-    </a>
-              
-            </li></ul>
-      </div></li>
-        <li class="open"><a
-    class="hb-sidebar-custom-link
-      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
-    href="/post/"
-    
-  >Posts
-        <span data-hb-sidebar-toggle>
-            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-[18px] min-w-[18px] rounded-sm p-0.5 hover:bg-gray-800/5 dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="origin-center transition-transform rtl:-rotate-180"></path></svg>
-        </span>
-    </a><div class="ltr:pr-0 overflow-hidden">
-        <ul class="hb-sidebar-list"><li class="flex flex-col "><a
-    class="hb-sidebar-custom-link
-      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
-    href="/post/ml-tidymodels/"
-    
-  >Machine Learning the &#39;Tidy&#39; Way
-    </a>
-              
-            </li><li class="flex flex-col "><a
-    class="hb-sidebar-custom-link
-      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
-    href="/post/gradient-descent/"
-    
-  >Linear regression with gradient descent
-    </a>
-              
-            </li><li class="flex flex-col open"><a
-    class="hb-sidebar-custom-link
-      sidebar-active-item bg-primary-100 font-semibold text-primary-800 dark:bg-primary-300 dark:text-primary-900"
-    href="/post/connectivity-script/"
-    
-  >Mapping Ecological Flow in R (pt 1)
-    </a>
-  
-    <ul class="hb-sidebar-mobile-toc"><li>
-              <a
-                href="#focusing-on-randomized-paths-between-multiple-locations-or-populations-habitats-etc"
-                class="hb-docs-link"
-              >Focusing on randomized paths between multiple locations (or populations, habitats, etc)</a>
-            </li>
-          <li>
-              <a
-                href="#lets-get-started"
-                class="hb-docs-link"
-              >Let’s get started!</a>
-            </li>
-          </ul>
-  
-              
-            </li><li class="flex flex-col "><a
-    class="hb-sidebar-custom-link
-      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
-    href="/post/edm-script/"
-    
-  >Empirical Dynamic Models for Forecasting
-    </a>
-              
-            </li></ul>
-      </div></li>
-        <li class=""><a
-    class="hb-sidebar-custom-link
-      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
-    href="/project/"
-    
-  >Projects
-        <span data-hb-sidebar-toggle>
-            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-[18px] min-w-[18px] rounded-sm p-0.5 hover:bg-gray-800/5 dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="origin-center transition-transform rtl:-rotate-180"></path></svg>
-        </span>
-    </a><div class="ltr:pr-0 overflow-hidden">
-        <ul class="hb-sidebar-list"><li class="flex flex-col "><a
-    class="hb-sidebar-custom-link
-      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
-    href="/project/appalachian-ecology/"
-    
-  >Appalachian Salamander Ecology
-    </a>
-              
-            </li><li class="flex flex-col "><a
-    class="hb-sidebar-custom-link
-      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
-    href="/project/climate-species-redistribution/"
-    
-  >Climate-induced species redistribution
-    </a>
-              
-            </li><li class="flex flex-col "><a
-    class="hb-sidebar-custom-link
-      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
-    href="/project/geostatistical-modeling/"
-    
-  >Geostatistical Modeling
-    </a>
-              
-            </li><li class="flex flex-col "><a
-    class="hb-sidebar-custom-link
-      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
-    href="/project/landscape-ecology/"
-    
-  >Landscape connectivity
-    </a>
-              
-            </li><li class="flex flex-col "><a
-    class="hb-sidebar-custom-link
-      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
-    href="/project/herpetological-ecology/"
-    
-  >Reptile and Amphibian Ecology
-    </a>
-              
-            </li></ul>
-      </div></li>
-    </ul>
-
-    <div class="max-xl:hidden h-0 w-64 shrink-0"></div></div>
-
-</aside>
-  
-
-<nav class="hb-toc order-last hidden w-64 shrink-0 xl:block print:hidden px-4" aria-label="table of contents">
-  
-
-
-
-
-
-
-
-
-
-
-
-  <div class="hb-scrollbar text-sm [hyphens:auto] sticky top-16 overflow-y-auto pr-4 pt-6 max-h-[calc(100vh-var(--navbar-height)-env(safe-area-inset-bottom))] -mr-4 rtl:-ml-4"><p class="mb-4 font-semibold tracking-tight">On this page</p><ul>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#focusing-on-randomized-paths-between-multiple-locations-or-populations-habitats-etc">Focusing on randomized paths between multiple locations (or populations, habitats, etc)</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#lets-get-started">Let’s get started!</a>
-      </li></ul>
-
-  
-  
-    
-    
-  
-
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-  </div>
-  </nav>
-
-
-  <article class="w-full break-words flex min-h-[calc(100vh-var(--navbar-height))] min-w-0 justify-center pb-8 pr-[calc(env(safe-area-inset-right)-1.5rem)]">
-    <main class="w-full min-w-0 max-w-6xl px-6 pt-4 md:px-12">
-
-      
-
-      <h1 class="mt-2 text-4xl font-bold tracking-tight text-slate-900 dark:text-slate-100">Mapping Ecological Flow in R (pt 1)</h1>
-
-      <div class="mt-4 mb-16">
-      <div class="text-gray-500 dark:text-gray-300 text-sm flex items-center flex-wrap gap-y-2"><span class="mr-1">Aug 12, 2020</span>
-        
-
-        
-        <span class="mx-1">·</span>
-        <span class="mx-1">
-          8 min read
-        </span>
-        
-        </div>
-
-        <div class="mt-3">
-          
-
-
-
-
-
-        </div>
-      </div>
-
-
-
-      
-      
-      
-
-      
-      
-
-      <div class="prose prose-slate lg:prose-xl dark:prose-invert">
-        <h2 id="focusing-on-randomized-paths-between-multiple-locations-or-populations-habitats-etc">Focusing on randomized paths between multiple locations (or populations, habitats, etc)</h2>
-<p><strong>Note</strong> This is simply a tutorial. I’m not (for now) providing a review
+know if you find one!"><meta property="og:image" content="https://alexbaecher.com/post/connectivity-script/featured.png"><meta property="twitter:image" content="https://alexbaecher.com/post/connectivity-script/featured.png"><meta property="og:locale" content="en-us"><meta property="article:published_time" content="2020-08-12T00:40:04-07:00"><meta property="article:modified_time" content="2020-08-12T00:40:04-07:00"><title>Mapping Ecological Flow in R (pt 1) | Baecher Research</title><style>@font-face{font-family:inter var;font-style:normal;font-weight:100 900;font-display:swap;src:url(/dist/font/Inter.var.woff2)format(woff2)}</style><link type=text/css rel=stylesheet href=/dist/pagefind/pagefind-ui.be766eb419317a14ec769d216e9779bfe8f3737c80e780f4ba0dafb57a41a482.css integrity="sha256-vnZutBkxehTsdp0hbpd5v+jzc3yA54D0ug2vtXpBpII="><script src=/dist/pagefind/pagefind-ui.87693d7c6f2b3b347ce359d0ede762c033419f0a32b22ce508c335a81d841f1b.js integrity="sha256-h2k9fG8rOzR841nQ7ediwDNBnwoysizlCMM1qB2EHxs="></script><script>window.hbb.pagefind={baseUrl:"/"}</script><style>html.dark{--pagefind-ui-primary:#eeeeee;--pagefind-ui-text:#eeeeee;--pagefind-ui-background:#152028;--pagefind-ui-border:#152028;--pagefind-ui-tag:#152028}.search-close>svg{height:calc(64px * var(--pagefind-ui-scale));width:calc(64px * var(--pagefind-ui-scale))}</style><script>let searchWrapper=null;window.addEventListener("DOMContentLoaded",e=>{new PagefindUI({element:"#search",showSubResults:!0,baseUrl:window.hbb.pagefind.baseUrl,bundlePath:window.hbb.pagefind.baseUrl+"pagefind/"}),searchWrapper=document.getElementById("search-wrapper");let t=document.querySelectorAll("[data-search-toggle]");t.forEach(e=>e.addEventListener("click",handleSearchToggle))});function handleSearchToggle(){if(!searchWrapper)return;const n=searchWrapper.classList.contains("hidden");searchWrapper.classList.toggle("hidden"),document.body.style.overflow=n?"hidden":"";const t=searchWrapper.querySelector("input");if(t&&(t.value="",t.focus()),!searchWrapper.classList.contains("hidden")){let e=document.querySelector(".pagefind-ui__search-clear");e&&!e.hasAttribute("listenerOnClick")&&(e.setAttribute("listenerOnClick","true"),e.addEventListener("click",()=>{t.focus()}))}}document.addEventListener("keydown",e=>{e.key==="Escape"&&searchWrapper&&!searchWrapper.classList.contains("hidden")&&searchWrapper.classList.add("hidden")})</script><link type=text/css rel=stylesheet href=/dist/lib/katex/katex.min.505d5f829022bb7b4f24dfee0aa1141cd7bba67afe411d1240335f820960b5c3.css integrity="sha256-UF1fgpAiu3tPJN/uCqEUHNe7pnr+QR0SQDNfgglgtcM="><script defer src=/dist/lib/katex/katex.min.dc84b296ec3e884de093158f760fd9d45b6c7abe58b5381557f4e138f46a58ae.js integrity="sha256-3ISyluw+iE3gkxWPdg/Z1Ftser5YtTgVV/ThOPRqWK4="></script><script defer src=/js/katex-renderer.6579ec9683211cfb952064aedf3a3baea5eeb17a061775b32b70917474637c80.js integrity="sha256-ZXnsloMhHPuVIGSu3zo7rqXusXoGF3WzK3CRdHRjfIA="></script><script defer src=/js/hugo-blox-en.min.47736f84e20cae1bb2224dc4605239689e913811575e32b5f86a700ee9d6529d.js integrity="sha256-R3NvhOIMrhuyIk3EYFI5aJ6ROBFXXjK1+GpwDunWUp0="></script></head><body class="dark:bg-hb-dark dark:text-white page-wrapper" id=top><div id=page-bg></div><div class=page-header><header id=site-header class=header><nav class="navbar px-3 flex justify-left"><div class="order-0 h-100"><a class=navbar-brand href=/ title="Baecher Research"></a></div><input id=nav-toggle type=checkbox class=hidden>
+<label for=nav-toggle class="order-3 cursor-pointer flex items-center lg:hidden text-dark dark:text-white lg:order-1"><svg id="show-button" class="h-6 fill-current block" viewBox="0 0 20 20"><title>Open Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0V0z"/></svg>
+<svg id="hide-button" class="h-6 fill-current hidden" viewBox="0 0 20 20"><title>Close Menu</title><polygon points="11 9 22 9 22 11 11 11 11 22 9 22 9 11 -2 11 -2 9 9 9 9 -2 11 -2" transform="rotate(45 10 10)"/></svg></label><ul id=nav-menu class="navbar-nav order-3 hidden lg:flex w-full pb-6 lg:order-1 lg:w-auto lg:space-x-2 lg:pb-0 xl:space-x-8 justify-left
+mr-auto ml-6"><li class=nav-item><a class=nav-link href=/>Home</a></li><li class=nav-item><a class=nav-link href=/publication/>Publications</a></li><li class=nav-item><a class=nav-link href=/talk/>Talks</a></li><li class=nav-item><a class=nav-link href=/project/>Research</a></li><li class=nav-item><a class=nav-link href=/#contact>Contact</a></li></ul><div class="order-1 ml-auto flex items-center md:order-2 lg:ml-0"><button aria-label="toggle search" class="text-black hover:text-primary inline-block px-3 text-xl dark:text-white" data-search-toggle>
+<svg height="16" width="16" viewBox="0 0 512 512" fill="currentcolor"><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8.0 45.3s-32.8 12.5-45.3.0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9.0 208S93.1.0 208 0 416 93.1 416 208zM208 352a144 144 0 100-288 144 144 0 100 288z"/></svg></button><div class="px-3 text-black hover:text-primary-700 dark:text-white dark:hover:text-primary-300
+[&.active]:font-bold [&.active]:text-black/90 dark:[&.active]:text-white"><button class="theme-toggle mt-1" accesskey=t title=appearance>
+<svg id="moon" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="dark:hidden"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+<svg id="sun" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="dark:block [&:not(dark)]:hidden"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></div></div></nav></header><div id=search-wrapper class="hidden fixed inset-0 z-50 bg-white dark:bg-gray-900 flex flex-col overflow-hidden"><div class="flex justify-end p-3"><button aria-label=search class="search-close text-black hover:text-primary dark:text-white" data-search-toggle>
+<svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentcolor" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"/></svg></button></div><div id=search class="flex-1 overflow-y-auto p-3"></div></div></div><div class="page-body my-10"><div class="mx-auto flex max-w-screen-xl"><aside class="hb-sidebar-container max-lg:[transform:translate3d(0,-100%,0)] lg:hidden xl:block"><div class="px-4 pt-4 lg:hidden"></div><div class="hb-scrollbar lg:h-[calc(100vh-var(--navbar-height))]"><ul class="flex flex-col gap-1 lg:hidden"><li><a class="hb-sidebar-custom-link
+text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50" href=/publication/>Publications
+<span data-hb-sidebar-toggle><svg fill="none" viewBox="0 0 24 24" stroke="currentcolor" class="h-[18px] min-w-[18px] rounded-sm p-0.5 hover:bg-gray-800/5 dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="origin-center transition-transform rtl:-rotate-180"/></svg></span></a><div class="ltr:pr-0 overflow-hidden"><ul class=hb-sidebar-list><li class="flex flex-col"><a class="hb-sidebar-custom-link
+text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50" href=/publication/evans_2025_fee/>Invasion risk posed by the pet trade</a></li><li class="flex flex-col"><a class="hb-sidebar-custom-link
+text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50" href=/publication/baecher_2024_jbi/>The environmental filtering paradigm and non-filtering community assembly processes</a></li><li class="flex flex-col"><a class="hb-sidebar-custom-link
+text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50" href=/publication/klinges_2024_geb/>Proximal microclimate: Moving beyond spatiotemporalresolution improves ecological predictions</a></li><li class="flex flex-col"><a class="hb-sidebar-custom-link
+text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50" href=/publication/bioshifts-2024-nree/>Mechanisms, detection and impacts of species redistribution under climate change</a></li><li class="flex flex-col"><a class="hb-sidebar-custom-link
+text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50" href=/publication/bioshifts-2024-gcb/>Bringing traits back into the equation, A roadmap to understand species redistribution</a></li><li class="flex flex-col"><a class="hb-sidebar-custom-link
+text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50" href=/publication/baecher-2023-jae/>Experimental evaluation of how biological invasions and climate change interact to alter the vertical assembly of an amphibian community</a></li><li class="flex flex-col"><a class="hb-sidebar-custom-link
+text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50" href=/publication/basham-2022-br/>Vertical stratification patterns of tropical forest vertebrates</a></li><li class="flex flex-col"><a class="hb-sidebar-custom-link
+text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50" href=/publication/basham-2022-oc/>Large, old trees define the vertical, horizontal, and seasonal distributions of a poison frog</a></li><li class="flex flex-col"><a class="hb-sidebar-custom-link
+text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50" href=/publication/swartwout-2020-herp/>Prey Size and Feeding Rate Do Not Influence Trophic Morphology of Juvenile Water Snakes (Nerodia sipedon)</a></li><li class="flex flex-col"><a class="hb-sidebar-custom-link
+text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50" href=/publication/baecher-2020-thb/>Tail bifurcation in two species of Desmognathus salamander (Plethodontidae) in southeastern Kentucky, USA</a></li><li class="flex flex-col"><a class="hb-sidebar-custom-link
+text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50" href=/publication/hinkson-2019-cryo/>Cryopreservation and hormonal induction of spermic urine in smooth-sided toads</a></li><li class="flex flex-col"><a class="hb-sidebar-custom-link
+text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50" href=/publication/baecher-2018-ee/>Environmental gradients in old‐growth Appalachian forest predict fine‐scale distribution, co‐occurrence, and density of woodland salamanders</a></li><li class="flex flex-col"><a class="hb-sidebar-custom-link
+text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50" href=/publication/baecher-2018-wetlands/>Herpetofaunal Communities in Restored and Unrestored Remnant Tallgrass Prairie and Associated Wetlands in Northwest Arkansas, USA</a></li><li class="flex flex-col"><a class="hb-sidebar-custom-link
+text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50" href=/publication/baecher-2014-hr/>Lithobates areolatus (crawfish frog) predation</a></li></ul></div></li><li><a class="hb-sidebar-custom-link
+text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50" href=/talk/>Recent & Upcoming Talks
+<span data-hb-sidebar-toggle><svg fill="none" viewBox="0 0 24 24" stroke="currentcolor" class="h-[18px] min-w-[18px] rounded-sm p-0.5 hover:bg-gray-800/5 dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="origin-center transition-transform rtl:-rotate-180"/></svg></span></a><div class="ltr:pr-0 overflow-hidden"><ul class=hb-sidebar-list><li class="flex flex-col"><a class="hb-sidebar-custom-link
+text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50" href=/talk/samc_iale/>Expanding the scope of connectivity modeling with Markov chains: perspectives and applications in R</a></li><li class="flex flex-col"><a class="hb-sidebar-custom-link
+text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50" href=/talk/exp_elic/>Expert elicitation of key invasive species habitat requirements, prevalence, and life history attributes</a></li><li class="flex flex-col"><a class="hb-sidebar-custom-link
+text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50" href=/talk/samc_sotm/>Species redistribution and connectivity (Intro)</a></li><li class="flex flex-col"><a class="hb-sidebar-custom-link
+text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50" href=/talk/sotm_talk/>Informing Species Range-shifts with (preliminary) Global Connectivity</a></li><li class="flex flex-col"><a class="hb-sidebar-custom-link
+text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50" href=/talk/seriscc_seminar/>Predicting the spread of invasive Burmese pythons in South Florida</a></li><li class="flex flex-col"><a class="hb-sidebar-custom-link
+text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50" href=/talk/bioshifts_talk/>Towards Global Connectivity, applications for BIOSHIFTS</a></li><li class="flex flex-col"><a class="hb-sidebar-custom-link
+text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50" href=/talk/ecol_cc/>Achieving connectivity under rapid change: case studies from niches to distributions</a></li><li class="flex flex-col"><a class="hb-sidebar-custom-link
+text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50" href=/talk/iale_talk/>Modeling spread of invasive Burmese pythons, integrating thermoregulation, behavior, and mortality</a></li><li class="flex flex-col"><a class="hb-sidebar-custom-link
+text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50" href=/talk/se_amphibs_1/>Restoration Ecology of Grassland Herpetofauna in SEUSA</a></li><li class="flex flex-col"><a class="hb-sidebar-custom-link
+text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50" href=/talk/se_amphibs_2/>Salamander conservation in the Southeastern USA</a></li></ul></div></li><li class=open><a class="hb-sidebar-custom-link
+text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50" href=/post/>Posts
+<span data-hb-sidebar-toggle><svg fill="none" viewBox="0 0 24 24" stroke="currentcolor" class="h-[18px] min-w-[18px] rounded-sm p-0.5 hover:bg-gray-800/5 dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="origin-center transition-transform rtl:-rotate-180"/></svg></span></a><div class="ltr:pr-0 overflow-hidden"><ul class=hb-sidebar-list><li class="flex flex-col"><a class="hb-sidebar-custom-link
+text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50" href=/post/ml-tidymodels/>Machine Learning the 'Tidy' Way</a></li><li class="flex flex-col"><a class="hb-sidebar-custom-link
+text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50" href=/post/gradient-descent/>Linear regression with gradient descent</a></li><li class="flex flex-col open"><a class="hb-sidebar-custom-link
+sidebar-active-item bg-primary-100 font-semibold text-primary-800 dark:bg-primary-300 dark:text-primary-900" href=/post/connectivity-script/>Mapping Ecological Flow in R (pt 1)</a><ul class=hb-sidebar-mobile-toc><li><a href=#focusing-on-randomized-paths-between-multiple-locations-or-populations-habitats-etc class=hb-docs-link>Focusing on randomized paths between multiple locations (or populations, habitats, etc)</a></li><li><a href=#lets-get-started class=hb-docs-link>Let’s get started!</a></li></ul></li><li class="flex flex-col"><a class="hb-sidebar-custom-link
+text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50" href=/post/edm-script/>Empirical Dynamic Models for Forecasting</a></li></ul></div></li><li><a class="hb-sidebar-custom-link
+text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50" href=/project/>Projects
+<span data-hb-sidebar-toggle><svg fill="none" viewBox="0 0 24 24" stroke="currentcolor" class="h-[18px] min-w-[18px] rounded-sm p-0.5 hover:bg-gray-800/5 dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="origin-center transition-transform rtl:-rotate-180"/></svg></span></a><div class="ltr:pr-0 overflow-hidden"><ul class=hb-sidebar-list><li class="flex flex-col"><a class="hb-sidebar-custom-link
+text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50" href=/project/appalachian-ecology/>Appalachian Salamander Ecology</a></li><li class="flex flex-col"><a class="hb-sidebar-custom-link
+text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50" href=/project/climate-species-redistribution/>Climate-induced species redistribution</a></li><li class="flex flex-col"><a class="hb-sidebar-custom-link
+text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50" href=/project/geostatistical-modeling/>Geostatistical Modeling</a></li><li class="flex flex-col"><a class="hb-sidebar-custom-link
+text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50" href=/project/landscape-ecology/>Landscape connectivity</a></li><li class="flex flex-col"><a class="hb-sidebar-custom-link
+text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50" href=/project/herpetological-ecology/>Reptile and Amphibian Ecology</a></li></ul></div></li></ul><div class="max-xl:hidden h-0 w-64 shrink-0"></div></div></aside><nav class="hb-toc order-last hidden w-64 shrink-0 xl:block print:hidden px-4" aria-label="table of contents"><div class="hb-scrollbar text-sm [hyphens:auto] sticky top-16 overflow-y-auto pr-4 pt-6 max-h-[calc(100vh-var(--navbar-height)-env(safe-area-inset-bottom))] -mr-4 rtl:-ml-4"><p class="mb-4 font-semibold tracking-tight">On this page</p><ul><li class="my-2 scroll-my-6 scroll-py-6"><a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href=#focusing-on-randomized-paths-between-multiple-locations-or-populations-habitats-etc>Focusing on randomized paths between multiple locations (or populations, habitats, etc)</a></li><li class="my-2 scroll-my-6 scroll-py-6"><a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href=#lets-get-started>Let’s get started!</a></li></ul>
+    
+    
+  </div></nav><article class="w-full break-words flex min-h-[calc(100vh-var(--navbar-height))] min-w-0 justify-center pb-8 pr-[calc(env(safe-area-inset-right)-1.5rem)]"><main class="w-full min-w-0 max-w-6xl px-6 pt-4 md:px-12"><h1 class="mt-2 text-4xl font-bold tracking-tight text-slate-900 dark:text-slate-100">Mapping Ecological Flow in R (pt 1)</h1><div class="mt-4 mb-16"><div class="text-gray-500 dark:text-gray-300 text-sm flex items-center flex-wrap gap-y-2"><span class=mr-1>Aug 12, 2020</span>
+<span class=mx-1>·</span>
+<span class=mx-1>8 min read</span></div><div class=mt-3></div></div><div class="prose prose-slate lg:prose-xl dark:prose-invert"><h2 id=focusing-on-randomized-paths-between-multiple-locations-or-populations-habitats-etc>Focusing on randomized paths between multiple locations (or populations, habitats, etc)</h2><p><strong>Note</strong> This is simply a tutorial. I’m not (for now) providing a review
 of the literature surrounding ecological connectivity, or commenting the
 different meanings of connectivity). This tutorial is strictly for
 demonstrating how to perform such an analysis, because–to my
 knowledge–such a tutorial doesn’t exist. That being said, please let me
-know if you find one!</p>
-<p>This analysis can be done in R using one of two methods: 1. using the R
+know if you find one!</p><p>This analysis can be done in R using one of two methods: 1. using the R
 package <code>gdistance</code>, which performs the analysis natively 2. calling
 Circuitscape, an external GUI-based software widely used in ecology,
-from R</p>
-<p>In the future, I will post about using Circuitscape in R, making use of
+from R</p><p>In the future, I will post about using Circuitscape in R, making use of
 command prompt and a combination of packages, including Bill Peterman’s
 <code>ResistanceGA</code>. For now, I’m going to focus on performing the analysis
 natively using <code>gdistance</code>. Although, <code>gdistance</code> is only programmed to
 analysis randomized shortest-path between two locations, I will
 demonstrate how, through the use of a simple loop, you can perform the
-analysis in R.</p>
-<p>For the analysis, I will <em>only</em> use widely publically available data
+analysis in R.</p><p>For the analysis, I will <em>only</em> use widely publically available data
 sets. As for a species, I’ve chosen the very charasmatic Jordan’s Red
 Cheeked Salamander, endemic to the Great Smoky Mountains National Park
-(USA).</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<figure  id="figure-jordans-red-cheeked-salamander">
-  <div class="d-flex justify-content-center">
-    <div class="w-100" ><img alt="Jordan&#39;s Red Cheeked Salamander" srcset="
-               /media/posts/connectivity_script_files/figure-markdown_strict/jrcs_hu8748387886065202433.webp 400w,
-               /media/posts/connectivity_script_files/figure-markdown_strict/jrcs_hu8774435472472496843.webp 760w,
-               /media/posts/connectivity_script_files/figure-markdown_strict/jrcs_hu8093516403498535379.webp 1200w"
-               src="/media/posts/connectivity_script_files/figure-markdown_strict/jrcs_hu8748387886065202433.webp"
-               width="760"
-               height="446"
-               loading="lazy" data-zoomable /></div>
-  </div><figcaption>
-      Jordan&rsquo;s Red Cheeked Salamander
-    </figcaption></figure>
-
-<p>For this tutorial, you’re going to need the following libraries
-installed:</p>
-<ul>
-<li><code>gdistance</code></li>
-<li><code>tidyverse</code></li>
-<li><code>rgeos</code></li>
-<li><code>elevatr</code></li>
-<li><code>ggplot2</code></li>
-<li><code>tigris</code></li>
-<li><code>spocc</code></li>
-<li><code>raster</code></li>
-<li><code>viridis</code></li>
-<li><code>ggthemes</code></li>
-</ul>
-<p>To save space and reduce the amount of intermediate variables, I will
+(USA).</p><figure id=figure-jordans-red-cheeked-salamander><div class="d-flex justify-content-center"><div class=w-100><img alt="Jordan's Red Cheeked Salamander" srcset="/media/posts/connectivity_script_files/figure-markdown_strict/jrcs_hu8748387886065202433.webp 400w,
+/media/posts/connectivity_script_files/figure-markdown_strict/jrcs_hu8774435472472496843.webp 760w,
+/media/posts/connectivity_script_files/figure-markdown_strict/jrcs_hu8093516403498535379.webp 1200w" src=/media/posts/connectivity_script_files/figure-markdown_strict/jrcs_hu8748387886065202433.webp width=760 height=446 loading=lazy data-zoomable></div></div><figcaption>Jordan&rsquo;s Red Cheeked Salamander</figcaption></figure><p>For this tutorial, you’re going to need the following libraries
+installed:</p><ul><li><code>gdistance</code></li><li><code>tidyverse</code></li><li><code>rgeos</code></li><li><code>elevatr</code></li><li><code>ggplot2</code></li><li><code>tigris</code></li><li><code>spocc</code></li><li><code>raster</code></li><li><code>viridis</code></li><li><code>ggthemes</code></li></ul><p>To save space and reduce the amount of intermediate variables, I will
 make use of the <code>tidyverse</code> syntax. This includes using data processing
-features of <code>dplyr</code> as well as pipes (<code>%&gt;%</code>). If you prefer not to use
+features of <code>dplyr</code> as well as pipes (<code>%>%</code>). If you prefer not to use
 these features, simply focus on the key functions and data sources which
-can easily be incorporated into your own preferred work flow.</p>
-<h2 id="lets-get-started">Let’s get started!</h2>
-<p>First, lets download a shapefile to work with.</p>
-<pre><code>library(tigris)         # Tigris package for USA census data
+can easily be incorporated into your own preferred work flow.</p><h2 id=lets-get-started>Let’s get started!</h2><p>First, lets download a shapefile to work with.</p><pre><code>library(tigris)         # Tigris package for USA census data
 library(tidyverse)
 states &lt;- states()
 
@@ -1562,13 +92,11 @@ se &lt;- states %&gt;%
 
 TN_NC &lt;- se %&gt;%     # Subsetting the data to Tennessee and North Carolina
   subset(NAME %in% c(&quot;Tennessee&quot;, &quot;North Carolina&quot;))
-</code></pre>
-<p>Next, lets download some species occurrence records for Jordan’s Red
+</code></pre><p>Next, lets download some species occurrence records for Jordan’s Red
 Cheeked Salamander (JRCS) from the Global Biodiversity Information
 Facility using the R package <code>spocc</code>. In this query, I will pull <em>only
 the first</em> 1000 records. Yes, that means I’m pulling records in no
-particular order, and that they can be biased. Don’t @ me.</p>
-<pre><code>library(spocc)
+particular order, and that they can be biased. Don’t @ me.</p><pre><code>library(spocc)
 
 ## Warning: package 'spocc' was built under R version 4.0.2
 
@@ -1593,11 +121,9 @@ Pj &lt;- occ(query = &quot;Plethodon jordani&quot;,                 # JRCS scien
           from = &quot;gbif&quot;,                               # limiting query to *the first* 1000 records
           limit=1000,                                  # limiting query to *the first* 1000 records
           has_coords = T)                              # limiting those 1000 records to those that have geo-referenced data
-</code></pre>
-<p>Now that we have the data, we need to organize and clean it using
+</code></pre><p>Now that we have the data, we need to organize and clean it using
 <code>dplyr</code>. Luckily, <code>spocc</code> has improved their naming system, so this is
-easier to do now.</p>
-<pre><code>Pj_sp &lt;- Pj$gbif$data$Plethodon_jordani %&gt;%            # Grabbing the Darwin-core data from the spocc object
+easier to do now.</p><pre><code>Pj_sp &lt;- Pj$gbif$data$Plethodon_jordani %&gt;%            # Grabbing the Darwin-core data from the spocc object
   dplyr::select(longitude,                             # Keep locations and year, discard the rest
                 latitude,
                 year) %&gt;%                   
@@ -1611,8 +137,7 @@ easier to do now.</p>
   dplyr::select(longitude,
                 latitude) %&gt;%
   SpatialPoints(proj4string = crs(se)) 
-</code></pre>
-<p><strong>Notes</strong> To remove stacked points, or points that are clustered very
+</code></pre><p><strong>Notes</strong> To remove stacked points, or points that are clustered very
 closely, I rounded the decimal points to the second hundreths place and
 removed duplicates. This step is actually very biologically meaningful…
 Because we want to map potential flow between populations of JRCS, we
@@ -1620,15 +145,12 @@ want each point to represent a population–meaning each point must be
 sufficiently isolated so as to only be connected through stochastic
 disperal. Because JRCS is dispersal limited, I chose to remove points
 less that ~10 km from one another (approximately the resolution of the
-second decimal point of a gps coordinate).</p>
-<p>I removed points that were suspiciously far outside the cluster of
+second decimal point of a gps coordinate).</p><p>I removed points that were suspiciously far outside the cluster of
 presences by creating new variables: <code>lon</code> and <code>lat</code>, which are Z-scores
 of the latitude and longitude variables (by subtracting the mean and
 dividing by standard deviation, or using the <code>scale</code> function). I them
 removed values greater that 2, which represent points that are two
-standard deviations from the mean latitude and mean longitude.</p>
-<p>Let’s plot our points</p>
-<pre><code>library(ggplot2)
+standard deviations from the mean latitude and mean longitude.</p><p>Let’s plot our points</p><pre><code>library(ggplot2)
 library(viridis)
 
 ## Loading required package: viridisLite
@@ -1644,42 +166,10 @@ ggplot() + geom_polygon(data=se, aes(x=long, y=lat, grou=group), col=&quot;grey4
 ## Warning: Ignoring unknown aesthetics: grou
 
 ## Regions defined for each Polygons
-</code></pre>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<figure  id="figure-jordans-red-cheeked-salamander">
-  <div class="d-flex justify-content-center">
-    <div class="w-100" ><img alt="Jordan&#39;s Red Cheeked Salamander" srcset="
-               /media/posts/connectivity_script_files/figure-markdown_strict/plot_presences-1_hu15505977354153264823.webp 400w,
-               /media/posts/connectivity_script_files/figure-markdown_strict/plot_presences-1_hu2728833307136772739.webp 760w,
-               /media/posts/connectivity_script_files/figure-markdown_strict/plot_presences-1_hu18335796353493736808.webp 1200w"
-               src="/media/posts/connectivity_script_files/figure-markdown_strict/plot_presences-1_hu15505977354153264823.webp"
-               width="672"
-               height="480"
-               loading="lazy" data-zoomable /></div>
-  </div><figcaption>
-      Jordan&rsquo;s Red Cheeked Salamander
-    </figcaption></figure>
-
-<p>To create a custom study area, shaped to our occurrence points, we can
-create a convex hull around our points using <code>chull()</code>.</p>
-<pre><code>Pj_coords &lt;- Pj_sp@coords                                                  
+</code></pre><figure id=figure-jordans-red-cheeked-salamander><div class="d-flex justify-content-center"><div class=w-100><img alt="Jordan's Red Cheeked Salamander" srcset="/media/posts/connectivity_script_files/figure-markdown_strict/plot_presences-1_hu15505977354153264823.webp 400w,
+/media/posts/connectivity_script_files/figure-markdown_strict/plot_presences-1_hu2728833307136772739.webp 760w,
+/media/posts/connectivity_script_files/figure-markdown_strict/plot_presences-1_hu18335796353493736808.webp 1200w" src=/media/posts/connectivity_script_files/figure-markdown_strict/plot_presences-1_hu15505977354153264823.webp width=672 height=480 loading=lazy data-zoomable></div></div><figcaption>Jordan&rsquo;s Red Cheeked Salamander</figcaption></figure><p>To create a custom study area, shaped to our occurrence points, we can
+create a convex hull around our points using <code>chull()</code>.</p><pre><code>Pj_coords &lt;- Pj_sp@coords                                                  
 Pj_chull &lt;- chull(Pj_sp@coords)                           # Creating convex hull
 
 Pj_chull_ends &lt;- Pj_sp@coords[c(Pj_chull, Pj_chull[1]),]  # generate the end points of polygon. 
@@ -1687,14 +177,10 @@ Pj_poly &lt;- SpatialPolygons(
   list(Polygons(
     list(Polygon(Pj_chull_ends)), ID=1)),
                              proj4string = crs(se))       # convert coords to SpatialPolygons 
-</code></pre>
-<p>Now, we will create a buffer around those points using
-<code>rgeos::gBuffer()</code>.</p>
-<pre><code>library(rgeos)
+</code></pre><p>Now, we will create a buffer around those points using
+<code>rgeos::gBuffer()</code>.</p><pre><code>library(rgeos)
 Pj_poly_buff &lt;- gBuffer(Pj_poly, width = 0.05, byid=T)
-</code></pre>
-<p>Let’s have a look at your buffered polygon:</p>
-<pre><code>ggplot() + geom_polygon(data=TN_NC, aes(x=long, y=lat), col=&quot;grey40&quot;, fill=&quot;light blue&quot;) + 
+</code></pre><p>Let’s have a look at your buffered polygon:</p><pre><code>ggplot() + geom_polygon(data=TN_NC, aes(x=long, y=lat), col=&quot;grey40&quot;, fill=&quot;light blue&quot;) + 
   geom_polygon(data=Pj_poly_buff, aes(x=long, y=lat, grou=group), col=&quot;grey40&quot;, fill=&quot;pink&quot;) +
   geom_point(data=as.data.frame(Pj_sp@coords), aes(x=longitude, y=latitude), size=0.01) + 
   coord_quickmap() + theme_map()
@@ -1702,50 +188,16 @@ Pj_poly_buff &lt;- gBuffer(Pj_poly, width = 0.05, byid=T)
 ## Regions defined for each Polygons
 
 ## Warning: Ignoring unknown aesthetics: grou
-</code></pre>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<figure  id="figure-buffered-polygon">
-  <div class="d-flex justify-content-center">
-    <div class="w-100" ><img alt="Buffered polygon" srcset="
-               /media/posts/connectivity_script_files/figure-markdown_strict/unnamed-chunk-1-1_hu4160553860264835895.webp 400w,
-               /media/posts/connectivity_script_files/figure-markdown_strict/unnamed-chunk-1-1_hu14299404557036398538.webp 760w,
-               /media/posts/connectivity_script_files/figure-markdown_strict/unnamed-chunk-1-1_hu3578149591007381430.webp 1200w"
-               src="/media/posts/connectivity_script_files/figure-markdown_strict/unnamed-chunk-1-1_hu4160553860264835895.webp"
-               width="672"
-               height="480"
-               loading="lazy" data-zoomable /></div>
-  </div><figcaption>
-      Buffered polygon
-    </figcaption></figure>
-
-<p>To create our resistance layers for the connectivity analysis, let’s
-download a digital elevation model (DEM) using package <code>elevatr</code>.</p>
-<pre><code>library(elevatr)
+</code></pre><figure id=figure-buffered-polygon><div class="d-flex justify-content-center"><div class=w-100><img alt="Buffered polygon" srcset="/media/posts/connectivity_script_files/figure-markdown_strict/unnamed-chunk-1-1_hu4160553860264835895.webp 400w,
+/media/posts/connectivity_script_files/figure-markdown_strict/unnamed-chunk-1-1_hu14299404557036398538.webp 760w,
+/media/posts/connectivity_script_files/figure-markdown_strict/unnamed-chunk-1-1_hu3578149591007381430.webp 1200w" src=/media/posts/connectivity_script_files/figure-markdown_strict/unnamed-chunk-1-1_hu4160553860264835895.webp width=672 height=480 loading=lazy data-zoomable></div></div><figcaption>Buffered polygon</figcaption></figure><p>To create our resistance layers for the connectivity analysis, let’s
+download a digital elevation model (DEM) using package <code>elevatr</code>.</p><pre><code>library(elevatr)
 elevation &lt;- get_elev_raster(Pj_poly_buff, z = 8)         # This will find a DEM tile nearest to our polygon 
-</code></pre>
-<p>While elevation is important, we can derive other biologically important
+</code></pre><p>While elevation is important, we can derive other biologically important
 variables using the <code>raster::terrain()</code>, inlcuding aspect (direction a
 hillside is facing) and topographic roughness index (TRI). In very
 simple terms, TRI calculates the change in elevation between a point and
-its surroundings (in a neighborhood of 8 points).</p>
-<pre><code>elv &lt;- elevation %&gt;%                                      # First, lets cut the DEM to our study area 
+its surroundings (in a neighborhood of 8 points).</p><pre><code>elv &lt;- elevation %&gt;%                                      # First, lets cut the DEM to our study area 
   crop(Pj_poly_buff) %&gt;%                                  # crop to the extent
   mask(Pj_poly_buff)                                      # mask to the edges
 
@@ -1755,44 +207,12 @@ ggplot(as.data.frame(asp, xy=T)) + geom_raster(aes(x=x, y=y, fill=aspect)) +
   scale_fill_continuous(na.value=NA) + theme_map() + theme(legend.position = &quot;right&quot;)
 
 ## Warning: Removed 18361 rows containing missing values (geom_raster).
-</code></pre>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<figure  id="figure-creating-gis-layers-for-the-great-smoky-mtns">
-  <div class="d-flex justify-content-center">
-    <div class="w-100" ><img alt="creating gis layers for the Great Smoky Mtns" srcset="
-               /media/posts/connectivity_script_files/figure-markdown_strict/create_layers-1_hu1715431012424902423.webp 400w,
-               /media/posts/connectivity_script_files/figure-markdown_strict/create_layers-1_hu14616543833048540915.webp 760w,
-               /media/posts/connectivity_script_files/figure-markdown_strict/create_layers-1_hu17860438836242113234.webp 1200w"
-               src="/media/posts/connectivity_script_files/figure-markdown_strict/create_layers-1_hu1715431012424902423.webp"
-               width="384"
-               height="288"
-               loading="lazy" data-zoomable /></div>
-  </div><figcaption>
-      creating gis layers for the Great Smoky Mtns
-    </figcaption></figure>
-
-<p>To simplify our analysis for this demonstration, I’m going to cut down
+</code></pre><figure id=figure-creating-gis-layers-for-the-great-smoky-mtns><div class="d-flex justify-content-center"><div class=w-100><img alt="creating gis layers for the Great Smoky Mtns" srcset="/media/posts/connectivity_script_files/figure-markdown_strict/create_layers-1_hu1715431012424902423.webp 400w,
+/media/posts/connectivity_script_files/figure-markdown_strict/create_layers-1_hu14616543833048540915.webp 760w,
+/media/posts/connectivity_script_files/figure-markdown_strict/create_layers-1_hu17860438836242113234.webp 1200w" src=/media/posts/connectivity_script_files/figure-markdown_strict/create_layers-1_hu1715431012424902423.webp width=384 height=288 loading=lazy data-zoomable></div></div><figcaption>creating gis layers for the Great Smoky Mtns</figcaption></figure><p>To simplify our analysis for this demonstration, I’m going to cut down
 the number of presence points to only 5. Because we will be calculating
 pairwise random shortest-paths (from now on, “random walks”), we will
-calculate 10 paths.</p>
-<pre><code>set.seed(6)                                               # To make your results match mine
+calculate 10 paths.</p><pre><code>set.seed(6)                                               # To make your results match mine
 Pj_sample &lt;- Pj_coords[sample(nrow(Pj_coords), 5),]       # Take 5 random locations
 
 ggplot(as.data.frame(asp, xy=T)) + geom_raster(aes(x=x, y=y, fill=aspect)) + 
@@ -1800,58 +220,22 @@ ggplot(as.data.frame(asp, xy=T)) + geom_raster(aes(x=x, y=y, fill=aspect)) +
   scale_fill_continuous(na.value=NA) + theme_map()
 
 ## Warning: Removed 18361 rows containing missing values (geom_raster).
-</code></pre>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<figure  id="figure-random-sample-of-sites-in-the-great-smoky-mtns">
-  <div class="d-flex justify-content-center">
-    <div class="w-100" ><img alt="random sample of sites in the Great Smoky Mtns" srcset="
-               /media/posts/connectivity_script_files/figure-markdown_strict/gather_random_sample_of_sites-1_hu17435859837055058397.webp 400w,
-               /media/posts/connectivity_script_files/figure-markdown_strict/gather_random_sample_of_sites-1_hu15156685734228406591.webp 760w,
-               /media/posts/connectivity_script_files/figure-markdown_strict/gather_random_sample_of_sites-1_hu15449460719916003691.webp 1200w"
-               src="/media/posts/connectivity_script_files/figure-markdown_strict/gather_random_sample_of_sites-1_hu17435859837055058397.webp"
-               width="480"
-               height="384"
-               loading="lazy" data-zoomable /></div>
-  </div><figcaption>
-      random sample of sites in the Great Smoky Mtns
-    </figcaption></figure>
-
-<p>To make our pairwise random walks, we have to create a side index.
+</code></pre><figure id=figure-random-sample-of-sites-in-the-great-smoky-mtns><div class="d-flex justify-content-center"><div class=w-100><img alt="random sample of sites in the Great Smoky Mtns" srcset="/media/posts/connectivity_script_files/figure-markdown_strict/gather_random_sample_of_sites-1_hu17435859837055058397.webp 400w,
+/media/posts/connectivity_script_files/figure-markdown_strict/gather_random_sample_of_sites-1_hu15156685734228406591.webp 760w,
+/media/posts/connectivity_script_files/figure-markdown_strict/gather_random_sample_of_sites-1_hu15449460719916003691.webp 1200w" src=/media/posts/connectivity_script_files/figure-markdown_strict/gather_random_sample_of_sites-1_hu17435859837055058397.webp width=480 height=384 loading=lazy data-zoomable></div></div><figcaption>random sample of sites in the Great Smoky Mtns</figcaption></figure><p>To make our pairwise random walks, we have to create a side index.
 Here’s quick little solution I made which creates a matrix of every
-conceivable combination of points:</p>
-<pre><code>Pj_combn &lt;- combn(nrow(Pj_sample),2) %&gt;%
+conceivable combination of points:</p><pre><code>Pj_combn &lt;- combn(nrow(Pj_sample),2) %&gt;%
   t() %&gt;%
   as.matrix()
-</code></pre>
-<p>To perform a random walks analysis, we have to create a transition
+</code></pre><p>To perform a random walks analysis, we have to create a transition
 matrix using <code>gdistance::transition()</code>, as well as perform a
-geocorrection.</p>
-<pre><code>library(gdistance)
+geocorrection.</p><pre><code>library(gdistance)
 asp_tr &lt;- transition(asp, transitionFunction = mean, 4) %&gt;%
     geoCorrection(type=&quot;c&quot;,multpl=F)
-</code></pre>
-<p>Now comes the fun part. This loop will perform the random walk routine
+</code></pre><p>Now comes the fun part. This loop will perform the random walk routine
 using <code>gdistance:passage()</code> for each pairwise path, generating a flow
 map. This flow map can be considered as “conductance” a la Circuitscape,
-or the “probabilities of passages” based on randomized shortest-paths.</p>
-<pre><code>passages &lt;- list()                                                     # Create a list to store the passage probability rasters in
+or the “probabilities of passages” based on randomized shortest-paths.</p><pre><code>passages &lt;- list()                                                     # Create a list to store the passage probability rasters in
 system.time(                                                           # Keep track of how long this takes
   for (i in 1:nrow(Pj_combn)) {           
     locations &lt;- SpatialPoints(rbind(Pj_sample[Pj_combn[i,1],1:2],     # create origin points
@@ -1881,395 +265,29 @@ system.time(                                                           # Keep tr
 
 passages &lt;- stack(passages)                                            # create a raster stack of all the passage probabilities
 passages_overlay &lt;- sum(passages)/nrow(Pj_combn)                       # calculate average
-</code></pre>
-<p><strong>Notes</strong> In our passage function, we set theta, (<em>θ</em>), a tuning
+</code></pre><p><strong>Notes</strong> In our passage function, we set theta, (<em>θ</em>), a tuning
 parameter. Extremely low values result in a random walk (equivilant to
 Circuit Theory), but as <em>θ</em>¸ increases, the passage converges on least
-cost path. I supplied a value somewhere in the middle.</p>
-<pre><code>colors &lt;- c(&quot;grey60&quot;, viridis_pal(option=&quot;plasma&quot;, begin = 0.3, end = 1)(20))
+cost path. I supplied a value somewhere in the middle.</p><pre><code>colors &lt;- c(&quot;grey60&quot;, viridis_pal(option=&quot;plasma&quot;, begin = 0.3, end = 1)(20))
 ggplot(as.data.frame(passages_overlay, xy=T)) + geom_raster(aes(x=x,y=y,fill=layer)) +
   scale_fill_gradientn(colors = colors, na.value = NA) + 
   theme_map() +   theme(legend.position = &quot;right&quot;)
 
 ## Warning: Removed 18361 rows containing missing values (geom_raster).
-</code></pre>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<figure  id="figure-ecological-flow-of-jordans-red-cheeked-salamander">
-  <div class="d-flex justify-content-center">
-    <div class="w-100" ><img alt="Ecological Flow of Jordan&#39;s Red Cheeked Salamander" srcset="
-               /media/posts/connectivity_script_files/figure-markdown_strict/plot_flow-1_hu3668783389650275206.webp 400w,
-               /media/posts/connectivity_script_files/figure-markdown_strict/plot_flow-1_hu1841305405371726403.webp 760w,
-               /media/posts/connectivity_script_files/figure-markdown_strict/plot_flow-1_hu2997340114314834329.webp 1200w"
-               src="/media/posts/connectivity_script_files/figure-markdown_strict/plot_flow-1_hu3668783389650275206.webp"
-               width="760"
-               height="136"
-               loading="lazy" data-zoomable /></div>
-  </div><figcaption>
-      Ecological Flow of Jordan&rsquo;s Red Cheeked Salamander
-    </figcaption></figure>
-
-<p>There you have it!</p>
-<p>Now, this was an <em>extremely</em> short demonstration… In the future, I plan
+</code></pre><figure id=figure-ecological-flow-of-jordans-red-cheeked-salamander><div class="d-flex justify-content-center"><div class=w-100><img alt="Ecological Flow of Jordan's Red Cheeked Salamander" srcset="/media/posts/connectivity_script_files/figure-markdown_strict/plot_flow-1_hu3668783389650275206.webp 400w,
+/media/posts/connectivity_script_files/figure-markdown_strict/plot_flow-1_hu1841305405371726403.webp 760w,
+/media/posts/connectivity_script_files/figure-markdown_strict/plot_flow-1_hu2997340114314834329.webp 1200w" src=/media/posts/connectivity_script_files/figure-markdown_strict/plot_flow-1_hu3668783389650275206.webp width=760 height=136 loading=lazy data-zoomable></div></div><figcaption>Ecological Flow of Jordan&rsquo;s Red Cheeked Salamander</figcaption></figure><p>There you have it!</p><p>Now, this was an <em>extremely</em> short demonstration… In the future, I plan
 to make many additional posts on connectivity, what it means, how to use
-it, as well as provide some more tutorials.</p>
-<p>Best,</p>
-<p>-Alex.</p>
-
-      </div>
-
-      
-  <time class="mt-12 mb-8 block text-xs text-gray-500 ltr:text-right rtl:text-left dark:text-gray-400" datetime="2020-08-12T00:40:04.000Z">
-    <span>Last updated on</span>
-    Aug 12, 2020</time>
-
-      <div class="container mx-auto prose prose-slate lg:prose-xl dark:prose-invert mt-5">
-        
-        <div class="max-w-prose print:hidden">
-  
-  
-
-  
-
-<div class="flex justify-center">
-  
-  <a class="no-underline bg-primary-100 hover:bg-primary-300 text-primary-800 text-xs font-medium mr-2 px-2.5 py-0.5 lg:px-5 lg:py-2 rounded dark:bg-primary-900 dark:hover:bg-primary-700 dark:text-primary-300" href="/tag/circuitscape/">Circuitscape</a>
-  
-  <a class="no-underline bg-primary-100 hover:bg-primary-300 text-primary-800 text-xs font-medium mr-2 px-2.5 py-0.5 lg:px-5 lg:py-2 rounded dark:bg-primary-900 dark:hover:bg-primary-700 dark:text-primary-300" href="/tag/random-walks/">Random Walks</a>
-  
-  <a class="no-underline bg-primary-100 hover:bg-primary-300 text-primary-800 text-xs font-medium mr-2 px-2.5 py-0.5 lg:px-5 lg:py-2 rounded dark:bg-primary-900 dark:hover:bg-primary-700 dark:text-primary-300" href="/tag/conductance/">Conductance</a>
-  
-  <a class="no-underline bg-primary-100 hover:bg-primary-300 text-primary-800 text-xs font-medium mr-2 px-2.5 py-0.5 lg:px-5 lg:py-2 rounded dark:bg-primary-900 dark:hover:bg-primary-700 dark:text-primary-300" href="/tag/ecological-modeling/">Ecological Modeling</a>
-  
-</div>
-
-
-  
-<section class="flex flex-row flex-wrap justify-center pt-4 text-xl">
-  
-
-  
-  
-  
-  
-  
-  
-  <a
-    target="_blank" rel="noopener"
-    class="m-1 rounded-md bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral-300 dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-    href="https://twitter.com/intent/tweet?url=http%3A%2F%2Flocalhost%3A1313%2Fpost%2Fconnectivity-script%2F&amp;text=Mapping&#43;Ecological&#43;Flow&#43;in&#43;R&#43;%28pt&#43;1%29"
-    title="X"
-    aria-label="X"
-    id="share-link-x"
-  >
-    <svg style="height: 1em;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/></svg>
-  </a>
-  
-
-  
-  
-  
-  
-  
-  
-  <a
-    target="_blank" rel="noopener"
-    class="m-1 rounded-md bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral-300 dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-    href="https://www.facebook.com/sharer.php?u=http%3A%2F%2Flocalhost%3A1313%2Fpost%2Fconnectivity-script%2F&amp;t=Mapping&#43;Ecological&#43;Flow&#43;in&#43;R&#43;%28pt&#43;1%29"
-    title="Facebook"
-    aria-label="Facebook"
-    id="share-link-facebook"
-  >
-    <svg style="height: 1em;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z"/></svg>
-  </a>
-  
-
-  
-  
-  
-  
-  
-  
-    
-  
-  <a
-    target="_blank" rel="noopener"
-    class="m-1 rounded-md bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral-300 dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-    href="mailto:?subject=Mapping%20Ecological%20Flow%20in%20R%20%28pt%201%29&amp;body=http%3A%2F%2Flocalhost%3A1313%2Fpost%2Fconnectivity-script%2F"
-    title="Email"
-    aria-label="Email"
-    id="share-link-email"
-  >
-    <svg style="height: 1em;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5" d="M16.5 12a4.5 4.5 0 1 1-9 0a4.5 4.5 0 0 1 9 0Zm0 0c0 1.657 1.007 3 2.25 3S21 13.657 21 12a9 9 0 1 0-2.636 6.364M16.5 12V8.25"/></svg>
-  </a>
-  
-
-  
-  
-  
-  
-  
-  
-  <a
-    target="_blank" rel="noopener"
-    class="m-1 rounded-md bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral-300 dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-    href="https://www.linkedin.com/shareArticle?url=http%3A%2F%2Flocalhost%3A1313%2Fpost%2Fconnectivity-script%2F&amp;title=Mapping&#43;Ecological&#43;Flow&#43;in&#43;R&#43;%28pt&#43;1%29"
-    title="LinkedIn"
-    aria-label="LinkedIn"
-    id="share-link-linkedin"
-  >
-    <svg style="height: 1em;" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
-  </a>
-  
-
-  
-  
-  
-  
-  
-  
-  <a
-    target="_blank" rel="noopener"
-    class="m-1 rounded-md bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral-300 dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-    href="whatsapp://send?text=Mapping&#43;Ecological&#43;Flow&#43;in&#43;R&#43;%28pt&#43;1%29%20http%3A%2F%2Flocalhost%3A1313%2Fpost%2Fconnectivity-script%2F"
-    title="WhatsApp"
-    aria-label="WhatsApp"
-    id="share-link-whatsapp"
-  >
-    <svg style="height: 1em;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="m187.58 144.84-32-16a8 8 0 0 0-8 .5l-14.69 9.8a40.55 40.55 0 0 1-16-16l9.8-14.69a8 8 0 0 0 .5-8l-16-32A8 8 0 0 0 104 64a40 40 0 0 0-40 40 88.1 88.1 0 0 0 88 88 40 40 0 0 0 40-40 8 8 0 0 0-4.42-7.16ZM152 176a72.08 72.08 0 0 1-72-72 24 24 0 0 1 19.29-23.54l11.48 23L101 118a8 8 0 0 0-.73 7.51 56.47 56.47 0 0 0 30.15 30.15A8 8 0 0 0 138 155l14.61-9.74 23 11.48A24 24 0 0 1 152 176ZM128 24a104 104 0 0 0-91.82 152.88l-11.35 34.05a16 16 0 0 0 20.24 20.24l34.05-11.35A104 104 0 1 0 128 24Zm0 192a87.87 87.87 0 0 1-44.06-11.81 8 8 0 0 0-6.54-.67L40 216l12.47-37.4a8 8 0 0 0-.66-6.54A88 88 0 1 1 128 216Z"/></svg>
-  </a>
-  
-</section>
-
-
-  
-
-
-
-
-
-
-
-
-  
-  
-
-
-
-  
-  
-  
-    
-  
-  
-  
-
-<div class="flex pt-12 pb-4">
-  
-  
-  <img
-    class="mr-4 h-24 w-24 rounded-full"
-    width="96"
-    height="96"
-    alt="J Alex Baecher"
-  src="/author/j-alex-baecher/avatar_hu9704284195948671912.jpg"
-  loading="lazy"
-  />
-  
-  <div class="place-self-center">
-    <div class="text-[0.6rem] uppercase leading-3 text-neutral-500 dark:text-neutral-400">
-      Authors
-    </div>
-    <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
-      <a href="http://localhost:1313/" class="no-underline">
-      J Alex Baecher
-      </a>
-    </div>
-
-    
-    <div class="text-sm font-bold text-neutral-700 dark:text-neutral-300">
-    Postdoctoral Researcher
-    </div>
-    
-
-
-    
-    <div class="text-sm text-neutral-700 dark:text-neutral-300">My research interests include landscape ecology and applied conservation of reptiles and amphibians</div>
-    
-
-    <div class="text-2xl sm:text-lg pt-1">
-
-      
-
-
-    </div>
-  </div>
-</div>
-
-
-
-
-
-
-
-  
-  
-    
-    
-    
-      
-      
-    
-<div class="pt-1 no-prose w-full">
-  <hr class="border-dotted border-neutral-300 dark:border-neutral-600" />
-  <div class="flex flex-col md:flex-row flex-nowrap justify-between gap-5 pt-2">
-    <div class="">
-      
-        <a class="group flex no-underline" href="/post/gradient-descent/">
-          <span
-            class="mt-[-0.3rem] me-2 text-neutral-700 transition-transform group-hover:-translate-x-[2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
-          ><span class="ltr:inline rtl:hidden">&larr;</span></span>
-          <span class="flex flex-col">
-            <span
-              class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-            >Linear regression with gradient descent</span>
-            <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
-              
-                Sep 22, 2021
-              
-            </span>
-          </span>
-        </a>
-      
-    </div>
-    <div class="">
-      
-        <a class="group flex text-right no-underline" href="/post/edm-script/">
-          <span class="flex flex-col">
-            <span
-              class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-            >Empirical Dynamic Models for Forecasting</span
-            >
-            <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
-              
-                Aug 12, 2016
-              
-            </span>
-          </span>
-          <span
-            class="mt-[-0.3rem] ms-2 text-neutral-700 transition-transform group-hover:-translate-x-[2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
-          ><span class="ltr:inline">&rarr;</span></span>
-        </a>
-      
-    </div>
-  </div>
-</div>
-
-
-
-  
-
-
-  
-
-
-
-</div>
-
-      </div>
-
-    </main>
-  </article>
-</div>
-
-    </div>
-    <div class="page-footer">
-      <footer class="container mx-auto flex flex-col justify-items-center text-sm leading-6 mt-24 mb-4 text-slate-700 dark:text-slate-200">
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-  
-  
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-  <p class="powered-by text-center">
-    
-    
-    
-      
-      
-      
-      
-      
-      
-      Published with <a href="https://hugoblox.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Hugo Blox Builder</a> — the free, <a href="https://github.com/HugoBlox/hugo-blox-builder" target="_blank" rel="noopener">open source</a> website builder that empowers creators.
-    
-  </p>
-
-</footer>
-
-    </div>
-
-    
-    
-
-
-
-
-
-
-
-
-
-
-
-  </body>
-</html>
+it, as well as provide some more tutorials.</p><p>Best,</p><p>-Alex.</p></div><time class="mt-12 mb-8 block text-xs text-gray-500 ltr:text-right rtl:text-left dark:text-gray-400" datetime=2020-08-12T00:40:04.000Z><span>Last updated on</span>
+Aug 12, 2020</time><div class="container mx-auto prose prose-slate lg:prose-xl dark:prose-invert mt-5"><div class="max-w-prose print:hidden"><div class="flex justify-center"><a class="no-underline bg-primary-100 hover:bg-primary-300 text-primary-800 text-xs font-medium mr-2 px-2.5 py-0.5 lg:px-5 lg:py-2 rounded dark:bg-primary-900 dark:hover:bg-primary-700 dark:text-primary-300" href=/tag/circuitscape/>Circuitscape</a>
+<a class="no-underline bg-primary-100 hover:bg-primary-300 text-primary-800 text-xs font-medium mr-2 px-2.5 py-0.5 lg:px-5 lg:py-2 rounded dark:bg-primary-900 dark:hover:bg-primary-700 dark:text-primary-300" href=/tag/random-walks/>Random Walks</a>
+<a class="no-underline bg-primary-100 hover:bg-primary-300 text-primary-800 text-xs font-medium mr-2 px-2.5 py-0.5 lg:px-5 lg:py-2 rounded dark:bg-primary-900 dark:hover:bg-primary-700 dark:text-primary-300" href=/tag/conductance/>Conductance</a>
+<a class="no-underline bg-primary-100 hover:bg-primary-300 text-primary-800 text-xs font-medium mr-2 px-2.5 py-0.5 lg:px-5 lg:py-2 rounded dark:bg-primary-900 dark:hover:bg-primary-700 dark:text-primary-300" href=/tag/ecological-modeling/>Ecological Modeling</a></div><section class="flex flex-row flex-wrap justify-center pt-4 text-xl"><a target=_blank rel=noopener class="m-1 rounded-md bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral-300 dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Falexbaecher.com%2Fpost%2Fconnectivity-script%2F&amp;text=Mapping+Ecological+Flow+in+R+%28pt+1%29" title=X aria-label=X id=share-link-x><svg style="height:1em" viewBox="0 0 512 512"><path fill="currentcolor" d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/></svg>
+</a><a target=_blank rel=noopener class="m-1 rounded-md bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral-300 dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800" href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Falexbaecher.com%2Fpost%2Fconnectivity-script%2F&amp;t=Mapping+Ecological+Flow+in+R+%28pt+1%29" title=Facebook aria-label=Facebook id=share-link-facebook><svg style="height:1em" viewBox="0 0 24 24"><path fill="currentcolor" d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55.0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z"/></svg>
+</a><a target=_blank rel=noopener class="m-1 rounded-md bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral-300 dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800" href="mailto:?subject=Mapping%20Ecological%20Flow%20in%20R%20%28pt%201%29&amp;body=https%3A%2F%2Falexbaecher.com%2Fpost%2Fconnectivity-script%2F" title=Email aria-label=Email id=share-link-email><svg style="height:1em" viewBox="0 0 24 24"><path fill="none" stroke="currentcolor" stroke-linecap="round" stroke-width="1.5" d="M16.5 12a4.5 4.5.0 11-9 0 4.5 4.5.0 019 0zm0 0c0 1.657 1.007 3 2.25 3S21 13.657 21 12a9 9 0 10-2.636 6.364M16.5 12V8.25"/></svg>
+</a><a target=_blank rel=noopener class="m-1 rounded-md bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral-300 dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800" href="https://www.linkedin.com/shareArticle?url=https%3A%2F%2Falexbaecher.com%2Fpost%2Fconnectivity-script%2F&amp;title=Mapping+Ecological+Flow+in+R+%28pt+1%29" title=LinkedIn aria-label=LinkedIn id=share-link-linkedin><svg style="height:1em" height="1em" viewBox="0 0 448 512"><path fill="currentcolor" d="M416 32H31.9C14.3 32 0 46.5.0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6.0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3.0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2.0 38.5 17.3 38.5 38.5.0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6.0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2.0 79.7 44.3 79.7 101.9V416z"/></svg>
+</a><a target=_blank rel=noopener class="m-1 rounded-md bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral-300 dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800" href="whatsapp://send?text=Mapping+Ecological+Flow+in+R+%28pt+1%29%20https%3A%2F%2Falexbaecher.com%2Fpost%2Fconnectivity-script%2F" title=WhatsApp aria-label=WhatsApp id=share-link-whatsapp><svg style="height:1em" viewBox="0 0 256 256" fill="currentcolor"><path d="m187.58 144.84-32-16a8 8 0 00-8 .5l-14.69 9.8a40.55 40.55.0 01-16-16l9.8-14.69a8 8 0 00.5-8l-16-32A8 8 0 00104 64a40 40 0 00-40 40 88.1 88.1.0 0088 88 40 40 0 0040-40 8 8 0 00-4.42-7.16zM152 176a72.08 72.08.0 01-72-72 24 24 0 0119.29-23.54l11.48 23L101 118a8 8 0 00-.73 7.51 56.47 56.47.0 0030.15 30.15A8 8 0 00138 155l14.61-9.74 23 11.48A24 24 0 01152 176zM128 24A104 104 0 0036.18 176.88l-11.35 34.05a16 16 0 0020.24 20.24l34.05-11.35A104 104 0 10128 24zm0 192a87.87 87.87.0 01-44.06-11.81 8 8 0 00-6.54-.67L40 216l12.47-37.4a8 8 0 00-.66-6.54A88 88 0 11128 216z"/></svg></a></section><div class="flex pt-12 pb-4"><img class="mr-4 h-24 w-24 rounded-full" width=96 height=96 alt="J Alex Baecher" src=/author/j-alex-baecher/avatar_hu9704284195948671912.jpg loading=lazy><div class=place-self-center><div class="text-[0.6rem] uppercase leading-3 text-neutral-500 dark:text-neutral-400">Authors</div><div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300"><a href=https://alexbaecher.com/ class=no-underline>J Alex Baecher</a></div><div class="text-sm font-bold text-neutral-700 dark:text-neutral-300">Postdoctoral Researcher</div><div class="text-sm text-neutral-700 dark:text-neutral-300">My research interests include landscape ecology and applied conservation of reptiles and amphibians</div><div class="text-2xl sm:text-lg pt-1"></div></div></div><div class="pt-1 no-prose w-full"><hr class="border-dotted border-neutral-300 dark:border-neutral-600"><div class="flex flex-col md:flex-row flex-nowrap justify-between gap-5 pt-2"><div><a class="group flex no-underline" href=/post/gradient-descent/><span class="mt-[-0.3rem] me-2 text-neutral-700 transition-transform group-hover:-translate-x-[2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"><span class="ltr:inline rtl:hidden">&larr;</span></span>
+<span class="flex flex-col"><span class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500">Linear regression with gradient descent</span>
+<span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">Sep 22, 2021</span></span></a></div><div><a class="group flex text-right no-underline" href=/post/edm-script/><span class="flex flex-col"><span class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500">Empirical Dynamic Models for Forecasting</span>
+<span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">Aug 12, 2016
+</span></span><span class="mt-[-0.3rem] ms-2 text-neutral-700 transition-transform group-hover:-translate-x-[2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"><span class=ltr:inline>&rarr;</span></span></a></div></div></div></div></div></main></article></div></div><div class=page-footer><footer class="container mx-auto flex flex-col justify-items-center text-sm leading-6 mt-24 mb-4 text-slate-700 dark:text-slate-200"><p class="powered-by text-center">Published with <a href="https://hugoblox.com/?utm_campaign=poweredby" target=_blank rel=noopener>Hugo Blox Builder</a> — the free, <a href=https://github.com/HugoBlox/hugo-blox-builder target=_blank rel=noopener>open source</a> website builder that empowers creators.</p></footer></div></body></html>

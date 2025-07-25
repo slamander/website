@@ -6,6 +6,7 @@
   HUGO_VERSION = "0.139.0"
   GO_VERSION = "1.21"
   HUGO_ENABLEGITINFO = "true"
+  HUGO_EXTENDED = "true"  # Add this line
 
 [context.production.environment]
   HUGO_ENV = "production"

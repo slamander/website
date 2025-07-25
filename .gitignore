@@ -1,6 +1,7 @@
 # IDEs
 .idea/
 .Rhistory/
+resources/
 # Hugo
 .Rproj.user
 .Rhistory
