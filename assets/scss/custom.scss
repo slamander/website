@@ -1,9 +1,104 @@
+// Updated hero styles for better responsiveness
 .custom-hero {
-  height: 200px !important; // Adjust to your preferred height -- originally set to 300px
-  max-height: 300px !important;
+  // Use viewport-relative units for better responsiveness
+  height: clamp(250px, 50vh, 500px) !important;
+  max-height: 500px !important;
+  min-height: 250px !important;
+  overflow: hidden !important;
+  position: relative !important;
   
-  .hero-background {
-    height: 300px !important;
+  // Target the hero background image
+  .hero-background,
+  .bg-image {
+    height: 100% !important;
+    width: 100% !important;
     object-fit: cover !important;
+    object-position: center !important;
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+  }
+  
+  // Ensure the container takes full height
+  .container,
+  .row,
+  .col {
+    height: 100% !important;
+  }
+  
+  // Center the content vertically
+  .hero-content,
+  .block-hero {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    height: 100% !important;
+    text-align: center !important;
+  }
+  
+  // Responsive adjustments
+  @media (max-width: 768px) {
+    height: clamp(200px, 40vh, 350px) !important;
+    max-height: 350px !important;
+    
+    .hero-title {
+      font-size: 2rem !important;
+    }
+    
+    .hero-lead {
+      font-size: 1.1rem !important;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    height: clamp(180px, 35vh, 300px) !important;
+    max-height: 300px !important;
+    
+    .hero-title {
+      font-size: 1.5rem !important;
+    }
+    
+    .hero-lead {
+      font-size: 1rem !important;
+    }
+  }
+  
+  // Ensure buttons don't get cut off
+  .btn {
+    margin-top: 1rem !important;
+    z-index: 10 !important;
+    position: relative !important;
+  }
+}
+
+// Additional fix for Hugo Blox specific classes
+.block.block-hero {
+  .custom-hero {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+}
+
+// Fix for background image in Hugo Blox
+[data-blox-hero] {
+  &.custom-hero {
+    background-attachment: scroll !important; // Better mobile performance
+    
+    .hero-overlay {
+      position: absolute !important;
+      top: 0 !important;
+      left: 0 !important;
+      right: 0 !important;
+      bottom: 0 !important;
+      background: rgba(0, 0, 0, 0.4) !important; // Adjust darkness as needed
+      z-index: 1 !important;
+    }
+    
+    .container {
+      position: relative !important;
+      z-index: 2 !important;
+    }
   }
 }
