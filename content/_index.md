@@ -5,7 +5,7 @@ date: 2025-01-25
 draft: false
 
 sections:
-- block: markdown
+  - block: markdown
     content:
       text: |
         <div class="custom-banner" style="
