@@ -18,34 +18,30 @@ sections:
         padding: ["0px", "5px", "0px", "5px"]
 
   - block: hero
-      content:
-        title: "Baecher Research"
-        text: "Spatial ecology and conservation research"
-        cta:
-          url: "https://drive.google.com/file/d/1zADCDlIiJlx1vXKQ6NdMLwTZm7E6sS29/view?usp=sharing"
-          label: Download CV
-          icon_pack: fas
-          icon: download
-      design:
-        background:
-          image:
-            filename: log_extended_resized.png
-            filters:
-              brightness: 0.6
-          position: center
-          size: cover
-          text_color_light: true
-        # Remove individual spacing here and let CSS handle it
-        css_style: |
-          background-attachment: scroll;
-          background-size: cover;
-          background-position: center center;
-          background-repeat: no-repeat;
-      css_class: custom-hero
+    content:
+      title: "Baecher Research"
+      text: "Spatial ecology and conservation research"
+      cta:
+        url: "https://drive.google.com/file/d/1zADCDlIiJlx1vXKQ6NdMLwTZm7E6sS29/view?usp=sharing"
+        label: "Download CV"
+        icon_pack: fas
+        icon: download
+    design:
+      background:
+        image:
+          filename: log_extended_resized.png
+          filters:
+            brightness: 0.6
+        position: center
+        size: cover
+        text_color_light: true
+      spacing:
+        padding: ["20px", "0px", "20px", "0px"]
+    css_class: custom-hero
 
   - block: markdown
     content:
-      title: 
+      title: ""
       text: |
         <div class="flex flex-wrap gap-4 justify-center mt-4">
           <a href="mailto:jbaecher@gmail.com" class="inline-flex items-center px-3 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">
@@ -82,7 +78,6 @@ sections:
       spacing:
         padding: ["20px", "50px", "10px", "50px"]
 
-        
   - block: markdown
     content:
       title: "About me"
@@ -94,7 +89,6 @@ sections:
         I am a spacial ecologist, with interest in research at the interface between conservation, ecological theory, and mathematical modeling. I primarily work with reptiles and amphibians, but am interested in the processes determining the distribution of biodiversity more broadly.
 
         **Current Position:** Postdoctoral Research Fellow at Utah State University
-        
 
   - block: markdown
     content:
@@ -149,7 +143,7 @@ sections:
       count: 5
       archive:
         enable: true
-        text: See all publications
+        text: "See all publications"
         link: publication/
       filters:
         folders:
@@ -164,7 +158,7 @@ sections:
       count: 5
       archive:
         enable: true
-        text: See all talks
+        text: "See all talks"
         link: post/
       filters:
         folders:
@@ -172,7 +166,6 @@ sections:
     design:
       view: card
       columns: 2
-
 
   - block: collection
     content:
