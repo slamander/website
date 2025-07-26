@@ -18,26 +18,30 @@ sections:
         padding: ["0px", "5px", "0px", "5px"]
 
   - block: hero
-    content:
-      title: "Baecher Research"
-      text: "Spatial ecology and conservation research"
-      cta:
-        url: "https://drive.google.com/file/d/1zADCDlIiJlx1vXKQ6NdMLwTZm7E6sS29/view?usp=sharing"  # Add leading slash
-        label: Download CV
-        icon_pack: fas
-        icon: download
-    design:
-      background:
-        image:
-          filename: log_extended_resized.png  # Hugo looks in static/media/
-          filters:
-            brightness: 0.6  # Darkens image so text is readable
-        position: center
-        size: cover
-        text_color_light: true
-    css_class: custom-hero
-    spacing:
-      padding: ["20px", "0px", "20px", "0px"]  # Reduced padding
+      content:
+        title: "Baecher Research"
+        text: "Spatial ecology and conservation research"
+        cta:
+          url: "https://drive.google.com/file/d/1zADCDlIiJlx1vXKQ6NdMLwTZm7E6sS29/view?usp=sharing"
+          label: Download CV
+          icon_pack: fas
+          icon: download
+      design:
+        background:
+          image:
+            filename: log_extended_resized.png
+            filters:
+              brightness: 0.6
+          position: center
+          size: cover
+          text_color_light: true
+        # Remove individual spacing here and let CSS handle it
+        css_style: |
+          background-attachment: scroll;
+          background-size: cover;
+          background-position: center center;
+          background-repeat: no-repeat;
+      css_class: custom-hero
 
   - block: markdown
     content:
