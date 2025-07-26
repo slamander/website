@@ -18,6 +18,10 @@ sections:
           overflow: hidden;
           margin: 0;
           padding: 0 2rem;
+          width: 100vw;
+          position: relative;
+          left: 50%;
+          transform: translateX(-50%);
         ">
           <!-- Background image as actual img element -->
           <img src="/media/log_high.jpg"  
