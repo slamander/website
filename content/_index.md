@@ -88,12 +88,12 @@ sections:
             z-index: 2;
             margin-left: 2rem;
           ">
-            <img src="/media/badge_kentucki.png" 
+            <img src="media/badge_kentucki.png" 
                  alt="Badge" 
                  style="
-                   height: 80px;
+                   height: 100px;
                    width: auto;
-                   max-width: 150px;
+                   max-width: 200px;
                  ">
           </div>
         </div>
