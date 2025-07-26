@@ -9,7 +9,7 @@ sections:
     content:
       text: |
         <div class="custom-banner" style="
-          background-image: url('/assets/media/log_extended_resized.png');
+          background-image: url('https://drive.google.com/file/d/1qnoPk632hbkUIbSvfS2Ugrxpqabucx9s/view?usp=sharing');
           background-size: cover;
           background-position: center;
           background-repeat: no-repeat;
