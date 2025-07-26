@@ -9,20 +9,30 @@ sections:
     content:
       text: |
         <div class="custom-banner" style="
-          background-image: url('https://drive.google.com/file/d/1qnoPk632hbkUIbSvfS2Ugrxpqabucx9s/view?usp=sharing');
-          background-size: cover;
-          background-position: center;
-          background-repeat: no-repeat;
+          position: relative;
           height: calc(100vw * 534 / 3008);
           max-height: 250px;
           min-height: 120px;
-          position: relative;
           display: flex;
           align-items: center;
           overflow: hidden;
           margin: 0;
           padding: 0 2rem;
         ">
+          <!-- Background image as actual img element -->
+          <img src="media/log_extended_resized.png" 
+               alt="Background" 
+               style="
+                 position: absolute;
+                 top: 0;
+                 left: 0;
+                 width: 100%;
+                 height: 100%;
+                 object-fit: cover;
+                 object-position: center;
+                 z-index: 0;
+               ">
+          
           <!-- Dark overlay for text readability -->
           <div style="
             position: absolute;
@@ -81,9 +91,9 @@ sections:
             <img src="/media/badge_kentucki.png" 
                  alt="Badge" 
                  style="
-                   height: 200px;
+                   height: 80px;
                    width: auto;
-                   max-width: 500px;
+                   max-width: 150px;
                  ">
           </div>
         </div>
