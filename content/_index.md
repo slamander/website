@@ -9,7 +9,7 @@ sections:
     content:
       text: |
         <div class="custom-banner" style="
-          background-image: url('/media/log_extended_resized.png');
+          background-image: url('log_extended_resized.png');
           background-size: cover;
           background-position: center;
           background-repeat: no-repeat;
@@ -81,9 +81,9 @@ sections:
             <img src="/media/badge_kentucki.png" 
                  alt="Badge" 
                  style="
-                   height: 80px;
+                   height: 200px;
                    width: auto;
-                   max-width: 150px;
+                   max-width: 500px;
                  ">
           </div>
         </div>
