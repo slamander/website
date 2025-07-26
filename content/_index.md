@@ -29,7 +29,7 @@ sections:
     design:
       background:
         image:
-          filename: log_extended.png  # Hugo looks in static/media/
+          filename: log_extended_resized.png  # Hugo looks in static/media/
           filters:
             brightness: 0.6  # Darkens image so text is readable
         position: center
