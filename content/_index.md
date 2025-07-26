@@ -37,7 +37,7 @@ sections:
         text_color_light: true
       spacing:
         padding: ["20px", "0px", "20px", "0px"]
-    css_class: custom-hero
+    css_class: custom-hero exact-fit
 
   - block: markdown
     content:
