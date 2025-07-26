@@ -29,7 +29,7 @@ sections:
     design:
       background:
         image:
-          filename: log_extended_resized.png
+          filename: log_high.jpg
           filters:
             brightness: 0.6
         position: center
