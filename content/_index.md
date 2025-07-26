@@ -20,7 +20,7 @@ sections:
           padding: 0 2rem;
         ">
           <!-- Background image as actual img element -->
-          <img src="media/log_extended_resized.png" 
+          <img src="/media/log_extended_resized.png"  
                alt="Background" 
                style="
                  position: absolute;
