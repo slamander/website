@@ -5,39 +5,149 @@ date: 2025-01-25
 draft: false
 
 sections:
-  - block: markdown
+- block: markdown
     content:
       text: |
-        <div style="position: absolute; top: 50px; right: 100px; z-index: 10;">
-          <img src="/media/badge_kentucki.png" alt="Badge" style="width: 500px; height: auto;">
+        <div class="custom-banner" style="
+          background-image: url('/media/log_extended_resized.png');
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+          height: calc(100vw * 534 / 3008);
+          max-height: 250px;
+          min-height: 120px;
+          position: relative;
+          display: flex;
+          align-items: center;
+          overflow: hidden;
+          margin: 0;
+          padding: 0 2rem;
+        ">
+          <!-- Dark overlay for text readability -->
+          <div style="
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: 1;
+          "></div>
+          
+          <!-- Left side: Title and text -->
+          <div style="
+            flex: 1;
+            z-index: 2;
+            color: white;
+            text-align: left;
+          ">
+            <h1 style="
+              font-size: 2.5rem;
+              font-weight: bold;
+              margin: 0 0 0.5rem 0;
+              line-height: 1.2;
+            ">Baecher Research</h1>
+            <p style="
+              font-size: 1.2rem;
+              margin: 0 0 1rem 0;
+              opacity: 0.9;
+            ">Spatial ecology and conservation research</p>
+            <a href="https://drive.google.com/file/d/1zADCDlIiJlx1vXKQ6NdMLwTZm7E6sS29/view?usp=sharing" 
+               style="
+                 display: inline-flex;
+                 align-items: center;
+                 background: #007bff;
+                 color: white;
+                 padding: 0.75rem 1.5rem;
+                 text-decoration: none;
+                 border-radius: 0.5rem;
+                 font-weight: 600;
+                 transition: background-color 0.3s;
+               "
+               onmouseover="this.style.backgroundColor='#0056b3'"
+               onmouseout="this.style.backgroundColor='#007bff'">
+              <svg style="width: 1rem; height: 1rem; margin-right: 0.5rem;" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+              </svg>
+              Download CV
+            </a>
+          </div>
+          
+          <!-- Right side: Badge -->
+          <div style="
+            z-index: 2;
+            margin-left: 2rem;
+          ">
+            <img src="/media/badge_kentucki.png" 
+                 alt="Badge" 
+                 style="
+                   height: 80px;
+                   width: auto;
+                   max-width: 150px;
+                 ">
+          </div>
         </div>
+        
+        <!-- Responsive CSS -->
+        <style>
+        @media (max-width: 768px) {
+          .custom-banner {
+            height: calc(100vw * 0.25) !important;
+            max-height: 180px !important;
+            padding: 0 1rem !important;
+            flex-direction: column !important;
+            justify-content: center !important;
+            text-align: center !important;
+          }
+          
+          .custom-banner h1 {
+            font-size: 1.8rem !important;
+            text-align: center !important;
+          }
+          
+          .custom-banner p {
+            font-size: 1rem !important;
+            text-align: center !important;
+          }
+          
+          .custom-banner > div:first-of-type {
+            text-align: center !important;
+            margin-bottom: 1rem !important;
+          }
+          
+          .custom-banner > div:last-of-type {
+            margin-left: 0 !important;
+          }
+          
+          .custom-banner img {
+            height: 50px !important;
+          }
+        }
+        
+        @media (max-width: 480px) {
+          .custom-banner {
+            height: calc(100vw * 0.3) !important;
+            max-height: 140px !important;
+          }
+          
+          .custom-banner h1 {
+            font-size: 1.4rem !important;
+          }
+          
+          .custom-banner p {
+            font-size: 0.9rem !important;
+          }
+          
+          .custom-banner img {
+            height: 40px !important;
+          }
+        }
+        </style>
     design:
       background:
         color: transparent
       spacing:
-        padding: ["0px", "5px", "0px", "5px"]
-
-  - block: hero
-    content:
-      title: "Baecher Research"
-      text: "Spatial ecology and conservation research"
-      cta:
-        url: "https://drive.google.com/file/d/1zADCDlIiJlx1vXKQ6NdMLwTZm7E6sS29/view?usp=sharing"
-        label: "Download CV"
-        icon_pack: fas
-        icon: download
-    design:
-      background:
-        image:
-          filename: log_extended_resized.png
-          filters:
-            brightness: 0.6
-        position: center
-        size: cover
-        text_color_light: true
-      spacing:
-        padding: ["20px", "0px", "20px", "0px"]
-    css_class: custom-hero exact-fit
+        padding: ["0px", "0px", "0px", "0px"]
 
   - block: markdown
     content:
