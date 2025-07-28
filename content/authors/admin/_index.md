@@ -71,3 +71,23 @@ work:
       - managing endangered species reintroduction programs
 
 ---
+## About Me
+**The serious bits**: 
+I'm a spatial ecologist with interests in understanding the processes that determine the distribution of biodiversity. My research interests include: 
+- macroecology 
+- biogeography
+- population ecology
+- conservation
+- spatiotemporal modeling
+- reptile & amphibian natural history
+- transparent & reproducible science
+
+**The good bits**: 
+I'm a father of two and lover and lover of: 
+- canoeing
+- swimming
+- biking
+- herping
+- hiking 
+- home DIY projects
+- wood working
