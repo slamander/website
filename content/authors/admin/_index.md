@@ -39,17 +39,7 @@ profiles:
   icon_pack: ai
   link: https://drive.google.com/uc?export=download&id=1zADCDlIiJlx1vXKQ6NdMLwTZm7E6sS29
 
-# Short bio (displayed in user profile at end of posts)
-bio: My research interests include landscape ecology and applied conservation of reptiles and amphibians
-
-interests:
-- Conservation 
-- Ecological theory
-- Herpetology
-- Natural History
-- Reproducible Research
-- Spatial Ecology
-- Statistics
+education:
 
 work:
   - position: Postdoctoral Research Fellow
@@ -80,17 +70,4 @@ work:
       Responsibilities include:
       - managing endangered species reintroduction programs
 
-# Enter email to display Gravatar (if Gravatar enabled in Config)
-email: "jbaecher@gmail.com"
-
-# Organizational groups that you belong to (for People widget)
-user_groups:
-- Researchers
-- Visitors
 ---
-
-*The good bits:*
-Native to the foothills of Arkansas' Ozark Mountains. My life consists of... my wife (Kristin), my daughter (Faye), my dog (Ollie), herping, hiking, swimming and canoeing, woodworking, and home DIY projects.
-
-*The serious bits:*
-I am a landscape ecologist, with interest in research at the interface between conservation, ecological theory, and mathematical modeling. I primarily work with reptiles and amphibians, but am interested in the processes determining the distribution of biodiversity more broadly.
