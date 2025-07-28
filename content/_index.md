@@ -10,9 +10,9 @@ sections:
       text: |
         <div class="custom-banner" style="
           position: relative;
-          height: calc(100vw * 534 / 3008);
-          max-height: 250px;
-          min-height: 120px;
+          height: calc(100vw * 2764 / 6000);
+          max-height: 10000px;
+          min-height: 0px;
           display: flex;
           align-items: center;
           overflow: hidden;
@@ -24,7 +24,7 @@ sections:
           transform: translateX(-50%);
         ">
           <!-- Background image as actual img element -->
-          <img src="/media/log_high.jpg"  
+          <img src="media/log_cropped.jpg"  
                alt="Background" 
                style="
                  position: absolute;
@@ -95,68 +95,13 @@ sections:
             <img src="media/badge_kentucki.png" 
                  alt="Badge" 
                  style="
-                   height: 100px;
+                   height: 300px;
                    width: auto;
-                   max-width: 200px;
+                   max-width: 1000px;
                  ">
           </div>
         </div>
         
-        <!-- Responsive CSS -->
-        <style>
-        @media (max-width: 768px) {
-          .custom-banner {
-            height: calc(100vw * 0.25) !important;
-            max-height: 180px !important;
-            padding: 0 1rem !important;
-            flex-direction: column !important;
-            justify-content: center !important;
-            text-align: center !important;
-          }
-          
-          .custom-banner h1 {
-            font-size: 1.8rem !important;
-            text-align: center !important;
-          }
-          
-          .custom-banner p {
-            font-size: 1rem !important;
-            text-align: center !important;
-          }
-          
-          .custom-banner > div:first-of-type {
-            text-align: center !important;
-            margin-bottom: 1rem !important;
-          }
-          
-          .custom-banner > div:last-of-type {
-            margin-left: 0 !important;
-          }
-          
-          .custom-banner img {
-            height: 50px !important;
-          }
-        }
-        
-        @media (max-width: 480px) {
-          .custom-banner {
-            height: calc(100vw * 0.3) !important;
-            max-height: 140px !important;
-          }
-          
-          .custom-banner h1 {
-            font-size: 1.4rem !important;
-          }
-          
-          .custom-banner p {
-            font-size: 0.9rem !important;
-          }
-          
-          .custom-banner img {
-            height: 40px !important;
-          }
-        }
-        </style>
     design:
       background:
         color: transparent
