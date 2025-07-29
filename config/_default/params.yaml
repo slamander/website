@@ -36,12 +36,13 @@ header:
 # Site footer
 footer:
   copyright:
-    notice: 
+    notice: '© {year} Alex Baecher. All rights reserved.'
     license:
       enable: false
-      allow_derivatives: false
-      share_alike: true
-      allow_commercial: false
+  block:
+    enable: false
+  powered_by:
+    enable: false
 
 # Localization
 locale:

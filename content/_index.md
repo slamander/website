@@ -62,7 +62,6 @@ sections:
       username: admin
     design:
       date_format: 'January 2006'
-      #is_education_first: true
 
   - block: collection
     content:
@@ -120,4 +119,88 @@ sections:
     design:
       view: card
       columns: 2
+
+  - block: markdown
+    content:
+      title: "Teaching & Mentoring"
+      text: |
+
+        > "Whether in a classroom or lab, teaching must be student-centered, holistic, and equitable. By  fostering a supportive, engaging environment and recognizing all of students’ needs  (educational, emotional, and biological), I empower students to demonstrate mastery or seek additional support as needed—an approach known to increase success and enhance well-being ([Kaput 2018](https://www.educationevolving.org/resources/evidence-for-student-centered-learning))."
+
+        ## Teaching Philosophy
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
+            <h3>Teaching Philosophy: </h3>
+            <p> 
+        I employ the following evidence-based strategies: 
+
+         - inquiry-based learning through real-world problem-solving
+
+         - hands-on, experiential activities
+
+         - active learning exercises (e.g., case studies and debates)
+
+         </p>
+        </div>
+          <div>
+            <h3>Mentoring Philosophy:</h3>
+            <p>
+         I prioritize three key practices:
+
+         - regular check-ins to align students’ academic progress with their personal goals and well-being
+
+         - fostering independent problem-solving by giving students space to explore, make mistakes, and reflect
+
+         - encouraging external mentorship, whether within the lab (through peer or cascade mentoring) or from additional faculty mentors
+
+         </p>
+        </div>
+        </div>
+
+         ## Student Outcomes
+        My students have gone on to pursue careers in:
+        - **Career progression:** 7 students now in MS (5) and PhD (2) programs and credit my mentorship in shaping their career trajectory
+        - **Academic output:** 11 conference presentations, 1 undergraduate thesis, and 4 peer-reviewed publications
+
+        ## Courses taught
+
+        ### **Environmental Science** | University of Florida
+        *Senior-level course | 2022 -- 2024*
+        
+        A course covering population ecology, habitat management, and conservation strategies for wildlife species. Students learn to apply quantitative methods to real conservation problems.
+        
+        - **Topics**: Environmental monitoring, data collection, modeling, technical speaking and writing
+        - **Methods**: R programming, GIS analysis, field techniques
+        - **Enrollment**: 25 students
+        
+        [Course Materials](#) | [Syllabus (PDF)](#) | [R Tutorials](#)
+
+        ### **Landscape Connectivity Modeling** | Graduate Workshop
+        *Intensive 3-day workshop | Spring 2024*
+        
+        Hands-on workshop teaching cutting-edge methods for modeling animal movement and landscape connectivity using circuit theory and spatial absorbing Markov chains.
+        
+        - **Software**: R, Circuitscape, SAMC package
+        - **Participants**: 40 researchers from 15 institutions
+        - **Focus**: Theory, implementation, and interpretation
+        
+        [Workshop Materials](https://github.com/your-repo) | [Video Lectures](#) | [Practice Datasets](#)
+
+        ## Select Guest Lectures & Workshops
+
+        - **Salamander Conservation in the Southeastern USA** - University of Florida (Spring 2020)
+        - **Grassland Herpetofauna Restoration Ecology** - University of Florida (Spring 2020) 
+        - **Landscape Connectivity Principles** - University of Florida (Spring 2020)
+        - **Expert Elicitation for Invasive Species Management** - IALE Conference (2023)
+        - **SAMC Connectivity Modeling** - Species on the Move Conference (2023)
+
+        *Interested in collaborating on teaching or need guest lectures? [Get in touch!](mailto:jbaecher@gmail.com)*
+    design:
+      columns: '1'
+      spacing:
+        padding: ["40px", "0", "40px", "0"]
+      background:
+        color: ''
+        text_color_light: false
 ---

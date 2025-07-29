@@ -8,7 +8,7 @@ authors:
 - Joseph C. Neal
 - JD Willson
 
-date: 2014-10-08T00:00:00Z
+date: 2014-10-08
 
 doi: ""
 
