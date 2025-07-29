@@ -7,7 +7,7 @@ draft: false
 sections:
   - block: hero
     content:
-      title: "Baecher research: QμΣst"
+      title: "Baecher research: QμΣst "
       #title: Baecher research
       text: '<span class="text-xl">*quantitative ecology in space and time*</span>'
       #text: "<img src='media/badge_kentucki.png' alt='description' class='inline h-20 w-20'>                  "
