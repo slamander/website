@@ -21,7 +21,7 @@ authors:
 - Fabricio Villalobos
 - Sarah R. Weiskopf
 - Jonathan Lenoir
-date: "2024-04-13T00:00:00Z"
+date: 2024-04-13
 doi: "https://doi.org/10.1111/gcb.17271"
 featured: true
 image:

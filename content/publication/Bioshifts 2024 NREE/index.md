@@ -25,7 +25,7 @@ authors:
 - Sarah R. Weiskopf
 - Jennifer Sunday
 
-date: "2024-04-18T00:00:00Z"
+date: 2024-04-18
 
 doi: "https://doi.org/10.1038/s43017-024-00527-z"
 

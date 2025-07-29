@@ -125,7 +125,7 @@ sections:
       title: "Teaching & Mentoring"
       text: |
 
-        > "Whether in a classroom or lab, teaching must be student-centered, holistic, and equitable. By  fostering a supportive, engaging environment and recognizing all of students’ needs  (educational, emotional, and biological), I empower students to demonstrate mastery or seek additional support as needed—an approach known to increase success and enhance well-being ([Kaput 2018](https://www.educationevolving.org/resources/evidence-for-student-centered-learning))."
+        Whether in a classroom or lab, teaching must be student-centered, holistic, and equitable. By  fostering a supportive, engaging environment and recognizing all of students’ needs  (educational, emotional, and biological), I empower students to demonstrate mastery or seek additional support as needed—an approach known to increase success and enhance well-being.
 
         ## Teaching Philosophy
 

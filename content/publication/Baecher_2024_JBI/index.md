@@ -2,7 +2,7 @@
 abstract: Motivation for abandoning the "environmental filtering" metaphor has been increasing in the ecological literature, yet it remains a widely used conceptual tool to guide research and education within ecological disciplines. I consider the possible origins of the filtering paradigm through linkages to hypotheses about the potentially oversized role of localized competition in the early development of niche concepts, as well as assumptions about the scale-dependence of factors influencing species' distributions at large scales. I believe that these perspectives may have discounted the relevance of non-competitive interactions of local communities, as well as biotic interactions in large-scale ecological processes more generally. I describe the types of ecological phenomena not readily captured by the filtering model, as well as the potential for biotic factors to interact with abiotic gradients (at scale) and influence broad ecological patterns. Lastly, I pose an alternative model of community assembly which emphasizes biotic-abiotic interactions and non-filtering mechanisms to serve as a spring-board for future renovations of the filtering metaphor. 
 authors:
 - admin
-date: "2024-07-04T00:00:00Z"
+date: 2024-07-04
 doi: "https://doi.org/10.1111/jbi.14973"
 featured: true
 image:

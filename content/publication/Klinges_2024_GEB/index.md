@@ -31,7 +31,7 @@ authors:
 - Alexey Rubtsov
 - Jhonatan Sallo-Bravo
 - Brett R. Scheffers
-date: "2024-06-26T00:00:00Z"
+date: 2024-06-26
 doi: "https://doi.org/10.1111/geb.13884"
 featured: true
 image:

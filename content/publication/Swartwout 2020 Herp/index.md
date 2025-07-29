@@ -6,7 +6,7 @@ authors:
 - admin
 - Chelsea Kross
 - John D. Willson
-date: "2020-03-04T00:00:00Z"
+date: 2020-03-04
 doi: "https://doi.org/10.1655/Herpetologica-D-18-00007"
 featured: false
 image:

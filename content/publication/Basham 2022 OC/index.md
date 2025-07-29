@@ -4,7 +4,7 @@ authors:
 - Edmund W. Basham
 - admin
 - Brett R. Scheffers
-date: "2022-02-03T00:00:00Z"
+date: 2022-02-03
 doi: "https://doi.org/10.1007/s00442-022-05108-9"
 featured: false
 image:

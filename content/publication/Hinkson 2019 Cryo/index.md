@@ -4,7 +4,7 @@ authors:
 - Kristin M. Hinkson
 - admin
 - Sinlan Poo
-date: "2019-08-01T00:00:00Z"
+date: 2019-08-01
 doi: "https://doi.org/10.1016/j.cryobiol.2019.05.007"
 featured: false
 image:

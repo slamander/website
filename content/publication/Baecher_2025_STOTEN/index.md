@@ -18,8 +18,6 @@ date: 2025-07-04
 
 doi: "https://doi.org/10.32942/X2QH09"
 
-featured: true
-
 image:
   caption: Florida WNV seroconversion surveillance program
   focal_point: ""

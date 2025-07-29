@@ -6,7 +6,7 @@ authors:
 - Steve A. Johnson
 - David H. Klinges
 - Brett R. Scheffers
-date: "2022-09-08T00:00:00Z"
+date: 2022-09-08
 doi: "https://doi.org/10.1111/brv.12896"
 featured: true
 image:

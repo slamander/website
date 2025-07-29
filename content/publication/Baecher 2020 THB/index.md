@@ -4,7 +4,7 @@ authors:
 - admin
 - Emily Jones
 - Stephen C. Richter
-date: "2019-12-01T00:00:00Z"
+date: 2019-12-01
 doi: "https://doi.org/10.33256/hb150.2930"
 featured: false
 image:
