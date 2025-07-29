@@ -46,25 +46,19 @@ education:
     date_end: 2024-08-01
     summary: |
       Dissertation focused on spatial ecology and conservation. Research included:
-      - macroecology and biogeography
-      - spatiotemporal modeling
-      - reptile & amphibian natural history
+    courses: []
   - area: M.Sc., Biology
     institution: Eastern Kentucky University
     date_start: 2015-08-01
     date_end: 2017-05-01
     summary: |
-      Master's research in biology with focus on:
-      - population ecology
-      - conservation biology
+    courses: []
   - area: B.Sc., Biology
     institution: University of Arkansas
     date_start: 2010-08-01
     date_end: 2014-05-01
     summary: |
-      Bachelor's degree in Biology with coursework in:
-      - ecology and evolution
-      - field biology methods
+    courses: []
 
 work:
   - position: Postdoctoral Research Fellow
