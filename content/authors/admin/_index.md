@@ -40,16 +40,21 @@ profiles:
   link: https://drive.google.com/uc?export=download&id=1zADCDlIiJlx1vXKQ6NdMLwTZm7E6sS29  
 
 education:
-  courses:
-  - course: Ph.D., Interdisciplinary Ecology
-    institution: University of Florida
-    year: 2024
-  - course: M.Sc., Biology  
-    institution: Eastern Kentucky University
-    year: 2017
-  - course: B.Sc., Biology
-    institution: University of Arkansas
-    year: 2014
+  - area: "Ph.D. in Interdisciplinary Ecology"
+    institution: "University of Florida"
+    date_start: "2019-08-01"
+    date_end: "2024-08-01"
+    summary: "Dissertation focused on spatial ecology and conservation"
+  - area: "M.Sc. in Biology"
+    institution: "Eastern Kentucky University"
+    date_start: "2015-08-01"
+    date_end: "2017-05-01"
+    summary: "Master's research in biology"
+  - area: "B.Sc. in Biology"
+    institution: "University of Arkansas"
+    date_start: "2010-08-01"
+    date_end: "2014-05-01"
+    summary: "Bachelor's degree in Biology"
 
 work:
   - position: Postdoctoral Research Fellow
