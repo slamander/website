@@ -46,6 +46,52 @@ sections:
       biography:
         style: ''
 
+  - block: markdow 
+    content:
+      title: "Education"
+      text: |
+        <div class="row">
+          <div class="col-md-12">
+            <div class="timeline">
+              <div class="timeline-item">
+                <div class="timeline-info">
+                  <span>2024</span>
+                </div>
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                  <h4>Ph.D., Interdisciplinary Ecology</h4>
+                  <p><strong>University of Florida</strong></p>
+                  <p>Dissertation focused on spatial ecology and conservation</p>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-info">
+                  <span>2017</span>
+                </div>
+                <div class="timeline-marker"></div>
+               <div class="timeline-content">
+                  <h4>M.Sc., Biology</h4>
+                  <p><strong>Eastern Kentucky University</strong></p>
+                  <p>Master's research in biology</p>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-info">
+                  <span>2014</span>
+                </div>
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                  <h4>B.Sc., Biology</h4>
+                  <p><strong>University of Arkansas</strong></p>
+                  <p>Bachelor's degree in Biology</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    design:
+      columns: 1
+
   - block: experience
     content:
       username: admin
