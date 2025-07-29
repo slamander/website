@@ -14,7 +14,7 @@ authors:
 - James T Thorson
 - Lindsay P Campbell
 
-date: "2025-07-04T00:00:00Z"
+date: 2025-07-04
 
 doi: "https://doi.org/10.32942/X2QH09"
 
@@ -29,11 +29,6 @@ projects:
 - geostatistical-modeling
 
 publication: "***EcoEvoRxiv***"
-
-publishDate: "2025-07-04T00:00:00Z"
-
-# summary: Published as a *Perspective* at the ***Journal of Biogeography*** in July, **2024**
-# summary: "(**2025**) *Journal of Biogeography* **51**(7), 1-8, DOI: [10.1111/geb.13884](https://doi.org/10.1111/jbi.14973)"
 
 tags:
 - Vector-born disease
@@ -50,6 +45,17 @@ url_preprint: "https://doi.org/10.32942/X2QH09"
 # url_slides:
 # url_source:
 # url_video:
+
+design:
+  spacing:
+    padding: ["20px", "0", "20px", "0"]
+  background:
+    color: ""
+    text_color_light: false
+  columns: "1"
+
+layout: "single"
+type: "publication"
 ---
 #
 #
