@@ -47,13 +47,6 @@ sections:
       biography:
         style: ''
 
-  - block: experience
-    content:
-      username: admin
-    design:
-      date_format: 'January 2006'
-      #is_education_first: true
-
   - block: markdown
     content:
       title: "Education"
@@ -63,6 +56,13 @@ sections:
         **M.Sc., Biology** | Eastern Kentucky University (2017)
 
         **B.Sc., Biology** | University of Arkansas (2014)
+
+  - block: experience
+    content:
+      username: admin
+    design:
+      date_format: 'January 2006'
+      #is_education_first: true
 
   - block: collection
     content:
