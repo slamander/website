@@ -46,58 +46,40 @@ sections:
       biography:
         style: ''
 
-  - block: markdown
-    content:
-      title: "Education"
-      text: |
-        <div class="row">
-          <div class="col-md-12">
-            <div class="timeline">
-              <div class="timeline-item">
-                <div class="timeline-info">
-                  <span>2024</span>
-                </div>
-                <div class="timeline-marker"></div>
-                <div class="timeline-content">
-                  <h4>Ph.D., Interdisciplinary Ecology</h4>
-                  <p><strong>University of Florida</strong></p>
-                  <p>Dissertation focused on spatial ecology and conservation</p>
-                </div>
-              </div>
-              <div class="timeline-item">
-                <div class="timeline-info">
-                  <span>2017</span>
-                </div>
-                <div class="timeline-marker"></div>
-                <div class="timeline-content">
-                  <h4>M.Sc., Biology</h4>
-                  <p><strong>Eastern Kentucky University</strong></p>
-                  <p>Master's research in biology</p>
-                </div>
-              </div>
-              <div class="timeline-item">
-                <div class="timeline-info">
-                  <span>2014</span>
-                </div>
-                <div class="timeline-marker"></div>
-                <div class="timeline-content">
-                  <h4>B.Sc., Biology</h4>
-                  <p><strong>University of Arkansas</strong></p>
-                  <p>Bachelor's degree in Biology</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-    design:
-      columns: 1
-
   - block: experience
     content:
       username: admin
+      # Only show work experience
     design:
       date_format: 'January 2006'
-      is_education_first: true
+      is_education_first: false
+      # Add this to only show work
+      show_education: false
+
+  - block: accomplishments
+    content:
+      username: admin
+      title: Education
+      subtitle: ''
+      # Accomplishments can be used for education
+      items:
+        - title: Ph.D., Interdisciplinary Ecology
+          organization: University of Florida
+          date_start: '2019-08-01'
+          date_end: '2024-08-01'
+          description: 'Dissertation focused on spatial ecology and conservation'
+        - title: M.Sc., Biology
+          organization: Eastern Kentucky University  
+          date_start: '2015-08-01'
+          date_end: '2017-05-01'
+          description: 'Master\'s research in biology'
+        - title: B.Sc., Biology
+          organization: University of Arkansas
+          date_start: '2010-08-01'
+          date_end: '2014-05-01'
+          description: 'Bachelor\'s degree in Biology'
+    design:
+      columns: 2
 
   - block: markdown
     content:
