@@ -76,7 +76,7 @@ sections:
 
   - block: collection
     content:
-      title: "Recent Publications (since 2024)"
+      title: "Publications (since 2024)"
       count: 5
       archive:
         enable: true
