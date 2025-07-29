@@ -485,7 +485,6 @@
       "z-50"
     ],
     "ids": [
-      "a-meta-package-that-installs-and-load-the-core-packages-listed-below-that-you-need-for-modeling-and-machine-learning",
       "about-me",
       "amphibio-data",
       "anatomy-of-tidymodels",
@@ -498,7 +497,6 @@
       "autoregressive-models-with-up-to-5-hourly-lags",
       "boost_tree",
       "broom",
-      "broom-summarizes-key-information-about-models-in-tidy-tibbles",
       "calculate-intercept-and-slope-using-gradient-descent-machine-learning",
       "calculate-intercept-and-slope-using-gradient-descent-machine-learning-1",
       "calculate-intercept-and-slope-using-sum-of-squares",
@@ -507,7 +505,6 @@
       "defines-a-model-that-uses-the-k-most-similar-data-points-from-the-training-set-to-predict-new-samples",
       "description",
       "dials",
-      "dials-contains-tools-to-create-and-manage-values-of-tuning-parameters-and-is-designed-to-integrate-well-with-the-parsnip-package",
       "empirical-dynamic-models-for-forecasting",
       "evaluating-knn-model",
       "figure-buffered-polygon",
@@ -554,7 +551,6 @@
       "ordinary-least-square-regression",
       "package-tutorials",
       "page-bg",
-      "parsnip-a-tidy-unified-interface-to-models-that-can-be-used-to-try-a-range-of-models-without-getting-bogged-down-in-the-syntactical-minutiae-of-the-underlying-packages",
       "partition-data-into-training-and-predicting-subsets",
       "perform-forecast-of-prediction-data-using-a-no-lag-arima-model",
       "plot-data-and-converging-fit",
@@ -565,8 +561,6 @@
       "profile",
       "profile-page",
       "publication-metrics",
-      "recipes-a-tidy-interface-to-data-pre-processing-tools-for-feature-engineering",
-      "rsamples-provides-infrastructure-for-efficient-data-splitting-and-resampling",
       "run-a-standard-arima-model-with-no-lag-dependencies",
       "run-simplex-to-create-edm-model-for-forecasting",
       "search",
@@ -592,11 +586,9 @@
       "the-model-is-a-system-of-three-ordinary-differential-equations-now-known-as-the-lorenz-equations",
       "there-are-different-ways-to-fit-this-model-see-the-engine-specific-pages-for-more-details",
       "this-model-is-mathematically-identical-to-a-intercept-only-linear-model",
-      "tidymodels-provides-a-clean-organized-and--most-importantly--consistent-programming-syntax-for-data-pre-processing-model-specification-model-fitting-model-evaluation-and-prediction",
       "to-determine-the-goodness-of-fit-for-a-given-set-of-parameters-we-will-empliment-a-squared-error-cost-function-a-way-to-calculate-the-degree-of-error-for-a-guess-for-slope-and-intercept",
       "top",
       "tune",
-      "tune-helps-you-optimize-the-hyperparameters-of-your-model-and-pre-processing-steps",
       "using-gradient-descent-with-real-data",
       "using-the-same-simulated-data-as-before-we-will-estimate-parameters-using-a-machine-learning-algorithm",
       "visualize-autocorrelation-structures-using-the-parial-autocorrelation-function-estimation-feature-in-the-forecast-package-function-acf",
@@ -605,10 +597,8 @@
       "we-will-use-the-simplex-function-to-determine-how-many-dimensions-time-lags-are-needed-to-effectively-develope-a-data-driven-mechanistic-formulation-of-the-time-series",
       "where-the-intercept-is-equal-to-the-mean-of-the-response-variable",
       "workflows",
-      "workflows-workflows-bundle-your-pre-processing-modeling-and-post-processing-together",
       "yardstick",
-      "yardstick-1",
-      "yardstick-measures-the-effectiveness-of-models-using-performance-metrics"
+      "yardstick-1"
     ]
   }
 }

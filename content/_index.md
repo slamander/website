@@ -78,7 +78,7 @@ sections:
   - block: collection
     content:
       title: "Publications (since 2024)"
-      count: 5
+      count: 6
       archive:
         enable: true
         text: "See all publications"

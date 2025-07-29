@@ -2,35 +2,71 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://localhost:1313/author/amy-m-bauer/</loc>
+    <lastmod>2025-07-04T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/authors/</loc>
-    <lastmod>2025-10-08T00:00:00+00:00</lastmod>
+    <lastmod>2025-07-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/author/brett-r.-scheffers/</loc>
-    <lastmod>2025-10-08T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tag/conservation/</loc>
-    <lastmod>2025-10-08T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/publication/evans_2025_fee/</loc>
-    <lastmod>2025-10-08T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/tag/distributions/</loc>
+    <lastmod>2025-07-04T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/author/j-alex-baecher/</loc>
-    <lastmod>2025-10-08T00:00:00+00:00</lastmod>
+    <lastmod>2025-07-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/author/luke-j.-evans/</loc>
-    <lastmod>2025-10-08T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/author/james-t-thorson/</loc>
+    <lastmod>2025-07-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/author/lindsay-p-campbell/</loc>
+    <lastmod>2025-07-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tag/modeling/</loc>
+    <lastmod>2025-07-04T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/publication/</loc>
-    <lastmod>2025-10-08T00:00:00+00:00</lastmod>
+    <lastmod>2025-07-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/author/robert-guralnick/</loc>
+    <lastmod>2025-07-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tag/spatial-scale/</loc>
+    <lastmod>2025-07-04T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/</loc>
-    <lastmod>2025-10-08T00:00:00+00:00</lastmod>
+    <lastmod>2025-07-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/publication/baecher_2025_stoten/</loc>
+    <lastmod>2025-07-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/author/v-a-askshay/</loc>
+    <lastmod>2025-07-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tag/vector-born-disease/</loc>
+    <lastmod>2025-07-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/author/yasmin-n-tavares/</loc>
+    <lastmod>2025-07-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/author/yesenia-sanchez/</loc>
+    <lastmod>2025-07-04T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/</loc>
     <lastmod>2025-01-25T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/post/</loc>
     <lastmod>2025-01-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/author/brett-r.-scheffers/</loc>
+    <lastmod>2024-12-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tag/conservation/</loc>
+    <lastmod>2024-12-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/publication/evans_2025_fee/</loc>
+    <lastmod>2024-12-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/author/luke-j.-evans/</loc>
+    <lastmod>2024-12-08T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/publication-type/2/</loc>
     <lastmod>2024-07-04T00:00:00+00:00</lastmod>
@@ -44,16 +80,10 @@
     <loc>http://localhost:1313/tag/competition/</loc>
     <lastmod>2024-07-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tag/distributions/</loc>
-    <lastmod>2024-07-04T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/tag/niche-theory/</loc>
     <lastmod>2024-07-04T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/publication_types/</loc>
-    <lastmod>2024-07-04T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tag/spatial-scale/</loc>
     <lastmod>2024-07-04T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/publication/baecher_2024_jbi/</loc>
@@ -145,9 +175,6 @@
   </url><url>
     <loc>http://localhost:1313/author/tommaso-jucker/</loc>
     <lastmod>2024-06-26T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/author/brett-scheffers/</loc>
-    <lastmod>2024-04-18T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/author/brit-van-amerom/</loc>
     <lastmod>2024-04-18T00:00:00+00:00</lastmod>
@@ -350,9 +377,6 @@
     <loc>http://localhost:1313/post/gradient-descent/</loc>
     <lastmod>2021-09-22T00:40:04-07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tag/modeling/</loc>
-    <lastmod>2021-09-22T00:40:04-07:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/tag/regression/</loc>
     <lastmod>2021-09-22T00:40:04-07:00</lastmod>
   </url><url>
@@ -480,9 +504,6 @@
     <lastmod>2019-08-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tag/hcg/</loc>
-    <lastmod>2019-08-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/author/j.-alex-baecher/</loc>
     <lastmod>2019-08-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/author/kristin-m.-hinkson/</loc>
