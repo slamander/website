@@ -5,50 +5,132 @@
     <link>http://localhost:1313/author/j-alex-baecher/</link>
       <atom:link href="http://localhost:1313/author/j-alex-baecher/index.xml" rel="self" type="application/rss+xml" />
     <description>J Alex Baecher</description>
-    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><copyright>© 2025 Alex Baecher</copyright><lastBuildDate>Wed, 08 Oct 2025 00:00:00 +0000</lastBuildDate>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><copyright>© 2025 Alex Baecher</copyright><lastBuildDate>Fri, 04 Jul 2025 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>http://localhost:1313/author/j-alex-baecher/avatar_hu11040553339854819806.jpg</url>
+      <url>http://localhost:1313/author/j-alex-baecher/avatar_hu9293261230629041031.jpg</url>
       <title>J Alex Baecher</title>
       <link>http://localhost:1313/author/j-alex-baecher/</link>
     </image>
     
     <item>
-      <title>Invasion risk posed by the pet trade</title>
-      <link>http://localhost:1313/publication/evans_2025_fee/</link>
-      <pubDate>Wed, 08 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/publication/evans_2025_fee/</guid>
-      <description></description>
+      <title>J Alex Baecher</title>
+      <link>http://localhost:1313/author/j-alex-baecher/</link>
+      <pubDate>Fri, 04 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/author/j-alex-baecher/</guid>
+      <description>&lt;h2 id=&#34;about-me&#34;&gt;About Me&lt;/h2&gt;
+&lt;div class=&#34;grid grid-cols-1 md:grid-cols-2 gap-6&#34;&gt;
+  &lt;div&gt;
+    &lt;h3&gt;The serious bits: &lt;/h3&gt;
+    &lt;p&gt;I&#39;m a spatial ecologist with interests in understanding the processes that determine the distribution of biodiversity. My research interests include  &lt;/p&gt;
+    &lt;p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;macroecology&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;biogeography&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;population ecology&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;conservation&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;spatiotemporal modeling&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;herp natural history&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;transparent science&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div&gt;
+    &lt;h3&gt;The good bits:&lt;/h3&gt;
+    &lt;p&gt;I&#39;m an Arkansas native (Ozark Mountains) based out of Gainesville Florida, a stereotypical girl dad (soon to be 2x), proud union member, and lover of:&lt;/p&gt;
+    &lt;p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;swimming&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;hiking&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;biking&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;canoeing&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;herping&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;home DIY&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;wood working&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</description>
     </item>
     
     <item>
-      <title>J Alex Baecher</title>
-      <link>http://localhost:1313/author/j-alex-baecher/</link>
-      <pubDate>Wed, 08 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/author/j-alex-baecher/</guid>
-      <description>&lt;h2 id=&#34;about-me&#34;&gt;About Me&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;The serious bits&lt;/strong&gt;:
-I&amp;rsquo;m a spatial ecologist with interests in understanding the processes that determine the distribution of biodiversity. My research interests include:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;macroecology&lt;/li&gt;
-&lt;li&gt;biogeography&lt;/li&gt;
-&lt;li&gt;population ecology&lt;/li&gt;
-&lt;li&gt;conservation&lt;/li&gt;
-&lt;li&gt;spatiotemporal modeling&lt;/li&gt;
-&lt;li&gt;reptile &amp;amp; amphibian natural history&lt;/li&gt;
-&lt;li&gt;transparent &amp;amp; reproducible science&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;The good bits&lt;/strong&gt;:
-I&amp;rsquo;m a father of two and lover and lover of:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;canoeing&lt;/li&gt;
-&lt;li&gt;swimming&lt;/li&gt;
-&lt;li&gt;biking&lt;/li&gt;
-&lt;li&gt;herping&lt;/li&gt;
-&lt;li&gt;hiking&lt;/li&gt;
-&lt;li&gt;home DIY projects&lt;/li&gt;
-&lt;li&gt;wood working&lt;/li&gt;
-&lt;/ul&gt;
+      <title>Toward Ecological Forecasting of West Nile Virus in Florida: Insights from Two Decades of Surveillance</title>
+      <link>http://localhost:1313/publication/baecher_2025_stoten/</link>
+      <pubDate>Fri, 04 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/publication/baecher_2025_stoten/</guid>
+      <description>&lt;h1 id=&#34;heading&#34;&gt;&lt;/h1&gt;
+&lt;h1 id=&#34;heading-1&#34;&gt;&lt;/h1&gt;
+&lt;h2 id=&#34;publication-metrics&#34;&gt;Publication metrics:&lt;/h2&gt;
+&lt;html&gt;
+  &lt;style&gt;
+    section {
+        background: black;
+        color: white;
+        border-radius: 1em;
+        padding: 1em;
+        left: 50% }
+    #inner {
+        display: inline-block;
+        display: flex;
+        align-items: center;
+        justify-content: center }
+  &lt;/style&gt;
+  &lt;section&gt;
+    &lt;div id=&#34;inner&#34;&gt;
+      &lt;script type=&#39;text/javascript&#39; src=&#39;https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js&#39;&gt;&lt;/script&gt;
+        &lt;span style=&#34;float:left&#34;; 
+          class=&#34;__dimensions_badge_embed__&#34; 
+          data-doi=&#34;10.32942/X2QH09&#34; 
+          data-hide-zero-citations=&#34;true&#34; 
+          data-legend=&#34;always&#34;&gt;
+        &lt;/span&gt;
+      &lt;script async src=&#34;https://badge.dimensions.ai/badge.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+        &lt;div  style=&#34;float:right&#34;; 
+          data-link-target=&#34;_blank&#34; 
+          data-badge-details=&#34;right&#34; 
+          data-badge-type=&#34;medium-donut&#34;
+          data-doi=&#34;10.32942/X2QH09&#34;   
+          data-condensed=&#34;true&#34; 
+          data-hide-no-mentions=&#34;true&#34; 
+          class=&#34;altmetric-embed&#34;&gt;
+        &lt;/div&gt;
+  &lt;/section&gt;
 </description>
+    </item>
+    
+    <item>
+      <title>Invasion risk posed by the pet trade</title>
+      <link>http://localhost:1313/publication/evans_2025_fee/</link>
+      <pubDate>Sun, 08 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/publication/evans_2025_fee/</guid>
+      <description></description>
     </item>
     
     <item>
@@ -140,7 +222,10 @@ I&amp;rsquo;m a father of two and lover and lover of:&lt;/p&gt;
       <link>http://localhost:1313/publication/bioshifts-2024-nree/</link>
       <pubDate>Thu, 18 Apr 2024 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/publication/bioshifts-2024-nree/</guid>
-      <description>&lt;html&gt;
+      <description>&lt;h1 id=&#34;heading&#34;&gt;&lt;/h1&gt;
+&lt;h1 id=&#34;heading-1&#34;&gt;&lt;/h1&gt;
+&lt;h2 id=&#34;publication-metrics&#34;&gt;Publication metrics:&lt;/h2&gt;
+&lt;html&gt;
   &lt;style&gt;
     section {
         background: white;
@@ -582,6 +667,48 @@ This 1-day workshop will distill the basic principles of connectivity modeling a
     </item>
     
     <item>
+      <title>Cryopreservation and hormonal induction of spermic urine in smooth-sided toads</title>
+      <link>http://localhost:1313/publication/hinkson-2019-cryo/</link>
+      <pubDate>Thu, 01 Aug 2019 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/publication/hinkson-2019-cryo/</guid>
+      <description>&lt;html&gt;
+  &lt;style&gt;
+    section {
+        background: white;
+        color: black;
+        border-radius: 1em;
+        padding: 1em;
+        left: 50% }
+    #inner {
+        display: inline-block;
+        display: flex;
+        align-items: center;
+        justify-content: center }
+  &lt;/style&gt;
+  &lt;section&gt;
+    &lt;div id=&#34;inner&#34;&gt;
+      &lt;script type=&#39;text/javascript&#39; src=&#39;https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js&#39;&gt;&lt;/script&gt;
+        &lt;span style=&#34;float:left&#34;; 
+          class=&#34;__dimensions_badge_embed__&#34; 
+          data-doi=&#34;10.1016/j.cryobiol.2019.05.007&#34; 
+          data-hide-zero-citations=&#34;true&#34; 
+          data-legend=&#34;always&#34;&gt;
+        &lt;/span&gt;
+      &lt;script async src=&#34;https://badge.dimensions.ai/badge.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+        &lt;div  style=&#34;float:right&#34;; 
+          data-link-target=&#34;_blank&#34; 
+          data-badge-details=&#34;right&#34; 
+          data-badge-type=&#34;medium-donut&#34;
+          data-doi=&#34;10.1016/j.cryobiol.2019.05.007&#34;   
+          data-condensed=&#34;true&#34; 
+          data-hide-no-mentions=&#34;true&#34; 
+          class=&#34;altmetric-embed&#34;&gt;
+        &lt;/div&gt;
+&lt;/section&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Environmental gradients in old‐growth Appalachian forest predict fine‐scale distribution, co‐occurrence, and density of woodland salamanders</title>
       <link>http://localhost:1313/publication/baecher-2018-ee/</link>
       <pubDate>Tue, 04 Dec 2018 00:00:00 +0000</pubDate>
@@ -663,6 +790,14 @@ This 1-day workshop will distill the basic principles of connectivity modeling a
         &lt;/div&gt;
 &lt;/section&gt;
 </description>
+    </item>
+    
+    <item>
+      <title>Lithobates areolatus (crawfish frog) predation</title>
+      <link>http://localhost:1313/publication/baecher-2014-hr/</link>
+      <pubDate>Wed, 08 Oct 2014 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/publication/baecher-2014-hr/</guid>
+      <description></description>
     </item>
     
   </channel>

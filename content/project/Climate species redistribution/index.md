@@ -1,4 +1,7 @@
- ---
+
+---
+title: Biodiversity redistribution
+
 date: "2019-09-10T00:00:00Z"
 external_link: []
 image:
@@ -7,11 +10,11 @@ image:
 links:
 - icon: file-alt
   icon_pack: fas
-  name: Nature Reviews paper
+  name: Lawlor et al. 2014. Nature Reviews
   url: https://doi.org/10.1038/s43017-024-00527-z 
 - icon: file-alt
   icon_pack: fas
-  name: GCB paper
+  name: Comte et al. 2024. Global Change Biology
   url: https://doi.org/10.1111/gcb.17271 
 - icon: wrench
   icon_pack: fa
@@ -22,25 +25,14 @@ links:
   name: Invasive spread talk
   url: https://www.alexbaecher.com/talk/iale_talk/
 slides: Climate-induced-species-redistribution
-summary: Modeling the spatialtemporal dynamics of species' distributions.
+summary: Understanding the ecology of climate-induced range shifts
 tags:
 - modeling
 - climate Change
 - invasions
 - connectivity Modeling
-title: Climate-induced species redistribution
 url_code: ""
 url_pdf: ""
 url_slides: ""
 url_video: ""
 ---
-
-**Publications**  
-***Published***  
-- Lawlor, JA et al. **2024**. Mechanisms, detection and impacts of species redistribution under climate change. *Nature Reviews Earth & Environment* https://doi.org/10.1038/s43017-024-00527-z 
-- Comte, L, et al. **2024**. Bringing traits back in the equation: A roadmap to understand species redistribution. *Global Change Biology* https://doi.org/10.1111/gcb.17271 
-
-***Forthcoming***  
-- Klinges, DK, JA Baecher, et al. **In press**. Proximal microclimate: moving beyond spatiotemporal scale to improve predicted biological responses. *Global Ecology and Biogeography* 
-- Evans, L, JA Baecher, BR Scheffers. **In revision (major)**. Invasion risk posed by the pet trade. *Frontiers in Ecology and the Environment*
-

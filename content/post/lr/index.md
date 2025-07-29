@@ -1,7 +1,7 @@
 ---
 title: "Linear regression with gradient descent"
-subtitle: "A machine learning approach to standard linear regression"
-author: J. Alex Baecher
+summary: "A machine learning approach to standard linear regression"
+author: admin
 date: 2021-09-22T00:40:04-07:00
 output: md_document
 slug: gradient descent

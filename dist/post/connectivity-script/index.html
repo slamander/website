@@ -1,6 +1,6 @@
 <!doctype html>
 <!-- This site was created with Hugo Blox. https://hugoblox.com -->
-<!-- Last Published: July 28, 2025 --><html lang="en-us" dir="ltr"
+<!-- Last Published: July 29, 2025 --><html lang="en-us" dir="ltr"
       data-wc-theme-default="system">
   
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
@@ -41,8 +41,7 @@
   
     
   
-  <meta name="description" content="Focusing on randomized paths between multiple locations (or populations, habitats, etc) Note This is simply a tutorial. I’m not (for now) providing a review of the literature surrounding ecological connectivity, or commenting the different meanings of connectivity). This tutorial is strictly for demonstrating how to perform such an analysis, because–to my knowledge–such a tutorial doesn’t exist. That being said, please let me know if you find one!
-" />
+  <meta name="description" content="A tutorial on randomized shortest-path (or random walk, a la circuit theory)" />
 
   
   <link rel="alternate" hreflang="en-us" href="http://localhost:1313/post/connectivity-script/" />
@@ -188,14 +187,8 @@
   
   <meta property="og:site_name" content="Baecher Research" />
   <meta property="og:url" content="http://localhost:1313/post/connectivity-script/" />
-  <meta property="og:title" content="Mapping Ecological Flow in R (pt 1) | Baecher Research" />
-  <meta property="og:description" content="Focusing on randomized paths between multiple locations (or populations, habitats, etc)
-Note This is simply a tutorial. I’m not (for now) providing a review
-of the literature surrounding ecological connectivity, or commenting the
-different meanings of connectivity). This tutorial is strictly for
-demonstrating how to perform such an analysis, because–to my
-knowledge–such a tutorial doesn’t exist. That being said, please let me
-know if you find one!" /><meta property="og:image" content="http://localhost:1313/post/connectivity-script/featured.png" />
+  <meta property="og:title" content="Mapping Ecological Flow in R | Baecher Research" />
+  <meta property="og:description" content="A tutorial on randomized shortest-path (or random walk, a la circuit theory)" /><meta property="og:image" content="http://localhost:1313/post/connectivity-script/featured.png" />
     <meta property="twitter:image" content="http://localhost:1313/post/connectivity-script/featured.png" /><meta property="og:locale" content="en-us" />
   
     
@@ -214,7 +207,7 @@ know if you find one!" /><meta property="og:image" content="http://localhost:131
   
 
 
-  <title>Mapping Ecological Flow in R (pt 1) | Baecher Research</title>
+  <title>Mapping Ecological Flow in R | Baecher Research</title>
 
   
   
@@ -248,6 +241,7 @@ know if you find one!" /><meta property="og:image" content="http://localhost:131
   
   
   
+  
     
       
       
@@ -269,6 +263,13 @@ know if you find one!" /><meta property="og:image" content="http://localhost:131
     
   
   
+  
+  
+  
+  
+  
+  
+  
     
       
       
@@ -434,6 +435,7 @@ know if you find one!" /><meta property="og:image" content="http://localhost:131
         
       
     
+  
   
   
   
@@ -1121,6 +1123,14 @@ know if you find one!" /><meta property="og:image" content="http://localhost:131
         <ul class="hb-sidebar-list"><li class="flex flex-col "><a
     class="hb-sidebar-custom-link
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/publication/baecher_2025_stoten/"
+    
+  >Toward Ecological Forecasting of West Nile Virus in Florida: Insights from Two Decades of Surveillance
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
     href="/publication/evans_2025_fee/"
     
   >Invasion risk posed by the pet trade
@@ -1263,7 +1273,7 @@ know if you find one!" /><meta property="og:image" content="http://localhost:131
       sidebar-active-item bg-primary-100 font-semibold text-primary-800 dark:bg-primary-300 dark:text-primary-900"
     href="/post/connectivity-script/"
     
-  >Mapping Ecological Flow in R (pt 1)
+  >Mapping Ecological Flow in R
     </a>
   
     <ul class="hb-sidebar-mobile-toc"><li>
@@ -1406,15 +1416,7 @@ know if you find one!" /><meta property="og:image" content="http://localhost:131
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
     href="/project/climate-species-redistribution/"
     
-  >Climate-induced species redistribution
-    </a>
-              
-            </li><li class="flex flex-col "><a
-    class="hb-sidebar-custom-link
-      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
-    href="/project/geostatistical-modeling/"
-    
-  >Geostatistical Modeling
+  >Biodiversity redistribution
     </a>
               
             </li><li class="flex flex-col "><a
@@ -1431,6 +1433,14 @@ know if you find one!" /><meta property="og:image" content="http://localhost:131
     href="/project/herpetological-ecology/"
     
   >Reptile and Amphibian Ecology
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/project/geostatistical-modeling/"
+    
+  >Spatial modeling
     </a>
               
             </li></ul>
@@ -1493,7 +1503,7 @@ know if you find one!" /><meta property="og:image" content="http://localhost:131
 
       
 
-      <h1 class="mt-2 text-4xl font-bold tracking-tight text-slate-900 dark:text-slate-100">Mapping Ecological Flow in R (pt 1)</h1>
+      <h1 class="mt-2 text-4xl font-bold tracking-tight text-slate-900 dark:text-slate-100">Mapping Ecological Flow in R</h1>
 
       <div class="mt-4 mb-16">
       <div class="text-gray-500 dark:text-gray-300 text-sm flex items-center flex-wrap gap-y-2"><span class="mr-1">Aug 12, 2020</span>
@@ -2022,7 +2032,7 @@ it, as well as provide some more tutorials.</p>
   <a
     target="_blank" rel="noopener"
     class="m-1 rounded-md bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral-300 dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-    href="https://twitter.com/intent/tweet?url=http%3A%2F%2Flocalhost%3A1313%2Fpost%2Fconnectivity-script%2F&amp;text=Mapping&#43;Ecological&#43;Flow&#43;in&#43;R&#43;%28pt&#43;1%29"
+    href="https://twitter.com/intent/tweet?url=http%3A%2F%2Flocalhost%3A1313%2Fpost%2Fconnectivity-script%2F&amp;text=Mapping&#43;Ecological&#43;Flow&#43;in&#43;R"
     title="X"
     aria-label="X"
     id="share-link-x"
@@ -2040,7 +2050,7 @@ it, as well as provide some more tutorials.</p>
   <a
     target="_blank" rel="noopener"
     class="m-1 rounded-md bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral-300 dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-    href="https://www.facebook.com/sharer.php?u=http%3A%2F%2Flocalhost%3A1313%2Fpost%2Fconnectivity-script%2F&amp;t=Mapping&#43;Ecological&#43;Flow&#43;in&#43;R&#43;%28pt&#43;1%29"
+    href="https://www.facebook.com/sharer.php?u=http%3A%2F%2Flocalhost%3A1313%2Fpost%2Fconnectivity-script%2F&amp;t=Mapping&#43;Ecological&#43;Flow&#43;in&#43;R"
     title="Facebook"
     aria-label="Facebook"
     id="share-link-facebook"
@@ -2060,7 +2070,7 @@ it, as well as provide some more tutorials.</p>
   <a
     target="_blank" rel="noopener"
     class="m-1 rounded-md bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral-300 dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-    href="mailto:?subject=Mapping%20Ecological%20Flow%20in%20R%20%28pt%201%29&amp;body=http%3A%2F%2Flocalhost%3A1313%2Fpost%2Fconnectivity-script%2F"
+    href="mailto:?subject=Mapping%20Ecological%20Flow%20in%20R&amp;body=http%3A%2F%2Flocalhost%3A1313%2Fpost%2Fconnectivity-script%2F"
     title="Email"
     aria-label="Email"
     id="share-link-email"
@@ -2078,7 +2088,7 @@ it, as well as provide some more tutorials.</p>
   <a
     target="_blank" rel="noopener"
     class="m-1 rounded-md bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral-300 dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-    href="https://www.linkedin.com/shareArticle?url=http%3A%2F%2Flocalhost%3A1313%2Fpost%2Fconnectivity-script%2F&amp;title=Mapping&#43;Ecological&#43;Flow&#43;in&#43;R&#43;%28pt&#43;1%29"
+    href="https://www.linkedin.com/shareArticle?url=http%3A%2F%2Flocalhost%3A1313%2Fpost%2Fconnectivity-script%2F&amp;title=Mapping&#43;Ecological&#43;Flow&#43;in&#43;R"
     title="LinkedIn"
     aria-label="LinkedIn"
     id="share-link-linkedin"
@@ -2096,7 +2106,7 @@ it, as well as provide some more tutorials.</p>
   <a
     target="_blank" rel="noopener"
     class="m-1 rounded-md bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral-300 dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-    href="whatsapp://send?text=Mapping&#43;Ecological&#43;Flow&#43;in&#43;R&#43;%28pt&#43;1%29%20http%3A%2F%2Flocalhost%3A1313%2Fpost%2Fconnectivity-script%2F"
+    href="whatsapp://send?text=Mapping&#43;Ecological&#43;Flow&#43;in&#43;R%20http%3A%2F%2Flocalhost%3A1313%2Fpost%2Fconnectivity-script%2F"
     title="WhatsApp"
     aria-label="WhatsApp"
     id="share-link-whatsapp"
@@ -2137,7 +2147,7 @@ it, as well as provide some more tutorials.</p>
     width="96"
     height="96"
     alt="J Alex Baecher"
-  src="/author/j-alex-baecher/avatar_hu9704284195948671912.jpg"
+  src="/author/j-alex-baecher/avatar_hu6680103685818670678.jpg"
   loading="lazy"
   />
   

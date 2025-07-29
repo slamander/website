@@ -637,31 +637,11 @@ abline(coef=theta, col=&amp;quot;blue&amp;quot;, lwd = 2)
     </item>
     
     <item>
-      <title>Climate-induced species redistribution</title>
+      <title>Biodiversity redistribution</title>
       <link>http://localhost:1313/project/climate-species-redistribution/</link>
       <pubDate>Tue, 10 Sep 2019 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/project/climate-species-redistribution/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;Publications&lt;/strong&gt;&lt;br&gt;
-&lt;em&gt;&lt;strong&gt;Published&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Lawlor, JA et al. &lt;strong&gt;2024&lt;/strong&gt;. Mechanisms, detection and impacts of species redistribution under climate change. &lt;em&gt;Nature Reviews Earth &amp;amp; Environment&lt;/em&gt; &lt;a href=&#34;https://doi.org/10.1038/s43017-024-00527-z&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://doi.org/10.1038/s43017-024-00527-z&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Comte, L, et al. &lt;strong&gt;2024&lt;/strong&gt;. Bringing traits back in the equation: A roadmap to understand species redistribution. &lt;em&gt;Global Change Biology&lt;/em&gt; &lt;a href=&#34;https://doi.org/10.1111/gcb.17271&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://doi.org/10.1111/gcb.17271&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;em&gt;&lt;strong&gt;Forthcoming&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Klinges, DK, JA Baecher, et al. &lt;strong&gt;In press&lt;/strong&gt;. Proximal microclimate: moving beyond spatiotemporal scale to improve predicted biological responses. &lt;em&gt;Global Ecology and Biogeography&lt;/em&gt;&lt;/li&gt;
-&lt;li&gt;Evans, L, JA Baecher, BR Scheffers. &lt;strong&gt;In revision (major)&lt;/strong&gt;. Invasion risk posed by the pet trade. &lt;em&gt;Frontiers in Ecology and the Environment&lt;/em&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Geostatistical Modeling</title>
-      <link>http://localhost:1313/project/geostatistical-modeling/</link>
-      <pubDate>Tue, 10 Sep 2019 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/project/geostatistical-modeling/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;Geostatistical Modeling&lt;/strong&gt;&lt;/p&gt;
-</description>
+      <description></description>
     </item>
     
     <item>
@@ -675,6 +655,16 @@ abline(coef=theta, col=&amp;quot;blue&amp;quot;, lwd = 2)
 &lt;li&gt;Baecher, JA, et al. .&lt;strong&gt;In review&lt;/strong&gt;. Isolating what limits the spread of an invasive predator. &lt;em&gt;Journal of Applied Ecology&lt;/em&gt; &lt;a href=&#34;https://advance.sagepub.com/doi/full/10.22541/au.171248322.23946990/v1&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://advance.sagepub.com/doi/full/10.22541/au.171248322.23946990/v1&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Baecher, JA, et al. .&lt;em&gt;In prep&lt;/em&gt;. Informing species range shifts with global connectivity. &lt;em&gt;TBA&lt;/em&gt;&lt;/li&gt;
 &lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Spatial modeling</title>
+      <link>http://localhost:1313/project/geostatistical-modeling/</link>
+      <pubDate>Tue, 10 Sep 2019 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/project/geostatistical-modeling/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Spatiotemporal modeling&lt;/strong&gt;
+Basic generalized linear mixed effects models can account for spatial (and spatiotemporal) autocorrelation using latent Gaussian random fields (GRFs). However, GRFs are computationally intense due to costly covariance functions. Stochastic Partial Differential Equations (SPDE) can be used to minimize the scale of this problem by approximating GRFs with Gaussian Markcov random fields (GMRFs) with a Matern covariance function (Lindgrin et al., 2011; Krainski et al. 2018). This solution has been adopted by the Integrated Nested Laplace Approximation (INLA) software, and has later been implimented in Template Model Builder (TMB) software (Thorson et al., 2015).&lt;/p&gt;
 </description>
     </item>
     

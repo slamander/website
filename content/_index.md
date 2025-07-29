@@ -7,9 +7,10 @@ draft: false
 sections:
   - block: hero
     content:
-      title: Baecher research
-      text: spatial ecology and conservation
-      test-align: right
+      title: "Baecher research: QμΣst"
+      #title: Baecher research
+      text: '<span class="text-xl">*quantitative ecology in space and time*</span>'
+      #text: "<img src='media/badge_kentucki.png' alt='description' class='inline h-20 w-20'>                  "
       primary_action:
         text: Download CV
         url: https://drive.google.com/uc?export=download&id=1zADCDlIiJlx1vXKQ6NdMLwTZm7E6sS29
@@ -18,9 +19,9 @@ sections:
         text: See publications
         url: https://www.alexbaecher.com/publication/
       announcement:
-        text: "🚨 **New preprint** (July 2024):"
+        text: "🚨 **New preprint**:"
         link:
-          text: "Baecher et al. Science of the Total Environment"
+          text: "Baecher et al. (2025) Science of the Total Environment"
           url: https://ecoevorxiv.org/repository/view/9228/
       advanced:
         css_style: "text-align: left;"
@@ -49,12 +50,9 @@ sections:
   - block: experience
     content:
       username: admin
-      # Only show work experience
     design:
       date_format: 'January 2006'
-      is_education_first: false
-      # Add this to only show work
-      show_education: false
+      #is_education_first: true
 
   - block: markdown
     content:
@@ -68,7 +66,7 @@ sections:
 
   - block: collection
     content:
-      title: "Research Projects" 
+      title: "Research" 
       count: 5
       filters:
         folders:

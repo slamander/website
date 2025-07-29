@@ -2,7 +2,7 @@
 abstract: Global amphibian declines have fueled an increased interest in amphibian assisted reproductive technologies. Within the genus Rhaebo, half of the species are experiencing decreasing population trends; however, insufficient information is available on many of these species’ reproductive biology. Using the smooth-sided toad, Rhaebo guttatus, we present effective methods for collecting and cryopreserving an example of Rhaebo sperm. Specifically, our findings show that administering 10 IU/g body weight of hCG (human chorionic gonadotropin) yields the most motile and concentrated sperm and that cryopreserving spermic urine in a solution of 5% DMFA (N,N-Dimethylformamide) and 10% trehalose returns sperm with a 33 ± 3% average post-thaw motility. These findings may represent an important step forward in developing techniques that can be safely applied to other, more vulnerable species within the Rhaebo genus.
 authors:
 - Kristin M. Hinkson
-- J. Alex Baecher
+- admin
 - Sinlan Poo
 date: "2019-08-01T00:00:00Z"
 doi: "https://doi.org/10.1016/j.cryobiol.2019.05.007"

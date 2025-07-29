@@ -18,27 +18,37 @@ authors:
 - Malin L. Pinsky
 - Jonathan Rolland
 - Madeleine Rubenstein
-- Brett Scheffers
+- Brett R. Scheffers
 - Laura M. Thompson
 - Brit van Amerom
 - Fabricio Villalobos
 - Sarah R. Weiskopf
 - Jennifer Sunday
+
 date: "2024-04-18T00:00:00Z"
+
 doi: "https://doi.org/10.1038/s43017-024-00527-z"
+
 featured: true
+
 image:
   caption: Latitudinal range shifts in terrestrial and marine systems.
   focal_point: ""
   preview_only: false
+  
 projects:
 - Climate-induced-species-redistribution
 publication: "***Nature Reviews Earth & Environment***"
+
+
 publication_short:
-publication_types:
-- "2"
+
+publication_types: 2
+
 publishDate: "2024-04-18T00:00:00Z"
+
 slides: Climate-induced-species-redistribution
+
 # summary: Published as a *Review* at ***Nature Reviews Earth and Environment*** in April **2024**
 summary: "(**2024**) *Nature Reviews Earth & Environment* **5**, 351-368, DOI: [10.1038/s43017-024-00527-z](https://doi.org/10.1038/s43017-024-00527-z)"
 tags: [climate change]
@@ -58,7 +68,9 @@ links:
 - name: "Jake Lawlor"
   url: "https://jakelawlor.github.io/"
 ---
-
+#
+#
+## Publication metrics:
 <html>
   <style>
     section {

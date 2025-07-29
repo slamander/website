@@ -39,33 +39,15 @@ profiles:
   icon_pack: ai
   link: https://drive.google.com/uc?export=download&id=1zADCDlIiJlx1vXKQ6NdMLwTZm7E6sS29  
 
-education:
-  - area: "Ph.D. in Interdisciplinary Ecology"
-    institution: "University of Florida"
-    date_start: "2019-08-01"
-    date_end: "2024-08-01"
-    summary: "Dissertation focused on spatial ecology and conservation"
-  - area: "M.Sc. in Biology"
-    institution: "Eastern Kentucky University"
-    date_start: "2015-08-01"
-    date_end: "2017-05-01"
-    summary: "Master's research in biology"
-  - area: "B.Sc. in Biology"
-    institution: "University of Arkansas"
-    date_start: "2010-08-01"
-    date_end: "2014-05-01"
-    summary: "Bachelor's degree in Biology"
-
 work:
-  - position: Postdoctoral Research Fellow
-    company_name: Utah State University
+  - position: Postdoctoral Research Fellow (USGS CASC)
+    company_name: Utah State University 
     company_url: 'https://www.usu.edu/'
     company_logo: ''
     date_start: 2025-08-01
     date_end: ''
     summary: |2-
-      Responsibilities include:
-      - predicting climate-induced range shifts of birds across the Southwest US
+      [Wolf-Clark lab](https://www.clarkwolflab.com/) (Dept. Wildland Resources) & [Stuber lab](https://efstuber.wixsite.com/xscaleeco/) (USGS)
   - position: Postdoctoral Research Associate
     company_name: University of Florida
     company_url: 'ufl.edu'
@@ -73,8 +55,7 @@ work:
     date_start: 2024-08-01
     date_end: 2025-08-01
     summary: |
-      Responsibilities include:
-      - forecasting spatiotemporal dynamics of West Nile virus in Florida
+      [Campbell lab](https://lcampbelllab.wixsite.com/campbell-lab) (Florida Medical Entomology Lab) & [Guralnick lab](https://www.gurlab.net/) (Florida Natural History Museum)
   - position: Conservation and Research Technician
     company_name: Memphis Zoo
     company_url: 'https://www.memphiszoo.org/'
@@ -82,27 +63,51 @@ work:
     date_start: 2018-01-01
     date_end: 2019-08-01
     summary: |
-      Responsibilities include:
-      - managing endangered species reintroduction programs
+      [Dept. Conservation and Research](https://www.memphiszoo.org/conservation)
 
 ---
 ## About Me
-**The serious bits**: 
-I'm a spatial ecologist with interests in understanding the processes that determine the distribution of biodiversity. My research interests include: 
-- macroecology 
-- biogeography
-- population ecology
-- conservation
-- spatiotemporal modeling
-- reptile & amphibian natural history
-- transparent & reproducible science
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+  <div>
+    <h3>The serious bits: </h3>
+    <p>I'm a spatial ecologist with interests in understanding the processes that determine the distribution of biodiversity. My research interests include  </p>
+    <p>
 
-**The good bits**: 
-I'm a father of two and lover and lover of: 
-- canoeing
+- macroecology
+
+- biogeography
+
+- population ecology
+
+- conservation
+
+- spatiotemporal modeling
+
+- herp natural history
+
+- transparent science
+
+</p>
+  </div>
+  <div>
+    <h3>The good bits:</h3>
+    <p>I'm an Arkansas native (Ozark Mountains) based out of Gainesville Florida, a stereotypical girl dad (soon to be 2x), proud union member, and lover of:</p>
+    <p>
+
 - swimming
+
+- hiking
+
 - biking
-- herping
-- hiking 
-- home DIY projects
+
+- canoeing
+
+- herping 
+
+- home DIY
+
 - wood working
+
+</p>
+  </div>
+</div>

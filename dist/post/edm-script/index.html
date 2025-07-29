@@ -1,6 +1,6 @@
 <!doctype html>
 <!-- This site was created with Hugo Blox. https://hugoblox.com -->
-<!-- Last Published: July 28, 2025 --><html lang="en-us" dir="ltr"
+<!-- Last Published: July 29, 2025 --><html lang="en-us" dir="ltr"
       data-wc-theme-default="system">
   
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
@@ -41,8 +41,7 @@
   
     
   
-  <meta name="description" content="Introduction to EDMs for Forecasting Non-stationary data EDMs are a data-driven solution for uncovering hidden dynamic behavior in natural systems, which are often complex and dynamic (referred to as “non-stationarity” or “non-linearity”). This non-linearity means that the sign and magnitude of relationships within a system change with time, and therefore linear statistical approaches fail to properly represent such changes. Rather than assuming that the system is governed by any set of equations (i.e. unlike meteorological systems), EDMs reconstruct the dynamics of the system from time series data (hence “data-driven”) and provide a mechanistic understanding of the system. Under EDMs, the dynamics of a system are encoded in the temporal ordering of the time series, and the behavior of such a system can be explained by relating various states of a system using time lags (i.e. estimating the mathematical relationship of one variable at time $X(t)$, to the same variable at other times: $X(t&#43;1)$ and $X(t&#43;2)$. By relating states of a system using such lags, causal relationships between variables in the original system may be uncovered&ndash;providing a number of ecologically relevant applications, including forecasting.
-" />
+  <meta name="description" content="A tutorial on forcasting with stationary and non-stationary time series" />
 
   
   <link rel="alternate" hreflang="en-us" href="http://localhost:1313/post/edm-script/" />
@@ -189,9 +188,8 @@
   <meta property="og:site_name" content="Baecher Research" />
   <meta property="og:url" content="http://localhost:1313/post/edm-script/" />
   <meta property="og:title" content="Empirical Dynamic Models for Forecasting | Baecher Research" />
-  <meta property="og:description" content="Introduction to EDMs for Forecasting Non-stationary data
-EDMs are a data-driven solution for uncovering hidden dynamic behavior in natural systems, which are often complex and dynamic (referred to as “non-stationarity” or “non-linearity”). This non-linearity means that the sign and magnitude of relationships within a system change with time, and therefore linear statistical approaches fail to properly represent such changes. Rather than assuming that the system is governed by any set of equations (i.e. unlike meteorological systems), EDMs reconstruct the dynamics of the system from time series data (hence “data-driven”) and provide a mechanistic understanding of the system. Under EDMs, the dynamics of a system are encoded in the temporal ordering of the time series, and the behavior of such a system can be explained by relating various states of a system using time lags (i.e. estimating the mathematical relationship of one variable at time $X(t)$, to the same variable at other times: $X(t&#43;1)$ and $X(t&#43;2)$. By relating states of a system using such lags, causal relationships between variables in the original system may be uncovered&ndash;providing a number of ecologically relevant applications, including forecasting." /><meta property="og:image" content="http://localhost:1313/post/edm-script/featured.png" />
-    <meta property="twitter:image" content="http://localhost:1313/post/edm-script/featured.png" /><meta property="og:locale" content="en-us" />
+  <meta property="og:description" content="A tutorial on forcasting with stationary and non-stationary time series" /><meta property="og:image" content="http://localhost:1313/post/edm-script/featured.gif" />
+    <meta property="twitter:image" content="http://localhost:1313/post/edm-script/featured.gif" /><meta property="og:locale" content="en-us" />
   
     
       <meta
@@ -243,6 +241,7 @@ EDMs are a data-driven solution for uncovering hidden dynamic behavior in natura
   
   
   
+  
     
       
       
@@ -264,6 +263,13 @@ EDMs are a data-driven solution for uncovering hidden dynamic behavior in natura
     
   
   
+  
+  
+  
+  
+  
+  
+  
     
       
       
@@ -429,6 +435,7 @@ EDMs are a data-driven solution for uncovering hidden dynamic behavior in natura
         
       
     
+  
   
   
   
@@ -1116,6 +1123,14 @@ EDMs are a data-driven solution for uncovering hidden dynamic behavior in natura
         <ul class="hb-sidebar-list"><li class="flex flex-col "><a
     class="hb-sidebar-custom-link
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/publication/baecher_2025_stoten/"
+    
+  >Toward Ecological Forecasting of West Nile Virus in Florida: Insights from Two Decades of Surveillance
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
     href="/publication/evans_2025_fee/"
     
   >Invasion risk posed by the pet trade
@@ -1258,7 +1273,7 @@ EDMs are a data-driven solution for uncovering hidden dynamic behavior in natura
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
     href="/post/connectivity-script/"
     
-  >Mapping Ecological Flow in R (pt 1)
+  >Mapping Ecological Flow in R
     </a>
               
             </li><li class="flex flex-col open"><a
@@ -1419,15 +1434,7 @@ EDMs are a data-driven solution for uncovering hidden dynamic behavior in natura
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
     href="/project/climate-species-redistribution/"
     
-  >Climate-induced species redistribution
-    </a>
-              
-            </li><li class="flex flex-col "><a
-    class="hb-sidebar-custom-link
-      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
-    href="/project/geostatistical-modeling/"
-    
-  >Geostatistical Modeling
+  >Biodiversity redistribution
     </a>
               
             </li><li class="flex flex-col "><a
@@ -1444,6 +1451,14 @@ EDMs are a data-driven solution for uncovering hidden dynamic behavior in natura
     href="/project/herpetological-ecology/"
     
   >Reptile and Amphibian Ecology
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/project/geostatistical-modeling/"
+    
+  >Spatial modeling
     </a>
               
             </li></ul>
@@ -2663,7 +2678,7 @@ plot(df_ts_st$y~df_ts_st$x, type = &quot;l&quot;)
     width="96"
     height="96"
     alt="J Alex Baecher"
-  src="/author/j-alex-baecher/avatar_hu9704284195948671912.jpg"
+  src="/author/j-alex-baecher/avatar_hu6680103685818670678.jpg"
   loading="lazy"
   />
   
@@ -2795,7 +2810,7 @@ plot(df_ts_st$y~df_ts_st$x, type = &quot;l&quot;)
           <span class="flex flex-col">
             <span
               class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-            >Mapping Ecological Flow in R (pt 1)</span>
+            >Mapping Ecological Flow in R</span>
             <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
               
                 Aug 12, 2020

@@ -1,7 +1,7 @@
 ---
 title: "Empirical Dynamic Models for Forecasting"
-subtitle: "A tutorial on forcasting with stationary and non-stationary time series"
-author: J. Alex Baecher
+summary: "A tutorial on forcasting with stationary and non-stationary time series"
+author: admin
 date: 2016-08-12T00:40:04-07:00
 output: md_document
 slug: EDM script

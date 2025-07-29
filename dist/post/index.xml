@@ -17,25 +17,43 @@
       <link>http://localhost:1313/post/ml-tidymodels/</link>
       <pubDate>Fri, 22 Oct 2021 00:40:04 -0700</pubDate>
       <guid>http://localhost:1313/post/ml-tidymodels/</guid>
-      <description>&lt;h2 id=&#34;introduction-to-machine-learning-with-tidymodels&#34;&gt;Introduction to machine learning with &lt;code&gt;tidymodels&lt;/code&gt;&lt;/h2&gt;
-&lt;h2 id=&#34;tidymodels-provides-a-clean-organized-and--most-importantly--consistent-programming-syntax-for-data-pre-processing-model-specification-model-fitting-model-evaluation-and-prediction&#34;&gt;&lt;code&gt;Tidymodels&lt;/code&gt; provides a clean, organized, and&amp;ndash;most importantly&amp;ndash;consistent programming syntax for data pre-processing, model specification, model fitting, model evaluation, and prediction.&lt;/h2&gt;
-&lt;h1 id=&#34;anatomy-of-tidymodels&#34;&gt;Anatomy of &lt;code&gt;tidymodels&lt;/code&gt;&lt;/h1&gt;
-&lt;h2 id=&#34;a-meta-package-that-installs-and-load-the-core-packages-listed-below-that-you-need-for-modeling-and-machine-learning&#34;&gt;a meta-package that installs and load the core packages listed below that you need for modeling and machine learning&lt;/h2&gt;
-&lt;h2 id=&#34;rsamples-provides-infrastructure-for-efficient-data-splitting-and-resampling&#34;&gt;&lt;code&gt;rsamples&lt;/code&gt;: provides infrastructure for efficient data splitting and resampling&lt;/h2&gt;
-&lt;h2 id=&#34;parsnip-a-tidy-unified-interface-to-models-that-can-be-used-to-try-a-range-of-models-without-getting-bogged-down-in-the-syntactical-minutiae-of-the-underlying-packages&#34;&gt;&lt;code&gt;parsnip&lt;/code&gt;: a tidy, unified interface to models that can be used to try a range of models without getting bogged down in the syntactical minutiae of the underlying packages&lt;/h2&gt;
-&lt;h2 id=&#34;recipes-a-tidy-interface-to-data-pre-processing-tools-for-feature-engineering&#34;&gt;&lt;code&gt;recipes&lt;/code&gt;: a tidy interface to data pre-processing tools for feature engineering&lt;/h2&gt;
-&lt;h2 id=&#34;workflows-workflows-bundle-your-pre-processing-modeling-and-post-processing-together&#34;&gt;&lt;code&gt;workflows&lt;/code&gt;: workflows bundle your pre-processing, modeling, and post-processing together&lt;/h2&gt;
-&lt;h2 id=&#34;tune-helps-you-optimize-the-hyperparameters-of-your-model-and-pre-processing-steps&#34;&gt;&lt;code&gt;tune&lt;/code&gt;: helps you optimize the hyperparameters of your model and pre-processing steps&lt;/h2&gt;
-&lt;h2 id=&#34;yardstick-measures-the-effectiveness-of-models-using-performance-metrics&#34;&gt;&lt;code&gt;yardstick&lt;/code&gt;: measures the effectiveness of models using performance metrics&lt;/h2&gt;
-&lt;h2 id=&#34;dials-contains-tools-to-create-and-manage-values-of-tuning-parameters-and-is-designed-to-integrate-well-with-the-parsnip-package&#34;&gt;&lt;code&gt;dials&lt;/code&gt;: contains tools to create and manage values of tuning parameters and is designed to integrate well with the parsnip package&lt;/h2&gt;
-&lt;h2 id=&#34;broom-summarizes-key-information-about-models-in-tidy-tibbles&#34;&gt;&lt;code&gt;broom&lt;/code&gt;: summarizes key information about models in tidy tibble()s&lt;/h2&gt;
-&lt;p&gt;First, lets load the &lt;code&gt;tidymodels&lt;/code&gt; meta-package:&lt;/p&gt;
+      <description>&lt;h1 id=&#34;introduction-to-machine-learning-with-tidymodels&#34;&gt;Introduction to machine learning with &lt;em&gt;tidymodels&lt;/em&gt;&lt;/h1&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Tidymodels&lt;/strong&gt;&lt;/em&gt; provides a clean, organized, and&amp;ndash;most importantly&amp;ndash;consistent programming syntax for data pre-processing, model specification, model fitting, model evaluation, and prediction.&lt;/p&gt;
+&lt;h2 id=&#34;anatomy-of-tidymodels&#34;&gt;Anatomy of &lt;em&gt;tidymodels&lt;/em&gt;&lt;/h2&gt;
+&lt;p&gt;A meta-package that installs and load the core packages listed below that you need for modeling and machine learning&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;rsamples&lt;/strong&gt;&lt;/em&gt;: provides infrastructure for efficient data splitting and resampling&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;parsnip&lt;/strong&gt;&lt;/em&gt;: a tidy, unified interface to models that can be used to try a range of models without getting bogged down in the syntactical minutiae of the underlying packages&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;recipes&lt;/strong&gt;&lt;/em&gt;: a tidy interface to data pre-processing tools for feature engineering&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;workflows&lt;/strong&gt;&lt;/em&gt;: workflows bundle your pre-processing, modeling, and post-processing together&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;tune&lt;/strong&gt;&lt;/em&gt;: helps you optimize the hyperparameters of your model and pre-processing steps&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;yardstick&lt;/strong&gt;&lt;/em&gt;: measures the effectiveness of models using performance metrics&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;dials&lt;/strong&gt;&lt;/em&gt;: contains tools to create and manage values of tuning parameters and is designed to integrate well with the parsnip package&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;broom&lt;/strong&gt;&lt;/em&gt;: summarizes key information about models in tidy tibble()s&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;First, lets load the &lt;em&gt;&lt;strong&gt;tidymodels&lt;/strong&gt;&lt;/em&gt; meta-package:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;library(tidymodels)
 library(tidyverse)
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h1 id=&#34;package-tutorials&#34;&gt;Package tutorials:&lt;/h1&gt;
 &lt;h2 id=&#34;data&#34;&gt;Data&lt;/h2&gt;
-&lt;p&gt;I&amp;rsquo;ll demonstrate it&amp;rsquo;s features using an existing data set from Bruno Oliveria, &lt;code&gt;Amphibio&lt;/code&gt;:&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;ll demonstrate it&amp;rsquo;s features using an existing data set from Bruno Oliveria, &lt;em&gt;Amphibio&lt;/em&gt;:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Link to publication: &lt;a href=&#34;https://www.nature.com/articles/sdata2017123&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.nature.com/articles/sdata2017123&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Link to data: &lt;a href=&#34;https://ndownloader.figstatic.com/files/8828578&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://ndownloader.figstatic.com/files/8828578&lt;/a&gt;&lt;/li&gt;
@@ -131,7 +149,7 @@ amphibio %&amp;gt;%
 &lt;/ul&gt;
 &lt;p&gt;Given the data, one possible modeling application could be to use data
 to predict order using two models: knn and boosted regression trees.&lt;/p&gt;
-&lt;p&gt;To start the modeling process, we&amp;rsquo;ll use &lt;code&gt;rsamples&lt;/code&gt; to split the data
+&lt;p&gt;To start the modeling process, we&amp;rsquo;ll use &lt;em&gt;rsamples&lt;/em&gt; to split the data
 into training and testing sets.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;set.seed(42)
 
@@ -140,7 +158,7 @@ tidy_train &amp;lt;- training(tidy_split)
 tidy_test &amp;lt;- testing(tidy_split)
 tidy_kfolds &amp;lt;- vfold_cv(tidy_train)
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;We can use &lt;code&gt;recipes&lt;/code&gt; to preprocess the data:&lt;/p&gt;
+&lt;p&gt;We can use &lt;em&gt;recipes&lt;/em&gt; to preprocess the data:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;# Recipes package 
 ## For preprocessing, feature engineering, and feature elimination 
 tidy_rec &amp;lt;- recipe(Order ~ ., data = tidy_train) %&amp;gt;% 
@@ -149,16 +167,16 @@ tidy_rec &amp;lt;- recipe(Order ~ ., data = tidy_train) %&amp;gt;%
   prep()
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Now that we&amp;rsquo;ve created a recipe to process the data for modeling, we can
-use &lt;code&gt;parsnip&lt;/code&gt; to model the data:&lt;/p&gt;
+use &lt;em&gt;&lt;strong&gt;parsnip&lt;/strong&gt;&lt;/em&gt; to model the data:&lt;/p&gt;
 &lt;p&gt;First, let&amp;rsquo;s have a look at the model’s description&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;library(&amp;quot;webshot&amp;quot;)
 # ?boost_tree
 &lt;/code&gt;&lt;/pre&gt;
 &lt;iframe src=&#34;https://parsnip.tidymodels.org/reference/boost_tree.html&#34; width=&#34;100%&#34; height=&#34;400px&#34;&gt;
 &lt;/iframe&gt;
-&lt;h2 id=&#34;boost_tree&#34;&gt;&lt;code&gt;boost_tree()&lt;/code&gt;&lt;/h2&gt;
+&lt;h2 id=&#34;boost_tree&#34;&gt;&lt;em&gt;boost_tree()&lt;/em&gt;&lt;/h2&gt;
 &lt;h3 id=&#34;description&#34;&gt;Description&lt;/h3&gt;
-&lt;p&gt;&lt;code&gt;boost_tree()&lt;/code&gt; defines a model that creates a series of decision trees
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;boost_tree()&lt;/strong&gt;&lt;/em&gt; defines a model that creates a series of decision trees
 forming an ensemble. Each tree depends on the results of previous trees.
 All trees in the ensemble are combined to produce a final prediction.&lt;/p&gt;
 &lt;p&gt;There are different ways to fit this model. See the engine-specific
@@ -177,7 +195,7 @@ pages for more details:&lt;/p&gt;
 &lt;/ul&gt;
 &lt;iframe src=&#34;https://parsnip.tidymodels.org/reference/nearest_neighbor.html&#34; width=&#34;100%&#34; height=&#34;400px&#34;&gt;
 &lt;/iframe&gt;
-&lt;h2 id=&#34;nearest_neighbor&#34;&gt;&lt;code&gt;nearest_neighbor()&lt;/code&gt;:&lt;/h2&gt;
+&lt;h2 id=&#34;nearest_neighbor&#34;&gt;&lt;em&gt;nearest_neighbor()&lt;/em&gt;:&lt;/h2&gt;
 &lt;h3 id=&#34;defines-a-model-that-uses-the-k-most-similar-data-points-from-the-training-set-to-predict-new-samples&#34;&gt;defines a model that uses the K most similar data points from the training set to predict new samples.&lt;/h3&gt;
 &lt;h3 id=&#34;there-are-different-ways-to-fit-this-model-see-the-engine-specific-pages-for-more-details&#34;&gt;There are different ways to fit this model. See the engine-specific pages for more details:&lt;/h3&gt;
 &lt;ul&gt;
@@ -196,9 +214,9 @@ tidy_knn_model &amp;lt;- nearest_neighbor(neighbors = tune()) %&amp;gt;%
   set_mode(&amp;quot;classification&amp;quot;) %&amp;gt;% 
   set_engine(&amp;quot;kknn&amp;quot;)
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Our basic model recipe is complete, but now we want to use &lt;code&gt;dials&lt;/code&gt; to
+&lt;p&gt;Our basic model recipe is complete, but now we want to use &lt;em&gt;dials&lt;/em&gt; to
 tune parameters.&lt;/p&gt;
-&lt;h1 id=&#34;dials&#34;&gt;&lt;code&gt;dials&lt;/code&gt;&lt;/h1&gt;
+&lt;h2 id=&#34;dials&#34;&gt;&lt;em&gt;&lt;strong&gt;dials&lt;/strong&gt;&lt;/em&gt;&lt;/h2&gt;
 &lt;p&gt;For boosted regression trees, there are 3 basic parameters:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;parameters(tidy_boosted_model)
 
@@ -210,9 +228,9 @@ tune parameters.&lt;/p&gt;
 ##  learn_rate learn_rate nparam[+]
 &lt;/code&gt;&lt;/pre&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;code&gt;trees&lt;/code&gt;: An integer for the number of trees contained in the ensemble.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;min_n&lt;/code&gt;: An integer for the minimum number of data points in a node that is required for the node to be split further.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;learn_rate&lt;/code&gt;: A number for the rate at which the boosting algorithm adapts from iteration-to-iteration (specific engines only).&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;trees&lt;/em&gt;: An integer for the number of trees contained in the ensemble.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;min_n&lt;/em&gt;: An integer for the minimum number of data points in a node that is required for the node to be split further.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;learn_rate&lt;/em&gt;: A number for the rate at which the boosting algorithm adapts from iteration-to-iteration (specific engines only).&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Knn has a single parameter to tune: the neighbors&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;parameters(tidy_knn_model)
@@ -223,12 +241,12 @@ tune parameters.&lt;/p&gt;
 ##   neighbors neighbors nparam[+]
 &lt;/code&gt;&lt;/pre&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;code&gt;neighbors&lt;/code&gt;: A single integer for the number of neighbors to consider
+&lt;li&gt;&lt;em&gt;neighbors&lt;/em&gt;: A single integer for the number of neighbors to consider
 (often called k). For kknn, a value of 5 is used if neighbors is not
 specified.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;So, we can use &lt;code&gt;dials&lt;/code&gt; to set the possible parameter values, which can
-then be tuned using &lt;code&gt;tune&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;So, we can use &lt;em&gt;dials&lt;/em&gt; to set the possible parameter values, which can
+then be tuned using &lt;em&gt;tune&lt;/em&gt;.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;# Dials creates the parameter grids 
 # Tune applies the parameter grid to the models 
 # Dials pacakge 
@@ -274,8 +292,8 @@ knn_grid
 ##  9        13
 ## 10        15
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Implement tuning grid using &lt;code&gt;tune&lt;/code&gt;:&lt;/p&gt;
-&lt;h1 id=&#34;tune&#34;&gt;&lt;code&gt;tune&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;Implement tuning grid using &lt;em&gt;tune&lt;/em&gt;:&lt;/p&gt;
+&lt;h2 id=&#34;tune&#34;&gt;&lt;em&gt;&lt;strong&gt;tune&lt;/strong&gt;&lt;/em&gt;&lt;/h2&gt;
 &lt;pre&gt;&lt;code&gt;# install.packages(c(&amp;quot;xgboost&amp;quot;, &amp;quot;kknn&amp;quot;))
 library(xgboost)
 library(kknn)
@@ -306,13 +324,13 @@ knn_param &amp;lt;- knn_tune %&amp;gt;% select_best(&amp;quot;roc_auc&amp;quot;)
 tidy_boosted_model_final &amp;lt;- finalize_model(tidy_boosted_model, boosted_param)
 tidy_knn_model_final &amp;lt;- finalize_model(tidy_knn_model, knn_param)
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Now, well try different options from &lt;code&gt;dials&lt;/code&gt; for parameter tuning, using
+&lt;p&gt;Now, well try different options from &lt;em&gt;dials&lt;/em&gt; for parameter tuning, using
 two additional methods for grid specification:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;random grid with &lt;code&gt;dials::grid_random&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;maximum entropy grid with &lt;code&gt;dials::grid_max_entropy&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;random grid with &lt;em&gt;dials::grid_random&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;maximum entropy grid with &lt;em&gt;dials::grid_max_entropy&lt;/em&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;grid_random&#34;&gt;&lt;code&gt;grid_random&lt;/code&gt;&lt;/h2&gt;
+&lt;h2 id=&#34;grid_random&#34;&gt;&lt;em&gt;grid_random&lt;/em&gt;&lt;/h2&gt;
 &lt;pre&gt;&lt;code&gt;boosted_grid_rand &amp;lt;- grid_random(parameters(tidy_boosted_model), size = boosted_params)
 boosted_grid_rand
 
@@ -361,7 +379,7 @@ knn_tune_rand &amp;lt;- read_rds(&amp;quot;knn_tune_rand.rds&amp;quot;)
 boosted_param_rand &amp;lt;- boosted_tune_rand %&amp;gt;% select_best(&amp;quot;roc_auc&amp;quot;)
 knn_param_rand &amp;lt;- knn_tune_rand %&amp;gt;% select_best(&amp;quot;roc_auc&amp;quot;)
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&#34;grid_max_entropy&#34;&gt;&lt;code&gt;grid_max_entropy&lt;/code&gt;&lt;/h2&gt;
+&lt;h2 id=&#34;grid_max_entropy&#34;&gt;&lt;em&gt;grid_max_entropy&lt;/em&gt;&lt;/h2&gt;
 &lt;pre&gt;&lt;code&gt;boosted_grid_maxent &amp;lt;- grid_max_entropy(parameters(tidy_boosted_model), size = boosted_params)
 boosted_grid_maxent
 
@@ -413,7 +431,7 @@ knn_tune_maxent &amp;lt;- read_rds(&amp;quot;knn_tune.rds&amp;quot;)
 boosted_param_maxent &amp;lt;- boosted_tune_maxent %&amp;gt;% select_best(&amp;quot;roc_auc&amp;quot;)
 knn_param_maxent &amp;lt;- knn_tune_maxent %&amp;gt;% select_best(&amp;quot;roc_auc&amp;quot;)
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h1 id=&#34;workflows&#34;&gt;&lt;code&gt;workflows&lt;/code&gt;&lt;/h1&gt;
+&lt;h2 id=&#34;workflows&#34;&gt;&lt;em&gt;workflows&lt;/em&gt;&lt;/h2&gt;
 &lt;h3 id=&#34;for-combining-model-parameters-and-preprocessing&#34;&gt;For combining model, parameters, and preprocessing&lt;/h3&gt;
 &lt;pre&gt;&lt;code&gt;boosted_wf &amp;lt;- workflow() %&amp;gt;% 
   add_model(tidy_boosted_model_final) %&amp;gt;% 
@@ -423,7 +441,7 @@ knn_wf &amp;lt;- workflow() %&amp;gt;%
   add_model(tidy_knn_model_final) %&amp;gt;% 
   add_recipe(tidy_rec)
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h1 id=&#34;yardstick&#34;&gt;&lt;code&gt;yardstick&lt;/code&gt;&lt;/h1&gt;
+&lt;h2 id=&#34;yardstick&#34;&gt;&lt;em&gt;yardstick&lt;/em&gt;&lt;/h2&gt;
 &lt;h3 id=&#34;for-extracting-metrics-from-the-model&#34;&gt;For extracting metrics from the model&lt;/h3&gt;
 &lt;pre&gt;&lt;code&gt;boosted_res &amp;lt;- last_fit(boosted_wf, tidy_split)
 knn_res &amp;lt;- last_fit(knn_wf, tidy_split)
@@ -583,11 +601,11 @@ ggplot(bind_rows(mods$.predictions), aes(Order, .pred_Anura)) +
 
 final_knn_model &amp;lt;- fit(knn_wf, amphibio)
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h1 id=&#34;broom&#34;&gt;&lt;code&gt;broom&lt;/code&gt;&lt;/h1&gt;
-&lt;p&gt;Now we can use &lt;code&gt;broom&lt;/code&gt; to tidy the results from these models, and
+&lt;h2 id=&#34;broom&#34;&gt;&lt;em&gt;broom&lt;/em&gt;&lt;/h2&gt;
+&lt;p&gt;Now we can use &lt;em&gt;broom&lt;/em&gt; to tidy the results from these models, and
 provide an intuitive view of their meaning!&lt;/p&gt;
-&lt;h2 id=&#34;augment&#34;&gt;&lt;code&gt;augment()&lt;/code&gt;&lt;/h2&gt;
-&lt;p&gt;First, we’ll use &lt;code&gt;augment&lt;/code&gt; to obtain predictions, residuals, and other
+&lt;h2 id=&#34;augment&#34;&gt;&lt;em&gt;augment()&lt;/em&gt;&lt;/h2&gt;
+&lt;p&gt;First, we’ll use &lt;em&gt;augment&lt;/em&gt; to obtain predictions, residuals, and other
 items from the model, which auto-binds them to the original dataset.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;boosted_aug &amp;lt;- augment(final_boosted_model, new_data = amphibio[,-1])
 knn_aug &amp;lt;- augment(final_knn_model, new_data = amphibio[,-1])
@@ -595,8 +613,8 @@ knn_aug &amp;lt;- augment(final_knn_model, new_data = amphibio[,-1])
 boosted_aug_long &amp;lt;- boosted_aug %&amp;gt;%
   pivot_longer(-c(.pred_class, .pred_Anura, .pred_Caudata), names_to = &amp;quot;predictor&amp;quot;, values_to = &amp;quot;value&amp;quot;) 
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&#34;now-we-can-evaluate-the-models-using-yardstick&#34;&gt;Now we can evaluate the models using &lt;code&gt;yardstick&lt;/code&gt;!&lt;/h2&gt;
-&lt;h1 id=&#34;yardstick-1&#34;&gt;&lt;code&gt;yardstick&lt;/code&gt;&lt;/h1&gt;
+&lt;h2 id=&#34;now-we-can-evaluate-the-models-using-yardstick&#34;&gt;Now we can evaluate the models using &lt;em&gt;yardstick&lt;/em&gt;!&lt;/h2&gt;
+&lt;h1 id=&#34;yardstick-1&#34;&gt;&lt;em&gt;yardstick&lt;/em&gt;&lt;/h1&gt;
 &lt;pre&gt;&lt;code&gt;final_boosted_model %&amp;gt;%
   predict(bake(tidy_rec, new_data = tidy_test), type = &amp;quot;prob&amp;quot;) %&amp;gt;%
   bind_cols(tidy_test) %&amp;gt;%
@@ -1420,7 +1438,7 @@ abline(coef=theta, col=&amp;quot;blue&amp;quot;, lwd = 2)
     </item>
     
     <item>
-      <title>Mapping Ecological Flow in R (pt 1)</title>
+      <title>Mapping Ecological Flow in R</title>
       <link>http://localhost:1313/post/connectivity-script/</link>
       <pubDate>Wed, 12 Aug 2020 00:40:04 -0700</pubDate>
       <guid>http://localhost:1313/post/connectivity-script/</guid>

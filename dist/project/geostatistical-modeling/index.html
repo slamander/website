@@ -1,6 +1,6 @@
 <!doctype html>
 <!-- This site was created with Hugo Blox. https://hugoblox.com -->
-<!-- Last Published: July 28, 2025 --><html lang="en-us" dir="ltr"
+<!-- Last Published: July 29, 2025 --><html lang="en-us" dir="ltr"
       data-wc-theme-default="system">
   
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
@@ -41,7 +41,7 @@
   
     
   
-  <meta name="description" content="Modeling the spatial dynamics of species using Bayesian geostatistical methods" />
+  <meta name="description" content="Developing spatial and spatiotemporal models using stochastic partial differential equations" />
 
   
   <link rel="alternate" hreflang="en-us" href="http://localhost:1313/project/geostatistical-modeling/" />
@@ -187,8 +187,8 @@
   
   <meta property="og:site_name" content="Baecher Research" />
   <meta property="og:url" content="http://localhost:1313/project/geostatistical-modeling/" />
-  <meta property="og:title" content="Geostatistical Modeling | Baecher Research" />
-  <meta property="og:description" content="Modeling the spatial dynamics of species using Bayesian geostatistical methods" /><meta property="og:image" content="http://localhost:1313/project/geostatistical-modeling/featured.jpeg" />
+  <meta property="og:title" content="Spatial modeling | Baecher Research" />
+  <meta property="og:description" content="Developing spatial and spatiotemporal models using stochastic partial differential equations" /><meta property="og:image" content="http://localhost:1313/project/geostatistical-modeling/featured.jpeg" />
     <meta property="twitter:image" content="http://localhost:1313/project/geostatistical-modeling/featured.jpeg" /><meta property="og:locale" content="en-us" />
   
     
@@ -221,7 +221,7 @@
     "@type": "WebPage",
     "@id": "http://localhost:1313/project/geostatistical-modeling/"
   },
-  "headline": "Geostatistical Modeling",
+  "headline": "Spatial modeling",
   
   "image": [
     "http://localhost:1313/project/geostatistical-modeling/featured.jpeg"
@@ -243,7 +243,7 @@
       "url": "http://localhost:1313/media/logo_hu2039277577754200582.png"
     }
   },
-  "description": "Modeling the spatial dynamics of species using Bayesian geostatistical methods"
+  "description": "Developing spatial and spatiotemporal models using stochastic partial differential equations"
 }
 </script>
 
@@ -252,7 +252,7 @@
   
 
 
-  <title>Geostatistical Modeling | Baecher Research</title>
+  <title>Spatial modeling | Baecher Research</title>
 
   
   
@@ -286,6 +286,7 @@
   
   
   
+  
     
       
       
@@ -307,6 +308,13 @@
     
   
   
+  
+  
+  
+  
+  
+  
+  
     
       
       
@@ -472,6 +480,7 @@
         
       
     
+  
   
   
   
@@ -1156,7 +1165,7 @@
 
 
 <div class="article-container pt-3">
-  <h1>Geostatistical Modeling</h1>
+  <h1>Spatial modeling</h1>
 
   
 
@@ -1238,9 +1247,9 @@
   
     
   
-  <a class="hb-attachment-link hb-attachment-large" href="https://www.alexbaecher.com/publication/klinges_2024_geb/" target="_blank" rel="noopener">
+  <a class="hb-attachment-link hb-attachment-large" href="https://ecoevorxiv.org/repository/view/9228/" target="_blank" rel="noopener">
     <svg style="height: 1em" class='inline-block' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244"/></svg>
-    <i class="fas fa-file-alt mr-1"></i>GEB paper</a>
+    <i class="fas fa-file-alt mr-1"></i>Baecher et al. STOTEN</a>
 
 
 </div>
@@ -1249,9 +1258,9 @@
 </div>
 
 
-<div class="article-header article-container featured-image-wrapper mt-4 mb-4" style="max-width: 720px; max-height: 617px;">
+<div class="article-header article-container featured-image-wrapper mt-4 mb-4" style="max-width: 720px; max-height: 686px;">
   <div style="position: relative">
-    <img src="/project/geostatistical-modeling/featured_hu1244778760791998582.webp" width="720" height="617" alt="" class="featured-image">
+    <img src="/project/geostatistical-modeling/featured_hu6178966231621968828.webp" width="720" height="686" alt="" class="featured-image">
     <span class="article-header-caption">Mesh for a spatial point-process model using Bayesian INLA SPDE algorithm</span>
   </div>
 </div>
@@ -1261,7 +1270,8 @@
   <div class="article-container">
 
     <div class="article-style">
-      <p><strong>Geostatistical Modeling</strong></p>
+      <p><strong>Spatiotemporal modeling</strong>
+Basic generalized linear mixed effects models can account for spatial (and spatiotemporal) autocorrelation using latent Gaussian random fields (GRFs). However, GRFs are computationally intense due to costly covariance functions. Stochastic Partial Differential Equations (SPDE) can be used to minimize the scale of this problem by approximating GRFs with Gaussian Markcov random fields (GMRFs) with a Matern covariance function (Lindgrin et al., 2011; Krainski et al. 2018). This solution has been adopted by the Integrated Nested Laplace Approximation (INLA) software, and has later been implimented in Template Model Builder (TMB) software (Thorson et al., 2015).</p>
 
     </div>
 
@@ -1303,7 +1313,7 @@
   <a
     target="_blank" rel="noopener"
     class="m-1 rounded-md bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral-300 dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-    href="https://twitter.com/intent/tweet?url=http%3A%2F%2Flocalhost%3A1313%2Fproject%2Fgeostatistical-modeling%2F&amp;text=Geostatistical&#43;Modeling"
+    href="https://twitter.com/intent/tweet?url=http%3A%2F%2Flocalhost%3A1313%2Fproject%2Fgeostatistical-modeling%2F&amp;text=Spatial&#43;modeling"
     title="X"
     aria-label="X"
     id="share-link-x"
@@ -1321,7 +1331,7 @@
   <a
     target="_blank" rel="noopener"
     class="m-1 rounded-md bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral-300 dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-    href="https://www.facebook.com/sharer.php?u=http%3A%2F%2Flocalhost%3A1313%2Fproject%2Fgeostatistical-modeling%2F&amp;t=Geostatistical&#43;Modeling"
+    href="https://www.facebook.com/sharer.php?u=http%3A%2F%2Flocalhost%3A1313%2Fproject%2Fgeostatistical-modeling%2F&amp;t=Spatial&#43;modeling"
     title="Facebook"
     aria-label="Facebook"
     id="share-link-facebook"
@@ -1341,7 +1351,7 @@
   <a
     target="_blank" rel="noopener"
     class="m-1 rounded-md bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral-300 dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-    href="mailto:?subject=Geostatistical%20Modeling&amp;body=http%3A%2F%2Flocalhost%3A1313%2Fproject%2Fgeostatistical-modeling%2F"
+    href="mailto:?subject=Spatial%20modeling&amp;body=http%3A%2F%2Flocalhost%3A1313%2Fproject%2Fgeostatistical-modeling%2F"
     title="Email"
     aria-label="Email"
     id="share-link-email"
@@ -1359,7 +1369,7 @@
   <a
     target="_blank" rel="noopener"
     class="m-1 rounded-md bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral-300 dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-    href="https://www.linkedin.com/shareArticle?url=http%3A%2F%2Flocalhost%3A1313%2Fproject%2Fgeostatistical-modeling%2F&amp;title=Geostatistical&#43;Modeling"
+    href="https://www.linkedin.com/shareArticle?url=http%3A%2F%2Flocalhost%3A1313%2Fproject%2Fgeostatistical-modeling%2F&amp;title=Spatial&#43;modeling"
     title="LinkedIn"
     aria-label="LinkedIn"
     id="share-link-linkedin"
@@ -1377,7 +1387,7 @@
   <a
     target="_blank" rel="noopener"
     class="m-1 rounded-md bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral-300 dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-    href="whatsapp://send?text=Geostatistical&#43;Modeling%20http%3A%2F%2Flocalhost%3A1313%2Fproject%2Fgeostatistical-modeling%2F"
+    href="whatsapp://send?text=Spatial&#43;modeling%20http%3A%2F%2Flocalhost%3A1313%2Fproject%2Fgeostatistical-modeling%2F"
     title="WhatsApp"
     aria-label="WhatsApp"
     id="share-link-whatsapp"
@@ -1418,7 +1428,7 @@
     width="96"
     height="96"
     alt="J Alex Baecher"
-  src="/author/j-alex-baecher/avatar_hu9704284195948671912.jpg"
+  src="/author/j-alex-baecher/avatar_hu6680103685818670678.jpg"
   loading="lazy"
   />
   
@@ -1540,30 +1550,14 @@
   <div class="flex flex-col md:flex-row flex-nowrap justify-between gap-5 pt-2">
     <div class="">
       
-        <a class="group flex no-underline" href="/project/landscape-ecology/">
-          <span
-            class="mt-[-0.3rem] me-2 text-neutral-700 transition-transform group-hover:-translate-x-[2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
-          ><span class="ltr:inline rtl:hidden">&larr;</span></span>
-          <span class="flex flex-col">
-            <span
-              class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-            >Landscape connectivity</span>
-            <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
-              
-                Sep 10, 2019
-              
-            </span>
-          </span>
-        </a>
-      
     </div>
     <div class="">
       
-        <a class="group flex text-right no-underline" href="/project/climate-species-redistribution/">
+        <a class="group flex text-right no-underline" href="/project/herpetological-ecology/">
           <span class="flex flex-col">
             <span
               class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-            >Climate-induced species redistribution</span
+            >Reptile and Amphibian Ecology</span
             >
             <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
               

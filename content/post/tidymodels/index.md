@@ -1,7 +1,7 @@
 ---
 title: "Machine Learning the 'Tidy' Way"
-subtitle: "A tutorial on K-nearest neighbor and boosted trees using the `tidymodels` framework"
-author: J. Alex Baecher
+summary: "A tutorial on K-nearest neighbor and boosted trees using the *tidymodels* framework"
+author: admin
 date: 2021-10-22T00:40:04-07:00
 output: md_document
 slug: ML tidymodels
@@ -13,32 +13,33 @@ image:
   preview_only: true
 ---
 
-Introduction to machine learning with `tidymodels`
---------------------------------------------------------
-  
-  
-## `Tidymodels` provides a clean, organized, and--most importantly--consistent programming syntax for data pre-processing, model specification, model fitting, model evaluation, and prediction. 
 
-# Anatomy of `tidymodels`
-## a meta-package that installs and load the core packages listed below that you need for modeling and machine learning
+Introduction to machine learning with *tidymodels*
+============================================================
 
-## `rsamples`: provides infrastructure for efficient data splitting and resampling
+***Tidymodels*** provides a clean, organized, and--most importantly--consistent programming syntax for data pre-processing, model specification, model fitting, model evaluation, and prediction. 
 
-## `parsnip`: a tidy, unified interface to models that can be used to try a range of models without getting bogged down in the syntactical minutiae of the underlying packages
+Anatomy of *tidymodels*
+------------------------------------------------------------
+A meta-package that installs and load the core packages listed below that you need for modeling and machine learning
 
-## `recipes`: a tidy interface to data pre-processing tools for feature engineering
+- ***rsamples***: provides infrastructure for efficient data splitting and resampling
 
-## `workflows`: workflows bundle your pre-processing, modeling, and post-processing together
+- ***parsnip***: a tidy, unified interface to models that can be used to try a range of models without getting bogged down in the syntactical minutiae of the underlying packages
 
-## `tune`: helps you optimize the hyperparameters of your model and pre-processing steps
+- ***recipes***: a tidy interface to data pre-processing tools for feature engineering
 
-## `yardstick`: measures the effectiveness of models using performance metrics
+- ***workflows***: workflows bundle your pre-processing, modeling, and post-processing together
 
-## `dials`: contains tools to create and manage values of tuning parameters and is designed to integrate well with the parsnip package
+- ***tune***: helps you optimize the hyperparameters of your model and pre-processing steps
 
-## `broom`: summarizes key information about models in tidy tibble()s
+- ***yardstick***: measures the effectiveness of models using performance metrics
 
-First, lets load the `tidymodels` meta-package:
+- ***dials***: contains tools to create and manage values of tuning parameters and is designed to integrate well with the parsnip package
+
+- ***broom***: summarizes key information about models in tidy tibble()s
+
+First, lets load the ***tidymodels*** meta-package:
 
     library(tidymodels)
     library(tidyverse)
@@ -47,9 +48,9 @@ First, lets load the `tidymodels` meta-package:
 
 ## Data
 
-I'll demonstrate it's features using an existing data set from Bruno Oliveria, `Amphibio`:  
-* Link to publication: <https://www.nature.com/articles/sdata2017123>  
-* Link to data: <https://ndownloader.figstatic.com/files/8828578>
+I'll demonstrate it's features using an existing data set from Bruno Oliveria, *Amphibio*:  
+- Link to publication: <https://www.nature.com/articles/sdata2017123>  
+- Link to data: <https://ndownloader.figstatic.com/files/8828578>
 
 ### Amphibio data
 
@@ -72,10 +73,10 @@ habitat types, diet, size, ect.
 
 Here's the breakdown of taxonomic spread in the data:
 
-* Order: N = 3  
-* Family: N = 61  
-* Genera: N = 531  
-* Species: N = 6776
+- Order: N = 3  
+- Family: N = 61  
+- Genera: N = 531  
+- Species: N = 6776
 
 There are also a lot of missing data, and what data do exist are wildly
 different scales. We'll clean this up:
@@ -112,13 +113,13 @@ Now let's have a peak at the data:
 {{< figure library="true" src="posts/script_files/figure-markdown_strict/unnamed-chunk-4-1.png" title=" " >}}
 
 There are some trends in the data:  
-* caudates are longer  
-* anura have larger litter sizes
+- caudates are longer  
+- anura have larger litter sizes
 
 Given the data, one possible modeling application could be to use data
 to predict order using two models: knn and boosted regression trees.
 
-To start the modeling process, we'll use `rsamples` to split the data
+To start the modeling process, we'll use *rsamples* to split the data
 into training and testing sets.
 
     set.seed(42)
@@ -128,7 +129,7 @@ into training and testing sets.
     tidy_test <- testing(tidy_split)
     tidy_kfolds <- vfold_cv(tidy_train)
 
-We can use `recipes` to preprocess the data:
+We can use *recipes* to preprocess the data:
 
     # Recipes package 
     ## For preprocessing, feature engineering, and feature elimination 
@@ -138,7 +139,7 @@ We can use `recipes` to preprocess the data:
       prep()
 
 Now that we've created a recipe to process the data for modeling, we can
-use `parsnip` to model the data:
+use ***parsnip*** to model the data:
 
 First, let's have a look at the model’s description
 
@@ -148,33 +149,34 @@ First, let's have a look at the model’s description
 <iframe src="https://parsnip.tidymodels.org/reference/boost_tree.html" width="100%" height="400px">
 </iframe>
 
-## `boost_tree()`
+*boost_tree()*
+---------------
 
 ### Description
 
-`boost_tree()` defines a model that creates a series of decision trees
+***boost_tree()*** defines a model that creates a series of decision trees
 forming an ensemble. Each tree depends on the results of previous trees.
 All trees in the ensemble are combined to produce a final prediction.
 
 There are different ways to fit this model. See the engine-specific
 pages for more details:
 
-* xgboost (default)  
-* C5.0  
-* spark
+- xgboost (default)  
+- C5.0  
+- spark
 
    # ?nearest_neighbors
 
 <iframe src="https://parsnip.tidymodels.org/reference/nearest_neighbor.html" width="100%" height="400px">
 </iframe>
 
-## `nearest_neighbor()`:
+## *nearest_neighbor()*:
 
 ### defines a model that uses the K most similar data points from the training set to predict new samples.
 
 ### There are different ways to fit this model. See the engine-specific pages for more details:
 
-* knn (default)
+- knn (default)
 
 Now, let's fit the models:
 
@@ -190,10 +192,11 @@ Now, let's fit the models:
       set_mode("classification") %>% 
       set_engine("kknn")
 
-Our basic model recipe is complete, but now we want to use `dials` to
+Our basic model recipe is complete, but now we want to use *dials* to
 tune parameters.
 
-# `dials`
+***dials***
+------------------------------------------------------------
 
 For boosted regression trees, there are 3 basic parameters:
 
@@ -206,9 +209,9 @@ For boosted regression trees, there are 3 basic parameters:
     ##       min_n      min_n nparam[+]
     ##  learn_rate learn_rate nparam[+]
 
-* `trees`: An integer for the number of trees contained in the ensemble.  
-* `min_n`: An integer for the minimum number of data points in a node that is required for the node to be split further.  
-* `learn_rate`: A number for the rate at which the boosting algorithm adapts from iteration-to-iteration (specific engines only).
+- *trees*: An integer for the number of trees contained in the ensemble.  
+- *min_n*: An integer for the minimum number of data points in a node that is required for the node to be split further.  
+- *learn_rate*: A number for the rate at which the boosting algorithm adapts from iteration-to-iteration (specific engines only).
 
 Knn has a single parameter to tune: the neighbors
 
@@ -219,12 +222,12 @@ Knn has a single parameter to tune: the neighbors
     ##  identifier      type    object
     ##   neighbors neighbors nparam[+]
 
-* `neighbors`: A single integer for the number of neighbors to consider
+- *neighbors*: A single integer for the number of neighbors to consider
 (often called k). For kknn, a value of 5 is used if neighbors is not
 specified.
 
-So, we can use `dials` to set the possible parameter values, which can
-then be tuned using `tune`.
+So, we can use *dials* to set the possible parameter values, which can
+then be tuned using *tune*.
 
     # Dials creates the parameter grids 
     # Tune applies the parameter grid to the models 
@@ -271,9 +274,10 @@ then be tuned using `tune`.
     ##  9        13
     ## 10        15
 
-Implement tuning grid using `tune`:
+Implement tuning grid using *tune*:
 
-# `tune`
+***tune***
+------------------------------------------------------------
 
     # install.packages(c("xgboost", "kknn"))
     library(xgboost)
@@ -305,12 +309,13 @@ Implement tuning grid using `tune`:
     tidy_boosted_model_final <- finalize_model(tidy_boosted_model, boosted_param)
     tidy_knn_model_final <- finalize_model(tidy_knn_model, knn_param)
 
-Now, well try different options from `dials` for parameter tuning, using
+Now, well try different options from *dials* for parameter tuning, using
 two additional methods for grid specification:  
-* random grid with `dials::grid_random`  
-* maximum entropy grid with `dials::grid_max_entropy`
+* random grid with *dials::grid_random*  
+* maximum entropy grid with *dials::grid_max_entropy*
 
-## `grid_random`
+*grid_random*
+------------------------------------------------------------
 
     boosted_grid_rand <- grid_random(parameters(tidy_boosted_model), size = boosted_params)
     boosted_grid_rand
@@ -360,7 +365,8 @@ two additional methods for grid specification:
     boosted_param_rand <- boosted_tune_rand %>% select_best("roc_auc")
     knn_param_rand <- knn_tune_rand %>% select_best("roc_auc")
 
-## `grid_max_entropy`
+*grid_max_entropy*
+------------------------------------------------------------
 
     boosted_grid_maxent <- grid_max_entropy(parameters(tidy_boosted_model), size = boosted_params)
     boosted_grid_maxent
@@ -413,7 +419,8 @@ two additional methods for grid specification:
     boosted_param_maxent <- boosted_tune_maxent %>% select_best("roc_auc")
     knn_param_maxent <- knn_tune_maxent %>% select_best("roc_auc")
 
-# `workflows`
+*workflows*
+------------------------------------------------------------
 
 ### For combining model, parameters, and preprocessing
 
@@ -425,7 +432,8 @@ two additional methods for grid specification:
       add_model(tidy_knn_model_final) %>% 
       add_recipe(tidy_rec)
 
-# `yardstick`
+*yardstick*
+------------------------------------------------------------
 
 ### For extracting metrics from the model
 
@@ -469,14 +477,16 @@ Confusion matrix to visualize model predictions against truth
 
     final_knn_model <- fit(knn_wf, amphibio)
 
-# `broom`
+*broom*
+------------------------------------------------------------
 
-Now we can use `broom` to tidy the results from these models, and
+Now we can use *broom* to tidy the results from these models, and
 provide an intuitive view of their meaning!
 
-## `augment()`
+*augment()*
+------------------------------------------------------------
 
-First, we’ll use `augment` to obtain predictions, residuals, and other
+First, we’ll use *augment* to obtain predictions, residuals, and other
 items from the model, which auto-binds them to the original dataset.
 
     boosted_aug <- augment(final_boosted_model, new_data = amphibio[,-1])
@@ -485,8 +495,8 @@ items from the model, which auto-binds them to the original dataset.
     boosted_aug_long <- boosted_aug %>%
       pivot_longer(-c(.pred_class, .pred_Anura, .pred_Caudata), names_to = "predictor", values_to = "value") 
 
-## Now we can evaluate the models using `yardstick`!
-# `yardstick`
+## Now we can evaluate the models using *yardstick*!
+# *yardstick*
 
     final_boosted_model %>%
       predict(bake(tidy_rec, new_data = tidy_test), type = "prob") %>%

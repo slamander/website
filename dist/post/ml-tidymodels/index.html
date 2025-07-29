@@ -1,6 +1,6 @@
 <!doctype html>
 <!-- This site was created with Hugo Blox. https://hugoblox.com -->
-<!-- Last Published: July 28, 2025 --><html lang="en-us" dir="ltr"
+<!-- Last Published: July 29, 2025 --><html lang="en-us" dir="ltr"
       data-wc-theme-default="system">
   
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
@@ -41,8 +41,7 @@
   
     
   
-  <meta name="description" content="Introduction to machine learning with tidymodels Tidymodels provides a clean, organized, and&ndash;most importantly&ndash;consistent programming syntax for data pre-processing, model specification, model fitting, model evaluation, and prediction. Anatomy of tidymodels a meta-package that installs and load the core packages listed below that you need for modeling and machine learning rsamples: provides infrastructure for efficient data splitting and resampling parsnip: a tidy, unified interface to models that can be used to try a range of models without getting bogged down in the syntactical minutiae of the underlying packages recipes: a tidy interface to data pre-processing tools for feature engineering workflows: workflows bundle your pre-processing, modeling, and post-processing together tune: helps you optimize the hyperparameters of your model and pre-processing steps yardstick: measures the effectiveness of models using performance metrics dials: contains tools to create and manage values of tuning parameters and is designed to integrate well with the parsnip package broom: summarizes key information about models in tidy tibble()s First, lets load the tidymodels meta-package:
-" />
+  <meta name="description" content="A tutorial on K-nearest neighbor and boosted trees using the *tidymodels* framework" />
 
   
   <link rel="alternate" hreflang="en-us" href="http://localhost:1313/post/ml-tidymodels/" />
@@ -189,19 +188,7 @@
   <meta property="og:site_name" content="Baecher Research" />
   <meta property="og:url" content="http://localhost:1313/post/ml-tidymodels/" />
   <meta property="og:title" content="Machine Learning the &#39;Tidy&#39; Way | Baecher Research" />
-  <meta property="og:description" content="Introduction to machine learning with tidymodels
-Tidymodels provides a clean, organized, and&ndash;most importantly&ndash;consistent programming syntax for data pre-processing, model specification, model fitting, model evaluation, and prediction.
-Anatomy of tidymodels
-a meta-package that installs and load the core packages listed below that you need for modeling and machine learning
-rsamples: provides infrastructure for efficient data splitting and resampling
-parsnip: a tidy, unified interface to models that can be used to try a range of models without getting bogged down in the syntactical minutiae of the underlying packages
-recipes: a tidy interface to data pre-processing tools for feature engineering
-workflows: workflows bundle your pre-processing, modeling, and post-processing together
-tune: helps you optimize the hyperparameters of your model and pre-processing steps
-yardstick: measures the effectiveness of models using performance metrics
-dials: contains tools to create and manage values of tuning parameters and is designed to integrate well with the parsnip package
-broom: summarizes key information about models in tidy tibble()s
-First, lets load the tidymodels meta-package:" /><meta property="og:image" content="http://localhost:1313/post/ml-tidymodels/featured.png" />
+  <meta property="og:description" content="A tutorial on K-nearest neighbor and boosted trees using the *tidymodels* framework" /><meta property="og:image" content="http://localhost:1313/post/ml-tidymodels/featured.png" />
     <meta property="twitter:image" content="http://localhost:1313/post/ml-tidymodels/featured.png" /><meta property="og:locale" content="en-us" />
   
     
@@ -254,6 +241,7 @@ First, lets load the tidymodels meta-package:" /><meta property="og:image" conte
   
   
   
+  
     
       
       
@@ -275,6 +263,13 @@ First, lets load the tidymodels meta-package:" /><meta property="og:image" conte
     
   
   
+  
+  
+  
+  
+  
+  
+  
     
       
       
@@ -440,6 +435,7 @@ First, lets load the tidymodels meta-package:" /><meta property="og:image" conte
         
       
     
+  
   
   
   
@@ -1127,6 +1123,14 @@ First, lets load the tidymodels meta-package:" /><meta property="og:image" conte
         <ul class="hb-sidebar-list"><li class="flex flex-col "><a
     class="hb-sidebar-custom-link
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/publication/baecher_2025_stoten/"
+    
+  >Toward Ecological Forecasting of West Nile Virus in Florida: Insights from Two Decades of Surveillance
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
     href="/publication/evans_2025_fee/"
     
   >Invasion risk posed by the pet trade
@@ -1258,69 +1262,9 @@ First, lets load the tidymodels meta-package:" /><meta property="og:image" conte
   
     <ul class="hb-sidebar-mobile-toc"><li>
               <a
-                href="#introduction-to-machine-learning-with-tidymodels"
+                href="#anatomy-of-tidymodels"
                 class="hb-docs-link"
-              >Introduction to machine learning with &lt;code&gt;tidymodels&lt;/code&gt;</a>
-            </li>
-          <li>
-              <a
-                href="#tidymodels-provides-a-clean-organized-and--most-importantly--consistent-programming-syntax-for-data-pre-processing-model-specification-model-fitting-model-evaluation-and-prediction"
-                class="hb-docs-link"
-              >&lt;code&gt;Tidymodels&lt;/code&gt; provides a clean, organized, and&amp;ndash;most importantly&amp;ndash;consistent programming syntax for data pre-processing, model specification, model fitting, model evaluation, and prediction.</a>
-            </li>
-          <li>
-              <a
-                href="#a-meta-package-that-installs-and-load-the-core-packages-listed-below-that-you-need-for-modeling-and-machine-learning"
-                class="hb-docs-link"
-              >a meta-package that installs and load the core packages listed below that you need for modeling and machine learning</a>
-            </li>
-          <li>
-              <a
-                href="#rsamples-provides-infrastructure-for-efficient-data-splitting-and-resampling"
-                class="hb-docs-link"
-              >&lt;code&gt;rsamples&lt;/code&gt;: provides infrastructure for efficient data splitting and resampling</a>
-            </li>
-          <li>
-              <a
-                href="#parsnip-a-tidy-unified-interface-to-models-that-can-be-used-to-try-a-range-of-models-without-getting-bogged-down-in-the-syntactical-minutiae-of-the-underlying-packages"
-                class="hb-docs-link"
-              >&lt;code&gt;parsnip&lt;/code&gt;: a tidy, unified interface to models that can be used to try a range of models without getting bogged down in the syntactical minutiae of the underlying packages</a>
-            </li>
-          <li>
-              <a
-                href="#recipes-a-tidy-interface-to-data-pre-processing-tools-for-feature-engineering"
-                class="hb-docs-link"
-              >&lt;code&gt;recipes&lt;/code&gt;: a tidy interface to data pre-processing tools for feature engineering</a>
-            </li>
-          <li>
-              <a
-                href="#workflows-workflows-bundle-your-pre-processing-modeling-and-post-processing-together"
-                class="hb-docs-link"
-              >&lt;code&gt;workflows&lt;/code&gt;: workflows bundle your pre-processing, modeling, and post-processing together</a>
-            </li>
-          <li>
-              <a
-                href="#tune-helps-you-optimize-the-hyperparameters-of-your-model-and-pre-processing-steps"
-                class="hb-docs-link"
-              >&lt;code&gt;tune&lt;/code&gt;: helps you optimize the hyperparameters of your model and pre-processing steps</a>
-            </li>
-          <li>
-              <a
-                href="#yardstick-measures-the-effectiveness-of-models-using-performance-metrics"
-                class="hb-docs-link"
-              >&lt;code&gt;yardstick&lt;/code&gt;: measures the effectiveness of models using performance metrics</a>
-            </li>
-          <li>
-              <a
-                href="#dials-contains-tools-to-create-and-manage-values-of-tuning-parameters-and-is-designed-to-integrate-well-with-the-parsnip-package"
-                class="hb-docs-link"
-              >&lt;code&gt;dials&lt;/code&gt;: contains tools to create and manage values of tuning parameters and is designed to integrate well with the parsnip package</a>
-            </li>
-          <li>
-              <a
-                href="#broom-summarizes-key-information-about-models-in-tidy-tibbles"
-                class="hb-docs-link"
-              >&lt;code&gt;broom&lt;/code&gt;: summarizes key information about models in tidy tibble()s</a>
+              >Anatomy of &lt;em&gt;tidymodels&lt;/em&gt;</a>
             </li>
           <li>
               <a
@@ -1332,49 +1276,67 @@ First, lets load the tidymodels meta-package:" /><meta property="og:image" conte
               <a
                 href="#boost_tree"
                 class="hb-docs-link"
-              >&lt;code&gt;boost_tree()&lt;/code&gt;</a>
+              >&lt;em&gt;boost_tree()&lt;/em&gt;</a>
             </li>
           <li>
               <a
                 href="#nearest_neighbor"
                 class="hb-docs-link"
-              >&lt;code&gt;nearest_neighbor()&lt;/code&gt;:</a>
+              >&lt;em&gt;nearest_neighbor()&lt;/em&gt;:</a>
+            </li>
+          <li>
+              <a
+                href="#dials"
+                class="hb-docs-link"
+              >&lt;em&gt;&lt;strong&gt;dials&lt;/strong&gt;&lt;/em&gt;</a>
+            </li>
+          <li>
+              <a
+                href="#tune"
+                class="hb-docs-link"
+              >&lt;em&gt;&lt;strong&gt;tune&lt;/strong&gt;&lt;/em&gt;</a>
             </li>
           <li>
               <a
                 href="#grid_random"
                 class="hb-docs-link"
-              >&lt;code&gt;grid_random&lt;/code&gt;</a>
+              >&lt;em&gt;grid_random&lt;/em&gt;</a>
             </li>
           <li>
               <a
                 href="#grid_max_entropy"
                 class="hb-docs-link"
-              >&lt;code&gt;grid_max_entropy&lt;/code&gt;</a>
+              >&lt;em&gt;grid_max_entropy&lt;/em&gt;</a>
             </li>
           <li>
               <a
-                href="#"
+                href="#workflows"
                 class="hb-docs-link"
-              ></a>
+              >&lt;em&gt;workflows&lt;/em&gt;</a>
             </li>
           <li>
               <a
-                href="#"
+                href="#yardstick"
                 class="hb-docs-link"
-              ></a>
+              >&lt;em&gt;yardstick&lt;/em&gt;</a>
+            </li>
+          <li>
+              <a
+                href="#broom"
+                class="hb-docs-link"
+              >&lt;em&gt;broom&lt;/em&gt;</a>
             </li>
           <li>
               <a
                 href="#augment"
                 class="hb-docs-link"
-              >&lt;code&gt;augment()&lt;/code&gt;</a>
+              >&lt;em&gt;augment()&lt;/em&gt;</a>
             </li>
           <li>
               <a
                 href="#now-we-can-evaluate-the-models-using-yardstick"
                 class="hb-docs-link"
-              >Now we can evaluate the models using &lt;code&gt;yardstick&lt;/code&gt;!</a>
+              >Now we can evaluate the models using &lt;em&gt;yardstick&lt;/em&gt;!</a>
             </li>
           <li>
               <a
@@ -1404,7 +1366,7 @@ First, lets load the tidymodels meta-package:" /><meta property="og:image" conte
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
     href="/post/connectivity-script/"
     
-  >Mapping Ecological Flow in R (pt 1)
+  >Mapping Ecological Flow in R
     </a>
               
             </li><li class="flex flex-col "><a
@@ -1532,15 +1494,7 @@ First, lets load the tidymodels meta-package:" /><meta property="og:image" conte
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
     href="/project/climate-species-redistribution/"
     
-  >Climate-induced species redistribution
-    </a>
-              
-            </li><li class="flex flex-col "><a
-    class="hb-sidebar-custom-link
-      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
-    href="/project/geostatistical-modeling/"
-    
-  >Geostatistical Modeling
+  >Biodiversity redistribution
     </a>
               
             </li><li class="flex flex-col "><a
@@ -1557,6 +1511,14 @@ First, lets load the tidymodels meta-package:" /><meta property="og:image" conte
     href="/project/herpetological-ecology/"
     
   >Reptile and Amphibian Ecology
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/project/geostatistical-modeling/"
+    
+  >Spatial modeling
     </a>
               
             </li></ul>
@@ -1583,37 +1545,7 @@ First, lets load the tidymodels meta-package:" /><meta property="og:image" conte
 
   <div class="hb-scrollbar text-sm [hyphens:auto] sticky top-16 overflow-y-auto pr-4 pt-6 max-h-[calc(100vh-var(--navbar-height)-env(safe-area-inset-bottom))] -mr-4 rtl:-ml-4"><p class="mb-4 font-semibold tracking-tight">On this page</p><ul>
       <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#introduction-to-machine-learning-with-tidymodels">Introduction to machine learning with tidymodels</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#tidymodels-provides-a-clean-organized-and--most-importantly--consistent-programming-syntax-for-data-pre-processing-model-specification-model-fitting-model-evaluation-and-prediction">Tidymodels provides a clean, organized, and–most importantly–consistent programming syntax for data pre-processing, model specification, model fitting, model evaluation, and prediction.</a>
-      </li></ul><ul>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#a-meta-package-that-installs-and-load-the-core-packages-listed-below-that-you-need-for-modeling-and-machine-learning">a meta-package that installs and load the core packages listed below that you need for modeling and machine learning</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#rsamples-provides-infrastructure-for-efficient-data-splitting-and-resampling">rsamples: provides infrastructure for efficient data splitting and resampling</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#parsnip-a-tidy-unified-interface-to-models-that-can-be-used-to-try-a-range-of-models-without-getting-bogged-down-in-the-syntactical-minutiae-of-the-underlying-packages">parsnip: a tidy, unified interface to models that can be used to try a range of models without getting bogged down in the syntactical minutiae of the underlying packages</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#recipes-a-tidy-interface-to-data-pre-processing-tools-for-feature-engineering">recipes: a tidy interface to data pre-processing tools for feature engineering</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#workflows-workflows-bundle-your-pre-processing-modeling-and-post-processing-together">workflows: workflows bundle your pre-processing, modeling, and post-processing together</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#tune-helps-you-optimize-the-hyperparameters-of-your-model-and-pre-processing-steps">tune: helps you optimize the hyperparameters of your model and pre-processing steps</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#yardstick-measures-the-effectiveness-of-models-using-performance-metrics">yardstick: measures the effectiveness of models using performance metrics</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#dials-contains-tools-to-create-and-manage-values-of-tuning-parameters-and-is-designed-to-integrate-well-with-the-parsnip-package">dials: contains tools to create and manage values of tuning parameters and is designed to integrate well with the parsnip package</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#broom-summarizes-key-information-about-models-in-tidy-tibbles">broom: summarizes key information about models in tidy tibble()s</a>
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#anatomy-of-tidymodels">Anatomy of tidymodels</a>
       </li></ul><ul>
       <li class="my-2 scroll-my-6 scroll-py-6">
         <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#data">Data</a>
@@ -1635,22 +1567,37 @@ First, lets load the tidymodels meta-package:" /><meta property="og:image" conte
       </li>
       <li class="my-2 scroll-my-6 scroll-py-6">
         <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#there-are-different-ways-to-fit-this-model-see-the-engine-specific-pages-for-more-details">There are different ways to fit this model. See the engine-specific pages for more details:</a>
-      </li></ul><ul></ul><ul>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#dials">dials</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#tune">tune</a>
+      </li>
       <li class="my-2 scroll-my-6 scroll-py-6">
         <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#grid_random">grid_random</a>
       </li>
       <li class="my-2 scroll-my-6 scroll-py-6">
         <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#grid_max_entropy">grid_max_entropy</a>
-      </li></ul><ul>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#workflows">workflows</a>
+      </li>
       <li class="my-2 scroll-my-6 scroll-py-6">
         <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#for-combining-model-parameters-and-preprocessing">For combining model, parameters, and preprocessing</a>
-      </li></ul><ul>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#yardstick">yardstick</a>
+      </li>
       <li class="my-2 scroll-my-6 scroll-py-6">
         <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#for-extracting-metrics-from-the-model">For extracting metrics from the model</a>
       </li>
       <li class="my-2 scroll-my-6 scroll-py-6">
         <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#fit-the-entire-data-set-using-the-final-wf">Fit the entire data set using the final wf</a>
-      </li></ul><ul>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#broom">broom</a>
+      </li>
       <li class="my-2 scroll-my-6 scroll-py-6">
         <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#augment">augment()</a>
       </li>
@@ -1728,25 +1675,43 @@ First, lets load the tidymodels meta-package:" /><meta property="og:image" conte
       
 
       <div class="prose prose-slate lg:prose-xl dark:prose-invert">
-        <h2 id="introduction-to-machine-learning-with-tidymodels">Introduction to machine learning with <code>tidymodels</code></h2>
-<h2 id="tidymodels-provides-a-clean-organized-and--most-importantly--consistent-programming-syntax-for-data-pre-processing-model-specification-model-fitting-model-evaluation-and-prediction"><code>Tidymodels</code> provides a clean, organized, and&ndash;most importantly&ndash;consistent programming syntax for data pre-processing, model specification, model fitting, model evaluation, and prediction.</h2>
-<h1 id="anatomy-of-tidymodels">Anatomy of <code>tidymodels</code></h1>
-<h2 id="a-meta-package-that-installs-and-load-the-core-packages-listed-below-that-you-need-for-modeling-and-machine-learning">a meta-package that installs and load the core packages listed below that you need for modeling and machine learning</h2>
-<h2 id="rsamples-provides-infrastructure-for-efficient-data-splitting-and-resampling"><code>rsamples</code>: provides infrastructure for efficient data splitting and resampling</h2>
-<h2 id="parsnip-a-tidy-unified-interface-to-models-that-can-be-used-to-try-a-range-of-models-without-getting-bogged-down-in-the-syntactical-minutiae-of-the-underlying-packages"><code>parsnip</code>: a tidy, unified interface to models that can be used to try a range of models without getting bogged down in the syntactical minutiae of the underlying packages</h2>
-<h2 id="recipes-a-tidy-interface-to-data-pre-processing-tools-for-feature-engineering"><code>recipes</code>: a tidy interface to data pre-processing tools for feature engineering</h2>
-<h2 id="workflows-workflows-bundle-your-pre-processing-modeling-and-post-processing-together"><code>workflows</code>: workflows bundle your pre-processing, modeling, and post-processing together</h2>
-<h2 id="tune-helps-you-optimize-the-hyperparameters-of-your-model-and-pre-processing-steps"><code>tune</code>: helps you optimize the hyperparameters of your model and pre-processing steps</h2>
-<h2 id="yardstick-measures-the-effectiveness-of-models-using-performance-metrics"><code>yardstick</code>: measures the effectiveness of models using performance metrics</h2>
-<h2 id="dials-contains-tools-to-create-and-manage-values-of-tuning-parameters-and-is-designed-to-integrate-well-with-the-parsnip-package"><code>dials</code>: contains tools to create and manage values of tuning parameters and is designed to integrate well with the parsnip package</h2>
-<h2 id="broom-summarizes-key-information-about-models-in-tidy-tibbles"><code>broom</code>: summarizes key information about models in tidy tibble()s</h2>
-<p>First, lets load the <code>tidymodels</code> meta-package:</p>
+        <h1 id="introduction-to-machine-learning-with-tidymodels">Introduction to machine learning with <em>tidymodels</em></h1>
+<p><em><strong>Tidymodels</strong></em> provides a clean, organized, and&ndash;most importantly&ndash;consistent programming syntax for data pre-processing, model specification, model fitting, model evaluation, and prediction.</p>
+<h2 id="anatomy-of-tidymodels">Anatomy of <em>tidymodels</em></h2>
+<p>A meta-package that installs and load the core packages listed below that you need for modeling and machine learning</p>
+<ul>
+<li>
+<p><em><strong>rsamples</strong></em>: provides infrastructure for efficient data splitting and resampling</p>
+</li>
+<li>
+<p><em><strong>parsnip</strong></em>: a tidy, unified interface to models that can be used to try a range of models without getting bogged down in the syntactical minutiae of the underlying packages</p>
+</li>
+<li>
+<p><em><strong>recipes</strong></em>: a tidy interface to data pre-processing tools for feature engineering</p>
+</li>
+<li>
+<p><em><strong>workflows</strong></em>: workflows bundle your pre-processing, modeling, and post-processing together</p>
+</li>
+<li>
+<p><em><strong>tune</strong></em>: helps you optimize the hyperparameters of your model and pre-processing steps</p>
+</li>
+<li>
+<p><em><strong>yardstick</strong></em>: measures the effectiveness of models using performance metrics</p>
+</li>
+<li>
+<p><em><strong>dials</strong></em>: contains tools to create and manage values of tuning parameters and is designed to integrate well with the parsnip package</p>
+</li>
+<li>
+<p><em><strong>broom</strong></em>: summarizes key information about models in tidy tibble()s</p>
+</li>
+</ul>
+<p>First, lets load the <em><strong>tidymodels</strong></em> meta-package:</p>
 <pre><code>library(tidymodels)
 library(tidyverse)
 </code></pre>
 <h1 id="package-tutorials">Package tutorials:</h1>
 <h2 id="data">Data</h2>
-<p>I&rsquo;ll demonstrate it&rsquo;s features using an existing data set from Bruno Oliveria, <code>Amphibio</code>:</p>
+<p>I&rsquo;ll demonstrate it&rsquo;s features using an existing data set from Bruno Oliveria, <em>Amphibio</em>:</p>
 <ul>
 <li>Link to publication: <a href="https://www.nature.com/articles/sdata2017123" target="_blank" rel="noopener">https://www.nature.com/articles/sdata2017123</a></li>
 <li>Link to data: <a href="https://ndownloader.figstatic.com/files/8828578" target="_blank" rel="noopener">https://ndownloader.figstatic.com/files/8828578</a></li>
@@ -1842,7 +1807,7 @@ amphibio %&gt;%
 </ul>
 <p>Given the data, one possible modeling application could be to use data
 to predict order using two models: knn and boosted regression trees.</p>
-<p>To start the modeling process, we&rsquo;ll use <code>rsamples</code> to split the data
+<p>To start the modeling process, we&rsquo;ll use <em>rsamples</em> to split the data
 into training and testing sets.</p>
 <pre><code>set.seed(42)
 
@@ -1851,7 +1816,7 @@ tidy_train &lt;- training(tidy_split)
 tidy_test &lt;- testing(tidy_split)
 tidy_kfolds &lt;- vfold_cv(tidy_train)
 </code></pre>
-<p>We can use <code>recipes</code> to preprocess the data:</p>
+<p>We can use <em>recipes</em> to preprocess the data:</p>
 <pre><code># Recipes package 
 ## For preprocessing, feature engineering, and feature elimination 
 tidy_rec &lt;- recipe(Order ~ ., data = tidy_train) %&gt;% 
@@ -1860,16 +1825,16 @@ tidy_rec &lt;- recipe(Order ~ ., data = tidy_train) %&gt;%
   prep()
 </code></pre>
 <p>Now that we&rsquo;ve created a recipe to process the data for modeling, we can
-use <code>parsnip</code> to model the data:</p>
+use <em><strong>parsnip</strong></em> to model the data:</p>
 <p>First, let&rsquo;s have a look at the model’s description</p>
 <pre><code>library(&quot;webshot&quot;)
 # ?boost_tree
 </code></pre>
 <iframe src="https://parsnip.tidymodels.org/reference/boost_tree.html" width="100%" height="400px">
 </iframe>
-<h2 id="boost_tree"><code>boost_tree()</code></h2>
+<h2 id="boost_tree"><em>boost_tree()</em></h2>
 <h3 id="description">Description</h3>
-<p><code>boost_tree()</code> defines a model that creates a series of decision trees
+<p><em><strong>boost_tree()</strong></em> defines a model that creates a series of decision trees
 forming an ensemble. Each tree depends on the results of previous trees.
 All trees in the ensemble are combined to produce a final prediction.</p>
 <p>There are different ways to fit this model. See the engine-specific
@@ -1888,7 +1853,7 @@ pages for more details:</p>
 </ul>
 <iframe src="https://parsnip.tidymodels.org/reference/nearest_neighbor.html" width="100%" height="400px">
 </iframe>
-<h2 id="nearest_neighbor"><code>nearest_neighbor()</code>:</h2>
+<h2 id="nearest_neighbor"><em>nearest_neighbor()</em>:</h2>
 <h3 id="defines-a-model-that-uses-the-k-most-similar-data-points-from-the-training-set-to-predict-new-samples">defines a model that uses the K most similar data points from the training set to predict new samples.</h3>
 <h3 id="there-are-different-ways-to-fit-this-model-see-the-engine-specific-pages-for-more-details">There are different ways to fit this model. See the engine-specific pages for more details:</h3>
 <ul>
@@ -1907,9 +1872,9 @@ tidy_knn_model &lt;- nearest_neighbor(neighbors = tune()) %&gt;%
   set_mode(&quot;classification&quot;) %&gt;% 
   set_engine(&quot;kknn&quot;)
 </code></pre>
-<p>Our basic model recipe is complete, but now we want to use <code>dials</code> to
+<p>Our basic model recipe is complete, but now we want to use <em>dials</em> to
 tune parameters.</p>
-<h1 id="dials"><code>dials</code></h1>
+<h2 id="dials"><em><strong>dials</strong></em></h2>
 <p>For boosted regression trees, there are 3 basic parameters:</p>
 <pre><code>parameters(tidy_boosted_model)
 
@@ -1921,9 +1886,9 @@ tune parameters.</p>
 ##  learn_rate learn_rate nparam[+]
 </code></pre>
 <ul>
-<li><code>trees</code>: An integer for the number of trees contained in the ensemble.</li>
-<li><code>min_n</code>: An integer for the minimum number of data points in a node that is required for the node to be split further.</li>
-<li><code>learn_rate</code>: A number for the rate at which the boosting algorithm adapts from iteration-to-iteration (specific engines only).</li>
+<li><em>trees</em>: An integer for the number of trees contained in the ensemble.</li>
+<li><em>min_n</em>: An integer for the minimum number of data points in a node that is required for the node to be split further.</li>
+<li><em>learn_rate</em>: A number for the rate at which the boosting algorithm adapts from iteration-to-iteration (specific engines only).</li>
 </ul>
 <p>Knn has a single parameter to tune: the neighbors</p>
 <pre><code>parameters(tidy_knn_model)
@@ -1934,12 +1899,12 @@ tune parameters.</p>
 ##   neighbors neighbors nparam[+]
 </code></pre>
 <ul>
-<li><code>neighbors</code>: A single integer for the number of neighbors to consider
+<li><em>neighbors</em>: A single integer for the number of neighbors to consider
 (often called k). For kknn, a value of 5 is used if neighbors is not
 specified.</li>
 </ul>
-<p>So, we can use <code>dials</code> to set the possible parameter values, which can
-then be tuned using <code>tune</code>.</p>
+<p>So, we can use <em>dials</em> to set the possible parameter values, which can
+then be tuned using <em>tune</em>.</p>
 <pre><code># Dials creates the parameter grids 
 # Tune applies the parameter grid to the models 
 # Dials pacakge 
@@ -1985,8 +1950,8 @@ knn_grid
 ##  9        13
 ## 10        15
 </code></pre>
-<p>Implement tuning grid using <code>tune</code>:</p>
-<h1 id="tune"><code>tune</code></h1>
+<p>Implement tuning grid using <em>tune</em>:</p>
+<h2 id="tune"><em><strong>tune</strong></em></h2>
 <pre><code># install.packages(c(&quot;xgboost&quot;, &quot;kknn&quot;))
 library(xgboost)
 library(kknn)
@@ -2017,13 +1982,13 @@ knn_param &lt;- knn_tune %&gt;% select_best(&quot;roc_auc&quot;)
 tidy_boosted_model_final &lt;- finalize_model(tidy_boosted_model, boosted_param)
 tidy_knn_model_final &lt;- finalize_model(tidy_knn_model, knn_param)
 </code></pre>
-<p>Now, well try different options from <code>dials</code> for parameter tuning, using
+<p>Now, well try different options from <em>dials</em> for parameter tuning, using
 two additional methods for grid specification:</p>
 <ul>
-<li>random grid with <code>dials::grid_random</code></li>
-<li>maximum entropy grid with <code>dials::grid_max_entropy</code></li>
+<li>random grid with <em>dials::grid_random</em></li>
+<li>maximum entropy grid with <em>dials::grid_max_entropy</em></li>
 </ul>
-<h2 id="grid_random"><code>grid_random</code></h2>
+<h2 id="grid_random"><em>grid_random</em></h2>
 <pre><code>boosted_grid_rand &lt;- grid_random(parameters(tidy_boosted_model), size = boosted_params)
 boosted_grid_rand
 
@@ -2072,7 +2037,7 @@ knn_tune_rand &lt;- read_rds(&quot;knn_tune_rand.rds&quot;)
 boosted_param_rand &lt;- boosted_tune_rand %&gt;% select_best(&quot;roc_auc&quot;)
 knn_param_rand &lt;- knn_tune_rand %&gt;% select_best(&quot;roc_auc&quot;)
 </code></pre>
-<h2 id="grid_max_entropy"><code>grid_max_entropy</code></h2>
+<h2 id="grid_max_entropy"><em>grid_max_entropy</em></h2>
 <pre><code>boosted_grid_maxent &lt;- grid_max_entropy(parameters(tidy_boosted_model), size = boosted_params)
 boosted_grid_maxent
 
@@ -2124,7 +2089,7 @@ knn_tune_maxent &lt;- read_rds(&quot;knn_tune.rds&quot;)
 boosted_param_maxent &lt;- boosted_tune_maxent %&gt;% select_best(&quot;roc_auc&quot;)
 knn_param_maxent &lt;- knn_tune_maxent %&gt;% select_best(&quot;roc_auc&quot;)
 </code></pre>
-<h1 id="workflows"><code>workflows</code></h1>
+<h2 id="workflows"><em>workflows</em></h2>
 <h3 id="for-combining-model-parameters-and-preprocessing">For combining model, parameters, and preprocessing</h3>
 <pre><code>boosted_wf &lt;- workflow() %&gt;% 
   add_model(tidy_boosted_model_final) %&gt;% 
@@ -2134,7 +2099,7 @@ knn_wf &lt;- workflow() %&gt;%
   add_model(tidy_knn_model_final) %&gt;% 
   add_recipe(tidy_rec)
 </code></pre>
-<h1 id="yardstick"><code>yardstick</code></h1>
+<h2 id="yardstick"><em>yardstick</em></h2>
 <h3 id="for-extracting-metrics-from-the-model">For extracting metrics from the model</h3>
 <pre><code>boosted_res &lt;- last_fit(boosted_wf, tidy_split)
 knn_res &lt;- last_fit(knn_wf, tidy_split)
@@ -2294,11 +2259,11 @@ ggplot(bind_rows(mods$.predictions), aes(Order, .pred_Anura)) +
 
 final_knn_model &lt;- fit(knn_wf, amphibio)
 </code></pre>
-<h1 id="broom"><code>broom</code></h1>
-<p>Now we can use <code>broom</code> to tidy the results from these models, and
+<h2 id="broom"><em>broom</em></h2>
+<p>Now we can use <em>broom</em> to tidy the results from these models, and
 provide an intuitive view of their meaning!</p>
-<h2 id="augment"><code>augment()</code></h2>
-<p>First, we’ll use <code>augment</code> to obtain predictions, residuals, and other
+<h2 id="augment"><em>augment()</em></h2>
+<p>First, we’ll use <em>augment</em> to obtain predictions, residuals, and other
 items from the model, which auto-binds them to the original dataset.</p>
 <pre><code>boosted_aug &lt;- augment(final_boosted_model, new_data = amphibio[,-1])
 knn_aug &lt;- augment(final_knn_model, new_data = amphibio[,-1])
@@ -2306,8 +2271,8 @@ knn_aug &lt;- augment(final_knn_model, new_data = amphibio[,-1])
 boosted_aug_long &lt;- boosted_aug %&gt;%
   pivot_longer(-c(.pred_class, .pred_Anura, .pred_Caudata), names_to = &quot;predictor&quot;, values_to = &quot;value&quot;) 
 </code></pre>
-<h2 id="now-we-can-evaluate-the-models-using-yardstick">Now we can evaluate the models using <code>yardstick</code>!</h2>
-<h1 id="yardstick-1"><code>yardstick</code></h1>
+<h2 id="now-we-can-evaluate-the-models-using-yardstick">Now we can evaluate the models using <em>yardstick</em>!</h2>
+<h1 id="yardstick-1"><em>yardstick</em></h1>
 <pre><code>final_boosted_model %&gt;%
   predict(bake(tidy_rec, new_data = tidy_test), type = &quot;prob&quot;) %&gt;%
   bind_cols(tidy_test) %&gt;%
@@ -2662,7 +2627,7 @@ ggplot(boosted_aug_long, aes(x = value, y = .pred_Anura, col = .pred_class)) +
     width="96"
     height="96"
     alt="J Alex Baecher"
-  src="/author/j-alex-baecher/avatar_hu9704284195948671912.jpg"
+  src="/author/j-alex-baecher/avatar_hu6680103685818670678.jpg"
   loading="lazy"
   />
   
