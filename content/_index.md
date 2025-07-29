@@ -57,29 +57,27 @@ sections:
       show_education: false
 
   - block: accomplishments
-    content:
-      username: admin
-      title: Education
-      subtitle: ''
-      # Accomplishments can be used for education
-      items:
-        - title: Ph.D., Interdisciplinary Ecology
-          organization: University of Florida
-          date_start: '2019-08-01'
-          date_end: '2024-08-01'
-          description: 'Dissertation focused on spatial ecology and conservation'
-        - title: M.Sc., Biology
-          organization: Eastern Kentucky University  
-          date_start: '2015-08-01'
-          date_end: '2017-05-01'
-          description: 'Master\'s research in biology'
-        - title: B.Sc., Biology
-          organization: University of Arkansas
-          date_start: '2010-08-01'
-          date_end: '2014-05-01'
-          description: 'Bachelor\'s degree in Biology'
-    design:
-      columns: 2
+      content:
+        title: Education
+        subtitle: ''
+        items:
+          - title: Ph.D., Interdisciplinary Ecology
+            organization: University of Florida
+            date_start: '2019-08-01'
+            date_end: '2024-08-01'
+            description: 'Dissertation focused on spatial ecology and conservation'
+          - title: M.Sc., Biology
+            organization: Eastern Kentucky University  
+            date_start: '2015-08-01'
+            date_end: '2017-05-01'
+            description: 'Masters research in biology'
+          - title: B.Sc., Biology
+            organization: University of Arkansas
+            date_start: '2010-08-01'
+            date_end: '2014-05-01'
+            description: 'Bachelor degree in Biology'
+      design:
+        columns: 2
 
   - block: markdown
     content:
