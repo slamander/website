@@ -46,7 +46,7 @@ sections:
       biography:
         style: ''
 
-  - block: markdow 
+  - block: markdown
     content:
       title: "Education"
       text: |
@@ -69,7 +69,7 @@ sections:
                   <span>2017</span>
                 </div>
                 <div class="timeline-marker"></div>
-               <div class="timeline-content">
+                <div class="timeline-content">
                   <h4>M.Sc., Biology</h4>
                   <p><strong>Eastern Kentucky University</strong></p>
                   <p>Master's research in biology</p>
