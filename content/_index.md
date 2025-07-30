@@ -48,10 +48,17 @@ sections:
       title: "Education"
       text: |
         **Ph.D., Interdisciplinary Ecology** | University of Florida (2024)
+         - *Fellowship:* Doctoral Preeminence Research Fellowship
+         - [Scheffers lab](https://www.schefferslab.com/) (Dept. Wildlife Ecology and Conservation) 
 
         **M.Sc., Biology** | Eastern Kentucky University (2017)
+         - *Teaching Assistant*: Human Anatomy
+         - [Richter lab](https://richterlab.weebly.com/) (Dept. Biology) 
 
         **B.Sc., Biology** | University of Arkansas (2014)
+         - *Research Assistant*
+         - [Willson lab](https://www.willsonlab.com/) (Dept. Biology) 
+
 
   - block: experience
     content:
@@ -61,8 +68,8 @@ sections:
 
   - block: collection
     content:
-      title: "Research projects"
-      count: 3
+      title: "Research" 
+      count: 4
       archive:
         enable: true
         text: "See all projects →"
@@ -91,7 +98,7 @@ sections:
 
   - block: collection
     content:
-      title: "Recent Talks"
+      title: "Select talks"
       count: 3
       archive:
         enable: true
@@ -133,11 +140,11 @@ sections:
           <div>
             <h3>Teaching Philosophy: </h3>
             <p> 
-        I employ the following evidence-based strategies: 
+        Evidence-based strategies: 
 
          - inquiry-based learning through real-world problem-solving
 
-         - hands-on, experiential activities
+         - hands-on, experiential activities (in the classroom, lab, or field)
 
          - active learning exercises (e.g., case studies and debates)
 
@@ -146,39 +153,40 @@ sections:
           <div>
             <h3>Mentoring Philosophy:</h3>
             <p>
-         I prioritize three key practices:
 
-         - regular check-ins to align students’ academic progress with their personal goals and well-being
+         Key practices:
 
-         - fostering independent problem-solving by giving students space to explore, make mistakes, and reflect
+         - align students’ academic progress with personal goals and well-being
 
-         - encouraging external mentorship, whether within the lab (through peer or cascade mentoring) or from additional faculty mentors
+         - foster independent problem-solving by providing space to explore and reflect
+
+         - encourage outside collaboration and/or mentorship
 
          </p>
         </div>
         </div>
 
          ## Student Outcomes
-        My students have gone on to pursue careers in:
-        - **Career progression:** 7 students now in MS (5) and PhD (2) programs and credit my mentorship in shaping their career trajectory
-        - **Academic output:** 11 conference presentations, 1 undergraduate thesis, and 4 peer-reviewed publications
+        My students have gone on to pursue careers in academia, state/federal agencies, and the private sector:
+        - **Career progression:** 7 students pursued or completed MS (5) and PhD (2) programs and credit my mentorship in shaping their career trajectory
+        - **Academic output:** 15 conference presentations, 2 undergraduate theses, and 4 peer-reviewed publications
 
-        ## Courses taught
+        ## Recent courses
 
         ### **Environmental Science** | University of Florida
         *Senior-level course | 2022 -- 2024*
+        <img src="/media/EVS_3000L_pic_collage.png" alt="EVS 3000L collage" style="width: 1000px; height: auto;">
         
         A course covering population ecology, habitat management, and conservation strategies for wildlife species. Students learn to apply quantitative methods to real conservation problems.
         
-        - **Topics**: Environmental monitoring, data collection, modeling, technical speaking and writing
-        - **Methods**: R programming, GIS analysis, field techniques
-        - **Enrollment**: 25 students
+        - **Topics**: Land management, Climate science, social-ecological systems, environmental justice, sustainability, invasive species
+        - **Methods**: R programming, GIS analysis, field techniques, technical writing, science communication
+        - **Enrollment**: 12 students
         
-        [Course Materials](#) | [Syllabus (PDF)](#) | [R Tutorials](#)
+        [Syllabus (PDF)](https://drive.google.com/file/d/1oqrRQFm-8x6X6gH7MzmizIdZpZrwe3jG/view?usp=sharing) | Teaching R: [pt 1](https://www.alexbaecher.com/post/r-intro/) & [pt 2](https://www.alexbaecher.com/post/r-intro-pt2/)
 
-        ### **Landscape Connectivity Modeling** | Graduate Workshop
-        *Intensive 3-day workshop | Spring 2024*
-        
+        ### **Landscape Connectivity Modeling** | Professional workshop
+        *Intensive workshop | Spring 2024*
         Hands-on workshop teaching cutting-edge methods for modeling animal movement and landscape connectivity using circuit theory and spatial absorbing Markov chains.
         
         - **Software**: R, Circuitscape, SAMC package
@@ -190,12 +198,11 @@ sections:
         ## Select Guest Lectures & Workshops
 
         - **Salamander Conservation in the Southeastern USA** - University of Florida (Spring 2020)
-        - **Grassland Herpetofauna Restoration Ecology** - University of Florida (Spring 2020) 
-        - **Landscape Connectivity Principles** - University of Florida (Spring 2020)
-        - **Expert Elicitation for Invasive Species Management** - IALE Conference (2023)
+        - **Connectivity for Species Redistribution** - University of Florida (Spring 2020) 
+        - **Expert Elicitation for Invasive Species Management** - University of Florida (2023)
         - **SAMC Connectivity Modeling** - Species on the Move Conference (2023)
 
-        ## Teaching R: resources: 
+        ## Resources: 
         See my **R sandbox** for a 2-part tutorial on R coding:
           - [**Part 1:**](https://www.alexbaecher.com/post/r-intro/)
             - Using functions

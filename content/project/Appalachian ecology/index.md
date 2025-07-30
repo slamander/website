@@ -1,7 +1,7 @@
 ---
 title: Appalachian Salamander Ecology
 
-date: "2019-09-10T00:00:00Z"
+date: "2015-01-15"
 
 external_link: []
 

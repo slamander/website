@@ -14,11 +14,13 @@
     
     <item>
       <title>Intro to R (part 2): investigating carbon emmissions</title>
-      <link>http://localhost:1313/post/r-intro/</link>
+      <link>http://localhost:1313/post/r-intro-pt2/</link>
       <pubDate>Fri, 12 Aug 2022 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/post/r-intro/</guid>
-      <description>&lt;p&gt;For an introduction to basic R coding, see XXXX&lt;/p&gt;
-&lt;p&gt;In this tutorial, we will use data from &lt;a href=&#34;https://www.gapminder.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Gapminder&lt;/a&gt; to learn the following:&lt;/p&gt;
+      <guid>http://localhost:1313/post/r-intro-pt2/</guid>
+      <description>&lt;h1 id=&#34;welcome-back-to-r&#34;&gt;Welcome back to R!&lt;/h1&gt;
+&lt;h2 id=&#34;this-tutorial-will-provide-skills-for-intermediate-r-usage&#34;&gt;This tutorial will provide skills for intermediate R usage&lt;/h2&gt;
+&lt;h3 id=&#34;for-an-introduction-to-basic-r-coding-see-r-intro-pt-1httpswwwalexbaechercompostr-intro&#34;&gt;For an introduction to basic R coding, see &lt;a href=&#34;https://www.alexbaecher.com//post/r-intro/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;R intro pt 1&lt;/a&gt;&lt;/h3&gt;
+&lt;h2 id=&#34;in-this-tutorial-we-will-use-data-from-gapminderhttpswwwgapminderorg-to-learn-the-following&#34;&gt;In this tutorial, we will use data from &lt;a href=&#34;https://www.gapminder.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Gapminder&lt;/a&gt; to learn the following:&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;read data from a csv file&lt;/li&gt;
 &lt;li&gt;manipulate a data set&lt;/li&gt;
@@ -27,15 +29,15 @@
 &lt;li&gt;animate figures&lt;/li&gt;
 &lt;li&gt;create for loops&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h1 id=&#34;gapminder----------------------&#34;&gt;Gapminder &amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&lt;/h1&gt;
-&lt;h1 id=&#34;on-to-the-data&#34;&gt;On to the data!&lt;/h1&gt;
+&lt;h1 id=&#34;gapminder&#34;&gt;Gapminder:&lt;/h1&gt;
+&lt;h3 id=&#34;on-to-the-data&#34;&gt;On to the data!&lt;/h3&gt;
 &lt;pre&gt;&lt;code&gt;gap &amp;lt;- read.csv(file = &amp;quot;./consumption_emissions_tonnes_per_person.csv&amp;quot;)
 
 head(gap)
 str(gap)
 View(gap)
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h1 id=&#34;properties-of-the-dataframe&#34;&gt;Properties of the dataframe.&lt;/h1&gt;
+&lt;h2 id=&#34;properties-of-the-dataframe&#34;&gt;Properties of the dataframe.&lt;/h2&gt;
 &lt;pre&gt;&lt;code&gt;nrow(gap)
 ncol(gap)
 dim(gap)
@@ -51,13 +53,13 @@ yrs
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;l    ength(yrs) # 28 years.
 2016 - 1989  # Not matching!  Reason: 1989 was excluded.&lt;/p&gt;
-&lt;h1 id=&#34;think-about-it-like-this&#34;&gt;Think about it like this:&lt;/h1&gt;
-&lt;h1 id=&#34;start-with-2016-years-take-away-all-years-1989-and-earlier--we-lose-1989&#34;&gt;Start with 2016 years, take away all years 1989 and earlier.  We lose 1989.&lt;/h1&gt;
-&lt;h1 id=&#34;but-you-can-always-just-use-length-to-check&#34;&gt;But you can always just use length to check.&lt;/h1&gt;
+&lt;h3 id=&#34;think-about-it-like-this&#34;&gt;Think about it like this:&lt;/h3&gt;
+&lt;h3 id=&#34;start-with-2016-years-take-away-all-years-1989-and-earlier--we-lose-1989&#34;&gt;Start with 2016 years, take away all years 1989 and earlier.  We lose 1989.&lt;/h3&gt;
+&lt;h3 id=&#34;but-you-can-always-just-use-length-to-check&#34;&gt;But you can always just use length to check.&lt;/h3&gt;
 &lt;pre&gt;&lt;code&gt;gap[6, ]
 aus &amp;lt;- gap[6, 2:ncol(gap)]
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h1 id=&#34;scatterplots&#34;&gt;Scatterplots&lt;/h1&gt;
+&lt;h2 id=&#34;scatterplots&#34;&gt;Scatterplots&lt;/h2&gt;
 &lt;pre&gt;&lt;code&gt;plot(x = yrs, y = aus)
 plot(x = yrs, y = aus, ylim = c(0, 15))
 plot(x = yrs, y = aus, ylim = c(0, 15), type = &amp;quot;l&amp;quot;)
@@ -65,8 +67,8 @@ plot(x = yrs, y = aus, ylim = c(0, 15), type = &amp;quot;l&amp;quot;)
 plot(x = yrs, y = aus, ylim = c(0, 15), type = &amp;quot;l&amp;quot;, xlab = &amp;quot;&amp;quot;, ylab = &amp;quot;Tonnes&amp;quot;, 
  main = &amp;quot;Tonnes of carbon emissions per person in Australia&amp;quot;)
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h1 id=&#34;but-you-can-do-that-in-excel-and-it-might-be-easier&#34;&gt;But you can do that in Excel, and it might be easier.&lt;/h1&gt;
-&lt;h1 id=&#34;we-want-the-gapinder-bubble-plot&#34;&gt;We want the Gapinder bubble plot!&lt;/h1&gt;
+&lt;h3 id=&#34;but-you-can-do-that-in-excel-and-it-might-be-easier&#34;&gt;But you can do that in Excel, and it might be easier.&lt;/h3&gt;
+&lt;h3 id=&#34;we-want-the-gapinder-bubble-plot&#34;&gt;We want the Gapinder bubble plot!&lt;/h3&gt;
 &lt;pre&gt;&lt;code&gt;library(reshape2)
 long_gap = melt(data = gap, id.vars = &amp;quot;country&amp;quot;, 
  variable.name = &amp;quot;year&amp;quot;, 
@@ -74,13 +76,13 @@ long_gap = melt(data = gap, id.vars = &amp;quot;country&amp;quot;,
 
 head(long_gap)  
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h1 id=&#34;very-nice-but-the-year-is-x1989&#34;&gt;Very nice, but the year is &amp;ldquo;X1989&amp;rdquo;.&lt;/h1&gt;
-&lt;h1 id=&#34;if-we-plot-that-it-will-be-out-of-order-because-its-not-a-number&#34;&gt;If we plot that it will be out of order because its not a number.&lt;/h1&gt;
+&lt;h3 id=&#34;very-nice-but-the-year-is-x1989&#34;&gt;Very nice, but the year is &amp;ldquo;X1989&amp;rdquo;.&lt;/h3&gt;
+&lt;h3 id=&#34;if-we-plot-that-it-will-be-out-of-order-because-its-not-a-number&#34;&gt;If we plot that it will be out of order because its not a number.&lt;/h3&gt;
 &lt;pre&gt;&lt;code&gt;str(long_gap)
 
 head(long_gap)  
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h1 id=&#34;get-parts-of-a-character-string-by-position&#34;&gt;Get parts of a character string by position:&lt;/h1&gt;
+&lt;h3 id=&#34;get-parts-of-a-character-string-by-position&#34;&gt;Get parts of a character string by position:&lt;/h3&gt;
 &lt;pre&gt;&lt;code&gt;substr(x = &amp;quot;seahorse&amp;quot;, start = 1, stop = 3)
 substr(x = &amp;quot;seahorse&amp;quot;, start = 4, stop = 8)
 
@@ -100,8 +102,7 @@ hist(year_89$emissions)
 hist(year_89$emissions, 20)
 View(year_89)
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h1 id=&#34;we-need-to-combine-this-data-with-1-gdp&#34;&gt;We need to combine this data with (1) GDP&lt;/h1&gt;
-&lt;h1 id=&#34;and--2-population&#34;&gt;and  (2) population&lt;/h1&gt;
+&lt;h3 id=&#34;we-need-to-combine-this-data-with-1-gdp-2-population&#34;&gt;We need to combine this data with (1) GDP (2) population&lt;/h3&gt;
 &lt;pre&gt;&lt;code&gt;gdp &amp;lt;- read.csv(file = &amp;quot;./ny_gdp_pcap_pp_kd_R2.csv&amp;quot;)
 
 head(gdp)
@@ -120,8 +121,8 @@ hist(x = gdp_89$gdp_per_capita, breaks = 40)
 hist(log(x = gdp_89$gdp_per_capita, base = 10), 
  breaks = 20)
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h1 id=&#34;we-arent-going-to-polish-this-figure-because-its-not-the-end-goal&#34;&gt;We aren&amp;rsquo;t going to polish this figure because it&amp;rsquo;s not the end goal,&lt;/h1&gt;
-&lt;h1 id=&#34;but-you-could-make-the-x-units-be-say-10-100-1000-10000-etc&#34;&gt;but you could make the x units be say 10, 100, 1000, 10000, etc.&lt;/h1&gt;
+&lt;h3 id=&#34;we-arent-going-to-polish-this-figure-because-its-not-the-end-goal&#34;&gt;We aren&amp;rsquo;t going to polish this figure because it&amp;rsquo;s not the end goal,&lt;/h3&gt;
+&lt;h3 id=&#34;but-you-could-make-the-x-units-be-say-10-100-1000-10000-etc&#34;&gt;but you could make the x units be say 10, 100, 1000, 10000, etc.&lt;/h3&gt;
 &lt;pre&gt;&lt;code&gt;pop &amp;lt;- read.csv(file = &amp;quot;./population_total_R2.csv&amp;quot;)
 View(pop)
 
@@ -134,13 +135,13 @@ str(long_pop)
 long_pop$yrs = as.numeric(long_pop$yrs)
 head(long_pop)
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h1 id=&#34;joins--------------------------&#34;&gt;Joins &amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;-&lt;/h1&gt;
-&lt;h1 id=&#34;we-need-to-connect-long_gap-to-long_pop&#34;&gt;We need to connect long_gap to long_pop&lt;/h1&gt;
+&lt;h2 id=&#34;joins&#34;&gt;Joins&lt;/h2&gt;
+&lt;h3 id=&#34;we-need-to-connect-long_gap-to-long_pop&#34;&gt;We need to connect long_gap to long_pop&lt;/h3&gt;
 &lt;pre&gt;&lt;code&gt;head(long_gap)
 head(long_pop)
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h1 id=&#34;they-dont-have-the-same-number-of-years-in-them&#34;&gt;They don&amp;rsquo;t have the same number of years in them.&lt;/h1&gt;
-&lt;h1 id=&#34;example&#34;&gt;Example&lt;/h1&gt;
+&lt;h3 id=&#34;they-dont-have-the-same-number-of-years-in-them&#34;&gt;They don&amp;rsquo;t have the same number of years in them.&lt;/h3&gt;
+&lt;h3 id=&#34;example&#34;&gt;Example&lt;/h3&gt;
 &lt;pre&gt;&lt;code&gt;animals = c(&amp;quot;alligator&amp;quot;, &amp;quot;bat&amp;quot;, &amp;quot;cat&amp;quot;, &amp;quot;dog&amp;quot;, &amp;quot;emu&amp;quot;, &amp;quot;flying squirrel&amp;quot;)
 charisma = c(22, 12, 18, 24, 17, 30)
 
@@ -155,8 +156,8 @@ pets &amp;lt;- data.frame(person = people,
 
 pets
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h1 id=&#34;how-to-assign-the-people-the-right-facts&#34;&gt;How to assign the people the right facts?&lt;/h1&gt;
-&lt;h1 id=&#34;dplyr-is-powerful-but-we-only-need-one-function-right-now-left_join&#34;&gt;Dplyr is powerful but we only need one function right now, left_join().&lt;/h1&gt;
+&lt;h3 id=&#34;how-to-assign-the-people-the-right-facts&#34;&gt;How to assign the people the right facts?&lt;/h3&gt;
+&lt;h3 id=&#34;dplyr-is-powerful-but-we-only-need-one-function-right-now-left_join&#34;&gt;Dplyr is powerful but we only need one function right now, left_join().&lt;/h3&gt;
 &lt;pre&gt;&lt;code&gt;library(dplyr)
 left_join(pets, animal_facts, by = c(&amp;quot;pet&amp;quot; = &amp;quot;animals&amp;quot;))
 
@@ -185,15 +186,15 @@ plot(x = aus_full$yrs, y = aus_full$gdp_per_capita, type = &amp;quot;l&amp;quot;
  xlab = &amp;quot;&amp;quot;, ylab = &amp;quot;Dollars&amp;quot;,
  main = &amp;quot;Australian GDP Per Capita (PPP), 1989 to 2016&amp;quot;)
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h1 id=&#34;combine-it-all-for-one-year&#34;&gt;Combine it all, for one year.&lt;/h1&gt;
+&lt;h3 id=&#34;combine-it-all-for-one-year&#34;&gt;Combine it all, for one year.&lt;/h3&gt;
 &lt;pre&gt;&lt;code&gt;aus_89
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h1 id=&#34;this-bubble-is-for-australia-in-1989--size-is-scaled-for1000000-pop&#34;&gt;This bubble is for australia in 1989.  Size is scaled for1,000,000 pop.&lt;/h1&gt;
+&lt;h3 id=&#34;this-bubble-is-for-australia-in-1989--size-is-scaled-for1000000-pop&#34;&gt;This bubble is for australia in 1989.  Size is scaled for1,000,000 pop.&lt;/h3&gt;
 &lt;pre&gt;&lt;code&gt;plot(x = aus_89$gdp_per_capita, y = aus_89$emissions, 
  xlim = c(0, 50000), ylim = c(0, 20), cex = aus_89$population / 1000000 , 
  xlab = &amp;quot;Dollars per Capita&amp;quot;, ylab = &amp;quot;Tonnes Carbon Per Capita&amp;quot;)
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h1 id=&#34;world-89&#34;&gt;World 89&lt;/h1&gt;
+&lt;h3 id=&#34;world-89&#34;&gt;World 89&lt;/h3&gt;
 &lt;pre&gt;&lt;code&gt;world_89 &amp;lt;- gapminder[gapminder$yrs == 1989, ]
 world_89
 complete.cases(world_89)
@@ -201,31 +202,31 @@ complete.cases(world_89) == T
 world_89c &amp;lt;- world_89[complete.cases(world_89) == T, ]
 world_89c
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h1 id=&#34;its-helpful-to-know-the-range-to-set-the-limits-of-x-y&#34;&gt;It&amp;rsquo;s helpful to know the range to set the limits of x, y.&lt;/h1&gt;
+&lt;h3 id=&#34;its-helpful-to-know-the-range-to-set-the-limits-of-x-y&#34;&gt;It&amp;rsquo;s helpful to know the range to set the limits of x, y.&lt;/h3&gt;
 &lt;pre&gt;&lt;code&gt;range(world_89c$emissions) # range 0 to 32
 range(world_89c$gdp_per_capita) # range 0 to 32
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h1 id=&#34;size-is-scaled-by-10000000-people&#34;&gt;Size is scaled by 10,000,000 people&lt;/h1&gt;
+&lt;h3 id=&#34;size-is-scaled-by-10000000-people&#34;&gt;Size is scaled by 10,000,000 people&lt;/h3&gt;
 &lt;pre&gt;&lt;code&gt;plot(x = world_89c$gdp_per_capita, y = world_89c$emissions, 
  xlim = c(0, 120000), ylim = c(0, 33), cex = world_89c$population / 10000000 )
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h1 id=&#34;set-area-proportional-to-population&#34;&gt;Set area proportional to population:&lt;/h1&gt;
-&lt;h1 id=&#34;pop--pi--r2&#34;&gt;pop = pi * r^2&lt;/h1&gt;
-&lt;h1 id=&#34;pop--pi--r2-1&#34;&gt;(pop / pi) = r^2&lt;/h1&gt;
-&lt;h1 id=&#34;sqrtpop--pi---r&#34;&gt;sqrt(pop / pi ) = r&lt;/h1&gt;
-&lt;pre&gt;&lt;code&gt;plot(x = world_89c$gdp_per_capita, y = world_89c$emissions, 
+&lt;h3 id=&#34;set-area-proportional-to-population&#34;&gt;Set area proportional to population:&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;pop = pi * r^2
+pop / pi) = r^2
+sqrt(pop / pi ) = r
+plot(x = world_89c$gdp_per_capita, y = world_89c$emissions, 
  xlim = c(0, 120000), ylim = c(0, 33), cex = sqrt(world_89c$population / (1000000 * pi) ), 
  xlab = &amp;quot;Dollars per Capita&amp;quot;, ylab = &amp;quot;Tonnes Carbon Per Capita&amp;quot;, 
  main = &amp;quot;World carbon emissions per capita against GDP per capita&amp;quot;)
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h1 id=&#34;log-version&#34;&gt;Log version&lt;/h1&gt;
+&lt;h3 id=&#34;log-version&#34;&gt;Log version&lt;/h3&gt;
 &lt;pre&gt;&lt;code&gt;plot(x = world_89c$gdp_per_capita, y = world_89c$emissions, log = &amp;quot;xy&amp;quot;,
  cex = sqrt(world_89c$population / (1000000 * pi) ), 
  xlab = &amp;quot;Dollars per Capita&amp;quot;, ylab = &amp;quot;Tonnes Carbon Per Capita&amp;quot;, 
  main = &amp;quot;World carbon emissions per capita against GDP per capita\n(Log Axes)&amp;quot;)
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h1 id=&#34;but-wait-theres-more&#34;&gt;But wait, there&amp;rsquo;s more!&lt;/h1&gt;
-&lt;h1 id=&#34;saving-your-plot&#34;&gt;Saving your plot&lt;/h1&gt;
+&lt;h3 id=&#34;but-wait-theres-more&#34;&gt;But wait, there&amp;rsquo;s more!&lt;/h3&gt;
+&lt;h2 id=&#34;saving-a-plot&#34;&gt;Saving a plot&lt;/h2&gt;
 &lt;pre&gt;&lt;code&gt;png(filename = &amp;quot;./Carbon_emissions_against_gdp.png&amp;quot;, height = 600, width = 800)
 plot(x = world_89c$gdp_per_capita, y = world_89c$emissions, log = &amp;quot;xy&amp;quot;,
  cex = sqrt(world_89c$population / (1000000 * pi) ), 
@@ -233,9 +234,9 @@ plot(x = world_89c$gdp_per_capita, y = world_89c$emissions, log = &amp;quot;xy&a
  main = &amp;quot;World carbon emissions per capita against GDP per capita\n(Log Axes)&amp;quot;)
 dev.off()
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h1 id=&#34;this-confirms-that-we-are-done-with-the-plot-it-causes-the-file-to-write-to-disk&#34;&gt;This confirms that we are done with the plot. It causes the file to write to disk.&lt;/h1&gt;
-&lt;h1 id=&#34;all-graphics-will-be-on-hold-until-we-confirm-this&#34;&gt;All graphics will be on hold until we confirm this.&lt;/h1&gt;
-&lt;h1 id=&#34;ggplot-version-----------------&#34;&gt;ggplot version &amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;-&lt;/h1&gt;
+&lt;h3 id=&#34;this-confirms-that-we-are-done-with-the-plot-it-causes-the-file-to-write-to-disk&#34;&gt;This confirms that we are done with the plot. It causes the file to write to disk.&lt;/h3&gt;
+&lt;h3 id=&#34;all-graphics-will-be-on-hold-until-we-confirm-this&#34;&gt;All graphics will be on hold until we confirm this.&lt;/h3&gt;
+&lt;h2 id=&#34;ggplot&#34;&gt;ggplot&lt;/h2&gt;
 &lt;pre&gt;&lt;code&gt;library(ggplot2)
 head(gapminder)
 ggplot(data = aus_full, mapping = aes(x = yrs, y = emissions)) + 
@@ -244,18 +245,18 @@ ggplot(data = aus_full, mapping = aes(x = yrs, y = emissions)) +
 ggplot(data = aus_full, mapping = aes(x = yrs, y = emissions)) + 
   geom_point() + geom_line() + theme_bw()
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h1 id=&#34;polishing-the-plot&#34;&gt;Polishing the plot&lt;/h1&gt;
+&lt;h3 id=&#34;polishing-the-plot&#34;&gt;Polishing the plot&lt;/h3&gt;
 &lt;pre&gt;&lt;code&gt;ggplot(data = aus_full, mapping = aes(x = yrs, y = emissions)) + 
   geom_point() + geom_line() + theme_bw() + 
   labs(x = &amp;quot;&amp;quot;, y = &amp;quot;Tonnes Carbon Per Capita&amp;quot;, title = &amp;quot;Australian Carbon Emissions&amp;quot;)
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h1 id=&#34;world-1989&#34;&gt;World, 1989.&lt;/h1&gt;
+&lt;h3 id=&#34;world-1989&#34;&gt;World, 1989.&lt;/h3&gt;
 &lt;pre&gt;&lt;code&gt;head(world_89)
 ggplot(data = world_89, mapping = aes(x = gdp_per_capita, y = emissions)) + 
   geom_point(mapping = aes(size = emissions)) + theme_bw() + 
   labs(x = &amp;quot;&amp;quot;, y = &amp;quot;Tonnes Carbon Per Capita&amp;quot;, title = &amp;quot;Australian Carbon Emissions&amp;quot;)
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h1 id=&#34;whats-this-warning-about--complete-cases&#34;&gt;what&amp;rsquo;s this warning about?  Complete cases!&lt;/h1&gt;
+&lt;h3 id=&#34;whats-this-warning-about--complete-cases&#34;&gt;what&amp;rsquo;s this warning about?  Complete cases!&lt;/h3&gt;
 &lt;pre&gt;&lt;code&gt;ggplot(data = world_89c, mapping = aes(x = gdp_per_capita, y = emissions)) + 
   geom_point(mapping = aes(size = population), alpha = 0.5) + theme_bw() + 
   scale_x_log10(lim = c(200, 200000), 
@@ -265,34 +266,35 @@ ggplot(data = world_89, mapping = aes(x = gdp_per_capita, y = emissions)) +
   scale_size_area(max_size = 20) + 
   labs(x = &amp;quot;GDP per Captia&amp;quot;, y = &amp;quot;Tonnes Carbon Per Capita&amp;quot;, title = &amp;quot;World Carbon and GDP per Captia, 1989&amp;quot;)
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h1 id=&#34;off-the-deep-end---------------&#34;&gt;Off the deep end &amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;ndash;&lt;/h1&gt;
-&lt;h1 id=&#34;will-max-out-rstudiocloud-ram-allocation&#34;&gt;(Will max out rstudio.cloud RAM allocation)&lt;/h1&gt;
-&lt;h1 id=&#34;httpsdocsropensciorgmagickarticlesintrohtml&#34;&gt;&lt;a href=&#34;https://docs.ropensci.org/magick/articles/intro.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://docs.ropensci.org/magick/articles/intro.html&lt;/a&gt;&lt;/h1&gt;
+&lt;h2 id=&#34;off-the-deep-end---------------&#34;&gt;Off the deep end &amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;ndash;&lt;/h2&gt;
+&lt;h3 id=&#34;for-this-portion-of-the-tutorial-we-will-use-the-r-package-magick-for-advance-impage-processing&#34;&gt;For this portion of the tutorial, we will use the R package &lt;em&gt;&lt;strong&gt;magick&lt;/strong&gt;&lt;/em&gt; for advance impage processing.&lt;/h3&gt;
+&lt;h3 id=&#34;see-this-webpage-for-referencing-magick-functions-and-usage-httpsdocsropensciorgmagickarticlesintrohtml&#34;&gt;See this webpage for referencing &lt;em&gt;&lt;strong&gt;magick&lt;/strong&gt;&lt;/em&gt; functions and usage: &lt;a href=&#34;https://docs.ropensci.org/magick/articles/intro.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://docs.ropensci.org/magick/articles/intro.html&lt;/a&gt;&lt;/h3&gt;
 &lt;pre&gt;&lt;code&gt;nyrs = length(yrs)
 library(magick)
 
 img &amp;lt;- image_graph(1200, 1200, res = 96)
 
 for(i in 1:nyrs){
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h1 id=&#34;create-plot&#34;&gt;Create plot&lt;/h1&gt;
-&lt;p&gt;year_i = yrs[i]
-year_i_data &amp;lt;- gapminder[gapminder$yrs == year_i, ]&lt;/p&gt;
-&lt;p&gt;plot(x = year_i_data$gdp_per_capita,
-y = year_i_data$emissions, log = &amp;ldquo;xy&amp;rdquo;,
-cex = sqrt(year_i_data$population / (1000000 * pi) ),
-xlim = c(200, 200000),
-ylim = c(0.01, 51),
-xlab = &amp;ldquo;Dollars per Capita&amp;rdquo;, ylab = &amp;ldquo;Tonnes Carbon Per Capita&amp;rdquo;,
-main = &amp;ldquo;World carbon emissions per capita against GDP per capita\n(Log Axes)&amp;rdquo;)&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;}
+# Create plot
+  year_i = yrs[i]
+  year_i_data &amp;lt;- gapminder[gapminder$yrs == year_i, ]
+  
+  plot(x = year_i_data$gdp_per_capita, 
+  y = year_i_data$emissions, log = &amp;quot;xy&amp;quot;,
+   cex = sqrt(year_i_data$population / (1000000 * pi) ), 
+   xlim = c(200, 200000),
+   ylim = c(0.01, 51),
+   xlab = &amp;quot;Dollars per Capita&amp;quot;, ylab = &amp;quot;Tonnes Carbon Per Capita&amp;quot;, 
+   main = &amp;quot;World carbon emissions per capita against GDP per capita\n(Log Axes)&amp;quot;)
+
+}
 
 dev.off()
 animation &amp;lt;- image_animate(img, fps = 4, optimize = TRUE)
 
 image_write(image = animation, path = &amp;quot;./carbon_and_gdp_per_capita.gif&amp;quot;)
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h1 id=&#34;ggplot-version&#34;&gt;ggplot version&lt;/h1&gt;
+&lt;h3 id=&#34;ggplot-version&#34;&gt;ggplot version&lt;/h3&gt;
 &lt;pre&gt;&lt;code&gt;img &amp;lt;- image_graph(1200, 1200, res = 96)
 
 for(i in 1:nyrs){
@@ -321,94 +323,114 @@ animation = image_animate(img, fps = 4, optimize = TRUE)
 
 image_write(image = animation, path = &amp;quot;./gg_carbon_and_gdp_per_capita.gif&amp;quot;)
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h1 id=&#34;ipat-animation&#34;&gt;IPAT animation&lt;/h1&gt;
+&lt;h3 id=&#34;ipat-animation&#34;&gt;IPAT animation&lt;/h3&gt;
 &lt;h1 id=&#34;ipat-total-impact--population--technology&#34;&gt;(IPAT: Total Impact = Population * Technology)&lt;/h1&gt;
 &lt;p&gt;img &amp;lt;- image_graph(1200, 1200, res = 96)&lt;/p&gt;
-&lt;p&gt;for(i in 1:nyrs){&lt;/p&gt;
-&lt;h1 id=&#34;create-plot-1&#34;&gt;Create plot&lt;/h1&gt;
-&lt;p&gt;year_i = yrs[i]
-year_i_data &amp;lt;- gapminder[gapminder$yrs == year_i, ]&lt;/p&gt;
-&lt;p&gt;plot_i = ggplot(data = year_i_data,
-mapping = aes(x = emissions,
-y = gdp_per_capita * population)) +
-geom_text(mapping = aes(label = country)) +
-scale_x_log10(lim = c(0.05, 50)) + scale_y_log10(lim = c(1E9, 1E14)) +
-geom_smooth() + theme_bw() +
-labs(x = &amp;ldquo;Tonnes Carbon&amp;rdquo;, y = &amp;ldquo;GDP per Capita * Population&amp;rdquo;,
-title = year_i)&lt;/p&gt;
-&lt;p&gt;plot(plot_i) # By default, ggplot will not show you plots inside a loop.
-}&lt;/p&gt;
-&lt;p&gt;dev.off()
-animation = image_animate(img, fps = 4, optimize = TRUE)&lt;/p&gt;
-&lt;p&gt;image_write(image = animation, path = &amp;ldquo;./gg_pop_income_against_emissions.gif&amp;rdquo;)&lt;/p&gt;
-&lt;h1 id=&#34;carbon-and-dollars-with-text&#34;&gt;Carbon and dollars, with text&lt;/h1&gt;
-&lt;p&gt;img &amp;lt;- image_graph(1200, 1200, res = 96)
-for(i in 1:nyrs){&lt;/p&gt;
-&lt;h1 id=&#34;create-plot-2&#34;&gt;Create plot&lt;/h1&gt;
-&lt;p&gt;year_i = yrs[i]
-year_i_data &amp;lt;- gapminder[gapminder$yrs == year_i, ]&lt;/p&gt;
-&lt;p&gt;plot_i = ggplot(data = year_i_data, mapping = aes(x = gdp_per_capita, y = emissions)) +
-geom_text(mapping = aes(label = country, size = population)) + theme_bw() +
-scale_x_log10(lim = c(200, 200000),
-breaks = c(200, 2000, 20000, 200000),
-labels = c(&amp;ldquo;200&amp;rdquo;, &amp;ldquo;2,000&amp;rdquo;, &amp;ldquo;20,000&amp;rdquo;, &amp;ldquo;200,000&amp;rdquo;)) +
-scale_y_log10(lim = c(0.1, 50)) +
-# expand_limits(size = c(0, 1500000000)) +
-scale_size_area(max_size = 20, breaks = c(1000000, 100000000, 1000000000),
-labels = c(&amp;ldquo;1 Million&amp;rdquo;, &amp;ldquo;100 Million&amp;rdquo;, &amp;ldquo;1 Billion&amp;rdquo;),
-name = &amp;ldquo;Population&amp;rdquo;) +
-labs(x = &amp;ldquo;Dollars&amp;rdquo;, y = &amp;ldquo;Tonnes Carbon&amp;rdquo;,
-title = paste0(&amp;ldquo;World Carbon and GDP per Captia, &amp;ldquo;, year_i))&lt;/p&gt;
-&lt;p&gt;plot(plot_i) # By default, ggplot will not show you plots inside a loop.
-}&lt;/p&gt;
-&lt;p&gt;dev.off()
-animation = image_animate(img, fps = 4, optimize = TRUE)&lt;/p&gt;
-&lt;p&gt;image_write(image = animation, path = &amp;ldquo;./gg_carbon_and_gdp_per_capita_text.gif&amp;rdquo;)&lt;/p&gt;
-&lt;h1 id=&#34;ipat-r2&#34;&gt;IPAT R2&lt;/h1&gt;
-&lt;p&gt;img &amp;lt;- image_graph(1200, 1200, res = 96)&lt;/p&gt;
-&lt;p&gt;for(i in 1:nyrs){&lt;/p&gt;
-&lt;h1 id=&#34;create-plot-3&#34;&gt;Create plot&lt;/h1&gt;
-&lt;p&gt;year_i = yrs[i]
-year_i_data &amp;lt;- gapminder[gapminder$yrs == year_i, ]&lt;/p&gt;
-&lt;p&gt;plot_i = ggplot(data = year_i_data,
-mapping = aes(x = emissions * population,
-y = gdp_per_capita * population)) +
-geom_smooth() +
-geom_text(mapping = aes(label = country)) +
-scale_x_log10(lim = c(1E6, 2E10)) + scale_y_log10(lim = c(1E9, 1E14)) +&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;theme_bw() +
-labs(x = &amp;quot;Total Tonnes Carbon&amp;quot;, y = &amp;quot;Total GDP&amp;quot;, 
-     title = paste0(&amp;quot;World Carbon and GDP, &amp;quot;, year_i))
+&lt;pre&gt;&lt;code&gt;for(i in 1:nyrs){
+  # Create plot
+  year_i = yrs[i]
+  year_i_data &amp;lt;- gapminder[gapminder$yrs == year_i, ]
+  
+  plot_i = ggplot(data = year_i_data, 
+              mapping = aes(x = emissions, 
+                            y = gdp_per_capita * population)) + 
+    geom_text(mapping = aes(label = country)) + 
+    scale_x_log10(lim = c(0.05, 50)) + scale_y_log10(lim = c(1E9, 1E14)) + 
+    geom_smooth() + theme_bw() +
+    labs(x = &amp;quot;Tonnes Carbon&amp;quot;, y = &amp;quot;GDP per Capita * Population&amp;quot;, 
+     title = year_i)
+  
+  plot(plot_i) # By default, ggplot will not show you plots inside a loop. 
+}
+
+dev.off()
+
+animation = image_animate(img, fps = 4, optimize = TRUE)
+
+image_write(image = animation, path = &amp;quot;./gg_pop_income_against_emissions.gif&amp;quot;)
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;plot(plot_i) # By default, ggplot will not show you plots inside a loop.
-}&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;dev.off()
+&lt;h3 id=&#34;carbon-and-dollars-with-text&#34;&gt;Carbon and dollars, with text&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;img &amp;lt;- image_graph(1200, 1200, res = 96)
+for(i in 1:nyrs){
+  # Create plot
+  year_i = yrs[i]
+  year_i_data &amp;lt;- gapminder[gapminder$yrs == year_i, ]
+  
+  
+  plot_i = ggplot(data = year_i_data, mapping = aes(x = gdp_per_capita, y = emissions)) + 
+    geom_text(mapping = aes(label = country, size = population)) + theme_bw() + 
+    scale_x_log10(lim = c(200, 200000), 
+                  breaks = c(200, 2000, 20000, 200000), 
+                  labels = c(&amp;quot;200&amp;quot;, &amp;quot;2,000&amp;quot;, &amp;quot;20,000&amp;quot;, &amp;quot;200,000&amp;quot;)) + 
+    scale_y_log10(lim = c(0.1, 50)) + 
+# expand_limits(size = c(0, 1500000000)) + 
+    scale_size_area(max_size = 20, breaks = c(1000000, 100000000, 1000000000), 
+                    labels = c(&amp;quot;1 Million&amp;quot;, &amp;quot;100 Million&amp;quot;, &amp;quot;1 Billion&amp;quot;),
+                    name = &amp;quot;Population&amp;quot;) + 
+    labs(x = &amp;quot;Dollars&amp;quot;, y = &amp;quot;Tonnes Carbon&amp;quot;, 
+         title = paste0(&amp;quot;World Carbon and GDP per Captia, &amp;quot;, year_i))
+  
+  plot(plot_i) # By default, ggplot will not show you plots inside a loop. 
+}
+
+dev.off()
+animation = image_animate(img, fps = 4, optimize = TRUE)
+
+image_write(image = animation, path = &amp;quot;./gg_carbon_and_gdp_per_capita_text.gif&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;ipat-r2&#34;&gt;IPAT R2&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;img &amp;lt;- image_graph(1200, 1200, res = 96)
+
+for(i in 1:nyrs){
+  # Create plot
+  year_i = yrs[i]
+  year_i_data &amp;lt;- gapminder[gapminder$yrs == year_i, ]
+  
+  plot_i = ggplot(data = year_i_data, 
+                  mapping = aes(x = emissions * population, 
+                                y = gdp_per_capita * population)) + 
+    geom_smooth() + 
+    geom_text(mapping = aes(label = country)) + 
+    scale_x_log10(lim = c(1E6, 2E10)) + scale_y_log10(lim = c(1E9, 1E14)) + 
+    
+    theme_bw() +
+    labs(x = &amp;quot;Total Tonnes Carbon&amp;quot;, y = &amp;quot;Total GDP&amp;quot;, 
+         title = paste0(&amp;quot;World Carbon and GDP, &amp;quot;, year_i))
+  
+  plot(plot_i) # By default, ggplot will not show you plots inside a loop. 
+    }
+    
+dev.off()
 animation = image_animate(img, fps = 4, optimize = TRUE)
 
 image_write(image = animation, path = &amp;quot;./gg_pop_income_against_emissions_text.gif&amp;quot;)
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h1 id=&#34;carbon-and-dollars-with-text-and-lm&#34;&gt;Carbon and dollars, with text, and LM&lt;/h1&gt;
-&lt;p&gt;img &amp;lt;- image_graph(1200, 1200, res = 96)
-for(i in 1:nyrs){&lt;/p&gt;
-&lt;h1 id=&#34;create-plot-4&#34;&gt;Create plot&lt;/h1&gt;
-&lt;p&gt;year_i = yrs[i]
-year_i_data &amp;lt;- gapminder[gapminder$yrs == year_i, ]&lt;/p&gt;
-&lt;p&gt;plot_i = ggplot(data = year_i_data, mapping = aes(x = gdp_per_capita, y = emissions)) +
-geom_smooth(method = &amp;ldquo;lm&amp;rdquo;, se = F) +
-geom_text(mapping = aes(label = country, size = population)) + theme_bw() +
-scale_x_log10(lim = c(200, 200000),
-breaks = c(200, 2000, 20000, 200000),
-labels = c(&amp;ldquo;200&amp;rdquo;, &amp;ldquo;2,000&amp;rdquo;, &amp;ldquo;20,000&amp;rdquo;, &amp;ldquo;200,000&amp;rdquo;)) +
-scale_y_log10(lim = c(0.1, 50)) +
-# expand_limits(size = c(0, 1500000000)) +
-scale_size_area(max_size = 20, breaks = c(1000000, 100000000, 1000000000),
-labels = c(&amp;ldquo;1 Million&amp;rdquo;, &amp;ldquo;100 Million&amp;rdquo;, &amp;ldquo;1 Billion&amp;rdquo;),
-name = &amp;ldquo;Population&amp;rdquo;) +
-labs(x = &amp;ldquo;Dollars&amp;rdquo;, y = &amp;ldquo;Tonnes Carbon&amp;rdquo;,
-title = paste0(&amp;ldquo;World Carbon and GDP per Captia, &amp;ldquo;, year_i))&lt;/p&gt;
-&lt;p&gt;plot(plot_i) # By default, ggplot will not show you plots inside a loop.
-}&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;dev.off()
+&lt;h3 id=&#34;carbon-and-dollars-with-text-and-lm&#34;&gt;Carbon and dollars, with text, and LM&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;img &amp;lt;- image_graph(1200, 1200, res = 96)
+for(i in 1:nyrs){
+  # Create plot
+  year_i = yrs[i]
+  year_i_data &amp;lt;- gapminder[gapminder$yrs == year_i, ]
+  
+  
+  plot_i = ggplot(data = year_i_data, mapping = aes(x = gdp_per_capita, y = emissions)) + 
+    geom_smooth(method = &amp;quot;lm&amp;quot;, se = F) + 
+    geom_text(mapping = aes(label = country, size = population)) + theme_bw() + 
+    scale_x_log10(lim = c(200, 200000), 
+                  breaks = c(200, 2000, 20000, 200000), 
+                  labels = c(&amp;quot;200&amp;quot;, &amp;quot;2,000&amp;quot;, &amp;quot;20,000&amp;quot;, &amp;quot;200,000&amp;quot;)) + 
+    scale_y_log10(lim = c(0.1, 50)) + 
+    # expand_limits(size = c(0, 1500000000)) + 
+    scale_size_area(max_size = 20, breaks = c(1000000, 100000000, 1000000000), 
+                    labels = c(&amp;quot;1 Million&amp;quot;, &amp;quot;100 Million&amp;quot;, &amp;quot;1 Billion&amp;quot;),
+                    name = &amp;quot;Population&amp;quot;) + 
+    labs(x = &amp;quot;Dollars&amp;quot;, y = &amp;quot;Tonnes Carbon&amp;quot;, 
+         title = paste0(&amp;quot;World Carbon and GDP per Captia, &amp;quot;, year_i))
+  
+  plot(plot_i) # By default, ggplot will not show you plots inside a loop. 
+}
+
+dev.off()
 animation = image_animate(img, fps = 4, optimize = TRUE)
 
 image_write(image = animation, path = &amp;quot;./gg_carbon_and_gdp_per_capita_text_lm.gif&amp;quot;)

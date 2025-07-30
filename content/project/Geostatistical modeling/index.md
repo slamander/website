@@ -1,8 +1,8 @@
 
 ---
-title: Spatial modeling
+title: Spatiotemporal statistics
 
-date: "2025-09-10T00:00:00Z"
+date: "2024-02-15"
 
 external_link: []
 

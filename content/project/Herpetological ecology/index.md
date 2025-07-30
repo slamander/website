@@ -1,7 +1,7 @@
 ---
 title: Reptile and Amphibian Ecology
 
-date: "2019-09-10T00:00:00Z"
+date: "2013-01-15"
 
 external_link: []
 

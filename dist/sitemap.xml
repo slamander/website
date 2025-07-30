@@ -2,6 +2,12 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://localhost:1313/talk/</loc>
+    <lastmod>2025-12-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/project/</loc>
+    <lastmod>2025-09-10T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/publication-type/2/</loc>
     <lastmod>2025-07-04T00:00:00+00:00</lastmod>
   </url><url>
@@ -266,28 +272,13 @@
     <loc>http://localhost:1313/author/andrew-marx/</loc>
     <lastmod>2023-12-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/author/brett-r-scheffers/</loc>
-    <lastmod>2023-12-19T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/talk/samc_iale/</loc>
-    <lastmod>2023-12-19T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/talk/exp_elic/</loc>
-    <lastmod>2023-12-19T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/author/luke-evans/</loc>
     <lastmod>2023-12-19T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/author/maru-iezzi/</loc>
     <lastmod>2023-12-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/talk/</loc>
-    <lastmod>2023-12-19T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/author/rj-fletcher/</loc>
-    <lastmod>2023-12-19T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/talk/samc_sotm/</loc>
     <lastmod>2023-12-19T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tag/workshop/</loc>
@@ -310,9 +301,6 @@
   </url><url>
     <loc>http://localhost:1313/author/steve-a.-johnson/</loc>
     <lastmod>2023-03-05T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/talk/seriscc_seminar/</loc>
-    <lastmod>2022-11-17T13:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/talk/bioshifts_talk/</loc>
     <lastmod>2022-11-17T13:00:00+00:00</lastmod>
@@ -344,7 +332,7 @@
     <loc>http://localhost:1313/post/r-intro/</loc>
     <lastmod>2022-08-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/post/r-intro/</loc>
+    <loc>http://localhost:1313/post/r-intro-pt2/</loc>
     <lastmod>2022-08-12T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tag/introduction/</loc>
@@ -458,21 +446,6 @@
     <loc>http://localhost:1313/project/appalachian-ecology/</loc>
     <lastmod>2019-09-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tag/bayesian-statistics/</loc>
-    <lastmod>2019-09-10T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/project/climate-species-redistribution/</loc>
-    <lastmod>2019-09-10T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tag/circuit-theory/</loc>
-    <lastmod>2019-09-10T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tag/climate-change/</loc>
-    <lastmod>2019-09-10T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tag/connectivity-modeling/</loc>
-    <lastmod>2019-09-10T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/tag/detection/</loc>
     <lastmod>2019-09-10T00:00:00+00:00</lastmod>
   </url><url>
@@ -482,46 +455,13 @@
     <loc>http://localhost:1313/tag/field-ecology/</loc>
     <lastmod>2019-09-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tag/inla/</loc>
-    <lastmod>2019-09-10T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/tag/invasions/</loc>
-    <lastmod>2019-09-10T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/project/landscape-ecology/</loc>
-    <lastmod>2019-09-10T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tag/landscape-ecology/</loc>
     <lastmod>2019-09-10T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tag/population-ecology/</loc>
     <lastmod>2019-09-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/project/</loc>
-    <lastmod>2019-09-10T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tag/r/</loc>
-    <lastmod>2019-09-10T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tag/remote-sensing/</loc>
-    <lastmod>2019-09-10T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/project/herpetological-ecology/</loc>
-    <lastmod>2019-09-10T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tag/resistance/</loc>
-    <lastmod>2019-09-10T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tag/spatial-ecology/</loc>
-    <lastmod>2019-09-10T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/project/geostatistical-modeling/</loc>
-    <lastmod>2019-09-10T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tag/spatially-absorbing-markov-chains/</loc>
-    <lastmod>2019-09-10T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tag/stochasticity/</loc>
     <lastmod>2019-09-10T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tag/stream-ecology/</loc>
