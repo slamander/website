@@ -7,8 +7,9 @@ draft: false
 sections:
   - block: hero
     content:
-      title: "Baecher research: Qμe[st]"
-      #title: Baecher research
+      title: "Qμe[st]"
+      #title: "Baecher research"
+      #title: '<span class="text-xl">Qμe[st]</span>'
       text: '<span class="text-xl">*Quantitative Ecology in Space and Time*</span>'
       #text: "<img src='media/badge_kentucki.png' alt='description' class='inline h-20 w-20'>                  "
       primary_action:
@@ -23,8 +24,6 @@ sections:
         link:
           text: "Baecher et al. (2025) Science of the Total Environment"
           url: https://ecoevorxiv.org/repository/view/9228/
-      advanced:
-        css_style: "text-align: left;"
     design:
       background:
         image:

@@ -69,8 +69,8 @@ work:
 ## About Me
 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
   <div>
-    <h3>The serious bits: </h3>
-    <p>I'm a spatial ecologist with interests in understanding the processes that determine the distribution of biodiversity. My research interests include  </p>
+    <h3>Serious bits: </h3>
+    <p>I'm a spatial ecologist dedicated to understanding the processes that determine the distribution of biodiversity. My research interests include:  </p>
     <p>
 
 - macroecology
@@ -90,8 +90,8 @@ work:
 </p>
   </div>
   <div>
-    <h3>The good bits:</h3>
-    <p>I'm an Arkansas native (Ozark Mountains) based out of Gainesville Florida, a stereotypical girl dad (soon to be 2x), proud union member, and lover of:</p>
+    <h3>Good bits:</h3>
+    <p>I'm an Arkansas native (Ozark Mountains) based out of Gainesville Florida, a stereotypical girl dad (soon to be 2x), proud union member, and lover of: </p>
     <p>
 
 - swimming
