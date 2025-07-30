@@ -2,6 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://localhost:1313/publication-type/2/</loc>
+    <lastmod>2025-07-04T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/author/amy-m-bauer/</loc>
     <lastmod>2025-07-04T00:00:00+00:00</lastmod>
   </url><url>
@@ -21,6 +24,9 @@
     <lastmod>2025-07-04T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tag/modeling/</loc>
+    <lastmod>2025-07-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/publication_types/</loc>
     <lastmod>2025-07-04T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/publication/</loc>
@@ -68,9 +74,6 @@
     <loc>http://localhost:1313/author/luke-j.-evans/</loc>
     <lastmod>2024-12-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/publication-type/2/</loc>
-    <lastmod>2024-07-04T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/tag/biotic-interactions/</loc>
     <lastmod>2024-07-04T00:00:00+00:00</lastmod>
   </url><url>
@@ -81,9 +84,6 @@
     <lastmod>2024-07-04T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tag/niche-theory/</loc>
-    <lastmod>2024-07-04T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/publication_types/</loc>
     <lastmod>2024-07-04T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/publication/baecher_2024_jbi/</loc>

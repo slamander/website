@@ -9,7 +9,7 @@ sections:
     content:
       title: "Baecher research: Qμe[st]"
       #title: Baecher research
-      text: '<span class="text-xl">*quantitative ecology in space and time*</span>'
+      text: '<span class="text-xl">*Quantitative Ecology in Space and Time*</span>'
       #text: "<img src='media/badge_kentucki.png' alt='description' class='inline h-20 w-20'>                  "
       primary_action:
         text: Download CV
@@ -125,67 +125,50 @@ sections:
       title: "Teaching & Mentoring"
       text: |
 
-        Whether in a classroom or lab, teaching must be student-centered, holistic, and equitable. By  fostering a supportive, engaging environment and recognizing all of students’ needs  (educational, emotional, and biological), I empower students to demonstrate mastery or seek additional support as needed—an approach known to increase success and enhance well-being.
-
-        ## Teaching Philosophy
+        I believe education must be student-centered, holistic, and equitable. By fostering a supportive, engaging environment and recognizing all of students’ needs  (educational, emotional, and biological), I empower students to demonstrate mastery or seek additional support as needed—an approach known to increase success and enhance well-being.
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
             <h3>Teaching Philosophy: </h3>
             <p> 
-        I employ the following evidence-based strategies: 
+         - encourange real-world problem solving through inquiry-based learning
 
-         - inquiry-based learning through real-world problem-solving
+         - provide hands-on, experiential activities
 
-         - hands-on, experiential activities
-
-         - active learning exercises (e.g., case studies and debates)
+         - create active learning exercises (e.g., case studies)
 
          </p>
         </div>
           <div>
             <h3>Mentoring Philosophy:</h3>
             <p>
-         I prioritize three key practices:
+         - align progress with personal goals and well-being
 
-         - regular check-ins to align students’ academic progress with their personal goals and well-being
+         - provide space to explore, make mistakes, and reflect
 
-         - fostering independent problem-solving by giving students space to explore, make mistakes, and reflect
-
-         - encouraging external mentorship, whether within the lab (through peer or cascade mentoring) or from additional faculty mentors
+         - encourage external collaboration
 
          </p>
         </div>
         </div>
 
-         ## Student Outcomes
+         ## Student outcomes
         My students have gone on to pursue careers in:
         - **Career progression:** 7 students now in MS (5) and PhD (2) programs and credit my mentorship in shaping their career trajectory
         - **Academic output:** 11 conference presentations, 1 undergraduate thesis, and 4 peer-reviewed publications
 
-        ## Courses taught
+        ## Recent courses taught
 
-        ### **Environmental Science** | University of Florida
-        *Senior-level course | 2022 -- 2024*
+        - **Environmental Science** | University of Florida (2022-2024)*
+                
+          - **Topics**: Environmental monitoring, data collection, modeling, technical speaking and writing
+          - **Methods**: R programming, GIS analysis, field techniques
+          - **Enrollment**: 12 students
         
-        A course covering population ecology, habitat management, and conservation strategies for wildlife species. Students learn to apply quantitative methods to real conservation problems.
-        
-        - **Topics**: Environmental monitoring, data collection, modeling, technical speaking and writing
-        - **Methods**: R programming, GIS analysis, field techniques
-        - **Enrollment**: 25 students
-        
-        [Course Materials](#) | [Syllabus (PDF)](#) | [R Tutorials](#)
+            [Course Materials](#) | [Syllabus (PDF)](#) | [R Tutorials](#)
 
-        ### **Landscape Connectivity Modeling** | Graduate Workshop
-        *Intensive 3-day workshop | Spring 2024*
-        
-        Hands-on workshop teaching cutting-edge methods for modeling animal movement and landscape connectivity using circuit theory and spatial absorbing Markov chains.
-        
-        - **Software**: R, Circuitscape, SAMC package
-        - **Participants**: 40 researchers from 15 institutions
-        - **Focus**: Theory, implementation, and interpretation
-        
-        [Workshop Materials](https://github.com/your-repo) | [Video Lectures](#) | [Practice Datasets](#)
+          ![Env Science 2023](/media/EVS_3000L_pic_collage.png)
+
 
         ## Select Guest Lectures & Workshops
 
@@ -195,12 +178,4 @@ sections:
         - **Expert Elicitation for Invasive Species Management** - IALE Conference (2023)
         - **SAMC Connectivity Modeling** - Species on the Move Conference (2023)
 
-        *Interested in collaborating on teaching or need guest lectures? [Get in touch!](mailto:jbaecher@gmail.com)*
-    design:
-      columns: '1'
-      spacing:
-        padding: ["40px", "0", "40px", "0"]
-      background:
-        color: ''
-        text_color_light: false
 ---
