@@ -13,7 +13,7 @@ tags:
 - ecological modeling
 - R stats
 - tutorial
-date: "2023-12-19T00:00:00Z"
+date: 2025-12-19
 
 tags: [workshop]
 

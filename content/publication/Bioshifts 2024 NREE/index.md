@@ -43,8 +43,8 @@ publication: "***Nature Reviews Earth & Environment***"
 
 publication_short:
 
-publication_types: 2
-
+publication_types:
+- "2"
 publishDate: "2024-04-18T00:00:00Z"
 
 slides: Climate-induced-species-redistribution

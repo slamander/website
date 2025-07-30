@@ -2,6 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://localhost:1313/publication-type/2/</loc>
+    <lastmod>2025-07-04T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/author/amy-m-bauer/</loc>
     <lastmod>2025-07-04T00:00:00+00:00</lastmod>
   </url><url>
@@ -21,6 +24,9 @@
     <lastmod>2025-07-04T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tag/modeling/</loc>
+    <lastmod>2025-07-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/publication_types/</loc>
     <lastmod>2025-07-04T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/publication/</loc>
@@ -68,9 +74,6 @@
     <loc>http://localhost:1313/author/luke-j.-evans/</loc>
     <lastmod>2024-12-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/publication-type/2/</loc>
-    <lastmod>2024-07-04T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/tag/biotic-interactions/</loc>
     <lastmod>2024-07-04T00:00:00+00:00</lastmod>
   </url><url>
@@ -81,9 +84,6 @@
     <lastmod>2024-07-04T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tag/niche-theory/</loc>
-    <lastmod>2024-07-04T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/publication_types/</loc>
     <lastmod>2024-07-04T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/publication/baecher_2024_jbi/</loc>
@@ -326,6 +326,42 @@
     <loc>http://localhost:1313/publication/basham-2022-br/</loc>
     <lastmod>2022-09-08T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/categories/</loc>
+    <lastmod>2022-08-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tag/data-frames/</loc>
+    <lastmod>2022-08-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tag/data-wrangling/</loc>
+    <lastmod>2022-08-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tag/functions/</loc>
+    <lastmod>2022-08-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tag/getting-help/</loc>
+    <lastmod>2022-08-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/post/r-intro/</loc>
+    <lastmod>2022-08-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/post/r-intro/</loc>
+    <lastmod>2022-08-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tag/introduction/</loc>
+    <lastmod>2022-08-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/category/r-tutorials/</loc>
+    <lastmod>2022-08-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tag/tidyverse/</loc>
+    <lastmod>2022-08-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tag/vectors/</loc>
+    <lastmod>2022-08-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tag/visualization/</loc>
+    <lastmod>2022-08-12T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/tag/dendrobatid/</loc>
     <lastmod>2022-02-03T00:00:00+00:00</lastmod>
   </url><url>
@@ -350,9 +386,6 @@
     <loc>http://localhost:1313/tag/boosted-tree/</loc>
     <lastmod>2021-10-22T00:40:04-07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/</loc>
-    <lastmod>2021-10-22T00:40:04-07:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/tag/knn/</loc>
     <lastmod>2021-10-22T00:40:04-07:00</lastmod>
   </url><url>
@@ -360,9 +393,6 @@
     <lastmod>2021-10-22T00:40:04-07:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/post/ml-tidymodels/</loc>
-    <lastmod>2021-10-22T00:40:04-07:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/category/r-tutorials/</loc>
     <lastmod>2021-10-22T00:40:04-07:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tag/tidymodels/</loc>

@@ -13,7 +13,7 @@ tags:
 - landscape ecology
 - ecological modeling
 
-date: "2023-12-19T00:00:00Z"
+date: 2025-12-19
 
 tags: [workshop]
 

@@ -5,7 +5,7 @@
     <link>http://localhost:1313/project/</link>
       <atom:link href="http://localhost:1313/project/index.xml" rel="self" type="application/rss+xml" />
     <description>Projects</description>
-    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><copyright>© 2025 Alex Baecher</copyright><lastBuildDate>Tue, 10 Sep 2019 00:00:00 +0000</lastBuildDate>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><copyright>© 2025 Alex Baecher</copyright><lastBuildDate>Wed, 10 Sep 2025 00:00:00 +0000</lastBuildDate>
     <image>
       <url>http://localhost:1313/media/logo_hu2039277577754200582.png</url>
       <title>Projects</title>
@@ -34,28 +34,6 @@
     </item>
     
     <item>
-      <title>Biodiversity redistribution</title>
-      <link>http://localhost:1313/project/climate-species-redistribution/</link>
-      <pubDate>Tue, 10 Sep 2019 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/project/climate-species-redistribution/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Landscape connectivity</title>
-      <link>http://localhost:1313/project/landscape-ecology/</link>
-      <pubDate>Tue, 10 Sep 2019 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/project/landscape-ecology/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;Publications&lt;/strong&gt;&lt;br&gt;
-&lt;em&gt;&lt;strong&gt;Forthcoming&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Baecher, JA, et al. .&lt;strong&gt;In review&lt;/strong&gt;. Isolating what limits the spread of an invasive predator. &lt;em&gt;Journal of Applied Ecology&lt;/em&gt; &lt;a href=&#34;https://advance.sagepub.com/doi/full/10.22541/au.171248322.23946990/v1&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://advance.sagepub.com/doi/full/10.22541/au.171248322.23946990/v1&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Baecher, JA, et al. .&lt;em&gt;In prep&lt;/em&gt;. Informing species range shifts with global connectivity. &lt;em&gt;TBA&lt;/em&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
       <title>Reptile and Amphibian Ecology</title>
       <link>http://localhost:1313/project/herpetological-ecology/</link>
       <pubDate>Tue, 10 Sep 2019 00:00:00 +0000</pubDate>
@@ -69,16 +47,6 @@
 &lt;li&gt;Baecher, JA, et al. .&lt;em&gt;2018&lt;/em&gt;. Herpetofaunal Communities in Restored and Unrestored Remnant Tallgrass Prairie and Associated Wetlands in Northwest Arkansas, USA. &lt;em&gt;Wetlands&lt;/em&gt; &lt;a href=&#34;https://doi.org/10.1007/s13157-017-0966-5&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://doi.org/10.1007/s13157-017-0966-5&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Baecher, JA, et al. .&lt;em&gt;2014&lt;/em&gt;. Lithobates areolatus, Predation. &lt;em&gt;Herpetological Reviews&lt;/em&gt; 45(4):681-682&lt;/li&gt;
 &lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Spatial modeling</title>
-      <link>http://localhost:1313/project/geostatistical-modeling/</link>
-      <pubDate>Tue, 10 Sep 2019 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/project/geostatistical-modeling/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;Spatiotemporal modeling&lt;/strong&gt;
-Basic generalized linear mixed effects models can account for spatial (and spatiotemporal) autocorrelation using latent Gaussian random fields (GRFs). However, GRFs are computationally intense due to costly covariance functions. Stochastic Partial Differential Equations (SPDE) can be used to minimize the scale of this problem by approximating GRFs with Gaussian Markcov random fields (GMRFs) with a Matern covariance function (Lindgrin et al., 2011; Krainski et al. 2018). This solution has been adopted by the Integrated Nested Laplace Approximation (INLA) software, and has later been implimented in Template Model Builder (TMB) software (Thorson et al., 2015).&lt;/p&gt;
 </description>
     </item>
     

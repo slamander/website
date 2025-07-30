@@ -21,91 +21,11 @@
     </item>
     
     <item>
-      <title>Expert elicitation of key invasive species habitat requirements, prevalence, and life history attributes</title>
-      <link>http://localhost:1313/talk/exp_elic/</link>
-      <pubDate>Tue, 19 Dec 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/talk/exp_elic/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;Primary project outputs&lt;/strong&gt;
-*Expert evaluation of the invasive species potential in the Southeast United States. *
-We aim to conduct two workshops leveraging the best academic, management, and legislative knowledge from across the Southeast USA. Workshop one will focus on species occurrences and assessments of traits that will enable robust modelling approaches. Workshop two will focus on management approaches to combat the most deleterious findings across all of the focal species. Both workshops will work iteratively with stakeholders to ensure that findings are both grounded in up to date information, as well as model findings reflect changing invasion realities.&lt;/p&gt;
-&lt;p&gt;*Pet trade and its impacts on invasive species release and propagation *
-We assessed diversity in the exotic pet trade throughout the lower 48 states by evaluating three major routes to market - online pet stores, traditional brick &amp;amp; mortar stores, and exotic pet expos. We assessed a species risk to native systems by assessing climatic niche overlap between native and invasive ranges. Composite mapping of niche suitability, as well as high levels of progaule likelihood provide us with ways of determining high risk areas. Assessments of the trade in this manner provide the most complete analysis of the exotic pet trade in the US to date.&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Predicting the spread of Burmese pythons in south Florida: a proof-of-concept to apply to high-risk invasive species identified by experts&lt;/em&gt;
-We modelled the invasion dynamics of Burmese pythons using species’ thermal physiology, behaviour, and ecology, as well as landscape characteristics and management activities. In doing so, we have created a novel workflow which incorporates propagule pressure and other often ignored ecological processes.This workflow integrates data from disparate sources (i.e., citizen science, remote sensing, peer reviewed literature, state and federal agencies, and widely-available/open data) and leverages cutting-edge modelling tools, including both mechanistic and correlative models. The goal of this work is to create a predictive model, capable of estimating spatiotemporal patterns of species migrations, dynamic connectivity, and demographic processes such as survival and mortality. This workflow will be applied to several high priority invasive species, those identified by expert elicitation, in the SE USA.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Sub-projects/Tertiary Projects&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;*Assessing the dynamics of the exotic pet trade. How do volume, cost and rarity impact a species prevalence in the trade? *
-We assess how the diversity and abundance of species in the trade reflect nuances within the exotic pet trade. In turn we determine the implications of this on how new and emerging species penetrate the market and where new species are likely to get into the hands of inexperienced hobbyists. By characterizing the trade in this manner we can find where the intersection of availability, cost, and invasive potential lead to the highest risk species in the market.&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Impact climate change and invasive Cuban treefrogs on native treefrog communities in Florida&lt;/em&gt;
-Arboreal amphibians are thought to use vertical gradients to mitigate exposure and seasonal changes to resource availability. However, novel biotic interactions from introduced species may disrupt these seasonal migrations, potentially limiting native species’ abilities to cope with environmental changes. Using experimental vertical enclosures designed to emulate vertical forest gradients, we manipulated water resources and conducted behavioural assays with two native treefrog species and one predatory invader species, the Cuban treefrog. Results from this experiment determined that Cuban treefrogs disrupted native species’ ability to track water resources, resulting in avoidance behaviour and potential subsequent dehydration.&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Modelling global connectivity of wildlife populations&lt;/em&gt;
-To understand how climate and land use change will affect global patterns of biodiversity, we are developing global maps of major wildlife migration corridors, barriers to species’ movement, and hotspots for biodiversity redistribution. To improve on previous efforts, we consider the effects of both novel climate and habitat types for species movements. Using this information, we can then assess what proportion of expected species’ range shifts will be affected by landscape connectivity, and where those failed shifts will occur.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Species redistribution and connectivity (Intro)</title>
-      <link>http://localhost:1313/talk/samc_sotm/</link>
-      <pubDate>Tue, 19 Dec 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/talk/samc_sotm/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;Description:&lt;/strong&gt;
-This 1-day workshop will distill the basic principles of connectivity modeling and its relevance to predicting movement and species redistribution with environmental change. Participants will be introduced to connectivity as well as a new framework utilizing spatial-absorbing Markov chains (SAMC), which helps unify other approaches. Along the way, we will discuss how connectivity is relevant to core principles of species ranges and redistribution. We will also discuss the common problems, assumptions, and oversights occurring in published predictions of species range redistribution.&lt;/p&gt;
-&lt;p&gt;Topics:
-&lt;strong&gt;Background and motivation&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Connectivity and species on the move&lt;/li&gt;
-&lt;li&gt;The state of connectivity modeling&lt;/li&gt;
-&lt;li&gt;R activity —introduction to connectivity using R&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Markov chains, connectivity, and the SAMC framework&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;An introduction to the SAMC and the samc package&lt;/li&gt;
-&lt;li&gt;Relationships of SAMC with other connectivity frameworks&lt;/li&gt;
-&lt;li&gt;R activity—contrasting the SAMC and circuit theory&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Building connectivity models with the SAMC&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Building and tuning a SAMC model&lt;/li&gt;
-&lt;li&gt;What kinds data are needed?&lt;/li&gt;
-&lt;li&gt;R activity—Burmese python spread and potential corridors&lt;/li&gt;
-&lt;li&gt;Modeling dispersal kernels with the SAMC&lt;/li&gt;
-&lt;li&gt;R activity—kernels with black bears&lt;/li&gt;
-&lt;li&gt;Spatial networks and the SAMC&lt;/li&gt;
-&lt;li&gt;R activity—graph example with snail kites&lt;/li&gt;
-&lt;li&gt;Discussion: how to build your own models&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Emerging topics&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Movement ecology, movement trajectories, and the SAMC&lt;/li&gt;
-&lt;li&gt;Dynamic models for connectivity and species redistribution&lt;/li&gt;
-&lt;li&gt;Scaling models to large regions&lt;/li&gt;
-&lt;li&gt;Discussion of applications, facilitating use, etc.&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
       <title>Informing Species Range-shifts with (preliminary) Global Connectivity </title>
       <link>http://localhost:1313/talk/sotm_talk/</link>
       <pubDate>Wed, 17 May 2023 13:00:00 +0000</pubDate>
       <guid>http://localhost:1313/talk/sotm_talk/</guid>
       <description></description>
-    </item>
-    
-    <item>
-      <title>Predicting the spread of invasive Burmese pythons in South Florida</title>
-      <link>http://localhost:1313/talk/seriscc_seminar/</link>
-      <pubDate>Thu, 17 Nov 2022 13:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/talk/seriscc_seminar/</guid>
-      <description>&lt;p&gt;Integrating multi-scale data with hybrid ecological models to evaluate the role of management, climate, and habitat&lt;/p&gt;
-
-
-    
-    &lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
-      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; allowfullscreen=&#34;allowfullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/UXe2eGtsmPM?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;
-      &gt;&lt;/iframe&gt;
-    &lt;/div&gt;
-
-</description>
     </item>
     
     <item>

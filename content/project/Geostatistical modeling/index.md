@@ -2,7 +2,7 @@
 ---
 title: Spatial modeling
 
-date: "2019-09-10T00:00:00Z"
+date: "2025-09-10T00:00:00Z"
 
 external_link: []
 
@@ -17,7 +17,9 @@ links:
   url: https://ecoevorxiv.org/repository/view/9228/
 
 slides: Spatial-modeling
+
 summary: Developing spatial and spatiotemporal models using stochastic partial differential equations
+
 tags:
 - INLA
 - Bayesian statistics 

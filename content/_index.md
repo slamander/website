@@ -7,14 +7,12 @@ draft: false
 sections:
   - block: hero
     content:
-      title: "Baecher research: QμΣst "
-      #title: Baecher research
+      title: "QμΣst research"
       text: '<span class="text-xl">*quantitative ecology in space and time*</span>'
       #text: "<img src='media/badge_kentucki.png' alt='description' class='inline h-20 w-20'>                  "
       primary_action:
         text: Download CV
         url: https://drive.google.com/uc?export=download&id=1zADCDlIiJlx1vXKQ6NdMLwTZm7E6sS29
-        #icon: sparkles
       secondary_action:
         text: See publications
         url: https://www.alexbaecher.com/publication/
@@ -23,8 +21,6 @@ sections:
         link:
           text: "Baecher et al. (2025) Science of the Total Environment"
           url: https://ecoevorxiv.org/repository/view/9228/
-      advanced:
-        css_style: "text-align: left;"
     design:
       background:
         image:
@@ -65,8 +61,12 @@ sections:
 
   - block: collection
     content:
-      title: "Research" 
-      count: 5
+      title: "Research projects"
+      count: 3
+      archive:
+        enable: true
+        text: "See all projects →"
+        link: project/
       filters:
         folders:
           - project
@@ -80,7 +80,7 @@ sections:
       count: 6
       archive:
         enable: true
-        text: "See all publications"
+        text: "See all publications →"
         link: publication/
       filters:
         folders:
@@ -92,11 +92,11 @@ sections:
   - block: collection
     content:
       title: "Recent Talks"
-      count: 5
+      count: 3
       archive:
         enable: true
-        text: "See all talks"
-        link: post/
+        text: "See all talks →"
+        link: talk/
       filters:
         folders:
           - talk
@@ -108,7 +108,7 @@ sections:
     content:
       title: "R sandbox: 📊 Coding Tutorials"
       subtitle: "Data science tutorials and R programming guides"
-      count: 6
+      count: 2
       archive:
         enable: true
         text: "See all tutorials →"
@@ -195,7 +195,22 @@ sections:
         - **Expert Elicitation for Invasive Species Management** - IALE Conference (2023)
         - **SAMC Connectivity Modeling** - Species on the Move Conference (2023)
 
-        *Interested in collaborating on teaching or need guest lectures? [Get in touch!](mailto:jbaecher@gmail.com)*
+        ## Teaching R: resources: 
+        See my **R sandbox** for a 2-part tutorial on R coding:
+          - [**Part 1:**](https://www.alexbaecher.com/post/r-intro/)
+            - Using functions
+            - Help functions
+            - Vectors
+            - Sequences
+            - Data frames
+          - [**Part 2:**](https://www.alexbaecher.com/post/r-intro-pt2/)
+            - read data from a csv file
+            - manipulate a data set
+            - join multiple data sets
+            - plot data
+            - animate figures
+            - create for loops
+
     design:
       columns: '1'
       spacing:

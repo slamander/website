@@ -27,6 +27,9 @@ projects:
 - geostatistical-modeling
 
 publication: "***EcoEvoRxiv***"
+publication_short:
+publication_types:
+- "2"
 
 tags:
 - Vector-born disease

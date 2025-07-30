@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Data Frames | Baecher Research</title>
+    <link>http://localhost:1313/tag/data-frames/</link>
+      <atom:link href="http://localhost:1313/tag/data-frames/index.xml" rel="self" type="application/rss+xml" />
+    <description>Data Frames</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><copyright>© 2025 Alex Baecher</copyright><lastBuildDate>Fri, 12 Aug 2022 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>http://localhost:1313/media/logo_hu2039277577754200582.png</url>
+      <title>Data Frames</title>
+      <link>http://localhost:1313/tag/data-frames/</link>
+    </image>
+    
+    <item>
+      <title>Intro to R (part 1)</title>
+      <link>http://localhost:1313/post/r-intro/</link>
+      <pubDate>Fri, 12 Aug 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/r-intro/</guid>
+      <description>&lt;p&gt;#&amp;rsquo;  Using functions
+#&amp;rsquo;  Help functions
+#&amp;rsquo;  Vectors
+#&amp;rsquo;  Sequences
+#&amp;rsquo;  Data frames
+#&#39;&lt;/p&gt;
+&lt;h1 id=&#34;heading&#34;&gt;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;.&lt;/h1&gt;
+&lt;h1 id=&#34;welcome-to-r&#34;&gt;Welcome to R!&lt;/h1&gt;
+&lt;p&gt;#&amp;rsquo; R is a nice calculator.  Kind of like a fancy graphing calculator.
+#&amp;rsquo; An advantage of using R over a calculator:&lt;br&gt;
+#&amp;rsquo;  1. Can save our steps and use them later or share them.
+#&amp;rsquo;  2. Can use other peoples code.
+#&amp;rsquo;  3. Has a keyboard!  Faster!  Stronger!
+#&amp;rsquo; Similar to pressing &amp;ldquo;enter&amp;rdquo; on a calculator to compute something, you can press &amp;ldquo;ctrl+enter&amp;rdquo; on a line in your script (or terminal) to execute a function, inspect an object, or simply calculate a formula.&lt;/p&gt;
+&lt;h1 id=&#34;keyboard-controls&#34;&gt;Keyboard controls:&lt;/h1&gt;
+&lt;h1 id=&#34;arithmetic-operators&#34;&gt;Arithmetic operators&lt;/h1&gt;
+&lt;pre&gt;&lt;code&gt;5
+
+5 / 2
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;-----are-arithmetic-operators--there-are-some-others---and-&#34;&gt;+, /, -, * are arithmetic operators.  There are some others, %%, %/% and ^.&lt;/h1&gt;
+&lt;pre&gt;&lt;code&gt;5 %/% 2  # The integer part.
+5 %% 2   # The remainder part, aka the modulus.
+5 ^ 2    # How you take powers of numbers.  
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;variables&#34;&gt;Variables:&lt;/h1&gt;
+&lt;pre&gt;&lt;code&gt;x &amp;lt;- 5 # alternatively, use &amp;quot;=&amp;quot; instead of arrows; e.g., x = 5
+y &amp;lt;- 2
+3 * x + y
+3 * (x + y)   # use parentheses to avoid excusing your dear aunt Sally.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;parenthesis-nesting-can-get-out-of-hand-quickly-so-it-can-be-helpful&#34;&gt;Parenthesis nesting can get out of hand quickly, so it can be helpful&lt;/h1&gt;
+&lt;h1 id=&#34;to-turn-on-rainbow-parenthesis-in-rstudio&#34;&gt;to turn on &amp;lsquo;rainbow parenthesis&amp;rsquo; in RStudio:&lt;/h1&gt;
+&lt;h1 id=&#34;tools--global-options--code--display--rainbow-parenthesis&#34;&gt;Tools &amp;gt; Global Options &amp;gt; Code &amp;gt; Display &amp;gt; Rainbow Parenthesis&lt;/h1&gt;
+&lt;pre&gt;&lt;code&gt;z &amp;lt;- (x * (x + y)) ^ y
+z
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;variable-contents-are-in-the-environment-pane-in-rstudio&#34;&gt;Variable contents are in the &amp;ldquo;environment&amp;rdquo; pane in RStudio.&lt;/h1&gt;
+&lt;h1 id=&#34;functions----------------------&#34;&gt;Functions &amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&lt;/h1&gt;
+&lt;h1 id=&#34;the-exponential-function-e-to-the-power-of-x&#34;&gt;The exponential function, e to the power of x.&lt;/h1&gt;
+&lt;h1 id=&#34;the-inputs-x-is-called-an-argument-of-the-function&#34;&gt;The inputs &amp;lsquo;x&amp;rsquo; is called an &amp;lsquo;argument&amp;rsquo; of the function.&lt;/h1&gt;
+&lt;pre&gt;&lt;code&gt;exp(x = 1)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;the-help-functions&#34;&gt;The help functions!&lt;/h1&gt;
+&lt;h1 id=&#34;definitely-one-of-the-best-parts-of-r--dont-try-this-in-python&#34;&gt;Definitely one of the best parts of R.  Don&amp;rsquo;t try this in Python!&lt;/h1&gt;
+&lt;pre&gt;&lt;code&gt;help(exp)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;important-check-out-the-examples-at-the-bottom-of-the-page-or-try&#34;&gt;Important: Check out the examples at the bottom of the page, or try&lt;/h1&gt;
+&lt;pre&gt;&lt;code&gt;example(exp)
+
+?exp
+?weibull   # General help, for things that are currently in use.
+??weibull  # Global help. Does partial matching. 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;help-on-tricky-stuff&#34;&gt;Help on tricky stuff:&lt;/h1&gt;
+&lt;pre&gt;&lt;code&gt;?%%        # Help what&#39;s a modulus!
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;try-putting-the-thing-you-cant-search-for-help-on-in-backticks-&#34;&gt;Try putting the thing you can&amp;rsquo;t search for help on in backticks, ``.&lt;/h1&gt;
+&lt;pre&gt;&lt;code&gt;?`%%`
+?`??`      
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;when-you-run-across-something-you-dont-recognize-try-to--it&#34;&gt;When you run across something you don&amp;rsquo;t recognize, try to ? it.&lt;/h1&gt;
+&lt;h1 id=&#34;its-faster-than-searching-online-and-has-less-ads-&#34;&gt;It&amp;rsquo;s faster than searching online and has less ads. 👍&lt;/h1&gt;
+&lt;h1 id=&#34;vectors------------------------&#34;&gt;Vectors &amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;ndash;&lt;/h1&gt;
+&lt;h1 id=&#34;c-concatenates-these-together-to-make-a-vector&#34;&gt;c() concatenates these together to make a vector.&lt;/h1&gt;
+&lt;pre&gt;&lt;code&gt;v1 &amp;lt;- c(5, 8, 0)
+v1
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;the-parts-of-a-vector-are-called-elements--you-extract-them-with-brackets&#34;&gt;The parts of a vector are called &amp;rsquo;elements&amp;rsquo;.  You extract them with brackets.&lt;/h1&gt;
+&lt;h1 id=&#34;r-starts-numbering-the-elements-with-1&#34;&gt;R starts numbering the elements with 1.&lt;/h1&gt;
+&lt;pre&gt;&lt;code&gt;v1[1]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;we-can-get-more-than-one-element-at-a-time&#34;&gt;We can get more than one element at a time.&lt;/h1&gt;
+&lt;pre&gt;&lt;code&gt;v1[c(1, 2)]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;we-can-call-them-in-any-order-and-any-number-of-times&#34;&gt;We can call them in any order, and any number of times.&lt;/h1&gt;
+&lt;pre&gt;&lt;code&gt;v1[c(2, 1, 1)]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;r-works-well-with-vectors-if-you-put-a-vector-into-most-functions&#34;&gt;R works well with vectors: if you put a vector into most functions,&lt;/h1&gt;
+&lt;h1 id=&#34;you-get-a-vector-back--this-is-called-vectorization&#34;&gt;you get a vector back.  (This is called vectorization.)&lt;/h1&gt;
+&lt;pre&gt;&lt;code&gt;exp(x = v1)
+round(x = exp(x = v1), digits = 2)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;sequences&#34;&gt;Sequences:&lt;/h1&gt;
+&lt;pre&gt;&lt;code&gt;seq(from = 1, to = 10, by = 1)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;the-fast-way&#34;&gt;the fast way:&lt;/h1&gt;
+&lt;pre&gt;&lt;code&gt;1:10
+5:10
+count2 &amp;lt;- seq(from = 2, to = 10, by = 2)  # To count by twos we need seq.
+count2
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;how-many-elements-are-in-the-vector&#34;&gt;How many elements are in the vector?&lt;/h1&gt;
+&lt;pre&gt;&lt;code&gt;length(count2)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;letter-vectors&#34;&gt;Letter vectors&lt;/h1&gt;
+&lt;pre&gt;&lt;code&gt;letters
+LETTERS
+20:22
+letters[20:22]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;data-frames--------------------&#34;&gt;Data frames &amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;-&lt;/h1&gt;
+&lt;h1 id=&#34;data-frames-can-hold-different-data-types-in-different-columns&#34;&gt;Data frames can hold different data types in different columns.&lt;/h1&gt;
+&lt;h1 id=&#34;each-column-is-a-vector-possibly-with-its-own-data-type&#34;&gt;Each column is a vector, possibly with its own data type.&lt;/h1&gt;
+&lt;h1 id=&#34;the-columns-are-bound-together-to-make-an-object-called-a-data-frame&#34;&gt;The columns are bound together to make an object called a data frame.&lt;/h1&gt;
+&lt;h1 id=&#34;one-restriction-is-that-all-the-columns-need-to-be-of-equal-length&#34;&gt;One restriction is that all the columns need to be of equal length.&lt;/h1&gt;
+&lt;h1 id=&#34;you-also-can-only-store-the-basic-data-types-in-a-data-frame&#34;&gt;You also can only store the basic data types in a data frame,&lt;/h1&gt;
+&lt;h1 id=&#34;like-logical-character-and-numeric-but-still-there-are-many-possibilities&#34;&gt;like logical, character and numeric, but still there are many possibilities.&lt;/h1&gt;
+&lt;pre&gt;&lt;code&gt;yowza &amp;lt;- data.frame(nums = 1:3, lets = letters[1:3])
+yowza
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;we-can-access-the-elements-in-the-dataframe-by-row-andor-column-numbers&#34;&gt;We can access the elements in the dataframe, by row and/or column numbers,&lt;/h1&gt;
+&lt;h1 id=&#34;or-by-column-names&#34;&gt;or by column names.&lt;/h1&gt;
+&lt;pre&gt;&lt;code&gt;yowza[1, 1]   # Elements of a dataframe are indexed from the top left.  
+yowza[1, ]    # The whole first row
+yowza[ , 1]   # The whole first column
+
+yowza[ , &amp;quot;lets&amp;quot;]
+yowza$lets
+yowza$nums
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;notice-that-the-lets-and-nums-maintain-their-own-data-types&#34;&gt;Notice that the lets and nums maintain their own data types.&lt;/h1&gt;
+&lt;h1 id=&#34;the-lets-are-still-characters&#34;&gt;The &amp;ldquo;lets&amp;rdquo; are still characters.&lt;/h1&gt;
+&lt;pre&gt;&lt;code&gt;class(yowza$lets)
+class(yowza$nums)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;special-thing-about-dataframes-is-it-holds-more-than-one-type-of-data&#34;&gt;special thing about dataframes is&amp;hellip; it holds more than one type of data,&lt;/h1&gt;
+&lt;h1 id=&#34;constraint-all-columns-are-the-same-length&#34;&gt;Constraint: all columns are the same length.&lt;/h1&gt;
+&lt;h1 id=&#34;matrices-and-recycling-rule&#34;&gt;Matrices and Recycling rule&lt;/h1&gt;
+&lt;pre&gt;&lt;code&gt;mat = matrix(data = 1:100, nrow = 10)
+mat
+mat[10, ]
+mat[ , c(9, 10)]
+
+matrix(data = 0, nrow = 10, ncol = 10)        # A matrix of zeroes.  
+matrix(data = c(1, 2), nrow = 10, ncol = 10)  # Recycling rule!
+matrix(data = c(1, 2), nrow = 10, ncol = 10, byrow = T)
+matrix(data = c(1, 2, 3), nrow = 10, ncol = 10, byrow = T)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;100-not-divisible-by-3&#34;&gt;100 not divisible by 3!&lt;/h1&gt;
+&lt;h1 id=&#34;another-handy-thing-which-you-might-want-to-do-someday&#34;&gt;Another handy thing, which you might want to do someday.&lt;/h1&gt;
+&lt;h1 id=&#34;suppose-we-want-to-create-a-dataframe-with-every-combination&#34;&gt;Suppose we want to create a dataframe with every combination&lt;/h1&gt;
+&lt;h1 id=&#34;of-several-variables&#34;&gt;of several variables.&lt;/h1&gt;
+&lt;pre&gt;&lt;code&gt;expando &amp;lt;- expand.grid(nums = 1:3, lets = letters[1:5])
+expando
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;three-level-expando&#34;&gt;Three level expando:&lt;/h1&gt;
+&lt;pre&gt;&lt;code&gt;fruit &amp;lt;- expand.grid(nums = 1:3, lets = letters[1:2], fruit = c(&amp;quot;pear&amp;quot;, &amp;quot;orange&amp;quot;))
+fruit
+fruit$fruit
+fruit$lets
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;#&amp;rsquo; See XXXX for a tutorial of more advanced R features using data from &amp;ldquo;GapMinder&amp;rdquo;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
