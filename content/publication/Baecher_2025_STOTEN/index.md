@@ -63,7 +63,6 @@ layout: "single"
 type: "publication"
 ---
 #
-#
 ## Publication metrics:
 <html>
   <style>

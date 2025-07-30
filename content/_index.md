@@ -1,5 +1,5 @@
 ---
-title: "Baecher Research"
+title: "Qμest"
 type: landing
 date: 2025-01-25
 draft: false
@@ -7,8 +7,8 @@ draft: false
 sections:
   - block: hero
     content:
-      title: "QμΣst research"
-      text: '<span class="text-xl">*quantitative ecology in space and time*</span>'
+      title: "Qμe[st] research"
+      text: '<span class="text-xl">*Quantitative Ecology in Space and Time*</span>'
       #text: "<img src='media/badge_kentucki.png' alt='description' class='inline h-20 w-20'>                  "
       primary_action:
         text: Download CV
@@ -134,8 +134,6 @@ sections:
 
         Whether in a classroom or lab, teaching must be student-centered, holistic, and equitable. By  fostering a supportive, engaging environment and recognizing all of students’ needs  (educational, emotional, and biological), I empower students to demonstrate mastery or seek additional support as needed—an approach known to increase success and enhance well-being.
 
-        ## Teaching Philosophy
-
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
             <h3>Teaching Philosophy: </h3>
@@ -187,6 +185,7 @@ sections:
 
         ### **Landscape Connectivity Modeling** | Professional workshop
         *Intensive workshop | Spring 2024*
+
         Hands-on workshop teaching cutting-edge methods for modeling animal movement and landscape connectivity using circuit theory and spatial absorbing Markov chains.
         
         - **Software**: R, Circuitscape, SAMC package

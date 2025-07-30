@@ -26,7 +26,7 @@ publication_short:
 publication_types:
 - "2"
 
-view: 3
+view: 4
 
 publishDate: 2020-10-08T00:00:00Z
 

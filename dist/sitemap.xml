@@ -5,9 +5,6 @@
     <loc>http://localhost:1313/talk/</loc>
     <lastmod>2025-12-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/project/</loc>
-    <lastmod>2025-09-10T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/publication-type/2/</loc>
     <lastmod>2025-07-04T00:00:00+00:00</lastmod>
   </url><url>
@@ -61,6 +58,30 @@
   </url><url>
     <loc>http://localhost:1313/author/yesenia-sanchez/</loc>
     <lastmod>2025-07-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tag/bayesian-statistics/</loc>
+    <lastmod>2025-02-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tag/inla/</loc>
+    <lastmod>2025-02-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/project/integrated-population-modeling/</loc>
+    <lastmod>2025-02-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tag/landscape-ecology/</loc>
+    <lastmod>2025-02-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/project/</loc>
+    <lastmod>2025-02-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tag/r/</loc>
+    <lastmod>2025-02-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tag/spatial-ecology/</loc>
+    <lastmod>2025-02-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tag/stochasticity/</loc>
+    <lastmod>2025-02-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/</loc>
     <lastmod>2025-01-25T00:00:00+00:00</lastmod>
@@ -269,6 +290,9 @@
     <loc>http://localhost:1313/tag/trait-based-approaches/</loc>
     <lastmod>2024-04-13T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/project/geostatistical-modeling/</loc>
+    <lastmod>2024-02-15T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/author/andrew-marx/</loc>
     <lastmod>2023-12-19T00:00:00+00:00</lastmod>
   </url><url>
@@ -290,6 +314,21 @@
     <loc>http://localhost:1313/tag/talk/</loc>
     <lastmod>2023-05-17T13:00:00+00:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/tag/circuit-theory/</loc>
+    <lastmod>2023-03-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/project/landscape-ecology/</loc>
+    <lastmod>2023-03-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tag/remote-sensing/</loc>
+    <lastmod>2023-03-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tag/resistance/</loc>
+    <lastmod>2023-03-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tag/spatially-absorbing-markov-chains/</loc>
+    <lastmod>2023-03-15T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/author/elizabeth-a.-roznik/</loc>
     <lastmod>2023-03-05T00:00:00+00:00</lastmod>
   </url><url>
@@ -301,6 +340,18 @@
   </url><url>
     <loc>http://localhost:1313/author/steve-a.-johnson/</loc>
     <lastmod>2023-03-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/project/climate-species-redistribution/</loc>
+    <lastmod>2023-01-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tag/climate-change/</loc>
+    <lastmod>2023-01-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tag/connectivity-modeling/</loc>
+    <lastmod>2023-01-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tag/invasions/</loc>
+    <lastmod>2023-01-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/talk/bioshifts_talk/</loc>
     <lastmod>2022-11-17T13:00:00+00:00</lastmod>
@@ -443,33 +494,6 @@
     <loc>http://localhost:1313/publication/baecher-2020-thb/</loc>
     <lastmod>2019-12-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/project/appalachian-ecology/</loc>
-    <lastmod>2019-09-10T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tag/detection/</loc>
-    <lastmod>2019-09-10T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tag/disturbance/</loc>
-    <lastmod>2019-09-10T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tag/field-ecology/</loc>
-    <lastmod>2019-09-10T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tag/invasions/</loc>
-    <lastmod>2019-09-10T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tag/population-ecology/</loc>
-    <lastmod>2019-09-10T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/project/herpetological-ecology/</loc>
-    <lastmod>2019-09-10T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tag/stream-ecology/</loc>
-    <lastmod>2019-09-10T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tag/woodland-salamanders/</loc>
-    <lastmod>2019-09-10T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/publication/hinkson-2019-cryo/</loc>
     <lastmod>2019-08-01T00:00:00+00:00</lastmod>
   </url><url>
@@ -518,10 +542,34 @@
     <loc>http://localhost:1313/tag/time-series/</loc>
     <lastmod>2016-08-12T00:40:04-07:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/project/appalachian-ecology/</loc>
+    <lastmod>2015-01-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tag/detection/</loc>
+    <lastmod>2015-01-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tag/disturbance/</loc>
+    <lastmod>2015-01-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tag/field-ecology/</loc>
+    <lastmod>2015-01-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tag/population-ecology/</loc>
+    <lastmod>2015-01-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tag/stream-ecology/</loc>
+    <lastmod>2015-01-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tag/woodland-salamanders/</loc>
+    <lastmod>2015-01-15T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/author/joseph-c.-neal/</loc>
     <lastmod>2014-10-08T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/publication/baecher-2014-hr/</loc>
     <lastmod>2014-10-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/project/herpetological-ecology/</loc>
+    <lastmod>2013-01-15T00:00:00+00:00</lastmod>
   </url>
 </urlset>

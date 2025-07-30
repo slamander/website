@@ -58,6 +58,46 @@
     </item>
     
     <item>
+      <title>Integrated population modeling</title>
+      <link>http://localhost:1313/project/integrated-population-modeling/</link>
+      <pubDate>Sat, 15 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/project/integrated-population-modeling/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Spatiotemporal statistics</title>
+      <link>http://localhost:1313/project/geostatistical-modeling/</link>
+      <pubDate>Thu, 15 Feb 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/project/geostatistical-modeling/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Spatiotemporal modeling&lt;/strong&gt;
+Basic generalized linear mixed effects models can account for spatial (and spatiotemporal) autocorrelation using latent Gaussian random fields (GRFs). However, GRFs are computationally intense due to costly covariance functions. Stochastic Partial Differential Equations (SPDE) can be used to minimize the scale of this problem by approximating GRFs with Gaussian Markcov random fields (GMRFs) with a Matern covariance function (Lindgrin et al., 2011; Krainski et al. 2018). This solution has been adopted by the Integrated Nested Laplace Approximation (INLA) software, and has later been implimented in Template Model Builder (TMB) software (Thorson et al., 2015).&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Landscape connectivity</title>
+      <link>http://localhost:1313/project/landscape-ecology/</link>
+      <pubDate>Wed, 15 Mar 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/project/landscape-ecology/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Publications&lt;/strong&gt;&lt;br&gt;
+&lt;em&gt;&lt;strong&gt;Forthcoming&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Baecher, JA, et al. .&lt;strong&gt;In review&lt;/strong&gt;. Isolating what limits the spread of an invasive predator. &lt;em&gt;Journal of Applied Ecology&lt;/em&gt; &lt;a href=&#34;https://advance.sagepub.com/doi/full/10.22541/au.171248322.23946990/v1&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://advance.sagepub.com/doi/full/10.22541/au.171248322.23946990/v1&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Baecher, JA, et al. .&lt;em&gt;In prep&lt;/em&gt;. Informing species range shifts with global connectivity. &lt;em&gt;TBA&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Biodiversity redistribution</title>
+      <link>http://localhost:1313/project/climate-species-redistribution/</link>
+      <pubDate>Sun, 15 Jan 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/project/climate-species-redistribution/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Linear regression with gradient descent</title>
       <link>http://localhost:1313/post/gradient-descent/</link>
       <pubDate>Wed, 22 Sep 2021 00:40:04 -0700</pubDate>
