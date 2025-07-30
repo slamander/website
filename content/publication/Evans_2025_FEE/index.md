@@ -20,6 +20,10 @@ publication_short:
 publication_types:
 - "2"
 
+publication_short:
+publication_types:
+- "2"
+
 view: 3
 
 publishDate: 2025-05-08T00:00:00Z

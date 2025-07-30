@@ -31,7 +31,7 @@ image:
 projects:
 - Climate-induced-species-redistribution
 publication: "***Global Change Biology***"
-publication_short:
+publication_short: 
 publication_types:
 - "2"
 publishDate: "2024-04-13T00:00:00Z"

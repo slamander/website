@@ -15,7 +15,7 @@ image:
 projects:
 - Reptile-and-Amphibian-Ecology
 publication: "***Journal of Animal Ecology***"
-publication_short:
+publication_short: 
 publication_types:
 - "2"
 publishDate: "2023-03-05T00:00:00Z"

@@ -14,7 +14,7 @@ image:
 projects:
 - Reptile-and-Amphibian-Ecology
 publication: "***Cryobiology***"
-publication_short:
+publication_short: 
 publication_types:
 - "2"
 publishDate: "2019-08-01T00:00:00Z"

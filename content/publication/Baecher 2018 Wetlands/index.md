@@ -16,7 +16,7 @@ image:
 projects:
 - Reptile-and-Amphibian-Ecology
 publication: "***Wetlands***"
-publication_short:
+publication_short: 
 publication_types:
 - "2"
 publishDate: "2018-11-18T00:00:00Z"
