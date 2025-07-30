@@ -16,7 +16,7 @@ image:
 projects:
 - Climate-induced-species-redistribution
 publication: "***Biological Reviews***"
-publication_short:
+publication_short: 
 publication_types:
 - "2"
 publishDate: "2022-09-08T00:00:00Z"

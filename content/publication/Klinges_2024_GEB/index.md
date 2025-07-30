@@ -41,7 +41,7 @@ image:
 projects:
 - Climate-induced-species-redistribution
 publication: "***Global Ecology and Biogeography***"
-publication_short:
+publication_short: 
 publication_types:
 - "2"
 publishDate: "2024-06-26T00:00:00Z"

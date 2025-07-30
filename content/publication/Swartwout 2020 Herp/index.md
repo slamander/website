@@ -16,7 +16,7 @@ image:
 projects:
 - Reptile-and-Amphibian-Ecology
 publication: "***Herpetologica***"
-publication_short:
+publication_short: 
 publication_types:
 - "2"
 publishDate: "2020-03-04T00:00:00Z"

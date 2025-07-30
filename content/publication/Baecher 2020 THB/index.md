@@ -14,7 +14,7 @@ image:
 projects:
 - Appalachian-Slamander-Ecology
 publication: "***Herpetological Bulletin***"
-publication_short:
+publication_short: 
 publication_types:
 - "2"
 publishDate: "2019-12-01T00:00:00Z"

@@ -28,6 +28,10 @@ projects:
 
 publication: "***EcoEvoRxiv***"
 
+publication_short:
+publication_types:
+- "2"
+
 tags:
 - Vector-born disease
 - modeling
