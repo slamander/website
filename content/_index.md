@@ -8,8 +8,8 @@ sections:
   - block: hero
     content:
       title: "Qμe[st] research"
-      text: '<span class="text-xl">*Quantitative Ecology in Space and Time*</span>'
-      #text: "<img src='media/badge_kentucki.png' alt='description' class='inline h-20 w-20'>                  "
+      #text: '<span class="text-xl">*Quantitative Ecology in Space and Time*</span>'
+      text: "<img src='media/badge_kentucki.png?v=2' alt='Plethodon kentucki' class='w-32 h-auto mx-auto' style='width: 300px; height: auto;'>"
       primary_action:
         text: Download CV
         url: https://drive.google.com/uc?export=download&id=1zADCDlIiJlx1vXKQ6NdMLwTZm7E6sS29

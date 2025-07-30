@@ -74,10 +74,10 @@ known as the Butterfly attractor).&lt;/p&gt;
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34; &#34; srcset=&#34;
-               /media/posts/edm_md_files/figure-markdown_strict/edm2_hu17421292258815013971.webp 400w,
-               /media/posts/edm_md_files/figure-markdown_strict/edm2_hu15917479656847315141.webp 760w,
+               /media/posts/edm_md_files/figure-markdown_strict/edm2_hu16403626484352897486.webp 400w,
+               /media/posts/edm_md_files/figure-markdown_strict/edm2_hu181499976154784445.webp 760w,
                /media/posts/edm_md_files/figure-markdown_strict/edm2_hu11645103756732411621.webp 1200w&#34;
-               src=&#34;http://localhost:1313/media/posts/edm_md_files/figure-markdown_strict/edm2_hu17421292258815013971.webp&#34;
+               src=&#34;http://localhost:1313/media/posts/edm_md_files/figure-markdown_strict/edm2_hu16403626484352897486.webp&#34;
                width=&#34;596&#34;
                height=&#34;255&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -129,10 +129,10 @@ autoplot(stationary_y_arima) + ylab(&amp;quot;Stationary Time Series&amp;quot;)
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34; &#34; srcset=&#34;
-               /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-3-1_hu7805694236425696086.webp 400w,
-               /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-3-1_hu12773678633244539661.webp 760w,
+               /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-3-1_hu15913331639593705298.webp 400w,
+               /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-3-1_hu14143149118903319856.webp 760w,
                /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-3-1_hu1549006150885248570.webp 1200w&#34;
-               src=&#34;http://localhost:1313/media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-3-1_hu7805694236425696086.webp&#34;
+               src=&#34;http://localhost:1313/media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-3-1_hu15913331639593705298.webp&#34;
                width=&#34;672&#34;
                height=&#34;480&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -164,10 +164,10 @@ autoplot(stationary_y_arima) + ylab(&amp;quot;Stationary Time Series&amp;quot;)
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34; &#34; srcset=&#34;
-               /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-4-1_hu17413134947067390419.webp 400w,
-               /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-4-1_hu8089632433936948208.webp 760w,
+               /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-4-1_hu14344471982811652402.webp 400w,
+               /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-4-1_hu15273091932528382875.webp 760w,
                /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-4-1_hu13483225594687473385.webp 1200w&#34;
-               src=&#34;http://localhost:1313/media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-4-1_hu17413134947067390419.webp&#34;
+               src=&#34;http://localhost:1313/media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-4-1_hu14344471982811652402.webp&#34;
                width=&#34;672&#34;
                height=&#34;480&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -198,10 +198,10 @@ autoplot(stationary_y_arima) + ylab(&amp;quot;Stationary Time Series&amp;quot;)
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34; &#34; srcset=&#34;
-               /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-4-2_hu9890928378724476645.webp 400w,
-               /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-4-2_hu5088554948208542086.webp 760w,
+               /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-4-2_hu243250512396664435.webp 400w,
+               /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-4-2_hu6224731107559119236.webp 760w,
                /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-4-2_hu8134695697354690722.webp 1200w&#34;
-               src=&#34;http://localhost:1313/media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-4-2_hu9890928378724476645.webp&#34;
+               src=&#34;http://localhost:1313/media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-4-2_hu243250512396664435.webp&#34;
                width=&#34;672&#34;
                height=&#34;480&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -244,10 +244,10 @@ autoplot(fitted(a), col = &amp;quot;blue&amp;quot;) + geom_path(data = df_ts, ae
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34; &#34; srcset=&#34;
-               /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-6-1_hu13386530821916426784.webp 400w,
-               /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-6-1_hu10389263712649820220.webp 760w,
+               /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-6-1_hu8236866543447181133.webp 400w,
+               /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-6-1_hu18290374554223893289.webp 760w,
                /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-6-1_hu11313155472407154891.webp 1200w&#34;
-               src=&#34;http://localhost:1313/media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-6-1_hu13386530821916426784.webp&#34;
+               src=&#34;http://localhost:1313/media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-6-1_hu8236866543447181133.webp&#34;
                width=&#34;672&#34;
                height=&#34;480&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -279,10 +279,10 @@ autoplot(fitted(a), col = &amp;quot;blue&amp;quot;) + geom_path(data = df_ts, ae
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34; &#34; srcset=&#34;
-               /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-7-1_hu6561736302183332671.webp 400w,
-               /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-7-1_hu10895422997864652108.webp 760w,
+               /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-7-1_hu8024251007177706218.webp 400w,
+               /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-7-1_hu8739678754891396586.webp 760w,
                /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-7-1_hu1228392626586771363.webp 1200w&#34;
-               src=&#34;http://localhost:1313/media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-7-1_hu6561736302183332671.webp&#34;
+               src=&#34;http://localhost:1313/media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-7-1_hu8024251007177706218.webp&#34;
                width=&#34;672&#34;
                height=&#34;480&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -319,10 +319,10 @@ autoplot(fitted(a1), col = &amp;quot;blue&amp;quot;) + geom_path(data = df_ts, a
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34; &#34; srcset=&#34;
-               /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-8-1_hu4619516621146696441.webp 400w,
-               /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-8-1_hu15020323914282561158.webp 760w,
+               /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-8-1_hu5226922063292174036.webp 400w,
+               /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-8-1_hu16847735352541540780.webp 760w,
                /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-8-1_hu1676423677590565393.webp 1200w&#34;
-               src=&#34;http://localhost:1313/media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-8-1_hu4619516621146696441.webp&#34;
+               src=&#34;http://localhost:1313/media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-8-1_hu5226922063292174036.webp&#34;
                width=&#34;672&#34;
                height=&#34;480&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -354,10 +354,10 @@ autoplot(forecast(a1, h = 48)) + geom_path(data = df_ts, aes(x = x, y = y)) + yl
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34; &#34; srcset=&#34;
-               /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-8-2_hu17926919454351495764.webp 400w,
-               /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-8-2_hu4208741386483684665.webp 760w,
+               /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-8-2_hu10715969486885109918.webp 400w,
+               /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-8-2_hu3916933907407752398.webp 760w,
                /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-8-2_hu3657123997256001945.webp 1200w&#34;
-               src=&#34;http://localhost:1313/media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-8-2_hu17926919454351495764.webp&#34;
+               src=&#34;http://localhost:1313/media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-8-2_hu10715969486885109918.webp&#34;
                width=&#34;672&#34;
                height=&#34;480&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -393,10 +393,10 @@ autoplot(fitted(a2), col = &amp;quot;blue&amp;quot;) + geom_path(data = df_ts, a
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34; &#34; srcset=&#34;
-               /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-9-1_hu4619516621146696441.webp 400w,
-               /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-9-1_hu15020323914282561158.webp 760w,
+               /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-9-1_hu5226922063292174036.webp 400w,
+               /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-9-1_hu16847735352541540780.webp 760w,
                /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-9-1_hu1676423677590565393.webp 1200w&#34;
-               src=&#34;http://localhost:1313/media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-9-1_hu4619516621146696441.webp&#34;
+               src=&#34;http://localhost:1313/media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-9-1_hu5226922063292174036.webp&#34;
                width=&#34;672&#34;
                height=&#34;480&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -428,10 +428,10 @@ autoplot(forecast(a2, h = 48)) + geom_path(data = df_ts, aes(x = x, y = y)) + yl
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34; &#34; srcset=&#34;
-               /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-9-2_hu17926919454351495764.webp 400w,
-               /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-9-2_hu4208741386483684665.webp 760w,
+               /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-9-2_hu10715969486885109918.webp 400w,
+               /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-9-2_hu3916933907407752398.webp 760w,
                /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-9-2_hu3657123997256001945.webp 1200w&#34;
-               src=&#34;http://localhost:1313/media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-9-2_hu17926919454351495764.webp&#34;
+               src=&#34;http://localhost:1313/media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-9-2_hu10715969486885109918.webp&#34;
                width=&#34;672&#34;
                height=&#34;480&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -483,10 +483,10 @@ ggarrange(a1_gg, a2_gg, a3_gg, ncol = 1)
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34; &#34; srcset=&#34;
-               /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-10-1_hu16288408043611695195.webp 400w,
-               /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-10-1_hu8895741248900875675.webp 760w,
+               /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-10-1_hu9504818083808244740.webp 400w,
+               /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-10-1_hu8486857742315290562.webp 760w,
                /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-10-1_hu18038795321176125581.webp 1200w&#34;
-               src=&#34;http://localhost:1313/media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-10-1_hu16288408043611695195.webp&#34;
+               src=&#34;http://localhost:1313/media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-10-1_hu9504818083808244740.webp&#34;
                width=&#34;672&#34;
                height=&#34;480&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -525,10 +525,10 @@ autoplot(forecast(a41, h = 48)) + ggtitle(&amp;quot;Arima Model Forecast: 4 hour
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34; &#34; srcset=&#34;
-               /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-11-1_hu2918833627813304264.webp 400w,
-               /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-11-1_hu8642984502335645233.webp 760w,
+               /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-11-1_hu11111161751271290476.webp 400w,
+               /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-11-1_hu8793498912813159543.webp 760w,
                /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-11-1_hu10614276409159835171.webp 1200w&#34;
-               src=&#34;http://localhost:1313/media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-11-1_hu2918833627813304264.webp&#34;
+               src=&#34;http://localhost:1313/media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-11-1_hu11111161751271290476.webp&#34;
                width=&#34;672&#34;
                height=&#34;480&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -583,10 +583,10 @@ autoplot(forecast(aa, h = 48)) + geom_path(data = df_ts, aes(x = x, y = y)) +
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34; &#34; srcset=&#34;
-               /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-12-1_hu14647638126452599805.webp 400w,
-               /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-12-1_hu10553494527365556019.webp 760w,
+               /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-12-1_hu10940513874776010594.webp 400w,
+               /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-12-1_hu9291855436646343154.webp 760w,
                /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-12-1_hu6578880842138778313.webp 1200w&#34;
-               src=&#34;http://localhost:1313/media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-12-1_hu14647638126452599805.webp&#34;
+               src=&#34;http://localhost:1313/media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-12-1_hu10940513874776010594.webp&#34;
                width=&#34;672&#34;
                height=&#34;480&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -623,10 +623,10 @@ autoplot(nonstationary_y) + ylab(&amp;quot;Non-stationary Time Series&amp;quot;)
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34; &#34; srcset=&#34;
-               /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-13-1_hu2076250804214964103.webp 400w,
-               /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-13-1_hu18116198989023368975.webp 760w,
+               /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-13-1_hu5534270256076536918.webp 400w,
+               /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-13-1_hu7443841603654404905.webp 760w,
                /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-13-1_hu13635102975722786926.webp 1200w&#34;
-               src=&#34;http://localhost:1313/media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-13-1_hu2076250804214964103.webp&#34;
+               src=&#34;http://localhost:1313/media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-13-1_hu5534270256076536918.webp&#34;
                width=&#34;672&#34;
                height=&#34;480&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -679,10 +679,10 @@ aa_ns &amp;lt;- autoplot(forecast(aa_ns, h = 48)) +
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34; &#34; srcset=&#34;
-               /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-15-1_hu4979699358949114371.webp 400w,
-               /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-15-1_hu15389575923361631140.webp 760w,
+               /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-15-1_hu5465609939797701928.webp 400w,
+               /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-15-1_hu11172417801653061657.webp 760w,
                /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-15-1_hu13320879648571110662.webp 1200w&#34;
-               src=&#34;http://localhost:1313/media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-15-1_hu4979699358949114371.webp&#34;
+               src=&#34;http://localhost:1313/media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-15-1_hu5465609939797701928.webp&#34;
                width=&#34;672&#34;
                height=&#34;480&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -748,10 +748,10 @@ plot(simplex_output$E, simplex_output$rho, type = &amp;quot;l&amp;quot;, lwd = 5
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34; &#34; srcset=&#34;
-               /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-17-1_hu5666518114772278494.webp 400w,
-               /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-17-1_hu8159935374829856186.webp 760w,
+               /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-17-1_hu18076333739072719216.webp 400w,
+               /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-17-1_hu7041904891661988525.webp 760w,
                /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-17-1_hu4627458796794216504.webp 1200w&#34;
-               src=&#34;http://localhost:1313/media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-17-1_hu5666518114772278494.webp&#34;
+               src=&#34;http://localhost:1313/media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-17-1_hu18076333739072719216.webp&#34;
                width=&#34;672&#34;
                height=&#34;480&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -784,10 +784,10 @@ plot(simplex_output$tp, simplex_output$rho, type = &amp;quot;l&amp;quot;, lwd = 
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34; &#34; srcset=&#34;
-               /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-17-2_hu5297584271275002942.webp 400w,
-               /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-17-2_hu15716748166257607717.webp 760w,
+               /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-17-2_hu4886550769375840781.webp 400w,
+               /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-17-2_hu15219807652795368261.webp 760w,
                /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-17-2_hu4956583592973100906.webp 1200w&#34;
-               src=&#34;http://localhost:1313/media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-17-2_hu5297584271275002942.webp&#34;
+               src=&#34;http://localhost:1313/media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-17-2_hu4886550769375840781.webp&#34;
                width=&#34;672&#34;
                height=&#34;480&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -825,10 +825,10 @@ plot(df_ts_st$y~df_ts_st$x, type = &amp;quot;l&amp;quot;)
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34; &#34; srcset=&#34;
-               /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-18-1_hu13374928150541069539.webp 400w,
-               /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-18-1_hu9112652997378736835.webp 760w,
+               /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-18-1_hu16846440469894273579.webp 400w,
+               /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-18-1_hu5041615696177568901.webp 760w,
                /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-18-1_hu12806932964324019150.webp 1200w&#34;
-               src=&#34;http://localhost:1313/media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-18-1_hu13374928150541069539.webp&#34;
+               src=&#34;http://localhost:1313/media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-18-1_hu16846440469894273579.webp&#34;
                width=&#34;672&#34;
                height=&#34;480&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -864,10 +864,10 @@ plot(df_ts_st$y~df_ts_st$x, type = &amp;quot;l&amp;quot;)
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34; &#34; srcset=&#34;
-               /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-18-2_hu7396197151765709871.webp 400w,
-               /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-18-2_hu9742329418107655175.webp 760w,
+               /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-18-2_hu434542893964622744.webp 400w,
+               /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-18-2_hu11568237305831267368.webp 760w,
                /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-18-2_hu6967299816902463539.webp 1200w&#34;
-               src=&#34;http://localhost:1313/media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-18-2_hu7396197151765709871.webp&#34;
+               src=&#34;http://localhost:1313/media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-18-2_hu434542893964622744.webp&#34;
                width=&#34;672&#34;
                height=&#34;480&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -899,10 +899,10 @@ plot(df_ts_st$y~df_ts_st$x, type = &amp;quot;l&amp;quot;)
 &lt;figure  id=&#34;figure-image-183&#34;&gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Image 18.3&#34; srcset=&#34;
-               /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-18-3_hu11618994458072589488.webp 400w,
-               /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-18-3_hu10687812389112784535.webp 760w,
+               /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-18-3_hu262663597941260557.webp 400w,
+               /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-18-3_hu15221605206511965309.webp 760w,
                /media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-18-3_hu12186086929266463582.webp 1200w&#34;
-               src=&#34;http://localhost:1313/media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-18-3_hu11618994458072589488.webp&#34;
+               src=&#34;http://localhost:1313/media/posts/edm_md_files/figure-markdown_strict/unnamed-chunk-18-3_hu262663597941260557.webp&#34;
                width=&#34;672&#34;
                height=&#34;480&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
