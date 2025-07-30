@@ -177,10 +177,10 @@ abline(a = mod$coefficients[1], b = mod$coefficients[2], col=&#39;blue&#39;, lwd
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34; &#34; srcset=&#34;
-               /media/posts/lr_files/figure-markdown_strict/unnamed-chunk-4-1_hu125614460351944238.webp 400w,
-               /media/posts/lr_files/figure-markdown_strict/unnamed-chunk-4-1_hu3688351215114058112.webp 760w,
+               /media/posts/lr_files/figure-markdown_strict/unnamed-chunk-4-1_hu8551663495961673042.webp 400w,
+               /media/posts/lr_files/figure-markdown_strict/unnamed-chunk-4-1_hu9486235095446895088.webp 760w,
                /media/posts/lr_files/figure-markdown_strict/unnamed-chunk-4-1_hu8859505797292339637.webp 1200w&#34;
-               src=&#34;http://localhost:1313/media/posts/lr_files/figure-markdown_strict/unnamed-chunk-4-1_hu125614460351944238.webp&#34;
+               src=&#34;http://localhost:1313/media/posts/lr_files/figure-markdown_strict/unnamed-chunk-4-1_hu8551663495961673042.webp&#34;
                width=&#34;672&#34;
                height=&#34;480&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -227,10 +227,10 @@ abline(a = intercept, b = slope, col=&#39;blue&#39;, lwd=2)
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34; &#34; srcset=&#34;
-               /media/posts/lr_files/figure-markdown_strict/unnamed-chunk-6-1_hu8206624935972720864.webp 400w,
-               /media/posts/lr_files/figure-markdown_strict/unnamed-chunk-6-1_hu3767488510028119535.webp 760w,
+               /media/posts/lr_files/figure-markdown_strict/unnamed-chunk-6-1_hu2949314009040170375.webp 400w,
+               /media/posts/lr_files/figure-markdown_strict/unnamed-chunk-6-1_hu15171377414764716868.webp 760w,
                /media/posts/lr_files/figure-markdown_strict/unnamed-chunk-6-1_hu14793946180658159100.webp 1200w&#34;
-               src=&#34;http://localhost:1313/media/posts/lr_files/figure-markdown_strict/unnamed-chunk-6-1_hu8206624935972720864.webp&#34;
+               src=&#34;http://localhost:1313/media/posts/lr_files/figure-markdown_strict/unnamed-chunk-6-1_hu2949314009040170375.webp&#34;
                width=&#34;672&#34;
                height=&#34;480&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -262,10 +262,10 @@ abline(a = intercept, b = slope, col=&#39;blue&#39;, lwd=2)
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34; &#34; srcset=&#34;
-               /media/posts/lr_files/figure-markdown_strict/hiking_analogy_hu9072522675351130076.webp 400w,
-               /media/posts/lr_files/figure-markdown_strict/hiking_analogy_hu5081220825254170018.webp 760w,
+               /media/posts/lr_files/figure-markdown_strict/hiking_analogy_hu15159196870089607687.webp 400w,
+               /media/posts/lr_files/figure-markdown_strict/hiking_analogy_hu8643088186133544508.webp 760w,
                /media/posts/lr_files/figure-markdown_strict/hiking_analogy_hu16647294568684891759.webp 1200w&#34;
-               src=&#34;http://localhost:1313/media/posts/lr_files/figure-markdown_strict/hiking_analogy_hu9072522675351130076.webp&#34;
+               src=&#34;http://localhost:1313/media/posts/lr_files/figure-markdown_strict/hiking_analogy_hu15159196870089607687.webp&#34;
                width=&#34;700&#34;
                height=&#34;465&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -294,10 +294,10 @@ abline(a = intercept, b = slope, col=&#39;blue&#39;, lwd=2)
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34; &#34; srcset=&#34;
-               /media/posts/lr_files/figure-markdown_strict/lr_diagram_hu2835042639772095905.webp 400w,
-               /media/posts/lr_files/figure-markdown_strict/lr_diagram_hu4833325942078338398.webp 760w,
+               /media/posts/lr_files/figure-markdown_strict/lr_diagram_hu2448971957808616965.webp 400w,
+               /media/posts/lr_files/figure-markdown_strict/lr_diagram_hu12845061643091946287.webp 760w,
                /media/posts/lr_files/figure-markdown_strict/lr_diagram_hu17409504747599895843.webp 1200w&#34;
-               src=&#34;http://localhost:1313/media/posts/lr_files/figure-markdown_strict/lr_diagram_hu2835042639772095905.webp&#34;
+               src=&#34;http://localhost:1313/media/posts/lr_files/figure-markdown_strict/lr_diagram_hu2448971957808616965.webp&#34;
                width=&#34;760&#34;
                height=&#34;473&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -417,10 +417,10 @@ utils::browseURL(gif_file)
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34; &#34; srcset=&#34;
-               /media/posts/lr_files/figure-markdown_strict/unnamed-chunk-10-1_hu17465775487415473422.webp 400w,
-               /media/posts/lr_files/figure-markdown_strict/unnamed-chunk-10-1_hu13216148406905792796.webp 760w,
+               /media/posts/lr_files/figure-markdown_strict/unnamed-chunk-10-1_hu15226046985714386052.webp 400w,
+               /media/posts/lr_files/figure-markdown_strict/unnamed-chunk-10-1_hu13749904028915559076.webp 760w,
                /media/posts/lr_files/figure-markdown_strict/unnamed-chunk-10-1_hu11794761284791704341.webp 1200w&#34;
-               src=&#34;http://localhost:1313/media/posts/lr_files/figure-markdown_strict/unnamed-chunk-10-1_hu17465775487415473422.webp&#34;
+               src=&#34;http://localhost:1313/media/posts/lr_files/figure-markdown_strict/unnamed-chunk-10-1_hu15226046985714386052.webp&#34;
                width=&#34;672&#34;
                height=&#34;480&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -487,10 +487,10 @@ plot(df$Body_size_mm, df$Size_at_maturity_max_mm, col = &amp;quot;grey80&amp;quo
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34; &#34; srcset=&#34;
-               /media/posts/lr_files/figure-markdown_strict/unnamed-chunk-11-1_hu6469275372122063057.webp 400w,
-               /media/posts/lr_files/figure-markdown_strict/unnamed-chunk-11-1_hu1853867480279698368.webp 760w,
+               /media/posts/lr_files/figure-markdown_strict/unnamed-chunk-11-1_hu893240730196825435.webp 400w,
+               /media/posts/lr_files/figure-markdown_strict/unnamed-chunk-11-1_hu13026316878176312818.webp 760w,
                /media/posts/lr_files/figure-markdown_strict/unnamed-chunk-11-1_hu14878789998347573284.webp 1200w&#34;
-               src=&#34;http://localhost:1313/media/posts/lr_files/figure-markdown_strict/unnamed-chunk-11-1_hu6469275372122063057.webp&#34;
+               src=&#34;http://localhost:1313/media/posts/lr_files/figure-markdown_strict/unnamed-chunk-11-1_hu893240730196825435.webp&#34;
                width=&#34;672&#34;
                height=&#34;480&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -547,10 +547,10 @@ abline(a = mod$coefficients[1], b = mod$coefficients[2], col=&#39;blue&#39;, lwd
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34; &#34; srcset=&#34;
-               /media/posts/lr_files/figure-markdown_strict/unnamed-chunk-13-1_hu10005790227524180552.webp 400w,
-               /media/posts/lr_files/figure-markdown_strict/unnamed-chunk-13-1_hu14913980611577854031.webp 760w,
+               /media/posts/lr_files/figure-markdown_strict/unnamed-chunk-13-1_hu1969989005240059808.webp 400w,
+               /media/posts/lr_files/figure-markdown_strict/unnamed-chunk-13-1_hu12803367816218472457.webp 760w,
                /media/posts/lr_files/figure-markdown_strict/unnamed-chunk-13-1_hu3570476343014275261.webp 1200w&#34;
-               src=&#34;http://localhost:1313/media/posts/lr_files/figure-markdown_strict/unnamed-chunk-13-1_hu10005790227524180552.webp&#34;
+               src=&#34;http://localhost:1313/media/posts/lr_files/figure-markdown_strict/unnamed-chunk-13-1_hu1969989005240059808.webp&#34;
                width=&#34;672&#34;
                height=&#34;480&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -599,10 +599,10 @@ abline(a = intercept, b = slope, col=&#39;blue&#39;, lwd=2)
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34; &#34; srcset=&#34;
-               /media/posts/lr_files/figure-markdown_strict/unnamed-chunk-14-1_hu8208612853385621510.webp 400w,
-               /media/posts/lr_files/figure-markdown_strict/unnamed-chunk-14-1_hu14964044291458643172.webp 760w,
+               /media/posts/lr_files/figure-markdown_strict/unnamed-chunk-14-1_hu16688363695195450873.webp 400w,
+               /media/posts/lr_files/figure-markdown_strict/unnamed-chunk-14-1_hu11796089762525742180.webp 760w,
                /media/posts/lr_files/figure-markdown_strict/unnamed-chunk-14-1_hu6382700030778350265.webp 1200w&#34;
-               src=&#34;http://localhost:1313/media/posts/lr_files/figure-markdown_strict/unnamed-chunk-14-1_hu8208612853385621510.webp&#34;
+               src=&#34;http://localhost:1313/media/posts/lr_files/figure-markdown_strict/unnamed-chunk-14-1_hu16688363695195450873.webp&#34;
                width=&#34;672&#34;
                height=&#34;480&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -669,10 +669,10 @@ abline(coef=theta, col=&amp;quot;blue&amp;quot;, lwd = 2)
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34; &#34; srcset=&#34;
-               /media/posts/lr_files/figure-markdown_strict/unnamed-chunk-16-1_hu1697465344881692455.webp 400w,
-               /media/posts/lr_files/figure-markdown_strict/unnamed-chunk-16-1_hu10619998885472886743.webp 760w,
+               /media/posts/lr_files/figure-markdown_strict/unnamed-chunk-16-1_hu5100640028345161415.webp 400w,
+               /media/posts/lr_files/figure-markdown_strict/unnamed-chunk-16-1_hu3901677043462376067.webp 760w,
                /media/posts/lr_files/figure-markdown_strict/unnamed-chunk-16-1_hu8737325766736597265.webp 1200w&#34;
-               src=&#34;http://localhost:1313/media/posts/lr_files/figure-markdown_strict/unnamed-chunk-16-1_hu1697465344881692455.webp&#34;
+               src=&#34;http://localhost:1313/media/posts/lr_files/figure-markdown_strict/unnamed-chunk-16-1_hu5100640028345161415.webp&#34;
                width=&#34;672&#34;
                height=&#34;480&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -706,10 +706,10 @@ abline(coef=theta, col=&amp;quot;blue&amp;quot;, lwd = 2)
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34; &#34; srcset=&#34;
-               /media/posts/lr_files/figure-markdown_strict/unnamed-chunk-17-1_hu12408898768631476185.webp 400w,
-               /media/posts/lr_files/figure-markdown_strict/unnamed-chunk-17-1_hu4724194349744597554.webp 760w,
+               /media/posts/lr_files/figure-markdown_strict/unnamed-chunk-17-1_hu17270757539472694698.webp 400w,
+               /media/posts/lr_files/figure-markdown_strict/unnamed-chunk-17-1_hu11148887372339103562.webp 760w,
                /media/posts/lr_files/figure-markdown_strict/unnamed-chunk-17-1_hu14433026510257978825.webp 1200w&#34;
-               src=&#34;http://localhost:1313/media/posts/lr_files/figure-markdown_strict/unnamed-chunk-17-1_hu12408898768631476185.webp&#34;
+               src=&#34;http://localhost:1313/media/posts/lr_files/figure-markdown_strict/unnamed-chunk-17-1_hu17270757539472694698.webp&#34;
                width=&#34;672&#34;
                height=&#34;480&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
