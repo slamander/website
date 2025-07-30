@@ -125,12 +125,13 @@ sections:
       title: "Teaching & Mentoring"
       text: |
 
-        I believe education must be student-centered, holistic, and equitable. By fostering a supportive, engaging environment and recognizing all of students’ needs  (educational, emotional, and biological), I empower students to demonstrate mastery or seek additional support as needed—an approach known to increase success and enhance well-being.
+        I believe education must be student-centered, holistic, and equitable. By fostering a supportive, engaging environment and recognizing all of students’ needs  (educational, emotional, and biological), I empower students to demonstrate mastery or seek additional support as needed.
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
             <h3>Teaching Philosophy: </h3>
             <p> 
+
          - encourange real-world problem solving through inquiry-based learning
 
          - provide hands-on, experiential activities
@@ -142,7 +143,8 @@ sections:
           <div>
             <h3>Mentoring Philosophy:</h3>
             <p>
-         - align progress with personal goals and well-being
+
+         - align progress with student goals and well-being
 
          - provide space to explore, make mistakes, and reflect
 
