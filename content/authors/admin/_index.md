@@ -47,9 +47,9 @@ work:
     date_start: 2025-08-01
     date_end: ''
     summary: |2-
-      [Wolf-Clark lab](https://www.clarkwolflab.com/) (Dept. Wildland Resources) & [Stuber lab](https://efstuber.wixsite.com/xscaleeco/) (USGS)
+      [Clark-Wolf lab](https://www.clarkwolflab.com/) (Dept. Wildland Resources) & [Stuber lab](https://efstuber.wixsite.com/xscaleeco/) (USGS)
   - position: Postdoctoral Research Associate
-    company_name: University of Florida
+    company_name: University of Florida 
     company_url: 'ufl.edu'
     company_logo: ''
     date_start: 2024-08-01
