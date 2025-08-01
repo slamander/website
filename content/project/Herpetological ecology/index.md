@@ -1,9 +1,14 @@
 ---
-date: "2019-09-10T00:00:00Z"
+title: Reptile and Amphibian Ecology
+
+date: "2013-01-15"
+
 external_link: []
+
 image:
   caption: Spring salamander (Gyrinophilus porphyriticus) from eastern Kentucky
   focal_point: Smart
+  
 links:
 - icon: file-alt
   icon_pack: fas
@@ -29,14 +34,17 @@ links:
   icon_pack: fa
   name: Burmese python seminar
   url: https://www.alexbaecher.com/talk/seriscc_seminar/
+  
 slides: Reptile-and-Amphibian-Ecology
+
 summary: Natural History, Ecology, and Conservation of Herps in the Southeastern US.
+
 tags:
 - field ecology
 - population ecology
 - disturbance
 - invasions
-title: Reptile and Amphibian Ecology
+
 url_code: ""
 url_pdf: ""
 url_slides: ""

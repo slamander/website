@@ -5,7 +5,7 @@
     <link>http://localhost:1313/tag/resistance/</link>
       <atom:link href="http://localhost:1313/tag/resistance/index.xml" rel="self" type="application/rss+xml" />
     <description>Resistance</description>
-    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><copyright>© 2025 Alex Baecher</copyright><lastBuildDate>Tue, 10 Sep 2019 00:00:00 +0000</lastBuildDate>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><copyright>© 2025 Alex Baecher</copyright><lastBuildDate>Wed, 15 Mar 2023 00:00:00 +0000</lastBuildDate>
     <image>
       <url>http://localhost:1313/media/logo_hu2039277577754200582.png</url>
       <title>Resistance</title>
@@ -15,7 +15,7 @@
     <item>
       <title>Landscape connectivity</title>
       <link>http://localhost:1313/project/landscape-ecology/</link>
-      <pubDate>Tue, 10 Sep 2019 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 15 Mar 2023 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/project/landscape-ecology/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Publications&lt;/strong&gt;&lt;br&gt;
 &lt;em&gt;&lt;strong&gt;Forthcoming&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;

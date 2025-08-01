@@ -27,6 +27,9 @@ projects:
 - geostatistical-modeling
 
 publication: "***EcoEvoRxiv***"
+publication_short:
+publication_types:
+- "2"
 
 publication_short:
 publication_types:
@@ -59,7 +62,6 @@ design:
 layout: "single"
 type: "publication"
 ---
-#
 #
 ## Publication metrics:
 <html>

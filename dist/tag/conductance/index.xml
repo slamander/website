@@ -60,10 +60,10 @@ Cheeked Salamander, endemic to the Great Smoky Mountains National Park
 &lt;figure  id=&#34;figure-jordans-red-cheeked-salamander&#34;&gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Jordan&amp;#39;s Red Cheeked Salamander&#34; srcset=&#34;
-               /media/posts/connectivity_script_files/figure-markdown_strict/jrcs_hu8748387886065202433.webp 400w,
+               /media/posts/connectivity_script_files/figure-markdown_strict/jrcs_hu3387592840483114657.webp 400w,
                /media/posts/connectivity_script_files/figure-markdown_strict/jrcs_hu8774435472472496843.webp 760w,
                /media/posts/connectivity_script_files/figure-markdown_strict/jrcs_hu8093516403498535379.webp 1200w&#34;
-               src=&#34;http://localhost:1313/media/posts/connectivity_script_files/figure-markdown_strict/jrcs_hu8748387886065202433.webp&#34;
+               src=&#34;http://localhost:1313/media/posts/connectivity_script_files/figure-markdown_strict/jrcs_hu3387592840483114657.webp&#34;
                width=&#34;760&#34;
                height=&#34;446&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -205,10 +205,10 @@ ggplot() + geom_polygon(data=se, aes(x=long, y=lat, grou=group), col=&amp;quot;g
 &lt;figure  id=&#34;figure-jordans-red-cheeked-salamander&#34;&gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Jordan&amp;#39;s Red Cheeked Salamander&#34; srcset=&#34;
-               /media/posts/connectivity_script_files/figure-markdown_strict/plot_presences-1_hu15505977354153264823.webp 400w,
+               /media/posts/connectivity_script_files/figure-markdown_strict/plot_presences-1_hu10426821385331443381.webp 400w,
                /media/posts/connectivity_script_files/figure-markdown_strict/plot_presences-1_hu2728833307136772739.webp 760w,
                /media/posts/connectivity_script_files/figure-markdown_strict/plot_presences-1_hu18335796353493736808.webp 1200w&#34;
-               src=&#34;http://localhost:1313/media/posts/connectivity_script_files/figure-markdown_strict/plot_presences-1_hu15505977354153264823.webp&#34;
+               src=&#34;http://localhost:1313/media/posts/connectivity_script_files/figure-markdown_strict/plot_presences-1_hu10426821385331443381.webp&#34;
                width=&#34;672&#34;
                height=&#34;480&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -263,10 +263,10 @@ Pj_poly_buff &amp;lt;- gBuffer(Pj_poly, width = 0.05, byid=T)
 &lt;figure  id=&#34;figure-buffered-polygon&#34;&gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Buffered polygon&#34; srcset=&#34;
-               /media/posts/connectivity_script_files/figure-markdown_strict/unnamed-chunk-1-1_hu4160553860264835895.webp 400w,
+               /media/posts/connectivity_script_files/figure-markdown_strict/unnamed-chunk-1-1_hu5481814721463379522.webp 400w,
                /media/posts/connectivity_script_files/figure-markdown_strict/unnamed-chunk-1-1_hu14299404557036398538.webp 760w,
                /media/posts/connectivity_script_files/figure-markdown_strict/unnamed-chunk-1-1_hu3578149591007381430.webp 1200w&#34;
-               src=&#34;http://localhost:1313/media/posts/connectivity_script_files/figure-markdown_strict/unnamed-chunk-1-1_hu4160553860264835895.webp&#34;
+               src=&#34;http://localhost:1313/media/posts/connectivity_script_files/figure-markdown_strict/unnamed-chunk-1-1_hu5481814721463379522.webp&#34;
                width=&#34;672&#34;
                height=&#34;480&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -316,10 +316,10 @@ ggplot(as.data.frame(asp, xy=T)) + geom_raster(aes(x=x, y=y, fill=aspect)) +
 &lt;figure  id=&#34;figure-creating-gis-layers-for-the-great-smoky-mtns&#34;&gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;creating gis layers for the Great Smoky Mtns&#34; srcset=&#34;
-               /media/posts/connectivity_script_files/figure-markdown_strict/create_layers-1_hu1715431012424902423.webp 400w,
+               /media/posts/connectivity_script_files/figure-markdown_strict/create_layers-1_hu16879753404501870715.webp 400w,
                /media/posts/connectivity_script_files/figure-markdown_strict/create_layers-1_hu14616543833048540915.webp 760w,
                /media/posts/connectivity_script_files/figure-markdown_strict/create_layers-1_hu17860438836242113234.webp 1200w&#34;
-               src=&#34;http://localhost:1313/media/posts/connectivity_script_files/figure-markdown_strict/create_layers-1_hu1715431012424902423.webp&#34;
+               src=&#34;http://localhost:1313/media/posts/connectivity_script_files/figure-markdown_strict/create_layers-1_hu16879753404501870715.webp&#34;
                width=&#34;384&#34;
                height=&#34;288&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -361,10 +361,10 @@ ggplot(as.data.frame(asp, xy=T)) + geom_raster(aes(x=x, y=y, fill=aspect)) +
 &lt;figure  id=&#34;figure-random-sample-of-sites-in-the-great-smoky-mtns&#34;&gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;random sample of sites in the Great Smoky Mtns&#34; srcset=&#34;
-               /media/posts/connectivity_script_files/figure-markdown_strict/gather_random_sample_of_sites-1_hu17435859837055058397.webp 400w,
+               /media/posts/connectivity_script_files/figure-markdown_strict/gather_random_sample_of_sites-1_hu14702972530556422170.webp 400w,
                /media/posts/connectivity_script_files/figure-markdown_strict/gather_random_sample_of_sites-1_hu15156685734228406591.webp 760w,
                /media/posts/connectivity_script_files/figure-markdown_strict/gather_random_sample_of_sites-1_hu15449460719916003691.webp 1200w&#34;
-               src=&#34;http://localhost:1313/media/posts/connectivity_script_files/figure-markdown_strict/gather_random_sample_of_sites-1_hu17435859837055058397.webp&#34;
+               src=&#34;http://localhost:1313/media/posts/connectivity_script_files/figure-markdown_strict/gather_random_sample_of_sites-1_hu14702972530556422170.webp&#34;
                width=&#34;480&#34;
                height=&#34;384&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -453,10 +453,10 @@ ggplot(as.data.frame(passages_overlay, xy=T)) + geom_raster(aes(x=x,y=y,fill=lay
 &lt;figure  id=&#34;figure-ecological-flow-of-jordans-red-cheeked-salamander&#34;&gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Ecological Flow of Jordan&amp;#39;s Red Cheeked Salamander&#34; srcset=&#34;
-               /media/posts/connectivity_script_files/figure-markdown_strict/plot_flow-1_hu3668783389650275206.webp 400w,
+               /media/posts/connectivity_script_files/figure-markdown_strict/plot_flow-1_hu4741917585455810038.webp 400w,
                /media/posts/connectivity_script_files/figure-markdown_strict/plot_flow-1_hu1841305405371726403.webp 760w,
                /media/posts/connectivity_script_files/figure-markdown_strict/plot_flow-1_hu2997340114314834329.webp 1200w&#34;
-               src=&#34;http://localhost:1313/media/posts/connectivity_script_files/figure-markdown_strict/plot_flow-1_hu3668783389650275206.webp&#34;
+               src=&#34;http://localhost:1313/media/posts/connectivity_script_files/figure-markdown_strict/plot_flow-1_hu4741917585455810038.webp&#34;
                width=&#34;760&#34;
                height=&#34;136&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;

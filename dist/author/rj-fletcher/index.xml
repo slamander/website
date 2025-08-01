@@ -20,46 +20,5 @@
       <description></description>
     </item>
     
-    <item>
-      <title>Species redistribution and connectivity (Intro)</title>
-      <link>http://localhost:1313/talk/samc_sotm/</link>
-      <pubDate>Tue, 19 Dec 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/talk/samc_sotm/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;Description:&lt;/strong&gt;
-This 1-day workshop will distill the basic principles of connectivity modeling and its relevance to predicting movement and species redistribution with environmental change. Participants will be introduced to connectivity as well as a new framework utilizing spatial-absorbing Markov chains (SAMC), which helps unify other approaches. Along the way, we will discuss how connectivity is relevant to core principles of species ranges and redistribution. We will also discuss the common problems, assumptions, and oversights occurring in published predictions of species range redistribution.&lt;/p&gt;
-&lt;p&gt;Topics:
-&lt;strong&gt;Background and motivation&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Connectivity and species on the move&lt;/li&gt;
-&lt;li&gt;The state of connectivity modeling&lt;/li&gt;
-&lt;li&gt;R activity —introduction to connectivity using R&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Markov chains, connectivity, and the SAMC framework&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;An introduction to the SAMC and the samc package&lt;/li&gt;
-&lt;li&gt;Relationships of SAMC with other connectivity frameworks&lt;/li&gt;
-&lt;li&gt;R activity—contrasting the SAMC and circuit theory&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Building connectivity models with the SAMC&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Building and tuning a SAMC model&lt;/li&gt;
-&lt;li&gt;What kinds data are needed?&lt;/li&gt;
-&lt;li&gt;R activity—Burmese python spread and potential corridors&lt;/li&gt;
-&lt;li&gt;Modeling dispersal kernels with the SAMC&lt;/li&gt;
-&lt;li&gt;R activity—kernels with black bears&lt;/li&gt;
-&lt;li&gt;Spatial networks and the SAMC&lt;/li&gt;
-&lt;li&gt;R activity—graph example with snail kites&lt;/li&gt;
-&lt;li&gt;Discussion: how to build your own models&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Emerging topics&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Movement ecology, movement trajectories, and the SAMC&lt;/li&gt;
-&lt;li&gt;Dynamic models for connectivity and species redistribution&lt;/li&gt;
-&lt;li&gt;Scaling models to large regions&lt;/li&gt;
-&lt;li&gt;Discussion of applications, facilitating use, etc.&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-    </item>
-    
   </channel>
 </rss>

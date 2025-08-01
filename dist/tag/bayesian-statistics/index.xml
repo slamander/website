@@ -5,7 +5,7 @@
     <link>http://localhost:1313/tag/bayesian-statistics/</link>
       <atom:link href="http://localhost:1313/tag/bayesian-statistics/index.xml" rel="self" type="application/rss+xml" />
     <description>Bayesian Statistics</description>
-    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><copyright>© 2025 Alex Baecher</copyright><lastBuildDate>Tue, 10 Sep 2019 00:00:00 +0000</lastBuildDate>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><copyright>© 2025 Alex Baecher</copyright><lastBuildDate>Sat, 15 Feb 2025 00:00:00 +0000</lastBuildDate>
     <image>
       <url>http://localhost:1313/media/logo_hu2039277577754200582.png</url>
       <title>Bayesian Statistics</title>
@@ -13,9 +13,17 @@
     </image>
     
     <item>
-      <title>Spatial modeling</title>
+      <title>Integrated population modeling</title>
+      <link>http://localhost:1313/project/integrated-population-modeling/</link>
+      <pubDate>Sat, 15 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/project/integrated-population-modeling/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Spatiotemporal statistics</title>
       <link>http://localhost:1313/project/geostatistical-modeling/</link>
-      <pubDate>Tue, 10 Sep 2019 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 15 Feb 2024 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/project/geostatistical-modeling/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Spatiotemporal modeling&lt;/strong&gt;
 Basic generalized linear mixed effects models can account for spatial (and spatiotemporal) autocorrelation using latent Gaussian random fields (GRFs). However, GRFs are computationally intense due to costly covariance functions. Stochastic Partial Differential Equations (SPDE) can be used to minimize the scale of this problem by approximating GRFs with Gaussian Markcov random fields (GMRFs) with a Matern covariance function (Lindgrin et al., 2011; Krainski et al. 2018). This solution has been adopted by the Integrated Nested Laplace Approximation (INLA) software, and has later been implimented in Template Model Builder (TMB) software (Thorson et al., 2015).&lt;/p&gt;

@@ -2,11 +2,14 @@
 ---
 title: Biodiversity redistribution
 
-date: "2019-09-10T00:00:00Z"
+date: "2023-01-15"
+
 external_link: []
+
 image:
   caption: Biotic-Abiotic-Mobility diagram of the influence of global change on species' distributions
   focal_point: Smart
+  
 links:
 - icon: file-alt
   icon_pack: fas
@@ -24,13 +27,18 @@ links:
   icon_pack: fa
   name: Invasive spread talk
   url: https://www.alexbaecher.com/talk/iale_talk/
+  
 slides: Climate-induced-species-redistribution
+
 summary: Understanding the ecology of climate-induced range shifts
+
 tags:
+
 - modeling
 - climate Change
 - invasions
 - connectivity Modeling
+
 url_code: ""
 url_pdf: ""
 url_slides: ""

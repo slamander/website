@@ -1,9 +1,14 @@
 ---
-date: "2019-09-10T00:00:00Z"
+title: Appalachian Salamander Ecology
+
+date: "2015-01-15"
+
 external_link: []
+
 image:
   caption: Jordan's Red Cheek Salamander from Great Smoky Mountains National Park.
   focal_point: Smart
+  
 links:
 - icon: file-alt
   icon_pack: fas
@@ -17,8 +22,11 @@ links:
   icon_pack: fa
   name: Salamander conservation lecture
   url: https://www.alexbaecher.com/talk/se_amphibs_2/
+  
 slides: Appalachian-Salamander-Ecology
+
 summary: Natural History, Ecology, and Conservation of Plethodontid Salamanders.
+
 tags:
 - field ecology
 - Woodland salamanders
@@ -26,7 +34,7 @@ tags:
 - population ecology
 - disturbance
 - detection
-title: Appalachian Salamander Ecology
+
 url_code: ""
 url_pdf: ""
 url_slides: ""

@@ -1,9 +1,16 @@
- ---
-date: "2019-09-10T00:00:00Z"
+---
+title: Landscape connectivity
+
+date: "2023-03-15"
+
 external_link: []
+
 image:
   caption: Landscape Resistance-based Connectivity of High Quality Habitat in the Southeastern USA
   focal_point: Smart
+  
+featured: true  
+
 links:
 - icon: code
   icon_pack: fa
@@ -29,15 +36,18 @@ links:
   icon_pack: fa
   name: SAMC workshop 2
   url: https://www.alexbaecher.com/talk/samc_sotm/
+  
 slides: Landscape connectivity
+
 summary: Estimating how the landscape influences movement
+
 tags:
 - Circuit theory
 - Spatially Absorbing Markov Chains
 - Remote sensing
 - Resistance
 - modeling
-title: Landscape connectivity
+
 url_code: ""
 url_pdf: ""
 url_slides: ""

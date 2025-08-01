@@ -7,9 +7,9 @@ location: University of Florida
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.
-date: "2022-11-17T13:00:00Z"
-date_end: "2022-11-17T15:00:00Z"
-all_day: false
+date: 2025-11-17
+#date_end: 2025-11-17
+#all_day: false
 
 # Schedule page publish date (NOT talk date).
 # publishDate: "2020-10-22T00:00:00Z"

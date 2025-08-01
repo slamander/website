@@ -40,7 +40,7 @@ profiles:
   link: https://drive.google.com/uc?export=download&id=1zADCDlIiJlx1vXKQ6NdMLwTZm7E6sS29  
 
 work:
-  - position: Postdoctoral Research Fellow (USGS CASC)
+  - position: Postdoctoral Research Fellow
     company_name: Utah State University 
     company_url: 'https://www.usu.edu/'
     company_logo: ''
@@ -48,6 +48,7 @@ work:
     date_end: ''
     summary: |2-
       [Clark-Wolf lab](https://www.clarkwolflab.com/) (Dept. Wildland Resources) & [Stuber lab](https://efstuber.wixsite.com/xscaleeco/) (USGS)
+      *Fellowship:* USGS: **Climate Adaptation Postdoctoral Fellowship**
   - position: Postdoctoral Research Associate
     company_name: University of Florida 
     company_url: 'ufl.edu'
@@ -64,6 +65,14 @@ work:
     date_end: 2019-08-01
     summary: |
       [Dept. Conservation and Research](https://www.memphiszoo.org/conservation)
+  - position: Research Assistant
+    company_name: University of Arkansas
+    company_url: 'uark.edu'
+    company_logo: ''
+    date_start: 2011-08-01
+    date_end: 2015-12-01
+    summary: |
+      [Dept. Biology](https://biology.uark.edu/)
 
 ---
 ## About Me
