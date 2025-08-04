@@ -76,7 +76,7 @@ sections:
   - block: collection
     content:
       title: "Research" 
-      count: 4
+      count: 5
       archive:
         enable: true
         text: "See all projects →"

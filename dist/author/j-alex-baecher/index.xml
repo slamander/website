@@ -719,5 +719,75 @@
       <description></description>
     </item>
     
+    <item>
+      <title>J Alex Baecher</title>
+      <link>http://localhost:1313/author/j-alex-baecher/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/author/j-alex-baecher/</guid>
+      <description>&lt;h2 id=&#34;about-me&#34;&gt;About Me&lt;/h2&gt;
+&lt;div class=&#34;grid grid-cols-1 md:grid-cols-2 gap-6&#34;&gt;
+  &lt;div&gt;
+    &lt;h3&gt;Serious bits: &lt;/h3&gt;
+    &lt;p&gt; (🐸🐍🐦)⊗(🌦️🏞️🏙️)⊗(👨‍💻💻📈) &lt;/p&gt; 
+    &lt;p&gt;I&#39;m a spatial ecologist dedicated to understanding the processes that determine the distribution of biodiversity. My research interests include:  &lt;/p&gt;
+    &lt;p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;macroecology&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;biogeography&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;population ecology&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;conservation&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;spatiotemporal modeling&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;herp natural history&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;transparent science&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div&gt;
+    &lt;h3&gt;Good bits:&lt;/h3&gt;
+    &lt;p&gt; (🛶🚵🌴)⊕(🧰🗜️📐) &lt;/p&gt; 
+    &lt;p&gt;I&#39;m an Arkansas native (Ozark Mountains) based out of Gainesville Florida, a stereotypical girl dad (soon to be 2x), proud union member, and lover of: &lt;/p&gt;
+    &lt;p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;swimming&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;hiking&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;biking&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;canoeing&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;herping&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;home DIY&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;wood working&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</description>
+    </item>
+    
   </channel>
 </rss>
