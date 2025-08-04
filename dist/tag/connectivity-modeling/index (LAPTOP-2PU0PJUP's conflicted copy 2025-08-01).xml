@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Connectivity Modeling | Baecher Research</title>
+    <link>http://localhost:1313/tag/connectivity-modeling/</link>
+      <atom:link href="http://localhost:1313/tag/connectivity-modeling/index.xml" rel="self" type="application/rss+xml" />
+    <description>Connectivity Modeling</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><copyright>© 2025 Alex Baecher</copyright><lastBuildDate>Sun, 15 Jan 2023 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>http://localhost:1313/media/logo_hu2039277577754200582.png</url>
+      <title>Connectivity Modeling</title>
+      <link>http://localhost:1313/tag/connectivity-modeling/</link>
+    </image>
+    
+    <item>
+      <title>Biodiversity redistribution</title>
+      <link>http://localhost:1313/project/climate-species-redistribution/</link>
+      <pubDate>Sun, 15 Jan 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/project/climate-species-redistribution/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

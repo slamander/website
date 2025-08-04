@@ -47,18 +47,17 @@ work:
     date_start: 2025-08-01
     date_end: ''
     summary: |2-
-      [Clark-Wolf lab](https://www.clarkwolflab.com/) (Dept. Wildland Resources) & [Stuber lab](https://efstuber.wixsite.com/xscaleeco/) (USGS)
-
       *Fellowship:* USGS: **Climate Adaptation Postdoctoral Fellowship**
+
+      [Wolf-Clark lab](https://www.clarkwolflab.com/) (Dept. Wildland Resources) & [Stuber lab](https://efstuber.wixsite.com/xscaleeco/) (USGS)
   - position: Postdoctoral Research Associate
-    company_name: University of Florida 
+    company_name: University of Florida
     company_url: 'ufl.edu'
     company_logo: ''
     date_start: 2024-08-01
     date_end: 2025-08-01
     summary: |
       [Campbell lab](https://lcampbelllab.wixsite.com/campbell-lab) (Florida Medical Entomology Lab) & [Guralnick lab](https://www.gurlab.net/) (Florida Natural History Museum)
-
   - position: Conservation and Research Technician
     company_name: Memphis Zoo
     company_url: 'https://www.memphiszoo.org/'
@@ -67,7 +66,6 @@ work:
     date_end: 2019-08-01
     summary: |
       [Dept. Conservation and Research](https://www.memphiszoo.org/conservation)
-
   - position: Research Assistant
     company_name: University of Arkansas
     company_url: 'uark.edu'
@@ -77,12 +75,13 @@ work:
     summary: |
       [Dept. Biology](https://biology.uark.edu/)
 
-
 ---
 ## About Me
+
 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
   <div>
     <h3>Serious bits: </h3>
+    <p> (🐸🐍🐦)⊗(🌦️🏞️🏙️)⊗(👨‍💻💻📈) </p> 
     <p>I'm a spatial ecologist dedicated to understanding the processes that determine the distribution of biodiversity. My research interests include:  </p>
     <p>
 
@@ -104,6 +103,7 @@ work:
   </div>
   <div>
     <h3>Good bits:</h3>
+    <p> (🛶🚵🌴)⊕(🧰🗜️📐) </p> 
     <p>I'm an Arkansas native (Ozark Mountains) based out of Gainesville Florida, a stereotypical girl dad (soon to be 2x), proud union member, and lover of: </p>
     <p>
 

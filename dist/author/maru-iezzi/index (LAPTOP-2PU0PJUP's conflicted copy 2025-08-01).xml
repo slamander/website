@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Maru Iezzi | Baecher Research</title>
+    <link>http://localhost:1313/author/maru-iezzi/</link>
+      <atom:link href="http://localhost:1313/author/maru-iezzi/index.xml" rel="self" type="application/rss+xml" />
+    <description>Maru Iezzi</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><copyright>© 2025 Alex Baecher</copyright><lastBuildDate>Tue, 19 Dec 2023 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>http://localhost:1313/media/logo_hu2039277577754200582.png</url>
+      <title>Maru Iezzi</title>
+      <link>http://localhost:1313/author/maru-iezzi/</link>
+    </image>
+    
+    <item>
+      <title>Expanding the scope of connectivity modeling with Markov chains: perspectives and applications in R</title>
+      <link>http://localhost:1313/talk/samc_iale/</link>
+      <pubDate>Tue, 19 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/talk/samc_iale/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
