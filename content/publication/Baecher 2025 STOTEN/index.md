@@ -7,7 +7,7 @@ authors:
 - admin
 - V A Askshay
 - Robert Guralnick
-- Amy M Bauer
+- Amely M Bauer
 - Yasmin N Tavares
 - Yesenia Sánchez
 - James T Thorson

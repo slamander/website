@@ -1,28 +1,28 @@
 ---
 abstract: Shifts in species distributions are a common ecological response to climate change, and global temperature rise is often hypothesized as the primary driver. However, the directions and rates of distribution shifts are highly variable across species, systems and studies, complicating efforts to manage and anticipate biodiversity responses to anthropogenic change. In this Review, we summarize approaches to documenting species range shifts, discuss why observed range shifts often do not match our expectations, and explore the impacts of species range shifts on nature and society. The majority (59%) of documented range shifts are directionally consistent with climate change, based on the BioShifts database of range shift observations. However, many observed species have not shifted or have shifted in directions opposite to temperature-based expectations. These lagging or expectation-contrary shifts might be explained by additional biotic or abiotic factors driving range shifts, including additional non-temperature climatic drivers, habitat characteristics and species interactions, which are not normally considered in range shift documentations. Understanding and managing range shifts will require increasing and connecting observational biological data, generalizing range shift patterns across systems and predicting shifts at management-relevant timescales.
 authors:
-- Jake A. Lawlor
+- Jake A Lawlor
 - Lise Comte
 - Gaël Grenouillet
 - Jonathan Lenoir
 - admin
-- R.M.W.J. Bandara
+- R M W J Bandara
 - Romain Bertrand
 - I-Ching Chen
-- Sarah E. Diamond
-- Lesley T. Lancaster
-- Nikki Moore
+- Sarah E Diamond
+- Lesley T Lancaster
+- Nikki A Moore
 - Jerome Murienne
-- Brunno F. Oliveira
-- Gretta T. Pecl
-- Malin L. Pinsky
+- Brunno F Oliveira
+- Gretta T Pecl
+- Malin L Pinsky
 - Jonathan Rolland
 - Madeleine Rubenstein
-- Brett R. Scheffers
-- Laura M. Thompson
+- Brett R Scheffers
+- Laura M Thompson
 - Brit van Amerom
 - Fabricio Villalobos
-- Sarah R. Weiskopf
+- Sarah R Weiskopf
 - Jennifer Sunday
 
 date: 2024-04-18

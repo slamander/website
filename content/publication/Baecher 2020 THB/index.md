@@ -3,7 +3,7 @@ abstract: For centuries, amphibian malformations have been documented globally a
 authors:
 - admin
 - Emily Jones
-- Stephen C. Richter
+- Stephen C Richter
 date: 2019-12-01
 doi: "https://doi.org/10.33256/hb150.2930"
 featured: false

@@ -3,9 +3,9 @@ abstract: While biotic–abiotic interactions are increasingly documented in nat
 
 authors:
 - admin
-- Steve A. Johnson
-- Elizabeth A. Roznik
-- Brett R. Scheffers
+- Steve A Johnson
+- Elizabeth A Roznik
+- Brett R Scheffers
 date: 2023-03-05
 doi: "https://doi.org/10.1111/1365-2656.13899"
 featured: true

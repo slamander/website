@@ -1,17 +1,17 @@
 ---
 abstract: The scale of environmental data is often defined by their extent (spatial area,temporal duration) and resolution (grain size, temporal interval). Although describing climate data scale via these terms is appropriate for most meteorological applications,for ecology and biogeography, climate data of the same spatiotemporal resolution and extent may differ in their relevance to an organism. Here, we propose that climate proximity, or how well climate data represent the actual conditions that an organismis exposed to, is more important for ecological realism than the spatiotemporal resolution of the climate data.
 authors:
-- David H. Klinges
+- David H Klinges
 - admin
-- Jonas J. Lembrechts
-- Ilya M. D. Maclean
+- Jonas J Lembrechts
+- Ilya M D Maclean
 - Jonathan Lenoir
 - Caroline Greiser
 - Michael Ashcroft
-- Luke J. Evans
+- Luke J Evans
 - Michael R. Kearney
 - Juha Aalto
-- Isabel C. Barrio
+- Isabel C Barrio
 - Pieter De Frenne
 - Joannès Guillemot
 - Kristoffer Hylander
@@ -30,7 +30,7 @@ authors:
 - Marcelo Nosetto
 - Alexey Rubtsov
 - Jhonatan Sallo-Bravo
-- Brett R. Scheffers
+- Brett R Scheffers
 date: 2024-06-26
 doi: "https://doi.org/10.1111/geb.13884"
 featured: true

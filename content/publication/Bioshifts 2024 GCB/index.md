@@ -4,22 +4,22 @@ authors:
 - Lise Comte
 - Romain Bertrand
 - Sarah Diamond
-- Lesley T. Lancaster
-- Malin L. Pinsky
-- Brett R. Scheffers
+- Lesley T Lancaster
+- Malin L Pinsky
+- Brett R Scheffers
 - admin
-- R. M. W. J. Bandara
-- I-  Ching  Chen
-- Jake A. Lawlor
-- Nikki A. Moore
-- Brunno F. Oliveira
+- R M W J Bandara
+- I-Ching Chen
+- Jake A Lawlor
+- Nikki A Moore
+- Brunno F Oliveira
 - Jerome Murienne
 - Jonathan Rolland
-- Madeleine A. Rubenstein
+- Madeleine A Rubenstein
 - Jennifer Sunday
-- Laura M. Thompson
+- Laura M Thompson
 - Fabricio Villalobos
-- Sarah R. Weiskopf
+- Sarah R Weiskopf
 - Jonathan Lenoir
 date: 2024-04-13
 doi: "https://doi.org/10.1111/gcb.17271"

@@ -3,9 +3,9 @@ abstract: Lithobates areolatus is declining and distributed sparsely in remnant 
 
 authors:
 - admin
-- Philip N. Vogrinc
-- Jacquelyn C. Guzy
-- Joseph C. Neal
+- Philip N Vogrinc
+- Jacquelyn C Guzy
+- Joseph C Neal
 - JD Willson
 
 date: 2014-10-08
