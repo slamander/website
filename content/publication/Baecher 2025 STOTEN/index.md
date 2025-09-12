@@ -26,13 +26,10 @@ projects:
 - geostatistical-modeling
 
 publication: "***Science of the Total Environment***"
-publication_short:
+publication_short: 
 publication_types:
 - "2"
-
-publication_short:
-publication_types:
-- "2"
+publishDate: "2025-09-09T00:00:00Z"
 
 tags:
 - Vector-born disease
@@ -49,15 +46,4 @@ url_preprint: "https://doi.org/10.32942/X2QH09"
 # url_slides:
 # url_source:
 # url_video:
-
-design:
-  spacing:
-    padding: ["20px", "0", "20px", "0"]
-  background:
-    color: ""
-    text_color_light: false
-  columns: "1"
-
-layout: "single"
-type: "publication"
 ---
