@@ -104,7 +104,7 @@ work:
   </div>
   <div>
     <h3>Good bits:</h3>
-    <p>I'm an Arkansas native (Ozark Mountains) based out of Gainesville Florida, a stereotypical girl dad (soon to be 2x), proud union member, and lover of: </p>
+    <p>I'm an Arkansas native (Ozark Mountains) based out of Gainesville Florida, a stereotypical girl dad (twice-over), proud union member, and lover of: </p>
     <p>
 
 - swimming
