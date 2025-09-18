@@ -46,4 +46,8 @@ url_preprint: "https://doi.org/10.32942/X2QH09"
 # url_slides:
 # url_source:
 # url_video:
+
+links:
+- name: "PRESS: FMNH"
+  url: "https://www.floridamuseum.ufl.edu/science/disease-experts-team-up-with-florida-museum-of-natural-history-to-create-a-forecast-for-west-nile-virus/"
 ---
