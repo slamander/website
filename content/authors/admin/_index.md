@@ -37,7 +37,7 @@ profiles:
   link: https://github.com/slamander
 - icon: academicons/cv
   icon_pack: ai
-  link: https://drive.google.com/uc?export=download&id=1zADCDlIiJlx1vXKQ6NdMLwTZm7E6sS29  
+  link: https://drive.google.com/uc?export=download&id=1Jv5yOvpoKRwAvArEevDI2y3ve5ppkcDL
 
 work:
   - position: Postdoctoral Research Fellow
