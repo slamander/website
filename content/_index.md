@@ -19,15 +19,15 @@ sections:
         <img src='media/badge_kentucki.png?v=F' alt='Plethodon kentucki' class='w-32 h-auto mx-auto' style='width: 300px; height: auto;'>
       primary_action:
         text: Download CV
-        url: https://drive.google.com/uc?export=download&id=1Jv5yOvpoKRwAvArEevDI2y3ve5ppkcDL
+        url: https://drive.google.com/uc?export=download&id=1e5f2qbiZPzhd-X-9LTDRnaQINNVB2qTd
       secondary_action:
         text: See publications
         url: https://www.alexbaecher.com/publication/
       announcement:
-        text: "🚨 **New preprint**:"
+        text: "🚨 **New publication!!!**:"
         link:
           text: "Baecher et al. (2025) Science of the Total Environment"
-          url: https://ecoevorxiv.org/repository/view/9228/
+          url: https://drive.google.com/uc?export=download&id=18iC6ef6CvYbGusfIGgnw7IqjyQgmNUsc
     design:
       background:
         image:
