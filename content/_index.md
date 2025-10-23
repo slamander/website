@@ -17,6 +17,7 @@ sections:
         ‎‎ 
         ‎ 
         <img src='media/badge_kentucki.png?v=F' alt='Plethodon kentucki' class='w-32 h-auto mx-auto' style='width: 300px; height: auto;'>
+        
       primary_action:
         text: Download CV
         url: https://drive.google.com/uc?export=download&id=1e5f2qbiZPzhd-X-9LTDRnaQINNVB2qTd
