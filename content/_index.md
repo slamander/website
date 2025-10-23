@@ -19,7 +19,7 @@ sections:
         <img src='media/badge_kentucki.png?v=F' alt='Plethodon kentucki' class='w-32 h-auto mx-auto' style='width: 300px; height: auto;'>
       primary_action:
         text: Download CV
-        url: https://drive.google.com/uc?export=download&id=1Jv5yOvpoKRwAvArEevDI2y3ve5ppkcDL
+        url: https://drive.google.com/uc?export=download&id=1qZctJr24EqeYPA3XmI5LI4Atv0Fa22IX
       secondary_action:
         text: See publications
         url: https://www.alexbaecher.com/publication/
