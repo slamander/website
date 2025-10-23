@@ -19,7 +19,7 @@ role: Postdoctoral Researcher
 # Organizations/Affiliations
 organizations:
 - name: "Utah State University"
-  url: "https://www.ufl.edu/"
+  url: "https://www.usu.edu/"
 
   # Social/Academic Networking
 profiles:
@@ -59,6 +59,15 @@ work:
     summary: |
       [Campbell lab](https://lcampbelllab.wixsite.com/campbell-lab) (Florida Medical Entomology Lab) & [Guralnick lab](https://www.gurlab.net/) (Florida Natural History Museum)
 
+  - position: Lecturer
+    company_name: University of Florida 
+    company_url: 'ufl.edu'
+    company_logo: ''
+    date_start: 2019-08-01
+    date_end: 2024-08-01
+    summary: |
+      Instructor of Record, Environmental Science
+
   - position: Conservation and Research Technician
     company_name: Memphis Zoo
     company_url: 'https://www.memphiszoo.org/'
@@ -67,6 +76,15 @@ work:
     date_end: 2019-08-01
     summary: |
       [Dept. Conservation and Research](https://www.memphiszoo.org/conservation)
+
+  - position: Graduate Teaching Assistant
+    company_name: Eastern Kentucky University
+    company_url: 'eku.edu'
+    company_logo: ''
+    date_start: 2015-08-01
+    date_end: 2017-12-01
+    summary: |
+      Teaching Assistant, Human Anatomy
 
   - position: Research Assistant
     company_name: University of Arkansas
@@ -83,7 +101,7 @@ work:
 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
   <div>
     <h3>Serious bits: </h3>
-    <p>I'm a spatial ecologist dedicated to understanding the processes that determine the distribution of biodiversity. My research interests include:  </p>
+    <p>I'm an interdisciplinary quantitative ecologist dedicated to understanding the processes that determine the distribution of biodiversity in space and time. My research interests include:  </p>
     <p>
 
 - macroecology
@@ -107,19 +125,19 @@ work:
     <p>I'm an Arkansas native (Ozark Mountains) based out of Gainesville Florida, a stereotypical girl dad (twice-over), proud union member, and lover of: </p>
     <p>
 
-- swimming
+- herping
 
 - hiking
 
-- biking
-
 - canoeing
 
-- herping 
+- biking
 
-- home DIY
+- home DIY projects
 
 - wood working
+
+- history podcasts
 
 </p>
   </div>
