@@ -9,7 +9,8 @@ sections:
     content:
       title: "Baecher research"
       #text: '<span class="text-xl">*Quantitative Ecology in Space and Time*</span>'
-      subtitle: | "Qμe[st]"
+      subtitle: "Qμe[st]"
+      text: | 
         <span class="text-xl">**Qμe[st]**</span>
         <span class="text-l">*Quantitative Ecology in Space and Time*</span>      ‎‎ 
         ‎ 
