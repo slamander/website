@@ -7,14 +7,11 @@ draft: false
 sections:
   - block: hero
     content:
-      title: "Qμe[st] research"
+      title: "Baecher research"
       #text: '<span class="text-xl">*Quantitative Ecology in Space and Time*</span>'
-      text: | 
-        <span class="text-xl">*Quantitative Ecology in Space and Time*</span>
-        
-        ‎ 
-        ‎ 
-        ‎‎ 
+      subtitle: | "Qμe[st]"
+        <span class="text-xl">**Qμe[st]**</span>
+        <span class="text-l">*Quantitative Ecology in Space and Time*</span>      ‎‎ 
         ‎ 
         <img src='media/badge_kentucki.png?v=F' alt='Plethodon kentucki' class='w-32 h-auto mx-auto' style='width: 300px; height: auto;'>
         
