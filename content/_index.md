@@ -44,7 +44,7 @@ sections:
       username: admin
       # To link to a file, upload it to your `static/uploads/` folder
       #button:
-        #url: https://drive.google.com/uc?export=download&id=1Jv5yOvpoKRwAvArEevDI2y3ve5ppkcDL
+        #url: https://drive.google.com/uc?export=download&id=1ehav_oiSY73HkeEZY9M-MKhj7OCCQbhz
     design:
         #filename: 'log_cropped.jpg'
       biography:
