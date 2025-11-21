@@ -1,0 +1,3116 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<script src="spatial_ecology_data_centric_files/libs/clipboard/clipboard.min.js"></script>
+<script src="spatial_ecology_data_centric_files/libs/quarto-html/tabby.min.js"></script>
+<script src="spatial_ecology_data_centric_files/libs/quarto-html/popper.min.js"></script>
+<script src="spatial_ecology_data_centric_files/libs/quarto-html/tippy.umd.min.js"></script>
+<link href="spatial_ecology_data_centric_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="spatial_ecology_data_centric_files/libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="spatial_ecology_data_centric_files/libs/quarto-html/quarto-syntax-highlighting-dark-2fef5ea3f8957b3e4ecc936fc74692ca.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.7.32">
+
+  <meta name="author" content="Your Name">
+  <meta name="dcterms.date" content="2025-11-20">
+  <title>Spatial Structures in Ecological Models</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="spatial_ecology_data_centric_files/libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="spatial_ecology_data_centric_files/libs/revealjs/dist/reveal.css">
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+    /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+      }
+    pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+    div.sourceCode
+      { color: #f8f8f2;  }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #f8f8f2; } /* Normal */
+    code span.al { color: #f07178; } /* Alert */
+    code span.an { color: #d4d0ab; } /* Annotation */
+    code span.at { color: #00e0e0; } /* Attribute */
+    code span.bn { color: #d4d0ab; } /* BaseN */
+    code span.bu { color: #abe338; } /* BuiltIn */
+    code span.cf { color: #ffa07a; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #abe338; } /* Char */
+    code span.cn { color: #ffd700; } /* Constant */
+    code span.co { color: #f8f8f2; font-style: italic; } /* Comment */
+    code span.cv { color: #ffd700; } /* CommentVar */
+    code span.do { color: #f8f8f2; } /* Documentation */
+    code span.dt { color: #ffa07a; } /* DataType */
+    code span.dv { color: #d4d0ab; } /* DecVal */
+    code span.er { color: #f07178; text-decoration: underline; } /* Error */
+    code span.ex { color: #00e0e0; font-weight: bold; } /* Extension */
+    code span.fl { color: #d4d0ab; } /* Float */
+    code span.fu { color: #ffa07a; } /* Function */
+    code span.im { color: #abe338; } /* Import */
+    code span.in { color: #d4d0ab; } /* Information */
+    code span.kw { color: #ffa07a; font-weight: bold; } /* Keyword */
+    code span.op { color: #ffa07a; } /* Operator */
+    code span.ot { color: #00e0e0; } /* Other */
+    code span.pp { color: #dcc6e0; } /* Preprocessor */
+    code span.re { color: #00e0e0; background-color: #f8f8f2; } /* RegionMarker */
+    code span.sc { color: #abe338; } /* SpecialChar */
+    code span.ss { color: #abe338; } /* SpecialString */
+    code span.st { color: #abe338; } /* String */
+    code span.va { color: #00e0e0; } /* Variable */
+    code span.vs { color: #abe338; } /* VerbatimString */
+    code span.wa { color: #dcc6e0; } /* Warning */
+  </style>
+  <link rel="stylesheet" href="spatial_ecology_data_centric_files/libs/revealjs/dist/theme/quarto-0c8acc74dca0c2faaedea4940f202713.css">
+  <link rel="stylesheet" href="custom.css">
+  <link href="spatial_ecology_data_centric_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="spatial_ecology_data_centric_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="spatial_ecology_data_centric_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="spatial_ecology_data_centric_files/libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
+  <link href="spatial_ecology_data_centric_files/libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
+  <link href="spatial_ecology_data_centric_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+</head>
+<body class="quarto-dark">
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide" class="quarto-title-block center">
+  <h1 class="title">Spatial Structures in Ecological Models</h1>
+  <p class="subtitle">A Data-Driven Approach to Spatial Modeling</p>
+
+<div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+Your Name 
+</div>
+</div>
+</div>
+
+  <p class="date">2025-11-20</p>
+</section>
+<section id="why-include-spatial-structures-in-your-model" class="slide level2">
+<h2>Why include spatial structures in your model?</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>Spatial Autocorrelation:</strong> Ecological data points close together are usually more similar than distant points <img data-src="images/tobler.png" style="width:100.0%"></p>
+</div><div class="column" style="width:10%;">
+
+</div><div class="column" style="width:40%;">
+<div class="callout callout-warning callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Warning:</strong></p>
+</div>
+<div class="callout-content">
+<p><strong>Ignoring spatial autocorrelation leads to…</strong></p>
+<ul>
+<li>Biased parameter estimates</li>
+<li>Inflated significance (increased chance of Type-I error)</li>
+<li>Reduced model precision</li>
+<li>Inaccurate model selection</li>
+<li>Violated statistical assumptions (iid errors)</li>
+<li>Poor predictive accuracy</li>
+<li><em>Non-demonic</em> intrusion 😈<br>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div></div>
+</section>
+<section id="the-central-question" class="slide level2">
+<h2>The Central Question</h2>
+<div class="callout callout-important no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong><strong>What type of spatial data do you have?</strong></strong></p>
+</div>
+<div class="callout-content">
+<p>Each data type has specialized methods, assumptions, and computational considerations.</p>
+</div>
+</div>
+</div>
+<p><strong>Data types:</strong></p>
+<ol type="1">
+<li><strong>Point-Referenced Data</strong> (geostatistical data)</li>
+<li><strong>Areal/Lattice Data</strong> (regional/grid data)<br>
+</li>
+<li><strong>Point Pattern Data</strong> (locations are the response)</li>
+<li><strong>Movement/Trajectory Data</strong> (tracks and telemetry)</li>
+</ol>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Mixed Data Types</strong></p>
+</div>
+<div class="callout-content">
+<p>Many ecological studies combine multiple data types! We’ll discuss integration approaches at the end.</p>
+</div>
+</div>
+</div>
+</section>
+<section>
+<section id="point-referenced-data" class="title-slide slide level1 center">
+<h1>1. Point-Referenced Data</h1>
+<p><em>Measurements at specific geographic coordinates</em></p>
+</section>
+<section id="what-is-point-referenced-data" class="slide level2">
+<h2>What is Point-Referenced Data?</h2>
+<p><strong>Definition:</strong> Observations collected at specific locations, representing a continuous spatial process.</p>
+<p><strong>Ecological Examples:</strong></p>
+<ul>
+<li>Species abundance at survey points</li>
+<li>Vegetation cover at plot locations</li>
+<li>Soil samples across a landscape</li>
+<li>Individual tree measurements in a forest</li>
+</ul>
+<p><strong>Key characteristic:</strong> Locations are <strong>fixed by design</strong>, not random.</p>
+</section>
+<section id="point-referenced-visual-example" class="slide level2">
+<h2>Point-Referenced: Visual Example</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>Typical scenario:</strong></p>
+<ul>
+<li>50-5000 sampling locations<br>
+</li>
+<li>Environmental covariates at each point<br>
+</li>
+<li>Response variable (abundance, presence, etc.)<br>
+</li>
+<li>Want to predict across unsampled locations</li>
+</ul>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Common Questions</strong></p>
+</div>
+<div class="callout-content">
+<ul>
+<li>How does my response vary across space?</li>
+<li>What drives spatial patterns?</li>
+<li>Can I predict to new locations?</li>
+<li>Is there residual spatial autocorrelation?</li>
+</ul>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<p><img data-src="images/point%20presences.png" style="width:75.0%"></p>
+</div></div>
+</section>
+<section id="point-referenced-core-challenge" class="slide level2">
+<h2>Point-Referenced: Core Challenge</h2>
+<p>After accounting for environmental covariates, you often have residual spatial structure:</p>
+<p><span class="math display">\[y(\mathbf{s}) = \mathbf{X}(\mathbf{s})\boldsymbol{\beta} + w(\mathbf{s}) + \epsilon(\mathbf{s})\]</span></p>
+<p>Where:</p>
+<ul>
+<li><span class="math inline">\(y(\mathbf{s})\)</span> = response at location <span class="math inline">\(\mathbf{s}\)</span></li>
+<li><span class="math inline">\(\mathbf{X}(\mathbf{s})\boldsymbol{\beta}\)</span> = fixed effects (environmental covariates)</li>
+<li><span class="math inline">\(w(\mathbf{s})\)</span> = <strong>spatial random effect</strong> (what we need to model!)</li>
+<li><span class="math inline">\(\epsilon(\mathbf{s})\)</span> = non-spatial noise</li>
+</ul>
+</section>
+<section id="point-referenced-five-approaches" class="slide level2">
+<h2>Point-Referenced: Five Approaches</h2>
+<p>We’ll cover five main approaches, organized by their relationship to Gaussian Processes:</p>
+<ol type="1">
+<li><strong>Full Gaussian Processes (GPs)</strong> - theoretical <em>gold standard</em></li>
+<li><strong>SPDE Approximation</strong> - Exact GPs using basis functions</li>
+<li><strong>Low-Rank Gaussian Processes</strong> - Approximate GPs for efficiency</li>
+<li><strong>Nearest Neighbor GPs</strong> - Local GP approximations</li>
+<li><strong>Spatial Splines</strong> - Alternative smoothing framework (non-GP)</li>
+</ol>
+<p>Each represents different trade-offs between accuracy, computation, and flexibility.</p>
+</section>
+<section id="understanding-the-gp-family-tree" class="slide level2">
+<h2>Understanding the GP Family Tree</h2>
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Conceptual Relationships</strong></p>
+</div>
+<div class="callout-content">
+<p><strong>Full GP</strong> (<span class="math inline">\(O(n^3)\)</span>)</p>
+<ul>
+<li>Exact, but computationally prohibitive for large <span class="math inline">\(n\)</span></li>
+</ul>
+<p><strong>Reduced-Rank GP Approximations:</strong></p>
+<ul>
+<li><strong>SPDE</strong> - Exact Matérn GP via finite elements (sparse matrices)<br>
+</li>
+<li><strong>Low-Rank GP</strong> - Approximate using subset of basis functions<br>
+</li>
+<li><strong>Nearest Neighbor GP</strong> - Local conditioning on nearby points</li>
+</ul>
+<p><strong>Alternative Framework:</strong></p>
+<ul>
+<li><strong>Splines</strong> - Smoothness penalty instead of covariance structure</li>
+</ul>
+</div>
+</div>
+</div>
+<p><strong>Key insight:</strong> Methods 2-4 are all ways to make GPs computationally feasible while maintaining the probabilistic framework.</p>
+</section>
+<section id="method-1-full-gaussian-processes" class="slide level2">
+<h2>Method 1: Full Gaussian Processes</h2>
+<p><strong>The gold standard for point-referenced data</strong></p>
+<p><span class="math display">\[w(\mathbf{s}) \sim \mathcal{GP}(0, k(\mathbf{s}, \mathbf{s}'))\]</span></p>
+<p><strong>Covariance function</strong> defines spatial correlation:</p>
+<p><span class="math display">\[k(\mathbf{s}, \mathbf{s}') = \sigma^2 \exp\left(-\frac{||\mathbf{s} - \mathbf{s}'||^2}{2\ell^2}\right)\]</span></p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><span class="math inline">\(\sigma^2\)</span> = spatial variance (how much spatial variation?)<br>
+</li>
+<li><span class="math inline">\(\ell\)</span> = length-scale (how far does correlation extend?)</li>
+</ul>
+</section>
+<section id="full-gp-covariance-functions" class="slide level2">
+<h2>Full GP: Covariance Functions</h2>
+<p><strong>Matérn family</strong> (most common in ecology):</p>
+<p><span class="math display">\[k(d) = \sigma^2 \frac{2^{1-\nu}}{\Gamma(\nu)}\left(\sqrt{2\nu}\frac{d}{\ell}\right)^\nu K_\nu\left(\sqrt{2\nu}\frac{d}{\ell}\right)\]</span></p>
+<p><strong>Special cases:</strong></p>
+<ul>
+<li><span class="math inline">\(\nu = 0.5\)</span> → <strong>Exponential</strong> (rough surfaces)</li>
+<li><span class="math inline">\(\nu = 1.5\)</span> → Once differentiable (good default)</li>
+<li><span class="math inline">\(\nu = 2.5\)</span> → Twice differentiable<br>
+</li>
+<li><span class="math inline">\(\nu \to \infty\)</span> → <strong>Squared exponential</strong> (infinitely smooth)</li>
+</ul>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Practical Advice</strong></p>
+</div>
+<div class="callout-content">
+<p>Start with <span class="math inline">\(\nu = 1.5\)</span> (good default) or estimate it if you have enough data.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="full-gp-the-computational-problem" class="slide level2">
+<h2>Full GP: The Computational Problem</h2>
+<p><strong>Standard GP inference requires:</strong></p>
+<ul>
+<li>Inverting an <span class="math inline">\(n \times n\)</span> covariance matrix: <span class="math inline">\(O(n^3)\)</span> operations</li>
+<li>Storing the matrix: <span class="math inline">\(O(n^2)\)</span> memory</li>
+</ul>
+<p><strong>Practical limits:</strong></p>
+<ul>
+<li>~1,000 locations: comfortable</li>
+<li>~5,000 locations: challenging</li>
+<li>10,000+ locations: infeasible</li>
+</ul>
+<div class="callout callout-important callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>This is why we need approximations!</strong></p>
+</div>
+<div class="callout-content">
+<p>Reduced rank GPs make modeling feasible for realistic ecological datasets.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="full-gp-r-implementation" class="slide level2">
+<h2>Full GP: R Implementation</h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href=""></a><span class="fu">library</span>(geoR)</span>
+<span id="cb1-2"><a href=""></a><span class="fu">library</span>(fields)</span>
+<span id="cb1-3"><a href=""></a></span>
+<span id="cb1-4"><a href=""></a><span class="co"># Using geoR for ML estimation</span></span>
+<span id="cb1-5"><a href=""></a>geo_data <span class="ot">&lt;-</span> <span class="fu">as.geodata</span>(data, <span class="at">coords.col =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>, <span class="at">data.col =</span> <span class="dv">3</span>)</span>
+<span id="cb1-6"><a href=""></a></span>
+<span id="cb1-7"><a href=""></a><span class="co"># Fit variogram</span></span>
+<span id="cb1-8"><a href=""></a>vario <span class="ot">&lt;-</span> <span class="fu">variog</span>(geo_data, <span class="at">max.dist =</span> <span class="dv">100</span>)</span>
+<span id="cb1-9"><a href=""></a><span class="fu">plot</span>(vario)</span>
+<span id="cb1-10"><a href=""></a></span>
+<span id="cb1-11"><a href=""></a><span class="co"># Fit Matérn model</span></span>
+<span id="cb1-12"><a href=""></a>fit_ml <span class="ot">&lt;-</span> <span class="fu">likfit</span>(</span>
+<span id="cb1-13"><a href=""></a>  geo_data,</span>
+<span id="cb1-14"><a href=""></a>  <span class="at">ini.cov.pars =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">10</span>),  <span class="co"># Initial sigma^2, range</span></span>
+<span id="cb1-15"><a href=""></a>  <span class="at">cov.model =</span> <span class="st">"matern"</span>,</span>
+<span id="cb1-16"><a href=""></a>  <span class="at">kappa =</span> <span class="fl">1.5</span>,              <span class="co"># nu parameter</span></span>
+<span id="cb1-17"><a href=""></a>  <span class="at">fix.kappa =</span> <span class="cn">TRUE</span></span>
+<span id="cb1-18"><a href=""></a>)</span>
+<span id="cb1-19"><a href=""></a></span>
+<span id="cb1-20"><a href=""></a><span class="fu">summary</span>(fit_ml)</span>
+<span id="cb1-21"><a href=""></a></span>
+<span id="cb1-22"><a href=""></a><span class="co"># Kriging predictions</span></span>
+<span id="cb1-23"><a href=""></a>pred_grid <span class="ot">&lt;-</span> <span class="fu">expand.grid</span>(</span>
+<span id="cb1-24"><a href=""></a>  <span class="at">x =</span> <span class="fu">seq</span>(<span class="fu">min</span>(data<span class="sc">$</span>x), <span class="fu">max</span>(data<span class="sc">$</span>x), <span class="at">length =</span> <span class="dv">50</span>),</span>
+<span id="cb1-25"><a href=""></a>  <span class="at">y =</span> <span class="fu">seq</span>(<span class="fu">min</span>(data<span class="sc">$</span>y), <span class="fu">max</span>(data<span class="sc">$</span>y), <span class="at">length =</span> <span class="dv">50</span>)</span>
+<span id="cb1-26"><a href=""></a>)</span>
+<span id="cb1-27"><a href=""></a></span>
+<span id="cb1-28"><a href=""></a>kc <span class="ot">&lt;-</span> <span class="fu">krige.control</span>(</span>
+<span id="cb1-29"><a href=""></a>  <span class="at">type.krige =</span> <span class="st">"OK"</span>,</span>
+<span id="cb1-30"><a href=""></a>  <span class="at">obj.model =</span> fit_ml</span>
+<span id="cb1-31"><a href=""></a>)</span>
+<span id="cb1-32"><a href=""></a></span>
+<span id="cb1-33"><a href=""></a>predictions <span class="ot">&lt;-</span> <span class="fu">krige.conv</span>(</span>
+<span id="cb1-34"><a href=""></a>  geo_data,</span>
+<span id="cb1-35"><a href=""></a>  <span class="at">locations =</span> pred_grid,</span>
+<span id="cb1-36"><a href=""></a>  <span class="at">krige =</span> kc</span>
+<span id="cb1-37"><a href=""></a>)</span>
+<span id="cb1-38"><a href=""></a></span>
+<span id="cb1-39"><a href=""></a><span class="co"># Plot predictions</span></span>
+<span id="cb1-40"><a href=""></a><span class="fu">image.plot</span>(predictions<span class="sc">$</span>predict)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="method-2-spde-approximation" class="slide level2">
+<h2>Method 2: SPDE Approximation</h2>
+<p><strong>The SPDE approach</strong> (Lindgren et al.&nbsp;2011) makes GPs computationally tractable!</p>
+<p><strong>Key insight:</strong> A Matérn GP is the solution to a <em>stochastic partial differential equation</em>:</p>
+<p><span class="math display">\[(\kappa^2 - \Delta)^{\alpha/2}(\tau w(\mathbf{s})) = \mathcal{W}(\mathbf{s})\]</span></p>
+<p><strong>Critical distinction:</strong> SPDE provides an <strong>exact</strong> representation of the Matérn GP, not an approximation.</p>
+<p><strong>Practical result:</strong></p>
+<ul>
+<li>Represent continuous GP using finite element basis functions<br>
+</li>
+<li>Sparse precision matrices enable fast computation<br>
+</li>
+<li>Reduces <span class="math inline">\(O(n^3)\)</span> to approximately <span class="math inline">\(O(n^{3/2})\)</span> or better<br>
+</li>
+<li>Makes analysis of 10,000+ locations feasible</li>
+</ul>
+</section>
+<section id="spde-how-it-works" class="slide level2">
+<h2>SPDE: How It Works</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ol type="1">
+<li>Create triangular mesh over study area</li>
+<li>GP represented exactly at mesh vertices</li>
+<li>Values between vertices interpolated</li>
+</ol>
+<p><strong>Mesh construction is critical:</strong></p>
+<ul>
+<li>Finer mesh = better approximation<br>
+</li>
+<li>Coarser mesh = faster computation<br>
+</li>
+<li>Balance accuracy and speed<br>
+</li>
+<li>Extend mesh beyond study area</li>
+</ul>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Rule of Thumb</strong></p>
+</div>
+<div class="callout-content">
+<p>Mesh resolution should be finer than the spatial range (<span class="math inline">\(\ell\)</span>), ideally &lt;1k</p>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:10%;">
+
+</div><div class="column" style="width:40%;">
+<p><img data-src="images/mesh.jpeg" style="width:100.0%"></p>
+</div></div>
+</section>
+<section id="spde-r-implementation-with-sdmtmb" class="slide level2">
+<h2>SPDE: R Implementation with <code>sdmTMB</code></h2>
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href=""></a><span class="fu">library</span>(sdmTMB)</span>
+<span id="cb2-2"><a href=""></a></span>
+<span id="cb2-3"><a href=""></a><span class="co"># Create mesh object that contains matrices to apply the SPDE approach</span></span>
+<span id="cb2-4"><a href=""></a>mesh <span class="ot">&lt;-</span> <span class="fu">make_mesh</span>(pcod, <span class="at">xy_cols =</span> <span class="fu">c</span>(<span class="st">"X"</span>, <span class="st">"Y"</span>), <span class="at">cutoff =</span> <span class="dv">10</span>)</span>
+<span id="cb2-5"><a href=""></a></span>
+<span id="cb2-6"><a href=""></a><span class="co"># Fit a spatial model with a smoother for depth:</span></span>
+<span id="cb2-7"><a href=""></a>fit <span class="ot">&lt;-</span> <span class="fu">sdmTMB</span>(</span>
+<span id="cb2-8"><a href=""></a>  density <span class="sc">~</span> <span class="fu">s</span>(depth),</span>
+<span id="cb2-9"><a href=""></a>  <span class="at">data =</span> pcod,</span>
+<span id="cb2-10"><a href=""></a>  <span class="at">mesh =</span> mesh,</span>
+<span id="cb2-11"><a href=""></a>  <span class="at">family =</span> <span class="fu">tweedie</span>(<span class="at">link =</span> <span class="st">"log"</span>),</span>
+<span id="cb2-12"><a href=""></a>  <span class="at">spatial =</span> <span class="st">"on"</span></span>
+<span id="cb2-13"><a href=""></a>)</span>
+<span id="cb2-14"><a href=""></a></span>
+<span id="cb2-15"><a href=""></a><span class="co"># Run some basic sanity checks on our model:</span></span>
+<span id="cb2-16"><a href=""></a><span class="fu">sanity</span>(fit)</span>
+<span id="cb2-17"><a href=""></a></span>
+<span id="cb2-18"><a href=""></a><span class="co"># Use the ggeffects package to plot the smoother effect:</span></span>
+<span id="cb2-19"><a href=""></a>ggeffects<span class="sc">::</span><span class="fu">ggpredict</span>(fit, <span class="st">"depth [50:400, by=2]"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb2-20"><a href=""></a>   <span class="fu">plot</span>()</span>
+<span id="cb2-21"><a href=""></a></span>
+<span id="cb2-22"><a href=""></a><span class="co"># Obtain spatial predictions: </span></span>
+<span id="cb2-23"><a href=""></a>p <span class="ot">&lt;-</span> <span class="fu">predict</span>(fit, <span class="at">newdata =</span> qcs_grid)</span>
+<span id="cb2-24"><a href=""></a></span>
+<span id="cb2-25"><a href=""></a><span class="co"># Map predictions </span></span>
+<span id="cb2-26"><a href=""></a><span class="fu">ggplot</span>(p, <span class="fu">aes</span>(X, Y, <span class="at">fill =</span> <span class="fu">exp</span>(est))) <span class="sc">+</span> <span class="fu">geom_raster</span>() <span class="sc">+</span></span>
+<span id="cb2-27"><a href=""></a>  <span class="fu">scale_fill_viridis_c</span>(<span class="at">trans =</span> <span class="st">"sqrt"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="spde-r-implementation-with-inla" class="slide level2">
+<h2>SPDE: R Implementation with <code>INLA</code></h2>
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href=""></a><span class="fu">library</span>(INLA)</span>
+<span id="cb3-2"><a href=""></a><span class="fu">library</span>(inlabru)</span>
+<span id="cb3-3"><a href=""></a></span>
+<span id="cb3-4"><a href=""></a><span class="co"># Create mesh over study region</span></span>
+<span id="cb3-5"><a href=""></a>mesh <span class="ot">&lt;-</span> <span class="fu">inla.mesh.2d</span>(</span>
+<span id="cb3-6"><a href=""></a>  <span class="at">loc =</span> <span class="fu">cbind</span>(data<span class="sc">$</span>x, data<span class="sc">$</span>y),  <span class="co"># Data locations</span></span>
+<span id="cb3-7"><a href=""></a>  <span class="at">max.edge =</span> <span class="fu">c</span>(<span class="dv">5</span>, <span class="dv">20</span>),           <span class="co"># Inner and outer max edge</span></span>
+<span id="cb3-8"><a href=""></a>  <span class="at">cutoff =</span> <span class="dv">1</span>,                    <span class="co"># Min distance between mesh nodes</span></span>
+<span id="cb3-9"><a href=""></a>  <span class="at">offset =</span> <span class="fu">c</span>(<span class="dv">10</span>, <span class="dv">30</span>)             <span class="co"># Inner and outer extension</span></span>
+<span id="cb3-10"><a href=""></a>)</span>
+<span id="cb3-11"><a href=""></a></span>
+<span id="cb3-12"><a href=""></a><span class="co"># Visualize mesh</span></span>
+<span id="cb3-13"><a href=""></a><span class="fu">plot</span>(mesh)</span>
+<span id="cb3-14"><a href=""></a><span class="fu">points</span>(data<span class="sc">$</span>x, data<span class="sc">$</span>y, <span class="at">col =</span> <span class="st">"red"</span>, <span class="at">pch =</span> <span class="dv">16</span>)</span>
+<span id="cb3-15"><a href=""></a></span>
+<span id="cb3-16"><a href=""></a><span class="co"># Define SPDE model (Matérn with alpha=2 gives nu=1)</span></span>
+<span id="cb3-17"><a href=""></a>spde <span class="ot">&lt;-</span> <span class="fu">inla.spde2.matern</span>(</span>
+<span id="cb3-18"><a href=""></a>  <span class="at">mesh =</span> mesh, </span>
+<span id="cb3-19"><a href=""></a>  <span class="at">alpha =</span> <span class="dv">2</span>  <span class="co"># alpha = nu + d/2, where d=2 (spatial dimensions)</span></span>
+<span id="cb3-20"><a href=""></a>)</span>
+<span id="cb3-21"><a href=""></a></span>
+<span id="cb3-22"><a href=""></a><span class="co"># Create projection matrix (links data locations to mesh)</span></span>
+<span id="cb3-23"><a href=""></a>A <span class="ot">&lt;-</span> <span class="fu">inla.spde.make.A</span>(</span>
+<span id="cb3-24"><a href=""></a>  <span class="at">mesh =</span> mesh,</span>
+<span id="cb3-25"><a href=""></a>  <span class="at">loc =</span> <span class="fu">cbind</span>(data<span class="sc">$</span>x, data<span class="sc">$</span>y)</span>
+<span id="cb3-26"><a href=""></a>)</span>
+<span id="cb3-27"><a href=""></a></span>
+<span id="cb3-28"><a href=""></a><span class="co"># Stack data for INLA</span></span>
+<span id="cb3-29"><a href=""></a>stack <span class="ot">&lt;-</span> <span class="fu">inla.stack</span>(</span>
+<span id="cb3-30"><a href=""></a>  <span class="at">data =</span> <span class="fu">list</span>(<span class="at">y =</span> data<span class="sc">$</span>abundance),</span>
+<span id="cb3-31"><a href=""></a>  <span class="at">A =</span> <span class="fu">list</span>(A, <span class="dv">1</span>),</span>
+<span id="cb3-32"><a href=""></a>  <span class="at">effects =</span> <span class="fu">list</span>(</span>
+<span id="cb3-33"><a href=""></a>    <span class="at">spatial =</span> <span class="dv">1</span><span class="sc">:</span>spde<span class="sc">$</span>n.spde,</span>
+<span id="cb3-34"><a href=""></a>    <span class="fu">data.frame</span>(</span>
+<span id="cb3-35"><a href=""></a>      <span class="at">Intercept =</span> <span class="dv">1</span>,</span>
+<span id="cb3-36"><a href=""></a>      <span class="at">elevation =</span> data<span class="sc">$</span>elevation,</span>
+<span id="cb3-37"><a href=""></a>      <span class="at">forest_cover =</span> data<span class="sc">$</span>forest_cover</span>
+<span id="cb3-38"><a href=""></a>    )</span>
+<span id="cb3-39"><a href=""></a>  )</span>
+<span id="cb3-40"><a href=""></a>)</span>
+<span id="cb3-41"><a href=""></a></span>
+<span id="cb3-42"><a href=""></a><span class="co"># Fit model</span></span>
+<span id="cb3-43"><a href=""></a>formula <span class="ot">&lt;-</span> y <span class="sc">~</span> <span class="sc">-</span><span class="dv">1</span> <span class="sc">+</span> Intercept <span class="sc">+</span> elevation <span class="sc">+</span> forest_cover <span class="sc">+</span></span>
+<span id="cb3-44"><a href=""></a>  <span class="fu">f</span>(spatial, <span class="at">model =</span> spde)</span>
+<span id="cb3-45"><a href=""></a></span>
+<span id="cb3-46"><a href=""></a>result <span class="ot">&lt;-</span> <span class="fu">inla</span>(</span>
+<span id="cb3-47"><a href=""></a>  formula,</span>
+<span id="cb3-48"><a href=""></a>  <span class="at">family =</span> <span class="st">"poisson"</span>,</span>
+<span id="cb3-49"><a href=""></a>  <span class="at">data =</span> <span class="fu">inla.stack.data</span>(stack),</span>
+<span id="cb3-50"><a href=""></a>  <span class="at">control.predictor =</span> <span class="fu">list</span>(</span>
+<span id="cb3-51"><a href=""></a>    <span class="at">A =</span> <span class="fu">inla.stack.A</span>(stack),</span>
+<span id="cb3-52"><a href=""></a>    <span class="at">compute =</span> <span class="cn">TRUE</span></span>
+<span id="cb3-53"><a href=""></a>  ),</span>
+<span id="cb3-54"><a href=""></a>  <span class="at">control.compute =</span> <span class="fu">list</span>(</span>
+<span id="cb3-55"><a href=""></a>    <span class="at">dic =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb3-56"><a href=""></a>    <span class="at">waic =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb3-57"><a href=""></a>    <span class="at">cpo =</span> <span class="cn">TRUE</span></span>
+<span id="cb3-58"><a href=""></a>  )</span>
+<span id="cb3-59"><a href=""></a>)</span>
+<span id="cb3-60"><a href=""></a></span>
+<span id="cb3-61"><a href=""></a><span class="fu">summary</span>(result)</span>
+<span id="cb3-62"><a href=""></a></span>
+<span id="cb3-63"><a href=""></a><span class="co"># Extract spatial field estimates</span></span>
+<span id="cb3-64"><a href=""></a>spde_result <span class="ot">&lt;-</span> <span class="fu">inla.spde2.result</span>(result, <span class="st">"spatial"</span>, spde)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="spde-making-predictions" class="slide level2">
+<h2>SPDE: Making Predictions</h2>
+<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href=""></a><span class="co"># Create prediction grid</span></span>
+<span id="cb4-2"><a href=""></a>pred_coords <span class="ot">&lt;-</span> <span class="fu">expand.grid</span>(</span>
+<span id="cb4-3"><a href=""></a>  <span class="at">x =</span> <span class="fu">seq</span>(<span class="fu">min</span>(data<span class="sc">$</span>x), <span class="fu">max</span>(data<span class="sc">$</span>x), <span class="at">length =</span> <span class="dv">100</span>),</span>
+<span id="cb4-4"><a href=""></a>  <span class="at">y =</span> <span class="fu">seq</span>(<span class="fu">min</span>(data<span class="sc">$</span>y), <span class="fu">max</span>(data<span class="sc">$</span>y), <span class="at">length =</span> <span class="dv">100</span>)</span>
+<span id="cb4-5"><a href=""></a>)</span>
+<span id="cb4-6"><a href=""></a></span>
+<span id="cb4-7"><a href=""></a><span class="co"># Projection matrix for predictions</span></span>
+<span id="cb4-8"><a href=""></a>A_pred <span class="ot">&lt;-</span> <span class="fu">inla.spde.make.A</span>(</span>
+<span id="cb4-9"><a href=""></a>  <span class="at">mesh =</span> mesh,</span>
+<span id="cb4-10"><a href=""></a>  <span class="at">loc =</span> <span class="fu">as.matrix</span>(pred_coords)</span>
+<span id="cb4-11"><a href=""></a>)</span>
+<span id="cb4-12"><a href=""></a></span>
+<span id="cb4-13"><a href=""></a><span class="co"># Create prediction stack</span></span>
+<span id="cb4-14"><a href=""></a>stack_pred <span class="ot">&lt;-</span> <span class="fu">inla.stack</span>(</span>
+<span id="cb4-15"><a href=""></a>  <span class="at">data =</span> <span class="fu">list</span>(<span class="at">y =</span> <span class="cn">NA</span>),  <span class="co"># NA for prediction</span></span>
+<span id="cb4-16"><a href=""></a>  <span class="at">A =</span> <span class="fu">list</span>(A_pred, <span class="dv">1</span>),</span>
+<span id="cb4-17"><a href=""></a>  <span class="at">effects =</span> <span class="fu">list</span>(</span>
+<span id="cb4-18"><a href=""></a>    <span class="at">spatial =</span> <span class="dv">1</span><span class="sc">:</span>spde<span class="sc">$</span>n.spde,</span>
+<span id="cb4-19"><a href=""></a>    <span class="fu">data.frame</span>(</span>
+<span id="cb4-20"><a href=""></a>      <span class="at">Intercept =</span> <span class="dv">1</span>,</span>
+<span id="cb4-21"><a href=""></a>      <span class="at">elevation =</span> <span class="fu">mean</span>(data<span class="sc">$</span>elevation),</span>
+<span id="cb4-22"><a href=""></a>      <span class="at">forest_cover =</span> <span class="fu">mean</span>(data<span class="sc">$</span>forest_cover)</span>
+<span id="cb4-23"><a href=""></a>    )</span>
+<span id="cb4-24"><a href=""></a>  )</span>
+<span id="cb4-25"><a href=""></a>)</span>
+<span id="cb4-26"><a href=""></a></span>
+<span id="cb4-27"><a href=""></a><span class="co"># Combine with original data</span></span>
+<span id="cb4-28"><a href=""></a>stack_full <span class="ot">&lt;-</span> <span class="fu">inla.stack</span>(stack, stack_pred)</span>
+<span id="cb4-29"><a href=""></a></span>
+<span id="cb4-30"><a href=""></a><span class="co"># Refit model with prediction stack</span></span>
+<span id="cb4-31"><a href=""></a>result_pred <span class="ot">&lt;-</span> <span class="fu">inla</span>(</span>
+<span id="cb4-32"><a href=""></a>  formula,</span>
+<span id="cb4-33"><a href=""></a>  <span class="at">family =</span> <span class="st">"poisson"</span>,</span>
+<span id="cb4-34"><a href=""></a>  <span class="at">data =</span> <span class="fu">inla.stack.data</span>(stack_full),</span>
+<span id="cb4-35"><a href=""></a>  <span class="at">control.predictor =</span> <span class="fu">list</span>(</span>
+<span id="cb4-36"><a href=""></a>    <span class="at">A =</span> <span class="fu">inla.stack.A</span>(stack_full),</span>
+<span id="cb4-37"><a href=""></a>    <span class="at">compute =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb4-38"><a href=""></a>    <span class="at">link =</span> <span class="dv">1</span></span>
+<span id="cb4-39"><a href=""></a>  )</span>
+<span id="cb4-40"><a href=""></a>)</span>
+<span id="cb4-41"><a href=""></a></span>
+<span id="cb4-42"><a href=""></a><span class="co"># Extract predictions</span></span>
+<span id="cb4-43"><a href=""></a>idx_pred <span class="ot">&lt;-</span> <span class="fu">inla.stack.index</span>(stack_full, <span class="st">"stack_pred"</span>)<span class="sc">$</span>data</span>
+<span id="cb4-44"><a href=""></a>pred_coords<span class="sc">$</span>mean <span class="ot">&lt;-</span> result_pred<span class="sc">$</span>summary.fitted.values<span class="sc">$</span>mean[idx_pred]</span>
+<span id="cb4-45"><a href=""></a>pred_coords<span class="sc">$</span>sd <span class="ot">&lt;-</span> result_pred<span class="sc">$</span>summary.fitted.values<span class="sc">$</span>sd[idx_pred]</span>
+<span id="cb4-46"><a href=""></a></span>
+<span id="cb4-47"><a href=""></a><span class="co"># Map predictions</span></span>
+<span id="cb4-48"><a href=""></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb4-49"><a href=""></a><span class="fu">ggplot</span>(pred_coords, <span class="fu">aes</span>(x, y, <span class="at">fill =</span> mean)) <span class="sc">+</span></span>
+<span id="cb4-50"><a href=""></a>  <span class="fu">geom_raster</span>() <span class="sc">+</span></span>
+<span id="cb4-51"><a href=""></a>  <span class="fu">scale_fill_viridis_c</span>() <span class="sc">+</span></span>
+<span id="cb4-52"><a href=""></a>  <span class="fu">coord_equal</span>() <span class="sc">+</span></span>
+<span id="cb4-53"><a href=""></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="method-3-low-rank-gaussian-processes" class="slide level2">
+<h2>Method 3: Low-Rank Gaussian Processes</h2>
+<p><strong>Reduced-rank GP approximations</strong> for computational efficiency</p>
+<p><strong>Key idea:</strong> Approximate the spatial field using a smaller set of basis functions:</p>
+<p><span class="math display">\[w(\mathbf{s}) \approx \sum_{j=1}^{m} \beta_j \phi_j(\mathbf{s})\]</span></p>
+<p>Where <span class="math inline">\(m &lt;&lt; n\)</span> (number of basis functions much less than data points).</p>
+<p><strong>Common approaches:</strong></p>
+<ul>
+<li><strong>Predictive Processes</strong> - GPs at knot locations</li>
+<li><strong>Subset of Regressors</strong> - GP conditioning on subset</li>
+<li><strong>Fixed Rank Kriging</strong> - Low-rank spatial covariance</li>
+</ul>
+</section>
+<section id="low-rank-gp-predictive-processes" class="slide level2">
+<h2>Low-Rank GP: Predictive Processes</h2>
+<p><strong>Concept:</strong></p>
+<ol type="1">
+<li>Choose <span class="math inline">\(m\)</span> knot locations (e.g., 50-200 knots)</li>
+<li>Define full GP at knots</li>
+<li>Predict data locations as function of knot GPs</li>
+</ol>
+<p><span class="math display">\[w(\mathbf{s}) \approx \mathbf{C}(\mathbf{s}, \mathbf{s}^*) \mathbf{C}(\mathbf{s}^*, \mathbf{s}^*)^{-1} w(\mathbf{s}^*)\]</span></p>
+<p>Where <span class="math inline">\(\mathbf{s}^*\)</span> are knot locations.</p>
+<p><strong>Computational cost:</strong> <span class="math inline">\(O(nm^2 + m^3)\)</span> - dominated by <span class="math inline">\(m^3\)</span> for reasonable <span class="math inline">\(n\)</span></p>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Choosing m</strong></p>
+</div>
+<div class="callout-content">
+<p>More knots = better approximation but slower. Start with <span class="math inline">\(m = \sqrt{n}\)</span> or 50-100 knots.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="low-rank-gp-r-implementation" class="slide level2">
+<h2>Low-Rank GP: R Implementation</h2>
+<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href=""></a><span class="fu">library</span>(spBayes)</span>
+<span id="cb5-2"><a href=""></a><span class="fu">library</span>(MBA)  <span class="co"># For knot placement</span></span>
+<span id="cb5-3"><a href=""></a></span>
+<span id="cb5-4"><a href=""></a><span class="co"># Define knots (can be data locations or regular grid)</span></span>
+<span id="cb5-5"><a href=""></a>n_knots <span class="ot">&lt;-</span> <span class="dv">100</span></span>
+<span id="cb5-6"><a href=""></a></span>
+<span id="cb5-7"><a href=""></a><span class="co"># Create regular grid of knots</span></span>
+<span id="cb5-8"><a href=""></a>knot_coords <span class="ot">&lt;-</span> <span class="fu">expand.grid</span>(</span>
+<span id="cb5-9"><a href=""></a>  <span class="at">x =</span> <span class="fu">seq</span>(<span class="fu">min</span>(data<span class="sc">$</span>x), <span class="fu">max</span>(data<span class="sc">$</span>x), <span class="at">length =</span> <span class="fu">sqrt</span>(n_knots)),</span>
+<span id="cb5-10"><a href=""></a>  <span class="at">y =</span> <span class="fu">seq</span>(<span class="fu">min</span>(data<span class="sc">$</span>y), <span class="fu">max</span>(data<span class="sc">$</span>y), <span class="at">length =</span> <span class="fu">sqrt</span>(n_knots))</span>
+<span id="cb5-11"><a href=""></a>)</span>
+<span id="cb5-12"><a href=""></a></span>
+<span id="cb5-13"><a href=""></a><span class="co"># Alternatively, use k-means clustering for adaptive knots</span></span>
+<span id="cb5-14"><a href=""></a><span class="co"># kmeans_result &lt;- kmeans(cbind(data$x, data$y), centers = n_knots)</span></span>
+<span id="cb5-15"><a href=""></a><span class="co"># knot_coords &lt;- kmeans_result$centers</span></span>
+<span id="cb5-16"><a href=""></a></span>
+<span id="cb5-17"><a href=""></a><span class="co"># Prepare data for spBayes</span></span>
+<span id="cb5-18"><a href=""></a>coords <span class="ot">&lt;-</span> <span class="fu">cbind</span>(data<span class="sc">$</span>x, data<span class="sc">$</span>y)</span>
+<span id="cb5-19"><a href=""></a>X <span class="ot">&lt;-</span> <span class="fu">model.matrix</span>(<span class="sc">~</span> elevation <span class="sc">+</span> forest_cover, <span class="at">data =</span> data)</span>
+<span id="cb5-20"><a href=""></a>y <span class="ot">&lt;-</span> data<span class="sc">$</span>abundance</span>
+<span id="cb5-21"><a href=""></a></span>
+<span id="cb5-22"><a href=""></a><span class="co"># Set up predictive process model</span></span>
+<span id="cb5-23"><a href=""></a>n_samples <span class="ot">&lt;-</span> <span class="dv">5000</span></span>
+<span id="cb5-24"><a href=""></a>starting <span class="ot">&lt;-</span> <span class="fu">list</span>(</span>
+<span id="cb5-25"><a href=""></a>  <span class="st">"phi"</span> <span class="ot">=</span> <span class="dv">3</span><span class="sc">/</span><span class="fu">max</span>(<span class="fu">dist</span>(coords)),  <span class="co"># 3/max_distance rule of thumb</span></span>
+<span id="cb5-26"><a href=""></a>  <span class="st">"sigma.sq"</span> <span class="ot">=</span> <span class="dv">1</span>,</span>
+<span id="cb5-27"><a href=""></a>  <span class="st">"tau.sq"</span> <span class="ot">=</span> <span class="fl">0.1</span></span>
+<span id="cb5-28"><a href=""></a>)</span>
+<span id="cb5-29"><a href=""></a></span>
+<span id="cb5-30"><a href=""></a>tuning <span class="ot">&lt;-</span> <span class="fu">list</span>(</span>
+<span id="cb5-31"><a href=""></a>  <span class="st">"phi"</span> <span class="ot">=</span> <span class="fl">0.1</span>,</span>
+<span id="cb5-32"><a href=""></a>  <span class="st">"sigma.sq"</span> <span class="ot">=</span> <span class="fl">0.1</span>,</span>
+<span id="cb5-33"><a href=""></a>  <span class="st">"tau.sq"</span> <span class="ot">=</span> <span class="fl">0.1</span></span>
+<span id="cb5-34"><a href=""></a>)</span>
+<span id="cb5-35"><a href=""></a></span>
+<span id="cb5-36"><a href=""></a>priors <span class="ot">&lt;-</span> <span class="fu">list</span>(</span>
+<span id="cb5-37"><a href=""></a>  <span class="st">"beta.Flat"</span>,</span>
+<span id="cb5-38"><a href=""></a>  <span class="st">"phi.Unif"</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="dv">3</span><span class="sc">/</span><span class="fu">max</span>(<span class="fu">dist</span>(coords)), <span class="dv">3</span><span class="sc">/</span><span class="fu">min</span>(<span class="fu">dist</span>(coords))),</span>
+<span id="cb5-39"><a href=""></a>  <span class="st">"sigma.sq.IG"</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">1</span>),</span>
+<span id="cb5-40"><a href=""></a>  <span class="st">"tau.sq.IG"</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="fl">0.1</span>)</span>
+<span id="cb5-41"><a href=""></a>)</span>
+<span id="cb5-42"><a href=""></a></span>
+<span id="cb5-43"><a href=""></a><span class="co"># Fit predictive process model</span></span>
+<span id="cb5-44"><a href=""></a>pp_model <span class="ot">&lt;-</span> <span class="fu">spLM</span>(</span>
+<span id="cb5-45"><a href=""></a>  y <span class="sc">~</span> X <span class="sc">-</span> <span class="dv">1</span>,</span>
+<span id="cb5-46"><a href=""></a>  <span class="at">coords =</span> coords,</span>
+<span id="cb5-47"><a href=""></a>  <span class="at">knots =</span> <span class="fu">as.matrix</span>(knot_coords),</span>
+<span id="cb5-48"><a href=""></a>  <span class="at">starting =</span> starting,</span>
+<span id="cb5-49"><a href=""></a>  <span class="at">tuning =</span> tuning,</span>
+<span id="cb5-50"><a href=""></a>  <span class="at">priors =</span> priors,</span>
+<span id="cb5-51"><a href=""></a>  <span class="at">cov.model =</span> <span class="st">"exponential"</span>,</span>
+<span id="cb5-52"><a href=""></a>  <span class="at">n.samples =</span> n_samples,</span>
+<span id="cb5-53"><a href=""></a>  <span class="at">verbose =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb5-54"><a href=""></a>  <span class="at">n.report =</span> <span class="dv">500</span></span>
+<span id="cb5-55"><a href=""></a>)</span>
+<span id="cb5-56"><a href=""></a></span>
+<span id="cb5-57"><a href=""></a><span class="co"># Burn-in and thin</span></span>
+<span id="cb5-58"><a href=""></a>burn_in <span class="ot">&lt;-</span> <span class="fl">0.5</span> <span class="sc">*</span> n_samples</span>
+<span id="cb5-59"><a href=""></a>pp_samples <span class="ot">&lt;-</span> <span class="fu">spRecover</span>(</span>
+<span id="cb5-60"><a href=""></a>  pp_model,</span>
+<span id="cb5-61"><a href=""></a>  <span class="at">start =</span> burn_in,</span>
+<span id="cb5-62"><a href=""></a>  <span class="at">thin =</span> <span class="dv">2</span></span>
+<span id="cb5-63"><a href=""></a>)</span>
+<span id="cb5-64"><a href=""></a></span>
+<span id="cb5-65"><a href=""></a><span class="fu">summary</span>(pp_samples)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="low-rank-gp-alternative-with-frk" class="slide level2">
+<h2>Low-Rank GP: Alternative with <code>FRK</code></h2>
+<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href=""></a><span class="fu">library</span>(FRK)  <span class="co"># Fixed Rank Kriging</span></span>
+<span id="cb6-2"><a href=""></a></span>
+<span id="cb6-3"><a href=""></a><span class="co"># Create basis functions (2 resolutions)</span></span>
+<span id="cb6-4"><a href=""></a>basis <span class="ot">&lt;-</span> <span class="fu">auto_basis</span>(</span>
+<span id="cb6-5"><a href=""></a>  <span class="at">data =</span> <span class="fu">data.frame</span>(<span class="at">x =</span> data<span class="sc">$</span>x, <span class="at">y =</span> data<span class="sc">$</span>y),</span>
+<span id="cb6-6"><a href=""></a>  <span class="at">nres =</span> <span class="dv">2</span>,           <span class="co"># Number of resolutions</span></span>
+<span id="cb6-7"><a href=""></a>  <span class="at">type =</span> <span class="st">"bisquare"</span>   <span class="co"># Basis function type</span></span>
+<span id="cb6-8"><a href=""></a>)</span>
+<span id="cb6-9"><a href=""></a></span>
+<span id="cb6-10"><a href=""></a><span class="co"># Prepare data</span></span>
+<span id="cb6-11"><a href=""></a>sp_data <span class="ot">&lt;-</span> <span class="fu">SpatialPointsDataFrame</span>(</span>
+<span id="cb6-12"><a href=""></a>  <span class="at">coords =</span> <span class="fu">cbind</span>(data<span class="sc">$</span>x, data<span class="sc">$</span>y),</span>
+<span id="cb6-13"><a href=""></a>  <span class="at">data =</span> <span class="fu">data.frame</span>(</span>
+<span id="cb6-14"><a href=""></a>    <span class="at">z =</span> data<span class="sc">$</span>abundance,</span>
+<span id="cb6-15"><a href=""></a>    <span class="at">elevation =</span> data<span class="sc">$</span>elevation,</span>
+<span id="cb6-16"><a href=""></a>    <span class="at">forest_cover =</span> data<span class="sc">$</span>forest_cover</span>
+<span id="cb6-17"><a href=""></a>  )</span>
+<span id="cb6-18"><a href=""></a>)</span>
+<span id="cb6-19"><a href=""></a></span>
+<span id="cb6-20"><a href=""></a><span class="co"># Fit FRK model</span></span>
+<span id="cb6-21"><a href=""></a>frk_model <span class="ot">&lt;-</span> <span class="fu">FRK</span>(</span>
+<span id="cb6-22"><a href=""></a>  <span class="at">f =</span> z <span class="sc">~</span> elevation <span class="sc">+</span> forest_cover,</span>
+<span id="cb6-23"><a href=""></a>  <span class="at">data =</span> <span class="fu">list</span>(sp_data),</span>
+<span id="cb6-24"><a href=""></a>  <span class="at">basis =</span> basis,</span>
+<span id="cb6-25"><a href=""></a>  <span class="at">response =</span> <span class="st">"poisson"</span>  <span class="co"># Or "gaussian" for continuous</span></span>
+<span id="cb6-26"><a href=""></a>)</span>
+<span id="cb6-27"><a href=""></a></span>
+<span id="cb6-28"><a href=""></a><span class="co"># Predictions</span></span>
+<span id="cb6-29"><a href=""></a>pred_grid <span class="ot">&lt;-</span> <span class="fu">SpatialPoints</span>(</span>
+<span id="cb6-30"><a href=""></a>  <span class="at">coords =</span> <span class="fu">cbind</span>(pred_coords<span class="sc">$</span>x, pred_coords<span class="sc">$</span>y)</span>
+<span id="cb6-31"><a href=""></a>)</span>
+<span id="cb6-32"><a href=""></a></span>
+<span id="cb6-33"><a href=""></a>predictions <span class="ot">&lt;-</span> <span class="fu">predict</span>(frk_model, <span class="at">newdata =</span> pred_grid)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="method-4-nearest-neighbor-gaussian-processes" class="slide level2">
+<h2>Method 4: Nearest Neighbor Gaussian Processes</h2>
+<p><strong>For very large datasets</strong> (&gt;10,000 points)</p>
+<p><strong>Key idea:</strong> Each location conditions only on its <span class="math inline">\(m\)</span> nearest neighbors (typically <span class="math inline">\(m = 10-30\)</span>)</p>
+<p><span class="math display">\[w(\mathbf{s}_i) | \{w(\mathbf{s}_j): j \in \mathcal{N}_m(i)\} \sim \text{Normal}(\boldsymbol{\mu}_i, \sigma^2_i)\]</span></p>
+<p><strong>Advantages:</strong></p>
+<ul>
+<li>Scales to massive datasets (100,000+ locations)<br>
+</li>
+<li>Maintains proper GP framework<br>
+</li>
+<li>Computationally efficient: <span class="math inline">\(O(nm^3)\)</span><br>
+</li>
+<li>Can be highly accurate</li>
+</ul>
+<p><strong>Key development:</strong> Datta et al.&nbsp;(2016) - Nearest Neighbor Gaussian Process</p>
+</section>
+<section id="nearest-neighbor-gp-how-it-works" class="slide level2">
+<h2>Nearest Neighbor GP: How It Works</h2>
+<p><strong>Response model:</strong> Define ordered observations <span class="math inline">\(\mathbf{y} = (y_1, \ldots, y_n)\)</span></p>
+<p><strong>Neighbor set:</strong> For each <span class="math inline">\(i\)</span>, define <span class="math inline">\(\mathcal{N}_m(i)\)</span> = indices of <span class="math inline">\(m\)</span> nearest neighbors (prior to <span class="math inline">\(i\)</span>)</p>
+<p><strong>Conditional specification:</strong></p>
+<p><span class="math display">\[p(w_i | w_1, \ldots, w_{i-1}) = p(w_i | w_{\mathcal{N}_m(i)})\]</span></p>
+<p><strong>Result:</strong> Sparse precision matrix, fast computation</p>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>The ordering of your data affects results!</strong></p>
+</div>
+<div class="callout-content">
+<p>Common factors to order by:</p>
+<ul>
+<li>by coordinate<br>
+</li>
+<li>space-filling curves<br>
+</li>
+<li>random<br>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="nearest-neighbor-gp-r-package-spnngp" class="slide level2">
+<h2>Nearest Neighbor GP: R package <code>spNNGP</code></h2>
+<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href=""></a><span class="fu">library</span>(spNNGP)</span>
+<span id="cb7-2"><a href=""></a></span>
+<span id="cb7-3"><a href=""></a><span class="co"># Prepare data</span></span>
+<span id="cb7-4"><a href=""></a>coords <span class="ot">&lt;-</span> <span class="fu">cbind</span>(data<span class="sc">$</span>x, data<span class="sc">$</span>y)</span>
+<span id="cb7-5"><a href=""></a>X <span class="ot">&lt;-</span> <span class="fu">model.matrix</span>(<span class="sc">~</span> elevation <span class="sc">+</span> forest_cover, <span class="at">data =</span> data)</span>
+<span id="cb7-6"><a href=""></a>y <span class="ot">&lt;-</span> data<span class="sc">$</span>abundance</span>
+<span id="cb7-7"><a href=""></a></span>
+<span id="cb7-8"><a href=""></a><span class="co"># Set up NNGP model</span></span>
+<span id="cb7-9"><a href=""></a>n_neighbors <span class="ot">&lt;-</span> <span class="dv">15</span>  <span class="co"># Typical range: 10-30</span></span>
+<span id="cb7-10"><a href=""></a></span>
+<span id="cb7-11"><a href=""></a><span class="co"># Starting values</span></span>
+<span id="cb7-12"><a href=""></a>starting <span class="ot">&lt;-</span> <span class="fu">list</span>(</span>
+<span id="cb7-13"><a href=""></a>  <span class="st">"phi"</span> <span class="ot">=</span> <span class="dv">3</span><span class="sc">/</span><span class="fu">max</span>(<span class="fu">dist</span>(coords)),</span>
+<span id="cb7-14"><a href=""></a>  <span class="st">"sigma.sq"</span> <span class="ot">=</span> <span class="dv">1</span>,</span>
+<span id="cb7-15"><a href=""></a>  <span class="st">"tau.sq"</span> <span class="ot">=</span> <span class="fl">0.1</span>,</span>
+<span id="cb7-16"><a href=""></a>  <span class="st">"beta"</span> <span class="ot">=</span> <span class="fu">rep</span>(<span class="dv">0</span>, <span class="fu">ncol</span>(X))</span>
+<span id="cb7-17"><a href=""></a>)</span>
+<span id="cb7-18"><a href=""></a></span>
+<span id="cb7-19"><a href=""></a><span class="co"># Tuning parameters</span></span>
+<span id="cb7-20"><a href=""></a>tuning <span class="ot">&lt;-</span> <span class="fu">list</span>(</span>
+<span id="cb7-21"><a href=""></a>  <span class="st">"phi"</span> <span class="ot">=</span> <span class="fl">0.5</span>,</span>
+<span id="cb7-22"><a href=""></a>  <span class="st">"sigma.sq"</span> <span class="ot">=</span> <span class="fl">0.1</span>,</span>
+<span id="cb7-23"><a href=""></a>  <span class="st">"tau.sq"</span> <span class="ot">=</span> <span class="fl">0.1</span>,</span>
+<span id="cb7-24"><a href=""></a>  <span class="st">"beta"</span> <span class="ot">=</span> <span class="fl">0.1</span></span>
+<span id="cb7-25"><a href=""></a>)</span>
+<span id="cb7-26"><a href=""></a></span>
+<span id="cb7-27"><a href=""></a><span class="co"># Prior distributions</span></span>
+<span id="cb7-28"><a href=""></a>priors <span class="ot">&lt;-</span> <span class="fu">list</span>(</span>
+<span id="cb7-29"><a href=""></a>  <span class="st">"beta.Flat"</span>,</span>
+<span id="cb7-30"><a href=""></a>  <span class="st">"phi.Unif"</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="dv">3</span><span class="sc">/</span><span class="fu">max</span>(<span class="fu">dist</span>(coords)), <span class="dv">3</span><span class="sc">/</span><span class="fl">0.01</span>),</span>
+<span id="cb7-31"><a href=""></a>  <span class="st">"sigma.sq.IG"</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">1</span>),</span>
+<span id="cb7-32"><a href=""></a>  <span class="st">"tau.sq.IG"</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="fl">0.1</span>)</span>
+<span id="cb7-33"><a href=""></a>)</span>
+<span id="cb7-34"><a href=""></a></span>
+<span id="cb7-35"><a href=""></a><span class="co"># Fit NNGP model</span></span>
+<span id="cb7-36"><a href=""></a>nngp_model <span class="ot">&lt;-</span> <span class="fu">spNNGP</span>(</span>
+<span id="cb7-37"><a href=""></a>  <span class="at">formula =</span> y <span class="sc">~</span> X <span class="sc">-</span> <span class="dv">1</span>,</span>
+<span id="cb7-38"><a href=""></a>  <span class="at">coords =</span> coords,</span>
+<span id="cb7-39"><a href=""></a>  <span class="at">starting =</span> starting,</span>
+<span id="cb7-40"><a href=""></a>  <span class="at">method =</span> <span class="st">"response"</span>,</span>
+<span id="cb7-41"><a href=""></a>  <span class="at">n.neighbors =</span> n_neighbors,</span>
+<span id="cb7-42"><a href=""></a>  <span class="at">tuning =</span> tuning,</span>
+<span id="cb7-43"><a href=""></a>  <span class="at">priors =</span> priors,</span>
+<span id="cb7-44"><a href=""></a>  <span class="at">cov.model =</span> <span class="st">"exponential"</span>,</span>
+<span id="cb7-45"><a href=""></a>  <span class="at">n.samples =</span> <span class="dv">5000</span>,</span>
+<span id="cb7-46"><a href=""></a>  <span class="at">n.omp.threads =</span> <span class="dv">4</span>,  <span class="co"># Parallel threads</span></span>
+<span id="cb7-47"><a href=""></a>  <span class="at">verbose =</span> <span class="cn">TRUE</span></span>
+<span id="cb7-48"><a href=""></a>)</span>
+<span id="cb7-49"><a href=""></a></span>
+<span id="cb7-50"><a href=""></a><span class="co"># Posterior summaries</span></span>
+<span id="cb7-51"><a href=""></a><span class="fu">summary</span>(nngp_model<span class="sc">$</span>p.beta.samples)</span>
+<span id="cb7-52"><a href=""></a><span class="fu">summary</span>(nngp_model<span class="sc">$</span>p.theta.samples)</span>
+<span id="cb7-53"><a href=""></a></span>
+<span id="cb7-54"><a href=""></a><span class="co"># Predictions at new locations</span></span>
+<span id="cb7-55"><a href=""></a>pred_coords_mat <span class="ot">&lt;-</span> <span class="fu">as.matrix</span>(pred_coords[, <span class="fu">c</span>(<span class="st">"x"</span>, <span class="st">"y"</span>)])</span>
+<span id="cb7-56"><a href=""></a>X_pred <span class="ot">&lt;-</span> <span class="fu">cbind</span>(</span>
+<span id="cb7-57"><a href=""></a>  <span class="dv">1</span>,</span>
+<span id="cb7-58"><a href=""></a>  <span class="fu">mean</span>(data<span class="sc">$</span>elevation),</span>
+<span id="cb7-59"><a href=""></a>  <span class="fu">mean</span>(data<span class="sc">$</span>forest_cover)</span>
+<span id="cb7-60"><a href=""></a>)</span>
+<span id="cb7-61"><a href=""></a></span>
+<span id="cb7-62"><a href=""></a>predictions <span class="ot">&lt;-</span> <span class="fu">predict</span>(</span>
+<span id="cb7-63"><a href=""></a>  nngp_model,</span>
+<span id="cb7-64"><a href=""></a>  <span class="at">X.0 =</span> X_pred,</span>
+<span id="cb7-65"><a href=""></a>  <span class="at">coords.0 =</span> pred_coords_mat,</span>
+<span id="cb7-66"><a href=""></a>  <span class="at">n.omp.threads =</span> <span class="dv">4</span></span>
+<span id="cb7-67"><a href=""></a>)</span>
+<span id="cb7-68"><a href=""></a></span>
+<span id="cb7-69"><a href=""></a><span class="co"># Extract mean predictions</span></span>
+<span id="cb7-70"><a href=""></a>pred_mean <span class="ot">&lt;-</span> <span class="fu">apply</span>(predictions<span class="sc">$</span>p.y<span class="fl">.0</span>, <span class="dv">1</span>, mean)</span>
+<span id="cb7-71"><a href=""></a>pred_sd <span class="ot">&lt;-</span> <span class="fu">apply</span>(predictions<span class="sc">$</span>p.y<span class="fl">.0</span>, <span class="dv">1</span>, sd)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="nearest-neighbor-gp-r-package-spabundance" class="slide level2">
+<h2>Nearest Neighbor GP: R package <code>spAbundance</code></h2>
+<div class="sourceCode" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href=""></a><span class="fu">library</span>(spAbundance)</span>
+<span id="cb8-2"><a href=""></a></span>
+<span id="cb8-3"><a href=""></a><span class="co"># Fit Bayesian heirarchical distance sampling model</span></span>
+<span id="cb8-4"><a href=""></a>out <span class="ot">&lt;-</span> <span class="fu">spDS</span>(</span>
+<span id="cb8-5"><a href=""></a>  <span class="co"># State process formula</span></span>
+<span id="cb8-6"><a href=""></a>  <span class="at">abund.formula =</span> <span class="sc">~</span> forest <span class="sc">+</span> grass ,</span>
+<span id="cb8-7"><a href=""></a></span>
+<span id="cb8-8"><a href=""></a>  <span class="co"># Observation process formula</span></span>
+<span id="cb8-9"><a href=""></a>  <span class="at">det.formula =</span> <span class="sc">~</span> day <span class="sc">+</span> <span class="fu">I</span>(day<span class="sc">^</span><span class="dv">2</span>) <span class="sc">+</span> wind,</span>
+<span id="cb8-10"><a href=""></a></span>
+<span id="cb8-11"><a href=""></a>  <span class="co"># Model controls</span></span>
+<span id="cb8-12"><a href=""></a>  <span class="at">data =</span> dat.MODO, <span class="at">n.batch =</span> <span class="dv">800</span>, <span class="at">batch.length =</span> <span class="dv">25</span>,</span>
+<span id="cb8-13"><a href=""></a>  <span class="at">accept.rate =</span> <span class="fl">0.43</span>, <span class="at">cov.model =</span> <span class="st">"exponential"</span>,</span>
+<span id="cb8-14"><a href=""></a>  <span class="at">transect =</span> <span class="st">'point'</span>, <span class="at">det.func =</span> <span class="st">'halfnormal'</span>,</span>
+<span id="cb8-15"><a href=""></a>  <span class="at">NNGP =</span> <span class="cn">TRUE</span>, <span class="at">n.neighbors =</span> <span class="dv">15</span>, <span class="at">n.burn =</span> <span class="dv">10000</span>,</span>
+<span id="cb8-16"><a href=""></a>  <span class="at">n.thin =</span> <span class="dv">5</span>, <span class="at">n.chains =</span> <span class="dv">3</span>, <span class="at">verbose =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb8-17"><a href=""></a></span>
+<span id="cb8-18"><a href=""></a><span class="co"># Posterior predictive check</span></span>
+<span id="cb8-19"><a href=""></a><span class="fu">ppcAbund</span>(out, <span class="at">fit.stat =</span> <span class="st">'freeman-tukey'</span>, <span class="at">group =</span> <span class="dv">1</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb8-20"><a href=""></a>  <span class="fu">summary</span>()</span>
+<span id="cb8-21"><a href=""></a></span>
+<span id="cb8-22"><a href=""></a><span class="co"># Model selection</span></span>
+<span id="cb8-23"><a href=""></a><span class="fu">waicAbund</span>(out)</span>
+<span id="cb8-24"><a href=""></a></span>
+<span id="cb8-25"><a href=""></a><span class="co"># Predictions</span></span>
+<span id="cb8-26"><a href=""></a></span>
+<span id="cb8-27"><a href=""></a>out.pred <span class="ot">&lt;-</span> <span class="fu">predict</span>(out, predictors, coordinates, <span class="at">verbose =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb8-28"><a href=""></a><span class="sc">---</span></span>
+<span id="cb8-29"><a href=""></a></span>
+<span id="cb8-30"><a href=""></a><span class="do">## Method 5: Spatial Splines</span></span>
+<span id="cb8-31"><a href=""></a></span>
+<span id="cb8-32"><a href=""></a><span class="er">**</span>Alternative framework<span class="sc">:</span><span class="er">**</span> Not based on Gaussian Processes</span>
+<span id="cb8-33"><a href=""></a></span>
+<span id="cb8-34"><a href=""></a><span class="sc">**</span>Key idea<span class="sc">:</span><span class="er">**</span> Approximate spatial surface with smooth basis functions</span>
+<span id="cb8-35"><a href=""></a></span>
+<span id="cb8-36"><a href=""></a><span class="sc">$</span><span class="er">$</span><span class="fu">w</span>(\mathbf{s}) <span class="ot">=</span> \sum_{k<span class="ot">=</span><span class="dv">1</span>}<span class="sc">^</span>{K} \beta_k \<span class="fu">phi_k</span>(\mathbf{s})<span class="sc">$</span><span class="er">$</span></span>
+<span id="cb8-37"><a href=""></a></span>
+<span id="cb8-38"><a href=""></a><span class="er">**</span>Distinguishing features<span class="sc">:</span><span class="er">**</span></span>
+<span id="cb8-39"><a href=""></a></span>
+<span id="cb8-40"><a href=""></a><span class="sc">-</span> Minimize roughness <span class="fu">penalty</span> (not maximize likelihood of covariance)</span>
+<span id="cb8-41"><a href=""></a><span class="sc">-</span> Deterministic smoothing approach</span>
+<span id="cb8-42"><a href=""></a><span class="sc">-</span> Can have Bayesian <span class="fu">interpretation</span> (splines as random effects)</span>
+<span id="cb8-43"><a href=""></a><span class="sc">-</span> Very fast computation</span>
+<span id="cb8-44"><a href=""></a><span class="sc">-</span> Different uncertainty quantification</span>
+<span id="cb8-45"><a href=""></a></span>
+<span id="cb8-46"><a href=""></a><span class="sc">---</span></span>
+<span id="cb8-47"><a href=""></a></span>
+<span id="cb8-48"><a href=""></a><span class="do">## Spatial Splines: Types</span></span>
+<span id="cb8-49"><a href=""></a></span>
+<span id="cb8-50"><a href=""></a><span class="er">**</span>Thin plate splines<span class="sc">**</span> <span class="sc">-</span> Optimal smoothness properties</span>
+<span id="cb8-51"><a href=""></a></span>
+<span id="cb8-52"><a href=""></a>Minimize<span class="sc">:</span></span>
+<span id="cb8-53"><a href=""></a><span class="er">$$</span>\sum_{i<span class="ot">=</span><span class="dv">1</span>}<span class="sc">^</span><span class="fu">n</span> (y_i <span class="sc">-</span> <span class="fu">f</span>(\mathbf{s}_i))<span class="sc">^</span><span class="dv">2</span> <span class="sc">+</span> \lambda \int \int \left[\<span class="fu">left</span>(\frac{\partial<span class="sc">^</span><span class="dv">2</span> f}{\partial x<span class="sc">^</span><span class="dv">2</span>}\right)<span class="sc">^</span><span class="dv">2</span> <span class="sc">+</span> <span class="dv">2</span>\<span class="fu">left</span>(\frac{\partial<span class="sc">^</span><span class="dv">2</span> f}{\partial x \partial y}\right)<span class="sc">^</span><span class="dv">2</span> <span class="sc">+</span> \<span class="fu">left</span>(\frac{\partial<span class="sc">^</span><span class="dv">2</span> f}{\partial y<span class="sc">^</span><span class="dv">2</span>}\right)<span class="sc">^</span><span class="dv">2</span>\right] dx\,dy<span class="sc">$</span><span class="er">$</span></span>
+<span id="cb8-54"><a href=""></a></span>
+<span id="cb8-55"><a href=""></a><span class="er">**</span>Tensor product splines<span class="sc">**</span> <span class="sc">-</span> Product of <span class="dv">1</span>D basis functions</span>
+<span id="cb8-56"><a href=""></a></span>
+<span id="cb8-57"><a href=""></a><span class="sc">**</span>Radial basis functions<span class="sc">**</span> <span class="sc">-</span> Distance<span class="sc">-</span>based kernels</span>
+<span id="cb8-58"><a href=""></a></span>
+<span id="cb8-59"><a href=""></a><span class="sc">:::</span> {.callout<span class="sc">-</span>tip}</span>
+<span id="cb8-60"><a href=""></a><span class="do">## When to Use Splines</span></span>
+<span id="cb8-61"><a href=""></a>Splines are excellent <span class="cf">for</span> quick exploratory analysis and when you don<span class="st">'t need explicit covariance modeling.</span></span>
+<span id="cb8-62"><a href=""></a><span class="st">:::</span></span>
+<span id="cb8-63"><a href=""></a></span>
+<span id="cb8-64"><a href=""></a><span class="st">---</span></span>
+<span id="cb8-65"><a href=""></a></span>
+<span id="cb8-66"><a href=""></a><span class="st">## Spatial Splines: R Implementation with mgcv</span></span>
+<span id="cb8-67"><a href=""></a></span>
+<span id="cb8-68"><a href=""></a><span class="st">```r</span></span>
+<span id="cb8-69"><a href=""></a><span class="st">library(mgcv)</span></span>
+<span id="cb8-70"><a href=""></a></span>
+<span id="cb8-71"><a href=""></a><span class="st"># Basic spatial smooth</span></span>
+<span id="cb8-72"><a href=""></a><span class="st">model_basic &lt;- gam(</span></span>
+<span id="cb8-73"><a href=""></a><span class="st">  abundance ~ s(x, y, bs = "tp", k = 50),</span></span>
+<span id="cb8-74"><a href=""></a><span class="st">  family = poisson,</span></span>
+<span id="cb8-75"><a href=""></a><span class="st">  data = data,</span></span>
+<span id="cb8-76"><a href=""></a><span class="st">  method = "REML"</span></span>
+<span id="cb8-77"><a href=""></a><span class="st">)</span></span>
+<span id="cb8-78"><a href=""></a></span>
+<span id="cb8-79"><a href=""></a><span class="st"># With covariates</span></span>
+<span id="cb8-80"><a href=""></a><span class="st">model_full &lt;- gam(</span></span>
+<span id="cb8-81"><a href=""></a><span class="st">  abundance ~ </span></span>
+<span id="cb8-82"><a href=""></a><span class="st">    s(elevation, k = 10) +</span></span>
+<span id="cb8-83"><a href=""></a><span class="st">    s(forest_cover, k = 10) +</span></span>
+<span id="cb8-84"><a href=""></a><span class="st">    s(x, y, bs = "tp", k = 100),</span></span>
+<span id="cb8-85"><a href=""></a><span class="st">  family = poisson,</span></span>
+<span id="cb8-86"><a href=""></a><span class="st">  data = data,</span></span>
+<span id="cb8-87"><a href=""></a><span class="st">  method = "REML"</span></span>
+<span id="cb8-88"><a href=""></a><span class="st">)</span></span>
+<span id="cb8-89"><a href=""></a></span>
+<span id="cb8-90"><a href=""></a><span class="st"># Check model</span></span>
+<span id="cb8-91"><a href=""></a><span class="st">summary(model_full)</span></span>
+<span id="cb8-92"><a href=""></a><span class="st">gam.check(model_full)  # Check basis dimensions and residuals</span></span>
+<span id="cb8-93"><a href=""></a></span>
+<span id="cb8-94"><a href=""></a><span class="st"># Plot effects</span></span>
+<span id="cb8-95"><a href=""></a><span class="st">plot(model_full, pages = 1, scheme = 2)</span></span>
+<span id="cb8-96"><a href=""></a></span>
+<span id="cb8-97"><a href=""></a><span class="st"># Spatial smooth only</span></span>
+<span id="cb8-98"><a href=""></a><span class="st">plot(model_full, select = 3, scheme = 2, asp = 1)</span></span>
+<span id="cb8-99"><a href=""></a></span>
+<span id="cb8-100"><a href=""></a><span class="st"># Predictions</span></span>
+<span id="cb8-101"><a href=""></a><span class="st">pred_data &lt;- expand.grid(</span></span>
+<span id="cb8-102"><a href=""></a><span class="st">  x = seq(min(data$x), max(data$x), length = 100),</span></span>
+<span id="cb8-103"><a href=""></a><span class="st">  y = seq(min(data$y), max(data$y), length = 100),</span></span>
+<span id="cb8-104"><a href=""></a><span class="st">  elevation = mean(data$elevation),</span></span>
+<span id="cb8-105"><a href=""></a><span class="st">  forest_cover = mean(data$forest_cover)</span></span>
+<span id="cb8-106"><a href=""></a><span class="st">)</span></span>
+<span id="cb8-107"><a href=""></a></span>
+<span id="cb8-108"><a href=""></a><span class="st">pred_data$fit &lt;- predict(model_full, pred_data, type = "response")</span></span>
+<span id="cb8-109"><a href=""></a><span class="st">pred_data$se &lt;- predict(model_full, pred_data, type = "response", se.fit = TRUE)$se.fit</span></span>
+<span id="cb8-110"><a href=""></a></span>
+<span id="cb8-111"><a href=""></a><span class="st"># Map predictions</span></span>
+<span id="cb8-112"><a href=""></a><span class="st">library(ggplot2)</span></span>
+<span id="cb8-113"><a href=""></a><span class="st">ggplot(pred_data, aes(x, y, fill = fit)) +</span></span>
+<span id="cb8-114"><a href=""></a><span class="st">  geom_raster() +</span></span>
+<span id="cb8-115"><a href=""></a><span class="st">  scale_fill_viridis_c() +</span></span>
+<span id="cb8-116"><a href=""></a><span class="st">  coord_equal() +</span></span>
+<span id="cb8-117"><a href=""></a><span class="st">  labs(fill = "Predicted</span><span class="sc">\n</span><span class="st">Abundance") +</span></span>
+<span id="cb8-118"><a href=""></a><span class="st">  theme_minimal()</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="spatial-splines-tensor-products" class="slide level2">
+<h2>Spatial Splines: Tensor Products</h2>
+<div class="sourceCode" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href=""></a><span class="co"># Tensor product of marginal smooths (useful for anisotropy)</span></span>
+<span id="cb9-2"><a href=""></a>model_tensor <span class="ot">&lt;-</span> <span class="fu">gam</span>(</span>
+<span id="cb9-3"><a href=""></a>  abundance <span class="sc">~</span> </span>
+<span id="cb9-4"><a href=""></a>    <span class="fu">s</span>(elevation) <span class="sc">+</span></span>
+<span id="cb9-5"><a href=""></a>    <span class="fu">te</span>(x, y, <span class="at">k =</span> <span class="fu">c</span>(<span class="dv">10</span>, <span class="dv">10</span>)),  <span class="co"># Tensor product</span></span>
+<span id="cb9-6"><a href=""></a>  <span class="at">family =</span> poisson,</span>
+<span id="cb9-7"><a href=""></a>  <span class="at">data =</span> data,</span>
+<span id="cb9-8"><a href=""></a>  <span class="at">method =</span> <span class="st">"REML"</span></span>
+<span id="cb9-9"><a href=""></a>)</span>
+<span id="cb9-10"><a href=""></a></span>
+<span id="cb9-11"><a href=""></a><span class="co"># Adaptive smooth (varying complexity)</span></span>
+<span id="cb9-12"><a href=""></a>model_adaptive <span class="ot">&lt;-</span> <span class="fu">gam</span>(</span>
+<span id="cb9-13"><a href=""></a>  abundance <span class="sc">~</span> </span>
+<span id="cb9-14"><a href=""></a>    <span class="fu">s</span>(elevation) <span class="sc">+</span></span>
+<span id="cb9-15"><a href=""></a>    <span class="fu">s</span>(x, y, <span class="at">bs =</span> <span class="st">"ad"</span>, <span class="at">k =</span> <span class="dv">100</span>),  <span class="co"># Adaptive smooth</span></span>
+<span id="cb9-16"><a href=""></a>  <span class="at">family =</span> poisson,</span>
+<span id="cb9-17"><a href=""></a>  <span class="at">data =</span> data,</span>
+<span id="cb9-18"><a href=""></a>  <span class="at">method =</span> <span class="st">"REML"</span></span>
+<span id="cb9-19"><a href=""></a>)</span>
+<span id="cb9-20"><a href=""></a></span>
+<span id="cb9-21"><a href=""></a><span class="co"># Soap film smooth (with boundary)</span></span>
+<span id="cb9-22"><a href=""></a><span class="co"># Useful when study area has complex shape</span></span>
+<span id="cb9-23"><a href=""></a><span class="fu">library</span>(sf)</span>
+<span id="cb9-24"><a href=""></a>boundary <span class="ot">&lt;-</span> <span class="fu">st_read</span>(<span class="st">"study_boundary.shp"</span>)</span>
+<span id="cb9-25"><a href=""></a></span>
+<span id="cb9-26"><a href=""></a><span class="co"># Convert boundary to appropriate format</span></span>
+<span id="cb9-27"><a href=""></a><span class="co"># (See mgcv::smooth.construct.so.smooth.spec for details)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="point-referenced-comprehensive-comparison" class="slide level2">
+<h2>Point-Referenced: Comprehensive Comparison</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 10%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 9%">
+<col style="width: 12%">
+<col style="width: 17%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Method</th>
+<th>Framework</th>
+<th>Complexity</th>
+<th>Speed</th>
+<th>n Limit</th>
+<th>Uncertainty</th>
+<th>Best Use Case</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Full GP</strong></td>
+<td>GP</td>
+<td><span class="math inline">\(O(n^3)\)</span></td>
+<td>Slow</td>
+<td>~1000</td>
+<td>Exact</td>
+<td>Small datasets, methodological work</td>
+</tr>
+<tr class="even">
+<td><strong>SPDE</strong></td>
+<td>GP (exact)</td>
+<td><span class="math inline">\(O(n^{3/2})\)</span></td>
+<td>Fast</td>
+<td>~50,000</td>
+<td>Exact</td>
+<td>Medium-large datasets, Bayesian inference</td>
+</tr>
+<tr class="odd">
+<td><strong>Low-Rank GP</strong></td>
+<td>GP (approx)</td>
+<td><span class="math inline">\(O(nm^2 + m^3)\)</span></td>
+<td>Medium</td>
+<td>~10,000</td>
+<td>Bayesian</td>
+<td>Moderate datasets, flexible</td>
+</tr>
+<tr class="even">
+<td><strong>NN-GP</strong></td>
+<td>GP (approx)</td>
+<td><span class="math inline">\(O(nm^3)\)</span></td>
+<td>Fast</td>
+<td>100,000+</td>
+<td>Bayesian</td>
+<td>Very large datasets</td>
+</tr>
+<tr class="odd">
+<td><strong>Splines</strong></td>
+<td>Non-GP</td>
+<td><span class="math inline">\(O(n)\)</span></td>
+<td>Very Fast</td>
+<td>50,000+</td>
+<td>Frequentist</td>
+<td>Quick analysis, exploration</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="key-r-packages" class="slide level2">
+<h2>Key R packages</h2>
+<p><strong>Full GP:</strong> <code>gstat</code> (classical geostats) + <code>fields</code> (spatial random fields)</p>
+<p><strong>SPDE:</strong></p>
+<ul>
+<li><code>INLA</code> + <code>inlabru</code> (highly customizable)<br>
+</li>
+<li><code>sdmTMB</code> (user friendly, single species) or <code>tinyVAST</code> (multi-species)</li>
+</ul>
+<p><strong>Low-Rank GP:</strong> <code>spBayes</code> or <code>nimble</code> (highly customizable Bayesian modeling)</p>
+<p><strong>Nearest Neighbor GP:</strong></p>
+<ul>
+<li><code>spNNGP</code> - Nearest Neighbor Gaussian Processes<br>
+</li>
+<li><code>spAbundance</code> &amp; <code>spOccupancy</code> (Hierarchical Bayesian models)</li>
+</ul>
+<p><strong>Splines:</strong> <code>mgcv</code> (GAMs) or <code>mvgams</code> (Hierarchical Bayesian GAMs)</p>
+</section>
+<section id="common-pitfalls-and-solutions" class="slide level2">
+<h2>Common Pitfalls and Solutions</h2>
+<div class="callout callout-warning callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Watch Out For:</strong></p>
+</div>
+<div class="callout-content">
+<p><strong>Over-smoothing:</strong></p>
+<ul>
+<li>Splines: Check <code>gam.check()</code> and increase <code>k</code> if needed<br>
+</li>
+<li>GPs: Ensure spatial range parameter is estimable</li>
+</ul>
+<p><strong>Under-smoothing:</strong></p>
+<ul>
+<li>Creates overly complex surfaces that don’t generalize<br>
+</li>
+<li>Use cross-validation to check predictive performance</li>
+</ul>
+<p><strong>Computational Issues:</strong></p>
+<ul>
+<li>Start with small datasets to test workflow<br>
+</li>
+<li>Use reduced-rank methods before attempting full GP<br>
+</li>
+<li>Consider parallelization for MCMC-based methods</li>
+</ul>
+<p><strong>Mesh/Knot Placement:</strong></p>
+<ul>
+<li>SPDE: Mesh should extend beyond data<br>
+</li>
+<li>Low-Rank: Try different knot configurations<br>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="validation-and-model-checking" class="slide level2">
+<h2>Validation and Model Checking</h2>
+<p><strong>Essential diagnostics for all methods:</strong></p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href=""></a><span class="co"># 1. Residual spatial autocorrelation</span></span>
+<span id="cb10-2"><a href=""></a><span class="fu">library</span>(spdep)</span>
+<span id="cb10-3"><a href=""></a>coords <span class="ot">&lt;-</span> <span class="fu">cbind</span>(data<span class="sc">$</span>x, data<span class="sc">$</span>y)</span>
+<span id="cb10-4"><a href=""></a>neighbors <span class="ot">&lt;-</span> <span class="fu">dnearneigh</span>(coords, <span class="dv">0</span>, max_distance)</span>
+<span id="cb10-5"><a href=""></a>weights <span class="ot">&lt;-</span> <span class="fu">nb2listw</span>(neighbors)</span>
+<span id="cb10-6"><a href=""></a><span class="fu">moran.test</span>(<span class="fu">residuals</span>(model), weights)</span>
+<span id="cb10-7"><a href=""></a></span>
+<span id="cb10-8"><a href=""></a><span class="co"># 2. Variogram of residuals</span></span>
+<span id="cb10-9"><a href=""></a><span class="fu">library</span>(gstat)</span>
+<span id="cb10-10"><a href=""></a>resid_variogram <span class="ot">&lt;-</span> <span class="fu">variogram</span>(</span>
+<span id="cb10-11"><a href=""></a>  residuals <span class="sc">~</span> <span class="dv">1</span>, </span>
+<span id="cb10-12"><a href=""></a>  <span class="at">locations =</span> <span class="sc">~</span>x<span class="sc">+</span>y, </span>
+<span id="cb10-13"><a href=""></a>  <span class="at">data =</span> data</span>
+<span id="cb10-14"><a href=""></a>)</span>
+<span id="cb10-15"><a href=""></a><span class="fu">plot</span>(resid_variogram)  <span class="co"># Should be flat if spatial structure captured</span></span>
+<span id="cb10-16"><a href=""></a></span>
+<span id="cb10-17"><a href=""></a><span class="co"># 3. Spatial cross-validation</span></span>
+<span id="cb10-18"><a href=""></a><span class="fu">library</span>(blockCV)</span>
+<span id="cb10-19"><a href=""></a>spatial_blocks <span class="ot">&lt;-</span> <span class="fu">cv_spatial</span>(</span>
+<span id="cb10-20"><a href=""></a>  <span class="at">x =</span> data_sf,</span>
+<span id="cb10-21"><a href=""></a>  <span class="at">column =</span> <span class="st">"response"</span>,</span>
+<span id="cb10-22"><a href=""></a>  <span class="at">k =</span> <span class="dv">5</span>,</span>
+<span id="cb10-23"><a href=""></a>  <span class="at">size =</span> <span class="dv">10000</span></span>
+<span id="cb10-24"><a href=""></a>)</span>
+<span id="cb10-25"><a href=""></a></span>
+<span id="cb10-26"><a href=""></a><span class="co"># 4. Predictive performance</span></span>
+<span id="cb10-27"><a href=""></a><span class="co"># Compare RMSE, MAE, coverage of prediction intervals</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="integration-with-covariates" class="slide level2">
+<h2>Integration with Covariates</h2>
+<p><strong>All methods can include environmental covariates:</strong></p>
+<p><strong>Additive structure:</strong> <span class="math display">\[y(\mathbf{s}) = \beta_0 + \sum_{j=1}^p f_j(x_j(\mathbf{s})) + w(\mathbf{s}) + \epsilon(\mathbf{s})\]</span></p>
+<p>Where <span class="math inline">\(f_j\)</span> can be: - Linear effects: <span class="math inline">\(\beta_j x_j\)</span> - Smooth effects: Spline or polynomial - Interactions: <span class="math inline">\(x_j \times x_k\)</span> or tensor products</p>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Interpretation Challenge</strong></p>
+</div>
+<div class="callout-content">
+<p>Spatial random effects can “absorb” covariate effects if covariates are spatially structured. Consider restricted spatial regression or spatial confounding adjustments.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="advanced-topics" class="slide level2">
+<h2>Advanced Topics</h2>
+<p><strong>Extensions of point-referenced methods:</strong></p>
+<ul>
+<li><strong>Non-stationary GPs</strong> - Spatial parameters vary across space</li>
+<li><strong>Anisotropic models</strong> - Correlation depends on direction</li>
+<li><strong>Space-time models</strong> - Add temporal dimension</li>
+<li><strong>Multivariate spatial models</strong> - Multiple responses</li>
+<li><strong>Preferential sampling</strong> - Locations not random</li>
+<li><strong>Measurement error</strong> - Covariate uncertainty</li>
+</ul>
+<p><strong>These typically require specialized implementations of the core methods.</strong></p>
+</section>
+<section id="summary-point-referenced-data" class="slide level2">
+<h2>Summary: Point-Referenced Data</h2>
+<div class="callout callout-important no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Key Takeaways</strong></p>
+</div>
+<div class="callout-content">
+<ol type="1">
+<li><strong>Gaussian Processes</strong> provide the theoretical foundation</li>
+<li><strong>SPDE</strong> offers exact GP representation with computational efficiency</li>
+<li><strong>Low-Rank and NN-GP</strong> are approximations that scale to large datasets</li>
+<li><strong>Splines</strong> provide a fast alternative framework</li>
+<li><strong>Choice depends on:</strong> dataset size, computational resources, and inference goals</li>
+<li><strong>Start simple</strong> (splines) and add complexity as needed</li>
+<li><strong>Always validate</strong> using spatial cross-validation</li>
+<li><strong>Check residuals</strong> for remaining spatial structure</li>
+</ol>
+</div>
+</div>
+</div>
+</section>
+<section id="resources-and-further-reading" class="slide level2">
+<h2>Resources and Further Reading</h2>
+<p><strong>Key Papers:</strong></p>
+<ul>
+<li>Lindgren et al.&nbsp;(2011) “An explicit link between Gaussian fields and GMRFs” <em>JRSS-B</em></li>
+<li>Datta et al.&nbsp;(2016) “Hierarchical Nearest-Neighbor Gaussian Process Models” <em>JASA</em></li>
+<li>Banerjee et al.&nbsp;(2008) “Gaussian predictive process models” <em>JRSS-B</em></li>
+<li>Wood (2017) <em>Generalized Additive Models: An Introduction with R</em></li>
+</ul>
+<p><strong>Online Resources:</strong></p>
+<ul>
+<li><a href="https://www.r-inla.org/">R-INLA website</a> - Tutorials and examples</li>
+<li><a href="https://cran.r-project.org/web/packages/mgcv/">mgcv documentation</a></li>
+<li><a href="https://rspatial.org/">Spatial Data Science with R</a></li>
+</ul>
+<p><strong>Books:</strong></p>
+<ul>
+<li>Banerjee et al.&nbsp;(2014) <em>Hierarchical Modeling and Analysis for Spatial Data</em></li>
+<li>Cressie &amp; Wikle (2011) <em>Statistics for Spatio-Temporal Data</em></li>
+</ul>
+</section>
+<section class="slide level2">
+
+</section></section>
+<section>
+<section id="areal-lattice-data" class="title-slide slide level1 center">
+<h1>Areal / Lattice Data</h1>
+<p><em>Aggregated data in discrete spatial units</em></p>
+</section>
+<section id="what-is-areal-data" class="slide level2">
+<h2>What is Areal Data?</h2>
+<p><strong>Definition:</strong> Data aggregated to discrete spatial units with defined boundaries.</p>
+<p><strong>Ecological Examples:</strong></p>
+<ul>
+<li>Species counts by county or grid cell</li>
+<li>Disease prevalence by administrative unit</li>
+<li>Land cover by hexagonal bins</li>
+<li>Population density by watershed</li>
+<li>Camera trap detections by site</li>
+</ul>
+<p><strong>Key characteristic:</strong> Space is <strong>partitioned</strong> into units; data are <strong>aggregated</strong> within units.</p>
+</section>
+<section id="areal-data-visual-example" class="slide level2">
+<h2>Areal Data: Visual Example</h2>
+<div class="columns">
+<div class="column" style="width:55%;">
+<p><img data-src="images/cloropleth.jpg" alt="County-level choropleth map">{width 50%}</p>
+<p><strong>Typical scenario:</strong></p>
+<ul>
+<li>20-5000 spatial units (polygons or grid cells)<br>
+</li>
+<li>Clear neighborhood structure<br>
+</li>
+<li>Count or aggregated data per unit<br>
+</li>
+<li>Want to account for spatial dependence<br>
+</li>
+</ul>
+</div><div class="column" style="width:45%;">
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Common Questions</strong></p>
+</div>
+<div class="callout-content">
+<ul>
+<li>Are neighboring units more similar?</li>
+<li>How do I borrow strength across space?</li>
+<li>Can I smooth noisy estimates?</li>
+<li>Should I worry about edge effects?</li>
+</ul>
+</div>
+</div>
+</div>
+</div></div>
+</section>
+<section id="areal-data-neighborhood-structure" class="slide level2">
+<h2>Areal Data: Neighborhood Structure</h2>
+<p><strong>Critical concept:</strong> Who are my neighbors?</p>
+<p><strong>Common definitions:</strong></p>
+<ol type="1">
+<li><strong>Rook adjacency</strong> - shared border</li>
+<li><strong>Queen adjacency</strong> - shared border or corner</li>
+<li><strong>Distance-based</strong> - within threshold distance</li>
+<li><strong>k-nearest neighbors</strong> - k closest centroids</li>
+</ol>
+<div class="callout callout-important callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Adjacency Matrix</strong></p>
+</div>
+<div class="callout-content">
+<p>Neighborhood structure encoded in matrix <span class="math inline">\(\mathbf{W}\)</span>: <span class="math display">\[w_{ij} = \begin{cases} 1 &amp; \text{if } i \text{ and } j \text{ are neighbors} \\ 0 &amp; \text{otherwise} \end{cases}\]</span></p>
+</div>
+</div>
+</div>
+</section>
+<section id="areal-data-method-1---car-models" class="slide level2">
+<h2>Areal Data: Method 1 - CAR Models</h2>
+<p><strong>Conditional Autoregressive (CAR) Models</strong></p>
+<p>Each area’s random effect depends on its neighbors:</p>
+<p><span class="math display">\[w_i | \mathbf{w}_{-i}, \tau^2 \sim \text{Normal}\left(\sum_{j \sim i} b_{ij}w_j, \tau_i^2\right)\]</span></p>
+<p><strong>Most common:</strong> Intrinsic CAR (ICAR)</p>
+<p><span class="math display">\[w_i | \mathbf{w}_{-i}, \tau^2 \sim \text{Normal}\left(\frac{1}{n_i}\sum_{j \sim i} w_j, \frac{\tau^2}{n_i}\right)\]</span></p>
+<p>Where <span class="math inline">\(n_i\)</span> = number of neighbors of area <span class="math inline">\(i\)</span>.</p>
+</section>
+<section id="icar-model-properties" class="slide level2">
+<h2>ICAR Model: Properties</h2>
+<p><strong>Interpretation:</strong> Each area’s value is the average of its neighbors, plus noise.</p>
+<p><strong>Key properties:</strong></p>
+<ul>
+<li>Induces <strong>strong</strong> spatial smoothing</li>
+<li>Prior is <strong>improper</strong> (infinite variance)</li>
+<li>Requires sum-to-zero constraint: <span class="math inline">\(\sum_i w_i = 0\)</span></li>
+<li>Variance proportional to <span class="math inline">\(1/n_i\)</span> (islands have high variance!)</li>
+</ul>
+<div class="callout callout-warning callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Island Problem</strong></p>
+</div>
+<div class="callout-content">
+<p>Areas with few neighbors have high uncertainty. Consider removing islands or using proper CAR.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="areal-data-method-2---proper-car" class="slide level2">
+<h2>Areal Data: Method 2 - Proper CAR</h2>
+<p><strong>Adds spatial decay parameter</strong> <span class="math inline">\(\rho\)</span> to control smoothing strength:</p>
+<p><span class="math display">\[w_i | \mathbf{w}_{-i}, \tau^2, \rho \sim \text{Normal}\left(\frac{\rho}{n_i}\sum_{j \sim i} w_j, \frac{\tau^2}{n_i}\right)\]</span></p>
+<p><strong>Properties:</strong></p>
+<ul>
+<li><span class="math inline">\(\rho = 0\)</span> → independent random effects (no spatial structure)</li>
+<li><span class="math inline">\(\rho \to 1\)</span> → approaches ICAR (maximum smoothing)</li>
+<li><strong>Proper</strong> prior (finite variance)</li>
+<li>Can estimate <span class="math inline">\(\rho\)</span> from data</li>
+</ul>
+<p><strong>When to use:</strong> When you want data to determine smoothing strength.</p>
+</section>
+<section id="areal-data-method-3---bym-model" class="slide level2">
+<h2>Areal Data: Method 3 - BYM Model</h2>
+<p><strong>Besag-York-Mollié (BYM) Model</strong> - convolution of spatial and non-spatial effects:</p>
+<p><span class="math display">\[w_i = u_i + v_i\]</span></p>
+<p>Where:</p>
+<ul>
+<li><span class="math inline">\(u_i \sim \text{ICAR}(\tau_u^2)\)</span> → spatially structured</li>
+<li><span class="math inline">\(v_i \sim \text{Normal}(0, \tau_v^2)\)</span> → unstructured</li>
+</ul>
+<p><strong>Advantage:</strong> Separates spatial and non-spatial variation</p>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>BYM2 Parameterization</strong></p>
+</div>
+<div class="callout-content">
+<p>Modern version uses a mixing parameter <span class="math inline">\(\phi \in [0,1]\)</span>: <span class="math display">\[w_i = \frac{1}{\sqrt{\tau}}(\sqrt{\phi} \cdot u_i + \sqrt{1-\phi} \cdot v_i)\]</span> Easier to specify priors!</p>
+</div>
+</div>
+</div>
+</section>
+<section id="areal-data-method-4---sar-models" class="slide level2">
+<h2>Areal Data: Method 4 - SAR Models</h2>
+<p><strong>Simultaneous Autoregressive (SAR) Models</strong></p>
+<p>Different from CAR! Response depends on neighbors’ <strong>responses</strong>:</p>
+<p><span class="math display">\[\mathbf{y} = \rho \mathbf{W}\mathbf{y} + \mathbf{X}\boldsymbol{\beta} + \boldsymbol{\epsilon}\]</span></p>
+<p><strong>Key difference:</strong></p>
+<ul>
+<li>CAR: Spatial dependence in <strong>random effects</strong></li>
+<li>SAR: Spatial dependence in <strong>response variable</strong> itself</li>
+<li>SAR has “spillover” effects (feedback loops)</li>
+</ul>
+<p><strong>Implementation:</strong> <code>spdep</code> package in R</p>
+</section>
+<section id="areal-data-car-vs-sar" class="slide level2">
+<h2>Areal Data: CAR vs SAR</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Feature</th>
+<th>CAR</th>
+<th>SAR</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>What’s spatial?</td>
+<td>Random effects</td>
+<td>Response variable</td>
+</tr>
+<tr class="even">
+<td>Interpretation</td>
+<td>Smoothing</td>
+<td>Spillover/feedback</td>
+</tr>
+<tr class="odd">
+<td>Computation</td>
+<td>Easy (INLA)</td>
+<td>More complex</td>
+</tr>
+<tr class="even">
+<td>Bayesian</td>
+<td>Yes</td>
+<td>Possible but harder</td>
+</tr>
+<tr class="odd">
+<td>Ecology use</td>
+<td>Very common</td>
+<td>Less common</td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>In Practice</strong></p>
+</div>
+<div class="callout-content">
+<p>CAR models are much more common in ecology. SAR models used more in econometrics.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="areal-data-method-5---spatial-eigenvectors" class="slide level2">
+<h2>Areal Data: Method 5 - Spatial Eigenvectors</h2>
+<p><strong>Moran’s Eigenvector Maps (MEM) / PCNM</strong></p>
+<p><strong>Idea:</strong> Decompose spatial relationships into orthogonal eigenvectors</p>
+<ol type="1">
+<li>Create distance/connectivity matrix</li>
+<li>Eigendecompose to get spatial filters</li>
+<li>Use eigenvectors as covariates in regression</li>
+</ol>
+<p><span class="math display">\[y_i = \beta_0 + \sum_{k=1}^K \beta_k \text{EV}_{ik} + \epsilon_i\]</span></p>
+<p><strong>Advantages:</strong></p>
+<ul>
+<li>Works with any spatial configuration</li>
+<li>Frequentist framework (familiar to many ecologists)</li>
+<li>Can select eigenvectors (forward selection)</li>
+</ul>
+</section>
+<section id="spatial-eigenvectors-example" class="slide level2">
+<h2>Spatial Eigenvectors: Example</h2>
+<div class="sourceCode" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href=""></a><span class="fu">library</span>(adespatial)</span>
+<span id="cb11-2"><a href=""></a><span class="fu">library</span>(spdep)</span>
+<span id="cb11-3"><a href=""></a></span>
+<span id="cb11-4"><a href=""></a><span class="co"># Create neighborhood structure</span></span>
+<span id="cb11-5"><a href=""></a>coords <span class="ot">&lt;-</span> <span class="fu">st_coordinates</span>(<span class="fu">st_centroid</span>(polygons))</span>
+<span id="cb11-6"><a href=""></a>nb <span class="ot">&lt;-</span> <span class="fu">poly2nb</span>(polygons)</span>
+<span id="cb11-7"><a href=""></a></span>
+<span id="cb11-8"><a href=""></a><span class="co"># Generate spatial eigenvectors</span></span>
+<span id="cb11-9"><a href=""></a>mem <span class="ot">&lt;-</span> <span class="fu">scores.listw</span>(<span class="fu">nb2listw</span>(nb), </span>
+<span id="cb11-10"><a href=""></a>                    <span class="at">wt =</span> coords,</span>
+<span id="cb11-11"><a href=""></a>                    <span class="at">MEM.autocor =</span> <span class="st">"positive"</span>)</span>
+<span id="cb11-12"><a href=""></a></span>
+<span id="cb11-13"><a href=""></a><span class="co"># Use in regression</span></span>
+<span id="cb11-14"><a href=""></a>model <span class="ot">&lt;-</span> <span class="fu">lm</span>(abundance <span class="sc">~</span> covariate1 <span class="sc">+</span> covariate2 <span class="sc">+</span> </span>
+<span id="cb11-15"><a href=""></a>            MEM1 <span class="sc">+</span> MEM2 <span class="sc">+</span> MEM3, <span class="at">data =</span> mydata)</span>
+<span id="cb11-16"><a href=""></a></span>
+<span id="cb11-17"><a href=""></a><span class="co"># Or select eigenvectors via forward selection</span></span>
+<span id="cb11-18"><a href=""></a>mem.sel <span class="ot">&lt;-</span> <span class="fu">forward.sel</span>(<span class="at">y =</span> mydata<span class="sc">$</span>abundance,</span>
+<span id="cb11-19"><a href=""></a>                       <span class="at">x =</span> mem<span class="sc">$</span>vectors,</span>
+<span id="cb11-20"><a href=""></a>                       <span class="at">alpha =</span> <span class="fl">0.05</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="areal-data-comparison" class="slide level2">
+<h2>Areal Data: Comparison</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 15%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 24%">
+<col style="width: 18%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Method</th>
+<th>Framework</th>
+<th>Smoothing</th>
+<th>Flexibility</th>
+<th>Best For</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>ICAR</td>
+<td>Bayesian</td>
+<td>Strong</td>
+<td>Low</td>
+<td>Small n, strong spatial signal</td>
+</tr>
+<tr class="even">
+<td>Proper CAR</td>
+<td>Bayesian</td>
+<td>Data-driven</td>
+<td>Medium</td>
+<td>Estimate smoothing strength</td>
+</tr>
+<tr class="odd">
+<td>BYM/BYM2</td>
+<td>Bayesian</td>
+<td>Flexible</td>
+<td>High</td>
+<td>Separate spatial/non-spatial</td>
+</tr>
+<tr class="even">
+<td>SAR</td>
+<td>Frequentist</td>
+<td>Feedback</td>
+<td>Medium</td>
+<td>Spillover processes</td>
+</tr>
+<tr class="odd">
+<td>MEM</td>
+<td>Frequentist</td>
+<td>Data-driven</td>
+<td>High</td>
+<td>Flexible, frequentist</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="areal-data-r-example-with-inla" class="slide level2">
+<h2>Areal Data: R Example with INLA</h2>
+<div class="sourceCode" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href=""></a><span class="fu">library</span>(INLA)</span>
+<span id="cb12-2"><a href=""></a><span class="fu">library</span>(spdep)</span>
+<span id="cb12-3"><a href=""></a><span class="fu">library</span>(sf)</span>
+<span id="cb12-4"><a href=""></a></span>
+<span id="cb12-5"><a href=""></a><span class="co"># Load spatial data</span></span>
+<span id="cb12-6"><a href=""></a>regions <span class="ot">&lt;-</span> <span class="fu">st_read</span>(<span class="st">"regions.shp"</span>)</span>
+<span id="cb12-7"><a href=""></a></span>
+<span id="cb12-8"><a href=""></a><span class="co"># Create neighborhood structure</span></span>
+<span id="cb12-9"><a href=""></a>nb <span class="ot">&lt;-</span> <span class="fu">poly2nb</span>(regions)</span>
+<span id="cb12-10"><a href=""></a><span class="fu">nb2INLA</span>(<span class="st">"region.adj"</span>, nb)  <span class="co"># Save adjacency for INLA</span></span>
+<span id="cb12-11"><a href=""></a></span>
+<span id="cb12-12"><a href=""></a><span class="co"># Prepare data</span></span>
+<span id="cb12-13"><a href=""></a>data <span class="ot">&lt;-</span> <span class="fu">st_drop_geometry</span>(regions)</span>
+<span id="cb12-14"><a href=""></a>data<span class="sc">$</span>region_id <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(data)</span>
+<span id="cb12-15"><a href=""></a></span>
+<span id="cb12-16"><a href=""></a><span class="co"># BYM2 model</span></span>
+<span id="cb12-17"><a href=""></a>formula <span class="ot">&lt;-</span> cases <span class="sc">~</span> </span>
+<span id="cb12-18"><a href=""></a>  covariate1 <span class="sc">+</span> </span>
+<span id="cb12-19"><a href=""></a>  covariate2 <span class="sc">+</span></span>
+<span id="cb12-20"><a href=""></a>  <span class="fu">f</span>(region_id, </span>
+<span id="cb12-21"><a href=""></a>    <span class="at">model =</span> <span class="st">"bym2"</span>,</span>
+<span id="cb12-22"><a href=""></a>    <span class="at">graph =</span> <span class="st">"region.adj"</span>,</span>
+<span id="cb12-23"><a href=""></a>    <span class="at">hyper =</span> <span class="fu">list</span>(</span>
+<span id="cb12-24"><a href=""></a>      <span class="at">prec =</span> <span class="fu">list</span>(<span class="at">prior =</span> <span class="st">"pc.prec"</span>, <span class="at">param =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="fl">0.01</span>)),</span>
+<span id="cb12-25"><a href=""></a>      <span class="at">phi =</span> <span class="fu">list</span>(<span class="at">prior =</span> <span class="st">"pc"</span>, <span class="at">param =</span> <span class="fu">c</span>(<span class="fl">0.5</span>, <span class="fl">0.5</span>))</span>
+<span id="cb12-26"><a href=""></a>    ))</span>
+<span id="cb12-27"><a href=""></a></span>
+<span id="cb12-28"><a href=""></a>result <span class="ot">&lt;-</span> <span class="fu">inla</span>(</span>
+<span id="cb12-29"><a href=""></a>  formula,</span>
+<span id="cb12-30"><a href=""></a>  <span class="at">family =</span> <span class="st">"poisson"</span>,</span>
+<span id="cb12-31"><a href=""></a>  <span class="at">data =</span> data,</span>
+<span id="cb12-32"><a href=""></a>  <span class="at">E =</span> data<span class="sc">$</span>expected,  <span class="co"># For disease mapping</span></span>
+<span id="cb12-33"><a href=""></a>  <span class="at">control.predictor =</span> <span class="fu">list</span>(<span class="at">compute =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb12-34"><a href=""></a>  <span class="at">control.compute =</span> <span class="fu">list</span>(<span class="at">dic =</span> <span class="cn">TRUE</span>, <span class="at">waic =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb12-35"><a href=""></a>)</span>
+<span id="cb12-36"><a href=""></a></span>
+<span id="cb12-37"><a href=""></a><span class="co"># Extract spatial random effects</span></span>
+<span id="cb12-38"><a href=""></a>spatial_effects <span class="ot">&lt;-</span> result<span class="sc">$</span>summary.random<span class="sc">$</span>region_id</span>
+<span id="cb12-39"><a href=""></a></span>
+<span id="cb12-40"><a href=""></a><span class="co"># Map results</span></span>
+<span id="cb12-41"><a href=""></a>regions<span class="sc">$</span>fitted <span class="ot">&lt;-</span> result<span class="sc">$</span>summary.fitted.values<span class="sc">$</span>mean</span>
+<span id="cb12-42"><a href=""></a><span class="fu">plot</span>(regions[<span class="st">"fitted"</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section class="slide level2">
+
+</section></section>
+<section>
+<section id="point-pattern-data" class="title-slide slide level1 center">
+<h1>Point Pattern Data</h1>
+<p><em>When locations themselves are the response</em></p>
+</section>
+<section id="what-is-point-pattern-data" class="slide level2">
+<h2>What is Point Pattern Data?</h2>
+<p><strong>Definition:</strong> The spatial locations of events/individuals are what we’re modeling.</p>
+<p><strong>Ecological Examples:</strong></p>
+<ul>
+<li>Tree locations in a forest plot</li>
+<li>Animal sightings/occurrences</li>
+<li>Nest locations of colonial birds</li>
+<li>Burrow entrances</li>
+<li>Lightning strike locations</li>
+</ul>
+<p><strong>Key characteristic:</strong> The <strong>pattern of locations</strong> is the phenomenon of interest, not a measurement at those locations.</p>
+</section>
+<section id="point-pattern-visual-example" class="slide level2">
+<h2>Point Pattern: Visual Example</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Spatial_point_pattern.svg/440px-Spatial_point_pattern.svg.png"></p>
+<figcaption>Spatial point pattern</figcaption>
+</figure>
+</div>
+<p><strong>Key questions:</strong></p>
+<ul>
+<li>Random, clustered, or regular?</li>
+<li>Does intensity vary across space?</li>
+<li>What drives the spatial pattern?</li>
+<li>Interaction between points?</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Three Main Patterns</strong></p>
+</div>
+<div class="callout-content">
+<ul>
+<li><strong>Random</strong> (CSR - Complete Spatial Randomness)</li>
+<li><strong>Clustered</strong> (aggregated, contagious)</li>
+<li><strong>Regular</strong> (dispersed, uniform, inhibition)</li>
+</ul>
+</div>
+</div>
+</div>
+</div></div>
+</section>
+<section id="point-pattern-core-concept---intensity" class="slide level2">
+<h2>Point Pattern: Core Concept - Intensity</h2>
+<p><strong>Intensity function</strong> <span class="math inline">\(\lambda(\mathbf{s})\)</span> = expected number of points per unit area at location <span class="math inline">\(\mathbf{s}\)</span></p>
+<p><span class="math display">\[\mathbb{E}[N(A)] = \int_A \lambda(\mathbf{s}) d\mathbf{s}\]</span></p>
+<p><strong>Types:</strong></p>
+<ul>
+<li><strong>Homogeneous:</strong> <span class="math inline">\(\lambda(\mathbf{s}) = \lambda\)</span> (constant)</li>
+<li><strong>Inhomogeneous:</strong> <span class="math inline">\(\lambda(\mathbf{s})\)</span> varies with location</li>
+<li><strong>Can depend on covariates:</strong> <span class="math inline">\(\lambda(\mathbf{s}) = \exp(\mathbf{X}(\mathbf{s})\boldsymbol{\beta})\)</span></li>
+</ul>
+</section>
+<section id="point-pattern-method-1---inhomogeneous-poisson-process" class="slide level2">
+<h2>Point Pattern: Method 1 - Inhomogeneous Poisson Process</h2>
+<p><strong>Simplest model:</strong> Points are independent given intensity function</p>
+<p><span class="math display">\[\lambda(\mathbf{s}) = \exp(\beta_0 + \beta_1 x_1(\mathbf{s}) + ... + \beta_p x_p(\mathbf{s}))\]</span></p>
+<p><strong>Fitting:</strong></p>
+<ul>
+<li>Divide study area into grid/quadrats</li>
+<li>Count points per cell</li>
+<li>Fit Poisson GLM or use <code>spatstat</code> for continuous intensity</li>
+</ul>
+<div class="callout callout-warning callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Assumption</strong></p>
+</div>
+<div class="callout-content">
+<p>Points are <strong>independent</strong> - no interaction or clustering beyond what covariates explain.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="point-pattern-method-2---cox-processes" class="slide level2">
+<h2>Point Pattern: Method 2 - Cox Processes</h2>
+<p><strong>Adds spatial random effects to intensity:</strong></p>
+<p><span class="math display">\[\lambda(\mathbf{s}) = \exp(\mathbf{X}(\mathbf{s})\boldsymbol{\beta} + w(\mathbf{s}))\]</span></p>
+<p>Where <span class="math inline">\(w(\mathbf{s})\)</span> is a spatial Gaussian process.</p>
+<p><strong>Types:</strong></p>
+<ul>
+<li><strong>Log-Gaussian Cox Process (LGCP)</strong> - GP on log-intensity</li>
+<li><strong>Shot-noise Cox Process</strong> - clusters around random parent points</li>
+</ul>
+<p><strong>Result:</strong> Accounts for residual spatial clustering not explained by covariates.</p>
+</section>
+<section id="lgcp-implementation-approaches" class="slide level2">
+<h2>LGCP: Implementation Approaches</h2>
+<p><strong>Approach 1: Discretize space</strong></p>
+<ul>
+<li>Divide area into fine grid</li>
+<li>Model counts per cell with spatial random effects</li>
+<li>Use INLA with SPDE</li>
+</ul>
+<p><strong>Approach 2: Integrated nested Laplace approximation</strong></p>
+<ul>
+<li>Direct likelihood for point pattern</li>
+<li>Continuous intensity surface</li>
+<li>Package: <code>inlabru</code> in R</li>
+</ul>
+</section>
+<section id="point-pattern-method-3---interaction-models" class="slide level2">
+<h2>Point Pattern: Method 3 - Interaction Models</h2>
+<p><strong>For processes with point-to-point interaction:</strong></p>
+<p><span class="math display">\[\lambda(\mathbf{s} | \text{other points}) = \lambda(\mathbf{s}) \times g(\text{distances to other points})\]</span></p>
+<p><strong>Types:</strong></p>
+<ul>
+<li><strong>Hard-core:</strong> Minimum distance between points</li>
+<li><strong>Strauss process:</strong> Inhibition within distance <span class="math inline">\(r\)</span></li>
+<li><strong>Geyer saturation:</strong> Limited inhibition strength</li>
+</ul>
+<p><strong>Use when:</strong> Points repel or attract each other (territoriality, facilitation).</p>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Tip</strong></p>
+</div>
+<div class="callout-content">
+<p>Package: <code>spatstat</code> in R for interaction models</p>
+</div>
+</div>
+</div>
+</section>
+<section id="point-pattern-comparison" class="slide level2">
+<h2>Point Pattern: Comparison</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 19%">
+<col style="width: 18%">
+<col style="width: 21%">
+<col style="width: 24%">
+<col style="width: 16%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Model Type</th>
+<th>Complexity</th>
+<th>Interaction</th>
+<th>Spatial Trend</th>
+<th>Best For</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Poisson</td>
+<td>Low</td>
+<td>None</td>
+<td>Yes (via covariates)</td>
+<td>Independent points</td>
+</tr>
+<tr class="even">
+<td>LGCP</td>
+<td>Medium</td>
+<td>Apparent (via GP)</td>
+<td>Yes</td>
+<td>Clustering from environment</td>
+</tr>
+<tr class="odd">
+<td>Hard-core</td>
+<td>Medium</td>
+<td>Strong repulsion</td>
+<td>Yes</td>
+<td>Territorial species</td>
+</tr>
+<tr class="even">
+<td>Strauss</td>
+<td>High</td>
+<td>Tunable</td>
+<td>Yes</td>
+<td>Flexible interaction</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="point-pattern-r-example-with-spatstat" class="slide level2">
+<h2>Point Pattern: R Example with spatstat</h2>
+<div class="sourceCode" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href=""></a><span class="fu">library</span>(spatstat)</span>
+<span id="cb13-2"><a href=""></a></span>
+<span id="cb13-3"><a href=""></a><span class="co"># Create point pattern object</span></span>
+<span id="cb13-4"><a href=""></a>pp <span class="ot">&lt;-</span> <span class="fu">ppp</span>(<span class="at">x =</span> trees<span class="sc">$</span>x, <span class="at">y =</span> trees<span class="sc">$</span>y,</span>
+<span id="cb13-5"><a href=""></a>          <span class="at">window =</span> <span class="fu">owin</span>(<span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">100</span>), <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">100</span>)))</span>
+<span id="cb13-6"><a href=""></a></span>
+<span id="cb13-7"><a href=""></a><span class="co"># Test for complete spatial randomness</span></span>
+<span id="cb13-8"><a href=""></a><span class="fu">plot</span>(<span class="fu">envelope</span>(pp, Kest))  <span class="co"># K-function envelope test</span></span>
+<span id="cb13-9"><a href=""></a></span>
+<span id="cb13-10"><a href=""></a><span class="co"># Fit inhomogeneous Poisson with covariates</span></span>
+<span id="cb13-11"><a href=""></a><span class="co"># Create spatial covariates</span></span>
+<span id="cb13-12"><a href=""></a>elevation_im <span class="ot">&lt;-</span> <span class="fu">as.im</span>(elevation_raster)</span>
+<span id="cb13-13"><a href=""></a></span>
+<span id="cb13-14"><a href=""></a><span class="co"># Fit model</span></span>
+<span id="cb13-15"><a href=""></a>fit_pois <span class="ot">&lt;-</span> <span class="fu">ppm</span>(pp <span class="sc">~</span> elevation <span class="sc">+</span> <span class="fu">I</span>(elevation<span class="sc">^</span><span class="dv">2</span>),</span>
+<span id="cb13-16"><a href=""></a>                <span class="at">covariates =</span> <span class="fu">list</span>(<span class="at">elevation =</span> elevation_im))</span>
+<span id="cb13-17"><a href=""></a></span>
+<span id="cb13-18"><a href=""></a><span class="co"># Fit log-Gaussian Cox process</span></span>
+<span id="cb13-19"><a href=""></a>fit_lgcp <span class="ot">&lt;-</span> <span class="fu">kppm</span>(pp <span class="sc">~</span> elevation,</span>
+<span id="cb13-20"><a href=""></a>                 <span class="at">clusters =</span> <span class="st">"LGCP"</span>,</span>
+<span id="cb13-21"><a href=""></a>                 <span class="at">covariates =</span> <span class="fu">list</span>(<span class="at">elevation =</span> elevation_im))</span>
+<span id="cb13-22"><a href=""></a></span>
+<span id="cb13-23"><a href=""></a><span class="co"># Compare models</span></span>
+<span id="cb13-24"><a href=""></a><span class="fu">AIC</span>(fit_pois)</span>
+<span id="cb13-25"><a href=""></a><span class="fu">AIC</span>(fit_lgcp)</span>
+<span id="cb13-26"><a href=""></a></span>
+<span id="cb13-27"><a href=""></a><span class="co"># Predict intensity</span></span>
+<span id="cb13-28"><a href=""></a>pred_intensity <span class="ot">&lt;-</span> <span class="fu">predict</span>(fit_lgcp)</span>
+<span id="cb13-29"><a href=""></a><span class="fu">plot</span>(pred_intensity)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="point-pattern-r-example-with-inlabru" class="slide level2">
+<h2>Point Pattern: R Example with inlabru</h2>
+<div class="sourceCode" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href=""></a><span class="fu">library</span>(inlabru)</span>
+<span id="cb14-2"><a href=""></a><span class="fu">library</span>(INLA)</span>
+<span id="cb14-3"><a href=""></a><span class="fu">library</span>(sp)</span>
+<span id="cb14-4"><a href=""></a></span>
+<span id="cb14-5"><a href=""></a><span class="co"># Prepare data</span></span>
+<span id="cb14-6"><a href=""></a>points <span class="ot">&lt;-</span> <span class="fu">SpatialPoints</span>(<span class="fu">cbind</span>(trees<span class="sc">$</span>x, trees<span class="sc">$</span>y))</span>
+<span id="cb14-7"><a href=""></a>boundary <span class="ot">&lt;-</span> <span class="fu">SpatialPolygons</span>(<span class="fu">list</span>(<span class="fu">Polygons</span>(<span class="fu">list</span>(<span class="fu">Polygon</span>(</span>
+<span id="cb14-8"><a href=""></a>  <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">0</span>, <span class="dv">100</span>,<span class="dv">0</span>, <span class="dv">100</span>,<span class="dv">100</span>, <span class="dv">0</span>,<span class="dv">100</span>, <span class="dv">0</span>,<span class="dv">0</span>), <span class="at">ncol=</span><span class="dv">2</span>, <span class="at">byrow=</span><span class="cn">TRUE</span>)</span>
+<span id="cb14-9"><a href=""></a>)), <span class="st">"boundary"</span>)))</span>
+<span id="cb14-10"><a href=""></a></span>
+<span id="cb14-11"><a href=""></a><span class="co"># Create mesh</span></span>
+<span id="cb14-12"><a href=""></a>mesh <span class="ot">&lt;-</span> <span class="fu">inla.mesh.2d</span>(</span>
+<span id="cb14-13"><a href=""></a>  <span class="at">boundary =</span> boundary,</span>
+<span id="cb14-14"><a href=""></a>  <span class="at">max.edge =</span> <span class="fu">c</span>(<span class="dv">5</span>, <span class="dv">10</span>),</span>
+<span id="cb14-15"><a href=""></a>  <span class="at">cutoff =</span> <span class="dv">2</span></span>
+<span id="cb14-16"><a href=""></a>)</span>
+<span id="cb14-17"><a href=""></a></span>
+<span id="cb14-18"><a href=""></a><span class="co"># Define LGCP model with covariates</span></span>
+<span id="cb14-19"><a href=""></a>cmp <span class="ot">&lt;-</span> coordinates <span class="sc">~</span> </span>
+<span id="cb14-20"><a href=""></a>  <span class="fu">Intercept</span>(<span class="dv">1</span>) <span class="sc">+</span> </span>
+<span id="cb14-21"><a href=""></a>  <span class="fu">elevation</span>(elevation_data, <span class="at">model =</span> <span class="st">"linear"</span>) <span class="sc">+</span></span>
+<span id="cb14-22"><a href=""></a>  <span class="fu">spatial</span>(coordinates, </span>
+<span id="cb14-23"><a href=""></a>          <span class="at">model =</span> <span class="fu">inla.spde2.matern</span>(mesh))</span>
+<span id="cb14-24"><a href=""></a></span>
+<span id="cb14-25"><a href=""></a><span class="co"># Fit model</span></span>
+<span id="cb14-26"><a href=""></a>fit <span class="ot">&lt;-</span> <span class="fu">lgcp</span>(</span>
+<span id="cb14-27"><a href=""></a>  cmp,</span>
+<span id="cb14-28"><a href=""></a>  <span class="at">data =</span> points,</span>
+<span id="cb14-29"><a href=""></a>  <span class="at">domain =</span> <span class="fu">list</span>(<span class="at">coordinates =</span> mesh),</span>
+<span id="cb14-30"><a href=""></a>  <span class="at">options =</span> <span class="fu">list</span>(<span class="at">control.inla =</span> <span class="fu">list</span>(<span class="at">int.strategy =</span> <span class="st">"eb"</span>))</span>
+<span id="cb14-31"><a href=""></a>)</span>
+<span id="cb14-32"><a href=""></a></span>
+<span id="cb14-33"><a href=""></a><span class="co"># Predict intensity surface</span></span>
+<span id="cb14-34"><a href=""></a>pred_coords <span class="ot">&lt;-</span> <span class="fu">expand.grid</span>(</span>
+<span id="cb14-35"><a href=""></a>  <span class="at">x =</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">100</span>, <span class="at">length =</span> <span class="dv">100</span>),</span>
+<span id="cb14-36"><a href=""></a>  <span class="at">y =</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">100</span>, <span class="at">length =</span> <span class="dv">100</span>)</span>
+<span id="cb14-37"><a href=""></a>)</span>
+<span id="cb14-38"><a href=""></a></span>
+<span id="cb14-39"><a href=""></a>predictions <span class="ot">&lt;-</span> <span class="fu">predict</span>(</span>
+<span id="cb14-40"><a href=""></a>  fit,</span>
+<span id="cb14-41"><a href=""></a>  pred_coords,</span>
+<span id="cb14-42"><a href=""></a>  <span class="sc">~</span> <span class="fu">exp</span>(Intercept <span class="sc">+</span> elevation <span class="sc">+</span> spatial)</span>
+<span id="cb14-43"><a href=""></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section class="slide level2">
+
+</section></section>
+<section>
+<section id="movement-trajectory-data" class="title-slide slide level1 center">
+<h1>Movement / Trajectory Data</h1>
+<p><em>GPS tracks, telemetry, and animal paths</em></p>
+</section>
+<section id="what-is-movement-data" class="slide level2">
+<h2>What is Movement Data?</h2>
+<p><strong>Definition:</strong> Locations of individuals tracked through time, creating paths or trajectories.</p>
+<p><strong>Ecological Examples:</strong></p>
+<ul>
+<li>GPS collars on mammals</li>
+<li>Bird migration tracks</li>
+<li>Fish acoustic telemetry</li>
+<li>Insect flight paths</li>
+<li>Marine turtle tracking</li>
+</ul>
+<p><strong>Key characteristic:</strong> Data have <strong>temporal</strong> and <strong>spatial</strong> structure; autocorrelation in both dimensions.</p>
+</section>
+<section id="movement-data-visual-example" class="slide level2">
+<h2>Movement Data: Visual Example</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Animal_track_-_GPS_collar.svg/500px-Animal_track_-_GPS_collar.svg.png"></p>
+<figcaption>Animal movement track</figcaption>
+</figure>
+</div>
+<p><strong>Typical data structure:</strong></p>
+<ul>
+<li>Individual ID</li>
+<li>Timestamp</li>
+<li>Longitude, Latitude</li>
+<li>Environmental covariates</li>
+<li>Behavioral state (sometimes)</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Key Questions</strong></p>
+</div>
+<div class="callout-content">
+<ul>
+<li>What drives movement decisions?</li>
+<li>How do animals select habitat?</li>
+<li>Can we identify behavioral states?</li>
+<li>What’s the home range?</li>
+<li>How do individuals differ?</li>
+</ul>
+</div>
+</div>
+</div>
+</div></div>
+</section>
+<section id="movement-data-unique-challenges" class="slide level2">
+<h2>Movement Data: Unique Challenges</h2>
+<p><strong>Multiple sources of autocorrelation:</strong></p>
+<ol type="1">
+<li><strong>Temporal:</strong> Location at <span class="math inline">\(t\)</span> depends on <span class="math inline">\(t-1\)</span></li>
+<li><strong>Spatial:</strong> Nearby environmental conditions are similar</li>
+<li><strong>Individual:</strong> Each animal has consistent behavior</li>
+</ol>
+<p><strong>Observation models:</strong></p>
+<ul>
+<li>GPS error (location uncertainty)</li>
+<li>Irregular sampling intervals</li>
+<li>Missing data</li>
+</ul>
+<div class="callout callout-important callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Important</strong></p>
+</div>
+<div class="callout-content">
+<p>Standard spatial models don’t account for movement process!</p>
+</div>
+</div>
+</div>
+</section>
+<section id="movement-data-method-1---step-selection-functions" class="slide level2">
+<h2>Movement Data: Method 1 - Step Selection Functions</h2>
+<p><strong>Idea:</strong> Model animal’s choice among available steps at each time point</p>
+<p><span class="math display">\[w(\mathbf{s}_t | \mathbf{s}_{t-1}) \propto \exp(\beta_1 x_1(\mathbf{s}_t) + ... + \beta_p x_p(\mathbf{s}_t))\]</span></p>
+<p><strong>Steps:</strong></p>
+<ol type="1">
+<li>For each observed step, generate “available” alternative steps</li>
+<li>Compare chosen vs available using conditional logistic regression</li>
+<li>Covariates describe step characteristics (length, angle, habitat)</li>
+</ol>
+<p><strong>Interpretation:</strong> Habitat selection during movement</p>
+</section>
+<section id="step-selection-functions-details" class="slide level2">
+<h2>Step Selection Functions: Details</h2>
+<p><strong>Used step:</strong> What the animal actually did <span class="math display">\[\text{step length}, \quad \text{turn angle}, \quad \text{end habitat}\]</span></p>
+<p><strong>Available steps:</strong> What it could have done</p>
+<ul>
+<li>Sample from movement kernel (e.g., gamma distribution for length)</li>
+<li>Usually 10-100 available steps per used step</li>
+</ul>
+<p><strong>Model:</strong></p>
+<p><span class="math display">\[\text{Pr(step chosen)} = \frac{\exp(\mathbf{X}\boldsymbol{\beta})}{\sum_{j=1}^n \exp(\mathbf{X}_j\boldsymbol{\beta})}\]</span></p>
+</section>
+<section id="ssf-r-example" class="slide level2">
+<h2>SSF: R Example</h2>
+<div class="sourceCode" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href=""></a><span class="fu">library</span>(amt)</span>
+<span id="cb15-2"><a href=""></a><span class="fu">library</span>(survival)</span>
+<span id="cb15-3"><a href=""></a></span>
+<span id="cb15-4"><a href=""></a><span class="co"># Prepare tracking data</span></span>
+<span id="cb15-5"><a href=""></a>track <span class="ot">&lt;-</span> <span class="fu">make_track</span>(gps_data, </span>
+<span id="cb15-6"><a href=""></a>                    <span class="at">.x =</span> x, <span class="at">.y =</span> y, <span class="at">.t =</span> timestamp,</span>
+<span id="cb15-7"><a href=""></a>                    <span class="at">id =</span> animal_id, <span class="at">crs =</span> <span class="dv">32612</span>)</span>
+<span id="cb15-8"><a href=""></a></span>
+<span id="cb15-9"><a href=""></a><span class="co"># Create steps</span></span>
+<span id="cb15-10"><a href=""></a>steps <span class="ot">&lt;-</span> track <span class="sc">%&gt;%</span> </span>
+<span id="cb15-11"><a href=""></a>  <span class="fu">steps_by_burst</span>()</span>
+<span id="cb15-12"><a href=""></a></span>
+<span id="cb15-13"><a href=""></a><span class="co"># Generate random available steps (20 per used)</span></span>
+<span id="cb15-14"><a href=""></a>rand_steps <span class="ot">&lt;-</span> steps <span class="sc">%&gt;%</span></span>
+<span id="cb15-15"><a href=""></a>  <span class="fu">random_steps</span>(<span class="at">n_control =</span> <span class="dv">20</span>)</span>
+<span id="cb15-16"><a href=""></a></span>
+<span id="cb15-17"><a href=""></a><span class="co"># Extract habitat at end of each step</span></span>
+<span id="cb15-18"><a href=""></a>rand_steps <span class="ot">&lt;-</span> rand_steps <span class="sc">%&gt;%</span></span>
+<span id="cb15-19"><a href=""></a>  <span class="fu">extract_covariates</span>(habitat_raster) <span class="sc">%&gt;%</span></span>
+<span id="cb15-20"><a href=""></a>  <span class="fu">extract_covariates</span>(elevation_raster)</span>
+<span id="cb15-21"><a href=""></a></span>
+<span id="cb15-22"><a href=""></a><span class="co"># Fit conditional logistic regression (step selection function)</span></span>
+<span id="cb15-23"><a href=""></a>ssf_model <span class="ot">&lt;-</span> rand_steps <span class="sc">%&gt;%</span></span>
+<span id="cb15-24"><a href=""></a>  <span class="fu">fit_clogit</span>(case_ <span class="sc">~</span> </span>
+<span id="cb15-25"><a href=""></a>               forest <span class="sc">+</span> </span>
+<span id="cb15-26"><a href=""></a>               elevation <span class="sc">+</span></span>
+<span id="cb15-27"><a href=""></a>               <span class="fu">I</span>(elevation<span class="sc">^</span><span class="dv">2</span>) <span class="sc">+</span></span>
+<span id="cb15-28"><a href=""></a>               sl_ <span class="sc">+</span> log_sl_ <span class="sc">+</span>  <span class="co"># Step length terms</span></span>
+<span id="cb15-29"><a href=""></a>               cos_ta_ <span class="sc">+</span>         <span class="co"># Turn angle</span></span>
+<span id="cb15-30"><a href=""></a>               <span class="fu">strata</span>(step_id_))</span>
+<span id="cb15-31"><a href=""></a></span>
+<span id="cb15-32"><a href=""></a><span class="fu">summary</span>(ssf_model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="movement-data-method-2---state-space-models" class="slide level2">
+<h2>Movement Data: Method 2 - State-Space Models</h2>
+<p><strong>Two-level model:</strong></p>
+<ol type="1">
+<li><p><strong>Movement process</strong> (latent true locations): <span class="math display">\[\mathbf{s}_t = \mathbf{s}_{t-1} + \mathbf{v}_t\]</span></p></li>
+<li><p><strong>Observation process</strong> (GPS measurements): <span class="math display">\[\mathbf{y}_t = \mathbf{s}_t + \boldsymbol{\epsilon}_t\]</span></p></li>
+</ol>
+<p><strong>Advantages:</strong></p>
+<ul>
+<li>Accounts for GPS error</li>
+<li>Handles irregular sampling</li>
+<li>Can incorporate behavior</li>
+<li>Smooths erratic paths</li>
+</ul>
+</section>
+<section id="state-space-models-behavioral-states" class="slide level2">
+<h2>State-Space Models: Behavioral States</h2>
+<p><strong>Hidden Markov Models (HMM):</strong> Switch between behavioral states</p>
+<p><strong>Example states:</strong></p>
+<ul>
+<li>Encamped (resting, feeding)</li>
+<li>Exploratory (traveling, migrating)</li>
+</ul>
+<p><strong>Each state has different movement parameters:</strong></p>
+<ul>
+<li>State 1: Short steps, high turning</li>
+<li>State 2: Long steps, low turning</li>
+</ul>
+<p><span class="math display">\[\begin{bmatrix}
+p_{11} &amp; p_{12} \\
+p_{21} &amp; p_{22}
+\end{bmatrix} \leftarrow \text{Transition matrix}\]</span></p>
+</section>
+<section id="state-space-model-r-example" class="slide level2">
+<h2>State-Space Model: R Example</h2>
+<div class="sourceCode" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href=""></a><span class="fu">library</span>(momentuHMM)</span>
+<span id="cb16-2"><a href=""></a></span>
+<span id="cb16-3"><a href=""></a><span class="co"># Prepare data</span></span>
+<span id="cb16-4"><a href=""></a>data <span class="ot">&lt;-</span> <span class="fu">prepData</span>(gps_data,</span>
+<span id="cb16-5"><a href=""></a>                 <span class="at">type =</span> <span class="st">"UTM"</span>,</span>
+<span id="cb16-6"><a href=""></a>                 <span class="at">coordNames =</span> <span class="fu">c</span>(<span class="st">"x"</span>, <span class="st">"y"</span>))</span>
+<span id="cb16-7"><a href=""></a></span>
+<span id="cb16-8"><a href=""></a><span class="co"># Define 2-state model parameters</span></span>
+<span id="cb16-9"><a href=""></a><span class="co"># State 1: encamped, State 2: traveling</span></span>
+<span id="cb16-10"><a href=""></a></span>
+<span id="cb16-11"><a href=""></a><span class="co"># Step length distributions (Gamma)</span></span>
+<span id="cb16-12"><a href=""></a>stepPar0 <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
+<span id="cb16-13"><a href=""></a>  <span class="at">mean_state1 =</span> <span class="dv">100</span>,   <span class="co"># Short steps when encamped</span></span>
+<span id="cb16-14"><a href=""></a>  <span class="at">mean_state2 =</span> <span class="dv">1000</span>,  <span class="co"># Long steps when traveling</span></span>
+<span id="cb16-15"><a href=""></a>  <span class="at">sd_state1 =</span> <span class="dv">50</span>,</span>
+<span id="cb16-16"><a href=""></a>  <span class="at">sd_state2 =</span> <span class="dv">500</span></span>
+<span id="cb16-17"><a href=""></a>)</span>
+<span id="cb16-18"><a href=""></a></span>
+<span id="cb16-19"><a href=""></a><span class="co"># Turning angle distributions (von Mises)</span></span>
+<span id="cb16-20"><a href=""></a>anglePar0 <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
+<span id="cb16-21"><a href=""></a>  <span class="at">mean_state1 =</span> <span class="dv">0</span>,     <span class="co"># Random turning</span></span>
+<span id="cb16-22"><a href=""></a>  <span class="at">mean_state2 =</span> <span class="dv">0</span>,     <span class="co"># Directional</span></span>
+<span id="cb16-23"><a href=""></a>  <span class="at">concentration_state1 =</span> <span class="fl">0.1</span>,  <span class="co"># Low concentration</span></span>
+<span id="cb16-24"><a href=""></a>  <span class="at">concentration_state2 =</span> <span class="fl">0.8</span>   <span class="co"># High concentration</span></span>
+<span id="cb16-25"><a href=""></a>)</span>
+<span id="cb16-26"><a href=""></a></span>
+<span id="cb16-27"><a href=""></a><span class="co"># Fit HMM</span></span>
+<span id="cb16-28"><a href=""></a>hmm_fit <span class="ot">&lt;-</span> <span class="fu">fitHMM</span>(</span>
+<span id="cb16-29"><a href=""></a>  <span class="at">data =</span> data,</span>
+<span id="cb16-30"><a href=""></a>  <span class="at">nbStates =</span> <span class="dv">2</span>,</span>
+<span id="cb16-31"><a href=""></a>  <span class="at">dist =</span> <span class="fu">list</span>(<span class="at">step =</span> <span class="st">"gamma"</span>, <span class="at">angle =</span> <span class="st">"vm"</span>),</span>
+<span id="cb16-32"><a href=""></a>  <span class="at">Par0 =</span> <span class="fu">list</span>(<span class="at">step =</span> stepPar0, <span class="at">angle =</span> anglePar0)</span>
+<span id="cb16-33"><a href=""></a>)</span>
+<span id="cb16-34"><a href=""></a></span>
+<span id="cb16-35"><a href=""></a><span class="co"># Decode states (Viterbi algorithm)</span></span>
+<span id="cb16-36"><a href=""></a>states <span class="ot">&lt;-</span> <span class="fu">viterbi</span>(hmm_fit)</span>
+<span id="cb16-37"><a href=""></a></span>
+<span id="cb16-38"><a href=""></a><span class="co"># Plot results</span></span>
+<span id="cb16-39"><a href=""></a><span class="fu">plot</span>(hmm_fit)</span>
+<span id="cb16-40"><a href=""></a><span class="fu">plotStates</span>(hmm_fit)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="movement-data-method-3---continuous-time-models" class="slide level2">
+<h2>Movement Data: Method 3 - Continuous-Time Models</h2>
+<p><strong>Problem:</strong> Discrete-time models assume regular intervals</p>
+<p><strong>Solution:</strong> Continuous-time movement models handle irregular sampling</p>
+<p><strong>Common approach:</strong> Ornstein-Uhlenbeck process</p>
+<p><span class="math display">\[d\mathbf{s}_t = -\mathbf{B}(\mathbf{s}_t - \boldsymbol{\mu})dt + \boldsymbol{\Sigma}^{1/2}d\mathbf{W}_t\]</span></p>
+<p><strong>Interpretation:</strong></p>
+<ul>
+<li><span class="math inline">\(\boldsymbol{\mu}\)</span> = “home range center”</li>
+<li><span class="math inline">\(\mathbf{B}\)</span> = rate of return to center</li>
+<li><span class="math inline">\(\boldsymbol{\Sigma}\)</span> = movement variability</li>
+</ul>
+</section>
+<section id="continuous-time-ctmm-package" class="slide level2">
+<h2>Continuous-Time: ctmm Package</h2>
+<div class="sourceCode" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href=""></a><span class="fu">library</span>(ctmm)</span>
+<span id="cb17-2"><a href=""></a></span>
+<span id="cb17-3"><a href=""></a><span class="co"># Prepare telemetry object</span></span>
+<span id="cb17-4"><a href=""></a>telemetry_obj <span class="ot">&lt;-</span> <span class="fu">as.telemetry</span>(gps_data)</span>
+<span id="cb17-5"><a href=""></a></span>
+<span id="cb17-6"><a href=""></a><span class="co"># Fit variogram (explore temporal autocorrelation)</span></span>
+<span id="cb17-7"><a href=""></a>vario <span class="ot">&lt;-</span> <span class="fu">variogram</span>(telemetry_obj)</span>
+<span id="cb17-8"><a href=""></a><span class="fu">plot</span>(vario)</span>
+<span id="cb17-9"><a href=""></a></span>
+<span id="cb17-10"><a href=""></a><span class="co"># Guess movement model parameters</span></span>
+<span id="cb17-11"><a href=""></a>guess <span class="ot">&lt;-</span> <span class="fu">ctmm.guess</span>(telemetry_obj, </span>
+<span id="cb17-12"><a href=""></a>                    <span class="at">interactive =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb17-13"><a href=""></a></span>
+<span id="cb17-14"><a href=""></a><span class="co"># Fit Ornstein-Uhlenbeck model</span></span>
+<span id="cb17-15"><a href=""></a>fit_ou <span class="ot">&lt;-</span> <span class="fu">ctmm.fit</span>(telemetry_obj, guess)</span>
+<span id="cb17-16"><a href=""></a></span>
+<span id="cb17-17"><a href=""></a><span class="co"># Calculate home range</span></span>
+<span id="cb17-18"><a href=""></a>home_range <span class="ot">&lt;-</span> <span class="fu">akde</span>(telemetry_obj, fit_ou)</span>
+<span id="cb17-19"><a href=""></a><span class="fu">plot</span>(home_range)</span>
+<span id="cb17-20"><a href=""></a></span>
+<span id="cb17-21"><a href=""></a><span class="co"># Summary</span></span>
+<span id="cb17-22"><a href=""></a><span class="fu">summary</span>(fit_ou)</span>
+<span id="cb17-23"><a href=""></a><span class="fu">summary</span>(home_range)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="movement-data-method-4---integrated-models" class="slide level2">
+<h2>Movement Data: Method 4 - Integrated Models</h2>
+<p><strong>Combine step selection with state-space models</strong></p>
+<p><strong>Advantages:</strong></p>
+<ul>
+<li>SSF for habitat selection</li>
+<li>State-space for behavioral states and GPS error</li>
+<li>Best of both worlds!</li>
+</ul>
+<p><strong>Implementation:</strong></p>
+<ul>
+<li><code>bsam</code> package (Bayesian state-space models)</li>
+<li>Custom JAGS/Stan models</li>
+<li><code>crawl</code> package for state-space + habitat</li>
+</ul>
+</section>
+<section id="movement-data-comparison" class="slide level2">
+<h2>Movement Data: Comparison</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 10%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 14%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Method</th>
+<th>Temporal Structure</th>
+<th>Habitat Selection</th>
+<th>Behavioral States</th>
+<th>GPS Error</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>SSF</td>
+<td>Discrete steps</td>
+<td>Yes</td>
+<td>No</td>
+<td>No</td>
+</tr>
+<tr class="even">
+<td>HMM</td>
+<td>Discrete time</td>
+<td>Possible</td>
+<td>Yes</td>
+<td>No</td>
+</tr>
+<tr class="odd">
+<td>State-Space</td>
+<td>Continuous</td>
+<td>Limited</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr class="even">
+<td>Integrated</td>
+<td>Both</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Start Simple</strong></p>
+</div>
+<div class="callout-content">
+<p>Begin with SSF for habitat selection, add state-space if GPS error or behavioral switching is important.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+</section></section>
+<section>
+<section id="integrating-across-data-types" class="title-slide slide level1 center">
+<h1>Integrating Across Data Types</h1>
+<p><em>Real ecological studies often involve multiple spatial data types</em></p>
+</section>
+<section id="multi-scale-multi-type-integration" class="slide level2">
+<h2>Multi-Scale / Multi-Type Integration</h2>
+<p><strong>Common scenarios:</strong></p>
+<ol type="1">
+<li><strong>Point + Areal:</strong> Bird surveys (points) + land cover (areal)</li>
+<li><strong>Point + Movement:</strong> Home range (movement) + resource selection (points)</li>
+<li><strong>Point Pattern + Covariates:</strong> Tree locations + soil maps</li>
+<li><strong>Movement + Remote Sensing:</strong> Tracks + NDVI time series</li>
+</ol>
+<div class="callout callout-important callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>The Challenge</strong></p>
+</div>
+<div class="callout-content">
+<p>Different data types have different spatial support, resolution, and uncertainty.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="integration-approach-1-change-of-support" class="slide level2">
+<h2>Integration Approach 1: Change of Support</h2>
+<p><strong>Problem:</strong> Data at different spatial scales</p>
+<p><strong>Example:</strong> - Response: Point-level species occurrence - Covariates: Areal land cover by county</p>
+<p><strong>Solutions:</strong></p>
+<ol type="1">
+<li><strong>Aggregate points to areal units</strong> (lose resolution)</li>
+<li><strong>Downscale areal to points</strong> (assumes homogeneity)</li>
+<li><strong>Model explicitly with geostatistical fusion</strong> (best but complex)</li>
+</ol>
+</section>
+<section id="integration-approach-2-joint-likelihood-models" class="slide level2">
+<h2>Integration Approach 2: Joint Likelihood Models</h2>
+<p><strong>Idea:</strong> Model all data types simultaneously with shared parameters</p>
+<p><strong>Example:</strong> Integrated Species Distribution Model (ISDM)</p>
+<ul>
+<li>Data source 1: Structured surveys (presence-absence)</li>
+<li>Data source 2: Opportunistic sightings (presence-only)<br>
+</li>
+<li>Data source 3: Telemetry tracks (habitat use)</li>
+</ul>
+<p><strong>Shared parameter:</strong> True intensity/abundance surface <span class="math inline">\(\lambda(\mathbf{s})\)</span></p>
+<p><strong>Implementation:</strong> <code>PointedSDMs</code> package in R</p>
+</section>
+<section id="integration-approach-3-spatial-misalignment" class="slide level2">
+<h2>Integration Approach 3: Spatial Misalignment</h2>
+<p><strong>When spatial supports don’t match:</strong></p>
+<p><span class="math display">\[\begin{aligned}
+\text{Point data:} \quad &amp; Y_p(\mathbf{s}) = f(\lambda(\mathbf{s})) \\
+\text{Areal data:} \quad &amp; Y_A(R) = g\left(\int_R \lambda(\mathbf{s})d\mathbf{s}\right)
+\end{aligned}\]</span></p>
+<p><strong>Model latent process <span class="math inline">\(\lambda(\mathbf{s})\)</span> and link to both:</strong></p>
+<ul>
+<li>Point process observation model</li>
+<li>Aggregation to areal support</li>
+</ul>
+<p><strong>Package:</strong> <code>areal</code> in R for interpolation</p>
+</section>
+<section id="practical-integration-example" class="slide level2">
+<h2>Practical Integration Example</h2>
+<p><strong>Scenario:</strong> Modeling lynx habitat selection</p>
+<p><strong>Data sources:</strong></p>
+<ol type="1">
+<li>GPS telemetry (movement data)</li>
+<li>Camera trap detections (point pattern)</li>
+<li>Forest cover by grid cell (areal)</li>
+<li>Prey abundance point surveys (point-referenced)</li>
+</ol>
+<p><strong>Approach:</strong></p>
+<ol type="1">
+<li>Use SSF for fine-scale habitat selection from GPS</li>
+<li>Use LGCP for broad-scale intensity from cameras</li>
+<li>Extract covariates from areal forest data</li>
+<li>Create prey abundance surface from surveys (kriging/SPDE)</li>
+<li>Link all through shared spatial random effect</li>
+</ol>
+</section>
+<section class="slide level2">
+
+</section></section>
+<section>
+<section id="model-selection-and-validation" class="title-slide slide level1 center">
+<h1>Model Selection and Validation</h1>
+<p><em>How do we choose and evaluate spatial models?</em></p>
+</section>
+<section id="validation-for-spatial-data" class="slide level2">
+<h2>Validation for Spatial Data</h2>
+<div class="callout callout-warning callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Critical Issue</strong></p>
+</div>
+<div class="callout-content">
+<p>Standard cross-validation is <strong>wrong</strong> for spatial data!</p>
+<p>Nearby points are autocorrelated, so “test” data are not independent of “training” data.</p>
+</div>
+</div>
+</div>
+<p><strong>Solution:</strong> Spatial cross-validation</p>
+<ul>
+<li><strong>Spatial blocking:</strong> Leave out spatial blocks</li>
+<li><strong>Leave-location-out:</strong> Remove all data near test points</li>
+<li><strong>Clustered CV:</strong> Remove spatial clusters</li>
+</ul>
+</section>
+<section id="spatial-cross-validation-methods" class="slide level2">
+<h2>Spatial Cross-Validation Methods</h2>
+<p><strong>1. Spatial blocking:</strong></p>
+<div class="sourceCode" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href=""></a><span class="fu">library</span>(blockCV)</span>
+<span id="cb18-2"><a href=""></a></span>
+<span id="cb18-3"><a href=""></a><span class="co"># Create spatial blocks</span></span>
+<span id="cb18-4"><a href=""></a>blocks <span class="ot">&lt;-</span> <span class="fu">cv_spatial</span>(</span>
+<span id="cb18-5"><a href=""></a>  <span class="at">x =</span> species_data,</span>
+<span id="cb18-6"><a href=""></a>  <span class="at">column =</span> <span class="st">"presence"</span>,</span>
+<span id="cb18-7"><a href=""></a>  <span class="at">k =</span> <span class="dv">5</span>,              <span class="co"># 5-fold CV</span></span>
+<span id="cb18-8"><a href=""></a>  <span class="at">size =</span> <span class="dv">50000</span>,       <span class="co"># 50km blocks</span></span>
+<span id="cb18-9"><a href=""></a>  <span class="at">selection =</span> <span class="st">"random"</span></span>
+<span id="cb18-10"><a href=""></a>)</span>
+<span id="cb18-11"><a href=""></a></span>
+<span id="cb18-12"><a href=""></a><span class="co"># Use blocks for CV</span></span>
+<span id="cb18-13"><a href=""></a>cv_results <span class="ot">&lt;-</span> <span class="fu">cv_spatial_fold</span>(</span>
+<span id="cb18-14"><a href=""></a>  model, blocks</span>
+<span id="cb18-15"><a href=""></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>2. Leave-region-out:</strong> - Hold out entire regions (e.g., one study site) - Tests spatial transferability</p>
+</section>
+<section id="model-comparison-for-spatial-models" class="slide level2">
+<h2>Model Comparison for Spatial Models</h2>
+<p><strong>Information criteria:</strong></p>
+<ul>
+<li><strong>WAIC</strong> (Widely Applicable IC) - for Bayesian models</li>
+<li><strong>DIC</strong> - Bayesian, but can be problematic for spatial models</li>
+<li><strong>Spatial AIC</strong> - adjusts for effective sample size</li>
+</ul>
+<p><strong>Predictive performance:</strong></p>
+<ul>
+<li>Mean squared prediction error (MSPE)</li>
+<li>Continuous ranked probability score (CRPS)</li>
+<li>Log-likelihood on held-out data</li>
+</ul>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Best Practice</strong></p>
+</div>
+<div class="callout-content">
+<p>Use spatial CV + predictive metrics, not just information criteria.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="diagnosing-spatial-model-fit" class="slide level2">
+<h2>Diagnosing Spatial Model Fit</h2>
+<p><strong>Check residual autocorrelation:</strong></p>
+<ol type="1">
+<li><strong>Moran’s I test</strong></li>
+</ol>
+<div class="sourceCode" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href=""></a><span class="fu">library</span>(spdep)</span>
+<span id="cb19-2"><a href=""></a><span class="fu">moran.test</span>(<span class="fu">residuals</span>(model), <span class="fu">nb2listw</span>(neighbors))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ol start="2" type="1">
+<li><strong>Variogram of residuals</strong></li>
+</ol>
+<div class="sourceCode" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href=""></a><span class="fu">library</span>(gstat)</span>
+<span id="cb20-2"><a href=""></a>v <span class="ot">&lt;-</span> <span class="fu">variogram</span>(residuals <span class="sc">~</span> <span class="dv">1</span>, <span class="at">locations =</span> <span class="sc">~</span>x<span class="sc">+</span>y, <span class="at">data =</span> data)</span>
+<span id="cb20-3"><a href=""></a><span class="fu">plot</span>(v)  <span class="co"># Should be flat if spatial structure captured</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ol start="3" type="1">
+<li><strong>Spatial correlograms</strong></li>
+</ol>
+<div class="callout callout-important callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Important</strong></p>
+</div>
+<div class="callout-content">
+<p>Residuals should show <strong>no</strong> spatial autocorrelation if model is adequate!</p>
+</div>
+</div>
+</div>
+</section>
+<section id="computational-considerations" class="slide level2">
+<h2>Computational Considerations</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Data Type</th>
+<th>Typical n</th>
+<th>Fast Methods</th>
+<th>Slow but Flexible</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Point-referenced</td>
+<td>100-10,000</td>
+<td>Splines (mgcv), SPDE</td>
+<td>Full GP</td>
+</tr>
+<tr class="even">
+<td>Areal</td>
+<td>50-5,000</td>
+<td>CAR (INLA), MEM</td>
+<td>Complex interaction models</td>
+</tr>
+<tr class="odd">
+<td>Point pattern</td>
+<td>100-100,000</td>
+<td>Discretized LGCP</td>
+<td>True LGCP</td>
+</tr>
+<tr class="even">
+<td>Movement</td>
+<td>1,000-100,000</td>
+<td>SSF, HMM</td>
+<td>State-space, continuous-time</td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Modern Trend</strong></p>
+</div>
+<div class="callout-content">
+<p>Approximate methods (INLA, SPDE, low-rank GPs) make complex spatial models feasible for large ecological datasets.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="software-summary" class="slide level2">
+<h2>Software Summary</h2>
+<p><strong>R Packages by data type:</strong></p>
+<p><strong>Point-referenced:</strong> <code>mgcv</code>, <code>INLA</code>, <code>inlabru</code>, <code>gstat</code>, <code>spBayes</code></p>
+<p><strong>Areal:</strong> <code>INLA</code>, <code>CARBayes</code>, <code>spdep</code>, <code>adespatial</code></p>
+<p><strong>Point pattern:</strong> <code>spatstat</code>, <code>inlabru</code>, <code>ppmlasso</code></p>
+<p><strong>Movement:</strong> <code>amt</code>, <code>momentuHMM</code>, <code>ctmm</code>, <code>crawl</code>, <code>adehabitatLT</code></p>
+<p><strong>Multi-purpose:</strong> <code>sf</code>, <code>terra</code>, <code>sp</code> (spatial data structures)</p>
+</section>
+<section id="recommended-workflow" class="slide level2">
+<h2>Recommended Workflow</h2>
+<ol type="1">
+<li><strong>Visualize data</strong> - maps, variograms, spatial correlograms</li>
+<li><strong>Start simple</strong> - non-spatial model, then add space</li>
+<li><strong>Choose method</strong> based on data type and question</li>
+<li><strong>Fit multiple models</strong> - compare approaches</li>
+<li><strong>Validate spatially</strong> - spatial CV or block CV</li>
+<li><strong>Diagnose residuals</strong> - check for remaining spatial structure</li>
+<li><strong>Interpret carefully</strong> - spatial effects ≠ causal mechanisms</li>
+</ol>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Don’t Overfit!</strong></p>
+</div>
+<div class="callout-content">
+<p>More complex ≠ better. Use simplest model that captures spatial structure.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="common-pitfalls" class="slide level2">
+<h2>Common Pitfalls</h2>
+<div class="callout callout-warning callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Watch Out For:</strong></p>
+</div>
+<div class="callout-content">
+<ol type="1">
+<li><strong>Confounding:</strong> Spatial effects absorbing true covariate effects</li>
+<li><strong>Edge effects:</strong> Boundary areas have high uncertainty</li>
+<li><strong>Non-stationarity:</strong> Spatial structure varies across landscape</li>
+<li><strong>Anisotropy:</strong> Spatial correlation depends on direction</li>
+<li><strong>Computational limits:</strong> Be realistic about data size</li>
+<li><strong>Over-smoothing:</strong> Too much spatial structure removes real variation</li>
+<li><strong>Ignoring uncertainty:</strong> Report it! Especially for predictions</li>
+</ol>
+</div>
+</div>
+</div>
+</section>
+<section id="when-to-use-each-data-type-approach" class="slide level2">
+<h2>When to Use Each Data Type Approach</h2>
+<p><strong>Use point-referenced methods when:</strong> - You have lat/lon coordinates from surveys - Want to predict continuous surface - Sample size: 50-10,000 locations</p>
+<p><strong>Use areal methods when:</strong> - Data aggregated to regions/cells - Clear neighborhood structure - Often: count data, rare events</p>
+<p><strong>Use point pattern methods when:</strong> - Locations are the outcome of interest - Want to model spatial intensity - Concern: point-to-point interactions</p>
+<p><strong>Use movement methods when:</strong> - Tracking individuals over time - Interested in habitat selection during movement - Need to account for temporal autocorrelation</p>
+</section>
+<section id="future-directions" class="slide level2">
+<h2>Future Directions</h2>
+<p><strong>Emerging methods:</strong></p>
+<ul>
+<li>Deep learning for spatial prediction</li>
+<li>Spatial conformal inference (uncertainty quantification)</li>
+<li>Multi-resolution models</li>
+<li>Non-stationary spatial processes</li>
+<li>Real-time spatial models (citizen science, camera traps)</li>
+<li>Massive-scale spatial models (&gt;1 million locations)</li>
+</ul>
+<p><strong>Software development:</strong></p>
+<ul>
+<li>Better integration across data types</li>
+<li>User-friendly interfaces for complex models</li>
+<li>Improved computational efficiency</li>
+</ul>
+</section>
+<section id="key-takeaways-1" class="slide level2">
+<h2>Key Takeaways</h2>
+<div class="callout callout-important no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Remember:</strong></p>
+</div>
+<div class="callout-content">
+<ol type="1">
+<li><strong>Data structure determines appropriate methods</strong> - identify your data type first</li>
+<li><strong>Start simple, add complexity as needed</strong> - parsimony matters</li>
+<li><strong>Validate spatially</strong> - standard CV fails with spatial data</li>
+<li><strong>Computational feasibility</strong> - consider dataset size and resources</li>
+<li><strong>Interpretation</strong> - spatial structure helps prediction but may obscure causation</li>
+<li><strong>Residual diagnostics</strong> - always check for remaining spatial autocorrelation</li>
+</ol>
+</div>
+</div>
+</div>
+</section>
+<section id="resources" class="slide level2">
+<h2>Resources</h2>
+<p><strong>Books:</strong></p>
+<ul>
+<li>Banerjee et al.&nbsp;(2014) <em>Hierarchical Modeling and Analysis for Spatial Data</em></li>
+<li>Cressie &amp; Wikle (2011) <em>Statistics for Spatio-Temporal Data</em></li>
+<li>Illian et al.&nbsp;(2008) <em>Statistical Analysis and Modelling of Spatial Point Patterns</em></li>
+</ul>
+<p><strong>Papers:</strong></p>
+<ul>
+<li>Lindgren et al.&nbsp;(2011) “An explicit link between Gaussian fields and Gaussian Markov random fields” <em>JRSS-B</em></li>
+<li>Hooten et al.&nbsp;(2017) “Animal Movement Models for Spatial Ecology” <em>Wiley</em></li>
+</ul>
+<p><strong>Online:</strong></p>
+<ul>
+<li><a href="https://www.r-inla.org/">R-INLA documentation</a></li>
+<li><a href="https://noamross.github.io/gams-in-r-course/">mgcv course</a></li>
+<li><a href="https://r-spatial.org/book/">Spatial Data Science book</a></li>
+</ul>
+</section>
+<section id="questions" class="slide level2">
+<h2>Questions?</h2>
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Contact &amp; Discussion</strong></p>
+</div>
+<div class="callout-content">
+<ul>
+<li>Email: your.email@institution.edu</li>
+<li>Website: www.yourwebsite.com</li>
+<li>GitHub: <span class="citation" data-cites="yourusername">@yourusername</span></li>
+</ul>
+<p><strong>What spatial data challenges are you facing?</strong></p>
+<p>Let’s discuss specific applications to your research!</p>
+</div>
+</div>
+</div>
+<p><strong>Thank you!</strong></p>
+
+</section></section>
+    </div>
+  <div class="quarto-auto-generated-content" style="display: none;">
+<p><img src="https://raw.githubusercontent.com/quarto-dev/quarto-web/main/favicon.png" class="slide-logo"></p>
+<div class="footer footer-default">
+<p>Spatial Ecology Workshop</p>
+</div>
+</div></div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="spatial_ecology_data_centric_files/libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="spatial_ecology_data_centric_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="spatial_ecology_data_centric_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="spatial_ecology_data_centric_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="spatial_ecology_data_centric_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="spatial_ecology_data_centric_files/libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
+  <script src="spatial_ecology_data_centric_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="spatial_ecology_data_centric_files/libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="spatial_ecology_data_centric_files/libs/revealjs/plugin/search/search.js"></script>
+  <script src="spatial_ecology_data_centric_files/libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="spatial_ecology_data_centric_files/libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': true,
+'previewLinksAuto': true,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'jumpToSlide': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"8\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'chalkboard': {"buttons":true},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: 'c/t',
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'none',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1600,
+
+        height: 900,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 5.0e-2,
+
+        // Bounds for smallest/largest possible scale to apply to content
+        minScale: 0.2,
+
+        maxScale: 2,
+
+        math: {
+          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, RevealChalkboard, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    <script id="quarto-html-after-body" type="application/javascript">
+      window.document.addEventListener("DOMContentLoaded", function (event) {
+        const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+        tabsets.forEach(function(tabset) {
+          const tabby = new Tabby('#' + tabset.id);
+        });
+        const isCodeAnnotation = (el) => {
+          for (const clz of el.classList) {
+            if (clz.startsWith('code-annotation-')) {                     
+              return true;
+            }
+          }
+          return false;
+        }
+        const onCopySuccess = function(e) {
+          // button target
+          const button = e.trigger;
+          // don't keep focus
+          button.blur();
+          // flash "checked"
+          button.classList.add('code-copy-button-checked');
+          var currentTitle = button.getAttribute("title");
+          button.setAttribute("title", "Copied!");
+          let tooltip;
+          if (window.bootstrap) {
+            button.setAttribute("data-bs-toggle", "tooltip");
+            button.setAttribute("data-bs-placement", "left");
+            button.setAttribute("data-bs-title", "Copied!");
+            tooltip = new bootstrap.Tooltip(button, 
+              { trigger: "manual", 
+                customClass: "code-copy-button-tooltip",
+                offset: [0, -8]});
+            tooltip.show();    
+          }
+          setTimeout(function() {
+            if (tooltip) {
+              tooltip.hide();
+              button.removeAttribute("data-bs-title");
+              button.removeAttribute("data-bs-toggle");
+              button.removeAttribute("data-bs-placement");
+            }
+            button.setAttribute("title", currentTitle);
+            button.classList.remove('code-copy-button-checked');
+          }, 1000);
+          // clear code selection
+          e.clearSelection();
+        }
+        const getTextToCopy = function(trigger) {
+            const codeEl = trigger.previousElementSibling.cloneNode(true);
+            for (const childEl of codeEl.children) {
+              if (isCodeAnnotation(childEl)) {
+                childEl.remove();
+              }
+            }
+            return codeEl.innerText;
+        }
+        const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+          text: getTextToCopy
+        });
+        clipboard.on('success', onCopySuccess);
+        if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+          const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+            text: getTextToCopy,
+            container: window.document.getElementById('quarto-embedded-source-code-modal')
+          });
+          clipboardModal.on('success', onCopySuccess);
+        }
+          var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+          var mailtoRegex = new RegExp(/^mailto:/);
+            var filterRegex = new RegExp('/' + window.location.host + '/');
+          var isInternal = (href) => {
+              return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+          }
+          // Inspect non-navigation links and adorn them if external
+         var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+          for (var i=0; i<links.length; i++) {
+            const link = links[i];
+            if (!isInternal(link.href)) {
+              // undo the damage that might have been done by quarto-nav.js in the case of
+              // links that we want to consider external
+              if (link.dataset.originalHref !== undefined) {
+                link.href = link.dataset.originalHref;
+              }
+            }
+          }
+        function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+          const config = {
+            allowHTML: true,
+            maxWidth: 500,
+            delay: 100,
+            arrow: false,
+            appendTo: function(el) {
+                return el.closest('section.slide') || el.parentElement;
+            },
+            interactive: true,
+            interactiveBorder: 10,
+            theme: 'light-border',
+            placement: 'bottom-start',
+          };
+          if (contentFn) {
+            config.content = contentFn;
+          }
+          if (onTriggerFn) {
+            config.onTrigger = onTriggerFn;
+          }
+          if (onUntriggerFn) {
+            config.onUntrigger = onUntriggerFn;
+          }
+            config['offset'] = [0,0];
+            config['maxWidth'] = 700;
+          window.tippy(el, config); 
+        }
+        const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+        for (var i=0; i<noterefs.length; i++) {
+          const ref = noterefs[i];
+          tippyHover(ref, function() {
+            // use id or data attribute instead here
+            let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+            try { href = new URL(href).hash; } catch {}
+            const id = href.replace(/^#\/?/, "");
+            const note = window.document.getElementById(id);
+            if (note) {
+              return note.innerHTML;
+            } else {
+              return "";
+            }
+          });
+        }
+        const findCites = (el) => {
+          const parentEl = el.parentElement;
+          if (parentEl) {
+            const cites = parentEl.dataset.cites;
+            if (cites) {
+              return {
+                el,
+                cites: cites.split(' ')
+              };
+            } else {
+              return findCites(el.parentElement)
+            }
+          } else {
+            return undefined;
+          }
+        };
+        var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+        for (var i=0; i<bibliorefs.length; i++) {
+          const ref = bibliorefs[i];
+          const citeInfo = findCites(ref);
+          if (citeInfo) {
+            tippyHover(citeInfo.el, function() {
+              var popup = window.document.createElement('div');
+              citeInfo.cites.forEach(function(cite) {
+                var citeDiv = window.document.createElement('div');
+                citeDiv.classList.add('hanging-indent');
+                citeDiv.classList.add('csl-entry');
+                var biblioDiv = window.document.getElementById('ref-' + cite);
+                if (biblioDiv) {
+                  citeDiv.innerHTML = biblioDiv.innerHTML;
+                }
+                popup.appendChild(citeDiv);
+              });
+              return popup.innerHTML;
+            });
+          }
+        }
+      });
+      </script>
+    
+
+</body></html>
