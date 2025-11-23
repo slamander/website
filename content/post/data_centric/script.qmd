@@ -1,18 +1,14 @@
 ---
-title: "Your Tutorial Title"
 title: "Spatial Structures in Ecological Models"
 subtitle: "A Data-Driven Approach to Spatial Modeling"
 author: "J Alex Baecher"
 date: 2024-11-22
 type: post
 format:
-  revealjs:
-    theme: moon
+  gfm:
     slide-number: true
     # chalkboard: true
     preview-links: auto
-    footer: "Spatial Ecology Workshop"
-    logo: https://raw.githubusercontent.com/quarto-dev/quarto-web/main/favicon.png
     css: custom.css
     width: 1600
     height: 900
@@ -21,6 +17,7 @@ format:
     max-scale: 2.0
     embed-resources: true
     standalone: true
+    preserve-yaml: true
 ---
 
 ## Why include spatial structures in your model?
