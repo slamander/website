@@ -1,45 +1,27 @@
 ---
 title: "Spatial Structures in Ecological Models"
-subtitle: "A Data-Driven Approach to Spatial Modeling"
-author: "J Alex Baecher"
-date: 2024-11-22
-type: post
-format:
-  gfm:
-    slide-number: true
-    # chalkboard: true
-    preview-links: auto
-    css: custom.css
-    width: 1600
-    height: 900
-    margin: 0.05
-    min-scale: 0.2
-    max-scale: 2.0
-    embed-resources: true
-    standalone: true
-    preserve-yaml: true
+summary: "A tutorial for incoporating Gaussian processes, spatial smoothers, or other features into ecological GLM(M)s or hierarchical models 
+subtitle: "Instructions based on spatial data types" 
+author: 
+- admin
+date: 2025-11-22
+slug: Ecological Spatial Structures
+categories: ["r tutorials"]
+tags: ["spatial models", "spatial ecology", "Gaussian processes", "SPDE", "R-INLA", "geostatistics", "point-referenced data", "areal data", "CAR models", "spatial autocorrelation", "mgcv", "GAM", "species distribution models", "habitat selection", "movement ecology", "step selection functions", "telemetry", "GPS tracking", "point pattern analysis", "spatstat", "Bayesian spatial models", "spatial statistics", "kriging", "reduced-rank GP", "nearest neighbor GP", "spatial splines", "spatial cross-validation", "GLMM", "GLM", "hierarchical models", "spatial random effects", "mesh", "BYM model", "Matérn covariance", "tutorial", "ecological modeling", "biodiversity", "landscape ecology", "wildlife ecology", "conservation", "R programming", "quarto", "amt package", "momentuHMM", "spatial data science"]
+image:
+  caption: ""
+  focal_point: ""
+  preview_only: true
 ---
 
 
 ## Why include spatial structures in your model?
 
-:::: {.columns}
-::: {.column width="50%"}
-
 **Spatial Autocorrelation:** 
 Ecological data points close together are usually more similar than distant points
 ![](images/tobler.png){ width=100% }
 
-:::
-
-::: {.column width="10%"}
-
-:::
-
-::: {.column width="40%"}
-
-::: {.callout-warning}
-# Warning:  
+#### Warning:  
 **Ignoring spatial autocorrelation leads to...**  
 
 - Biased parameter estimates
@@ -49,20 +31,12 @@ Ecological data points close together are usually more similar than distant poin
 - Violated statistical assumptions (iid errors)
 - Poor predictive accuracy
 - *Non-demonic* intrusion 😈  
-:::
-
-:::
-::::
-
----
 
 ## The Central Question
 
-::: {.callout-important icon=false}
 ## **What type of spatial data do you have?**
 
 Each data type has specialized methods, assumptions, and computational considerations.
-:::
 
 **Data types:**
 
@@ -71,10 +45,8 @@ Each data type has specialized methods, assumptions, and computational considera
 3. **Point Pattern Data** (locations are the response)
 4. **Movement/Trajectory Data** (tracks and telemetry)
 
-::: {.callout-tip}
 ## Mixed Data Types
 Many ecological studies combine multiple data types! We'll discuss integration approaches at the end.
-:::
 
 # 1. Point-Referenced Data
 
@@ -99,10 +71,6 @@ Many ecological studies combine multiple data types! We'll discuss integration a
 
 ## Point-Referenced: Visual Example
 
-:::: {.columns}
-
-::: {.column width="50%"}
-
 **Typical scenario:**  
 
 - 50-5000 sampling locations  
@@ -110,20 +78,13 @@ Many ecological studies combine multiple data types! We'll discuss integration a
 - Response variable (abundance, presence, etc.)  
 - Want to predict across unsampled locations  
 
-::: {.callout-note}
 ## Common Questions
 - How does my response vary across space?
 - What drives spatial patterns?
 - Can I predict to new locations?
 - Is there residual spatial autocorrelation?
-:::
-:::
 
-::: {.column width="50%"}
 ![](images/point%20presences.png){ width=75% }
-:::
-
-::::
 
 ---
 
@@ -158,7 +119,6 @@ Each represents different trade-offs between accuracy, computation, and flexibil
 
 ## Understanding the GP Family Tree
 
-::: {.callout-note icon=false}
 ## Conceptual Relationships  
 
 **Full GP** ($O(n^3)$)  
@@ -174,8 +134,6 @@ Each represents different trade-offs between accuracy, computation, and flexibil
 **Alternative Framework:**  
 
 - **Splines** - Smoothness penalty instead of covariance structure  
-
-:::
 
 **Key insight:** Methods 2-4 are all ways to make GPs computationally feasible while maintaining the probabilistic framework.
 
@@ -211,10 +169,8 @@ $$k(d) = \sigma^2 \frac{2^{1-\nu}}{\Gamma(\nu)}\left(\sqrt{2\nu}\frac{d}{\ell}\r
 - $\nu = 2.5$ → Twice differentiable  
 - $\nu \to \infty$ → **Squared exponential** (infinitely smooth)
 
-::: {.callout-tip}
 ## Practical Advice
 Start with $\nu = 1.5$ (good default) or estimate it if you have enough data.
-:::
 
 ---
 
@@ -231,10 +187,8 @@ Start with $\nu = 1.5$ (good default) or estimate it if you have enough data.
 - ~5,000 locations: challenging
 - 10,000+ locations: infeasible
 
-::: {.callout-important}
 ## This is why we need approximations!
 Reduced rank GPs make modeling feasible for realistic ecological datasets.
-:::
 
 ---
 
@@ -306,9 +260,6 @@ $$(\kappa^2 - \Delta)^{\alpha/2}(\tau w(\mathbf{s})) = \mathcal{W}(\mathbf{s})$$
 
 ## SPDE: How It Works
 
-:::: {.columns}
-::: {.column width="50%"}
-
 1. Create triangular mesh over study area
 2. GP represented exactly at mesh vertices
 3. Values between vertices interpolated
@@ -320,21 +271,10 @@ $$(\kappa^2 - \Delta)^{\alpha/2}(\tau w(\mathbf{s})) = \mathcal{W}(\mathbf{s})$$
 - Balance accuracy and speed  
 - Extend mesh beyond study area 
 
-::: {.callout-note}
 ## Rule of Thumb
 Mesh resolution should be finer than the spatial range ($\ell$), ideally <1k 
-:::
 
-:::
-
-::: {.column width="10%"}
-:::
-
-::: {.column width="40%"}
 ![](images/mesh.jpeg){ width=100% }
-
-:::
-::::
 
 ---
 
@@ -536,10 +476,8 @@ Where $\mathbf{s}^*$ are knot locations.
 
 **Computational cost:** $O(nm^2 + m^3)$ - dominated by $m^3$ for reasonable $n$
 
-::: {.callout-tip}
 ## Choosing m
 More knots = better approximation but slower. Start with $m = \sqrt{n}$ or 50-100 knots.
-:::
 
 ---
 
@@ -686,7 +624,6 @@ $$p(w_i | w_1, \ldots, w_{i-1}) = p(w_i | w_{\mathcal{N}_m(i)})$$
 
 **Result:** Sparse precision matrix, fast computation
 
-::: {.callout-note}
 ## The ordering of your data affects results!
 
 Common factors to order by: 
@@ -694,7 +631,6 @@ Common factors to order by:
 - by coordinate  
 - space-filling curves  
 - random  
-:::
 
 ---
 
@@ -835,10 +771,8 @@ $$\sum_{i=1}^n (y_i - f(\mathbf{s}_i))^2 + \lambda \int \int \left[\left(\frac{\
 
 **Radial basis functions** - Distance-based kernels
 
-::: {.callout-tip}
 ## When to Use Splines
-Splines are excellent for quick exploratory analysis and when you don't need explicit covariance modeling.
-:::
+Splines are excellent for quick exploratory analysis and when you dont need explicit covariance modeling.
 
 ---
 
@@ -967,7 +901,6 @@ boundary <- st_read("study_boundary.shp")
 
 ## Common Pitfalls and Solutions
 
-::: {.callout-warning}
 ## Watch Out For:
 
 **Over-smoothing:**  
@@ -990,7 +923,6 @@ boundary <- st_read("study_boundary.shp")
 
 - SPDE: Mesh should extend beyond data  
 - Low-Rank: Try different knot configurations  
-:::
 
 ---
 
@@ -1042,10 +974,8 @@ Where $f_j$ can be:
 - Smooth effects: Spline or polynomial
 - Interactions: $x_j \times x_k$ or tensor products
 
-::: {.callout-note}
 ## Interpretation Challenge
 Spatial random effects can "absorb" covariate effects if covariates are spatially structured. Consider restricted spatial regression or spatial confounding adjustments.
-:::
 
 ---
 
@@ -1066,7 +996,6 @@ Spatial random effects can "absorb" covariate effects if covariates are spatiall
 
 ## Summary: Point-Referenced Data
 
-::: {.callout-important icon=false}
 ## Key Takeaways
 
 1. **Gaussian Processes** provide the theoretical foundation
@@ -1077,7 +1006,6 @@ Spatial random effects can "absorb" covariate effects if covariates are spatiall
 6. **Start simple** (splines) and add complexity as needed
 7. **Always validate** using spatial cross-validation
 8. **Check residuals** for remaining spatial structure
-:::
 
 ---
 
@@ -1127,8 +1055,6 @@ Spatial random effects can "absorb" covariate effects if covariates are spatiall
 
 ## Areal Data: Visual Example
 
-:::: {.columns}
-::: {.column width="55%"}
 ![County-level choropleth map](images/cloropleth.jpg){width 50%}
 
 **Typical scenario:**  
@@ -1137,18 +1063,12 @@ Spatial random effects can "absorb" covariate effects if covariates are spatiall
 - Clear neighborhood structure  
 - Count or aggregated data per unit  
 - Want to account for spatial dependence  
-:::
 
-::: {.column width="45%"}
-::: {.callout-note}
 ## Common Questions
 - Are neighboring units more similar?
 - How do I borrow strength across space?
 - Can I smooth noisy estimates?
 - Should I worry about edge effects?
-:::
-:::
-::::
 
 ---
 
@@ -1163,11 +1083,9 @@ Spatial random effects can "absorb" covariate effects if covariates are spatiall
 3. **Distance-based** - within threshold distance
 4. **k-nearest neighbors** - k closest centroids
 
-::: {.callout-important}
 ## Adjacency Matrix
 Neighborhood structure encoded in matrix $\mathbf{W}$:
 $$w_{ij} = \begin{cases} 1 & \text{if } i \text{ and } j \text{ are neighbors} \\ 0 & \text{otherwise} \end{cases}$$
-:::
 
 ---
 
@@ -1198,10 +1116,8 @@ Where $n_i$ = number of neighbors of area $i$.
 - Requires sum-to-zero constraint: $\sum_i w_i = 0$
 - Variance proportional to $1/n_i$ (islands have high variance!)
 
-::: {.callout-warning}
 ## Island Problem
 Areas with few neighbors have high uncertainty. Consider removing islands or using proper CAR.
-:::
 
 ---
 
@@ -1235,12 +1151,10 @@ Where:
 
 **Advantage:** Separates spatial and non-spatial variation
 
-::: {.callout-tip}
 ## BYM2 Parameterization
 Modern version uses a mixing parameter $\phi \in [0,1]$:
 $$w_i = \frac{1}{\sqrt{\tau}}(\sqrt{\phi} \cdot u_i + \sqrt{1-\phi} \cdot v_i)$$
 Easier to specify priors!
-:::
 
 ---
 
@@ -1272,10 +1186,8 @@ $$\mathbf{y} = \rho \mathbf{W}\mathbf{y} + \mathbf{X}\boldsymbol{\beta} + \bolds
 | Bayesian | Yes | Possible but harder |
 | Ecology use | Very common | Less common |
 
-::: {.callout-note}
 ## In Practice
 CAR models are much more common in ecology. SAR models used more in econometrics.
-:::
 
 ---
 
@@ -1411,8 +1323,6 @@ plot(regions["fitted"])
 
 ## Point Pattern: Visual Example
 
-:::: {.columns}
-::: {.column width="50%"}
 ![Spatial point pattern](https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Spatial_point_pattern.svg/440px-Spatial_point_pattern.svg.png)
 
 **Key questions:**
@@ -1421,17 +1331,11 @@ plot(regions["fitted"])
 - Does intensity vary across space?
 - What drives the spatial pattern?
 - Interaction between points?
-:::
 
-::: {.column width="50%"}
-::: {.callout-note}
 ## Three Main Patterns
 - **Random** (CSR - Complete Spatial Randomness)
 - **Clustered** (aggregated, contagious)
 - **Regular** (dispersed, uniform, inhibition)
-:::
-:::
-::::
 
 ---
 
@@ -1461,10 +1365,8 @@ $$\lambda(\mathbf{s}) = \exp(\beta_0 + \beta_1 x_1(\mathbf{s}) + ... + \beta_p x
 - Count points per cell
 - Fit Poisson GLM or use `spatstat` for continuous intensity
 
-::: {.callout-warning}
 ## Assumption
 Points are **independent** - no interaction or clustering beyond what covariates explain.
-:::
 
 ---
 
@@ -1515,9 +1417,7 @@ $$\lambda(\mathbf{s} | \text{other points}) = \lambda(\mathbf{s}) \times g(\text
 
 **Use when:** Points repel or attract each other (territoriality, facilitation).
 
-::: {.callout-tip}
 Package: `spatstat` in R for interaction models
-:::
 
 ---
 
@@ -1642,8 +1542,6 @@ predictions <- predict(
 
 ## Movement Data: Visual Example
 
-:::: {.columns}
-::: {.column width="50%"}
 ![Animal movement track](https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Animal_track_-_GPS_collar.svg/500px-Animal_track_-_GPS_collar.svg.png)
 
 **Typical data structure:**
@@ -1653,19 +1551,13 @@ predictions <- predict(
 - Longitude, Latitude
 - Environmental covariates
 - Behavioral state (sometimes)
-:::
 
-::: {.column width="50%"}
-::: {.callout-note}
 ## Key Questions
 - What drives movement decisions?
 - How do animals select habitat?
 - Can we identify behavioral states?
 - What's the home range?
 - How do individuals differ?
-:::
-:::
-::::
 
 ---
 
@@ -1683,9 +1575,7 @@ predictions <- predict(
 - Irregular sampling intervals
 - Missing data
 
-::: {.callout-important}
 Standard spatial models don't account for movement process!
-:::
 
 ---
 
@@ -1922,10 +1812,8 @@ summary(home_range)
 | State-Space | Continuous | Limited | Yes | Yes |
 | Integrated | Both | Yes | Yes | Yes |
 
-::: {.callout-tip}
 ## Start Simple
 Begin with SSF for habitat selection, add state-space if GPS error or behavioral switching is important.
-:::
 
 ---
 
@@ -1944,10 +1832,8 @@ Begin with SSF for habitat selection, add state-space if GPS error or behavioral
 3. **Point Pattern + Covariates:** Tree locations + soil maps
 4. **Movement + Remote Sensing:** Tracks + NDVI time series
 
-::: {.callout-important}
 ## The Challenge
 Different data types have different spatial support, resolution, and uncertainty.
-:::
 
 ---
 
@@ -2030,12 +1916,10 @@ $$\begin{aligned}
 
 ## Validation for Spatial Data
 
-::: {.callout-warning}
 ## Critical Issue
 Standard cross-validation is **wrong** for spatial data! 
 
 Nearby points are autocorrelated, so "test" data are not independent of "training" data.
-:::
 
 **Solution:** Spatial cross-validation
 
@@ -2086,10 +1970,8 @@ cv_results <- cv_spatial_fold(
 - Continuous ranked probability score (CRPS)
 - Log-likelihood on held-out data
 
-::: {.callout-tip}
 ## Best Practice
 Use spatial CV + predictive metrics, not just information criteria.
-:::
 
 ---
 
@@ -2112,9 +1994,7 @@ plot(v)  # Should be flat if spatial structure captured
 
 3. **Spatial correlograms**
 
-::: {.callout-important}
 Residuals should show **no** spatial autocorrelation if model is adequate!
-:::
 
 ---
 
@@ -2127,10 +2007,8 @@ Residuals should show **no** spatial autocorrelation if model is adequate!
 | Point pattern | 100-100,000 | Discretized LGCP | True LGCP |
 | Movement | 1,000-100,000 | SSF, HMM | State-space, continuous-time |
 
-::: {.callout-note}
 ## Modern Trend
 Approximate methods (INLA, SPDE, low-rank GPs) make complex spatial models feasible for large ecological datasets.
-:::
 
 ---
 
@@ -2160,16 +2038,13 @@ Approximate methods (INLA, SPDE, low-rank GPs) make complex spatial models feasi
 6. **Diagnose residuals** - check for remaining spatial structure
 7. **Interpret carefully** - spatial effects ≠ causal mechanisms
 
-::: {.callout-tip}
 ## Don't Overfit!
 More complex ≠ better. Use simplest model that captures spatial structure.
-:::
 
 ---
 
 ## Common Pitfalls
 
-::: {.callout-warning}
 ## Watch Out For:
 
 1. **Confounding:** Spatial effects absorbing true covariate effects
@@ -2179,7 +2054,6 @@ More complex ≠ better. Use simplest model that captures spatial structure.
 5. **Computational limits:** Be realistic about data size
 6. **Over-smoothing:** Too much spatial structure removes real variation
 7. **Ignoring uncertainty:** Report it! Especially for predictions
-:::
 
 ---
 
@@ -2228,7 +2102,6 @@ More complex ≠ better. Use simplest model that captures spatial structure.
 
 ## Key Takeaways
 
-::: {.callout-important icon=false}
 ## Remember:
 
 1. **Data structure determines appropriate methods** - identify your data type first
@@ -2237,7 +2110,6 @@ More complex ≠ better. Use simplest model that captures spatial structure.
 4. **Computational feasibility** - consider dataset size and resources
 5. **Interpretation** - spatial structure helps prediction but may obscure causation
 6. **Residual diagnostics** - always check for remaining spatial autocorrelation
-:::
 
 ---
 
@@ -2264,7 +2136,6 @@ More complex ≠ better. Use simplest model that captures spatial structure.
 
 ## Questions?
 
-::: {.callout-note icon=false}
 ## Contact & Discussion
 
 - Email: your.email@institution.edu
@@ -2274,6 +2145,5 @@ More complex ≠ better. Use simplest model that captures spatial structure.
 **What spatial data challenges are you facing?**
 
 Let's discuss specific applications to your research!
-:::
 
 **Thank you!**
