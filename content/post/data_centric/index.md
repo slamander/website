@@ -1,7 +1,7 @@
+
 ---
 title: "Spatial Structures in Ecological Models"
-summary: "A tutorial for incoporating Gaussian processes, spatial smoothers, or other features into ecological GLM(M)s or hierarchical models 
-subtitle: "Instructions based on spatial data types" 
+summary: "A tutorial for incoporating Gaussian processes, spatial smoothers, or other features into ecological GLM(M)s or hierarchical models"
 author: 
 - admin
 date: 2025-11-22
