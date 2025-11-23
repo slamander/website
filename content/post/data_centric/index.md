@@ -20,6 +20,7 @@ format:
     preserve-yaml: true
 ---
 
+
 ## Why include spatial structures in your model?
 
 :::: {.columns}
