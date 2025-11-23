@@ -28,6 +28,11 @@ sections:
         link:
           text: "Baecher et al. (2025) Science of the Total Environment"
           url: https://drive.google.com/uc?export=download&id=18iC6ef6CvYbGusfIGgnw7IqjyQgmNUsc
+      announcement:
+        text: "🚨 **New tutorial!!!**:"
+        link:
+          text: "Spatial structures for ecological models in R"
+          url: https://www.alexbaecher.com/post/ecological-spatial-structures/
     design:
       background:
         image:
