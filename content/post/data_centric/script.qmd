@@ -1,8 +1,10 @@
 ---
+title: "Your Tutorial Title"
 title: "Spatial Structures in Ecological Models"
 subtitle: "A Data-Driven Approach to Spatial Modeling"
-author: "Your Name"
-date: today
+author: "J Alex Baecher"
+date: 2024-11-22
+type: post
 format:
   revealjs:
     theme: moon
