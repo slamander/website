@@ -96,7 +96,7 @@ sections:
   - block: collection
     content:
       title: "Publications (since 2024)"
-      count: 6
+      count: 7
       archive:
         enable: true
         text: "See all publications →"
@@ -127,7 +127,7 @@ sections:
     content:
       title: "R sandbox: 📊 Coding Tutorials"
       subtitle: "Data science tutorials and R programming guides"
-      count: 2
+      count: 3
       archive:
         enable: true
         text: "See all tutorials →"
