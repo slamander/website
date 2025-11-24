@@ -3,7 +3,7 @@ main:
     url: '/'
     weight: 10
   - name: CV
-    url: 'https://drive.google.com/uc?export=download&id=1zADCDlIiJlx1vXKQ6NdMLwTZm7E6sS29'
+    url: 'https://drive.google.com/uc?export=download&id=1ehav_oiSY73HkeEZY9M-MKhj7OCCQbhz'
     weight: 20
   - name: Research
     url: '/project/'
