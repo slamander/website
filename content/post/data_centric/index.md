@@ -15,14 +15,15 @@ image:
 ---
 
 
-## Why include spatial structures in your model?
+### Why include spatial structures in your model?
 
-**Spatial Autocorrelation:** 
-Ecological data points close together are usually more similar than distant points
-![](images/tobler.png){ width=100% }
+#### Tobler's First law Geography (a.k.a. *spatial autocorrelation*):
+> [...] everything is related to everything else, but near things are more related than distant things." - Waldo Tobler 1970 [***Economic Geography***](https://doi.org/10.2307/143141)
 
-#### Warning:  
-**Ignoring spatial autocorrelation leads to...**  
+Put more explicitely: **measurements of ecological phenomena are more interconnected at close distances versus distant ones**
+![](images/tobler.png)
+
+##### Further: Ignoring spatial autocorrelation leads to...
 
 - Biased parameter estimates
 - Inflated significance (increased chance of Type-I error)
@@ -32,29 +33,28 @@ Ecological data points close together are usually more similar than distant poin
 - Poor predictive accuracy
 - *Non-demonic* intrusion 😈  
 
-## The Central Question
+---
 
-## **What type of spatial data do you have?**
+### How to account for spatial autocorrelation in my model?
+
+#### First, what type of spatial data do you have?
 
 Each data type has specialized methods, assumptions, and computational considerations.
 
-**Data types:**
-
+##### Data types:
 1. **Point-Referenced Data** (geostatistical data)
 2. **Areal/Lattice Data** (regional/grid data)  
 3. **Point Pattern Data** (locations are the response)
 4. **Movement/Trajectory Data** (tracks and telemetry)
 
-## Mixed Data Types
-Many ecological studies combine multiple data types! We'll discuss integration approaches at the end.
-
-# 1. Point-Referenced Data
-
-*Measurements at specific geographic coordinates*
+Note: Many ecological studies combine multiple data types! We'll breifly discuss integration approaches.
 
 ---
 
-## What is Point-Referenced Data?
+## 1. Point-Referenced Data
+*Measurements at specific geographic coordinates*
+
+### What is Point-Referenced Data?
 
 **Definition:** Observations collected at specific locations, representing a continuous spatial process.
 
@@ -67,9 +67,7 @@ Many ecological studies combine multiple data types! We'll discuss integration a
 
 **Key characteristic:** Locations are **fixed by design**, not random.
 
----
-
-## Point-Referenced: Visual Example
+#### A visual example
 
 **Typical scenario:**  
 
@@ -78,17 +76,18 @@ Many ecological studies combine multiple data types! We'll discuss integration a
 - Response variable (abundance, presence, etc.)  
 - Want to predict across unsampled locations  
 
-## Common Questions
-- How does my response vary across space?
-- What drives spatial patterns?
-- Can I predict to new locations?
-- Is there residual spatial autocorrelation?
+**Common Questions**  
 
-![](images/point%20presences.png){ width=75% }
+- How does my response vary across space?  
+- What drives spatial patterns?  
+- Can I predict to new locations?  
+- Is there residual spatial autocorrelation?  
+
+![](images/point%20presences.png)
 
 ---
 
-## Point-Referenced: Core Challenge
+### Point-Referenced data: The Core Challenge
 
 After accounting for environmental covariates, you often have residual spatial structure:
 
@@ -103,7 +102,7 @@ Where:
 
 ---
 
-## Point-Referenced: Five Approaches
+### Point-Referenced data: Five Approaches
 
 We'll cover five main approaches, organized by their relationship to Gaussian Processes:
 
@@ -117,9 +116,9 @@ Each represents different trade-offs between accuracy, computation, and flexibil
 
 ---
 
-## Understanding the GP Family Tree
+### Understanding the GP Family Tree
 
-## Conceptual Relationships  
+#### Conceptual Relationships  
 
 **Full GP** ($O(n^3)$)  
 
@@ -139,7 +138,7 @@ Each represents different trade-offs between accuracy, computation, and flexibil
 
 ---
 
-## Method 1: Full Gaussian Processes
+### Method 1: Full Gaussian Processes
 
 **The gold standard for point-referenced data**
 
@@ -156,7 +155,7 @@ $$k(\mathbf{s}, \mathbf{s}') = \sigma^2 \exp\left(-\frac{||\mathbf{s} - \mathbf{
 
 ---
 
-## Full GP: Covariance Functions
+#### Full GP: Covariance Functions
 
 **Matérn family** (most common in ecology):
 
@@ -174,7 +173,7 @@ Start with $\nu = 1.5$ (good default) or estimate it if you have enough data.
 
 ---
 
-## Full GP: The Computational Problem
+##### Full GP: The Computational Problem
 
 **Standard GP inference requires:**
 
@@ -187,12 +186,12 @@ Start with $\nu = 1.5$ (good default) or estimate it if you have enough data.
 - ~5,000 locations: challenging
 - 10,000+ locations: infeasible
 
-## This is why we need approximations!
+#### This is why we need approximations!
 Reduced rank GPs make modeling feasible for realistic ecological datasets.
 
 ---
 
-## Full GP: R Implementation
+#### Full GP: R Implementation
 
 ```r
 library(geoR)
@@ -239,7 +238,7 @@ image.plot(predictions$predict)
 
 ---
 
-## Method 2: SPDE Approximation
+### Method 2: SPDE Approximation
 
 **The SPDE approach** (Lindgren et al. 2011) makes GPs computationally tractable!
 
@@ -258,7 +257,7 @@ $$(\kappa^2 - \Delta)^{\alpha/2}(\tau w(\mathbf{s})) = \mathcal{W}(\mathbf{s})$$
 
 ---
 
-## SPDE: How It Works
+#### SPDE: How It Works
 
 1. Create triangular mesh over study area
 2. GP represented exactly at mesh vertices
@@ -271,14 +270,12 @@ $$(\kappa^2 - \Delta)^{\alpha/2}(\tau w(\mathbf{s})) = \mathcal{W}(\mathbf{s})$$
 - Balance accuracy and speed  
 - Extend mesh beyond study area 
 
-## Rule of Thumb
-Mesh resolution should be finer than the spatial range ($\ell$), ideally <1k 
-
+**Rule of Thumb:** Mesh resolution should be finer than the spatial range ($\ell$), ideally <1k 
 ![](images/mesh.jpeg){ width=100% }
 
 ---
 
-## SPDE: R Implementation with `sdmTMB`
+#### SPDE: R Implementation with `sdmTMB`
 
 ```r
 library(sdmTMB)
@@ -313,7 +310,7 @@ ggplot(p, aes(X, Y, fill = exp(est))) + geom_raster() +
 
 ---
 
-## SPDE: R Implementation with `INLA`
+#### SPDE: R Implementation with `INLA`
 
 ```r
 library(INLA)
@@ -384,7 +381,7 @@ spde_result <- inla.spde2.result(result, "spatial", spde)
 
 ---
 
-## SPDE: Making Predictions
+#### SPDE: Making Predictions
 
 ```r
 # Create prediction grid
@@ -444,7 +441,7 @@ ggplot(pred_coords, aes(x, y, fill = mean)) +
 
 ---
 
-## Method 3: Low-Rank Gaussian Processes
+### Method 3: Low-Rank Gaussian Processes
 
 **Reduced-rank GP approximations** for computational efficiency
 
@@ -462,7 +459,7 @@ Where $m << n$ (number of basis functions much less than data points).
 
 ---
 
-## Low-Rank GP: Predictive Processes
+### Low-Rank GP: Predictive Processes
 
 **Concept:** 
 
@@ -476,12 +473,12 @@ Where $\mathbf{s}^*$ are knot locations.
 
 **Computational cost:** $O(nm^2 + m^3)$ - dominated by $m^3$ for reasonable $n$
 
-## Choosing m
+**Choosing m**
 More knots = better approximation but slower. Start with $m = \sqrt{n}$ or 50-100 knots.
 
 ---
 
-## Low-Rank GP: R Implementation
+#### Low-Rank GP: R Implementation
 
 ```r
 library(spBayes)
@@ -553,7 +550,7 @@ summary(pp_samples)
 
 ---
 
-## Low-Rank GP: Alternative with `FRK`
+#### Low-Rank GP: Alternative with `FRK`
 
 ```r
 library(FRK)  # Fixed Rank Kriging
@@ -593,7 +590,7 @@ predictions <- predict(frk_model, newdata = pred_grid)
 
 ---
 
-## Method 4: Nearest Neighbor Gaussian Processes
+### Method 4: Nearest Neighbor Gaussian Processes
 
 **For very large datasets** (>10,000 points)
 
@@ -612,7 +609,7 @@ $$w(\mathbf{s}_i) | \{w(\mathbf{s}_j): j \in \mathcal{N}_m(i)\} \sim \text{Norma
 
 ---
 
-## Nearest Neighbor GP: How It Works
+#### Nearest Neighbor GP: How It Works
 
 **Response model:** Define ordered observations $\mathbf{y} = (y_1, \ldots, y_n)$
 
@@ -624,7 +621,7 @@ $$p(w_i | w_1, \ldots, w_{i-1}) = p(w_i | w_{\mathcal{N}_m(i)})$$
 
 **Result:** Sparse precision matrix, fast computation
 
-## The ordering of your data affects results!
+##### The ordering of your data affects results!
 
 Common factors to order by: 
 
@@ -634,7 +631,7 @@ Common factors to order by:
 
 ---
 
-## Nearest Neighbor GP: R package `spNNGP`
+#### Nearest Neighbor GP: R package `spNNGP`
 
 ```r
 library(spNNGP)
@@ -710,7 +707,7 @@ pred_mean <- apply(predictions$p.y.0, 1, mean)
 pred_sd <- apply(predictions$p.y.0, 1, sd)
 ```
 
-## Nearest Neighbor GP: R package `spAbundance`
+#### Nearest Neighbor GP: R package `spAbundance`
 
 ```r
 library(spAbundance)
@@ -740,9 +737,11 @@ waicAbund(out)
 # Predictions
 
 out.pred <- predict(out, predictors, coordinates, verbose = FALSE)
+```
+
 ---
 
-## Method 5: Spatial Splines
+### Method 5: Spatial Splines
 
 **Alternative framework:** Not based on Gaussian Processes
 
@@ -760,7 +759,7 @@ $$w(\mathbf{s}) = \sum_{k=1}^{K} \beta_k \phi_k(\mathbf{s})$$
 
 ---
 
-## Spatial Splines: Types
+##### Spatial Splines: Types
 
 **Thin plate splines** - Optimal smoothness properties
 
@@ -776,7 +775,7 @@ Splines are excellent for quick exploratory analysis and when you dont need expl
 
 ---
 
-## Spatial Splines: R Implementation with mgcv
+#### Spatial Splines: R Implementation with mgcv
 
 ```r
 library(mgcv)
@@ -833,7 +832,7 @@ ggplot(pred_data, aes(x, y, fill = fit)) +
 
 ---
 
-## Spatial Splines: Tensor Products
+#### Spatial Splines: Tensor Products
 
 ```r
 # Tensor product of marginal smooths (useful for anisotropy)
@@ -867,7 +866,7 @@ boundary <- st_read("study_boundary.shp")
 
 ---
 
-## Point-Referenced: Comprehensive Comparison
+#### Point-Referenced: Comprehensive Comparison
 
 | Method | Framework | Complexity | Speed | n Limit | Uncertainty | Best Use Case |
 |--------|-----------|-----------|-------|---------|-------------|---------------|
@@ -879,7 +878,7 @@ boundary <- st_read("study_boundary.shp")
 
 ---
 
-## Key R packages
+#### Key R packages
 
 **Full GP:**  `gstat` (classical geostats) + `fields` (spatial random fields)  
 
@@ -926,7 +925,7 @@ boundary <- st_read("study_boundary.shp")
 
 ---
 
-## Validation and Model Checking
+#### Validation and Model Checking
 
 **Essential diagnostics for all methods:**
 
@@ -962,7 +961,7 @@ spatial_blocks <- cv_spatial(
 
 ---
 
-## Integration with Covariates
+#### Integration with Covariates
 
 **All methods can include environmental covariates:**
 
@@ -994,9 +993,9 @@ Spatial random effects can "absorb" covariate effects if covariates are spatiall
 
 ---
 
-## Summary: Point-Referenced Data
+#### Summary: Point-Referenced Data
 
-## Key Takeaways
+**Key Takeaways**
 
 1. **Gaussian Processes** provide the theoretical foundation
 2. **SPDE** offers exact GP representation with computational efficiency
@@ -1031,13 +1030,10 @@ Spatial random effects can "absorb" covariate effects if covariates are spatiall
 
 ---
 
-# Areal / Lattice Data
-
+## Areal / Lattice Data
 *Aggregated data in discrete spatial units*
 
----
-
-## What is Areal Data?
+### What is Areal Data?
 
 **Definition:** Data aggregated to discrete spatial units with defined boundaries.
 
@@ -1053,7 +1049,7 @@ Spatial random effects can "absorb" covariate effects if covariates are spatiall
 
 ---
 
-## Areal Data: Visual Example
+#### Areal Data: Visual Example
 
 ![County-level choropleth map](images/cloropleth.jpg){width 50%}
 
@@ -1072,7 +1068,7 @@ Spatial random effects can "absorb" covariate effects if covariates are spatiall
 
 ---
 
-## Areal Data: Neighborhood Structure
+#### Areal Data: Neighborhood Structure
 
 **Critical concept:** Who are my neighbors?
 
@@ -1083,13 +1079,13 @@ Spatial random effects can "absorb" covariate effects if covariates are spatiall
 3. **Distance-based** - within threshold distance
 4. **k-nearest neighbors** - k closest centroids
 
-## Adjacency Matrix
+**Adjacency Matrix**
 Neighborhood structure encoded in matrix $\mathbf{W}$:
 $$w_{ij} = \begin{cases} 1 & \text{if } i \text{ and } j \text{ are neighbors} \\ 0 & \text{otherwise} \end{cases}$$
 
 ---
 
-## Areal Data: Method 1 - CAR Models
+### Areal Data: Method 1 - CAR Models
 
 **Conditional Autoregressive (CAR) Models**
 
@@ -1105,7 +1101,7 @@ Where $n_i$ = number of neighbors of area $i$.
 
 ---
 
-## ICAR Model: Properties
+##### ICAR Model: Properties
 
 **Interpretation:** Each area's value is the average of its neighbors, plus noise.
 
@@ -1116,12 +1112,12 @@ Where $n_i$ = number of neighbors of area $i$.
 - Requires sum-to-zero constraint: $\sum_i w_i = 0$
 - Variance proportional to $1/n_i$ (islands have high variance!)
 
-## Island Problem
+**Island Problem**
 Areas with few neighbors have high uncertainty. Consider removing islands or using proper CAR.
 
 ---
 
-## Areal Data: Method 2 - Proper CAR
+### Areal Data: Method 2 - Proper CAR
 
 **Adds spatial decay parameter** $\rho$ to control smoothing strength:
 
@@ -1138,7 +1134,7 @@ $$w_i | \mathbf{w}_{-i}, \tau^2, \rho \sim \text{Normal}\left(\frac{\rho}{n_i}\s
 
 ---
 
-## Areal Data: Method 3 - BYM Model
+### Areal Data: Method 3 - BYM Model
 
 **Besag-York-Mollié (BYM) Model** - convolution of spatial and non-spatial effects:
 
@@ -1151,14 +1147,14 @@ Where:
 
 **Advantage:** Separates spatial and non-spatial variation
 
-## BYM2 Parameterization
+#### BYM2 Parameterization
 Modern version uses a mixing parameter $\phi \in [0,1]$:
 $$w_i = \frac{1}{\sqrt{\tau}}(\sqrt{\phi} \cdot u_i + \sqrt{1-\phi} \cdot v_i)$$
 Easier to specify priors!
 
 ---
 
-## Areal Data: Method 4 - SAR Models
+### Areal Data: Method 4 - SAR Models
 
 **Simultaneous Autoregressive (SAR) Models**
 
@@ -1176,7 +1172,7 @@ $$\mathbf{y} = \rho \mathbf{W}\mathbf{y} + \mathbf{X}\boldsymbol{\beta} + \bolds
 
 ---
 
-## Areal Data: CAR vs SAR
+#### Areal Data: CAR vs SAR
 
 | Feature | CAR | SAR |
 |---------|-----|-----|
@@ -1186,12 +1182,12 @@ $$\mathbf{y} = \rho \mathbf{W}\mathbf{y} + \mathbf{X}\boldsymbol{\beta} + \bolds
 | Bayesian | Yes | Possible but harder |
 | Ecology use | Very common | Less common |
 
-## In Practice
+**In Practice**
 CAR models are much more common in ecology. SAR models used more in econometrics.
 
 ---
 
-## Areal Data: Method 5 - Spatial Eigenvectors
+### Areal Data: Method 5 - Spatial Eigenvectors
 
 **Moran's Eigenvector Maps (MEM) / PCNM**
 
@@ -1211,7 +1207,7 @@ $$y_i = \beta_0 + \sum_{k=1}^K \beta_k \text{EV}_{ik} + \epsilon_i$$
 
 ---
 
-## Spatial Eigenvectors: Example
+#### Spatial Eigenvectors: Example
 
 ```r
 library(adespatial)
@@ -1238,7 +1234,7 @@ mem.sel <- forward.sel(y = mydata$abundance,
 
 ---
 
-## Areal Data: Comparison
+#### Areal Data: Comparison
 
 | Method | Framework | Smoothing | Flexibility | Best For |
 |--------|-----------|-----------|-------------|----------|
@@ -1250,7 +1246,7 @@ mem.sel <- forward.sel(y = mydata$abundance,
 
 ---
 
-## Areal Data: R Example with INLA
+#### Areal Data: R Example with INLA
 
 ```r
 library(INLA)
@@ -1299,13 +1295,12 @@ plot(regions["fitted"])
 
 ---
 
-# Point Pattern Data
-
+## Point Pattern Data
 *When locations themselves are the response*
 
 ---
 
-## What is Point Pattern Data?
+### What is Point Pattern Data?
 
 **Definition:** The spatial locations of events/individuals are what we're modeling.
 
@@ -1321,7 +1316,7 @@ plot(regions["fitted"])
 
 ---
 
-## Point Pattern: Visual Example
+#### Point Pattern: Visual Example
 
 ![Spatial point pattern](https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Spatial_point_pattern.svg/440px-Spatial_point_pattern.svg.png)
 
@@ -1332,14 +1327,14 @@ plot(regions["fitted"])
 - What drives the spatial pattern?
 - Interaction between points?
 
-## Three Main Patterns
-- **Random** (CSR - Complete Spatial Randomness)
-- **Clustered** (aggregated, contagious)
-- **Regular** (dispersed, uniform, inhibition)
+**Three Main Patterns**
+- *Random* (CSR - Complete Spatial Randomness)
+- *Clustered* (aggregated, contagious)
+- *Regular* (dispersed, uniform, inhibition)
 
 ---
 
-## Point Pattern: Core Concept - Intensity
+### Point Pattern: Core Concept - Intensity
 
 **Intensity function** $\lambda(\mathbf{s})$ = expected number of points per unit area at location $\mathbf{s}$
 
@@ -1353,7 +1348,7 @@ $$\mathbb{E}[N(A)] = \int_A \lambda(\mathbf{s}) d\mathbf{s}$$
 
 ---
 
-## Point Pattern: Method 1 - Inhomogeneous Poisson Process
+### Point Pattern: Method 1 - Inhomogeneous Poisson Process
 
 **Simplest model:** Points are independent given intensity function
 
@@ -1365,12 +1360,12 @@ $$\lambda(\mathbf{s}) = \exp(\beta_0 + \beta_1 x_1(\mathbf{s}) + ... + \beta_p x
 - Count points per cell
 - Fit Poisson GLM or use `spatstat` for continuous intensity
 
-## Assumption
+**Assumption**
 Points are **independent** - no interaction or clustering beyond what covariates explain.
 
 ---
 
-## Point Pattern: Method 2 - Cox Processes
+### Point Pattern: Method 2 - Cox Processes
 
 **Adds spatial random effects to intensity:**
 
@@ -1387,7 +1382,7 @@ Where $w(\mathbf{s})$ is a spatial Gaussian process.
 
 ---
 
-## LGCP: Implementation Approaches
+#### LGCP: Implementation Approaches
 
 **Approach 1: Discretize space**
 
@@ -1403,7 +1398,7 @@ Where $w(\mathbf{s})$ is a spatial Gaussian process.
 
 ---
 
-## Point Pattern: Method 3 - Interaction Models
+### Point Pattern: Method 3 - Interaction Models
 
 **For processes with point-to-point interaction:**
 
@@ -1421,7 +1416,7 @@ Package: `spatstat` in R for interaction models
 
 ---
 
-## Point Pattern: Comparison
+#### Point Pattern: Comparison
 
 | Model Type | Complexity | Interaction | Spatial Trend | Best For |
 |------------|-----------|-------------|---------------|----------|
@@ -1432,7 +1427,7 @@ Package: `spatstat` in R for interaction models
 
 ---
 
-## Point Pattern: R Example with spatstat
+#### Point Pattern: R Example with spatstat
 
 ```r
 library(spatstat)
@@ -1468,7 +1463,7 @@ plot(pred_intensity)
 
 ---
 
-## Point Pattern: R Example with inlabru
+#### Point Pattern: R Example with inlabru
 
 ```r
 library(inlabru)
@@ -1518,13 +1513,12 @@ predictions <- predict(
 
 ---
 
-# Movement / Trajectory Data
-
+## Movement / Trajectory Data
 *GPS tracks, telemetry, and animal paths*
 
 ---
 
-## What is Movement Data?
+### What is Movement Data?
 
 **Definition:** Locations of individuals tracked through time, creating paths or trajectories.
 
@@ -1540,7 +1534,7 @@ predictions <- predict(
 
 ---
 
-## Movement Data: Visual Example
+#### Movement Data: Visual Example
 
 ![Animal movement track](https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Animal_track_-_GPS_collar.svg/500px-Animal_track_-_GPS_collar.svg.png)
 
@@ -1561,7 +1555,7 @@ predictions <- predict(
 
 ---
 
-## Movement Data: Unique Challenges
+#### Movement Data: Unique Challenges
 
 **Multiple sources of autocorrelation:**
 
@@ -1579,7 +1573,7 @@ Standard spatial models don't account for movement process!
 
 ---
 
-## Movement Data: Method 1 - Step Selection Functions
+### Movement Data: Method 1 - Step Selection Functions
 
 **Idea:** Model animal's choice among available steps at each time point
 
@@ -1595,7 +1589,7 @@ $$w(\mathbf{s}_t | \mathbf{s}_{t-1}) \propto \exp(\beta_1 x_1(\mathbf{s}_t) + ..
 
 ---
 
-## Step Selection Functions: Details
+#### Step Selection Functions: Details
 
 **Used step:** What the animal actually did
 $$\text{step length}, \quad \text{turn angle}, \quad \text{end habitat}$$
@@ -1611,7 +1605,7 @@ $$\text{Pr(step chosen)} = \frac{\exp(\mathbf{X}\boldsymbol{\beta})}{\sum_{j=1}^
 
 ---
 
-## SSF: R Example
+#### SSF: R Example
 
 ```r
 library(amt)
@@ -1650,7 +1644,7 @@ summary(ssf_model)
 
 ---
 
-## Movement Data: Method 2 - State-Space Models
+### Movement Data: Method 2 - State-Space Models
 
 **Two-level model:**
 
@@ -1669,7 +1663,7 @@ $$\mathbf{y}_t = \mathbf{s}_t + \boldsymbol{\epsilon}_t$$
 
 ---
 
-## State-Space Models: Behavioral States
+#### State-Space Models: Behavioral States
 
 **Hidden Markov Models (HMM):** Switch between behavioral states
 
@@ -1690,7 +1684,7 @@ p_{21} & p_{22}
 
 ---
 
-## State-Space Model: R Example
+#### State-Space Model: R Example
 
 ```r
 library(momentuHMM)
@@ -1737,7 +1731,7 @@ plotStates(hmm_fit)
 
 ---
 
-## Movement Data: Method 3 - Continuous-Time Models
+### Movement Data: Method 3 - Continuous-Time Models
 
 **Problem:** Discrete-time models assume regular intervals
 
@@ -1755,7 +1749,7 @@ $$d\mathbf{s}_t = -\mathbf{B}(\mathbf{s}_t - \boldsymbol{\mu})dt + \boldsymbol{\
 
 ---
 
-## Continuous-Time: ctmm Package
+#### Continuous-Time: ctmm Package
 
 ```r
 library(ctmm)
@@ -1785,7 +1779,7 @@ summary(home_range)
 
 ---
 
-## Movement Data: Method 4 - Integrated Models
+### Movement Data: Method 4 - Integrated Models
 
 **Combine step selection with state-space models**
 
@@ -1803,7 +1797,7 @@ summary(home_range)
 
 ---
 
-## Movement Data: Comparison
+#### Movement Data: Comparison
 
 | Method | Temporal Structure | Habitat Selection | Behavioral States | GPS Error |
 |--------|-------------------|-------------------|-------------------|-----------|
@@ -1812,18 +1806,17 @@ summary(home_range)
 | State-Space | Continuous | Limited | Yes | Yes |
 | Integrated | Both | Yes | Yes | Yes |
 
-## Start Simple
+**Start Simple**
 Begin with SSF for habitat selection, add state-space if GPS error or behavioral switching is important.
 
 ---
 
-# Integrating Across Data Types
-
+## Integrating Across Data Types
 *Real ecological studies often involve multiple spatial data types*
 
 ---
 
-## Multi-Scale / Multi-Type Integration
+### Multi-Scale / Multi-Type Integration
 
 **Common scenarios:**
 
@@ -1832,12 +1825,12 @@ Begin with SSF for habitat selection, add state-space if GPS error or behavioral
 3. **Point Pattern + Covariates:** Tree locations + soil maps
 4. **Movement + Remote Sensing:** Tracks + NDVI time series
 
-## The Challenge
+**The Challenge**
 Different data types have different spatial support, resolution, and uncertainty.
 
 ---
 
-## Integration Approach 1: Change of Support
+### Integration Approach 1: Change of Support
 
 **Problem:** Data at different spatial scales
 
@@ -1853,7 +1846,7 @@ Different data types have different spatial support, resolution, and uncertainty
 
 ---
 
-## Integration Approach 2: Joint Likelihood Models
+### Integration Approach 2: Joint Likelihood Models
 
 **Idea:** Model all data types simultaneously with shared parameters
 
@@ -1869,7 +1862,7 @@ Different data types have different spatial support, resolution, and uncertainty
 
 ---
 
-## Integration Approach 3: Spatial Misalignment
+### Integration Approach 3: Spatial Misalignment
 
 **When spatial supports don't match:**
 
@@ -1887,7 +1880,7 @@ $$\begin{aligned}
 
 ---
 
-## Practical Integration Example
+#### Practical Integration Example
 
 **Scenario:** Modeling lynx habitat selection
 
@@ -1908,13 +1901,12 @@ $$\begin{aligned}
 
 ---
 
-# Model Selection and Validation
-
+## Model Selection and Validation
 *How do we choose and evaluate spatial models?*
 
 ---
 
-## Validation for Spatial Data
+### Validation for Spatial Data
 
 ## Critical Issue
 Standard cross-validation is **wrong** for spatial data! 
@@ -1929,7 +1921,7 @@ Nearby points are autocorrelated, so "test" data are not independent of "trainin
 
 ---
 
-## Spatial Cross-Validation Methods
+#### Spatial Cross-Validation Methods
 
 **1. Spatial blocking:**
 ```r
@@ -1956,7 +1948,7 @@ cv_results <- cv_spatial_fold(
 
 ---
 
-## Model Comparison for Spatial Models
+### Model Comparison for Spatial Models
 
 **Information criteria:**
 
@@ -1970,12 +1962,12 @@ cv_results <- cv_spatial_fold(
 - Continuous ranked probability score (CRPS)
 - Log-likelihood on held-out data
 
-## Best Practice
+**Best Practice**
 Use spatial CV + predictive metrics, not just information criteria.
 
 ---
 
-## Diagnosing Spatial Model Fit
+#### Diagnosing Spatial Model Fit
 
 **Check residual autocorrelation:**
 
@@ -2007,12 +1999,12 @@ Residuals should show **no** spatial autocorrelation if model is adequate!
 | Point pattern | 100-100,000 | Discretized LGCP | True LGCP |
 | Movement | 1,000-100,000 | SSF, HMM | State-space, continuous-time |
 
-## Modern Trend
+**Modern Trend**
 Approximate methods (INLA, SPDE, low-rank GPs) make complex spatial models feasible for large ecological datasets.
 
 ---
 
-## Software Summary
+### Software Summary
 
 **R Packages by data type:**
 
@@ -2038,12 +2030,12 @@ Approximate methods (INLA, SPDE, low-rank GPs) make complex spatial models feasi
 6. **Diagnose residuals** - check for remaining spatial structure
 7. **Interpret carefully** - spatial effects ≠ causal mechanisms
 
-## Don't Overfit!
+**Don't Overfit!**
 More complex ≠ better. Use simplest model that captures spatial structure.
 
 ---
 
-## Common Pitfalls
+### Common Pitfalls
 
 ## Watch Out For:
 
@@ -2057,7 +2049,7 @@ More complex ≠ better. Use simplest model that captures spatial structure.
 
 ---
 
-## When to Use Each Data Type Approach
+### When to Use Each Data Type Approach
 
 **Use point-referenced methods when:**
 - You have lat/lon coordinates from surveys
@@ -2081,7 +2073,7 @@ More complex ≠ better. Use simplest model that captures spatial structure.
 
 ---
 
-## Future Directions
+#### Future Directions
 
 **Emerging methods:**
 
