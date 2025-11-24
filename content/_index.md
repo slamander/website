@@ -19,7 +19,7 @@ sections:
         
       primary_action:
         text: Download CV
-        url: https://drive.google.com/uc?export=download&id=1e5f2qbiZPzhd-X-9LTDRnaQINNVB2qTd
+        url: https://drive.google.com/uc?export=download&id=1ehav_oiSY73HkeEZY9M-MKhj7OCCQbhz
       secondary_action:
         text: See publications
         url: https://www.alexbaecher.com/publication/
