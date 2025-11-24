@@ -2,8 +2,9 @@
 ---
 title: "Spatial Structures in Ecological Models"
 summary: "A tutorial for incoporating Gaussian processes, spatial smoothers, or other features into ecological GLM(M)s or hierarchical models"
+toc: true
 author: 
-- admin
+- J. Alex Baecher
 date: 2025-11-22
 slug: Ecological Spatial Structures
 categories: ["r tutorials"]
@@ -14,13 +15,44 @@ image:
   preview_only: true
 ---
 
+![](featured.png)
+
+## What this document will cover:  
+
+```
+Spatial structures  
+├── Why go spatial?  
+│   └── autocorrelation  
+├── How to go spatial?
+│   └── Background, examples, and considerations by data type
+│       ├── Point referenced data  
+│       ├── Areal data  
+│       ├── Point-pattern data  
+│       └── Movement data  
+├── What about mixed data types?  
+│   ├── Change of support  
+│   ├── Joint likelihoods  
+│   └── Spatial misalignment  
+├── What about model selection?  
+│   └── Spatial validation methods  
+├── What to watch out for?  
+│   ├── Common pitfalls  
+│   ├── Computational limitation  
+│   └── Software considerations  
+└── Resources  
+```
+
+
+---
 
 ### Why include spatial structures in your model?
 
 #### Tobler's First law Geography (a.k.a. *spatial autocorrelation*):
-> [...] everything is related to everything else, but near things are more related than distant things." - Waldo Tobler 1970 [***Economic Geography***](https://doi.org/10.2307/143141)
+> [...] everything is related to everything else, but near things are more related than distant things."  
+> - Waldo Tobler 1970 [(link to paper)](https://doi.org/10.2307/143141)
 
-Put more explicitely: **measurements of ecological phenomena are more interconnected at close distances versus distant ones**
+Put more explicitely: *measurements of ecological phenomena are more interconnected at close distances versus distant ones*  
+
 ![](images/tobler.png)
 
 ##### Further: Ignoring spatial autocorrelation leads to...
@@ -51,7 +83,7 @@ Note: Many ecological studies combine multiple data types! We'll breifly discuss
 
 ---
 
-## 1. Point-Referenced Data
+## 1. Point-Referenced Data 
 *Measurements at specific geographic coordinates*
 
 ### What is Point-Referenced Data?
@@ -1030,7 +1062,7 @@ Spatial random effects can "absorb" covariate effects if covariates are spatiall
 
 ---
 
-## Areal / Lattice Data
+## 2. Areal / Lattice Data
 *Aggregated data in discrete spatial units*
 
 ### What is Areal Data?
@@ -1295,7 +1327,7 @@ plot(regions["fitted"])
 
 ---
 
-## Point Pattern Data
+## 3. Point Pattern Data
 *When locations themselves are the response*
 
 ---
@@ -1513,7 +1545,7 @@ predictions <- predict(
 
 ---
 
-## Movement / Trajectory Data
+## 3. Movement / Trajectory Data
 *GPS tracks, telemetry, and animal paths*
 
 ---
