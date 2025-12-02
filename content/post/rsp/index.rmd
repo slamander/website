@@ -1,0 +1,661 @@
+---
+title: "CONNECTIVITY LAB"
+subtitle: "Cost distance, randomized shortest paths, and Circuit Theory"
+author: Alex Baecher
+format:
+  html:
+    theme: cosmo  # Try: cosmo, flatly, darkly, united, lux, etc.
+    margin: 20px # Reduces the default margin
+    toc: true
+    toc-location: left  # or right, body
+    toc-depth: 3
+---
+
+::: {.callout-note icon=false}
+# Table of contents:
+1.  Accessing land use and roadway data\
+    -   National Land Cover Database (NLCD): `FedData::get_nlcd`\
+    -   OpenStreetMap (OSM): `osmdata`\
+2.  Resistance layer engineering\
+    -   assigning resistance/conductance values with `terra`\
+    -   create a transition layer using `gdistance::transition`\
+3.  Calculating least cost metrics\
+    -   cost distance with `gdistance::accCost`\
+    -   least cost cooridor (LCC) with `gdistance::accCost`\
+    -   least cost path (LCP) with `gdistance::shortestPath`\
+4.  Randomized shortest paths (RSP)\
+    -   the connectivity continuum: bridging least cost and circuit theory\
+    -   tuning theta parameters with `gdistance::passage`\
+5. Homework assignment
+::: 
+
+# 1. Accessing land use and roadway data
+Load packages
+```{r}
+#| warning: false
+#| message = false
+# Always start your scripts fresh by clearing your environment
+rm(list = ls())
+
+# Set mirror for package install
+options(repos = c(CRAN = "https://cloud.r-project.org/"))
+
+# For safe and reliable package loading, install `pacman`
+if (!require("pacman", quietly = TRUE)) {
+  options(repos = c(CRAN = "https://cloud.R-project.org/"))
+  install.packages("pacman")
+}
+
+# Load necessary packages 
+pacman::p_load(
+  # basic data manipulation, plotting, and pipe operations
+    tidyverse, ggpubr
+  # operations with spatial vector data
+    , sf, sp
+  # operations with gridded raster data
+    , terra, raster
+  # visualizing raster data
+    , tidyterra
+  # accessing federal databases, landcover, and political boundary data
+    , FedData, tigris
+  # accessing the OpenStreetMap database 
+    , osmdata
+  # calculating resistance and connectivity metrics
+    , gdistance
+  # accessing spatially referenced biodiversity data
+    , spocc
+  # ,
+  # ,
+)
+```
+
+### Spatial domain of analysis: North Central Utah (NCU)
+Using the simple features geospatial package `sf`, we can create a bounding box (bbox):
+```{r}
+ncu_bbox <- st_bbox(c(      # concatinate the coordinates of extent:
+  xmin = -112.96324, 
+  ymin = 39.89463, 
+  xmax = -111.0826, 
+  ymax = 41.97513),
+  crs = st_crs(4326))      # set the coordinate reference system
+```
+
+## Political boundaries with `tigris`
+```{r}
+# Predownloading the shapefiles to save time:
+# utah <- tigris::counties() %>%    # for state-level data, using `states`
+#   filter(STATEFP == 49) %>%       # FIPS code for Utah is 49
+#   st_transform(st_crs(4326))      # transform the geometry to match our bbox
+# write_rds(utah, "data/shapefiles/utah.rds")
+utah <- read_rds("data/shapefiles/utah.rds")      # read from disk
+
+ggplot() + 
+  geom_sf(data = utah) +      # for plotting `sf`, use geom_sf
+  geom_sf(
+    data = st_as_sfc(ncu_bbox), 
+    col = "blue", fill = "blue", alpha = 0.1) + 
+  ggtitle("North Central Utah") +
+  theme_void() + 
+  theme(plot.title = element_text(hjust = 0.5, size = rel(2))) + 
+  coord_sf()      # use sf coordinate reference system for plotting
+```
+
+## OpenStreetMap road data with `osmdata`
+```{r}
+# Choose which features you want to gather
+road_features <- c(
+        "motorway"          # major divided highways
+        , "trunk"           # source to major highways
+        , "primary"         # most important roads after highways
+        , "secondary"       # second most important roads
+        # , "tertiary"      # residential and small branched roads
+      )
+
+# Use osmdata package to query OpenStreetMap for data
+# The osmdata API is easily overloaded, so we'll use preloaded data
+# ncu_roads <- opq(bbox = ncu_bbox) %>%                # query for road data
+#     add_osm_feature(                                 # specify the feature
+#       key = "highway",                               # feature type (e.g., amenities, natural)
+#       value = road_features,                         # what elements to include, or to exclude (!)
+#       value_exact = FALSE) %>%                       # they can match by closely associated values
+#     osmdata_sf()                                     # convert to simple features spatial object
+# write_rds(ncu_roads, "data/shapefiles/roads.rds")    # save data to disk (run times are long)
+
+# read road vector data from disk:
+ncu_roads <- read_rds("data/shapefiles/roads.rds")$osm_lines["highway"] %>%            
+  st_geometry() %>%                                    # keep only the geometry
+  vect()                                               # convert from sf to terra spatvector
+plot(ncu_roads)
+```
+
+## National Land Cover Database with `FedData`:
+We will gather data from 2019, because 2021 is currently corrupted
+```{r}
+# Downloading NLCD data can be slow, so we can preload:
+# ncu_nlcd <- get_nlcd(                  # query mlrc database for nlcd data
+#   template = st_as_sfc(ncu_bbox),      # spatial domain cropped to the greater Logan area
+#   label = "Logan_nlcd",                # this label determines where to store the data
+#   year = 2019) %>%                     # use data from 2019 (2021 is corrupted)
+#   aggregate(                           # NLCD is fine (500m^2); aggregate coarser (5km2)
+#     fact = 20,                         # so aggregate to a coarser scale (10 km2)
+#     fun = "modal") %>%                 # this is integer data, so we use a mode
+#   project(ncu_roads_vect) %>%          # reproject data to our coordinate reference system
+#   as.factor()                          # convert to factor to keep color table
+# writeRaster(ncu_nlcd, "data/nlcd/ncu_nlcd.tif", overwrite = T)
+ncu_nlcd <- rast("data/nlcd/ncu_nlcd.tif")      # read file from disk (downloads are slow)
+
+## Inspect NLCD categories and assign to our data
+nlcd_colors() 
+levels(ncu_nlcd) <- nlcd_colors()      # set attributes of raster data
+
+#### visualize the nlcd data
+gg_nlcd <- ggplot() +
+  geom_spatraster(                     # for terra::rast data, use tidyterra::geom_spatraster
+    data = ncu_nlcd, 
+    aes(fill = Class)) + 
+  ggtitle("National Land Cover Database") + 
+  theme_void() + 
+  theme(plot.title = element_text(hjust = 0.5, size = rel(2))); gg_nlcd
+```
+
+## Combine raster and vector data with `terra`
+Convert the vector data to raster using `rasterize`
+```{r}
+ncu_nlcd_roads <- rasterize(      # combining raster and vector data 
+  ncu_roads,                      # vector data
+  ncu_nlcd,                       # raster data
+  field = 999) %>%                # convert vector to pixels with value = 999
+  cover(ncu_nlcd) %>%             # cover nlcd pixels with road pixels
+  crop(ncu_bbox) %>%              # clip roads outside of our area of extent
+  as.factor();                    # convert from numeric to factor
+plot(ncu_nlcd_roads)                    
+
+# create a new color pallette and labeling scheme for nlcd + roads
+nlcd_roads_pal <- nlcd_colors() %>%      # nlcd color table
+  as.data.frame() %>%                    # convert to a data frame
+  bind_rows(                             # add a row for the road data
+    data.frame(
+      ID = 999,                          # define the pixel value
+      Class  = "Roads",                                
+      Color = "#666666",                             
+      Description = "Primary, secondary, tertiary motorways and linkages"
+    )
+  ) %>%
+  filter(!ID == 12)                       # remove the perrenial ice/snow category
+
+levels(ncu_nlcd_roads) <- nlcd_roads_pal  # set the new labeling scheme
+
+# visualize nlcd + roads
+gg_nlcd_roads <- ggplot() +
+  geom_spatraster(data = ncu_nlcd_roads, aes(fill = Class)) + 
+  ggtitle("Greater Logan Utah area: \n 
+    NLCD + Roads") +
+  scale_fill_manual(
+    values = nlcd_roads_pal$Color
+  ) +
+  theme_void() + 
+  theme(
+    plot.title = element_text(hjust = 0.5, size = rel(2))
+  ); gg_nlcd_roads
+```
+
+Now we can use these data to create a resistance layer in part 2!
+
+# 2. Resistance Layers
+### A resistance layer represents the degree to which landscape features impede or facilitates movement 
+For this exercise, we will consider the movement of a motorist, driving across North Central Utah!
+Therefore, we must generate a resistance layer to represent the resistance of the landscape to a motorist traveling between a source and a destination node. 
+To do so, we need to reclassify pixel values of each land use + road category to represent cost. Ideally,  should be assigned based on evidence, but we will just guess! ¯\_(ツ)\_/¯
+
+## Reclassifying a raster
+```{r}
+ncu_res_motor <- classify(      # terra::classify for reclassing rasters
+  ncu_nlcd_roads,               # supply the nlcd + roads raster
+  matrix(                       # create the "reclassification matrix"
+  # 12 levels of landcover resistance, 1 level of roads 
+    c(                          
+      10, 11, 1000,             # Open Water
+      20, 21, 0.5,              # Developed (open)
+      21, 23, 0.1,              # Developed (low)
+      23, 24, 0.05,             # Developed (med)
+      24, 25, 0.01,             # Developed (high)
+      30, 32, 1000,             # Barren Land
+      40, 44, 1000,             # Forest
+      50, 53, 1000,             # Shrubland/Grassland
+      70, 75, 1000,             # Agricultural
+      80, 83, 1000,             # Wetlands
+      89, 96, 1000,             # Perennial Ice/Snow
+
+      # mapped roads:
+      998, 1000, 0.00000001     # roads for travel
+    ),
+    ncol = 3, byrow = TRUE                             # set dimensions of the matrix, ordered by row
+  )
+); plot(ncu_res_motor)
+```
+
+## Source and destination nodes 
+### Source node: 
+Department of Wildland Resources in USU's Natural Resources bldg! 
+```{r}
+wild_orig <- st_as_sf(         # create a sf coordinate point
+  data.frame(
+    y = 41.740692605488036,    # latitude 
+    x = -111.81059792883603    # longitude
+  ), coords = c("x", "y"),     # coordinate value column names
+  crs = st_crs(ncu_bbox))      # set coordinate reference system 
+```
+
+### Destination node:
+In-and-Out burger in Provo, Utah
+```{r}
+slc_dest <- st_as_sf(          # create a sf coordinate point                     
+  data.frame(
+    y = 40.27318280042717,     # latitude
+    x = -111.68664072549315    # longitude
+  ), coords = c("x", "y"),     # coordinate value column names
+  crs = st_crs(ncu_bbox))      # set coordinate reference system
+```
+
+### Visualize the nodes in context with landcover + roads
+```{r}
+gg_nlcd_pts <- gg_nlcd + 
+  geom_sf(data = wild_orig, size = 10, shape = 13, stroke = 2) +
+  geom_sf(data = slc_dest, size = 10, shape = 13, stroke = 2); gg_nlcd_pts
+```
+
+## Create a transition matrix:
+### A transition matrix defines the ways that entities can move between pixels
+Options: <br>
+- Rook-case: 4 directions (vertical and horizontal transitions) <br>
+- Queen-case: 8 directions (Rook-case plus diagonal movements) <br>
+
+::: {.callout-warning}
+A transition layer is often created based on *CONDUCTANCE* values, *NOT* resistance. Conductance and resistance are inversely related, so the resistance layer must be inverse-transformed.
+:::
+
+Note the inverse transformation within the transition function:
+```{r}
+ncu_res_motor_tr <- transition(          # create layer with `gdistance::transition`
+  raster::raster(1/ncu_res_motor),       # assign CONDUCTANCE values (inverse of resistance)
+  transitionFunction = mean, 8) %>%      # use queen-case 
+  geoCorrection(type = "c", multpl = F)  # correct our layer based off of local distances
+```
+
+# 3. Least Cost Metrics
+## Least Cost Path (LCP)
+The least cost path represents the path of least cost, or the path of least resistance (literally). We can calculate this path using `gdistance::shortestPath`. 
+```{r}
+lcp_motor <- shortestPath(              # use `gdistance::shortestPath`
+  ncu_res_motor_tr,                     # supply the transition resistance layer 
+  origin = as(wild_orig, "Spatial"),    # assign the source of the traveler 
+  goal = as(slc_dest, "Spatial"),       # assign the destination 
+  output = "SpatialLines"               # specify that we want a spatial line for the LCP
+  ) %>% 
+  st_as_sfc(.,                          # transform that spatial line to our CRS
+    crs = st_cr(ncu_bbox)) %>% 
+    st_set_crs(st_crs(ncu_bbox))
+
+gg_nlcd_roads + 
+  geom_sf(data = lcp_motor) +
+    ggtitle("Least Cost Path") + 
+  theme(plot.title = element_text(hjust = 0.5, size = rel(2)) )
+```
+
+## Comparing LCP's with cost-based metrics
+### We will compare our LCP to Google Map's directions algorithm!
+Using Google's My Maps app, you can search for directions and download the path in a KML/KMZ file. I used that function to download a spatial lines object for a path between our source and destination nodes: https://www.google.com/maps/d/edit?mid=16I863baNRwr2T_luRYbjPk55YNgC-PI&usp=sharing
+```{r}
+gmp_usu_provo <- st_read("data/shapefiles/motorist_usu_provo.kml") %>%
+  st_transform(st_crs(ncu_bbox)) %>%     # transform to our CRS
+  mutate(Description = c("LINESTRING", "POINT", "POINT")) %>%
+  filter(Description == "LINESTRING")
+
+gg_nlcd_roads + 
+  geom_sf(data = lcp_motor) + 
+  geom_sf(data = gmp_usu_provo, col = "blue") + 
+  ggtitle("LCP vs. Google Maps (blue)") + 
+  theme(plot.title = element_text(hjust = 0.5, size = rel(2)) )
+```
+
+#### The paths are pretty close!!!
+We didn't assign specific resistance values to different road types, so there no differentiation based on road speed / traffic...
+
+Now lets compare the distance of each path:
+```{r}
+#| results: hold
+cat("Distance of LCP: ", print(st_length(lcp_motor)))
+cat("Distance of Google Maps: ", print(st_length(gmp_usu_provo)))
+```
+
+Our path was shorter by about 18 kilometers!!
+
+But, was it more efficient?? Let's see:
+```{r}
+#| results: hold
+lcp_motor_cost <- extract(
+  ncu_res_motor, 
+  vect(lcp_motor)) %>%
+  sum()
+
+gmp_usu_provo_cost <- extract(
+  ncu_res_motor, 
+  vect(gmp_usu_provo)) %>%
+  sum()
+
+cat(
+  "Google maps path was", 
+  (abs(lcp_motor_cost - gmp_usu_provo_cost)/mean(lcp_motor_cost, gmp_usu_provo_cost))*100,
+  "% less efficient than LCP")
+
+```
+
+## Least Cost Cooridors (LCC)
+### LCC's represent the total set of low cost paths
+To create the LCC, we first must calculate the overall cost of travel across the extent of ncu starting from both of our locations, the source and destination:
+```{r}
+# Starting with the source location
+wild_orig_cost <- accCost(             # Map total cost across ncu
+  ncu_res_motor_tr,                    # Supply the transition matrix
+  as(wild_orig, "Spatial"))            # Starting point: USU building!
+
+# Starting with the destination location 
+slc_dest_cost <- accCost(              # Map total cost across ncu
+  ncu_res_motor_tr,                    # Supply the transition matrix
+  as(slc_dest, "Spatial"))             # Starting point: In-and-Out burger!
+
+## Overlay the two cost surfaces to calculate total net cost 
+lcc <- overlay(
+  wild_orig_cost, 
+  slc_dest_cost, fun = function(x, y){
+  {return(x + y)}
+}); plot(lcc)
+```
+
+We are going to calculate the area with the lowest overall cost of travel. For this exercise, we're searching for the 5th percentile of cost. This means, the cooridor contains possible paths that are lower cost than 95% of other paths. 
+```{r}
+lcc_qu <- lcc                             # create new cost surface
+values(lcc_qu) <- NA                      # extract all vost values 
+lcc_qu[lcc < quantile(lcc, 0.05)] <- 1    # flag pixels with values below the 5th percentile 
+
+lcc_qu_sf <- as.polygons(                 # create polygon around the LCC
+  rast(lcc_qu == 1),                      # identify the 5th percentile pixel areas
+  dissolve=TRUE) %>%                      # meld them into one region
+  st_as_sf(crs = st_crs(ncu_bbox)) %>%    # convert that to a sf polygon
+    st_set_crs(st_crs(ncu_bbox))          # tell it what the crs is 
+
+# Examine the LCC overlaid on our NLCD + roads layer
+gg_nlcd + 
+  geom_sf(data = lcc_qu_sf, fill = "pink", alpha = 0.5) + 
+  ggtitle("Least Cost Cooridor (white area)") + 
+  theme(plot.title = element_text(hjust = 0.5, size = rel(2)) )
+
+# Compare the LLC to the LCP and Google Maps route 
+gg_nlcd_roads + 
+  geom_sf(data = lcc_qu_sf, fill = "pink", alpha = 0.8) + 
+  geom_sf(data = lcp_motor) + 
+  geom_sf(data = gmp_usu_provo, col = "blue") +
+  ggtitle("Least Cost Cooridor (white area) \n LCP (black) \n Google (blue)") + 
+  theme(plot.title = element_text(hjust = 0.5, size = rel(2)) )
+```
+
+Note: the Google Maps path goes outside of the LCC! Our LCP, by definition, must fall within the LCC. 
+
+# 4. Randomized Shortest Paths (RSP)
+## RSP's represents movement as the flow of probable paths with varying degrees of randomness
+
+Least cost metrics estimate a path of PERFECT travel, where each step / turn is optimally chosen to lower cost. But, optimal travel requires a complete knowledge of possible paths. Few organisms (other than humans with a GPS navigator) are capable of optimal travel...
+
+Instead, organisms make choices based on local perceptions of lost, which often appear random because the don't know the ultimate trajectory of a path. To capture these behaviors, we can use Randomized Shortest Paths (RSP). With RSP, we can model random deviations from a LCP based off of a parameter, theta.
+
+::: {.callout-important}
+**📊 The Theta Parameter: A Movement Continuum** <br>
+The theta parameter (θ) controls the randomness of movement in the RSP model: <br>
+- **θ → 0**: Highly random movement (approaches circuit theory/random walk) <br>
+- **θ → ∞**: Deterministic movement (approaches least-cost path) <br>
+- **Intermediate θ**: Represents realistic movement with some stochasticity
+:::
+
+Now we can map the flow of motorists using `gdistance::passage`
+```{r}
+flow <- passage(                         # for RSP, we use `gdistance::passage`
+  ncu_res_motor_tr,                      # supply the transition matrix
+  origin = as(wild_orig, "Spatial"),     # set the origin location
+  goal = as(slc_dest, "Spatial"),        # set the destination location
+  theta = 0.005                          # !!! set the theta parameter to 0.005 !!!
+) %>% rast()                             # convert the output to a terra raster 
+
+# Inspect the output: 
+ggplot() + 
+  geom_spatraster(data = flow, aes(fill = layer)) +
+  ggtitle(expression("Slightly Correlated Random Walk (\u03B8 = 0.005)")) +
+  scale_fill_viridis_c(option = "H") +
+  theme_void() + 
+  theme(
+    legend.position = "none", 
+    plot.title = element_text(hjust = 0.5, size = rel(1))
+  ) + 
+  coord_quickmap()
+```
+
+RSP's are especially useful for locating "pinch points", where movement is likely bottle-necked within a narrow cooridor. In fact, there are often a handful of pixels with extreme passage values. We can truncate some of those extreme values to get a better sense of overall flow. 
+```{r}
+source("functions/truncate.R")                # custom function for truncating a raster using quantiles
+truncate
+
+flow_trunc <- truncate(flow, upper = 0.98)    # Truncate the raster at 98th percentile
+
+ggpubr::ggarrange(
+  gg_nlcd_roads + 
+    geom_sf(data = lcc_qu_sf, fill = "pink", alpha = 0.8) + 
+    geom_sf(data = lcp_motor) + 
+    geom_sf(data = gmp_usu_provo, col = "blue") +
+    ggtitle("LCC (pink area) \n LCP (black) \n Google (blue)") + 
+    theme(plot.title = element_text(hjust = 0.5, size = rel(2)), 
+          legend.position = "none") ,
+  ggplot() + 
+    geom_spatraster(data = flow_trunc, aes(fill = layer)) +
+    ggtitle(
+      "Randomized Shortest Paths \n slightly correlated random walk \n \u03B8 = 0.005"
+    ) + scale_fill_viridis_c(option = "H") +
+    theme_void() + 
+    theme(
+      legend.position = "none", 
+      plot.title = element_text(hjust = 0.5, size = rel(2))
+    ) + 
+    coord_quickmap(),
+  align = "hv"
+)
+```
+
+## RSP: Random movement behavior of animals
+
+### Greater Sage-grouse (GSG)
+GSG are habitat specialists and a species of high conservation need. We will look at the locations of populations of GSG in North Central Utah and map connectivity. 
+
+To access GSG occurrence data, we will use `spocc`--an API for biodiversity databases, such as Gbif and iNaturalist. 
+```{r}
+ncu_gsg_gbif <- occ(                        # query spocc 
+  query = 'Centrocercus urophasianus',      # GSG scientific name
+  from = 'gbif',                            # specify to search gbif
+  limit = 3000,                             # limit the # of occurrences (CAUTION: random order)
+  has_coords = T,                           # specify we want georeferenced occurrences 
+  geometry = ncu_bbox                       # specify the area of extent
+)$gbif$data$Centrocercus_urophasianus       # they have a really inefficient way of structuring data 
+```
+
+In the ncu, GSG are primarily found in to counties: Tooele and Rich county. We will look specifically at occurrences of GSG in grassland/shrubland habitats within in these counties. 
+```{r}
+utah_gsg_counties <- utah %>%         # state counties
+  filter(NAME %in% c(                 # filter to Tooele and Rich
+    "Tooele", 
+    "Rich")) %>%
+  st_transform(st_crs(ncu_bbox))      # make sure the crs is correct
+
+# Now we need to remove any stray points outside of the area of interest
+ncu_gsg_filt <- ncu_gsg_gbif %>%
+    st_as_sf(                         # convert to a simple features object!
+    coords = c(
+      "longitude", 
+      "latitude"), 
+    crs = st_crs(ncu_bbox)
+  ) %>%
+  bind_cols(
+    extract(ncu_nlcd, .)              # determine landcover of each occurrence
+  ) %>%
+  filter(Class %in% c(                # filter landcovers to only gsg's preferred habitat 
+    "Shrub/Scrub", 
+    "Grassland/Herbaceous")
+  ) %>%
+    st_intersection(utah_gsg_counties)
+
+# Inspect the distribution of gsg occurrences in the ncu 
+gg_nlcd + 
+  ggtitle("Greater Sage Grouse") +
+  geom_sf(data = ncu_gsg_filt) 
+
+# Set the coordinates from Rich and Tooelle counties as source and destination points:
+ncu_gsg_north <- ncu_gsg_filt %>%
+  filter(NAME == "Rich") %>%          # subset to Rich county points
+  as("Spatial")
+
+ncu_gsg_south <- ncu_gsg_filt %>%
+  filter(NAME == "Tooele") %>%        # subset to Tooele county points
+  as("Spatial")
+```
+
+Now we need to create a resistance layer for GSG. Ideally, the resistance layer should be informed by values from a habitat suitability model or using information from the literature. But, in this case, we will just assign them based on of apparent habitat affinities. 
+```{r}
+## Reclassify for greater sage-grouse
+ncu_res_gsg <- classify(
+  ncu_nlcd, 
+  matrix(
+    c(
+      10, 11, 100,     # Open water
+      20, 21, 1,       # Developed (low)
+      21, 23, 1,       # Developed (med)
+      23, 24, 1,       # Developed (high) 
+      24, 25, 1,       # Developed (extreme) 
+      30, 32, 1,       # Barren land
+      40, 41, 1,       # Deciduous forest
+      42, 42, 1,       # Evergreen forest
+      43, 43, 1,       # Mixed forest
+      51, 53, 0.0001,  # Shrub/Scrub
+      70, 72, 1,       # Grasslands 
+      80, 81, 1,       # Pasture/Hay 
+      81, 82, 1,       # Cultivated Crops 
+      89, 91, 1,       # Woody Wetlands
+      94, 96, 1        # Emergent Herbaceous Wetlands
+    ),
+    ncol = 3, byrow = TRUE
+  )
+)
+
+# Create gsg transition matrix
+ncu_res_gsg_tr <- transition(
+  raster::raster(1/ncu_res_gsg), 
+  transitionFunction = mean, 4) %>%
+  geoCorrection(type = "c", multpl = F)
+```
+
+## Tuning θ parameter values
+Calculate a RSP for gsg using a theta = 0, or a random walk: 
+```{r}
+ncu_gsg_flow <- passage(
+  ncu_res_gsg_tr, 
+  origin = ncu_gsg_north, 
+  goal = ncu_gsg_south, 
+  theta = 0.0) %>%
+  rast() %>%
+  truncate(upper = 0.98)
+
+## Mapping the RSP for gsg with 
+gg_gsg_flow <- ggplot() + 
+  geom_spatraster(data = ncu_gsg_flow, aes(fill = layer)) +
+  scale_fill_viridis_c(option = "H", na.value = NA) +
+  ggtitle("Passage Probability \n RSP with \u03B8 = 0.0 \n Circuit Theory") + 
+  theme_void() + 
+  theme(
+    legend.position = "none",
+    plot.title = element_text(hjust = 0.5, size = rel(2))) + 
+  coord_quickmap(); gg_gsg_flow
+```
+
+Inspect flow in reference to landcover:
+```{r}
+gg_nlcd_flow <- ggplot() +
+  geom_spatraster(data = ncu_nlcd, aes(fill = Class)) + 
+  ggtitle("Greater Sage Grouse \n occurrences") +
+  geom_sf(data = ncu_gsg_filt) +
+  theme_void() + 
+  theme(
+    legend.position = "none",
+    plot.title = element_text(hjust = 0.5, size = rel(2)))
+
+## Now we can examine the occurrences and RSP side-by-side
+ggpubr::ggarrange(
+  gg_nlcd_flow,
+  gg_gsg_flow, 
+  ncol = 2, 
+  align = "hv"
+)
+```
+
+To tune the randomness of our flow model, we can use the `lapply` function to run `passage` with a range of theta values:
+```{r}
+ncu_gsg_flow_tune <- lapply(                # lapply function allows for repetitive tasks
+  c(0.0, 0.000001, 0.00001, 0.001, 0.1),    # range of theta values 
+  FUN = function(x){                        # set function to interate over
+    passage(                                # our passage function
+      ncu_res_gsg_tr, 
+      origin = ncu_gsg_north, 
+      goal = ncu_gsg_south, 
+      theta = x) %>%                        # set theta to `x`
+  truncate(upper = 0.98)                    # truncate the resulting raster 
+  }
+) %>%                                                  
+  stack() %>%                               # stack all resulting rasters together
+  rast()                                    # convert to terra raster object
+
+# name each raster layer based on theta parameter value
+names(ncu_gsg_flow_tune) <- c(          
+    "\u03B8 = 0.00",
+    "\u03B8 = 0.000001",
+    "\u03B8 = 0.00001",
+    "\u03B8 = 0.001",
+    "C = 0.1")
+
+# Visualize the raster outputs! 
+ggplot() + 
+  geom_spatraster(data = ncu_gsg_flow_tune) +
+  scale_fill_viridis_c(
+    "Passage \n probability \n quantile \n", 
+    option = "H", 
+    na.value = NA) +
+  ggtitle("Greater Sage Grouse \n Randomized Shortest Paths \n tuning \u03B8's \n") +
+  facet_wrap(~lyr) +
+  theme_void() + 
+  theme(
+    plot.title = element_text(size = rel(2), hjust = 0.5), 
+    legend.position = "inside",
+    legend.position.inside = c(0.85, 0.30),
+    strip.text = element_text(size = 15)) + 
+  coord_quickmap()
+```
+
+### Note that when theta gets larger, the predictions converge on a LCP! 
+
+# 5. Homework assignment
+::: {.callout-note icon=false}
+# Background:
+Greater Sage Grouse (GSG) are known as sage-brush obligates, yet there is evidence that other habitat types play an important role in their population resilience and movement behavior. For instance, GSG are known to avoid regions with high tree density, especially conifer trees. Additionally, grassland and pastureland provide critical food and cover resources for nesting hens and chicks. Lastly, extirpations of GSG have been documented at sites near major highways and areas of heavy anthropogeneic disturbance since the 1950s. GSG populations found near these areas often experience elevated stress hormones, changes in movement behavior, and increased mortality. However, influence of these landcover types--and their composition on the landscape--on the connectivity of populations of Greater Sage Grouse are largely unknown. 
+
+### Task
+Design a modeling experiment with Greater Sage Grouse using Randomized Shortest Paths. This experiment should include these key manipulations: <br>
+* Generate a alternative resistance layers incorporating roads and new habitat suitability information. Use the information from above to populate new values for relevant landcover categories. You should have at least 3 alternative resistance layers <br>
+* Vary the theta parameter at 3 levels between 0 (circuit theory) and 1 (least cost path)
+
+##### You should have at least 9 outputs (3 resistance layers x 3 theta parameters)
+
+In a word document, arrange your maps (copy+paste from R studio) and provide informative figure descriptions. Compare the maps with each other and consider their biological meaning (or lack of). How do the maps change with varying assumptions of landscape resistance and randomness of potential movements? Which regions in NCU are important for connectivity, and in which model runs? Which places are always important? Which places are only important for connectivity in certain model runs?
+:::
