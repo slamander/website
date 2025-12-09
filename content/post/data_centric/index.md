@@ -2162,9 +2162,9 @@ More complex ≠ better. Use simplest model that captures spatial structure.
 
 ## Contact & Discussion
 
-- Email: your.email@institution.edu
-- Website: www.yourwebsite.com
-- GitHub: @yourusername
+- Email: jbaecher@gmail.com
+- Website: www.alexbaecher.com
+- GitHub: @slamander
 
 **What spatial data challenges are you facing?**
 
