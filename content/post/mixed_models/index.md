@@ -9,9 +9,7 @@ categories: ["r tutorials"]
 tags: ["R packages", "functions", "getting help", "GLMM", "GAMM", "spatial autocorrelation", "temporal autocorrelation", "spatial models"]
 ---
 
-## Shiny app to compare R packages and guide the use of mixed models in R  
-
-[![Decision tool for creating mixed models in R](featured.PNG)](https://alexbaecher.shinyapps.io/glmm_gamm_info/)
+## [Shiny app to compare R packages and guide the use of mixed models in R](https://alexbaecher.shinyapps.io/glmm_gamm_info/)
 
 ### Other awesome resources:  
 #### Linear models:
