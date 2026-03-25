@@ -11,7 +11,7 @@ sections:
       #text: '<span class="text-xl">*Quantitative Ecology in Space and Time*</span>'
       subtitle: "Qμe[st]"
       text: | 
-        <span class="text-xxl">**Qμe[st]:**</span>
+        <span class="text-xxl">**Qμest:**</span>
         <span class="text-xl">**Qμ**antitative **E**cology in **S**pace and **T**ime</span>      ‎‎ 
         <br>
         <br>        ‎ 
