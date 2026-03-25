@@ -21,16 +21,16 @@ sections:
       title: <img src='media/quest_lab_emory.png?v=F' alt='Quest lab at Emory' class='w-32 h-auto mx-auto' style='width: 300px; height: auto;'>
         
       primary_action:
-        text: Download CV
-        url: https://drive.google.com/uc?export=download&id=1ehav_oiSY73HkeEZY9M-MKhj7OCCQbhz
+        text: Download CV (3/2026)
+        url: https://drive.google.com/uc?export=download&id=1A1J5ZJXHnqckGl--LIzAfYBnTdg5EUEW
       secondary_action:
         text: See publications
         url: https://www.alexbaecher.com/publication/
       announcement:
-        text: "🚨 **New publication!!!**:"
+        text: "🚨 **UPDATE!!! AUGUST 2026**:"
         link:
-          text: "Baecher et al. (2025) Science of the Total Environment"
-          url: https://drive.google.com/uc?export=download&id=18iC6ef6CvYbGusfIGgnw7IqjyQgmNUsc
+          text: "Baecher lab starts at Emory University, Dept. Environmental Science"
+          url: https://envs.emory.edu/
       announcement:
         text: "🚨 **New tutorial!!!**:"
         link:
@@ -52,7 +52,7 @@ sections:
       username: admin
       # To link to a file, upload it to your `static/uploads/` folder
       #button:
-        #url: https://drive.google.com/uc?export=download&id=1ehav_oiSY73HkeEZY9M-MKhj7OCCQbhz
+        #url: https://drive.google.com/uc?export=download&id=1A1J5ZJXHnqckGl--LIzAfYBnTdg5EUEW
     design:
         #filename: 'log_cropped.jpg'
       biography:
