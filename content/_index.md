@@ -1,7 +1,7 @@
 ---
-title: "Qμest lab | Emory University"
+title: "Qμest lab"
 type: landing
-date: 2025-01-25
+date: 2026-03-25
 draft: false
 
 sections:
