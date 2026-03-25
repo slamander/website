@@ -1,23 +1,9 @@
 ---
-# Display name
-title: Open Postdoctoral Position
-
-# Username (this should match the folder name)
-authors:
-- admin
-
-# Is this the primary user of the site?
-superuser: false
-
-# Role/position
-role: Postdoc
-
-# Organizations/Affiliations
-organizations:
-- name: "Emory University"
-  url: "https://envs.emory.edu/"
-
+title: "Open Postdoctoral Position"
+subtitle: "Postdoctoral Research Associate in Quantitative Ecology and Data Science"
+summary: "Open from July 1 to the Fall of 2026"
 ---
+
 ## Position Description:
 
 **Employer(s):**
