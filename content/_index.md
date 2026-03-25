@@ -18,10 +18,10 @@ sections:
 
   - block: hero
     content:
-      title: "Baecher lab @ Emory"
+      title: " "
       subtitle: " "
       text: | 
-        <img src='media/quest_lab_emory.png?v=F' alt='Quest lab at Emory' class='w-32 h-auto mx-auto' style='width: auto; height: auto;'>
+        <img src='media/quest_lab_emory.png?v=F' alt='Quest lab at Emory' class='w-32 h-auto mx-auto' style='width: 600px; height: auto;'>
         
       primary_action:
         text: Baecher's CV
