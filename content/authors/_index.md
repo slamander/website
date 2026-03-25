@@ -40,7 +40,7 @@ sections:
       order: desc
       filters:
         folders:
-          - post
+          - authors
         exclude_featured: false
     design:
       view: card
