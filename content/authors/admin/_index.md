@@ -48,8 +48,8 @@ work:
     date_end: ''
     summary: |
       [Department of Environmental Science](https://envs.emory.edu/)
-
-- position: Postdoctoral Research Fellow
+  
+  - position: Postdoctoral Research Fellow
     company_name: Utah State University 
     company_url: 'https://www.usu.edu/'
     company_logo: 'https://upload.wikimedia.org/wikipedia/en/b/ba/Utah_State_University_seal.svg'
