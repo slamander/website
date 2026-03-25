@@ -2,6 +2,9 @@ main:
   - name: Home
     url: '/'
     weight: 10
+  - name: Team
+    url: '/authors/'
+    weight: 20
   - name: Research
     url: '/project/'
     weight: 30
@@ -11,7 +14,7 @@ main:
   - name: Talks
     url: '/talk/'
     weight: 50
-  - name: R sandbox
+  - name: Tutorials
     url: '/post/'
     weight: 60
   - name: Contact
