@@ -18,21 +18,19 @@ sections:
 
   - block: hero
     content:
-      title: <img src='media/quest_lab_emory.png?v=F' alt='Quest lab at Emory' class='w-32 h-auto mx-auto' style='width: 300px; height: auto;'>
+      title: "Baecher lab @ Emory"
+      subtitle: "Dept. Environmental Science"
+      text: | 
+        <img src='media/quest_lab_emory.png?v=F' alt='Quest lab at Emory' class='w-32 h-auto mx-auto' style='width: 300px; height: auto;'>
         
       primary_action:
-        text: Download CV (3/2026)
+        text: Baecher CV
         url: https://drive.google.com/uc?export=download&id=1A1J5ZJXHnqckGl--LIzAfYBnTdg5EUEW
       secondary_action:
-        text: See publications
+        text: Quest lab publications
         url: https://www.alexbaecher.com/publication/
       announcement:
-        text: "🚨 **UPDATE!!! AUGUST 2026**:"
-        link:
-          text: "Baecher lab starts at Emory University, Dept. Environmental Science"
-          url: https://envs.emory.edu/
-      announcement:
-        text: "🚨 **New tutorial!!!**:"
+        text: "🚨 **New coding tutorial!**:"
         link:
           text: "Spatial structures for ecological models in R"
           url: https://www.alexbaecher.com/post/ecological-spatial-structures/
@@ -47,39 +45,38 @@ sections:
           parallax: true
           text_color_light: true
 
-  - block: resume-biography
-    content:
-      username: admin
-      # To link to a file, upload it to your `static/uploads/` folder
-      #button:
-        #url: https://drive.google.com/uc?export=download&id=1A1J5ZJXHnqckGl--LIzAfYBnTdg5EUEW
-    design:
-        #filename: 'log_cropped.jpg'
-      biography:
-        style: ''
+  # - block: resume-biography
+  #   content:
+  #     username: admin
+  #     # To link to a file, upload it to your `static/uploads/` folder
+  #     #button:
+  #       #url: https://drive.google.com/uc?export=download&id=1A1J5ZJXHnqckGl--LIzAfYBnTdg5EUEW
+  #   design:
+  #       #filename: 'log_cropped.jpg'
+  #     biography:
+  #       style: ''
 
-  - block: markdown
-    content:
-      title: "Education"
-      text: |
-        **Ph.D., Interdisciplinary Ecology** | University of Florida (2024)
-         - *Fellowship:* Doctoral Preeminence Research Fellowship
-         - [Scheffers lab](https://www.schefferslab.com/) (Dept. Wildlife Ecology and Conservation) 
+  # - block: markdown
+  #   content:
+  #     title: "Education"
+  #     text: |
+  #       **Ph.D., Interdisciplinary Ecology** | University of Florida (2024)
+  #        - *Fellowship:* Doctoral Preeminence Research Fellowship
+  #        - [Scheffers lab](https://www.schefferslab.com/) (Dept. Wildlife Ecology and Conservation) 
 
-        **M.Sc., Biology** | Eastern Kentucky University (2017)
-         - *Teaching Assistant*: Human Anatomy
-         - [Richter lab](https://richterlab.weebly.com/) (Dept. Biology) 
+  #       **M.Sc., Biology** | Eastern Kentucky University (2017)
+  #        - *Teaching Assistant*: Human Anatomy
+  #        - [Richter lab](https://richterlab.weebly.com/) (Dept. Biology) 
 
-        **B.Sc., Biology** | University of Arkansas (2014)
-         - *Research Assistant*
-         - [Willson lab](https://www.willsonlab.com/) (Dept. Biology) 
+  #       **B.Sc., Biology** | University of Arkansas (2014)
+  #        - *Research Assistant*
+  #        - [Willson lab](https://www.willsonlab.com/) (Dept. Biology) 
 
-
-  - block: experience
-    content:
-      username: admin
-    design:
-      date_format: 'January 2006'
+  # - block: experience
+  #   content:
+  #     username: admin
+  #   design:
+  #     date_format: 'January 2006'
 
   - block: collection
     content:
@@ -111,20 +108,20 @@ sections:
       view: citation
       columns: 2
 
-  - block: collection
-    content:
-      title: "Select talks"
-      count: 3
-      archive:
-        enable: true
-        text: "See all talks →"
-        link: talk/
-      filters:
-        folders:
-          - talk
-    design:
-      view: card
-      columns: 2
+  # - block: collection
+  #   content:
+  #     title: "Select talks"
+  #     count: 3
+  #     archive:
+  #       enable: true
+  #       text: "See all talks →"
+  #       link: talk/
+  #     filters:
+  #       folders:
+  #         - talk
+  #   design:
+  #     view: card
+  #     columns: 2
 
   - block: collection
     content:
