@@ -8,10 +8,10 @@ appearance:
 # SEO and site info
 marketing:
   seo:
-    site_type: Person
+    site_type: Organization
     local_business_type: ''
-    org_name: ''
-    description: "Baecher research"
+    org_name: 'Quest Lab'
+    description: "J Alex Baecher's research lab at Emory University"
     twitter: 'AlexBaecher'
   analytics:
     google_analytics: ''

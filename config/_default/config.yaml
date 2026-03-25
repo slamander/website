@@ -1,7 +1,7 @@
 # Hugo Configuration
 # Documentation: https://gohugo.io/getting-started/configuration/
 
-title: 'Baecher Research'
+title: 'Quest Lab'
 baseURL: 'https://alexbaecher.com'
 copyright: '© {year} Alex Baecher'
 defaultContentLanguage: 'en'
