@@ -19,12 +19,14 @@ sections:
   - block: hero
     content:
       title: "Baecher lab @ Emory"
-      subtitle: "Dept. Environmental Science"
+      subtitle: " "
       text: | 
-        <img src='media/quest_lab_emory.png' alt='Quest lab at Emory'>
+        <span class="text-xxl">**Qμe[st]:**</span>
+        <br>        ‎ 
+        <img src='media/quest_lab_emory.png' alt='Quest lab at Emory' class='w-32 h-auto mx-auto' style='width: 300px; height: auto;'>
         
       primary_action:
-        text: Baecher CV
+        text: Baecher's CV
         url: https://drive.google.com/uc?export=download&id=1A1J5ZJXHnqckGl--LIzAfYBnTdg5EUEW
       secondary_action:
         text: Quest lab publications
