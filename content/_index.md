@@ -18,8 +18,9 @@ sections:
 
   - block: hero
     content:
-      title: " "
-      subtitle: " "
+      title: | 
+        <img src='media/quest_lab_emory.png?v=F' alt='Quest lab at Emory' class='w-32 h-auto mx-auto' style='width: 600px; height: auto;'>
+      subtitle: "Research, Education, and Outreach by J. Alex Baecher"
       text: | 
         <img src='media/quest_lab_emory.png?v=F' alt='Quest lab at Emory' class='w-32 h-auto mx-auto' style='width: 600px; height: auto;'>
         
