@@ -1,21 +1,24 @@
 ---
-title: "Qμest"
+title: "Qμest lab | Emory University"
 type: landing
 date: 2025-01-25
 draft: false
 
 sections:
+  # - block: hero
+  #   content:
+  #     title: "Baecher research"
+  #     subtitle: "Qμe[st]"
+  #     text: | 
+  #       <span class="text-xxl">**Qμe[st]:**</span>
+  #       <span class="text-xl">**Qμ**antitative **E**cology in **S**pace and **T**ime</span>      ‎‎ 
+  #       <br>
+  #       <br>        ‎ 
+  #       <img src='media/quest_lab_emory.png?v=F' alt='Quest lab at Emory' class='w-32 h-auto mx-auto' style='width: 300px; height: auto;'>
+
   - block: hero
     content:
-      title: "Baecher research"
-      #text: '<span class="text-xl">*Quantitative Ecology in Space and Time*</span>'
-      subtitle: "Qμe[st]"
-      text: | 
-        <span class="text-xxl">**Qμe[st]:**</span>
-        <span class="text-xl">**Qμ**antitative **E**cology in **S**pace and **T**ime</span>      ‎‎ 
-        <br>
-        <br>        ‎ 
-        <img src='media/badge_kentucki.png?v=F' alt='Plethodon kentucki' class='w-32 h-auto mx-auto' style='width: 300px; height: auto;'>
+      title: <img src='media/quest_lab_emory.png?v=F' alt='Quest lab at Emory' class='w-32 h-auto mx-auto' style='width: 300px; height: auto;'>
         
       primary_action:
         text: Download CV
