@@ -21,9 +21,7 @@ sections:
       title: "Baecher lab @ Emory"
       subtitle: " "
       text: | 
-        <span class="text-xxl">**Qμe[st]:**</span>
-        <br>        ‎ 
-        <img src='media/quest_lab_emory.png' alt='Quest lab at Emory' class='w-32 h-auto mx-auto' style='width: 300px; height: auto;'>
+        <img src='media/quest_lab_emory.png?v=F' alt='Quest lab at Emory' class='w-32 h-auto mx-auto' style='width: auto; height: auto;'>
         
       primary_action:
         text: Baecher's CV
