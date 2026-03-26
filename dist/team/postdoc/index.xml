@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Open Postdoctoral Position | Quest Lab</title>
+    <link>http://localhost:1313/team/postdoc/</link>
+      <atom:link href="http://localhost:1313/team/postdoc/index.xml" rel="self" type="application/rss+xml" />
+    <description>Open Postdoctoral Position</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><copyright>© 2026 Alex Baecher</copyright>
+    <image>
+      <url>http://localhost:1313/media/logo_hu2039277577754200582.png</url>
+      <title>Open Postdoctoral Position</title>
+      <link>http://localhost:1313/team/postdoc/</link>
+    </image>
+    
+  </channel>
+</rss>

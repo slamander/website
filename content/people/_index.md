@@ -2,7 +2,6 @@
 title: Quest Lab Team
 type: landing
 date: 2026-01-25
----
 
 sections:
   - block: people
@@ -19,3 +18,4 @@ sections:
       show_interests: false
       show_role: true
       show_social: true
+---

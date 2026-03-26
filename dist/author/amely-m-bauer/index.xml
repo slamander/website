@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Amely M Bauer | Quest Lab</title>
+    <link>http://localhost:1313/author/amely-m-bauer/</link>
+      <atom:link href="http://localhost:1313/author/amely-m-bauer/index.xml" rel="self" type="application/rss+xml" />
+    <description>Amely M Bauer</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><copyright>© 2026 Alex Baecher</copyright><lastBuildDate>Wed, 08 Oct 2025 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>http://localhost:1313/media/logo_hu2039277577754200582.png</url>
+      <title>Amely M Bauer</title>
+      <link>http://localhost:1313/author/amely-m-bauer/</link>
+    </image>
+    
+    <item>
+      <title>Linking hosts, landscapes, and climate to advance zoonotic arbovirus forecasting</title>
+      <link>http://localhost:1313/publication/anand-preprint-scireports/</link>
+      <pubDate>Wed, 08 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/publication/anand-preprint-scireports/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Toward ecological forecasting of West Nile virus in Florida: Insights from two decades of sentinel chicken surveillance</title>
+      <link>http://localhost:1313/publication/baecher-2025-stoten/</link>
+      <pubDate>Tue, 09 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/publication/baecher-2025-stoten/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

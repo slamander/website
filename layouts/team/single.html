@@ -1,0 +1,40 @@
+{{ define "main" }}
+<div style="max-width: 900px; margin: 3rem auto; padding: 0 2rem;">
+
+  <div style="display: flex; flex-direction: row; gap: 3rem; align-items: flex-start; margin-bottom: 3rem; flex-wrap: wrap;">
+    
+    {{ $avatar := (.Resources.ByType "image").GetMatch "*avatar*" }}
+    {{ if $avatar }}
+      {{ $avatar_image := $avatar.Fill "270x270 Center" }}
+      <img src="{{ $avatar_image.RelPermalink }}" alt="{{ .Title }}" 
+           style="border-radius: 50%; width: 180px; height: 180px; object-fit: cover; flex-shrink: 0;">
+    {{ end }}
+
+    <div style="flex: 1; min-width: 200px;">
+      <h1 style="font-size: 2rem; font-weight: bold; margin-bottom: 0.5rem;">{{ .Title }}</h1>
+      {{ with .Params.role }}
+        <p style="font-size: 1.1rem; opacity: 0.75; margin-bottom: 1rem;">{{ . }}</p>
+      {{ end }}
+      {{ with .Params.organizations }}
+        {{ range . }}
+          <p style="margin-bottom: 0.25rem;"><a href="{{ .url }}" style="opacity: 0.75;">{{ .name }}</a></p>
+        {{ end }}
+      {{ end }}
+      {{ with .Params.profiles }}
+        <div style="display: flex; gap: 1rem; margin-top: 1rem; flex-wrap: wrap;">
+          {{ range . }}
+            <a href="{{ .link }}" style="opacity: 0.75;" title="{{ .icon }}">
+              {{ partial "functions/get_icon" (dict "name" .icon "attributes" "style=\"width:24px;height:24px;\"") }}
+            </a>
+          {{ end }}
+        </div>
+      {{ end }}
+    </div>
+  </div>
+
+  <div style="line-height: 1.8; font-size: 1rem;">
+    {{ .Content }}
+  </div>
+
+</div>
+{{ end }}

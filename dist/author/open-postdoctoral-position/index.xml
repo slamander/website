@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Open Postdoctoral Position | Quest Lab</title>
+    <link>http://localhost:1313/author/open-postdoctoral-position/</link>
+      <atom:link href="http://localhost:1313/author/open-postdoctoral-position/index.xml" rel="self" type="application/rss+xml" />
+    <description>Open Postdoctoral Position</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><copyright>© 2026 Alex Baecher</copyright>
+    <image>
+      <url>http://localhost:1313/author/open-postdoctoral-position/avatar_hu9293261230629041031.jpg</url>
+      <title>Open Postdoctoral Position</title>
+      <link>http://localhost:1313/author/open-postdoctoral-position/</link>
+    </image>
+    
+    <item>
+      <title>Open Position!!!</title>
+      <link>http://localhost:1313/team/postdoc/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/team/postdoc/</guid>
+      <description>&lt;p&gt;We are actively recruiting a Postdoctoral Research Associate in Quantitative Ecology and Data Science. The position is for a 1 year term (beginning Fall 2026), with the possibility for extension a second and third year based on performance.&lt;/p&gt;
+&lt;p&gt;See the full position description and application instructions &lt;a href=&#34;http://localhost:1313/people/postdoctoral-researcher/&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;We will begin evaluating applications on April 31st, but applications will be accepted until the position is filled.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Open Postdoctoral Position</title>
+      <link>http://localhost:1313/author/open-postdoctoral-position/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/author/open-postdoctoral-position/</guid>
+      <description>&lt;p&gt;We are actively recruiting a Postdoctoral Research Associate in Quantitative Ecology and Data Science. The position is for a 1 year term (beginning Fall 2026), with the possibility for extension a second and third year based on performance.&lt;/p&gt;
+&lt;p&gt;See the full position description and application instructions &lt;a href=&#34;http://localhost:1313/people/postdoctoral-researcher/&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;We will begin evaluating applications on April 31st, but applications will be accepted until the position is filled.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

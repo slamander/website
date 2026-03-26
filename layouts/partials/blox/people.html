@@ -1,0 +1,83 @@
+{{/* Hugo Blox: People */}}
+{{ $page := .wcPage }}
+{{ $block := .wcBlock }}
+{{ $show_social := $block.design.show_social | default false }}
+{{ $show_interests := $block.design.show_interests | default true }}
+{{ $show_organizations := $block.design.show_organizations | default false }}
+{{ $show_role := $block.design.show_role | default true }}
+
+<div style="max-width:1100px; margin:0 auto; padding:2rem 1rem;">
+
+  {{ with $block.content.title }}
+    <div style="text-align:center; margin-bottom:2.5rem;">
+      <h1 style="font-size:2.5rem; font-weight:bold;">{{ . | markdownify | emojify }}</h1>
+      {{ with $block.content.subtitle }}
+        <p style="margin-top:0.5rem; opacity:0.75;">{{ . | markdownify | emojify }}</p>
+      {{ end }}
+    </div>
+  {{ end }}
+
+  {{ with $block.content.text }}
+    <div style="margin-bottom:2rem;">{{ . | emojify | $page.RenderString }}</div>
+  {{ end }}
+
+  {{ range $block.content.user_groups }}
+    {{ $query := where (where site.Pages "Section" "team") ".Params.user_groups" "intersect" (slice .) }}
+
+    {{ $sort_by := $block.content.sort_by | default "Params.last_name" }}
+    {{ $sort_by = partial "blox-core/functions/get_sort_by_parameter" $sort_by }}
+    {{ $sort_ascending := $block.content.sort_ascending | default true }}
+    {{ $sort_order := cond $sort_ascending "asc" "desc" }}
+    {{ $query = sort $query $sort_by $sort_order }}
+
+    {{ if $query | and (gt (len $block.content.user_groups) 1) }}
+      <h2 style="text-align:center; font-size:1.75rem; font-weight:600; margin:2rem 0 1.5rem;">
+        {{ . | markdownify }}
+      </h2>
+    {{ end }}
+
+    <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:2rem; margin-bottom:2rem;">
+      {{ range $query }}
+        {{ $avatar := (.Resources.ByType "image").GetMatch "*avatar*" }}
+        {{ $link := "" }}
+        {{ with site.GetPage (printf "/team/%s" (path.Base .File.Dir)) }}
+          {{ $link = .RelPermalink }}
+        {{ end }}
+
+        <div style="text-align:center; width:200px;">
+          {{ if $avatar }}
+            {{ $avatar_image := $avatar.Fill "270x270 Center" }}
+            {{ with $link }}<a href="{{ . }}">{{ end }}
+            <img src="{{ $avatar_image.RelPermalink }}" alt="{{ .Title }}"
+                 style="border-radius:50%; width:160px; height:160px; object-fit:cover; margin:0 auto 1rem; display:block;">
+            {{ if $link }}</a>{{ end }}
+          {{ end }}
+
+          <div>
+            <h2 style="font-size:1.1rem; font-weight:bold; margin-bottom:0.25rem;">
+              {{ with $link }}<a href="{{ . }}" style="text-decoration:none;">{{ end }}
+              {{ .Title }}
+              {{ if $link }}</a>{{ end }}
+            </h2>
+            {{ if and $show_organizations .Params.organizations }}
+              {{ range .Params.organizations }}
+                <p style="font-size:0.9rem; opacity:0.75; margin:0.1rem 0;">{{ .name }}</p>
+              {{ end }}
+            {{ end }}
+            {{ if and $show_role .Params.role }}
+              <p style="font-size:0.9rem; opacity:0.75; margin:0.25rem 0;">
+                {{ .Params.role | markdownify | emojify }}
+              </p>
+            {{ end }}
+            {{ if $show_social }}{{ partial "social_links" . }}{{ end }}
+            {{ if and $show_interests .Params.interests }}
+              <p style="font-size:0.85rem; opacity:0.6; margin-top:0.5rem;">
+                {{ delimit .Params.interests ", " | markdownify | emojify }}
+              </p>
+            {{ end }}
+          </div>
+        </div>
+      {{ end }}
+    </div>
+  {{ end }}
+</div>

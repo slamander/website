@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Temporal Autocorrelation | Quest Lab</title>
+    <link>http://localhost:1313/tag/temporal-autocorrelation/</link>
+      <atom:link href="http://localhost:1313/tag/temporal-autocorrelation/index.xml" rel="self" type="application/rss+xml" />
+    <description>Temporal Autocorrelation</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><copyright>© 2026 Alex Baecher</copyright><lastBuildDate>Thu, 11 Dec 2025 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>http://localhost:1313/media/logo_hu2039277577754200582.png</url>
+      <title>Temporal Autocorrelation</title>
+      <link>http://localhost:1313/tag/temporal-autocorrelation/</link>
+    </image>
+    
+    <item>
+      <title>Mixed effects models in R</title>
+      <link>http://localhost:1313/post/mixed-effects-models-in-r/</link>
+      <pubDate>Thu, 11 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/mixed-effects-models-in-r/</guid>
+      <description>&lt;h2 id=&#34;shiny-app-to-compare-r-packages-and-guide-the-use-of-mixed-models-in-rhttpsalexbaechershinyappsioglmm_gamm_info&#34;&gt;&lt;a href=&#34;https://alexbaecher.shinyapps.io/glmm_gamm_info/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Shiny app to compare R packages and guide the use of mixed models in R&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id=&#34;other-awesome-resources&#34;&gt;Other awesome resources:&lt;/h3&gt;
+&lt;h4 id=&#34;linear-models&#34;&gt;Linear models:&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://bbolker.github.io/mixedmodels-misc/glmmFAQ.html#spatial-and-temporal-correlation-models-heteroscedasticity-r-side-models&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Ben Bolker&amp;rsquo;s GLMM FAQ&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;r-sig-mixed-models@r-project.org&#34;&gt;The Mixed Model forum&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://ms.mcmaster.ca/~bolker/emdbook/book.pdf&#34;&gt;Ben Bolker&amp;rsquo;s book: &amp;ldquo;Ecological Models and Data in R&amp;rdquo;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.sciencedirect.com/book/monograph/9780443137150/applied-statistical-modelling-for-ecologists&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Kéry and Kellner&amp;rsquo;s book: &amp;ldquo;Applied Statistical Modelling for Ecologists&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;gams&#34;&gt;GAMs:&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.routledge.com/Generalized-Additive-Models-An-Introduction-with-R-Second-Edition/Wood/p/book/9781498728331&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Wood&amp;rsquo;s book: &amp;ldquo;Generalized Additive Models&amp;rdquo;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;bayesian--inla--spde&#34;&gt;Bayesian / INLA + SPDE:&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://becarioprecario.bitbucket.io/spde-gitbook/index.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Krainski&amp;rsquo;s book (aka the INLA book)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

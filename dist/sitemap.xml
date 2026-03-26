@@ -2,62 +2,266 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://localhost:1313/</loc>
+    <lastmod>2026-03-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/people/</loc>
+    <lastmod>2026-01-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/author/andrew-marx/</loc>
+    <lastmod>2025-12-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/authors/</loc>
+    <lastmod>2025-12-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/author/brett-r-scheffers/</loc>
+    <lastmod>2025-12-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/talk/exp_elic/</loc>
+    <lastmod>2025-12-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/author/j-alex-baecher/</loc>
+    <lastmod>2025-12-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/author/luke-evans/</loc>
+    <lastmod>2025-12-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/author/maru-iezzi/</loc>
+    <lastmod>2025-12-19T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/talk/</loc>
     <lastmod>2025-12-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/publication-type/2/</loc>
-    <lastmod>2025-07-04T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/author/rj-fletcher/</loc>
+    <lastmod>2025-12-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/author/amy-m-bauer/</loc>
-    <lastmod>2025-07-04T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/authors/</loc>
-    <lastmod>2025-07-04T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tag/distributions/</loc>
-    <lastmod>2025-07-04T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/author/j-alex-baecher/</loc>
-    <lastmod>2025-07-04T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/author/james-t-thorson/</loc>
-    <lastmod>2025-07-04T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/author/lindsay-p-campbell/</loc>
-    <lastmod>2025-07-04T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tag/modeling/</loc>
-    <lastmod>2025-07-04T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/publication_types/</loc>
-    <lastmod>2025-07-04T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/publication/</loc>
-    <lastmod>2025-07-04T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/author/robert-guralnick/</loc>
-    <lastmod>2025-07-04T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tag/spatial-scale/</loc>
-    <lastmod>2025-07-04T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/talk/samc_sotm/</loc>
+    <lastmod>2025-12-19T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/</loc>
-    <lastmod>2025-07-04T00:00:00+00:00</lastmod>
+    <lastmod>2025-12-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/publication/baecher_2025_stoten/</loc>
-    <lastmod>2025-07-04T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/tag/workshop/</loc>
+    <lastmod>2025-12-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/</loc>
+    <lastmod>2025-12-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tag/functions/</loc>
+    <lastmod>2025-12-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tag/gamm/</loc>
+    <lastmod>2025-12-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tag/getting-help/</loc>
+    <lastmod>2025-12-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tag/glmm/</loc>
+    <lastmod>2025-12-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/post/mixed-effects-models-in-r/</loc>
+    <lastmod>2025-12-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tag/r-packages/</loc>
+    <lastmod>2025-12-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/category/r-tutorials/</loc>
+    <lastmod>2025-12-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tag/spatial-autocorrelation/</loc>
+    <lastmod>2025-12-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tag/spatial-models/</loc>
+    <lastmod>2025-12-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tag/temporal-autocorrelation/</loc>
+    <lastmod>2025-12-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tag/amt-package/</loc>
+    <lastmod>2025-11-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tag/areal-data/</loc>
+    <lastmod>2025-11-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tag/bayesian-spatial-models/</loc>
+    <lastmod>2025-11-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tag/biodiversity/</loc>
+    <lastmod>2025-11-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tag/bym-model/</loc>
+    <lastmod>2025-11-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tag/car-models/</loc>
+    <lastmod>2025-11-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tag/conservation/</loc>
+    <lastmod>2025-11-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tag/ecological-modeling/</loc>
+    <lastmod>2025-11-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tag/gam/</loc>
+    <lastmod>2025-11-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tag/gaussian-processes/</loc>
+    <lastmod>2025-11-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tag/geostatistics/</loc>
+    <lastmod>2025-11-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tag/glm/</loc>
+    <lastmod>2025-11-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tag/gps-tracking/</loc>
+    <lastmod>2025-11-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tag/habitat-selection/</loc>
+    <lastmod>2025-11-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tag/hierarchical-models/</loc>
+    <lastmod>2025-11-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tag/kriging/</loc>
+    <lastmod>2025-11-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tag/landscape-ecology/</loc>
+    <lastmod>2025-11-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tag/matern-covariance/</loc>
+    <lastmod>2025-11-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tag/mesh/</loc>
+    <lastmod>2025-11-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tag/mgcv/</loc>
+    <lastmod>2025-11-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tag/momentuhmm/</loc>
+    <lastmod>2025-11-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tag/movement-ecology/</loc>
+    <lastmod>2025-11-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tag/nearest-neighbor-gp/</loc>
+    <lastmod>2025-11-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tag/point-pattern-analysis/</loc>
+    <lastmod>2025-11-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tag/point-referenced-data/</loc>
+    <lastmod>2025-11-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tag/quarto/</loc>
+    <lastmod>2025-11-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tag/r-programming/</loc>
+    <lastmod>2025-11-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tag/r-inla/</loc>
+    <lastmod>2025-11-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tag/reduced-rank-gp/</loc>
+    <lastmod>2025-11-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tag/spatial-cross-validation/</loc>
+    <lastmod>2025-11-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tag/spatial-data-science/</loc>
+    <lastmod>2025-11-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tag/spatial-ecology/</loc>
+    <lastmod>2025-11-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tag/spatial-random-effects/</loc>
+    <lastmod>2025-11-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tag/spatial-splines/</loc>
+    <lastmod>2025-11-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tag/spatial-statistics/</loc>
+    <lastmod>2025-11-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/post/ecological-spatial-structures/</loc>
+    <lastmod>2025-11-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tag/spatstat/</loc>
+    <lastmod>2025-11-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tag/spde/</loc>
+    <lastmod>2025-11-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tag/species-distribution-models/</loc>
+    <lastmod>2025-11-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tag/step-selection-functions/</loc>
+    <lastmod>2025-11-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tag/telemetry/</loc>
+    <lastmod>2025-11-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tag/tutorial/</loc>
+    <lastmod>2025-11-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tag/wildlife-ecology/</loc>
+    <lastmod>2025-11-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/talk/seriscc_seminar/</loc>
+    <lastmod>2025-11-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tag/talk/</loc>
+    <lastmod>2025-11-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/publication-type/2/</loc>
+    <lastmod>2025-10-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/author/amely-m-bauer/</loc>
+    <lastmod>2025-10-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tag/distributions/</loc>
+    <lastmod>2025-10-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/author/james-t-thorson/</loc>
+    <lastmod>2025-10-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/author/lindsay-p-campbell/</loc>
+    <lastmod>2025-10-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/publication/anand-preprint-scireports/</loc>
+    <lastmod>2025-10-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tag/modeling/</loc>
+    <lastmod>2025-10-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/author/nathan-burkett-cadena/</loc>
+    <lastmod>2025-10-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/publication_types/</loc>
+    <lastmod>2025-10-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/publication/</loc>
+    <lastmod>2025-10-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/author/robert-guralnick/</loc>
+    <lastmod>2025-10-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tag/spatial-scale/</loc>
+    <lastmod>2025-10-08T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/author/v-a-askshay/</loc>
-    <lastmod>2025-07-04T00:00:00+00:00</lastmod>
+    <lastmod>2025-10-08T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tag/vector-born-disease/</loc>
-    <lastmod>2025-07-04T00:00:00+00:00</lastmod>
+    <lastmod>2025-10-08T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/author/yasmin-n-tavares/</loc>
-    <lastmod>2025-07-04T00:00:00+00:00</lastmod>
+    <lastmod>2025-10-08T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/author/yesenia-sanchez/</loc>
-    <lastmod>2025-07-04T00:00:00+00:00</lastmod>
+    <lastmod>2025-10-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/publication/baecher-2025-stoten/</loc>
+    <lastmod>2025-09-09T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/project/disease-ecology/</loc>
     <lastmod>2025-03-15T00:00:00+00:00</lastmod>
@@ -86,13 +290,7 @@
     <loc>http://localhost:1313/project/integrated-population-modeling/</loc>
     <lastmod>2025-02-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tag/landscape-ecology/</loc>
-    <lastmod>2025-02-15T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/tag/r/</loc>
-    <lastmod>2025-02-15T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tag/spatial-ecology/</loc>
     <lastmod>2025-02-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tag/stochasticity/</loc>
@@ -101,19 +299,10 @@
     <loc>http://localhost:1313/post/</loc>
     <lastmod>2025-01-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/</loc>
-    <lastmod>2025-01-25T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/author/brett-r.-scheffers/</loc>
-    <lastmod>2024-12-08T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tag/conservation/</loc>
-    <lastmod>2024-12-08T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/publication/evans_2025_fee/</loc>
     <lastmod>2024-12-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/author/luke-j.-evans/</loc>
+    <loc>http://localhost:1313/author/luke-j-evans/</loc>
     <lastmod>2024-12-08T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tag/biotic-interactions/</loc>
@@ -140,13 +329,13 @@
     <loc>http://localhost:1313/tag/data-resolution/</loc>
     <lastmod>2024-06-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/author/david-h.-klinges/</loc>
+    <loc>http://localhost:1313/author/david-h-klinges/</loc>
     <lastmod>2024-06-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/author/ilya-m.-d.-maclean/</loc>
+    <loc>http://localhost:1313/author/ilya-m-d-maclean/</loc>
     <lastmod>2024-06-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/author/isabel-c.-barrio/</loc>
+    <loc>http://localhost:1313/author/isabel-c-barrio/</loc>
     <lastmod>2024-06-26T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/author/ivan-nijs/</loc>
@@ -161,7 +350,7 @@
     <loc>http://localhost:1313/author/joannes-guillemot/</loc>
     <lastmod>2024-06-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/author/jonas-j.-lembrechts/</loc>
+    <loc>http://localhost:1313/author/jonas-j-lembrechts/</loc>
     <lastmod>2024-06-26T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/author/jonathan-lenoir/</loc>
@@ -221,7 +410,7 @@
     <loc>http://localhost:1313/author/brit-van-amerom/</loc>
     <lastmod>2024-04-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/author/brunno-f.-oliveira/</loc>
+    <loc>http://localhost:1313/author/brunno-f-oliveira/</loc>
     <lastmod>2024-04-18T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/author/fabricio-villalobos/</loc>
@@ -230,13 +419,13 @@
     <loc>http://localhost:1313/author/gael-grenouillet/</loc>
     <lastmod>2024-04-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/author/gretta-t.-pecl/</loc>
+    <loc>http://localhost:1313/author/gretta-t-pecl/</loc>
     <lastmod>2024-04-18T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/author/i-ching-chen/</loc>
     <lastmod>2024-04-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/author/jake-a.-lawlor/</loc>
+    <loc>http://localhost:1313/author/jake-a-lawlor/</loc>
     <lastmod>2024-04-18T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/author/jennifer-sunday/</loc>
@@ -248,10 +437,10 @@
     <loc>http://localhost:1313/author/jonathan-rolland/</loc>
     <lastmod>2024-04-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/author/laura-m.-thompson/</loc>
+    <loc>http://localhost:1313/author/laura-m-thompson/</loc>
     <lastmod>2024-04-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/author/lesley-t.-lancaster/</loc>
+    <loc>http://localhost:1313/author/lesley-t-lancaster/</loc>
     <lastmod>2024-04-18T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/author/lise-comte/</loc>
@@ -260,25 +449,25 @@
     <loc>http://localhost:1313/author/madeleine-rubenstein/</loc>
     <lastmod>2024-04-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/author/malin-l.-pinsky/</loc>
+    <loc>http://localhost:1313/author/malin-l-pinsky/</loc>
     <lastmod>2024-04-18T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/publication/bioshifts-2024-nree/</loc>
     <lastmod>2024-04-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/author/nikki-moore/</loc>
+    <loc>http://localhost:1313/author/nikki-a-moore/</loc>
     <lastmod>2024-04-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/author/r.m.w.j.-bandara/</loc>
+    <loc>http://localhost:1313/author/r-m-w-j-bandara/</loc>
     <lastmod>2024-04-18T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/author/romain-bertrand/</loc>
     <lastmod>2024-04-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/author/sarah-e.-diamond/</loc>
+    <loc>http://localhost:1313/author/sarah-e-diamond/</loc>
     <lastmod>2024-04-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/author/sarah-r.-weiskopf/</loc>
+    <loc>http://localhost:1313/author/sarah-r-weiskopf/</loc>
     <lastmod>2024-04-18T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tag/species-range-shift/</loc>
@@ -287,16 +476,7 @@
     <loc>http://localhost:1313/publication/bioshifts-2024-gcb/</loc>
     <lastmod>2024-04-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/author/i-ching-chen/</loc>
-    <lastmod>2024-04-13T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/author/madeleine-a.-rubenstein/</loc>
-    <lastmod>2024-04-13T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/author/nikki-a.-moore/</loc>
-    <lastmod>2024-04-13T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/author/r.-m.-w.-j.-bandara/</loc>
+    <loc>http://localhost:1313/author/madeleine-a-rubenstein/</loc>
     <lastmod>2024-04-13T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/author/sarah-diamond/</loc>
@@ -308,25 +488,10 @@
     <loc>http://localhost:1313/project/geostatistical-modeling/</loc>
     <lastmod>2024-02-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/author/andrew-marx/</loc>
-    <lastmod>2023-12-19T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/talk/samc_iale/</loc>
     <lastmod>2023-12-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/author/maru-iezzi/</loc>
-    <lastmod>2023-12-19T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/author/rj-fletcher/</loc>
-    <lastmod>2023-12-19T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tag/workshop/</loc>
-    <lastmod>2023-12-19T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/talk/sotm_talk/</loc>
-    <lastmod>2023-05-17T13:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tag/talk/</loc>
     <lastmod>2023-05-17T13:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tag/circuit-theory/</loc>
@@ -338,7 +503,7 @@
     <loc>http://localhost:1313/tag/spatially-absorbing-markov-chains/</loc>
     <lastmod>2023-03-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/author/elizabeth-a.-roznik/</loc>
+    <loc>http://localhost:1313/author/elizabeth-a-roznik/</loc>
     <lastmod>2023-03-05T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/publication/baecher-2023-jae/</loc>
@@ -347,7 +512,7 @@
     <loc>http://localhost:1313/tag/niche-partitioning/</loc>
     <lastmod>2023-03-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/author/steve-a.-johnson/</loc>
+    <loc>http://localhost:1313/author/steve-a-johnson/</loc>
     <lastmod>2023-03-05T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/project/climate-species-redistribution/</loc>
@@ -365,7 +530,7 @@
     <loc>http://localhost:1313/talk/bioshifts_talk/</loc>
     <lastmod>2022-11-17T13:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/author/edmund-w.-basham/</loc>
+    <loc>http://localhost:1313/author/edmund-w-basham/</loc>
     <lastmod>2022-09-08T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tag/rainforest/</loc>
@@ -374,19 +539,10 @@
     <loc>http://localhost:1313/publication/basham-2022-br/</loc>
     <lastmod>2022-09-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/</loc>
-    <lastmod>2022-08-12T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/tag/data-frames/</loc>
     <lastmod>2022-08-12T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tag/data-wrangling/</loc>
-    <lastmod>2022-08-12T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tag/functions/</loc>
-    <lastmod>2022-08-12T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tag/getting-help/</loc>
     <lastmod>2022-08-12T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/post/r-intro/</loc>
@@ -396,9 +552,6 @@
     <lastmod>2022-08-12T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tag/introduction/</loc>
-    <lastmod>2022-08-12T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/category/r-tutorials/</loc>
     <lastmod>2022-08-12T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tag/tidyverse/</loc>
@@ -464,9 +617,6 @@
     <loc>http://localhost:1313/tag/conductance/</loc>
     <lastmod>2020-08-12T00:40:04-07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tag/ecological-modeling/</loc>
-    <lastmod>2020-08-12T00:40:04-07:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/post/connectivity-script/</loc>
     <lastmod>2020-08-12T00:40:04-07:00</lastmod>
   </url><url>
@@ -479,10 +629,10 @@
     <loc>http://localhost:1313/tag/gape-limited-predators/</loc>
     <lastmod>2020-03-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/author/john-d.-willson/</loc>
+    <loc>http://localhost:1313/author/jd-willson/</loc>
     <lastmod>2020-03-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/author/meredith-c.-swarthwout/</loc>
+    <loc>http://localhost:1313/author/meredith-c-swarthwout/</loc>
     <lastmod>2020-03-04T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/author/philip-vogrinc/</loc>
@@ -497,7 +647,7 @@
     <loc>http://localhost:1313/tag/malformation/</loc>
     <lastmod>2019-12-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/author/stephen-c.-richter/</loc>
+    <loc>http://localhost:1313/author/stephen-c-richter/</loc>
     <lastmod>2019-12-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/publication/baecher-2020-thb/</loc>
@@ -509,7 +659,7 @@
     <loc>http://localhost:1313/tag/hcg/</loc>
     <lastmod>2019-08-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/author/kristin-m.-hinkson/</loc>
+    <loc>http://localhost:1313/author/kristin-m-hinkson/</loc>
     <lastmod>2019-08-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/author/sinlan-poo/</loc>
@@ -521,19 +671,16 @@
     <loc>http://localhost:1313/publication/baecher-2018-ee/</loc>
     <lastmod>2018-12-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/author/chelsea-s.-kross/</loc>
+    <loc>http://localhost:1313/author/chelsea-s-kross/</loc>
     <lastmod>2018-11-18T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/publication/baecher-2018-wetlands/</loc>
     <lastmod>2018-11-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/author/jacquelyn-c.-guzy/</loc>
+    <loc>http://localhost:1313/author/jacquelyn-c-guzy/</loc>
     <lastmod>2018-11-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/author/jd-willson/</loc>
-    <lastmod>2018-11-18T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/author/philip-n.-vogrinc/</loc>
+    <loc>http://localhost:1313/author/philip-n-vogrinc/</loc>
     <lastmod>2018-11-18T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tag/regina-grahamii/</loc>
@@ -572,7 +719,7 @@
     <loc>http://localhost:1313/tag/woodland-salamanders/</loc>
     <lastmod>2015-01-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/author/joseph-c.-neal/</loc>
+    <loc>http://localhost:1313/author/joseph-c-neal/</loc>
     <lastmod>2014-10-08T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/publication/baecher-2014-hr/</loc>
@@ -580,5 +727,13 @@
   </url><url>
     <loc>http://localhost:1313/project/herpetological-ecology/</loc>
     <lastmod>2013-01-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/team/admin/</loc>
+  </url><url>
+    <loc>http://localhost:1313/team/postdoc/</loc>
+  </url><url>
+    <loc>http://localhost:1313/author/open-postdoctoral-position/</loc>
+  </url><url>
+    <loc>http://localhost:1313/team/</loc>
   </url>
 </urlset>

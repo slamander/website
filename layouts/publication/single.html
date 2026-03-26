@@ -1,0 +1,105 @@
+{{- define "main" -}}
+
+{{ $pub_type_csl := "" }}
+{{ $pub_type_display := "" }}
+{{ if .Params.publication_types }}
+  {{ if reflect.IsSlice .Params.publication_types }}
+    {{ $pub_type_csl = index .Params.publication_types 0 }}
+    {{ $pub_type_display = i18n (printf "pub_%s" (strings.Replace $pub_type_csl "-" "_")) | default (strings.Title $pub_type_csl) }}
+  {{ end }}
+{{ end }}
+
+<div style="max-width:900px; margin:3rem auto; padding:0 2rem;">
+
+  {{/* Title */}}
+  <h1 style="font-size:2rem; font-weight:bold; margin-bottom:1rem;">{{ .Title }}</h1>
+
+  {{/* Featured image */}}
+  {{ with .Resources.GetMatch "*featured*" }}
+    <img src="{{ .RelPermalink }}" alt="{{ $.Title }}"
+         style="width:100%; max-height:400px; object-fit:cover; border-radius:8px; margin-bottom:2rem;">
+  {{ end }}
+
+  {{/* Authors */}}
+  {{ with .Params.authors }}
+    <p style="margin-bottom:1rem; opacity:0.75;">
+      {{ delimit . ", " }}
+    </p>
+  {{ end }}
+
+  {{/* Date and Publication */}}
+  <div style="margin-bottom:1.5rem;">
+    {{ with .Params.publication }}
+      <span style="margin-right:1.5rem;">{{ . | markdownify }}</span>
+    {{ end }}
+    {{ with .Params.date }}
+      <span style="opacity:0.6;">{{ dateFormat "January 2, 2006" . }}</span>
+    {{ end }}
+  </div>
+
+  {{/* Links */}}
+  <div style="display:flex; flex-wrap:wrap; gap:0.75rem; margin-bottom:2rem;">
+    {{ with .Params.doi }}
+      <a href="{{ . }}" style="padding:0.4rem 1rem; border:1px solid currentColor; border-radius:4px; text-decoration:none; font-size:0.9rem;">DOI</a>
+    {{ end }}
+    {{ with .Params.url_pdf }}
+      <a href="{{ . }}" style="padding:0.4rem 1rem; border:1px solid currentColor; border-radius:4px; text-decoration:none; font-size:0.9rem;">PDF</a>
+    {{ end }}
+    {{ with .Params.url_preprint }}
+      <a href="{{ . }}" style="padding:0.4rem 1rem; border:1px solid currentColor; border-radius:4px; text-decoration:none; font-size:0.9rem;">Preprint</a>
+    {{ end }}
+    {{ with .Params.url_code }}
+      <a href="{{ . }}" style="padding:0.4rem 1rem; border:1px solid currentColor; border-radius:4px; text-decoration:none; font-size:0.9rem;">Code</a>
+    {{ end }}
+    {{ with .Params.url_dataset }}
+      <a href="{{ . }}" style="padding:0.4rem 1rem; border:1px solid currentColor; border-radius:4px; text-decoration:none; font-size:0.9rem;">Dataset</a>
+    {{ end }}
+    {{ with .Params.url_poster }}
+      <a href="{{ . }}" style="padding:0.4rem 1rem; border:1px solid currentColor; border-radius:4px; text-decoration:none; font-size:0.9rem;">Poster</a>
+    {{ end }}
+    {{ with .Params.url_slides }}
+      <a href="{{ . }}" style="padding:0.4rem 1rem; border:1px solid currentColor; border-radius:4px; text-decoration:none; font-size:0.9rem;">Slides</a>
+    {{ end }}
+    {{ with .Params.url_video }}
+      <a href="{{ . }}" style="padding:0.4rem 1rem; border:1px solid currentColor; border-radius:4px; text-decoration:none; font-size:0.9rem;">Video</a>
+    {{ end }}
+    {{ range .Params.links }}
+      <a href="{{ .url }}" style="padding:0.4rem 1rem; border:1px solid currentColor; border-radius:4px; text-decoration:none; font-size:0.9rem;">{{ .name }}</a>
+    {{ end }}
+  </div>
+
+  {{/* Abstract */}}
+  {{ with .Params.abstract }}
+    <div style="margin-bottom:2rem;">
+      <h3 style="font-size:1.25rem; font-weight:600; margin-bottom:0.75rem;">Abstract</h3>
+      <p style="line-height:1.8; opacity:0.9;">{{ . | markdownify }}</p>
+    </div>
+  {{ end }}
+
+  {{/* Publication type */}}
+  {{ if $pub_type_display }}
+    <div style="display:flex; gap:1rem; margin-bottom:0.75rem; align-items:baseline;">
+      <span style="font-weight:600; min-width:160px;">Publication Type</span>
+      <span style="opacity:0.75;">{{ $pub_type_display }}</span>
+    </div>
+  {{ end }}
+
+  {{/* Tags */}}
+  {{ with .Params.tags }}
+    <div style="display:flex; gap:1rem; margin-bottom:0.75rem; align-items:baseline; flex-wrap:wrap;">
+      <span style="font-weight:600; min-width:160px;">Tags</span>
+      <div style="display:flex; gap:0.5rem; flex-wrap:wrap;">
+        {{ range . }}
+          <span style="padding:0.2rem 0.6rem; border-radius:4px; font-size:0.85rem; opacity:0.75; border:1px solid currentColor;">{{ . }}</span>
+        {{ end }}
+      </div>
+    </div>
+  {{ end }}
+
+  {{/* Body content */}}
+  {{ with .Content }}
+    <div style="margin-top:2rem; line-height:1.8;">{{ . }}</div>
+  {{ end }}
+
+</div>
+{{- end -}}
