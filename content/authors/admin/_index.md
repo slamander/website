@@ -13,8 +13,11 @@ authors:
 # Is this the primary user of the site?
 superuser: true
 
+user_groups: 
+ - Principal investigator
+
 # Role/position
-role: Primary investigator
+role: Assistant Professor and Principal investigator
 
 # Organizations/Affiliations
 organizations:
@@ -25,7 +28,7 @@ organizations:
 profiles:
 - icon: envelope
   icon_pack: fas
-  link: mailto:jbaecher@ufl.edu 
+  link: mailto:jbaecher@gmail.com 
 - icon: academicons/google-scholar
   icon_pack: ai
   link: https://scholar.google.com/citations?user=zl3lDnEAAAAJ&hl=en
