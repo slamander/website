@@ -1,50 +1,37 @@
-
 ---
-title: "Quest Lab Team"
-subtitle: "Scholars, Students, and Interns"
+title: "J. Alex Baecher"
+role: "Assistant Professor & Lab PI"
 
-# Page metadata
-type: landing
-date: 2026-01-25
+organizations:
+  - name: Emory University
+    url: ""
 
-# Header
-header:
-  caption: ""
-  image: ""
+bio: "Interdisciplinary quantitative ecologist studying biodiversity distribution in space and time."
 
-# Featured image
-image:
-  caption: ""
-  focal_point: ""
-  preview_only: false
+interests:
+  - Macroecology
+  - Spatial modeling
+  - Conservation
+  - Herpetology
 
-# View options
-view: card
-columns: 2
-sort_by: date
-sort_ascending: false
+education:
+  courses:
+    - course: PhD in Ecology
+      institution: Your Institution
+      year: 20XX
 
-# Archive settings
-archive:
-  enable: true
-  text: "All members"
+social:
+  - icon: envelope
+    icon_pack: fas
+    link: "mailto:jbaecher@gmail.com"
+  - icon: google-scholar
+    icon_pack: ai
+    link: https://scholar.google.com/...
+  - icon: github
+    icon_pack: fab
+    link: https://github.com/slamander
 
-sections:
-  - block: collection
-    content:
-      title: ""
-      subtitle: ""
-      text: ""
-      count: 0  # Show all posts
-      offset: 0
-      order: desc
-      filters:
-        folders:
-          - authors
-        exclude_featured: false
-    design:
-      view: card
-      columns: 2
-      spacing:
-        padding: ["20px", "0", "20px", "0"]
+# This is what makes the card appear on the People page
+user_groups:
+  - Principal Investigators
 ---
