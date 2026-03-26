@@ -4,7 +4,7 @@ title: "Open Postdoctoral Position"
 
 # Username (this should match the folder name)
 authors:
-  - postdoctoral-researcher
+  - postdoc
 
 superuser: false
 

@@ -4,7 +4,7 @@ title: J Alex Baecher
 
 # Username (this should match the folder name)
 authors:
-  - j-alex-baecher
+  - admin
 
 # Is this the primary user of the site?
 superuser: false

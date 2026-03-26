@@ -1,14 +1,21 @@
 ---
 title: Quest Lab Team
-type: people  # ← This is the Hugo Blox people widget type
-
-# Optional: define the groups and their display order
-user_groups:
-  - Principal investigator
-  - Postdoctoral researcher
-  - Graduate student
-  - Undergraduate student
-  - Field technician
-  - Intern
-  - Alumni
+type: landing
+date: 2026-01-25
 ---
+sections:
+  - block: people
+    content:
+      title: Meet the Team
+      user_groups:
+      - Principal investigator
+      - Postdoctoral researcher
+      - Graduate student
+      - Undergraduate student
+      - Field technician
+      - Intern
+      - Alumni
+    design:
+      show_interests: true
+      show_role: true
+      show_social: true
