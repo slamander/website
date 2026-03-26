@@ -36,7 +36,7 @@ profiles:
     link: https://drive.google.com/uc?export=download&id=1A1J5ZJXHnqckGl--LIzAfYBnTdg5EUEW
 
 user_groups:
-  - Principal Investigators
+  - Principal Investigator
 
 work:
   - position: Assistant Professor of Applied Ecology
