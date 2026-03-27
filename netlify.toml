@@ -1,5 +1,5 @@
 [build]
-  command = "hugo --gc -b $URL"
+  command = "hugo --gc -b $URL --logLevel debug"
   publish = "dist"
 
 [build.environment]
