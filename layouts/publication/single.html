@@ -84,17 +84,20 @@
     </div>
   {{ end }}
 
-  {{/* Tags */}}
-  {{ with .Params.tags }}
+    {{ if .Params.tags }}
     <div style="display:flex; gap:1rem; margin-bottom:0.75rem; align-items:baseline; flex-wrap:wrap;">
-      <span style="font-weight:600; min-width:160px;">Tags</span>
-      <div style="display:flex; gap:0.5rem; flex-wrap:wrap;">
-        {{ range . }}
-          <span style="padding:0.2rem 0.6rem; border-radius:4px; font-size:0.85rem; opacity:0.75; border:1px solid currentColor;">{{ . }}</span>
+    <span style="font-weight:600; min-width:160px;">Tags</span>
+    <div style="display:flex; gap:0.5rem; flex-wrap:wrap;">
+        {{ if reflect.IsSlice .Params.tags }}
+        {{ range .Params.tags }}
+            <span style="padding:0.2rem 0.6rem; border-radius:4px; font-size:0.85rem; opacity:0.75; border:1px solid currentColor;">{{ . }}</span>
         {{ end }}
-      </div>
+        {{ else }}
+        <span style="padding:0.2rem 0.6rem; border-radius:4px; font-size:0.85rem; opacity:0.75; border:1px solid currentColor;">{{ .Params.tags }}</span>
+        {{ end }}
     </div>
-  {{ end }}
+    </div>
+    {{ end }}
 
   {{/* Body content */}}
   {{ if .Content }}
