@@ -37,7 +37,7 @@
     Content-Type = "application/rss+xml"
 
 [[redirects]]
-    from = "/*"
-    to = "https://questlabdev.netlify.app"
-    status = 301
-    force = true
+  from = "https://www.alexbaecher.com/*"
+  to = "https://questlab.dev/:splat"
+  status = 301
+  force = true
