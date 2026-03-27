@@ -10,20 +10,21 @@ sections:
     content:
       title: | 
         <img src='media/quest_lab_emory.png?v=F' alt='Quest lab at Emory' class='w-32 h-auto mx-auto' style='width: auto; height: 400px;'>
-      subtitle: "Research, Education, and Outreach by J. Alex Baecher"
-      text: "Research, Education, and Outreach by J. Alex Baecher"
+      text: The Baecher lab at Emory's Dept. of Environmental Science
         
+# "https://drive.google.com/uc?export=download&id=1A1J5ZJXHnqckGl--LIzAfYBnTdg5EUEW"
+
       primary_action:
-        text: 🚨Open Postdoc Position!!🚨
-        url: /people/
-      secondary_action:
         text: See our projects
         url: /project/
+      secondary_action:
+        text: See our publications
+        url: /publication/
       announcement:
-        text: "🚨 **New coding tutorial!**:"
+        text: "🚨 **Recruiting for Fall 2026!!!** 🚨:"
         link:
-          text: "Spatial structures for ecological models in R"
-          url: https://www.alexbaecher.com/post/ecological-spatial-structures/
+          text: "PhD student and Postdoctoral Researchers needed"
+          url: /people/
     design:
       background:
         image:
