@@ -3,7 +3,7 @@
 <!-- Last Published: March 26, 2026 --><html lang="en-us" dir="ltr"
       data-wc-theme-default="system">
   
-<head>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -40,7 +40,7 @@
   <meta name="description" content="A tutorial on forcasting with stationary and non-stationary time series" />
 
   
-  <link rel="alternate" hreflang="en-us" href="http://localhost/post/edm-script/" />
+  <link rel="alternate" hreflang="en-us" href="http://localhost:1313/post/edm-script/" />
 
   
   
@@ -157,7 +157,7 @@
   <link rel="icon" type="image/png" href="/media/icon_hu5715557880635774272.png" />
   <link rel="apple-touch-icon" type="image/png" href="/media/icon_hu6914742598827333628.png" />
 
-  <link rel="canonical" href="http://localhost/post/edm-script/" />
+  <link rel="canonical" href="http://localhost:1313/post/edm-script/" />
 
   
   
@@ -182,10 +182,10 @@
     <meta property="twitter:creator" content="@AlexBaecher" />
   
   <meta property="og:site_name" content="Quest Lab" />
-  <meta property="og:url" content="http://localhost/post/edm-script/" />
+  <meta property="og:url" content="http://localhost:1313/post/edm-script/" />
   <meta property="og:title" content="Empirical Dynamic Models for Forecasting | Quest Lab" />
-  <meta property="og:description" content="A tutorial on forcasting with stationary and non-stationary time series" /><meta property="og:image" content="http://localhost/post/edm-script/featured.gif" />
-    <meta property="twitter:image" content="http://localhost/post/edm-script/featured.gif" /><meta property="og:locale" content="en-us" />
+  <meta property="og:description" content="A tutorial on forcasting with stationary and non-stationary time series" /><meta property="og:image" content="http://localhost:1313/post/edm-script/featured.gif" />
+    <meta property="twitter:image" content="http://localhost:1313/post/edm-script/featured.gif" /><meta property="og:locale" content="en-us" />
   
     
       <meta
@@ -870,8 +870,8 @@
   
   <script
     defer
-    src="/js/hugo-blox-en.min.47736f84e20cae1bb2224dc4605239689e913811575e32b5f86a700ee9d6529d.js"
-    integrity="sha256-R3NvhOIMrhuyIk3EYFI5aJ6ROBFXXjK1&#43;GpwDunWUp0="
+    src="/js/hugo-blox-en.min.js"
+    integrity=""
   ></script>
 
   
@@ -1109,10 +1109,6 @@
     </div>
     <div class="page-body  my-10">
       
-
-
-
-
 
 <div class="mx-auto flex max-w-screen-xl">
   
@@ -1578,163 +1574,24 @@
     <div class="max-xl:hidden h-0 w-64 shrink-0"></div></div>
 
 </aside>
-  
-
-<nav class="hb-toc order-last hidden w-64 shrink-0 xl:block print:hidden px-4" aria-label="table of contents">
-  
-
-
-
-
-
-
-
-
-
-
-
-  <div class="hb-scrollbar text-sm [hyphens:auto] sticky top-16 overflow-y-auto pr-4 pt-6 max-h-[calc(100vh-var(--navbar-height)-env(safe-area-inset-bottom))] -mr-4 rtl:-ml-4"><p class="mb-4 font-semibold tracking-tight">On this page</p><ul>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#introduction-to-edms-for-forecasting-non-stationary-data">Introduction to EDMs for Forecasting Non-stationary data</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#load-libraries">Load libraries</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#set-time-series-parameters-where-time--hrs-and-the-temporal-range-is-4-days">Set time series parameters, where time = hrs and the temporal range is 4 days</a>
-      </li></ul><ul>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#simulate-autocorrelated-timeseries-data-with-stationarity-linear-data-with-cyclical-autocorrelation-using-arimasim">Simulate autocorrelated timeseries data with stationarity (linear data, with cyclical autocorrelation) using arima.sim</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-8 rtl:pr-8 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#arima-or-autoregressive-integrated-moving-average-models-necessarily-assume-linearity-because-they-rely-on-a-linear-relationship-to-predict-values-from-one-time-step-to-another">Arima, or AutoRegressive Integrated Moving Average, models necessarily assume linearity, because they rely on a linear relationship to predict values from one time step to another.</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#visualize-autocorrelation-structures-using-the-parial-autocorrelation-function-estimation-feature-in-the-forecast-package-function-acf">Visualize autocorrelation structures using the Parial Autocorrelation Function Estimation feature in the forecast package (function acf())</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#partition-data-into-training-and-predicting-subsets">Partition data into training and predicting subsets:</a>
-      </li></ul><ul>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#run-a-standard-arima-model-with-no-lag-dependencies">Run a standard Arima model, with no lag dependencies</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-8 rtl:pr-8 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#this-model-is-mathematically-identical-to-a-intercept-only-linear-model">This model is mathematically identical to a intercept only linear model:</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-8 rtl:pr-8 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#where-the-intercept-is-equal-to-the-mean-of-the-response-variable">Where, the intercept is equal to the mean of the response variable:</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#perform-forecast-of-prediction-data-using-a-no-lag-arima-model">Perform forecast of prediction data using a no-lag Arima model</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#autoregressive-model-with-one-time-dependencyan-hourly-lag-term">Autoregressive model, with one time dependency–an hourly lag term:</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#autoregressive-model-with-two-hourly-lags">Autoregressive model, with two hourly lags:</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-8 rtl:pr-8 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#autoregressive-models-with-up-to-5-hourly-lags">Autoregressive models, with up to 5 hourly lags:</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#now-we-can-move-into-models-with-different-cycle-structures-for-this-we-will-consider-half-day-lags-12-hr-periods">Now, we can move into models with different cycle structures. For this, we will consider half day lags (12 hr periods)</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-8 rtl:pr-8 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#autoregressive-models-with-an-hourly--and-half-day-time-dependency">Autoregressive models, with an hourly- and half-day-time dependency:</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#now-we-will-let-the-arima-algorithm-choose-the-time-lag-parameters-using-autoarima">Now, we will let the Arima algorithm choose the time lag parameters, using auto.arima:</a>
-      </li></ul><ul>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#now-we-will-simulate-non-linear-aka-non-stationary-data-where-relationships-change-through-time-using-diffinv">Now we will simulate non-linear (a.k.a. non-stationary) data, where relationships change through time, using diffinv:</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#lets-see-what-the-auto-arima-algorithm-estimates-with-non-stationary-data">Let’s see what the auto Arima algorithm estimates with non-stationary data:</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#now-visualize-forecast-of-a-linear-model-with-non-linear-data">Now, visualize forecast of a linear model with non-linear data!</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#not-a-very-good-prediction-lets-try-empirical-dynamic-models">Not a very good prediction… Let’s try empirical dynamic models!</a>
-      </li></ul><ul>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#the-model-is-a-system-of-three-ordinary-differential-equations-now-known-as-the-lorenz-equations">The model is a system of three ordinary differential equations now known as the Lorenz equations:</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#we-will-use-the-simplex-function-to-determine-how-many-dimensions-time-lags-are-needed-to-effectively-develope-a-data-driven-mechanistic-formulation-of-the-time-series">We will use the simplex function to determine how many dimensions (time lags) are needed to effectively develope a data-driven mechanistic formulation of the time series</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#lets-visualize-the-forecasting-skill-rho">Let’s visualize the forecasting skill (rho)</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#run-simplex-to-create-edm-model-for-forecasting">Run simplex to create EDM model for forecasting</a>
-      </li></ul>
-
-  
-  
-    
-    
-  
-
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-  </div>
-  </nav>
-
-
   <article class="w-full break-words flex min-h-[calc(100vh-var(--navbar-height))] min-w-0 justify-center pb-8 pr-[calc(env(safe-area-inset-right)-1.5rem)]">
     <main class="w-full min-w-0 max-w-6xl px-6 pt-4 md:px-12">
 
       
 
-      <h1 class="mt-2 text-4xl font-bold tracking-tight text-slate-900 dark:text-slate-100">Empirical Dynamic Models for Forecasting</h1>
+        
+        <h1 class="mt-2 text-4xl font-bold tracking-tight text-slate-900 dark:text-slate-100">Empirical Dynamic Models for Forecasting</h1>
+        <div class="mt-4 mb-16">
+          <div class="text-gray-500 dark:text-gray-300 text-sm flex items-center flex-wrap gap-y-2"><span class="mr-1">Aug 12, 2016</span></div>
+          <div class="mt-3">
 
-      <div class="mt-4 mb-16">
-      <div class="text-gray-500 dark:text-gray-300 text-sm flex items-center flex-wrap gap-y-2"><span class="mr-1">Aug 12, 2016</span>
-        
 
-        
-        <span class="mx-1">·</span>
-        <span class="mx-1">
-          8 min read
-        </span>
-        
+
+
+</div>
         </div>
-
-        <div class="mt-3">
-          
-
-
-
-
-
-        </div>
-      </div>
-
-
-
-      
-      
-      
-
-      
-      
-
-      <div class="prose prose-slate lg:prose-xl dark:prose-invert">
-        <h2 id="introduction-to-edms-for-forecasting-non-stationary-data">Introduction to EDMs for Forecasting Non-stationary data</h2>
+        <div class="prose prose-slate lg:prose-xl dark:prose-invert">
+          <h2 id="introduction-to-edms-for-forecasting-non-stationary-data">Introduction to EDMs for Forecasting Non-stationary data</h2>
 <p>EDMs are a data-driven solution for uncovering hidden dynamic behavior in natural systems, which are often complex and dynamic (referred to as “non-stationarity” or “non-linearity”). This non-linearity means that the sign and magnitude of relationships within a system change with time, and therefore linear statistical approaches fail to properly represent such changes. Rather than assuming that the system is governed by any set of equations (i.e. unlike meteorological systems), EDMs reconstruct the dynamics of the system from time series data (hence “data-driven”) and provide a mechanistic understanding of the system. Under EDMs, the dynamics of a system are encoded in the temporal ordering of the time series, and the behavior of such a system can be explained by relating various states of a system using time lags (i.e. estimating the mathematical relationship of one variable at time $X(t)$, to the same variable at other times: $X(t+1)$ and $X(t+2)$. By relating states of a system using such lags, causal relationships between variables in the original system may be uncovered&ndash;providing a number of ecologically relevant applications, including forecasting.</p>
 
 
@@ -2632,16 +2489,10 @@ plot(df_ts_st$y~df_ts_st$x, type = &quot;l&quot;)
 ## Saving 7 x 5 in image
 </code></pre>
 
-      </div>
-
-      
-  <time class="mt-12 mb-8 block text-xs text-gray-500 ltr:text-right rtl:text-left dark:text-gray-400" datetime="2016-08-12T00:40:04.000Z">
-    <span>Last updated on</span>
-    Aug 12, 2016</time>
-
-      <div class="container mx-auto prose prose-slate lg:prose-xl dark:prose-invert mt-5">
-        
-        <div class="max-w-prose print:hidden">
+        </div>
+        <div class="container mx-auto prose prose-slate lg:prose-xl dark:prose-invert mt-5">
+          
+          <div class="max-w-prose print:hidden">
   
   
 
@@ -2673,7 +2524,7 @@ plot(df_ts_st$y~df_ts_st$x, type = &quot;l&quot;)
   <a
     target="_blank" rel="noopener"
     class="m-1 rounded-md bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral-300 dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-    href="https://twitter.com/intent/tweet?url=http%3A%2F%2Flocalhost%2Fpost%2Fedm-script%2F&amp;text=Empirical&#43;Dynamic&#43;Models&#43;for&#43;Forecasting"
+    href="https://twitter.com/intent/tweet?url=http%3A%2F%2Flocalhost%3A1313%2Fpost%2Fedm-script%2F&amp;text=Empirical&#43;Dynamic&#43;Models&#43;for&#43;Forecasting"
     title="X"
     aria-label="X"
     id="share-link-x"
@@ -2691,7 +2542,7 @@ plot(df_ts_st$y~df_ts_st$x, type = &quot;l&quot;)
   <a
     target="_blank" rel="noopener"
     class="m-1 rounded-md bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral-300 dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-    href="https://www.facebook.com/sharer.php?u=http%3A%2F%2Flocalhost%2Fpost%2Fedm-script%2F&amp;t=Empirical&#43;Dynamic&#43;Models&#43;for&#43;Forecasting"
+    href="https://www.facebook.com/sharer.php?u=http%3A%2F%2Flocalhost%3A1313%2Fpost%2Fedm-script%2F&amp;t=Empirical&#43;Dynamic&#43;Models&#43;for&#43;Forecasting"
     title="Facebook"
     aria-label="Facebook"
     id="share-link-facebook"
@@ -2711,7 +2562,7 @@ plot(df_ts_st$y~df_ts_st$x, type = &quot;l&quot;)
   <a
     target="_blank" rel="noopener"
     class="m-1 rounded-md bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral-300 dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-    href="mailto:?subject=Empirical%20Dynamic%20Models%20for%20Forecasting&amp;body=http%3A%2F%2Flocalhost%2Fpost%2Fedm-script%2F"
+    href="mailto:?subject=Empirical%20Dynamic%20Models%20for%20Forecasting&amp;body=http%3A%2F%2Flocalhost%3A1313%2Fpost%2Fedm-script%2F"
     title="Email"
     aria-label="Email"
     id="share-link-email"
@@ -2729,7 +2580,7 @@ plot(df_ts_st$y~df_ts_st$x, type = &quot;l&quot;)
   <a
     target="_blank" rel="noopener"
     class="m-1 rounded-md bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral-300 dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-    href="https://www.linkedin.com/shareArticle?url=http%3A%2F%2Flocalhost%2Fpost%2Fedm-script%2F&amp;title=Empirical&#43;Dynamic&#43;Models&#43;for&#43;Forecasting"
+    href="https://www.linkedin.com/shareArticle?url=http%3A%2F%2Flocalhost%3A1313%2Fpost%2Fedm-script%2F&amp;title=Empirical&#43;Dynamic&#43;Models&#43;for&#43;Forecasting"
     title="LinkedIn"
     aria-label="LinkedIn"
     id="share-link-linkedin"
@@ -2747,7 +2598,7 @@ plot(df_ts_st$y~df_ts_st$x, type = &quot;l&quot;)
   <a
     target="_blank" rel="noopener"
     class="m-1 rounded-md bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral-300 dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-    href="whatsapp://send?text=Empirical&#43;Dynamic&#43;Models&#43;for&#43;Forecasting%20http%3A%2F%2Flocalhost%2Fpost%2Fedm-script%2F"
+    href="whatsapp://send?text=Empirical&#43;Dynamic&#43;Models&#43;for&#43;Forecasting%20http%3A%2F%2Flocalhost%3A1313%2Fpost%2Fedm-script%2F"
     title="WhatsApp"
     aria-label="WhatsApp"
     id="share-link-whatsapp"
@@ -2817,7 +2668,9 @@ plot(df_ts_st$y~df_ts_st$x, type = &quot;l&quot;)
 
 </div>
 
-      </div>
+        </div>
+
+      
 
     </main>
   </article>

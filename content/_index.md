@@ -24,11 +24,11 @@ sections:
       text: "Research, Education, and Outreach by J. Alex Baecher"
         
       primary_action:
-        text: Baecher's CV
-        url: https://drive.google.com/uc?export=download&id=1A1J5ZJXHnqckGl--LIzAfYBnTdg5EUEW
+        text: 🚨Open Postdoc Position!!🚨
+        url: /people/
       secondary_action:
-        text: Quest lab publications
-        url: https://www.alexbaecher.com/publication/
+        text: See our projects
+        url: /project/
       announcement:
         text: "🚨 **New coding tutorial!**:"
         link:

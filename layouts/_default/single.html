@@ -1,0 +1,103 @@
+{{ define "main" }}
+
+<div class="mx-auto flex max-w-screen-xl">
+  {{ partial "components/sidebar.html" (dict "context" . "no_sidebar" true) }}
+  <article class="w-full break-words flex min-h-[calc(100vh-var(--navbar-height))] min-w-0 justify-center pb-8 pr-[calc(env(safe-area-inset-right)-1.5rem)]">
+    <main class="w-full min-w-0 max-w-6xl px-6 pt-4 md:px-12">
+
+      {{ if eq .Type "team" }}
+
+        {{/* TEAM PROFILE LAYOUT */}}
+        <div style="display:flex; flex-direction:row; gap:3rem; align-items:flex-start; margin-bottom:3rem; flex-wrap:wrap;">
+          {{ $avatar := (.Resources.ByType "image").GetMatch "*avatar*" }}
+          {{ if $avatar }}
+            {{ $avatar_image := $avatar.Fill "270x270 Center" }}
+            <img src="{{ $avatar_image.RelPermalink }}" alt="{{ .Title }}"
+                 style="border-radius:50%; width:180px; height:180px; object-fit:cover; flex-shrink:0;">
+          {{ end }}
+          <div style="flex:1; min-width:200px;">
+            <h1 style="font-size:2rem; font-weight:bold; margin-bottom:0.5rem;">{{ .Title }}</h1>
+            {{ with .Params.role }}
+              <p style="font-size:1.1rem; opacity:0.75; margin-bottom:1rem;">{{ . }}</p>
+            {{ end }}
+            {{ with .Params.organizations }}
+              {{ range . }}
+                <p style="margin-bottom:0.25rem;">
+                  <a href="{{ .url }}" style="opacity:0.75;">{{ .name }}</a>
+                </p>
+              {{ end }}
+            {{ end }}
+            {{ with .Params.profiles }}
+              <div style="display:flex; gap:1rem; margin-top:1rem; flex-wrap:wrap;">
+                {{ range . }}
+                  <a href="{{ .link }}" style="opacity:0.75;" title="{{ .icon }}">
+                    {{ partial "functions/get_icon" (dict "name" .icon "attributes" "style=\"width:24px;height:24px;\"") }}
+                  </a>
+                {{ end }}
+              </div>
+            {{ end }}
+          </div>
+        </div>
+
+        {{/* Bio */}}
+        {{ with .Content }}
+          <div style="line-height:1.8; font-size:1rem; margin-bottom:3rem;">{{ . }}</div>
+        {{ end }}
+
+        {{/* Work history */}}
+        {{ with .Params.work }}
+          <div style="margin-bottom:3rem;">
+            <h2 style="font-size:1.5rem; font-weight:bold; margin-bottom:1.5rem; padding-bottom:0.5rem; border-bottom:1px solid currentColor;">Experience</h2>
+            {{ range . }}
+              <div style="display:flex; gap:1.5rem; margin-bottom:2rem; align-items:flex-start;">
+                {{ with .company_logo }}
+                  <img src="{{ . }}" alt=""
+                       style="width:56px; height:56px; object-fit:contain; flex-shrink:0; margin-top:0.25rem;">
+                {{ end }}
+                <div style="flex:1;">
+                  <h3 style="font-size:1.1rem; font-weight:bold; margin-bottom:0.15rem;">{{ .position }}</h3>
+                  <p style="opacity:0.75; margin-bottom:0.25rem;">
+                    <a href="{{ .company_url }}">{{ .company_name }}</a>
+                  </p>
+                  <p style="font-size:0.85rem; opacity:0.6; margin-bottom:0.5rem;">
+                    {{ with .date_start }}{{ dateFormat "January 2006" . }}{{ end }}
+                    –
+                    {{ if .date_end }}{{ dateFormat "January 2006" .date_end }}{{ else }}Present{{ end }}
+                  </p>
+                  {{ with .summary }}
+                    <div style="font-size:0.95rem; line-height:1.6; opacity:0.85;">{{ . | markdownify }}</div>
+                  {{ end }}
+                </div>
+              </div>
+            {{ end }}
+          </div>
+        {{ end }}
+
+      {{ else }}
+
+        {{/* DEFAULT LAYOUT for all other page types */}}
+        <h1 class="mt-2 text-4xl font-bold tracking-tight text-slate-900 dark:text-slate-100">
+          {{- .Title -}}
+        </h1>
+        <div class="mt-4 mb-16">
+          <div class="text-gray-500 dark:text-gray-300 text-sm flex items-center flex-wrap gap-y-2">
+            {{- if .Date | and (not .Params.hide_date) -}}
+              <span class="mr-1">{{- .Date | time.Format (site.Params.locale.date_format | default ":date_long") -}}</span>
+            {{- end -}}
+          </div>
+          <div class="mt-3">{{ partial "page_links_div.html" . }}</div>
+        </div>
+        <div class="prose prose-slate lg:prose-xl dark:prose-invert">
+          {{ .Content }}
+        </div>
+        <div class="container mx-auto prose prose-slate lg:prose-xl dark:prose-invert mt-5">
+          {{ .Scratch.Set "invert_pager" true }}
+          {{ partial "page_footer" . }}
+        </div>
+
+      {{ end }}
+
+    </main>
+  </article>
+</div>
+{{ end }}

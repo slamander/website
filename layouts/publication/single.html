@@ -1,108 +1,169 @@
-{{- define "main" -}}
+{{ define "main" }}
 
-{{ $pub_type_csl := "" }}
-{{ $pub_type_display := "" }}
-{{ if .Params.publication_types }}
-  {{ if reflect.IsSlice .Params.publication_types }}
-    {{ $pub_type_csl = index .Params.publication_types 0 }}
-    {{ $pub_type_display = i18n (printf "pub_%s" (strings.Replace $pub_type_csl "-" "_")) | default (strings.Title $pub_type_csl) }}
-  {{ end }}
-{{ end }}
+{{ if eq .Params.person "true" }}
 
-<div style="max-width:900px; margin:3rem auto; padding:0 2rem;">
+  {{/* TEAM PROFILE LAYOUT */}}
+  <div style="max-width:900px; margin:3rem auto; padding:0 2rem;">
 
-  {{/* Title */}}
-  <h1 style="font-size:2rem; font-weight:bold; margin-bottom:1rem;">{{ .Title }}</h1>
+    {{/* Avatar + name + role + org + social */}}
+    <div style="display:flex; flex-direction:row; gap:3rem; align-items:flex-start; margin-bottom:3rem; flex-wrap:wrap;">
+      {{ $avatar := (.Resources.ByType "image").GetMatch "*avatar*" }}
+      {{ if $avatar }}
+        {{ $avatar_image := $avatar.Fill "270x270 Center" }}
+        <img src="{{ $avatar_image.RelPermalink }}" alt="{{ .Title }}"
+             style="border-radius:50%; width:180px; height:180px; object-fit:cover; flex-shrink:0;">
+      {{ end }}
+      <div style="flex:1; min-width:200px;">
+        <h1 style="font-size:2rem; font-weight:bold; margin-bottom:0.5rem;">{{ .Title }}</h1>
+        {{ with .Params.role }}
+          <p style="font-size:1.1rem; opacity:0.75; margin-bottom:1rem;">{{ . }}</p>
+        {{ end }}
+        {{ with .Params.organizations }}
+          {{ range . }}
+            <p style="margin-bottom:0.25rem;">
+              <a href="{{ .url }}" style="opacity:0.75;">{{ .name }}</a>
+            </p>
+          {{ end }}
+        {{ end }}
+        {{ with .Params.profiles }}
+          <div style="display:flex; gap:1rem; margin-top:1rem; flex-wrap:wrap;">
+            {{ range . }}
+              <a href="{{ .link }}" style="opacity:0.75;" title="{{ .icon }}">
+                {{ partial "functions/get_icon" (dict "name" .icon "attributes" "style=\"width:24px;height:24px;\"") }}
+              </a>
+            {{ end }}
+          </div>
+        {{ end }}
+      </div>
+    </div>
 
-  {{/* Featured image */}}
-  {{ with .Resources.GetMatch "*featured*" }}
-    <img src="{{ .RelPermalink }}" alt="{{ $.Title }}"
-         style="width:100%; max-height:400px; object-fit:cover; border-radius:8px; margin-bottom:2rem;">
-  {{ end }}
-
-  {{/* Authors */}}
-  {{ with .Params.authors }}
-    <p style="margin-bottom:1rem; opacity:0.75;">
-      {{ delimit . ", " }}
-    </p>
-  {{ end }}
-
-  {{/* Date and Publication */}}
-  <div style="margin-bottom:1.5rem;">
-    {{ with .Params.publication }}
-      <span style="margin-right:1.5rem;">{{ . | markdownify }}</span>
+    {{/* Bio */}}
+    {{ with .Content }}
+      <div style="line-height:1.8; font-size:1rem; margin-bottom:3rem;">{{ . }}</div>
     {{ end }}
-    {{ with .Params.date }}
-      <span style="opacity:0.6;">{{ dateFormat "January 2, 2006" . }}</span>
+
+    {{/* Work history */}}
+    {{ with .Params.work }}
+      <div style="margin-bottom:3rem;">
+        <h2 style="font-size:1.5rem; font-weight:bold; margin-bottom:1.5rem; padding-bottom:0.5rem; border-bottom:1px solid currentColor;">Experience</h2>
+        {{ range . }}
+          <div style="display:flex; gap:1.5rem; margin-bottom:2rem; align-items:flex-start;">
+            {{ with .company_logo }}
+              <img src="{{ . }}" alt=""
+                   style="width:56px; height:56px; object-fit:contain; flex-shrink:0; margin-top:0.25rem;">
+            {{ end }}
+            <div style="flex:1;">
+              <h3 style="font-size:1.1rem; font-weight:bold; margin-bottom:0.15rem;">{{ .position }}</h3>
+              <p style="opacity:0.75; margin-bottom:0.25rem;">
+                <a href="{{ .company_url }}">{{ .company_name }}</a>
+              </p>
+              <p style="font-size:0.85rem; opacity:0.6; margin-bottom:0.5rem;">
+                {{ with .date_start }}{{ dateFormat "January 2006" . }}{{ end }}
+                –
+                {{ if .date_end }}{{ dateFormat "January 2006" .date_end }}{{ else }}Present{{ end }}
+              </p>
+              {{ with .summary }}
+                <div style="font-size:0.95rem; line-height:1.6; opacity:0.85;">{{ . | markdownify }}</div>
+              {{ end }}
+            </div>
+          </div>
+        {{ end }}
+      </div>
     {{ end }}
+
   </div>
 
-  {{/* Links */}}
-  <div style="display:flex; flex-wrap:wrap; gap:0.75rem; margin-bottom:2rem;">
-    {{ with .Params.doi }}
-      <a href="{{ . }}" style="padding:0.4rem 1rem; border:1px solid currentColor; border-radius:4px; text-decoration:none; font-size:0.9rem;">DOI</a>
-    {{ end }}
-    {{ with .Params.url_pdf }}
-      <a href="{{ . }}" style="padding:0.4rem 1rem; border:1px solid currentColor; border-radius:4px; text-decoration:none; font-size:0.9rem;">PDF</a>
-    {{ end }}
-    {{ with .Params.url_preprint }}
-      <a href="{{ . }}" style="padding:0.4rem 1rem; border:1px solid currentColor; border-radius:4px; text-decoration:none; font-size:0.9rem;">Preprint</a>
-    {{ end }}
-    {{ with .Params.url_code }}
-      <a href="{{ . }}" style="padding:0.4rem 1rem; border:1px solid currentColor; border-radius:4px; text-decoration:none; font-size:0.9rem;">Code</a>
-    {{ end }}
-    {{ with .Params.url_dataset }}
-      <a href="{{ . }}" style="padding:0.4rem 1rem; border:1px solid currentColor; border-radius:4px; text-decoration:none; font-size:0.9rem;">Dataset</a>
-    {{ end }}
-    {{ with .Params.url_poster }}
-      <a href="{{ . }}" style="padding:0.4rem 1rem; border:1px solid currentColor; border-radius:4px; text-decoration:none; font-size:0.9rem;">Poster</a>
-    {{ end }}
-    {{ with .Params.url_slides }}
-      <a href="{{ . }}" style="padding:0.4rem 1rem; border:1px solid currentColor; border-radius:4px; text-decoration:none; font-size:0.9rem;">Slides</a>
-    {{ end }}
-    {{ with .Params.url_video }}
-      <a href="{{ . }}" style="padding:0.4rem 1rem; border:1px solid currentColor; border-radius:4px; text-decoration:none; font-size:0.9rem;">Video</a>
-    {{ end }}
-    {{ range .Params.links }}
-      <a href="{{ .url }}" style="padding:0.4rem 1rem; border:1px solid currentColor; border-radius:4px; text-decoration:none; font-size:0.9rem;">{{ .name }}</a>
-    {{ end }}
-  </div>
+{{ else }}
 
-  {{/* Abstract */}}
-  {{ with .Params.abstract }}
-    <div style="margin-bottom:2rem;">
-      <h3 style="font-size:1.25rem; font-weight:600; margin-bottom:0.75rem;">Abstract</h3>
-      <p style="line-height:1.8; opacity:0.9;">{{ . | markdownify }}</p>
-    </div>
+  {{/* PUBLICATION LAYOUT */}}
+  {{ $pub_type_csl := "" }}
+  {{ $pub_type_display := "" }}
+  {{ if .Params.publication_types }}
+    {{ if reflect.IsSlice .Params.publication_types }}
+      {{ $pub_type_csl = index .Params.publication_types 0 }}
+      {{ $pub_type_display = i18n (printf "pub_%s" (strings.Replace $pub_type_csl "-" "_")) | default (strings.Title $pub_type_csl) }}
+    {{ end }}
   {{ end }}
 
-  {{/* Publication type */}}
-  {{ if $pub_type_display }}
-    <div style="display:flex; gap:1rem; margin-bottom:0.75rem; align-items:baseline;">
-      <span style="font-weight:600; min-width:160px;">Publication Type</span>
-      <span style="opacity:0.75;">{{ $pub_type_display }}</span>
+  <div style="max-width:900px; margin:3rem auto; padding:0 2rem;">
+
+    <h1 style="font-size:2rem; font-weight:bold; margin-bottom:1rem;">{{ .Title }}</h1>
+
+    {{ with .Params.authors }}
+      <p style="margin-bottom:1rem; opacity:0.75;">{{ delimit . ", " }}</p>
+    {{ end }}
+
+    <div style="margin-bottom:1.5rem;">
+      {{ with .Params.publication }}
+        <span style="margin-right:1.5rem;">{{ . | markdownify }}</span>
+      {{ end }}
+      {{ with .Params.date }}
+        <span style="opacity:0.6;">{{ dateFormat "January 2, 2006" . }}</span>
+      {{ end }}
     </div>
-  {{ end }}
+
+    <div style="display:flex; flex-wrap:wrap; gap:0.75rem; margin-bottom:2rem;">
+      {{ with .Params.doi }}
+        <a href="{{ . }}" style="padding:0.4rem 1rem; border:1px solid currentColor; border-radius:4px; text-decoration:none; font-size:0.9rem;">DOI</a>
+      {{ end }}
+      {{ with .Params.url_pdf }}
+        <a href="{{ . }}" style="padding:0.4rem 1rem; border:1px solid currentColor; border-radius:4px; text-decoration:none; font-size:0.9rem;">PDF</a>
+      {{ end }}
+      {{ with .Params.url_preprint }}
+        <a href="{{ . }}" style="padding:0.4rem 1rem; border:1px solid currentColor; border-radius:4px; text-decoration:none; font-size:0.9rem;">Preprint</a>
+      {{ end }}
+      {{ with .Params.url_code }}
+        <a href="{{ . }}" style="padding:0.4rem 1rem; border:1px solid currentColor; border-radius:4px; text-decoration:none; font-size:0.9rem;">Code</a>
+      {{ end }}
+      {{ with .Params.url_dataset }}
+        <a href="{{ . }}" style="padding:0.4rem 1rem; border:1px solid currentColor; border-radius:4px; text-decoration:none; font-size:0.9rem;">Dataset</a>
+      {{ end }}
+      {{ range .Params.links }}
+        <a href="{{ .url }}" style="padding:0.4rem 1rem; border:1px solid currentColor; border-radius:4px; text-decoration:none; font-size:0.9rem;">{{ .name }}</a>
+      {{ end }}
+    </div>
+
+    {{ with .Params.abstract }}
+      <div style="margin-bottom:2rem;">
+        <h3 style="font-size:1.25rem; font-weight:600; margin-bottom:0.75rem;">Abstract</h3>
+        <p style="line-height:1.8; opacity:0.9;">{{ . | markdownify }}</p>
+      </div>
+    {{ end }}
+
+    {{ if $pub_type_display }}
+      <div style="display:flex; gap:1rem; margin-bottom:0.75rem; align-items:baseline;">
+        <span style="font-weight:600; min-width:160px;">Publication Type</span>
+        <span style="opacity:0.75;">{{ $pub_type_display }}</span>
+      </div>
+    {{ end }}
 
     {{ if .Params.tags }}
-    <div style="display:flex; gap:1rem; margin-bottom:0.75rem; align-items:baseline; flex-wrap:wrap;">
-    <span style="font-weight:600; min-width:160px;">Tags</span>
-    <div style="display:flex; gap:0.5rem; flex-wrap:wrap;">
-        {{ if reflect.IsSlice .Params.tags }}
-        {{ range .Params.tags }}
-            <span style="padding:0.2rem 0.6rem; border-radius:4px; font-size:0.85rem; opacity:0.75; border:1px solid currentColor;">{{ . }}</span>
-        {{ end }}
-        {{ else }}
-        <span style="padding:0.2rem 0.6rem; border-radius:4px; font-size:0.85rem; opacity:0.75; border:1px solid currentColor;">{{ .Params.tags }}</span>
-        {{ end }}
-    </div>
-    </div>
+      <div style="display:flex; gap:1rem; margin-bottom:0.75rem; align-items:baseline; flex-wrap:wrap;">
+        <span style="font-weight:600; min-width:160px;">Tags</span>
+        <div style="display:flex; gap:0.5rem; flex-wrap:wrap;">
+          {{ if reflect.IsSlice .Params.tags }}
+            {{ range .Params.tags }}
+              <span style="padding:0.2rem 0.6rem; border-radius:4px; font-size:0.85rem; opacity:0.75; border:1px solid currentColor;">{{ . }}</span>
+            {{ end }}
+          {{ else }}
+            <span style="padding:0.2rem 0.6rem; border-radius:4px; font-size:0.85rem; opacity:0.75; border:1px solid currentColor;">{{ .Params.tags }}</span>
+          {{ end }}
+        </div>
+      </div>
     {{ end }}
 
-  {{/* Body content */}}
-  {{ if .Content }}
-    <div style="margin-top:2rem; line-height:1.8;">{{ .Content }}</div>
-  {{ end }}
+    {{ $featured := .Resources.GetMatch "featured.*" }}
+    {{ if $featured }}
+      <img src="{{ $featured.RelPermalink }}" alt="{{ .Title }}"
+           style="width:100%; max-height:400px; object-fit:cover; border-radius:8px; margin-bottom:2rem;">
+    {{ end }}
 
-</div>
-{{- end -}}
+    {{ if .Content }}
+      <div style="margin-top:2rem; line-height:1.8;">{{ .Content }}</div>
+    {{ end }}
+
+  </div>
+
+{{ end }}
+
+{{ end }}

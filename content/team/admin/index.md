@@ -2,6 +2,9 @@
 # Display name
 title: J Alex Baecher
 
+type: publication
+person: "true"
+
 # Username (this should match the folder name)
 authors:
   - admin
@@ -58,39 +61,80 @@ work:
       [Clark-Wolf lab](https://www.clarkwolflab.com/) & [Stuber lab](https://efstuber.wixsite.com/xscaleeco/)
 
       *Fellowship:* USGS: **Climate Adaptation Postdoctoral Fellowship**
+
+  - position: Postdoctoral Research Associate
+    company_name: University of Florida
+    company_url: 'ufl.edu'
+    company_logo: 'https://upload.wikimedia.org/wikipedia/en/6/6d/University_of_Florida_seal.svg'
+    date_start: 2024-08-01
+    date_end: 
+    summary: |
+      [Campbell lab](https://lcampbelllab.wixsite.com/campbell-lab) (Florida Medical Entomology Lab) & [Guralnick lab](https://www.gurlab.net/) (Florida Natural History Museum)
+
+  - position: Lecturer
+    company_name: University of Florida
+    company_url: 'ufl.edu'
+    company_logo: 'https://upload.wikimedia.org/wikipedia/en/6/6d/University_of_Florida_seal.svg'
+    date_start: 2019-08-01
+    date_end: 2024-08-01
+    summary: |
+      Instructor of Record, Environmental Science
+
+  - position: Conservation and Research Technician
+    company_name: Memphis Zoo
+    company_url: 'https://www.memphiszoo.org/'
+    company_logo: 'https://upload.wikimedia.org/wikipedia/en/c/c6/MemphisZooLogo.png'
+    date_start: 2018-01-01
+    date_end: 
+    summary: |
+      [Dept. Conservation and Research](https://www.memphiszoo.org/conservation)
+
+  - position: Graduate Teaching Assistant
+    company_name: Eastern Kentucky University
+    company_url: 'eku.edu'
+    company_logo: 'https://upload.wikimedia.org/wikipedia/en/3/37/Eastern_Kentucky_University_seal.svg'
+    date_start: 2015-08-01
+    date_end: 2017-12-01
+    summary: |
+      Teaching Assistant, Human Anatomy
+
+  - position: Research Assistant
+    company_name: University of Arkansas
+    company_url: 'uark.edu'
+    company_logo: 'https://upload.wikimedia.org/wikipedia/en/d/d1/University_of_Arkansas_seal.svg'
+    date_start: 2011-08-01
+    date_end: 
+    summary: |
+      [Dept. Biology](https://biology.uark.edu/)
 ---
 
-## About Me
-
-<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<h2 style="font-size:1.75rem; font-weight:bold; margin-bottom:1rem;">About Me</h2>
+<div style="display:grid; grid-template-columns:1fr 1fr; gap:3rem; margin-top:2rem;">
+<div style="display:grid; grid-template-columns:1fr 1fr; gap:3rem; margin-top:2rem;">
   <div>
-    <h3>Serious bits:</h3>
-    <p>I'm an interdisciplinary quantitative ecologist dedicated to understanding the processes that determine the distribution of biodiversity in space and time. My research interests include:</p>
-    <p>
-
-- macroecology
-- biogeography
-- population ecology
-- conservation
-- spatiotemporal modeling
-- herp natural history
-- transparent science
-
-</p>
+    <h3 style="font-size:1.25rem; font-weight:bold; margin-bottom:0.5rem;">Serious bits:</h3>
+    <p style="margin-bottom:0.75rem;">I'm an interdisciplinary quantitative ecologist dedicated to understanding the processes that determine the distribution of biodiversity in space and time. My research interests include:</p>
+    <ul style="list-style:disc; padding-left:1.5rem; line-height:1.8;">
+      <li>macroecology</li>
+      <li>biogeography</li>
+      <li>population ecology</li>
+      <li>conservation</li>
+      <li>spatiotemporal modeling</li>
+      <li>herp natural history</li>
+      <li>transparent science</li>
+    </ul>
   </div>
   <div>
-    <h3>Good bits:</h3>
-    <p>I'm an Arkansas native (Ozark Mountains) based out of Gainesville Florida, a stereotypical girl dad (twice-over), proud union member, and lover of:</p>
-    <p>
-
-- herping
-- hiking
-- canoeing
-- biking
-- home DIY projects
-- wood working
-- history podcasts
-
-</p>
+    <h3 style="font-size:1.25rem; font-weight:bold; margin-bottom:0.5rem;">Good bits:</h3>
+    <p style="margin-bottom:0.75rem;">I'm an Arkansas native (Ozark Mountains) based out of Gainesville Florida, a stereotypical girl dad (twice-over), proud union member, and lover of:</p>
+    <ul style="list-style:disc; padding-left:1.5rem; line-height:1.8;">
+      <li>herping</li>
+      <li>hiking</li>
+      <li>canoeing</li>
+      <li>biking</li>
+      <li>home DIY projects</li>
+      <li>wood working</li>
+      <li>history podcasts</li>
+    </ul>
   </div>
 </div>

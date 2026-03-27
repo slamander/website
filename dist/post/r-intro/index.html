@@ -3,7 +3,7 @@
 <!-- Last Published: March 26, 2026 --><html lang="en-us" dir="ltr"
       data-wc-theme-default="system">
   
-<head>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -40,7 +40,7 @@
   <meta name="description" content="A tutorial for base R usage and functions" />
 
   
-  <link rel="alternate" hreflang="en-us" href="http://localhost/post/r-intro/" />
+  <link rel="alternate" hreflang="en-us" href="http://localhost:1313/post/r-intro/" />
 
   
   
@@ -157,7 +157,7 @@
   <link rel="icon" type="image/png" href="/media/icon_hu5715557880635774272.png" />
   <link rel="apple-touch-icon" type="image/png" href="/media/icon_hu6914742598827333628.png" />
 
-  <link rel="canonical" href="http://localhost/post/r-intro/" />
+  <link rel="canonical" href="http://localhost:1313/post/r-intro/" />
 
   
   
@@ -182,10 +182,10 @@
     <meta property="twitter:creator" content="@AlexBaecher" />
   
   <meta property="og:site_name" content="Quest Lab" />
-  <meta property="og:url" content="http://localhost/post/r-intro/" />
+  <meta property="og:url" content="http://localhost:1313/post/r-intro/" />
   <meta property="og:title" content="Intro to R (part 1): The basics | Quest Lab" />
-  <meta property="og:description" content="A tutorial for base R usage and functions" /><meta property="og:image" content="http://localhost/post/r-intro/featured.PNG" />
-    <meta property="twitter:image" content="http://localhost/post/r-intro/featured.PNG" /><meta property="og:locale" content="en-us" />
+  <meta property="og:description" content="A tutorial for base R usage and functions" /><meta property="og:image" content="http://localhost:1313/post/r-intro/featured.PNG" />
+    <meta property="twitter:image" content="http://localhost:1313/post/r-intro/featured.PNG" /><meta property="og:locale" content="en-us" />
   
     
       <meta
@@ -870,8 +870,8 @@
   
   <script
     defer
-    src="/js/hugo-blox-en.min.47736f84e20cae1bb2224dc4605239689e913811575e32b5f86a700ee9d6529d.js"
-    integrity="sha256-R3NvhOIMrhuyIk3EYFI5aJ6ROBFXXjK1&#43;GpwDunWUp0="
+    src="/js/hugo-blox-en.min.js"
+    integrity=""
   ></script>
 
   
@@ -1109,10 +1109,6 @@
     </div>
     <div class="page-body  my-10">
       
-
-
-
-
 
 <div class="mx-auto flex max-w-screen-xl">
   
@@ -1674,196 +1670,24 @@
     <div class="max-xl:hidden h-0 w-64 shrink-0"></div></div>
 
 </aside>
-  
-
-<nav class="hb-toc order-last hidden w-64 shrink-0 xl:block print:hidden px-4" aria-label="table of contents">
-  
-
-
-
-
-
-
-
-
-
-
-
-  <div class="hb-scrollbar text-sm [hyphens:auto] sticky top-16 overflow-y-auto pr-4 pt-6 max-h-[calc(100vh-var(--navbar-height)-env(safe-area-inset-bottom))] -mr-4 rtl:-ml-4"><p class="mb-4 font-semibold tracking-tight">On this page</p><ul>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#in-this-tutorial-we-will-learn-the-basics-of-r-coding-including">In this tutorial, we will learn the basics of R coding, including:</a>
-      </li></ul><ul>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#arithmetic-operators">Arithmetic operators</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#-----are-arithmetic-operators--there-are-some-others---and-">&#43;, /, -, * are arithmetic operators.  There are some others, %%, %/% and ^.</a>
-      </li></ul><ul>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#parenthesis-nesting-can-get-out-of-hand-quickly-so-it-can-be-helpful">Parenthesis nesting can get out of hand quickly, so it can be helpful</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#to-turn-on-rainbow-parenthesis-in-rstudio">to turn on ‘rainbow parenthesis’ in RStudio:</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#tools--global-options--code--display--rainbow-parenthesis">Tools &gt; Global Options &gt; Code &gt; Display &gt; Rainbow Parenthesis</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#variable-contents-are-in-the-environment-pane-in-rstudio">Variable contents are in the “environment” pane in RStudio.</a>
-      </li></ul><ul>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#the-exponential-function-e-to-the-power-of-x">The exponential function, e to the power of x.</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#the-inputs-x-is-called-an-argument-of-the-function">The inputs ‘x’ is called an ‘argument’ of the function.</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#the-help-functions">The help functions!</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#definitely-one-of-the-best-parts-of-r--dont-try-this-in-python">Definitely one of the best parts of R.  Don’t try this in Python!</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#important-check-out-the-examples-at-the-bottom-of-the-page-or-try">Important: Check out the examples at the bottom of the page, or try</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#help-on-tricky-stuff">Help on tricky stuff:</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#try-putting-the-thing-you-cant-search-for-help-on-in-backticks-">Try putting the thing you can’t search for help on in backticks, ``.</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#when-you-run-across-something-you-dont-recognize-try-to--it">When you run across something you don’t recognize, try to ? it.</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#its-faster-than-searching-online-and-has-less-ads-">It’s faster than searching online and has less ads. 👍</a>
-      </li></ul><ul>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#c-concatenates-these-together-to-make-a-vector">c() concatenates these together to make a vector.</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#the-parts-of-a-vector-are-called-elements--you-extract-them-with-brackets">The parts of a vector are called ’elements’.  You extract them with brackets.</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#r-starts-numbering-the-elements-with-1">R starts numbering the elements with 1.</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#we-can-get-more-than-one-element-at-a-time">We can get more than one element at a time.</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#we-can-call-them-in-any-order-and-any-number-of-times">We can call them in any order, and any number of times.</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#r-works-well-with-vectors-if-you-put-a-vector-into-most-functions-you-get-a-vector-back--this-is-called-vectorization">R works well with vectors: if you put a vector into most functions, you get a vector back.  (This is called vectorization.)</a>
-      </li></ul><ul>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#the-fast-way">the fast way:</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#how-many-elements-are-in-the-vector">How many elements are in the vector?</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#letter-vectors">Letter vectors</a>
-      </li></ul><ul>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#data-frames-can-hold-different-data-types-in-different-columns">Data frames can hold different data types in different columns.</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#we-can-access-the-elements-in-the-dataframe-by-row-andor-column-numbers-or-by-column-names">We can access the elements in the dataframe, by row and/or column numbers, or by column names.</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#notice-that-the-lets-and-nums-maintain-their-own-data-types">Notice that the lets and nums maintain their own data types.</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#the-lets-are-still-characters">The “lets” are still characters.</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#special-thing-about-dataframes-is-it-holds-more-than-one-type-of-data">special thing about dataframes is… it holds more than one type of data,</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#constraint-all-columns-are-the-same-length">Constraint: all columns are the same length.</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#matrices-and-recycling-rule">Matrices and Recycling rule</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#100-not-divisible-by-3">100 not divisible by 3!</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#another-handy-thing-which-you-might-want-to-do-someday">Another handy thing, which you might want to do someday.</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#suppose-we-want-to-create-a-dataframe-with-every-combination-of-several-variables">Suppose we want to create a dataframe with every combination of several variables.</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#three-level-expando">Three level expando:</a>
-      </li></ul>
-
-  
-  
-    
-    
-  
-
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-  </div>
-  </nav>
-
-
   <article class="w-full break-words flex min-h-[calc(100vh-var(--navbar-height))] min-w-0 justify-center pb-8 pr-[calc(env(safe-area-inset-right)-1.5rem)]">
     <main class="w-full min-w-0 max-w-6xl px-6 pt-4 md:px-12">
 
       
 
-      <h1 class="mt-2 text-4xl font-bold tracking-tight text-slate-900 dark:text-slate-100">Intro to R (part 1): The basics</h1>
+        
+        <h1 class="mt-2 text-4xl font-bold tracking-tight text-slate-900 dark:text-slate-100">Intro to R (part 1): The basics</h1>
+        <div class="mt-4 mb-16">
+          <div class="text-gray-500 dark:text-gray-300 text-sm flex items-center flex-wrap gap-y-2"><span class="mr-1">Aug 12, 2022</span></div>
+          <div class="mt-3">
 
-      <div class="mt-4 mb-16">
-      <div class="text-gray-500 dark:text-gray-300 text-sm flex items-center flex-wrap gap-y-2"><span class="mr-1">Aug 12, 2022</span>
-        
 
-        
-        <span class="mx-1">·</span>
-        <span class="mx-1">
-          4 min read
-        </span>
-        
+
+
+</div>
         </div>
-
-        <div class="mt-3">
-          
-
-
-
-
-
-        </div>
-      </div>
-
-
-
-      
-      
-      
-
-      
-      
-
-      <div class="prose prose-slate lg:prose-xl dark:prose-invert">
-        <h1 id="welcome-to-r">Welcome to R!</h1>
+        <div class="prose prose-slate lg:prose-xl dark:prose-invert">
+          <h1 id="welcome-to-r">Welcome to R!</h1>
 <h2 id="in-this-tutorial-we-will-learn-the-basics-of-r-coding-including">In this tutorial, we will learn the basics of R coding, including:</h2>
 <ul>
 <li>Using functions</li>
@@ -2025,16 +1849,10 @@ fruit$lets
 </code></pre>
 <p>See <a href="https://www.alexbaecher.com//post/r-intro-pt2/" target="_blank" rel="noopener">R intro part 2</a> for a tutorial of more advanced R features using data from &ldquo;GapMinder&rdquo;</p>
 
-      </div>
-
-      
-  <time class="mt-12 mb-8 block text-xs text-gray-500 ltr:text-right rtl:text-left dark:text-gray-400" datetime="2022-08-12T00:00:00.000Z">
-    <span>Last updated on</span>
-    Aug 12, 2022</time>
-
-      <div class="container mx-auto prose prose-slate lg:prose-xl dark:prose-invert mt-5">
-        
-        <div class="max-w-prose print:hidden">
+        </div>
+        <div class="container mx-auto prose prose-slate lg:prose-xl dark:prose-invert mt-5">
+          
+          <div class="max-w-prose print:hidden">
   
   
 
@@ -2068,7 +1886,7 @@ fruit$lets
   <a
     target="_blank" rel="noopener"
     class="m-1 rounded-md bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral-300 dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-    href="https://twitter.com/intent/tweet?url=http%3A%2F%2Flocalhost%2Fpost%2Fr-intro%2F&amp;text=Intro&#43;to&#43;R&#43;%28part&#43;1%29%3A&#43;The&#43;basics"
+    href="https://twitter.com/intent/tweet?url=http%3A%2F%2Flocalhost%3A1313%2Fpost%2Fr-intro%2F&amp;text=Intro&#43;to&#43;R&#43;%28part&#43;1%29%3A&#43;The&#43;basics"
     title="X"
     aria-label="X"
     id="share-link-x"
@@ -2086,7 +1904,7 @@ fruit$lets
   <a
     target="_blank" rel="noopener"
     class="m-1 rounded-md bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral-300 dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-    href="https://www.facebook.com/sharer.php?u=http%3A%2F%2Flocalhost%2Fpost%2Fr-intro%2F&amp;t=Intro&#43;to&#43;R&#43;%28part&#43;1%29%3A&#43;The&#43;basics"
+    href="https://www.facebook.com/sharer.php?u=http%3A%2F%2Flocalhost%3A1313%2Fpost%2Fr-intro%2F&amp;t=Intro&#43;to&#43;R&#43;%28part&#43;1%29%3A&#43;The&#43;basics"
     title="Facebook"
     aria-label="Facebook"
     id="share-link-facebook"
@@ -2106,7 +1924,7 @@ fruit$lets
   <a
     target="_blank" rel="noopener"
     class="m-1 rounded-md bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral-300 dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-    href="mailto:?subject=Intro%20to%20R%20%28part%201%29%3A%20The%20basics&amp;body=http%3A%2F%2Flocalhost%2Fpost%2Fr-intro%2F"
+    href="mailto:?subject=Intro%20to%20R%20%28part%201%29%3A%20The%20basics&amp;body=http%3A%2F%2Flocalhost%3A1313%2Fpost%2Fr-intro%2F"
     title="Email"
     aria-label="Email"
     id="share-link-email"
@@ -2124,7 +1942,7 @@ fruit$lets
   <a
     target="_blank" rel="noopener"
     class="m-1 rounded-md bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral-300 dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-    href="https://www.linkedin.com/shareArticle?url=http%3A%2F%2Flocalhost%2Fpost%2Fr-intro%2F&amp;title=Intro&#43;to&#43;R&#43;%28part&#43;1%29%3A&#43;The&#43;basics"
+    href="https://www.linkedin.com/shareArticle?url=http%3A%2F%2Flocalhost%3A1313%2Fpost%2Fr-intro%2F&amp;title=Intro&#43;to&#43;R&#43;%28part&#43;1%29%3A&#43;The&#43;basics"
     title="LinkedIn"
     aria-label="LinkedIn"
     id="share-link-linkedin"
@@ -2142,7 +1960,7 @@ fruit$lets
   <a
     target="_blank" rel="noopener"
     class="m-1 rounded-md bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral-300 dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-    href="whatsapp://send?text=Intro&#43;to&#43;R&#43;%28part&#43;1%29%3A&#43;The&#43;basics%20http%3A%2F%2Flocalhost%2Fpost%2Fr-intro%2F"
+    href="whatsapp://send?text=Intro&#43;to&#43;R&#43;%28part&#43;1%29%3A&#43;The&#43;basics%20http%3A%2F%2Flocalhost%3A1313%2Fpost%2Fr-intro%2F"
     title="WhatsApp"
     aria-label="WhatsApp"
     id="share-link-whatsapp"
@@ -2229,7 +2047,9 @@ fruit$lets
 
 </div>
 
-      </div>
+        </div>
+
+      
 
     </main>
   </article>

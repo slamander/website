@@ -3,7 +3,7 @@
 <!-- Last Published: March 26, 2026 --><html lang="en-us" dir="ltr"
       data-wc-theme-default="system">
   
-<head>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -40,7 +40,7 @@
   <meta name="description" content="A tutorial for incoporating Gaussian processes, spatial smoothers, or other features into ecological GLM(M)s or hierarchical models" />
 
   
-  <link rel="alternate" hreflang="en-us" href="http://localhost/post/ecological-spatial-structures/" />
+  <link rel="alternate" hreflang="en-us" href="http://localhost:1313/post/ecological-spatial-structures/" />
 
   
   
@@ -157,7 +157,7 @@
   <link rel="icon" type="image/png" href="/media/icon_hu5715557880635774272.png" />
   <link rel="apple-touch-icon" type="image/png" href="/media/icon_hu6914742598827333628.png" />
 
-  <link rel="canonical" href="http://localhost/post/ecological-spatial-structures/" />
+  <link rel="canonical" href="http://localhost:1313/post/ecological-spatial-structures/" />
 
   
   
@@ -182,10 +182,10 @@
     <meta property="twitter:creator" content="@AlexBaecher" />
   
   <meta property="og:site_name" content="Quest Lab" />
-  <meta property="og:url" content="http://localhost/post/ecological-spatial-structures/" />
+  <meta property="og:url" content="http://localhost:1313/post/ecological-spatial-structures/" />
   <meta property="og:title" content="Spatial Structures in Ecological Models | Quest Lab" />
-  <meta property="og:description" content="A tutorial for incoporating Gaussian processes, spatial smoothers, or other features into ecological GLM(M)s or hierarchical models" /><meta property="og:image" content="http://localhost/post/ecological-spatial-structures/featured.png" />
-    <meta property="twitter:image" content="http://localhost/post/ecological-spatial-structures/featured.png" /><meta property="og:locale" content="en-us" />
+  <meta property="og:description" content="A tutorial for incoporating Gaussian processes, spatial smoothers, or other features into ecological GLM(M)s or hierarchical models" /><meta property="og:image" content="http://localhost:1313/post/ecological-spatial-structures/featured.png" />
+    <meta property="twitter:image" content="http://localhost:1313/post/ecological-spatial-structures/featured.png" /><meta property="og:locale" content="en-us" />
   
     
       <meta
@@ -870,8 +870,8 @@
   
   <script
     defer
-    src="/js/hugo-blox-en.min.47736f84e20cae1bb2224dc4605239689e913811575e32b5f86a700ee9d6529d.js"
-    integrity="sha256-R3NvhOIMrhuyIk3EYFI5aJ6ROBFXXjK1&#43;GpwDunWUp0="
+    src="/js/hugo-blox-en.min.js"
+    integrity=""
   ></script>
 
   
@@ -1109,10 +1109,6 @@
     </div>
     <div class="page-body  my-10">
       
-
-
-
-
 
 <div class="mx-auto flex max-w-screen-xl">
   
@@ -1698,433 +1694,24 @@
     <div class="max-xl:hidden h-0 w-64 shrink-0"></div></div>
 
 </aside>
-  
-
-<nav class="hb-toc order-last hidden w-64 shrink-0 xl:block print:hidden px-4" aria-label="table of contents">
-  
-
-
-
-
-
-
-
-
-
-
-
-  <div class="hb-scrollbar text-sm [hyphens:auto] sticky top-16 overflow-y-auto pr-4 pt-6 max-h-[calc(100vh-var(--navbar-height)-env(safe-area-inset-bottom))] -mr-4 rtl:-ml-4"><p class="mb-4 font-semibold tracking-tight">On this page</p><ul>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#what-this-document-will-cover">What this document will cover:</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#why-include-spatial-structures-in-your-model">Why include spatial structures in your model?</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-8 rtl:pr-8 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#toblers-first-law-geography-aka-spatial-autocorrelation">Tobler’s First law Geography (a.k.a. spatial autocorrelation):</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-12 rtl:pr-12 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#further-ignoring-spatial-autocorrelation-leads-to">Further: Ignoring spatial autocorrelation leads to…</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#how-to-account-for-spatial-autocorrelation-in-my-model">How to account for spatial autocorrelation in my model?</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-8 rtl:pr-8 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#first-what-type-of-spatial-data-do-you-have">First, what type of spatial data do you have?</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-12 rtl:pr-12 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#data-types">Data types:</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#1-point-referenced-data">1. Point-Referenced Data</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#what-is-point-referenced-data">What is Point-Referenced Data?</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-8 rtl:pr-8 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#a-visual-example">A visual example</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#point-referenced-data-the-core-challenge">Point-Referenced data: The Core Challenge</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#point-referenced-data-five-approaches">Point-Referenced data: Five Approaches</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#understanding-the-gp-family-tree">Understanding the GP Family Tree</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-8 rtl:pr-8 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#conceptual-relationships">Conceptual Relationships</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#method-1-full-gaussian-processes">Method 1: Full Gaussian Processes</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-8 rtl:pr-8 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#full-gp-covariance-functions">Full GP: Covariance Functions</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#practical-advice">Practical Advice</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-12 rtl:pr-12 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#full-gp-the-computational-problem">Full GP: The Computational Problem</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-8 rtl:pr-8 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#this-is-why-we-need-approximations">This is why we need approximations!</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-8 rtl:pr-8 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#full-gp-r-implementation">Full GP: R Implementation</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#method-2-spde-approximation">Method 2: SPDE Approximation</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-8 rtl:pr-8 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#spde-how-it-works">SPDE: How It Works</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-8 rtl:pr-8 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#spde-r-implementation-with-sdmtmb">SPDE: R Implementation with sdmTMB</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-8 rtl:pr-8 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#spde-r-implementation-with-inla">SPDE: R Implementation with INLA</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-8 rtl:pr-8 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#spde-making-predictions">SPDE: Making Predictions</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#method-3-low-rank-gaussian-processes">Method 3: Low-Rank Gaussian Processes</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#low-rank-gp-predictive-processes">Low-Rank GP: Predictive Processes</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-8 rtl:pr-8 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#low-rank-gp-r-implementation">Low-Rank GP: R Implementation</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-8 rtl:pr-8 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#low-rank-gp-alternative-with-frk">Low-Rank GP: Alternative with FRK</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#method-4-nearest-neighbor-gaussian-processes">Method 4: Nearest Neighbor Gaussian Processes</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-8 rtl:pr-8 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#nearest-neighbor-gp-how-it-works">Nearest Neighbor GP: How It Works</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-12 rtl:pr-12 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#the-ordering-of-your-data-affects-results">The ordering of your data affects results!</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-8 rtl:pr-8 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#nearest-neighbor-gp-r-package-spnngp">Nearest Neighbor GP: R package spNNGP</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-8 rtl:pr-8 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#nearest-neighbor-gp-r-package-spabundance">Nearest Neighbor GP: R package spAbundance</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#method-5-spatial-splines">Method 5: Spatial Splines</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-12 rtl:pr-12 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#spatial-splines-types">Spatial Splines: Types</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#when-to-use-splines">When to Use Splines</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-8 rtl:pr-8 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#spatial-splines-r-implementation-with-mgcv">Spatial Splines: R Implementation with mgcv</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-8 rtl:pr-8 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#spatial-splines-tensor-products">Spatial Splines: Tensor Products</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-8 rtl:pr-8 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#point-referenced-comprehensive-comparison">Point-Referenced: Comprehensive Comparison</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-8 rtl:pr-8 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#key-r-packages">Key R packages</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#common-pitfalls-and-solutions">Common Pitfalls and Solutions</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#watch-out-for">Watch Out For:</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-8 rtl:pr-8 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#validation-and-model-checking">Validation and Model Checking</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-8 rtl:pr-8 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#integration-with-covariates">Integration with Covariates</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#interpretation-challenge">Interpretation Challenge</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#advanced-topics">Advanced Topics</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-8 rtl:pr-8 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#summary-point-referenced-data">Summary: Point-Referenced Data</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#resources-and-further-reading">Resources and Further Reading</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#2-areal--lattice-data">2. Areal / Lattice Data</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#what-is-areal-data">What is Areal Data?</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-8 rtl:pr-8 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#areal-data-visual-example">Areal Data: Visual Example</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#common-questions">Common Questions</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-8 rtl:pr-8 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#areal-data-neighborhood-structure">Areal Data: Neighborhood Structure</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#areal-data-method-1---car-models">Areal Data: Method 1 - CAR Models</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-12 rtl:pr-12 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#icar-model-properties">ICAR Model: Properties</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#areal-data-method-2---proper-car">Areal Data: Method 2 - Proper CAR</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#areal-data-method-3---bym-model">Areal Data: Method 3 - BYM Model</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-8 rtl:pr-8 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#bym2-parameterization">BYM2 Parameterization</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#areal-data-method-4---sar-models">Areal Data: Method 4 - SAR Models</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-8 rtl:pr-8 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#areal-data-car-vs-sar">Areal Data: CAR vs SAR</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#areal-data-method-5---spatial-eigenvectors">Areal Data: Method 5 - Spatial Eigenvectors</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-8 rtl:pr-8 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#spatial-eigenvectors-example">Spatial Eigenvectors: Example</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-8 rtl:pr-8 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#areal-data-comparison">Areal Data: Comparison</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-8 rtl:pr-8 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#areal-data-r-example-with-inla">Areal Data: R Example with INLA</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#3-point-pattern-data">3. Point Pattern Data</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#what-is-point-pattern-data">What is Point Pattern Data?</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-8 rtl:pr-8 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#point-pattern-visual-example">Point Pattern: Visual Example</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#point-pattern-core-concept---intensity">Point Pattern: Core Concept - Intensity</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#point-pattern-method-1---inhomogeneous-poisson-process">Point Pattern: Method 1 - Inhomogeneous Poisson Process</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#point-pattern-method-2---cox-processes">Point Pattern: Method 2 - Cox Processes</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-8 rtl:pr-8 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#lgcp-implementation-approaches">LGCP: Implementation Approaches</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#point-pattern-method-3---interaction-models">Point Pattern: Method 3 - Interaction Models</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-8 rtl:pr-8 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#point-pattern-comparison">Point Pattern: Comparison</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-8 rtl:pr-8 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#point-pattern-r-example-with-spatstat">Point Pattern: R Example with spatstat</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-8 rtl:pr-8 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#point-pattern-r-example-with-inlabru">Point Pattern: R Example with inlabru</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#3-movement--trajectory-data">3. Movement / Trajectory Data</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#what-is-movement-data">What is Movement Data?</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-8 rtl:pr-8 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#movement-data-visual-example">Movement Data: Visual Example</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#key-questions">Key Questions</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-8 rtl:pr-8 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#movement-data-unique-challenges">Movement Data: Unique Challenges</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#movement-data-method-1---step-selection-functions">Movement Data: Method 1 - Step Selection Functions</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-8 rtl:pr-8 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#step-selection-functions-details">Step Selection Functions: Details</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-8 rtl:pr-8 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#ssf-r-example">SSF: R Example</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#movement-data-method-2---state-space-models">Movement Data: Method 2 - State-Space Models</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-8 rtl:pr-8 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#state-space-models-behavioral-states">State-Space Models: Behavioral States</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-8 rtl:pr-8 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#state-space-model-r-example">State-Space Model: R Example</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#movement-data-method-3---continuous-time-models">Movement Data: Method 3 - Continuous-Time Models</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-8 rtl:pr-8 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#continuous-time-ctmm-package">Continuous-Time: ctmm Package</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#movement-data-method-4---integrated-models">Movement Data: Method 4 - Integrated Models</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-8 rtl:pr-8 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#movement-data-comparison">Movement Data: Comparison</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#integrating-across-data-types">Integrating Across Data Types</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#multi-scale--multi-type-integration">Multi-Scale / Multi-Type Integration</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#integration-approach-1-change-of-support">Integration Approach 1: Change of Support</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#integration-approach-2-joint-likelihood-models">Integration Approach 2: Joint Likelihood Models</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#integration-approach-3-spatial-misalignment">Integration Approach 3: Spatial Misalignment</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-8 rtl:pr-8 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#practical-integration-example">Practical Integration Example</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#model-selection-and-validation">Model Selection and Validation</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#validation-for-spatial-data">Validation for Spatial Data</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#critical-issue">Critical Issue</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-8 rtl:pr-8 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#spatial-cross-validation-methods">Spatial Cross-Validation Methods</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#model-comparison-for-spatial-models">Model Comparison for Spatial Models</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-8 rtl:pr-8 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#diagnosing-spatial-model-fit">Diagnosing Spatial Model Fit</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#computational-considerations">Computational Considerations</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#software-summary">Software Summary</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#recommended-workflow">Recommended Workflow</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#common-pitfalls">Common Pitfalls</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#watch-out-for-1">Watch Out For:</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#when-to-use-each-data-type-approach">When to Use Each Data Type Approach</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-8 rtl:pr-8 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#future-directions">Future Directions</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#key-takeaways">Key Takeaways</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#remember">Remember:</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#resources">Resources</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#questions">Questions?</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#contact--discussion">Contact &amp; Discussion</a>
-      </li></ul>
-
-  
-  
-    
-    
-  
-
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-  </div>
-  </nav>
-
-
   <article class="w-full break-words flex min-h-[calc(100vh-var(--navbar-height))] min-w-0 justify-center pb-8 pr-[calc(env(safe-area-inset-right)-1.5rem)]">
     <main class="w-full min-w-0 max-w-6xl px-6 pt-4 md:px-12">
 
       
 
-      <h1 class="mt-2 text-4xl font-bold tracking-tight text-slate-900 dark:text-slate-100">Spatial Structures in Ecological Models</h1>
+        
+        <h1 class="mt-2 text-4xl font-bold tracking-tight text-slate-900 dark:text-slate-100">Spatial Structures in Ecological Models</h1>
+        <div class="mt-4 mb-16">
+          <div class="text-gray-500 dark:text-gray-300 text-sm flex items-center flex-wrap gap-y-2"><span class="mr-1">Nov 22, 2025</span></div>
+          <div class="mt-3">
 
-      <div class="mt-4 mb-16">
-      <div class="text-gray-500 dark:text-gray-300 text-sm flex items-center flex-wrap gap-y-2"><span class="mr-1">Nov 22, 2025</span>
-        
 
-        
-        <span class="mx-1">·</span>
-        <span class="mx-1">
-          31 min read
-        </span>
-        
+
+
+</div>
         </div>
-
-        <div class="mt-3">
-          
-
-
-
-
-
-        </div>
-      </div>
-
-
-
-      
-      
-      
-
-      
-      
-
-      <div class="prose prose-slate lg:prose-xl dark:prose-invert">
-        <p>
+        <div class="prose prose-slate lg:prose-xl dark:prose-invert">
+          <p>
 
 
 
@@ -4286,16 +3873,10 @@ More complex ≠ better. Use simplest model that captures spatial structure.</p>
 <p>Let&rsquo;s discuss specific applications to your research!</p>
 <p><strong>Thank you!</strong></p>
 
-      </div>
-
-      
-  <time class="mt-12 mb-8 block text-xs text-gray-500 ltr:text-right rtl:text-left dark:text-gray-400" datetime="2025-11-22T00:00:00.000Z">
-    <span>Last updated on</span>
-    Nov 22, 2025</time>
-
-      <div class="container mx-auto prose prose-slate lg:prose-xl dark:prose-invert mt-5">
-        
-        <div class="max-w-prose print:hidden">
+        </div>
+        <div class="container mx-auto prose prose-slate lg:prose-xl dark:prose-invert mt-5">
+          
+          <div class="max-w-prose print:hidden">
   
   
 
@@ -4409,7 +3990,7 @@ More complex ≠ better. Use simplest model that captures spatial structure.</p>
   <a
     target="_blank" rel="noopener"
     class="m-1 rounded-md bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral-300 dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-    href="https://twitter.com/intent/tweet?url=http%3A%2F%2Flocalhost%2Fpost%2Fecological-spatial-structures%2F&amp;text=Spatial&#43;Structures&#43;in&#43;Ecological&#43;Models"
+    href="https://twitter.com/intent/tweet?url=http%3A%2F%2Flocalhost%3A1313%2Fpost%2Fecological-spatial-structures%2F&amp;text=Spatial&#43;Structures&#43;in&#43;Ecological&#43;Models"
     title="X"
     aria-label="X"
     id="share-link-x"
@@ -4427,7 +4008,7 @@ More complex ≠ better. Use simplest model that captures spatial structure.</p>
   <a
     target="_blank" rel="noopener"
     class="m-1 rounded-md bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral-300 dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-    href="https://www.facebook.com/sharer.php?u=http%3A%2F%2Flocalhost%2Fpost%2Fecological-spatial-structures%2F&amp;t=Spatial&#43;Structures&#43;in&#43;Ecological&#43;Models"
+    href="https://www.facebook.com/sharer.php?u=http%3A%2F%2Flocalhost%3A1313%2Fpost%2Fecological-spatial-structures%2F&amp;t=Spatial&#43;Structures&#43;in&#43;Ecological&#43;Models"
     title="Facebook"
     aria-label="Facebook"
     id="share-link-facebook"
@@ -4447,7 +4028,7 @@ More complex ≠ better. Use simplest model that captures spatial structure.</p>
   <a
     target="_blank" rel="noopener"
     class="m-1 rounded-md bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral-300 dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-    href="mailto:?subject=Spatial%20Structures%20in%20Ecological%20Models&amp;body=http%3A%2F%2Flocalhost%2Fpost%2Fecological-spatial-structures%2F"
+    href="mailto:?subject=Spatial%20Structures%20in%20Ecological%20Models&amp;body=http%3A%2F%2Flocalhost%3A1313%2Fpost%2Fecological-spatial-structures%2F"
     title="Email"
     aria-label="Email"
     id="share-link-email"
@@ -4465,7 +4046,7 @@ More complex ≠ better. Use simplest model that captures spatial structure.</p>
   <a
     target="_blank" rel="noopener"
     class="m-1 rounded-md bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral-300 dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-    href="https://www.linkedin.com/shareArticle?url=http%3A%2F%2Flocalhost%2Fpost%2Fecological-spatial-structures%2F&amp;title=Spatial&#43;Structures&#43;in&#43;Ecological&#43;Models"
+    href="https://www.linkedin.com/shareArticle?url=http%3A%2F%2Flocalhost%3A1313%2Fpost%2Fecological-spatial-structures%2F&amp;title=Spatial&#43;Structures&#43;in&#43;Ecological&#43;Models"
     title="LinkedIn"
     aria-label="LinkedIn"
     id="share-link-linkedin"
@@ -4483,7 +4064,7 @@ More complex ≠ better. Use simplest model that captures spatial structure.</p>
   <a
     target="_blank" rel="noopener"
     class="m-1 rounded-md bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral-300 dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-    href="whatsapp://send?text=Spatial&#43;Structures&#43;in&#43;Ecological&#43;Models%20http%3A%2F%2Flocalhost%2Fpost%2Fecological-spatial-structures%2F"
+    href="whatsapp://send?text=Spatial&#43;Structures&#43;in&#43;Ecological&#43;Models%20http%3A%2F%2Flocalhost%3A1313%2Fpost%2Fecological-spatial-structures%2F"
     title="WhatsApp"
     aria-label="WhatsApp"
     id="share-link-whatsapp"
@@ -4570,7 +4151,9 @@ More complex ≠ better. Use simplest model that captures spatial structure.</p>
 
 </div>
 
-      </div>
+        </div>
+
+      
 
     </main>
   </article>
