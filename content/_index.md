@@ -9,7 +9,7 @@ sections:
   - block: hero
     content:
       title: | 
-        <img src='media/quest_lab_emory.png?v=F' alt='Quest lab at Emory' class='w-32 h-auto mx-auto' style='width: auto; height: auto;'>
+        <img src='media/quest_lab_emory.png?v=F'>
       text: The Baecher lab at Emory's Dept. of Environmental Science
         
 # "https://drive.google.com/uc?export=download&id=1A1J5ZJXHnqckGl--LIzAfYBnTdg5EUEW"
@@ -41,7 +41,7 @@ sections:
       title: Welcome to the Quest lab
       text: |
 
-        <img src="/media/emory_shield.png" alt="Quest at Emory shield" style="width: 600px; height: auto;">
+        <img src="/media/emory_shield.png" alt="Quest at Emory shield">
 
         We are an applied quantitative ecology laboratory, broadly interested in the processes that determine the distribution of biodiversity in space and time. Our research integrates field studies, laboratory experiments, big data, cutting-edge modeling techniques, and high-performance computing to address fundamental questions related to species conservation, biological invasions, and climate-induced species range shifts, and disease transmission. 
         
