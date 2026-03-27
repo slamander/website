@@ -5,21 +5,11 @@ date: 2026-03-25
 draft: false
 
 sections:
-  # - block: hero
-  #   content:
-  #     title: "Baecher research"
-  #     subtitle: "Qμe[st]"
-  #     text: | 
-  #       <span class="text-xxl">**Qμe[st]:**</span>
-  #       <span class="text-xl">**Qμ**antitative **E**cology in **S**pace and **T**ime</span>      ‎‎ 
-  #       <br>
-  #       <br>        ‎ 
-  #       <img src='media/quest_lab_emory.png?v=F' alt='Quest lab at Emory' class='w-32 h-auto mx-auto' style='width: 300px; height: auto;'>
 
   - block: hero
     content:
       title: | 
-        <img src='media/quest_lab_emory.png?v=F' alt='Quest lab at Emory' class='w-32 h-auto mx-auto' style='width: auto; height: 400px;'>
+        <img src='media/quest_lab_emory.png?v=F' alt='Quest lab at Emory' class='w-32 h-auto mx-auto' style='width: 400px; height: 400px;'>
       subtitle: "Research, Education, and Outreach by J. Alex Baecher"
       text: "Research, Education, and Outreach by J. Alex Baecher"
         
