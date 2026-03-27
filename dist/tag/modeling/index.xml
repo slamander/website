@@ -5,12 +5,20 @@
     <link>http://localhost:1313/tag/modeling/</link>
       <atom:link href="http://localhost:1313/tag/modeling/index.xml" rel="self" type="application/rss+xml" />
     <description>Modeling</description>
-    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><copyright>© 2026 Alex Baecher</copyright><lastBuildDate>Wed, 08 Oct 2025 00:00:00 +0000</lastBuildDate>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><copyright>© 2026 Alex Baecher</copyright><lastBuildDate>Sat, 10 Jan 2026 00:00:00 +0000</lastBuildDate>
     <image>
       <url>http://localhost:1313/media/logo_hu2039277577754200582.png</url>
       <title>Modeling</title>
       <link>http://localhost:1313/tag/modeling/</link>
     </image>
+    
+    <item>
+      <title>Biodiversity redistribution</title>
+      <link>http://localhost:1313/project/climate-species-redistribution/</link>
+      <pubDate>Sat, 10 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/project/climate-species-redistribution/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Linking hosts, landscapes, and climate to advance zoonotic arbovirus forecasting</title>
@@ -58,14 +66,6 @@ Basic generalized linear mixed effects models can account for spatial (and spati
 &lt;li&gt;Baecher, JA, et al. .&lt;em&gt;In prep&lt;/em&gt;. Informing species range shifts with global connectivity. &lt;em&gt;TBA&lt;/em&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
-    </item>
-    
-    <item>
-      <title>Biodiversity redistribution</title>
-      <link>http://localhost:1313/project/climate-species-redistribution/</link>
-      <pubDate>Sun, 15 Jan 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/project/climate-species-redistribution/</guid>
-      <description></description>
     </item>
     
     <item>

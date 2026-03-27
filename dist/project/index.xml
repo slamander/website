@@ -5,12 +5,41 @@
     <link>http://localhost:1313/project/</link>
       <atom:link href="http://localhost:1313/project/index.xml" rel="self" type="application/rss+xml" />
     <description>Projects</description>
-    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><copyright>© 2026 Alex Baecher</copyright><lastBuildDate>Sat, 15 Mar 2025 00:00:00 +0000</lastBuildDate>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><copyright>© 2026 Alex Baecher</copyright><lastBuildDate>Thu, 15 Jan 2026 00:00:00 +0000</lastBuildDate>
     <image>
       <url>http://localhost:1313/media/logo_hu2039277577754200582.png</url>
       <title>Projects</title>
       <link>http://localhost:1313/project/</link>
     </image>
+    
+    <item>
+      <title>Appalachian Salamander Ecology</title>
+      <link>http://localhost:1313/project/appalachian-ecology/</link>
+      <pubDate>Thu, 15 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/project/appalachian-ecology/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Appalachian Salamander Ecology&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Salamanders are among the most abundant vertebrate animals in temperate deciduous forests of eastern North America. Because of their abundance, salamanders are responsible for the transfer of energy between highly disparate levels of trophic organization: detrital food webs and high‐order predators. By predating leaf litter insects (particularly shredders), salamanders are thought to slow the leaf litter decomposition process, resulting in less soil respiration and fewer carbon emmissions. Therefore, salamanders represent one of the most important ecosystem services in forests. Unfortunately, salamanders&amp;rsquo; predicted sensitivity to climate change suggests these services may not be rendered indefinitely&amp;hellip; My research aims to understand how salamanders will respond to natural and anthropogenic disturbances, as well furthering out understand of their natural history.&lt;/p&gt;
+&lt;p&gt;Interests in Appalachian Salamander Research:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Studying population dynamics of salamanders in relation to natural disturbance (e.g. canopy perforation)&lt;/li&gt;
+&lt;li&gt;Investigating how salamanders respond to a competition-disturbance gradient&lt;/li&gt;
+&lt;li&gt;Understanding how climate change will affect salamanders across elevation gradients&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Publications&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Baecher, JA, E Jones, SC Richter. &lt;strong&gt;2020&lt;/strong&gt;. Tail bifurcation in two species of Desmognathus salamander Caudata: Plethodontidae in southeastern Kentucky, USA. &lt;em&gt;Herpetological Bulletin&lt;/em&gt; &lt;a href=&#34;https://doi.org/10.33256/hb150.2930&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://doi.org/10.33256/hb150.2930&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Baecher, JA, SC Richter. &lt;strong&gt;2018&lt;/strong&gt;. Environmental gradients in an old-growth Appalachian Forest predict fine-scale distribution, co-occurrence, and abundance of woodland salamanders. &lt;em&gt;Ecology and Evolution&lt;/em&gt; &lt;a href=&#34;https://doi.org/10.1002/ece3.4736&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://doi.org/10.1002/ece3.4736&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Biodiversity redistribution</title>
+      <link>http://localhost:1313/project/climate-species-redistribution/</link>
+      <pubDate>Sat, 10 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/project/climate-species-redistribution/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Forecasting ecological dynamics and disease</title>
@@ -53,35 +82,6 @@ Basic generalized linear mixed effects models can account for spatial (and spati
 &lt;ul&gt;
 &lt;li&gt;Baecher, JA, et al. .&lt;strong&gt;In review&lt;/strong&gt;. Isolating what limits the spread of an invasive predator. &lt;em&gt;Journal of Applied Ecology&lt;/em&gt; &lt;a href=&#34;https://advance.sagepub.com/doi/full/10.22541/au.171248322.23946990/v1&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://advance.sagepub.com/doi/full/10.22541/au.171248322.23946990/v1&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Baecher, JA, et al. .&lt;em&gt;In prep&lt;/em&gt;. Informing species range shifts with global connectivity. &lt;em&gt;TBA&lt;/em&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Biodiversity redistribution</title>
-      <link>http://localhost:1313/project/climate-species-redistribution/</link>
-      <pubDate>Sun, 15 Jan 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/project/climate-species-redistribution/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Appalachian Salamander Ecology</title>
-      <link>http://localhost:1313/project/appalachian-ecology/</link>
-      <pubDate>Thu, 15 Jan 2015 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/project/appalachian-ecology/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;Appalachian Salamander Ecology&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Salamanders are among the most abundant vertebrate animals in temperate deciduous forests of eastern North America. Because of their abundance, salamanders are responsible for the transfer of energy between highly disparate levels of trophic organization: detrital food webs and high‐order predators. By predating leaf litter insects (particularly shredders), salamanders are thought to slow the leaf litter decomposition process, resulting in less soil respiration and fewer carbon emmissions. Therefore, salamanders represent one of the most important ecosystem services in forests. Unfortunately, salamanders&amp;rsquo; predicted sensitivity to climate change suggests these services may not be rendered indefinitely&amp;hellip; My research aims to understand how salamanders will respond to natural and anthropogenic disturbances, as well furthering out understand of their natural history.&lt;/p&gt;
-&lt;p&gt;Interests in Appalachian Salamander Research:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Studying population dynamics of salamanders in relation to natural disturbance (e.g. canopy perforation)&lt;/li&gt;
-&lt;li&gt;Investigating how salamanders respond to a competition-disturbance gradient&lt;/li&gt;
-&lt;li&gt;Understanding how climate change will affect salamanders across elevation gradients&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Publications&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Baecher, JA, E Jones, SC Richter. &lt;strong&gt;2020&lt;/strong&gt;. Tail bifurcation in two species of Desmognathus salamander Caudata: Plethodontidae in southeastern Kentucky, USA. &lt;em&gt;Herpetological Bulletin&lt;/em&gt; &lt;a href=&#34;https://doi.org/10.33256/hb150.2930&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://doi.org/10.33256/hb150.2930&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Baecher, JA, SC Richter. &lt;strong&gt;2018&lt;/strong&gt;. Environmental gradients in an old-growth Appalachian Forest predict fine-scale distribution, co-occurrence, and abundance of woodland salamanders. &lt;em&gt;Ecology and Evolution&lt;/em&gt; &lt;a href=&#34;https://doi.org/10.1002/ece3.4736&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://doi.org/10.1002/ece3.4736&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>

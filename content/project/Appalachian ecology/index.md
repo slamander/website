@@ -1,15 +1,19 @@
 ---
 title: Appalachian Salamander Ecology
 
-date: "2015-01-15"
+date: "2026-01-15"
 
 external_link: []
 
 image:
-  caption: Jordan's Red Cheek Salamander from Great Smoky Mountains National Park.
+  caption: Spring salamander (Gyrinophilus porphoriticus) from eastern Kentucky 
   focal_point: Smart
   
 links:
+- icon: file-alt
+  icon_pack: fas
+  name: GEB paper
+  url: https://onlinelibrary.wiley.com/doi/10.1111/geb.13884
 - icon: file-alt
   icon_pack: fas
   name: Eco&Evo paper

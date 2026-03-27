@@ -1,0 +1,17 @@
+<!-- layouts/partials/views/community/grid-3col.html -->
+{{ $items := .items }}
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+  {{ range $items }}
+    <div class="rounded-lg overflow-hidden shadow bg-white dark:bg-gray-800">
+      {{ with .Params.image }}
+        <img src="{{ . | relURL }}" alt="{{ $.Title }}" class="w-full object-cover h-48">
+      {{ end }}
+      <div class="p-4">
+        <h3 class="font-semibold text-lg">
+          <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+        </h3>
+        <p class="text-sm text-gray-500 mt-1">{{ .Summary }}</p>
+      </div>
+    </div>
+  {{ end }}
+</div>

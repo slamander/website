@@ -1,0 +1,160 @@
+{{- define "main" -}}
+
+<div style="max-width:860px; margin:0 auto; padding:2.5rem 1.25rem;">
+
+  {{/* ── Title ── */}}
+  <h1 style="font-size:1.9rem; font-weight:700; line-height:1.35; margin-bottom:0.75rem;">
+    {{ .Title }}
+  </h1>
+
+  {{/* ── Date ── */}}
+  {{ if .Date }}
+  <p style="font-size:0.9rem; opacity:0.65; margin-bottom:1.5rem;">
+    {{ .Date.Format "January 2006" }}
+  </p>
+  {{ end }}
+
+  {{/* ── Featured image ── */}}
+  {{ $featured := (.Resources.ByType "image").GetMatch "*featured*" }}
+  {{ if $featured }}
+    {{ $img := $featured.Fit "900x400 Center" }}
+    <img src="{{ $img.RelPermalink }}" alt="{{ .Title }}"
+         style="width:100%; border-radius:8px; margin-bottom:2rem; object-fit:cover; max-height:340px;">
+  {{ end }}
+
+  {{/* ── Link buttons ── */}}
+  {{ $has_links := or .Params.url_pdf .Params.url_code .Params.url_dataset .Params.url_slides .Params.url_video .Params.url_source .Params.external_link .Params.links }}
+  {{ if $has_links }}
+  <div style="display:flex; flex-wrap:wrap; gap:0.5rem; margin-bottom:2rem;">
+
+    {{ with .Params.external_link }}
+    <a href="{{ . }}" target="_blank" rel="noopener"
+       style="display:inline-block; padding:0.4rem 1rem; border-radius:6px; font-size:0.85rem; font-weight:600; background:#1d4ed8; color:#fff; text-decoration:none;">
+      Project Site
+    </a>
+    {{ end }}
+
+    {{ with .Params.url_pdf }}
+    <a href="{{ . }}" target="_blank" rel="noopener"
+       style="display:inline-block; padding:0.4rem 1rem; border-radius:6px; font-size:0.85rem; font-weight:600; background:#1d4ed8; color:#fff; text-decoration:none;">
+      PDF
+    </a>
+    {{ end }}
+
+    {{ with .Params.url_code }}
+    <a href="{{ . }}" target="_blank" rel="noopener"
+       style="display:inline-block; padding:0.4rem 1rem; border-radius:6px; font-size:0.85rem; font-weight:600; background:#374151; color:#fff; text-decoration:none;">
+      Code
+    </a>
+    {{ end }}
+
+    {{ with .Params.url_dataset }}
+    <a href="{{ . }}" target="_blank" rel="noopener"
+       style="display:inline-block; padding:0.4rem 1rem; border-radius:6px; font-size:0.85rem; font-weight:600; background:#374151; color:#fff; text-decoration:none;">
+      Dataset
+    </a>
+    {{ end }}
+
+    {{ with .Params.url_slides }}
+    <a href="{{ . }}" target="_blank" rel="noopener"
+       style="display:inline-block; padding:0.4rem 1rem; border-radius:6px; font-size:0.85rem; font-weight:600; background:#374151; color:#fff; text-decoration:none;">
+      Slides
+    </a>
+    {{ end }}
+
+    {{ with .Params.url_video }}
+    <a href="{{ . }}" target="_blank" rel="noopener"
+       style="display:inline-block; padding:0.4rem 1rem; border-radius:6px; font-size:0.85rem; font-weight:600; background:#374151; color:#fff; text-decoration:none;">
+      Video
+    </a>
+    {{ end }}
+
+    {{ with .Params.url_source }}
+    <a href="{{ . }}" target="_blank" rel="noopener"
+       style="display:inline-block; padding:0.4rem 1rem; border-radius:6px; font-size:0.85rem; font-weight:600; background:#374151; color:#fff; text-decoration:none;">
+      Source
+    </a>
+    {{ end }}
+
+    {{/* Custom links from the `links:` array */}}
+    {{ range .Params.links }}
+    <a href="{{ .url }}" target="_blank" rel="noopener"
+       style="display:inline-block; padding:0.4rem 1rem; border-radius:6px; font-size:0.85rem; font-weight:600; background:#6b21a8; color:#fff; text-decoration:none;">
+      {{ .name }}
+    </a>
+    {{ end }}
+
+  </div>
+  {{ end }}
+
+  {{/* ── Summary / description ── */}}
+  {{ with .Params.summary }}
+  <div style="margin-bottom:2rem;">
+    <h2 style="font-size:1.1rem; font-weight:700; text-transform:uppercase; letter-spacing:0.05em; opacity:0.6; margin-bottom:0.75rem;">
+      Overview
+    </h2>
+    <p style="font-size:1rem; line-height:1.75;">
+      {{ . | markdownify }}
+    </p>
+  </div>
+  {{ end }}
+
+  {{/* ── Body content (markdown body of the index.md file) ── */}}
+  {{ if .Content }}
+  <div style="font-size:1rem; line-height:1.8; margin-bottom:2rem; {{ if .Params.summary }}border-top:1px solid rgba(128,128,128,0.2); padding-top:1.5rem;{{ end }}">
+    {{ .Content }}
+  </div>
+  {{ end }}
+
+  {{/* ── Tags ── */}}
+  {{ if .Params.tags }}
+  <div style="margin-bottom:2rem; padding-top:1rem; border-top:1px solid rgba(128,128,128,0.2);">
+    <h2 style="font-size:0.85rem; font-weight:700; text-transform:uppercase; letter-spacing:0.05em; opacity:0.6; margin-bottom:0.6rem;">
+      Topics
+    </h2>
+    <div>
+      {{ range .Params.tags }}
+      <a href="{{ "/tags/" }}{{ . | urlize }}"
+         style="display:inline-block; margin:0 0.3rem 0.3rem 0; padding:0.2rem 0.75rem; border-radius:999px; font-size:0.8rem; background:rgba(128,128,128,0.12); text-decoration:none;">
+        {{ . }}
+      </a>
+      {{ end }}
+    </div>
+  </div>
+  {{ end }}
+
+  {{/* ── Related publications ── */}}
+  {{/* Find publications that list this project slug in their `projects:` field */}}
+  {{ $projectSlug := path.Base .File.Dir }}
+  {{ $relatedPubs := where (where site.Pages "Section" "publication") ".Params.projects" "intersect" (slice $projectSlug) }}
+  {{ if $relatedPubs }}
+  <div style="margin-bottom:2rem; padding-top:1rem; border-top:1px solid rgba(128,128,128,0.2);">
+    <h2 style="font-size:1rem; font-weight:700; text-transform:uppercase; letter-spacing:0.05em; opacity:0.6; margin-bottom:0.75rem;">
+      Related Publications
+    </h2>
+    <ul style="list-style:none; padding:0; margin:0;">
+      {{ range $relatedPubs }}
+      <li style="margin-bottom:0.6rem; font-size:0.95rem; line-height:1.5;">
+        <a href="{{ .RelPermalink }}" style="text-decoration:none; font-weight:500;">{{ .Title }}</a>
+        {{ if .Params.publication }}
+          <span style="opacity:0.6; font-size:0.85rem;"> — <em>{{ .Params.publication | markdownify }}</em></span>
+        {{ end }}
+        {{ if .Date }}
+          <span style="opacity:0.5; font-size:0.85rem;"> ({{ .Date.Format "2006" }})</span>
+        {{ end }}
+      </li>
+      {{ end }}
+    </ul>
+  </div>
+  {{ end }}
+
+  {{/* ── Back link ── */}}
+  <div style="margin-top:2.5rem; padding-top:1.25rem; border-top:1px solid rgba(128,128,128,0.2);">
+    <a href="{{ (site.GetPage "section" "project").RelPermalink }}"
+       style="font-size:0.9rem; opacity:0.65; text-decoration:none;">
+      ← All projects
+    </a>
+  </div>
+
+</div>
+{{- end -}}

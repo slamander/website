@@ -1,5 +1,5 @@
 ---
-title: "Qμest lab"
+title: "Quest Lab"
 type: landing
 date: 2026-03-25
 draft: false
@@ -36,6 +36,26 @@ sections:
           parallax: true
           text_color_light: true
 
+  - block: markdown
+    content:
+      title: Welcome to the Quest lab
+      text: |
+
+        <img src="/media/emory_shield.png" alt="Quest at Emory shield" style="width: 1000px; height: auto;">
+
+        We are an applied quantitative ecology laboratory, broadly interested in the processes that determine the distribution of biodiversity in space and time. Our research integrates field studies, laboratory experiments, big data, cutting-edge modeling techniques, and high-performance computing to address fundamental questions related to species conservation, biological invasions, and climate-induced species range shifts, and disease transmission. 
+        
+        At Emory, we are hoping to build a team of interdisciplinary researchers, educators, and developers. If you think you'd like to get involved, take a look at some of our research projects -- both past and ongoing -- and reach out to me, [Dr. Baecher](mailto:jbaecher@gmail.com).
+
+      design:
+      columns: '2'
+      spacing:
+        padding: ["0px", "0", "0px", "0"]
+      background:
+        color: ''
+        text_color_light: false 
+     
+
   - block: collection
     content:
       title: "Research" 
@@ -49,7 +69,6 @@ sections:
           - project
     design:
       view: card
-      columns: 2
 
   - block: collection
     content:
@@ -97,101 +116,4 @@ sections:
       view: card
       columns: 2
 
-  - block: markdown
-    content:
-      title: "Teaching & Mentoring"
-      text: |
-
-        Whether in a classroom or lab, teaching must be student-centered, holistic, and equitable. By  fostering a supportive, engaging environment and recognizing all of students’ needs  (educational, emotional, and biological), I empower students to demonstrate mastery or seek additional support as needed—an approach known to increase success and enhance well-being.
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div>
-            <h3>Teaching Philosophy: </h3>
-            <p> 
-        Evidence-based strategies: 
-
-         - inquiry-based learning through real-world problem-solving
-
-         - hands-on, experiential activities (in the classroom, lab, or field)
-
-         - active learning exercises (e.g., case studies and debates)
-
-         </p>
-        </div>
-          <div>
-            <h3>Mentoring Philosophy:</h3>
-            <p>
-
-         Key practices:
-
-         - align students’ academic progress with personal goals and well-being
-
-         - foster independent problem-solving by providing space to explore and reflect
-
-         - encourage outside collaboration and/or mentorship
-
-         </p>
-        </div>
-        </div>
-
-         ## Student Outcomes
-        My students have gone on to pursue careers in academia, state/federal agencies, and the private sector:
-        - **Career progression:** 7 students pursued or completed MS (5) and PhD (2) programs and credit my mentorship in shaping their career trajectory
-        - **Academic output:** 15 conference presentations, 2 undergraduate theses, and 4 peer-reviewed publications
-
-        ## Recent courses
-
-        ### **Environmental Science** | University of Florida
-        *Senior-level course | 2022 -- 2024*
-        <img src="/media/EVS_3000L_pic_collage.png" alt="EVS 3000L collage" style="width: 1000px; height: auto;">
-        
-        A course covering population ecology, habitat management, and conservation strategies for wildlife species. Students learn to apply quantitative methods to real conservation problems.
-        
-        - **Topics**: Land management, Climate science, social-ecological systems, environmental justice, sustainability, invasive species
-        - **Methods**: R programming, GIS analysis, field techniques, technical writing, science communication
-        - **Enrollment**: 12 students
-        
-        [Syllabus (PDF)](https://drive.google.com/file/d/1oqrRQFm-8x6X6gH7MzmizIdZpZrwe3jG/view?usp=sharing) | Teaching R: [pt 1](https://www.alexbaecher.com/post/r-intro/) & [pt 2](https://www.alexbaecher.com/post/r-intro-pt2/)
-
-        ### **Landscape Connectivity Modeling** | Professional workshop
-        *Intensive workshop | Spring 2024*
-
-        Hands-on workshop teaching cutting-edge methods for modeling animal movement and landscape connectivity using circuit theory and spatial absorbing Markov chains.
-        
-        - **Software**: R, Circuitscape, SAMC package
-        - **Participants**: 40 researchers from 15 institutions
-        - **Focus**: Theory, implementation, and interpretation
-        
-        [Workshop Materials](https://github.com/your-repo) | [Video Lectures](#) | [Practice Datasets](#)
-
-        ## Select Guest Lectures & Workshops
-
-        - **Salamander Conservation in the Southeastern USA** - University of Florida (Spring 2020)
-        - **Connectivity for Species Redistribution** - University of Florida (Spring 2020) 
-        - **Expert Elicitation for Invasive Species Management** - University of Florida (2023)
-        - **SAMC Connectivity Modeling** - Species on the Move Conference (2023)
-
-        ## Resources: 
-        See my **R sandbox** for a 2-part tutorial on R coding:
-          - [**Part 1:**](https://www.alexbaecher.com/post/r-intro/)
-            - Using functions
-            - Help functions
-            - Vectors
-            - Sequences
-            - Data frames
-          - [**Part 2:**](https://www.alexbaecher.com/post/r-intro-pt2/)
-            - read data from a csv file
-            - manipulate a data set
-            - join multiple data sets
-            - plot data
-            - animate figures
-            - create for loops
-
-    design:
-      columns: '1'
-      spacing:
-        padding: ["40px", "0", "40px", "0"]
-      background:
-        color: ''
-        text_color_light: false
 ---
