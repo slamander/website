@@ -108,33 +108,37 @@ work:
       [Dept. Biology](https://biology.uark.edu/)
 ---
 
-<h2 style="font-size:1.75rem; font-weight:bold; margin-bottom:1rem;">About Me</h2>
-<div style="display:grid; grid-template-columns:1fr 1fr; gap:3rem; margin-top:2rem;">
-<div style="display:grid; grid-template-columns:1fr 1fr; gap:3rem; margin-top:2rem;">
+<h2 style="font-size:1.75rem; font-weight:bold; margin-bottom:1rem;">About Me:</h2>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
   <div>
-    <h3 style="font-size:1.25rem; font-weight:bold; margin-bottom:0.5rem;">Serious bits:</h3>
-    <p style="margin-bottom:0.75rem;">I'm an interdisciplinary quantitative ecologist dedicated to understanding the processes that determine the distribution of biodiversity in space and time. My research interests include:</p>
-    <ul style="list-style:disc; padding-left:1.5rem; line-height:1.8;">
-      <li>macroecology</li>
-      <li>biogeography</li>
-      <li>population ecology</li>
-      <li>conservation</li>
-      <li>spatiotemporal modeling</li>
-      <li>herp natural history</li>
-      <li>transparent science</li>
-    </ul>
+    <h3 style="font-size:1.75rem; font-weight:bold; margin-bottom:1rem;">Serious bits:</h3>
+    <p>I'm an applied interdisciplinary quantitative ecologist broadly interested in the processes that produce and maintain biodiversity. My research interests include:</p>
+    <p>
+    
+      - macroecology
+      - biogeography
+      - population ecology
+      - conservation
+      - spatiotemporal modeling
+      - herpetology
+      - transparent science
+
+</p>
   </div>
   <div>
-    <h3 style="font-size:1.25rem; font-weight:bold; margin-bottom:0.5rem;">Good bits:</h3>
-    <p style="margin-bottom:0.75rem;">I'm an Arkansas native (Ozark Mountains) based out of Gainesville Florida, a stereotypical girl dad (twice-over), proud union member, and lover of:</p>
-    <ul style="list-style:disc; padding-left:1.5rem; line-height:1.8;">
-      <li>herping</li>
-      <li>hiking</li>
-      <li>canoeing</li>
-      <li>biking</li>
-      <li>home DIY projects</li>
-      <li>wood working</li>
-      <li>history podcasts</li>
-    </ul>
+    <h3 style="font-size:1.75rem; font-weight:bold; margin-bottom:1rem;">Good bits:</h3>
+    <p>I'm an native Arkansan (Ozark Mountains), a stereotypical girl dad (twice-over), proud union member, and lover of:</p>
+    <p>
+
+      - herping
+      - hiking
+      - canoeing
+      - biking
+      - home DIY projects
+      - wood working
+      - history podcasts
+
+</p>
   </div>
 </div>

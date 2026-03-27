@@ -43,7 +43,7 @@ work:
     company_name: Emory University
     company_url: "https://emory.edu/"
     company_logo: 'https://upload.wikimedia.org/wikipedia/en/6/63/Emory_University_Seal.svg'
-    date_start: 2026-08-01
+    date_start: 2026-03-01
     date_end: ''
     summary: |
       [Department of Environmental Science](https://envs.emory.edu/)

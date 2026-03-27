@@ -748,36 +748,38 @@ This 1-day workshop will distill the basic principles of connectivity modeling a
       <link>http://localhost:1313/team/admin/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/team/admin/</guid>
-      <description>&lt;h2 style=&#34;font-size:1.75rem; font-weight:bold; margin-bottom:1rem;&#34;&gt;About Me&lt;/h2&gt;
-&lt;div style=&#34;display:grid; grid-template-columns:1fr 1fr; gap:3rem; margin-top:2rem;&#34;&gt;
-&lt;div style=&#34;display:grid; grid-template-columns:1fr 1fr; gap:3rem; margin-top:2rem;&#34;&gt;
+      <description>&lt;h2 style=&#34;font-size:1.75rem; font-weight:bold; margin-bottom:1rem;&#34;&gt;About Me:&lt;/h2&gt;
+&lt;div class=&#34;grid grid-cols-1 md:grid-cols-2 gap-6&#34;&gt;
   &lt;div&gt;
-    &lt;h3 style=&#34;font-size:1.25rem; font-weight:bold; margin-bottom:0.5rem;&#34;&gt;Serious bits:&lt;/h3&gt;
-    &lt;p style=&#34;margin-bottom:0.75rem;&#34;&gt;I&#39;m an interdisciplinary quantitative ecologist dedicated to understanding the processes that determine the distribution of biodiversity in space and time. My research interests include:&lt;/p&gt;
-    &lt;ul style=&#34;list-style:disc; padding-left:1.5rem; line-height:1.8;&#34;&gt;
-      &lt;li&gt;macroecology&lt;/li&gt;
-      &lt;li&gt;biogeography&lt;/li&gt;
-      &lt;li&gt;population ecology&lt;/li&gt;
-      &lt;li&gt;conservation&lt;/li&gt;
-      &lt;li&gt;spatiotemporal modeling&lt;/li&gt;
-      &lt;li&gt;herp natural history&lt;/li&gt;
-      &lt;li&gt;transparent science&lt;/li&gt;
-    &lt;/ul&gt;
+    &lt;h3 style=&#34;font-size:1.75rem; font-weight:bold; margin-bottom:1rem;&#34;&gt;Serious bits:&lt;/h3&gt;
+    &lt;p&gt;I&#39;m an applied interdisciplinary quantitative ecologist broadly interested in the processes that produce and maintain biodiversity. My research interests include:&lt;/p&gt;
+    &lt;p&gt;
+&lt;pre&gt;&lt;code&gt;  - macroecology
+  - biogeography
+  - population ecology
+  - conservation
+  - spatiotemporal modeling
+  - herpetology
+  - transparent science
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/p&gt;
   &lt;/div&gt;
   &lt;div&gt;
-    &lt;h3 style=&#34;font-size:1.25rem; font-weight:bold; margin-bottom:0.5rem;&#34;&gt;Good bits:&lt;/h3&gt;
-    &lt;p style=&#34;margin-bottom:0.75rem;&#34;&gt;I&#39;m an Arkansas native (Ozark Mountains) based out of Gainesville Florida, a stereotypical girl dad (twice-over), proud union member, and lover of:&lt;/p&gt;
-    &lt;ul style=&#34;list-style:disc; padding-left:1.5rem; line-height:1.8;&#34;&gt;
-      &lt;li&gt;herping&lt;/li&gt;
-      &lt;li&gt;hiking&lt;/li&gt;
-      &lt;li&gt;canoeing&lt;/li&gt;
-      &lt;li&gt;biking&lt;/li&gt;
-      &lt;li&gt;home DIY projects&lt;/li&gt;
-      &lt;li&gt;wood working&lt;/li&gt;
-      &lt;li&gt;history podcasts&lt;/li&gt;
-    &lt;/ul&gt;
+    &lt;h3 style=&#34;font-size:1.75rem; font-weight:bold; margin-bottom:1rem;&#34;&gt;Good bits:&lt;/h3&gt;
+    &lt;p&gt;I&#39;m an native Arkansan (Ozark Mountains), a stereotypical girl dad (twice-over), proud union member, and lover of:&lt;/p&gt;
+    &lt;p&gt;
+&lt;pre&gt;&lt;code&gt;  - herping
+  - hiking
+  - canoeing
+  - biking
+  - home DIY projects
+  - wood working
+  - history podcasts
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/p&gt;
   &lt;/div&gt;
-&lt;/div&gt;</description>
+&lt;/div&gt;
+</description>
     </item>
     
   </channel>

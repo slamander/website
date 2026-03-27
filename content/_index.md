@@ -41,7 +41,7 @@ sections:
       title: Welcome to the Quest lab
       text: |
 
-        <img src="/media/emory_shield.png" alt="Quest at Emory shield" style="width: 1000px; height: auto;">
+        <img src="/media/emory_shield.png" alt="Quest at Emory shield" style="width: 600px; height: auto;">
 
         We are an applied quantitative ecology laboratory, broadly interested in the processes that determine the distribution of biodiversity in space and time. Our research integrates field studies, laboratory experiments, big data, cutting-edge modeling techniques, and high-performance computing to address fundamental questions related to species conservation, biological invasions, and climate-induced species range shifts, and disease transmission. 
         
