@@ -35,3 +35,9 @@
   for = "index.xml"
   [headers.values]
     Content-Type = "application/rss+xml"
+
+[[redirects]]
+    from = "/*"
+    to = "https://questlabdev.netlify.app"
+    status = 301
+    force = true
