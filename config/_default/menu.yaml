@@ -20,6 +20,3 @@ main:
   - name: Tutorials
     url: '/post/'
     weight: 70
-  - name: Contact
-    url: '/#contact'
-    weight: 80

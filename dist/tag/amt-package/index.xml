@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Amt Package | Quest Lab</title>
+    <title>Amt Package | Emory University</title>
     <link>http://localhost:1313/tag/amt-package/</link>
       <atom:link href="http://localhost:1313/tag/amt-package/index.xml" rel="self" type="application/rss+xml" />
     <description>Amt Package</description>

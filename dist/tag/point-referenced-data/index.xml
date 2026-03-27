@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Point-Referenced Data | Quest Lab</title>
+    <title>Point-Referenced Data | Emory University</title>
     <link>http://localhost:1313/tag/point-referenced-data/</link>
       <atom:link href="http://localhost:1313/tag/point-referenced-data/index.xml" rel="self" type="application/rss+xml" />
     <description>Point-Referenced Data</description>

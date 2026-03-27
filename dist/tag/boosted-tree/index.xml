@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Boosted Tree | Quest Lab</title>
+    <title>Boosted Tree | Emory University</title>
     <link>http://localhost:1313/tag/boosted-tree/</link>
       <atom:link href="http://localhost:1313/tag/boosted-tree/index.xml" rel="self" type="application/rss+xml" />
     <description>Boosted Tree</description>

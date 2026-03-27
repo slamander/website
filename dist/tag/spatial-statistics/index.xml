@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Spatial Statistics | Quest Lab</title>
+    <title>Spatial Statistics | Emory University</title>
     <link>http://localhost:1313/tag/spatial-statistics/</link>
       <atom:link href="http://localhost:1313/tag/spatial-statistics/index.xml" rel="self" type="application/rss+xml" />
     <description>Spatial Statistics</description>

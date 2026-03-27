@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Edmund W Basham | Quest Lab</title>
+    <title>Edmund W Basham | Emory University</title>
     <link>http://localhost:1313/author/edmund-w-basham/</link>
       <atom:link href="http://localhost:1313/author/edmund-w-basham/index.xml" rel="self" type="application/rss+xml" />
     <description>Edmund W Basham</description>

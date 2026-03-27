@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Philip N Vogrinc | Quest Lab</title>
+    <title>Philip N Vogrinc | Emory University</title>
     <link>http://localhost:1313/author/philip-n-vogrinc/</link>
       <atom:link href="http://localhost:1313/author/philip-n-vogrinc/index.xml" rel="self" type="application/rss+xml" />
     <description>Philip N Vogrinc</description>

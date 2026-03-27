@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Stream Ecology | Quest Lab</title>
+    <title>Stream Ecology | Emory University</title>
     <link>http://localhost:1313/tag/stream-ecology/</link>
       <atom:link href="http://localhost:1313/tag/stream-ecology/index.xml" rel="self" type="application/rss+xml" />
     <description>Stream Ecology</description>

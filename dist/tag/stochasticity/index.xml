@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Stochasticity | Quest Lab</title>
+    <title>Stochasticity | Emory University</title>
     <link>http://localhost:1313/tag/stochasticity/</link>
       <atom:link href="http://localhost:1313/tag/stochasticity/index.xml" rel="self" type="application/rss+xml" />
     <description>Stochasticity</description>

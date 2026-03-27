@@ -1,7 +1,7 @@
 # Hugo Configuration
 # Documentation: https://gohugo.io/getting-started/configuration/
 
-title: 'Quest Lab'
+title: 'Emory University'
 baseURL: 'https://alexbaecher.com'
 copyright: '© {year} Alex Baecher'
 defaultContentLanguage: 'en'

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Ivan Nijs | Quest Lab</title>
+    <title>Ivan Nijs | Emory University</title>
     <link>http://localhost:1313/author/ivan-nijs/</link>
       <atom:link href="http://localhost:1313/author/ivan-nijs/index.xml" rel="self" type="application/rss+xml" />
     <description>Ivan Nijs</description>
