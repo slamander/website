@@ -97,8 +97,8 @@
   {{ end }}
 
   {{/* Body content */}}
-  {{ with .Content }}
-    <div style="margin-top:2rem; line-height:1.8;">{{ . }}</div>
+  {{ if .Content }}
+    <div style="margin-top:2rem; line-height:1.8;">{{ .Content }}</div>
   {{ end }}
 
 </div>
