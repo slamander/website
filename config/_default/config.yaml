@@ -1,8 +1,8 @@
 # Hugo Configuration
 # Documentation: https://gohugo.io/getting-started/configuration/
 
-title: 'Quest Lab'
-baseURL: 'https://alexbaecher.com'
+title: 'Alex Baecher'
+baseURL: 'https://questlab.dev'
 copyright: '© {year} Alex Baecher'
 defaultContentLanguage: 'en'
 hasCJKLanguage: false
