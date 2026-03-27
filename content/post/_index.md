@@ -1,4 +1,3 @@
-
 ---
 title: "Coding Tutorials & Blog Posts"
 subtitle: "Data science tutorials, R programming guides, and research methods"

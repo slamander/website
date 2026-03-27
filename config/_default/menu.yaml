@@ -20,3 +20,9 @@ main:
   - name: Tutorials
     url: '/post/'
     weight: 70
+  - name: Diversity
+    url: '/dei/'
+    weight: 80
+  - name: Join us
+    url: '/join/'
+    weight: 90
