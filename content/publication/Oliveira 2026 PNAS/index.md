@@ -31,7 +31,7 @@ authors:
 
 date: 2026-03-01
 
-doi: ""
+doi: "https://doi.org/10.1073/pnas.2515903123"
 
 image:
   caption: TBD
@@ -41,21 +41,21 @@ image:
 projects:
 - Climate-induced-species-redistribution
 
-publication: "(**In Press**) ***PNAS***"
+publication: "***Proceedings of the National Academy of Sciences***"
 publication_short: 
 publication_types:
 - "2"
 publishDate: "2026-03-01T00:00:00Z"
 
-tags:
-- modeling
-- distributions
-- spatial scale
+tags: [modeling]
+tags: [distributions]
+tags: [global change]
 
 # url_code: "https://github.com/Campbell-Lab-FMEL/EEEV_forecasting"
 # url_dataset: 
-# url_pdf: "https://drive.google.com/uc?export=download&id=18iC6ef6CvYbGusfIGgnw7IqjyQgmNUsc"
-# url_preprint: "https://ecoevorxiv.org/repository/view/10448/"
+url_pdf: "https://drive.google.com/uc?export=download&id=1SHA03gDHiufk_mm7YMmDz3726U5V7E1o"
+url_doi: "https://doi.org/10.1073/pnas.2515903123"
+# url_preprint: 
 # url_poster:
 # url_project:
 # url_slides:
@@ -64,3 +64,38 @@ tags:
 
 links:
 ---
+
+<html>
+  <style>
+    section {
+        background: white;
+        color: black;
+        border-radius: 1em;
+        padding: 1em;
+        left: 50% }
+    #inner {
+        display: inline-block;
+        display: flex;
+        align-items: center;
+        justify-content: center }
+  </style>
+  <section>
+    <div id="inner">
+      <script type='text/javascript' src='https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js'></script>
+        <span style="float:left"; 
+          class="__dimensions_badge_embed__" 
+          data-doi="10.1073/pnas.2515903123" 
+          data-hide-zero-citations="true" 
+          data-legend="always">
+        </span>
+      <script async src="https://badge.dimensions.ai/badge.js" charset="utf-8"></script>
+        <div  style="float:right"; 
+          data-link-target="_blank" 
+          data-badge-details="right" 
+          data-badge-type="medium-donut"
+          data-doi="10.1073/pnas.2515903123"   
+          data-condensed="true" 
+          data-hide-no-mentions="true" 
+          class="altmetric-embed">
+        </div>
+  </section>
