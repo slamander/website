@@ -37,7 +37,7 @@
     Content-Type = "application/rss+xml"
 
 [[redirects]]
-  from = "https://www.alexbaecher.com/*"
+  from = "/*"
   to = "https://questlab.dev/:splat"
   status = 301
   force = true
