@@ -10,7 +10,7 @@ sections:
       title: "Opportunities in the Quest Lab!"
       text: |
 
-        The Quest Lab is actively recruiting students, scholars, and volunteers / interns in the 2026 Fall semester. Reach out to [Dr. J Alex Baecher](mailto:jbaecher@gmail.com) for general inquiries. 
+        The Quest Lab is actively recruiting undergraduate researchers and a postdoctoral researcher for the Fall 2026 semester. We will also be recruiting a PhD student for the Spring 2026 semester. Reach out to [Dr. J Alex Baecher](mailto:jbaecher@gmail.com) for general inquiries. 
 
         <br>
 
