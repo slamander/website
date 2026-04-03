@@ -1,0 +1,5 @@
+[[redirects]]
+  from = "/*"
+  to = "https://questlab.dev/:splat"
+  status = 301
+  force = true
