@@ -10,7 +10,7 @@ sections:
       title: "Opportunities in the Quest Lab!"
       text: |
 
-        The Quest Lab is actively recruiting undergraduate researchers and a postdoctoral researcher for the Fall 2026 semester. We will also be recruiting a PhD student for the Spring 2026 semester. Reach out to [Dr. J Alex Baecher](mailto:jbaecher@gmail.com) for general inquiries. 
+        The Quest Lab is actively recruiting undergraduate researchers and a postdoctoral researcher for the Fall 2026 semester. We will also be recruiting a PhD student for the Spring 2026 semester. Please send out all inquiries to [Dr. J Alex Baecher](mailto:jbaecher@gmail.com)!
 
         <br>
 
@@ -25,13 +25,17 @@ sections:
         For a description of this position, [see this advertisement](https://drive.google.com/uc?export=download&id=1xKSQRPL85zidRig__MX-MJtrJvqy_8N4).
 
         <br>
-        <br>
 
         <h3> Doctoral Research Assistant in Applied Quantitative Ecology </h3> 
 
-        We are also recruiting a PhD student to begin in the Fall of 2026. The position will be funded as a research assistant for the first 3 of 5 years. You may find information about the [Environmental Sciences and Society (ESS) PhD program here](https://envs.emory.edu/graduate/phd/index.html). to be admitted to the Emory Department of Environmental Science's. 
+        We are also recruiting a PhD student to begin in the Spring of 2027. The position will be funded as a research assistant for the first 3 of 5 years, with additional funding expected from TA-ships, fellowships, or grant funding. You may find information about the [Environmental Sciences and Society (ESS) PhD program here](https://envs.emory.edu/graduate/phd/index.html) to be admitted to the Emory Department of Environmental Science's. 
 
-        Please send inquiries to [Dr. J Alex Baecher](mailto:jbaecher@gmail.com). Further details will soon follow.         
+       <br>
+
+        <h3> Undergraduate research opportunities </h3> 
+
+        We are urgently recruiting 2 undergraduate research technicians. These positions will include opportunities for aiding and developing research effots via ENVS credits: 299R, 399R, 499R (or ENVS 495: Honors Research) or extramurally via federal work-study. Student research efforts include but are not limited to: local field sampling for salamanders (Emory campus and the ATL metro area), data processing and management, literature review and synthesis, public outreach and education, and maintanance of biological specimens / live animals for educational or research purposes. 
+
 
 ---
 
