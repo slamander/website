@@ -30,11 +30,11 @@ sections:
 
         We are also recruiting a PhD student to begin in the Spring of 2027. The position will be funded as a research assistant for the first 3 of 5 years, with additional funding expected from TA-ships, fellowships, or grant funding. You may find information about the [Environmental Sciences and Society (ESS) PhD program here](https://envs.emory.edu/graduate/phd/index.html) to be admitted to the Emory Department of Environmental Science's. 
 
-       <br>
+        <br>
 
         <h3> Undergraduate research opportunities </h3> 
 
-        We are urgently recruiting 2 undergraduate research technicians. These positions will include opportunities for aiding and developing research effots via ENVS credits: 299R, 399R, 499R (or ENVS 495: Honors Research) or extramurally via federal work-study. Student research efforts include but are not limited to: local field sampling for salamanders (Emory campus and the ATL metro area), data processing and management, literature review and synthesis, public outreach and education, and maintanance of biological specimens / live animals for educational or research purposes. 
+        We are urgently recruiting 2 undergraduate research technicians. These positions will include opportunities for aiding and developing research effots via ENVS credits: 299R, 399R, 499R (or ENVS 495: Honors Research) or extramurally via [federal work-study](https://studentaid.emory.edu/undergraduate/types/student-employment/fws.html) and/or the [Emory ENVS Lester Scholarship](https://envs.emory.edu/undergraduate/scholarships-ENVS/lester-scholarship.html) (for rising seniors, with awards at $5k). Some immediate student research opportunities include but are not limited to: local field sampling for salamanders (Emory campus and the ATL metro area), data processing and management, literature review and synthesis, public outreach and education, and maintanance of biological specimens / live animals for educational or research purposes. For inquiries about additional research opportunities or interests, please contact Dr. Baecher. 
 
 
 ---
