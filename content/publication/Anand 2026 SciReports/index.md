@@ -19,18 +19,18 @@ date: 2025-10-08
 doi: "https://doi.org/10.32942/X2VM0K"
 
 image:
-  caption: Florida WNV seroconversion surveillance program
+  caption: Model predictions of EEEV seroconversion prevalance 
   focal_point: ""
   preview_only: false
 
 projects:
 - geostatistical-modeling
 
-publication: "***EcoEvoRxiv***"
+publication: "***Scientific Reports*** (**in press**)"
 publication_short: 
 publication_types:
 - "2"
-publishDate: "2025-09-09T00:00:00Z"
+publishDate: "2026-04-06T00:00:00Z"
 
 tags:
 - Vector-born disease
@@ -40,7 +40,7 @@ tags:
 
 url_code: "https://github.com/Campbell-Lab-FMEL/EEEV_forecasting"
 # url_dataset: 
-# url_pdf: "https://drive.google.com/uc?export=download&id=18iC6ef6CvYbGusfIGgnw7IqjyQgmNUsc"
+url_pdf: "https://www.nature.com/articles/s41598-026-46902-2_reference.pdf"
 url_preprint: "https://ecoevorxiv.org/repository/view/10448/"
 # url_poster:
 # url_project:
