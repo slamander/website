@@ -63,9 +63,9 @@ url_doi: "https://doi.org/10.1073/pnas.2515903123"
 # url_video:
 
 links:
-- name: "Press: Science & Vie (French)"
+- name: "PRESS: Science & Vie (French)"
   url: "https://drive.google.com/uc?export=download&id=1mTMi9FSJ0jsZcS_Jbwj6xO1L24VYQzSl"
-- name: "Press: Daily Geek Show (French)"
+- name: "PRESS: Daily Geek Show (French)"
   url: "https://dailygeekshow.com/face-au-climat-qui-change-animaux-et-plantes-accelerent-leur-migration-bien-au-dela-des-previsions-scientifiques-etablies/"
 ---
 

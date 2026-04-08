@@ -50,6 +50,8 @@ url_preprint: "https://doi.org/10.32942/X2QH09"
 links:
 - name: "PRESS: FMNH"
   url: "https://www.floridamuseum.ufl.edu/science/disease-experts-team-up-with-florida-museum-of-natural-history-to-create-a-forecast-for-west-nile-virus/"
+- name: "PRESS: the microbiologist"
+  url: "https://www.the-microbiologist.com/j-alex-baecher/28934.tag"
 ---
 
 <html>
