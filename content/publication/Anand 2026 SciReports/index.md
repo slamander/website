@@ -16,7 +16,7 @@ authors:
 
 date: 2025-10-08
 
-doi: "https://doi.org/10.32942/X2VM0K"
+doi: "https://doi.org/10.1038/s41598-026-46902-2"
 
 image:
   caption: Model predictions of EEEV seroconversion prevalance 
@@ -26,7 +26,7 @@ image:
 projects:
 - geostatistical-modeling
 
-publication: "***Scientific Reports*** (**in press**)"
+publication: "***Scientific Reports***"
 publication_short: 
 publication_types:
 - "2"
