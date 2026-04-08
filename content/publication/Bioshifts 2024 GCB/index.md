@@ -57,7 +57,7 @@ url_pdf: https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/gcb.17271?downloa
 links:
 - name: "Project"
   url: "https://www.alexbaecher.com/project/climate-species-redistribution/"
-- name: "Lise Comte"
+- name: "Lead: Lise Comte"
   url: "https://csp-inc.org/about-us/core-staff/lise-comte/"  
 - name: "Supplimental Info"
   url: "https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Fgcb.17271&file=gcb17271-sup-0001-DataS1.docx"  

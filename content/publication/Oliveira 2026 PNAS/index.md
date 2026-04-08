@@ -63,6 +63,8 @@ url_doi: "https://doi.org/10.1073/pnas.2515903123"
 # url_video:
 
 links:
+- name: "Lead: Brunno Oliveira"
+  url: "https://oliveirabrunno.wordpress.com/"
 - name: "PRESS: Science & Vie (French)"
   url: "https://drive.google.com/uc?export=download&id=1mTMi9FSJ0jsZcS_Jbwj6xO1L24VYQzSl"
 - name: "PRESS: Daily Geek Show (French)"

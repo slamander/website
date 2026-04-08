@@ -44,7 +44,7 @@ url_pdf: https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/brv.12896?downloa
 links:
 - name: "Project"
   url: "https://www.alexbaecher.com/project/climate-species-redistribution/"
-- name: "Edmund Basham"
+- name: "Lead: Edmund Basham"
   url: "https://www.edmundbasham.com/"
 - name: "Supplimental Info"
   url: "https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Fbrv.12896&file=brv12896-sup-0001-Supinfo.docx"

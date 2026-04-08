@@ -65,8 +65,10 @@ url_pdf: https://www.nature.com/articles/s43017-024-00527-z.pdf
 links:
 - name: "Project"
   url: "https://www.alexbaecher.com/project/climate-species-redistribution/"
-- name: "Jake Lawlor"
+- name: "Lead: Jake Lawlor"
   url: "https://jakelawlor.github.io/"
+- name: "List of popular press"
+  url: "https://nature.altmetric.com/details/162629735/news"
 ---
 #
 #

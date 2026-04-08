@@ -64,7 +64,7 @@ url_pdf: "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/geb.13884?downlo
 # url_source: "https://doi.org/10.1111/geb.13884"
 # url_video: '#'
 links:
-- name: "David Klinges"
+- name: "Lead: David Klinges"
   url: "https://natureinparadise.github.io/"
 - name: "Supplimental Info"
   url: "https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Fgeb.13884&file=geb13884-sup-0001-Supinfo.docx"

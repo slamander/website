@@ -49,6 +49,8 @@ url_preprint: "https://ecoevorxiv.org/repository/view/10448/"
 # url_video:
 
 links:
+- name: "Lead: Akshay Anand"
+  url: "https://www.researchgate.net/profile/Akshay-Vinod-Anand-2"
 ---
 
 
