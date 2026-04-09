@@ -42,16 +42,16 @@ user_groups:
   - Principal Investigator
 
 work:
-  - position: Assistant Professor of Applied Ecology
+  - position: Assistant Professor of Applied Ecology (incoming)
     company_name: Emory University
     company_url: "https://emory.edu/"
     company_logo: 'https://upload.wikimedia.org/wikipedia/en/6/63/Emory_University_Seal.svg'
     date_start: 2026-08-01
     date_end: ''
     summary: |
-      [Department of Environmental Science](https://envs.emory.edu/)
+      [Dept. Environmental Science](https://envs.emory.edu/)
 
-  - position: Postdoctoral Research Fellow
+  - position: Postdoctoral Research Fellow (outgoing)
     company_name: Utah State University
     company_url: 'https://www.usu.edu/'
     company_logo: 'https://upload.wikimedia.org/wikipedia/en/b/ba/Utah_State_University_seal.svg'
@@ -60,12 +60,12 @@ work:
     summary: |2-
       [Clark-Wolf lab](https://www.clarkwolflab.com/) & [Stuber lab](https://efstuber.wixsite.com/xscaleeco/)
 
-      *Fellowship:* USGS: **Climate Adaptation Postdoctoral Fellowship**
+      Fellowship: *[USGS Climate Adaptation Postdoctoral Fellowship](https://www.usgs.gov/programs/climate-adaptation-science-centers/science/cap-future-species-range-shifts-cohort-2025)*
 
   - position: Postdoctoral Research Associate
     company_name: University of Florida
     company_url: 'ufl.edu'
-    company_logo: 'https://upload.wikimedia.org/wikipedia/en/6/6d/University_of_Florida_seal.svg'
+    company_logo: 'https://upload.wikimedia.org/wikipedia/en/1/12/Florida_Museum_of_Natural_History_%28emblem%29.png'
     date_start: 2024-08-01
     date_end: 
     summary: |
@@ -75,10 +75,19 @@ work:
     company_name: University of Florida
     company_url: 'ufl.edu'
     company_logo: 'https://upload.wikimedia.org/wikipedia/en/6/6d/University_of_Florida_seal.svg'
-    date_start: 2019-08-01
+    date_start: 2021-08-01
     date_end: 2024-08-01
     summary: |
       Instructor of Record, Environmental Science
+
+  - position: Doctoral Research Preeminence Fellow
+    company_name: University of Florida
+    company_url: 'ufl.edu'
+    company_logo: 'https://upload.wikimedia.org/wikipedia/en/6/6d/University_of_Florida_seal.svg'
+    date_start: 2019-08-01
+    date_end: 2024-08-01
+    summary: |
+      Fellowship: *Formerly* UF Doctoral Research Preeminence Fellowship
 
   - position: Conservation and Research Technician
     company_name: Memphis Zoo

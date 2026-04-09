@@ -5,10 +5,10 @@
     <loc>http://localhost:1313/dei/</loc>
     <lastmod>2026-03-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/join/</loc>
+    <loc>http://localhost:1313/</loc>
     <lastmod>2026-03-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/</loc>
+    <loc>http://localhost:1313/join/</loc>
     <lastmod>2026-03-25T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/teaching/</loc>
@@ -29,13 +29,13 @@
     <loc>http://localhost:1313/author/brunno-f.-oliveira/</loc>
     <lastmod>2026-03-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tag/distributions/</loc>
-    <lastmod>2026-03-01T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/author/fabricio-villalobos/</loc>
     <lastmod>2026-03-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/author/gael-grenouillet/</loc>
+    <lastmod>2026-03-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tag/global-change/</loc>
     <lastmod>2026-03-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/author/gretta-t.-pecl/</loc>
@@ -77,9 +77,6 @@
     <loc>http://localhost:1313/author/malin-l.-pinsky/</loc>
     <lastmod>2026-03-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tag/modeling/</loc>
-    <lastmod>2026-03-01T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/author/nicolas-casajus/</loc>
     <lastmod>2026-03-01T00:00:00+00:00</lastmod>
   </url><url>
@@ -99,9 +96,6 @@
     <lastmod>2026-03-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/author/sarah-r.-weiskopf/</loc>
-    <lastmod>2026-03-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tag/spatial-scale/</loc>
     <lastmod>2026-03-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/publication/oliveira-2026-pnas/</loc>
@@ -150,6 +144,9 @@
     <lastmod>2026-01-10T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tag/invasions/</loc>
+    <lastmod>2026-01-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tag/modeling/</loc>
     <lastmod>2026-01-10T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/project/herpetological-ecology/</loc>
@@ -353,19 +350,25 @@
     <loc>http://localhost:1313/author/amely-m-bauer/</loc>
     <lastmod>2025-10-08T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/tag/distributions/</loc>
+    <lastmod>2025-10-08T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/author/james-t-thorson/</loc>
     <lastmod>2025-10-08T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/author/lindsay-p-campbell/</loc>
     <lastmod>2025-10-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/publication/anand-preprint-scireports/</loc>
+    <loc>http://localhost:1313/publication/anand-2026-scireports/</loc>
     <lastmod>2025-10-08T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/author/nathan-burkett-cadena/</loc>
     <lastmod>2025-10-08T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/author/robert-guralnick/</loc>
+    <lastmod>2025-10-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tag/spatial-scale/</loc>
     <lastmod>2025-10-08T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/author/v-a-askshay/</loc>
