@@ -161,4 +161,7 @@ work:
   </div>
 </div>
 
-<h2 style="font-size:1.75rem; font-weight:bold; margin-bottom:1rem;">See my [curriculum vitae](https://drive.google.com/uc?export=download&id=1-xLrp1uO7jwEhQcJn3OhvmD7Xa7ssZi0)</h2>
+<br>
+<br>
+
+# See my [**curriculum vitae** ⬇ (updated 4/10/2026)](https://drive.google.com/uc?export=download&id=1-xLrp1uO7jwEhQcJn3OhvmD7Xa7ssZi0)
