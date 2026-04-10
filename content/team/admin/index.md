@@ -36,7 +36,7 @@ profiles:
     link: https://github.com/slamander
   - icon: academicons/cv
     icon_pack: ai
-    link: https://drive.google.com/uc?export=download&id=1A1J5ZJXHnqckGl--LIzAfYBnTdg5EUEW
+    link: https://drive.google.com/uc?export=download&id=1Yg3FypCUXo8jY3Fh6QPhoP-gXiyY3gjW
 
 user_groups:
   - Principal Investigator
@@ -63,7 +63,7 @@ work:
       Fellowship: *[USGS Climate Adaptation Postdoctoral Fellowship](https://www.usgs.gov/programs/climate-adaptation-science-centers/science/cap-future-species-range-shifts-cohort-2025)*
 
   - position: Postdoctoral Research Associate
-    company_name: University of Florida
+    company_name: 
     company_url: 'ufl.edu'
     company_logo: 'https://upload.wikimedia.org/wikipedia/en/1/12/Florida_Museum_of_Natural_History_%28emblem%29.png'
     date_start: 2024-08-01

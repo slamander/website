@@ -21,7 +21,7 @@ organizations:
 profiles:
   - icon: envelope
     icon_pack: fas
-    link: mailto:jbaecher@ufl.edu
+    link: mailto:jbaecher@gmail.edu
   - icon: academicons/google-scholar
     icon_pack: ai
     link: https://scholar.google.com/citations?user=zl3lDnEAAAAJ&hl=en
@@ -33,7 +33,7 @@ profiles:
     link: https://github.com/slamander
   - icon: academicons/cv
     icon_pack: ai
-    link: https://drive.google.com/uc?export=download&id=1A1J5ZJXHnqckGl--LIzAfYBnTdg5EUEW
+    link: https://drive.google.com/uc?export=download&id=1Yg3FypCUXo8jY3Fh6QPhoP-gXiyY3gjW
 
 user_groups:
   - Principal Investigator
