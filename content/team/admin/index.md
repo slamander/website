@@ -40,7 +40,13 @@ profiles:
   - icon: academicons/cv
     icon_pack: ai
     link: https://drive.google.com/uc?export=download&id=1Yg3FypCUXo8jY3Fh6QPhoP-gXiyY3gjW
-
+  - icon: brands/facebook
+    icon_pack: fab
+    link: https://www.facebook.com/baechermander
+  - icon: brands/bluesky
+    icon_pack: fab
+    link: https://bsky.app/profile/alexbaecher.bsky.social
+  
 user_groups:
   - Principal Investigator
 
@@ -74,7 +80,7 @@ work:
     summary: |
       [Campbell lab](https://lcampbelllab.wixsite.com/campbell-lab) (Florida Medical Entomology Lab) & [Guralnick lab](https://www.gurlab.net/) (Florida Natural History Museum)
 
-  - position: Lecturer
+  - position: Lecturer 
     company_name: University of Florida
     company_url: 'ufl.edu'
     company_logo: 'https://upload.wikimedia.org/wikipedia/en/6/6d/University_of_Florida_seal.svg'

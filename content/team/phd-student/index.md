@@ -12,7 +12,7 @@ authors:
 superuser: false
 
 # Role/position
-role: "Doctoral Research Assistant in Applied Quantitative Ecology"
+role: "Doctoral Student in Applied Quantitative Ecology"
 
 bio: "I'm a interested -- how can I apply!"
 
@@ -30,4 +30,4 @@ user_groups:
   - Graduate Students
 ---
 
-THe Quest Lab is actively recruiting a PhD student with a Graduate Assistantship for 5 years at Emory Dept. Environmental Science. This position would begin in the Fall of 2026. 
+THe Quest Lab is actively recruiting a PhD student with a Graduate Assistantship for 5 years at Emory Dept. Environmental Science. This position could begin as early as the Spring of 2027. 
