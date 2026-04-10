@@ -19,9 +19,9 @@ sections:
         text: See our publications
         url: /publication/
       announcement:
-        text: "🚨 **Recruiting for Fall 2026!!!** 🚨:"
+        text: "🚨 **Recruiting for Fall 2026!!!** 🚨: Postdoc in Quantitative Ecology and Data Science"
         link:
-          text: "Postdoc in Quantitative Ecology and Data Science"
+          text: ""
           url: /people/
     design:
       background:
@@ -43,9 +43,7 @@ sections:
 
         We are an applied quantitative ecology laboratory, broadly interested in the processes that determine the distribution of biodiversity in space and time. Our research integrates field studies, laboratory experiments, big data, cutting-edge modeling techniques, and high-performance computing to address fundamental questions related to species conservation, biological invasions, and climate-induced species range shifts, and disease transmission. 
         
-        At Emory, we are hoping to build a team of interdisciplinary researchers, educators, and developers. If you think you'd like to get involved, take a look at some of our research projects -- both past and ongoing -- and reach out to me, [Dr. J Alex Baecher](mailto:jbaecher@gmail.com).
-
-        Importantly, we are currently welcoming phd students and post
+        At Emory, we are hoping to build a team of interdisciplinary researchers, educators, and developers. Currently, the lab is recruiting [undergraduate researchers](/people/) and a [postdoctoral research associate](/people/) for the Fall of 2026. We are also looking to recruit a [PhD student](/people/) for the Spring or Fall of 2027. If you think you'd like to get involved, take a look at some of our research projects -- both past and ongoing -- and reach out to me, [Dr. J Alex Baecher](mailto:jbaecher@gmail.com).
 
       design:
       columns: '2'
