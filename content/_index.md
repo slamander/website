@@ -45,6 +45,9 @@ sections:
         
         At Emory, we are hoping to build a team of interdisciplinary researchers, educators, and developers. Currently, the lab is recruiting [undergraduate researchers](/people/) and a [postdoctoral research associate](/people/) for the Fall of 2026. We are also looking to recruit a [PhD student](/people/) for the Spring or Fall of 2027. If you think you'd like to get involved, take a look at some of our research projects -- both past and ongoing -- and reach out to me, [Dr. J Alex Baecher](mailto:jbaecher@gmail.com).
 
+        Download my [**CV**⬇](https://drive.google.com/uc?export=download&id=1-xLrp1uO7jwEhQcJn3OhvmD7Xa7ssZi0) (updated 4/10/2026) 
+
+
       design:
       columns: '2'
       spacing:

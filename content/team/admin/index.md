@@ -164,4 +164,4 @@ work:
 <br>
 <br>
 
-# See my [**curriculum vitae** ⬇ (updated 4/10/2026)](https://drive.google.com/uc?export=download&id=1-xLrp1uO7jwEhQcJn3OhvmD7Xa7ssZi0)
+# Download my [**CV**⬇](https://drive.google.com/uc?export=download&id=1-xLrp1uO7jwEhQcJn3OhvmD7Xa7ssZi0) (updated 4/10/2026) 
