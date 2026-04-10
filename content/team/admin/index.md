@@ -39,7 +39,7 @@ profiles:
     link: https://github.com/slamander
   - icon: academicons/cv
     icon_pack: ai
-    link: https://drive.google.com/uc?export=download&id=1Yg3FypCUXo8jY3Fh6QPhoP-gXiyY3gjW
+    link: https://drive.google.com/uc?export=download&id=1-xLrp1uO7jwEhQcJn3OhvmD7Xa7ssZi0
   - icon: brands/facebook
     icon_pack: fab
     link: https://www.facebook.com/baechermander
@@ -160,3 +160,5 @@ work:
 </p>
   </div>
 </div>
+
+<h2 style="font-size:1.75rem; font-weight:bold; margin-bottom:1rem;">See my [curriculum vitae](https://drive.google.com/uc?export=download&id=1-xLrp1uO7jwEhQcJn3OhvmD7Xa7ssZi0)</h2>
