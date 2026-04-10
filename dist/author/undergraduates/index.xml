@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Undergraduates | Emory University</title>
+    <link>http://localhost:1313/author/undergraduates/</link>
+      <atom:link href="http://localhost:1313/author/undergraduates/index.xml" rel="self" type="application/rss+xml" />
+    <description>Undergraduates</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><copyright>© 2026 Alex Baecher</copyright>
+    <image>
+      <url>http://localhost:1313/media/logo_hu2039277577754200582.png</url>
+      <title>Undergraduates</title>
+      <link>http://localhost:1313/author/undergraduates/</link>
+    </image>
+    
+    <item>
+      <title>Open Positions!!!</title>
+      <link>http://localhost:1313/team/undergraduates/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/team/undergraduates/</guid>
+      <description>&lt;p&gt;THe Quest Lab is actively recruiting a undergraduate researchers for ENVS research credit or work-study stipend via federal work study (FAFSA). Engaged students will be eligible for a full time paid field/lab technician position during the summers of 2017 &amp;amp; 2018. Additionally, for support see the &lt;a href=&#34;https://envs.emory.edu/undergraduate/scholarships-ENVS/lester-scholarship.htmlp&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Lester Scholarship&lt;/a&gt; for a Grant-in-Aid of undergraduate research.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

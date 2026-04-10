@@ -12,6 +12,7 @@ sections:
         - Postdoctoral Researchers
         - Graduate Students
         - Field Technicians
+        - Undergraduate Students
         - High School Students
         - Alumni
     design:
