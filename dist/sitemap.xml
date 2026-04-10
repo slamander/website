@@ -818,10 +818,14 @@
   </url><url>
     <loc>http://localhost:1313/team/postdoc/</loc>
   </url><url>
+    <loc>http://localhost:1313/team/undergraduates/</loc>
+  </url><url>
     <loc>http://localhost:1313/author/open-postdoctoral-position/</loc>
   </url><url>
     <loc>http://localhost:1313/author/phd-student/</loc>
   </url><url>
     <loc>http://localhost:1313/team/</loc>
+  </url><url>
+    <loc>http://localhost:1313/author/undergraduates/</loc>
   </url>
 </urlset>

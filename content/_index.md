@@ -32,7 +32,7 @@ sections:
           size: cover
           position: center
           parallax: true
-          text_color_light: true
+          text_color_light: false
 
   - block: markdown
     content:
@@ -43,9 +43,14 @@ sections:
 
         We are an applied quantitative ecology laboratory, broadly interested in the processes that determine the distribution of biodiversity in space and time. Our research integrates field studies, laboratory experiments, big data, cutting-edge modeling techniques, and high-performance computing to address fundamental questions related to species conservation, biological invasions, and climate-induced species range shifts, and disease transmission. 
         
-        At Emory, we are hoping to build a team of interdisciplinary researchers, educators, and developers. Currently, the lab is recruiting [undergraduate researchers](/people/) and a [postdoctoral research associate](/people/) for the Fall of 2026. We are also looking to recruit a [PhD student](/people/) for the Spring or Fall of 2027. If you think you'd like to get involved, take a look at some of our research projects -- both past and ongoing -- and reach out to me, [Dr. J Alex Baecher](mailto:jbaecher@gmail.com).
+        **🚨Quest Lab is recruiting🚨**  
+        - Fall 2026: [2-3 undergraduate researchers](/people/)   
+        - Fall 2026: [1 postdoctoral research associate](/people/)   
+        - Spring 2027: [1 PhD student](/people/)   
+        
+        **Interested?** Take a look at some of our research projects and publications below. To inquire about opportunities, reach out to [Dr. J Alex Baecher](mailto:jbaecher@gmail.com).
 
-        Download my [**CV**⬇](https://drive.google.com/uc?export=download&id=1-xLrp1uO7jwEhQcJn3OhvmD7Xa7ssZi0) (updated 4/10/2026) 
+        Download Dr. Baecher's [**CV**⬇](https://drive.google.com/uc?export=download&id=1-xLrp1uO7jwEhQcJn3OhvmD7Xa7ssZi0) (updated 4/10/2026) 
 
 
       design:
