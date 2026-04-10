@@ -28,12 +28,16 @@ profiles:
   - icon: academicons/orcid
     icon_pack: ai
     link: https://orcid.org/0000-0003-0247-5758
+  - icon: academicons/researchgate
+    icon_pack: ai
+    link: https://www.researchgate.net/profile/J-Baecher?ev=hdr_xprf
   - icon: brands/github
     icon_pack: fab
     link: https://github.com/slamander
   - icon: academicons/cv
     icon_pack: ai
     link: https://drive.google.com/uc?export=download&id=1Yg3FypCUXo8jY3Fh6QPhoP-gXiyY3gjW
+
 
 user_groups:
   - Principal Investigator

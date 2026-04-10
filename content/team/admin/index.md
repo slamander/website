@@ -24,13 +24,16 @@ organizations:
 profiles:
   - icon: envelope
     icon_pack: fas
-    link: mailto:jbaecher@ufl.edu
+    link: mailto:jbaecher@gmail.edu
   - icon: academicons/google-scholar
     icon_pack: ai
     link: https://scholar.google.com/citations?user=zl3lDnEAAAAJ&hl=en
   - icon: academicons/orcid
     icon_pack: ai
     link: https://orcid.org/0000-0003-0247-5758
+  - icon: academicons/researchgate
+    icon_pack: ai
+    link: https://www.researchgate.net/profile/J-Baecher?ev=hdr_xprf
   - icon: brands/github
     icon_pack: fab
     link: https://github.com/slamander

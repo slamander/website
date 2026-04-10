@@ -85,21 +85,6 @@ sections:
       view: citation
       columns: 2
 
-  # - block: collection
-  #   content:
-  #     title: "Select talks"
-  #     count: 3
-  #     archive:
-  #       enable: true
-  #       text: "See all talks →"
-  #       link: talk/
-  #     filters:
-  #       folders:
-  #         - talk
-  #   design:
-  #     view: card
-  #     columns: 2
-
   - block: collection
     content:
       title: "R sandbox: 📊 Coding Tutorials"
