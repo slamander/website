@@ -19,7 +19,7 @@ sections:
         text: See our publications
         url: /publication/
       announcement:
-        text: "🚨 **Recruiting for Fall 2026!!!** 🚨: Postdoc in Quantitative Ecology and Data Science"
+        text: "🚨 **Recruiting students and postdoc for Fall 2026!!!** 🚨"
         link:
           text: ""
           url: /people/
