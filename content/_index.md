@@ -1,5 +1,5 @@
 ---
-title: "Quest Lab"
+title: Qμest Lab
 type: landing
 date: 2026-03-25
 draft: false
@@ -36,14 +36,14 @@ sections:
 
   - block: markdown
     content:
-      title: Welcome to the Quest lab
+      title: Welcome to the Qμest lab
       text: |
 
         <img src="/media/emory_shield.png" alt="Quest at Emory shield">
 
         We are an applied quantitative ecology laboratory, broadly interested in the processes that determine the distribution of biodiversity in space and time. Our research integrates field studies, laboratory experiments, big data, cutting-edge modeling techniques, and high-performance computing to address fundamental questions related to species conservation, biological invasions, and climate-induced species range shifts, and disease transmission. 
         
-        **🚨Quest Lab is recruiting🚨**  
+        **🚨Qμest Lab is recruiting🚨**  
         - Fall 2026: [2-3 undergraduate researchers](/people/)   
         - Fall 2026: [1 postdoctoral research associate](/people/)   
         - Spring 2027: [1 PhD student](/people/)   
