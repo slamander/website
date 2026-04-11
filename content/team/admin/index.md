@@ -54,7 +54,7 @@ work:
   - position: Assistant Professor of Applied Ecology (incoming)
     company_name: Emory University
     company_url: "https://emory.edu/"
-    company_logo: 'https://upload.wikimedia.org/wikipedia/en/6/63/Emory_University_Seal.svg'
+    company_logo: "/media/Emory_University_Seal.png"
     date_start: 2026-08-01
     date_end: ''
     summary: |
@@ -110,7 +110,7 @@ work:
   - position: Graduate Teaching Assistant
     company_name: Eastern Kentucky University
     company_url: 'eku.edu'
-    company_logo: 'https://upload.wikimedia.org/wikipedia/en/3/37/Eastern_Kentucky_University_seal.svg'
+    company_logo: "/media/EKU_Seal.png"
     date_start: 2015-08-01
     date_end: 2017-12-01
     summary: |
