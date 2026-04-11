@@ -53,7 +53,8 @@
       "thead",
       "title",
       "tr",
-      "ul"
+      "ul",
+      "wa-icon"
     ],
     "classes": [
       "!mb-4",
@@ -134,7 +135,9 @@
       "dark:text-slate-200",
       "dark:text-white",
       "duration-500",
+      "fa-download",
       "fa-file-alt",
+      "fa-solid",
       "far",
       "fill-current",
       "fixed",
