@@ -49,8 +49,6 @@ outputs:
 # Page limits 
 params:
   'pagination.pagerSize': 10
-  show.logo: true
-  logo: 'logo.png'  
 
 # Media types
 mediaTypes:

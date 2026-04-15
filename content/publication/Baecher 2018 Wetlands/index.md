@@ -30,7 +30,7 @@ tags: [Regina grahamii]
 title: Herpetofaunal Communities in Restored and Unrestored Remnant Tallgrass Prairie and Associated Wetlands in Northwest Arkansas, USA
 # url_code: ""
 # url_dataset: ""
-url_pdf: "https://link.springer.com/content/pdf/10.1007/s13157-017-0966-5.pdf"
+url_pdf: https://drive.google.com/uc?export=download&id=1wKPzJ1QXOc-znIXJSQXd9MfpWc5nZ9jU
 # url_project: "https://www.alexbaecher.com/project/herpetological-ecology/"
 # url_slides: "https://docs.google.com/presentation/d/1ugv7JZZ8Detykt77R-E1fvUdBK_1gEOj/edit?usp=sharing&ouid=118161165194611535602&rtpof=true&sd=true"
 # url_source: ""

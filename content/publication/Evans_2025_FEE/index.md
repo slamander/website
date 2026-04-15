@@ -41,7 +41,7 @@ title: Invasion risk posed by the pet trade
 
 # url_code: https://doi.org/10.1002/fee.2825
 # url_dataset: https://www.dropbox.com/s/0jsfnoliczl5xv3/HR%20Dec%202014%20ebook.pdf?dl=1
-url_pdf: https://www.researchgate.net/profile/Joseph-Baecher/publication/387091102_Invasion_risk_posed_by_the_pet_trade/links/6761ce3ba3978e15e7906cf4/Invasion-risk-posed-by-the-pet-trade.pdf
+url_pdf: https://drive.google.com/uc?export=download&id=1si7rJMDNEE8_ru6V7rErCfMQ0IahGn4P
 # url_poster: '#'
 # url_project: ""
 # url_slides: ""

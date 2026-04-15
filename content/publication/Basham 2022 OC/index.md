@@ -29,7 +29,7 @@ tags: [Dendrobatid]
 title: Large, old trees define the vertical, horizontal, and seasonal distributions of a poison frog
 url_code: https://github.com/schefferslab/Basham_et_al_2021
 url_dataset: https://github.com/schefferslab/Basham_et_al_2021
-url_pdf: https://link.springer.com/content/pdf/10.1007/s00442-022-05108-9.pdf?pdf=button
+url_pdf: https://drive.google.com/uc?export=download&id=1MZieViEYzTJNZoKWg-I4wv0EC8V033yF
 # url_poster: '#'
 # url_project: https://www.alexbaecher.com/project/herpetological-ecology/
 # url_slides: ""
