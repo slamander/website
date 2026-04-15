@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Diversity, Equity, and Inclusion | Alex Baecher</title>
-    <link>http://localhost:1313/dei/</link>
-      <atom:link href="http://localhost:1313/dei/index.xml" rel="self" type="application/rss+xml" />
-    <description>Diversity, Equity, and Inclusion</description>
+    <title>Quest Lab | Alex Baecher</title>
+    <link>http://localhost:1313/join---copy/</link>
+      <atom:link href="http://localhost:1313/join---copy/index.xml" rel="self" type="application/rss+xml" />
+    <description>Quest Lab</description>
     <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><copyright>© 2026 Alex Baecher</copyright><lastBuildDate>Wed, 25 Mar 2026 00:00:00 +0000</lastBuildDate>
     <image>
       <url>http://localhost:1313/media/icon_hu16270048066519736882.png</url>
-      <title>Diversity, Equity, and Inclusion</title>
-      <link>http://localhost:1313/dei/</link>
+      <title>Quest Lab</title>
+      <link>http://localhost:1313/join---copy/</link>
     </image>
     
   </channel>
