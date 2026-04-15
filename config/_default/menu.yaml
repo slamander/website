@@ -14,15 +14,12 @@ main:
   - name: Teaching
     url: '/teaching/'
     weight: 50
-  - name: Talks
-    url: '/talk/'
-    weight: 60
-  - name: Tutorials
+  - name: Resources
     url: '/post/'
-    weight: 70
+    weight: 60
   - name: Diversity
     url: '/dei/'
-    weight: 80
+    weight: 70
   - name: Join us
     url: '/join/'
-    weight: 90
+    weight: 80
