@@ -32,6 +32,8 @@ header:
     show_day_night: true
     show_search: true
     highlight_active_link: true
+    logo:
+      filename: icon.png   # <-- add this
 
 # Site footer
 footer:
