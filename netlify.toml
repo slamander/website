@@ -41,3 +41,15 @@
   to = "https://questlab.dev/:splat"
   status = 301
   force = true
+
+[[redirects]]
+  from = "http://www.questlab.dev/*"
+  to = "https://questlab.dev/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://questlab.dev/*"
+  to = "https://questlab.dev/:splat"
+  status = 301
+  force = true
