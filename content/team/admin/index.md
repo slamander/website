@@ -164,4 +164,4 @@ work:
 <br>
 <br>
 
-# Download my [**CV**⬇](https://drive.google.com/uc?export=download&id=1AcEL-CGxtrVMFaw9T_ZFc183bzStw2AC) (updated 5/7/2026) 
+# Download my [**CV**⬇](/files/cv_latex.pdf) (updated 5/7/2026) 
