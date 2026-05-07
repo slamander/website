@@ -1,7 +1,7 @@
 ---
 title: Forecasting ecological dynamics and disease
 
-date: "2025-03-15"
+date: "2024-08-01"
 
 external_link: []
 
