@@ -14,7 +14,10 @@ sections:
 
         <br>
 
-        <h2> Open positions: </h2>
+        <h2> Open positions at Emory: </h2>
+
+        <img src="/media/Emory_MSB.jpg" alt="Quest lab at Emory's Math and Science Building">
+
 
         <br>
 
