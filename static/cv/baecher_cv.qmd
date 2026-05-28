@@ -79,43 +79,9 @@ library(kableExtra)
 -   **Research Assistant** \hfill Mar 2012 – Mar 2015\  
     - *University of Arkansas* | Department of Biology
 
-# FUNDING
-
-```{r funding-table}
-funding <- tribble(
-  ~Amount, ~Organization, ~Fund, ~Year,
-  "$680,000", "Emory University", "Lab Start-up Fund", "2026",
-  "$130,000", "US Geological Survey", "Climate Adaptation Postdoctoral Fellows", "2025",
-  "$195,000", "University of Florida", "Doctoral Preeminence Fellowship Award", "2019",
-  "$4,000", "University of Florida", "Robin Nadeau Graduate Research Award", "2019",
-  "$5,000", "National Science Foundation", "Research Experience for Undergraduates", "2013",
-  "$5,000", "National Science Foundation", "Research Experience for Undergraduates", "2012",
-  "$1,100", "Eastern Kentucky University", "Marcia Athey Research Grant", "2016",
-  "$800", "Eastern Kentucky University", "Dept. Biology Travel Grant", "2017",
-  "$700", "Society Freshwater Science", "Instars Fellowship", "2014",
-  "$700", "Society Freshwater Science", "Instars Fellowship", "2013",
-  "$500", "Soc. Study Amphibians & Reptiles", "Grant-in-Aid of Herpetological Research", "2016",
-  "$500", "Eastern Kentucky University", "Dep. Biological Sciences Travel Stipend", "2016",
-  "$500", "Eastern Kentucky University", "Div. Natural Areas Research Grant", "2016",
-  "$500", "University of Arkansas", "Dept. Biology Travel Grant", "2013"
-)
-
-kable(funding, 
-      format = "latex",
-      booktabs = TRUE,
-      linesep = "",
-      align = c("r", "l", "l", "r"),
-      col.names = c("Amount", "Organization", "Fund Name", "Year")) %>%
-  kable_styling(latex_options = c("scale_down", "HOLD_position"),
-                font_size = 11)
-```
-**Total Funding:** ***\$1,024,000***
-
-&nbsp;
-
 # PUBLICATIONS
 
-§Mentee co-author • Citations: ***438*** • h-index: ***8***
+&nbsp; **Reverse chronological** • **§Mentee co-author** • **Citations:** ***438*** • **h-index:** ***8***
 
 ## Published
 
@@ -214,37 +180,70 @@ kable(funding,
 
 1. **Baecher, JA**, E Stuber, TJ Clark-Wolf. ***In prep*** . *Mapping range shifts with a novel integrated spatiotemporal N-mixture Bayesian model*. ***Methods in Ecology and Evolution***  
 
+# FUNDING
+
+&nbsp; **Reverse chronological**
+
+```{r funding-table}
+funding <- tribble(
+  ~Amount, ~Organization, ~Fund, ~Year,
+  "$680,000", "Emory University", "Lab Start-up Fund", "2026",
+  "$130,000", "US Geological Survey", "Climate Adaptation Postdoctoral Fellows", "2025",
+  "$195,000", "University of Florida", "Doctoral Preeminence Fellowship Award", "2019",
+  "$4,000", "University of Florida", "Robin Nadeau Graduate Research Award", "2019",
+  "$5,000", "National Science Foundation", "Research Experience for Undergraduates", "2013",
+  "$5,000", "National Science Foundation", "Research Experience for Undergraduates", "2012",
+  "$1,100", "Eastern Kentucky University", "Marcia Athey Research Grant", "2016",
+  "$800", "Eastern Kentucky University", "Dept. Biology Travel Grant", "2017",
+  "$700", "Society Freshwater Science", "Instars Fellowship", "2014",
+  "$700", "Society Freshwater Science", "Instars Fellowship", "2013",
+  "$500", "Soc. Study Amphibians & Reptiles", "Grant-in-Aid of Herpetological Research", "2016",
+  "$500", "Eastern Kentucky University", "Dep. Biological Sciences Travel Stipend", "2016",
+  "$500", "Eastern Kentucky University", "Div. Natural Areas Research Grant", "2016",
+  "$500", "University of Arkansas", "Dept. Biology Travel Grant", "2013"
+)
+
+kable(funding, 
+      format = "latex",
+      booktabs = TRUE,
+      linesep = "",
+      align = c("r", "l", "l", "r"),
+      col.names = c("Amount", "Organization", "Fund Name", "Year")) %>%
+  kable_styling(latex_options = c("scale_down", "HOLD_position"),
+                font_size = 11)
+```
+&nbsp; **Total Funding:** ***\$1,024,000***
+
+&nbsp;
+
 # PROFESSIONAL ACTIVITIES
 
 ## Peer Review
-
 -  **Total Requested:** 38 \| **Total Reviewed:** 25
     - *Biological Conservation, Conservation Science and Practice, Ecography, Ecology, Ecology & Evolution, Frontiers in Ecology and Environment, Herpetological Bulletin, Herpetological Conservation Biology, Herpetological Review, Hydrobiologia, Natural Areas Journal, Nature Ecology & Evolution, Oecologia, Scientific Reports, Wildlife Society Bulletin*
 
 ## Professional Membership
-
--   Ecological Society of America \hfill 2019 – Present\ 
--   International Association of Landscape Ecologists – North America \hfill 2020 – Present\ 
--   Climate Adaptation Science Center (SE & SW) \hfill 2019 – Present\ 
--   Southeast RISCC \hfill 2022 – Present\ 
--   American Society of Ichthyologists and Herpetologists \hfill 2014 – 2021\ 
--   Southeastern Partners in Amphibian and Reptile Conservation \hfill 2014 – 2021\ 
--   Society of Freshwater Ecology \hfill 2012 – 2014\ 
+-   *Ecological Society of America* \hfill 2019 – Present\ 
+-   *International Association of Landscape Ecologists – North America* \hfill 2020 – Present\ 
+-   *Climate Adaptation Science Center* (SE & SW) \hfill 2019 – Present\ 
+-   *Southeast RISCC* \hfill 2022 – Present\ 
+-   *American Society of Ichthyologists and Herpetologists* \hfill 2014 – 2021\ 
+-   *Southeastern Partners in Amphibian and Reptile Conservation* \hfill 2014 – 2021\ 
+-   *Society of Freshwater Ecology* \hfill 2012 – 2014\ 
 
 ## Working Groups
-
--   ***BioShifts*** (Member, Group Leader) \hfill 2022 – Present\ 
--   ***DirtClim*** (Core team) \hfill 2019 – Present\ 
--   ***National Synthesis for Ecological Analysis and Synthesis*** (Member) \hfill 2025 – Present\ 
--   ***ResearchR*** (President of Scientific Integrity) \hfill 2025 – Present\ 
--   ***ZooMu Network*** (Member, Group Leader) \hfill 2024 – Present\ 
--   ***USGS Climate Adaptation Science Center*** (Postdoctoral Fellow) \hfill 2025 – Present\ 
+-   *BioShifts* (Member, Group Leader) \hfill 2022 – Present\ 
+-   *DirtClim* (Core team) \hfill 2019 – Present\ 
+-   *National Synthesis for Ecological Analysis and Synthesis* (Member) \hfill 2025 – Present\ 
+-   *ResearchR* (President of Scientific Integrity) \hfill 2025 – Present\ 
+-   *ZooMu Network* (Member, Group Leader) \hfill 2024 – Present\ 
+-   *USGS Climate Adaptation Science Center* (Postdoctoral Fellow) \hfill 2025 – Present\ 
 
 &nbsp;
   
 # SELECT PRESENTATIONS
 
-*†Student mentee presenter* • *Total presentations:* ***41***
+&nbsp; **Reverse chronological** • ***†Student mentee presenter* **• **Total presentations:** ***41***
 
 12.  **Baecher, JA**. ***2026***. *Ecology of rapid change: From behavior to movements to range dynamics*. ***Emory University***, *Atlanta, GA* \[[***slides***](https://drive.google.com/uc?export=download&id=1vUtZ8b9n1s9lPKrPQhpeAffjUDFqGToZ)\] \[[***video***](https://drive.google.com/file/d/1VGHDytkEY54jy6FvXvcOUSdMpeQiE7Pd/view?usp=sharing)\]
 
@@ -294,7 +293,11 @@ kable(funding,
 
 <!-- -->
 
+&nbsp; \[[***see all presentations***](https://drive.google.com/uc?export=download&id=1BL-4AZwwBFBMk0hQidGQ3lF-L16d5VXEp5OUdPOVi9w)\]
+
 # WORKSHOPS
+
+&nbsp; **Reverse chronological**
 
 1.  Fletcher, RJ, **JA Baecher**, M Lezzi, A Marx. ***2023***. *Application of connectivity modeling to identify and predict movement and range redistribution*. ***Species on the Move***, *Bonita Springs, FL* \[[***slides***](https://docs.google.com/presentation/d/1jsUhEewx3OWyfGIZvX3fCAWCGYeYyffM/edit?usp=sharing&ouid=118161165194611535602&rtpof=true&sd=true)\]
 
@@ -314,7 +317,7 @@ kable(funding,
 -   **Eastern Kentucky University** \| Department of Biology 
     - Human Anatomy Lab \hfill Spring & Fall 2015 – 2017\  
 
-## Guest Lectures (Selected)
+## Guest Lectures
 -   **Utah State University** \| Department of Wildland Resources  
     - Landscape Ecology \hfill Fall 2025\  
 -   &nbsp;
@@ -345,7 +348,7 @@ kable(funding,
 
 # STUDENT MENTORSHIP
 
-Graduate student (MS, PhD) • Φ published • Ψ conference • Ω committee member • → career prep
+&nbsp; **Graduate student** (MS, PhD) • Φ **published** • Ψ **conference** • Ω **committee member** • → **career prep**
 
 -  **Eastern Kentucky University** \hfill 2015 – 2017  
     - Alex Gibson, Emily Jones (Φ, Ψ, →MS), Sarah Ashbrook (Ψ), Peyton Blair (Ψ), \[[Peter Grap](https://www.linkedin.com/in/peter-grap-2238a0158/)] (Ψ, →MS, →PhD), Kelley Hoefer (Ψ), Myesha James (Ψ),  \[[Jacob Peters](https://geospatial.yale.edu/profile/jacob-peters)] (Ψ, →MS, →PhD), \[[Julia Portmann](https://geospatial.yale.edu/profile/julia-portmann)] (Ψ, →MS, →PhD), \[[Jocelyn Stalker](https://jocelynstalker.github.io/)] (Φ, Ψ, →MS, →PhD)  
@@ -366,7 +369,8 @@ Graduate student (MS, PhD) • Φ published • Ψ conference • Ω committee m
 &nbsp;  
 
 # SELECT OUTREACH EDUCATION  
-**Total Events:** ***26*** • **People Reached:** ***\~1,430*** (ages 5 to 60+)
+
+&nbsp; **Total Events:** ***26*** • **People Reached:** ***\~1,430*** (ages 5 to 60+)
 
 ```{r outreach-table}
 funding <- tribble(
@@ -390,12 +394,12 @@ kable(funding,
                 font_size = 11)
 ```
 
-\[[***see all events***](https://docs.google.com/document/d/1EGPS9yHwm1_TOIOrntLCxjCIDYjx2XuDHW9BNMOk0OU/edit?usp=sharing)\]
+&nbsp; \[[***see all events***](https://docs.google.com/document/d/1EGPS9yHwm1_TOIOrntLCxjCIDYjx2XuDHW9BNMOk0OU/edit?usp=sharing)\]
 
 &nbsp;
 
 # PUBLIC RESOURCES
-Available at \[[questlab.dev](https://questlab.dev)]  
+**Available at \[[questlab.dev](https://questlab.dev)]**  
 
 -   ***Mixed Effects Models in R*** \[[\faGlobe](https://questlab.dev/post/mixed-effects-models-in-r/)] \hfill 2025\  
 -   ***Spatial Structures in Ecological Models*** | Tutorial \[[\faGlobe](https://questlab.dev/post/ecological-spatial-structures/)] \hfill 2025\  
@@ -408,8 +412,34 @@ Available at \[[questlab.dev](https://questlab.dev)]
 -   ***Empirical Dynamic Models for forecasting*** \[[\faGlobe](https://questlab.dev/post/edm-script/)] \hfill 2016\  
 
 &nbsp;
-&nbsp;
-&nbsp;
+
+# NON-FUNDED PROPOSALS
+
+**Proposals available upon request**
+
+```{r non_funding-table}
+non_funding <- tribble(
+  ~Amount, ~Organization, ~Decision, ~Year,
+  "$235,000", "NSF: Postdoctoral Research Fellowship – Biology", "Meritorious", "2024",
+  "$235,000", "NSF: Postdoctoral Research Fellowship – Biology", "Highly Meritorious", "2023",
+  "$25,000", "The Wilderness Society: Gloria Barron Fellowship", "Declined", "2021",
+  "$3,500", "American Museum Natural History: Roosevelt Memorial Grant", "Declined", "2020",
+  "$4,000", "Foundation for the Conservation of Salamanders", "Declined", "2020",
+  "$60,000", "Disney Conservation Grant", "Inquiry declined", "2019",
+  "$10,000", "National Park Service: Tanner Memorial Fellowship", "Inquiry declined", "2019"
+)
+
+kable(non_funding, 
+      format = "latex",
+      booktabs = TRUE,
+      linesep = "",
+      align = c("r", "l", "l", "r"),
+      col.names = c("Amount", "Organization", "Decision", "Year")) %>%
+  kable_styling(latex_options = c("scale_down", "HOLD_position"),
+                font_size = 11)
+```
+**Total Non-funded:** ***\$572,500***
+
 &nbsp;
 
 # REFERENCES
