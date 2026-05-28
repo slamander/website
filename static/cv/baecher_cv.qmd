@@ -85,19 +85,21 @@ library(kableExtra)
 
 ## Published
 
-<!-- 2026 -->
+2026
 
 17. §Akshay, VA, **JA Baecher**, N Burkett-Cadena, J Thorson, §Y Sánchez, §Y Tavares, §A Bauer, RP Guralnick, LP Campbell. ***2026***. *Linking hosts, landscapes, and climate to advance zoonotic arbovirus forecasting*. ***Scientific Reports*** \[[***html***](https://www.nature.com/articles/s41598-026-46902-2)\] \[[***code***](https://github.com/Campbell-Lab-FMEL/EEEV_forecasting)\] \[[***preprint***](https://doi.org/10.32942/X2VM0K)\]
 
 <!-- -->
 
-16. Oliveira, BF, et al. \[+21 co-authors including **JA Baecher**\]. ***2026***. *Species range shifts often speed ahead of their climatic niches*. ***Proceedings of the National Academy of Sciences*** \[[***html***](https://doi.org/10.1073/pnas.2515903123)\] \[[***preprint***](https://doi.org/10.32942/X2VM0K)\] \[[***code***](https://github.com/)\] Press: \[[***Nature EcoEvo***](https://drive.google.com/uc?export=download&id=1MhKCoEY3apK7xUfGbH51nua8gCDAoxQ_)\] \[[***Conservation Science Partners***](https://csp-inc.org/species-range-shifts-are-more-complex-than-what-the-models-predict/)\]
+16. Oliveira, BF, et al. \[+21 co-authors including **JA Baecher**\]. ***2026***. *Species range shifts often speed ahead of their climatic niches*. ***Proceedings of the National Academy of Sciences*** \[[***html***](https://doi.org/10.1073/pnas.2515903123)\] \[[***preprint***](https://doi.org/10.32942/X2VM0K)\] \[[***code***](https://github.com/)\] 
+     - **Press:** \[[***Nature EcoEvo***](https://drive.google.com/uc?export=download&id=1MhKCoEY3apK7xUfGbH51nua8gCDAoxQ_)\] \[[***Conservation Science Partners***](https://csp-inc.org/species-range-shifts-are-more-complex-than-what-the-models-predict/)\]
 
-<!-- 2025 -->
+2025
 
-15. **Baecher, JA**, §VA Akshay, RP Guralnick, §AM Bauer, §Y Tavares, §Y Sánchez, LP Campbell. ***2025***. *Toward ecological forecasting of West Nile virus in Florida: Insights from two decades of sentinel chicken monitoring*. ***Science of the Total Environment*** *1000:180308* \[[***html***](https://doi.org/10.1016/j.scitotenv.2024.180308)\] \[[***pdf***](https://doi.org/10.1016/j.scitotenv.2024.180308)\] \[[***code***](https://github.com/)\] Press: \[[***Florida Museum***](https://www.floridamuseum.ufl.edu/science/disease-experts-team-up-with-florida-museum-of-natural-history-to-create-a-forecast-for-west-nile-virus/)\] \[[***The Microbiologist***](https://www.the-microbiologist.com/news/disease-experts-upgrade-sentinel-chicken-system-to-create-forecast-for-west-nile-virus/6766.article)\]
+15. **Baecher, JA**, §VA Akshay, RP Guralnick, §AM Bauer, §Y Tavares, §Y Sánchez, LP Campbell. ***2025***. *Toward ecological forecasting of West Nile virus in Florida: Insights from two decades of sentinel chicken monitoring*. ***Science of the Total Environment*** *1000:180308* \[[***html***](https://doi.org/10.1016/j.scitotenv.2024.180308)\] \[[***pdf***](https://doi.org/10.1016/j.scitotenv.2024.180308)\] \[[***code***](https://github.com/)\] 
+     - **Press:** \[[***Florida Museum***](https://www.floridamuseum.ufl.edu/science/disease-experts-team-up-with-florida-museum-of-natural-history-to-create-a-forecast-for-west-nile-virus/)\] \[[***The Microbiologist***](https://www.the-microbiologist.com/news/disease-experts-upgrade-sentinel-chicken-system-to-create-forecast-for-west-nile-virus/6766.article)\]
 
-<!-- 2024 -->
+2024
 
 14. Evans, LJ, **JA Baecher**, BR Scheffers. ***2024***. *Invasion risk posed by the pet trade*. ***Frontiers in Ecology and the Environment*** \[[***html***](https://doi.org/10.1002/fee.2825)\] \[[***pdf***](https://drive.google.com/uc?export=download&id=1si7rJMDNEE8_ru6V7rErCfMQ0IahGn4P)\] \[[***data***](https://doi.org/10.5281/zenodo.13381099)\]
 
@@ -107,7 +109,8 @@ library(kableExtra)
 
 <!-- -->
 
-12. Klinges, DH, **JA Baecher**, JJ Lembrechts, IMD Maclean, J Lenoir, C Greiser, M Ashcroft, LJ Evans, MR Kearney, J Aalto, LC Barrio, P De Frenne, J Guillemot, K Hylander, T Jucker, M Kopecky, M Luoto, M Macek, I Nijs, J Urban, L van den Brink, P Vangansbeke, J Von Oppen, J Wild, J Boike, R Canessa, M Nosetto, A Rubtsov, J Sallo-Bravo, BR Scheffers. ***2024***. *Proximal microclimate: moving beyond spatiotemporal scale to improve predicted biological responses*. ***Global Ecology and Biogeography*** *33(7):e1–16* \[[***html***](https://doi.org/https://doi.org/10.1111/geb.13884)\] \[[***pdf***](https://drive.google.com/uc?export=download&id=1xq5iYKTIJZYZ7VJPSt6Nk1GyRaRZQDG7)\] \[[***code***](https://github.com/ilyamaclean/microclimf)\] Award: \[[***Wiley's Top 10 Most Cited***](https://view.email2.wiley.com/?vawpToken=MKYPUOPTL6JEZJTOTOQBYCR3QQ.500023&utm_source=sfmc&utm_medium=email&utm_campaign=B2CJNL_MIS_1693076_Top_Cited_Authors_EM1_T)\] 
+12. Klinges, DH, **JA Baecher**, JJ Lembrechts, IMD Maclean, J Lenoir, C Greiser, M Ashcroft, LJ Evans, MR Kearney, J Aalto, LC Barrio, P De Frenne, J Guillemot, K Hylander, T Jucker, M Kopecky, M Luoto, M Macek, I Nijs, J Urban, L van den Brink, P Vangansbeke, J Von Oppen, J Wild, J Boike, R Canessa, M Nosetto, A Rubtsov, J Sallo-Bravo, BR Scheffers. ***2024***. *Proximal microclimate: moving beyond spatiotemporal scale to improve predicted biological responses*. ***Global Ecology and Biogeography*** *33(7):e1–16* \[[***html***](https://doi.org/https://doi.org/10.1111/geb.13884)\] \[[***pdf***](https://drive.google.com/uc?export=download&id=1xq5iYKTIJZYZ7VJPSt6Nk1GyRaRZQDG7)\] \[[***code***](https://github.com/ilyamaclean/microclimf)\] 
+     - **Award:** \[[***Wiley's Top 10 Most Cited***](https://view.email2.wiley.com/?vawpToken=MKYPUOPTL6JEZJTOTOQBYCR3QQ.500023&utm_source=sfmc&utm_medium=email&utm_campaign=B2CJNL_MIS_1693076_Top_Cited_Authors_EM1_T)\] 
 
 <!-- -->
 
@@ -116,13 +119,15 @@ library(kableExtra)
 <!-- -->
 
 10. Lawlor, JA, L Comte, G Grenouillet, J Lenoir, **JA Baecher**, RMWJ Bandara, R Bertrand, I-C Chen, SE Diamond, LT Lancaster, NA Moore, J Murienne, BF Oliveria, GT Pecl, ML Pinsky, J Rolland, MA Rubenstein, BR Scheffers, LM Thompson, B can Amerom, F Villalobos, SR Weiskopf, J Sunday. ***2024***. *Mechanisms, detections, and impacts of species redistributions under climate change*. ***Nature Reviews Earth & Environment*** *5:351–368* \[[***html***](https://www.nature.com/articles/s43017-024-00527-z)\] \[[***pdf***](https://drive.google.com/file/d/1Y9WQ5nf7nGaotehWYgnO7NXfUGPRFZrF/view?usp=sharing)\] 
-      - ***Impact Factor: 71.5*** ***Altmetric: 134*** (top 5%) \[[Press: ***list of articles***](https://nature.altmetric.com/details/162629735/news)\]
+     - ***Impact Factor: 71.5*** ***Altmetric: 134*** (top 5%) 
+     - **Press:** \[[***list of articles***](https://nature.altmetric.com/details/162629735/news)\]
 
-<!-- 2023 -->
+2023
 
-9. **Baecher, JA**, SA Johnson, EA Roznik, BR Scheffers. ***2023***. *Experimental evaluation of how invasions and climate change interact to alter the vertical assembly of an amphibian community*. ***Journal of Animal Ecology*** *92(4):875–888* \[[***html***](https://besjournals.onlinelibrary.wiley.com/doi/10.1111/1365-2656.13899)\] \[[***pdf***](https://drive.google.com/file/d/1xpH3gddbvwZFhyESNdwEgNIqN4bKMdB2/view?usp=sharing)\] \[[***code***](https://github.com/slamander/treefrog)\] Press: \[[***Nature Climate Change***](https://www.nature.com/articles/s41558-023-01654-z.epdf?sharing_token=3XnTm99a17DVcWMhv13iKNRgN0jAjWel9jnR3ZoTv0MMd4D4RpznrkeWRsgunYu7dzCGDugmPYuA8lqoIfQTHmtQ-tp_uQ2CJKXMzH4cKcJkMgfEVbdniiX4uXaKrAHCZLPQwjVg5hZKpGbAUwr8-fFSRsRcdJO9tuJhYTvvjjw%3D)\] \[[***Florida Today***](https://www.floridatoday.com/story/news/local/environment/2023/04/03/cuban-tree-frog-hops-to-new-heights-of-ecological-destruction-in-florida/70064687007/)\] \[[***Nature Climate Change***](https://secasc.ncsu.edu/2023/03/13/se-casc-researchers-show-how-climate-change-and-invasive-species-threaten-florida-treefrogs/)\]
+9. **Baecher, JA**, SA Johnson, EA Roznik, BR Scheffers. ***2023***. *Experimental evaluation of how invasions and climate change interact to alter the vertical assembly of an amphibian community*. ***Journal of Animal Ecology*** *92(4):875–888* \[[***html***](https://besjournals.onlinelibrary.wiley.com/doi/10.1111/1365-2656.13899)\] \[[***pdf***](https://drive.google.com/file/d/1xpH3gddbvwZFhyESNdwEgNIqN4bKMdB2/view?usp=sharing)\] \[[***code***](https://github.com/slamander/treefrog)\] 
+     - **Press:** \[[***Nature Climate Change***](https://www.nature.com/articles/s41558-023-01654-z.epdf?sharing_token=3XnTm99a17DVcWMhv13iKNRgN0jAjWel9jnR3ZoTv0MMd4D4RpznrkeWRsgunYu7dzCGDugmPYuA8lqoIfQTHmtQ-tp_uQ2CJKXMzH4cKcJkMgfEVbdniiX4uXaKrAHCZLPQwjVg5hZKpGbAUwr8-fFSRsRcdJO9tuJhYTvvjjw%3D)\] \[[***Florida Today***](https://www.floridatoday.com/story/news/local/environment/2023/04/03/cuban-tree-frog-hops-to-new-heights-of-ecological-destruction-in-florida/70064687007/)\] \[[***Nature Climate Change***](https://secasc.ncsu.edu/2023/03/13/se-casc-researchers-show-how-climate-change-and-invasive-species-threaten-florida-treefrogs/)\]
 
-<!-- 2022 -->
+2022
 
 8. Basham, EW, **JA Baecher**, DH Klinges, BR Scheffers. ***2022***. *Vertical stratification patterns of tropical forest vertebrates: A meta-analysis*. ***Biological Reviews*** *98(1):99–114* \[[***html***](https://doi.org/10.1111/brv.12896)\] \[[***pdf***](https://drive.google.com/file/d/1YD5sKz4j02oRsupH4jXtO9l4gnGHdTqD/view?usp=sharing)\] \[[***code***](https://github.com/schefferslab/Vert-Strata-Meta)\]
 
@@ -130,7 +135,7 @@ library(kableExtra)
 
 7. Basham, EW, M González-Pinzón, A Romero-Marcucci, N Carl, **JA Baecher**, BR Scheffers. ***2022***. *Large, old trees define the vertical, horizontal, and seasonal distributions of a poison frog*. ***Oecologia*** *199:257–269* \[[***html***](https://doi.org/10.1007/s00442-022-05108-9)\] \[[***pdf***](https://drive.google.com/file/d/1MZieViEYzTJNZoKWg-I4wv0EC8V033yF/view?usp=sharing)\] \[[***code***](https://github.com/schefferslab/Basham_et_al_2021)\]
 
-<!-- 2020 -->
+2020
 
 6. Swartwout, M, PN Vogrinc, **JA Baecher**, CS Kross, JD Willson. ***2020***. *Prey Size and Growth Rate do not Influence Trophic Morphology of Juvenile Water Snakes* Nerodia sipedon. ***Herpetologica*** *76(1):53–60* \[[***html***](https://doi.org/10.1655/Herpetologica-D-18-00007)\] \[[***pdf***](https://drive.google.com/file/d/1QLdpK0d1k3fEqUHtLrN4H8rV0kjbA-Tc/view?usp=sharing)\]
 
@@ -138,19 +143,20 @@ library(kableExtra)
 
 5. **Baecher, JA**, §E Jones, SC Richter. ***2020***. *Tail bifurcation in two species of* Desmognathus *salamander (Caudata: Plethodontidae) in southeastern Kentucky, USA*. ***Herpetological Bulletin*** *150:29–30* \[[***html***](https://doi.org/10.33256/hb150.2930)\] \[[***pdf***](https://drive.google.com/file/d/1b64jLaFQEWxNdENYW35R3K8eXZbRORKV/view?usp=sharing)\]
 
-<!-- 2019 -->
+2019
 
-4. Hinkson, KM, **JA Baecher**, S Poo. ***2019***. *Cryopreservation and hormonal induction of spermic urine in the smooth-sided toad* Rhaebo guttatus. ***Cryobiology*** *89:109–111* \[[***html***](https://doi.org/10.1016/j.cryobiol.2019.05.007)\] \[[***pdf***](https://drive.google.com/file/d/1AyvCIzYfoLL5V0OcxVBo2l8aLJsNoDx9/view?usp=sharing)\] Press: \[[***The Commercial Appeal***](https://drive.google.com/file/d/1AyvCIzYfoLL5V0OcxVBo2l8aLJsNoDx9/view?usp=sharing)\] \[[***USA Today***](https://drive.google.com/file/d/1AyvCIzYfoLL5V0OcxVBo2l8aLJsNoDx9/view?usp=sharing)\] 
+4. Hinkson, KM, **JA Baecher**, S Poo. ***2019***. *Cryopreservation and hormonal induction of spermic urine in the smooth-sided toad* Rhaebo guttatus. ***Cryobiology*** *89:109–111* \[[***html***](https://doi.org/10.1016/j.cryobiol.2019.05.007)\] \[[***pdf***](https://drive.google.com/file/d/1AyvCIzYfoLL5V0OcxVBo2l8aLJsNoDx9/view?usp=sharing)\] 
+     - **Press:** \[[***The Commercial Appeal***](https://drive.google.com/file/d/1AyvCIzYfoLL5V0OcxVBo2l8aLJsNoDx9/view?usp=sharing)\] \[[***USA Today***](https://drive.google.com/file/d/1AyvCIzYfoLL5V0OcxVBo2l8aLJsNoDx9/view?usp=sharing)\] 
 
-<!-- 2018 -->
+2018
 
 3. **Baecher, JA**, SC Richter. ***2018***. *Environmental gradients in an old-growth Appalachian Forest predict fine-scale distribution, co-occurrence, and abundance of woodland salamanders*. ***Ecology and Evolution*** *8(24):12940–12952* \[[***html***](https://doi.org/10.1002/ece3.4736)\] \[[***pdf***](https://drive.google.com/file/d/1h3l0vT9pABr5yotXYPAnbmpFwPhFIaTc/view?usp=sharing)\] \[[***code***](http://doi.org/10.5281/zenodo.1313705)\]
 
-<!-- 2017 -->
+2017
 
 2. **Baecher, JA**, PH Vogrinc, JC Guzy, CS Kross, JD Willson. ***2017***. *Herpetofaunal Communities in Restored and Unrestored Remnant Tallgrass Prairie and Associated Wetlands in Northwest Arkansas*. ***Wetlands*** *38:157–168* \[[***html***](https://doi.org/10.1007/s13157-017-0966-5)\] \[[***pdf***](https://drive.google.com/file/d/1wKPzJ1QXOc-znIXJSQXd9MfpWc5nZ9jU/view?usp=sharing)\]
 
-<!-- 2014 -->
+2014
 
 1. **Baecher, JA**, PH Vogrinc, JC Guzy, JC Neal, JD Willson. ***2014***. Lithobates areolatus, *Predation*. ***Herpetological Review*** *45(4):681–682* \[[***pdf***](https://drive.google.com/file/d/1dZi1LI8vY-JLh46hOCLn4v7oYcfTQeWa/view?usp=sharing)\]
 
@@ -179,6 +185,12 @@ library(kableExtra)
 <!-- -->
 
 1. **Baecher, JA**, E Stuber, TJ Clark-Wolf. ***In prep*** . *Mapping range shifts with a novel integrated spatiotemporal N-mixture Bayesian model*. ***Methods in Ecology and Evolution***  
+
+&nbsp; 
+&nbsp; 
+
+&nbsp; 
+&nbsp; 
 
 # FUNDING
 
@@ -215,6 +227,9 @@ kable(funding,
 &nbsp; **Total Funding:** ***\$1,024,000***
 
 &nbsp;
+&nbsp; 
+&nbsp; 
+&nbsp; 
 
 # PROFESSIONAL ACTIVITIES
 
@@ -295,6 +310,10 @@ kable(funding,
 
 &nbsp; \[[***see all presentations***](https://drive.google.com/uc?export=download&id=1BL-4AZwwBFBMk0hQidGQ3lF-L16d5VXEp5OUdPOVi9w)\]
 
+&nbsp; 
+&nbsp; 
+
+
 # WORKSHOPS
 
 &nbsp; **Reverse chronological**
@@ -346,11 +365,13 @@ kable(funding,
 &nbsp;
 &nbsp;
 
+&nbsp;
+
 # STUDENT MENTORSHIP
 
 &nbsp; **Graduate student** (MS, PhD) • Φ **published** • Ψ **conference** • Ω **committee member** • → **career prep**
 
--  **Eastern Kentucky University** \hfill 2015 – 2017  
+-   Eastern Kentucky University** \hfill 2015 – 2017  
     - Alex Gibson, Emily Jones (Φ, Ψ, →MS), Sarah Ashbrook (Ψ), Peyton Blair (Ψ), \[[Peter Grap](https://www.linkedin.com/in/peter-grap-2238a0158/)] (Ψ, →MS, →PhD), Kelley Hoefer (Ψ), Myesha James (Ψ),  \[[Jacob Peters](https://geospatial.yale.edu/profile/jacob-peters)] (Ψ, →MS, →PhD), \[[Julia Portmann](https://geospatial.yale.edu/profile/julia-portmann)] (Ψ, →MS, →PhD), \[[Jocelyn Stalker](https://jocelynstalker.github.io/)] (Φ, Ψ, →MS, →PhD)  
 &nbsp;
 
@@ -366,37 +387,10 @@ kable(funding,
     - Jack Rasmussen (PhD), \[[Mallory Sandoval-Lambert](https://scholar.google.com/citations?user=W_sZJ2EAAAAJ&hl=en)] (MS), \[[Adrien Bastidas](https://www.linkedin.com/in/adrien-bastidas-581b4127a/)] (PhD)  
 
 &nbsp;  
-&nbsp;  
-
-# SELECT OUTREACH EDUCATION  
-
-&nbsp; **Total Events:** ***26*** • **People Reached:** ***\~1,430*** (ages 5 to 60+)
-
-```{r outreach-table}
-funding <- tribble(
-  ~Activity, ~Event, ~Audience, ~Year,
-  "Guest teacher -- ecosystems", "Holt Middle School, AR", "~30", "2013",
-  "Watershed clean-up", "Lake Fayetteville, AR", "~30", "2013",
-  "High school science fair judge", "NWA STEM Fair, AR", "~50", "2013",
-  "Guest teacher -- reptiles and amphibians", "Model Elementary, AR", "~15", "2015",
-  "Environmental stewardship", "EKU Career Fair, KY", "~150", "2016",
-  "Community water quality testing", "Eastern Kentucky", "~30", "2016",
-  "Vertebrate conservation education", "Memphis Zoo, TN", "~300", "2018"
-)
-
-kable(funding, 
-      format = "latex",
-      booktabs = TRUE,
-      linesep = "",
-      align = c("r", "l", "l", "r"),
-      col.names = c("Activity", "Event", "# Reached", "Year")) %>%
-  kable_styling(latex_options = c("scale_down", "HOLD_position"),
-                font_size = 11)
-```
-
-&nbsp; \[[***see all events***](https://docs.google.com/document/d/1EGPS9yHwm1_TOIOrntLCxjCIDYjx2XuDHW9BNMOk0OU/edit?usp=sharing)\]
-
 &nbsp;
+&nbsp;
+&nbsp;
+
 
 # PUBLIC RESOURCES
 **Available at \[[questlab.dev](https://questlab.dev)]**  
@@ -448,23 +442,19 @@ Since PhD (2019 - Present)
 -   **Robert Guralnick, PhD** \hfill 2019 – Present\   
     - Curator of Biodiversity Informatics | Florida Natural History Museum  
         - 352-273-1980 • \[[***email***](mailto:robgur@gmail.com)] • \[[***webpage***](mailto:robgur@gmail.com)]  
-&nbsp;
 
 -  **Brett Scheffers, PhD** \hfill 2019 – Present\  
     - Associate Professor | Dept of Wildlife Ecology, University of Florida 
     - Director | Florida Climate Institute, University of Florida  
         - 352-846-0570 • \[[***email***](mailto:brett.scheffers@ufl.edu)] • \[[***webpage***](http://schefferslab.com/)]  
-&nbsp;
 
 -  **Lindsay Campbell, PhD** \hfill 2024 – Present\  
     - Assistant Professor | Florida Medical Entomology Lab, University of Florida  
         - 772-226-6666 • \[[***email***](mailto:lcampbell2@ufl.edu)] • \[[***webpage***](http://lcampbelllab.wixsite.com/campbell-lab)]  
-&nbsp;
 
 -  **TJ Clark-Wolf, PhD** \hfill 2025 – Present\  
     - Assistant Professor | Dept of Wildland Resources & Ecology Center, Utah State University  
         - email preferred • \[[***email***](mailto:t.j.clark-wolf@usu.edu)] • \[[***webpage***](https://www.clarkwolflab.com/)]  
-&nbsp;
 
 -  **Erica Stuber, PhD** \hfill 2025 – Present\  
     - Assistant Unit Leader - USGS UT Cooperative Fish and Wildlife Research Unit
