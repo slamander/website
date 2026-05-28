@@ -369,9 +369,11 @@ kable(funding,
 
 # STUDENT MENTORSHIP
 
-&nbsp; **Graduate student** (MS, PhD) • Φ **published** • Ψ **conference** • Ω **committee member** • → **career prep**
+&nbsp; **Grad student** (MS, PhD) • Φ **author** • Ψ **conference** • Ω **committee** • → **career prep**
 
--   Eastern Kentucky University** \hfill 2015 – 2017  
+&nbsp; 
+
+-   **Eastern Kentucky University** \hfill 2015 – 2017  
     - Alex Gibson, Emily Jones (Φ, Ψ, →MS), Sarah Ashbrook (Ψ), Peyton Blair (Ψ), \[[Peter Grap](https://www.linkedin.com/in/peter-grap-2238a0158/)] (Ψ, →MS, →PhD), Kelley Hoefer (Ψ), Myesha James (Ψ),  \[[Jacob Peters](https://geospatial.yale.edu/profile/jacob-peters)] (Ψ, →MS, →PhD), \[[Julia Portmann](https://geospatial.yale.edu/profile/julia-portmann)] (Ψ, →MS, →PhD), \[[Jocelyn Stalker](https://jocelynstalker.github.io/)] (Φ, Ψ, →MS, →PhD)  
 &nbsp;
 
@@ -393,23 +395,23 @@ kable(funding,
 
 
 # PUBLIC RESOURCES
-**Available at \[[questlab.dev](https://questlab.dev)]**  
+&nbsp; **Available at \[[questlab.dev](https://questlab.dev)]**  
 
--   ***Mixed Effects Models in R*** \[[\faGlobe](https://questlab.dev/post/mixed-effects-models-in-r/)] \hfill 2025\  
--   ***Spatial Structures in Ecological Models*** | Tutorial \[[\faGlobe](https://questlab.dev/post/ecological-spatial-structures/)] \hfill 2025\  
--   ***Intro to R Coding:***
-    - Part 1: the basics \[[\faGlobe](https://questlab.dev/post/r-intro/)] \hfill 2022\  
-    - Part 2: advanced techniques \[[\faGlobe](https://questlab.dev/post/r-intro-pt2/)] \hfill 2022\  
--   ***Machine learning the “Tidy” way*** \[[\faGlobe](https://questlab.dev/post/ml-tidymodels/)] \hfill 2021\  
--   ***Linear regression with gradient decent*** \[[\faGlobe](https://questlab.dev/post/gradient-descent/)] \hfill 2021\  
--   ***Mapping ecological flow in R*** \[[\faGlobe](https://questlab.dev/post/connectivity-script/)] \hfill 2020\  
--   ***Empirical Dynamic Models for forecasting*** \[[\faGlobe](https://questlab.dev/post/edm-script/)] \hfill 2016\  
+-   &nbsp;&nbsp; ***Mixed Effects Models in R*** \[[\faGlobe](https://questlab.dev/post/mixed-effects-models-in-r/)] \hfill 2025\  
+-   &nbsp;&nbsp; ***Spatial Structures in Ecological Models*** | Tutorial \[[\faGlobe](https://questlab.dev/post/ecological-spatial-structures/)] \hfill 2025\  
+-   &nbsp;&nbsp; ***Intro to R Coding:***
+    - &nbsp;&nbsp; Part 1: the basics \[[\faGlobe](https://questlab.dev/post/r-intro/)] \hfill 2022\  
+    - &nbsp;&nbsp; Part 2: advanced techniques \[[\faGlobe](https://questlab.dev/post/r-intro-pt2/)] \hfill 2022\  
+-   &nbsp;&nbsp; ***Machine learning the “Tidy” way*** \[[\faGlobe](https://questlab.dev/post/ml-tidymodels/)] \hfill 2021\  
+-   &nbsp;&nbsp; ***Linear regression with gradient decent*** \[[\faGlobe](https://questlab.dev/post/gradient-descent/)] \hfill 2021\  
+-   &nbsp;&nbsp; ***Mapping ecological flow in R*** \[[\faGlobe](https://questlab.dev/post/connectivity-script/)] \hfill 2020\  
+-   &nbsp;&nbsp; ***Empirical Dynamic Models for forecasting*** \[[\faGlobe](https://questlab.dev/post/edm-script/)] \hfill 2016\  
 
 &nbsp;
 
 # NON-FUNDED PROPOSALS
 
-**Proposals available upon request**
+&nbsp; **Proposals available upon request**
 
 ```{r non_funding-table}
 non_funding <- tribble(
@@ -437,7 +439,7 @@ kable(non_funding,
 &nbsp;
 
 # REFERENCES
-Since PhD (2019 - Present)
+&nbsp; **Since PhD (2019 - Present)**
 
 -   **Robert Guralnick, PhD** \hfill 2019 – Present\   
     - Curator of Biodiversity Informatics | Florida Natural History Museum  
