@@ -1,5 +1,5 @@
 ---
-title: "Quest Lab"
+title: "Qμest Lab"
 type: landing
 date: 2026-03-25
 draft: false
@@ -7,10 +7,10 @@ draft: false
 sections:
   - block: markdown
     content:
-      title: "Opportunities in the Quest Lab!"
+      title: "Opportunities in the Qμest Lab!"
       text: |
 
-        The Quest Lab is actively recruiting undergraduate researchers and a postdoctoral researcher for the Fall 2026 semester. We will also be recruiting a PhD student for the Spring 2026 semester. Please send out all inquiries to [Dr. J Alex Baecher](mailto:jbaecher@gmail.com)!
+        The Qμest Lab is actively recruiting undergraduate researchers and a postdoctoral researcher for the Fall 2026 semester. We will also be recruiting a PhD student for the Spring 2026 semester. Please send out all inquiries to [Dr. J Alex Baecher](mailto:jbaecher@gmail.com)!
 
         <br>
 
