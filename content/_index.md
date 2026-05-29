@@ -43,7 +43,7 @@ sections:
         <img src="/media/emory_shield.png" alt="Quest at Emory shield" width="500">
         </p>
 
-        The Qμest lab is led by [**Dr. J Alex Baecher**](/team/admin/) ([⬇️ *curriculum vita*](/files/cv_latex.pdf)). We are an applied ecological research group, broadly interested in the processes that determine the distribution of biodiversity in space and time. Our work integrates field studies, laboratory experiments, big data, cutting-edge modeling techniques, and high-performance computing to address questions related to conservation, invasions, disease, and global change. 
+        The Qμest lab is led by [**Dr. J Alex Baecher**](/team/admin/) ([⬇️ **CV**](/files/cv_latex.pdf)). We are an applied ecological research group, broadly interested in the processes that determine the distribution of biodiversity in space and time. Our work integrates field studies, laboratory experiments, big data, cutting-edge modeling techniques, and high-performance computing to address questions related to conservation, invasions, disease, and global change. 
 
       design:
       columns: '2'
