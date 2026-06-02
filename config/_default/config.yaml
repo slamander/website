@@ -2,7 +2,7 @@
 # Documentation: https://gohugo.io/getting-started/configuration/
 
 title: 'Alex Baecher'
-baseURL: 'https://questlab.dev'
+baseURL: 'https://questlab.eco'
 copyright: '© {year} Alex Baecher'
 defaultContentLanguage: 'en'
 hasCJKLanguage: false
