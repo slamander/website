@@ -37,13 +37,13 @@
     Content-Type = "application/rss+xml"
 
 [[redirects]]
-  from = "http://www.questlab.dev/*"
-  to = "https://questlab.dev/:splat"
+  from = "http://www.questlab.eco/*"
+  to = "https://questlab.eco/:splat"
   status = 301
   force = true
 
 [[redirects]]
-  from = "http://questlab.dev/*"
-  to = "https://questlab.dev/:splat"
+  from = "http://questlab.eco/*"
+  to = "https://questlab.eco/:splat"
   status = 301
   force = true

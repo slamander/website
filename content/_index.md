@@ -79,7 +79,11 @@ sections:
         **🚨We are currently recruiting!🚨**  
         - Fall 2026: [2-3 undergraduate researchers](/team/undergraduates/)   
         - Fall 2026: [1 postdoctoral research associate](/team/postdoc/)   
-        - Spring 2027: [1 PhD student](/team/phd-student/)   
+        - Spring 2027: [1 PhD student](/team/phd-student/)  
+
+        <p align="center"> 
+        <img src="https://www.appily.com/sites/default/files/styles/max_1200/public/images/hero/college/139658_hero.jpg?itok=Kj3V_7i6" alt="Emory's Atlanta Campus" width="500">
+        </p>
         
         **Interested?** Take a look at some of our [research projects](/project/) and [publications](/publications/) (seen below). To inquire about opportunities, reach out to Alex [✉️](mailto:jbaecher@gmail.com).
       design:
