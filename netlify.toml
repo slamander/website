@@ -36,6 +36,20 @@
   [headers.values]
     Content-Type = "application/rss+xml"
 
+# alexbaecher.com → questlab.eco
+[[redirects]]
+  from = "https://alexbaecher.com/*"
+  to = "https://questlab.eco/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://alexbaecher.com/*"
+  to = "https://questlab.eco/:splat"
+  status = 301
+  force = true
+
+# questlab.dev → questlab.eco
 [[redirects]]
   from = "https://questlab.dev/*"
   to = "https://questlab.eco/:splat"
