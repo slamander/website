@@ -56,7 +56,7 @@ library(kableExtra)
 - &nbsp;
 - **Doctoral Preeminence Fellow** \hfill Aug 2019 – Aug 2024 
   - *University of Florida* \| Department of Wildlife Ecology
-
+- &nbsp;
 - **Conservation and Research Technician** \hfill Jan 2018 – July 2019 
   - *Memphis Zoo* \| Department of Conservation and Research
 - &nbsp;
@@ -68,6 +68,7 @@ library(kableExtra)
 - &nbsp;
 - **Research Assistant** \hfill Mar 2012 – Mar 2015 
   - *University of Arkansas* \| Department of Biology
+- &nbsp;
 
 # EDUCATION
 
