@@ -36,7 +36,7 @@ sections:
 
   - block: markdown
     content:
-      title: Welcome to the Qμest lab
+      title: Welcome to Qμest lab
       text: |
 
         <p align="center"> 
