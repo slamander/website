@@ -24,7 +24,7 @@ organizations:
 profiles:
   - icon: envelope
     icon_pack: fas
-    link: mailto:jbaecher@gmail.edu
+    link: mailto:alexbaecher@emory.edu
   - icon: academicons/google-scholar
     icon_pack: ai
     link: https://scholar.google.com/citations?user=zl3lDnEAAAAJ&hl=en

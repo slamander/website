@@ -1,6 +1,6 @@
 ---
-title: "J. Alex Baecher"
-subtitle: "Curriculum Vitae"
+title: "\\Huge J. Alex \\textbf{Baecher}"
+subtitle: "\\Large \\textbf{\\textit{curriculum vitae}}"
 format:
   pdf:
     documentclass: article
@@ -14,12 +14,11 @@ format:
         \usepackage{fontawesome5}
         \setlist[itemize]{leftmargin=*, nosep, label={}}
         \setlength{\parindent}{0pt}
-        \setlength{\parskip}{6pt}
         \usepackage{titlesec}
         \titleformat{\section}{\large\bfseries\uppercase}{\thesection}{0em}{}[\titlerule]
         \titleformat{\subsection}{\normalsize\bfseries}{\thesubsection}{0em}{}
         \titlespacing{\section}{0pt}{0pt}{0pt}
-        \titlespacing{\subsection}{0pt}{8pt}{4pt}
+        \titlespacing{\subsection}{0pt}{0pt}{0pt}  
   html:
     theme: cosmo
     toc: false
@@ -35,48 +34,49 @@ library(kableExtra)
 ```
 
 ::: contact-info
-                           \faEnvelope: [jbaecher\@gmail.com](mailto:jbaecher@gmail.com)   \faPhone: (352) 226-3983   \faGlobe: [www.questlab.eco](https://questlab.eco)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; \faEnvelope: [alexbaecher\@emory.edu](mailto:alexbaecher@emory.edu) • \faPhone: (352) 226-3983 • \faGlobe: [www.questlab.eco](https://questlab.eco)  
 :::
 
-<!-- [\faGithub](https://github.com/slamander) &nbsp;&nbsp;&nbsp;&nbsp; [\faResearchgate](https://www.researchgate.net/profile/J-Baecher?ev=hdr_xprf) &nbsp;&nbsp;&nbsp;&nbsp; [\faOrcid](https://orcid.org/0000-0003-0247-5758) -->
+::: contact-info
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\faGithub: [*slamander*](https://www.github.com/slamander) • \faOrcid: [0000-0003-0247-5758](https://orcid.org/0000-0003-0247-5758) • \faGraduationCap: [google scholar](https://scholar.google.com/citations?user=zl3lDnEAAAAJ&hl=en) 
+::: 
 
- 
+&nbsp;
 
 # APPOINTMENTS
 
 - **Assistant Professor of Applied Ecology** \hfill Aug 2026 – Present 
   - *Emory University* \| Department of Environmental Science
--  
+- &nbsp;
 - **Postdoctoral Fellow in Quantitative Ecology** \hfill July 2025 – July 2026 
   - *Utah State University* \| Department of Rangeland Resources
--  
+- &nbsp;
 - **Postdoctoral Research Associate** \hfill Aug 2024 – July 2025 
   - *University of Florida* \| Institute for Food and Agricultural Science
--  
+- &nbsp;
 - **Doctoral Preeminence Fellow** \hfill Aug 2019 – Aug 2024 
   - *University of Florida* \| Department of Wildlife Ecology
--  
+
 - **Conservation and Research Technician** \hfill Jan 2018 – July 2019 
   - *Memphis Zoo* \| Department of Conservation and Research
--  
+- &nbsp;
 - **NSF REU Research Coordinator** \hfill May 2017 – Aug 2017 
   - *Eastern Kentucky University* \| Department of Biology
--  
+- &nbsp;
 - **Graduate Teaching Assistant** \hfill May 2015 – Aug 2017 
   - *Eastern Kentucky University* \| Department of Biology
--  
+- &nbsp;
 - **Research Assistant** \hfill Mar 2012 – Mar 2015 
   - *University of Arkansas* \| Department of Biology
--  
 
 # EDUCATION
 
 - **Doctor of Philosophy, Interdisciplinary Ecology** \hfill Aug 2024 
   - *University of Florida*
--  
+- &nbsp;
 - **Master of Science, Biology** \hfill Dec 2017 
   - *Eastern Kentucky University*
--  
+- &nbsp;
 - **Bachelor of Science, Biology** \hfill May 2014 
   - *University of Arkansas*
 
@@ -314,11 +314,10 @@ library(kableExtra)
 
 -    ***Mixed Effects Models in R*** [\faGlobe](https://questlab.dev/post/mixed-effects-models-in-r/) \hfill 2025 
   -    Open source and continuously updated *Rshiny* tool
--    ***Spatial Structures in Ecological Models*** \| Tutorial [\faGlobe](https://questlab.dev/post/ecological-spatial-structures/) \hfill 2025 
+-    ***Spatial Structures in Ecological Models*** [\faGlobe](https://questlab.dev/post/ecological-spatial-structures/) \hfill 2025 
   -    Comprehensive tutorial for spatially-explicit modeling with descriptions
--    ***Intro to R Coding:***
-  -    Part 1: the basics (e.g., syntax, operators, functions) [\faGlobe](https://questlab.dev/post/r-intro/) \hfill 2022 
-  -    Part 2: advanced techniques (e.g., data wrangling, visualization, for loops) [\faGlobe](https://questlab.dev/post/r-intro-pt2/) \hfill 2022 
+-    ***Intro to R Coding:*** 
+  -      Part 1: basics [\faGlobe](https://questlab.dev/post/r-intro/), Part 2: advanced [\faGlobe](https://questlab.dev/post/r-intro-pt2/) \hfill 2022 
 -    ***Machine learning the “Tidy” way*** [\faGlobe](https://questlab.dev/post/ml-tidymodels/) \hfill 2021 
   -    Tutorial for developing AI/ML models with *tidymodels* and *carot*
 -    ***Linear regression with gradient decent*** [\faGlobe](https://questlab.dev/post/gradient-descent/) \hfill 2021 
