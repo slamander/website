@@ -35,7 +35,7 @@ library(kableExtra)
 ```
 
 ::: contact-info
-                           \faEnvelope: [jbaecher\@gmail.com](mailto:jbaecher@gmail.com)   \faPhone: (352) 226-3983   \faGlobe: [questlab.dev](https://questlab.dev)
+                           \faEnvelope: [jbaecher\@gmail.com](mailto:jbaecher@gmail.com)   \faPhone: (352) 226-3983   \faGlobe: [www.questlab.eco](https://questlab.eco)
 :::
 
 <!-- [\faGithub](https://github.com/slamander) &nbsp;&nbsp;&nbsp;&nbsp; [\faResearchgate](https://www.researchgate.net/profile/J-Baecher?ev=hdr_xprf) &nbsp;&nbsp;&nbsp;&nbsp; [\faOrcid](https://orcid.org/0000-0003-0247-5758) -->
@@ -310,7 +310,7 @@ library(kableExtra)
 
 # EDUCATIONAL RESOURCES
 
-  **Publically available at Questlab [website](https://questlab.dev)**
+  **Publically available at Questlab [website](questlab.eco)**
 
 -    ***Mixed Effects Models in R*** [\faGlobe](https://questlab.dev/post/mixed-effects-models-in-r/) \hfill 2025 
   -    Open source and continuously updated *Rshiny* tool
