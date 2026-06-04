@@ -1,6 +1,6 @@
 ---
 # Display name
-title: J Alex Baecher
+title: Dr. J Alex Baecher
 
 type: publication
 person: "true"
@@ -13,7 +13,7 @@ authors:
 superuser: false
 
 # Role/position
-role: Principal Investigator & Assistant Professor of Applied Ecology
+role: Assistant Professor of Applied Ecology
 
 # Organizations/Affiliations
 organizations:
@@ -131,9 +131,9 @@ work:
 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
   <div>
     <h3 style="font-size:1.75rem; font-weight:bold; margin-bottom:1rem;">Serious bits:</h3>
-    <p>I'm an applied interdisciplinary quantitative ecologist broadly interested in the processes that produce and maintain biodiversity. My research interests include:</p>
-    <p>
-    
+    <p>I'm an applied interdisciplinary quantitative ecologist broadly interested in the processes that produce and maintain biodiversity. My research interests include:
+    </p>
+
       - macroecology
       - biogeography
       - population ecology
@@ -160,8 +160,3 @@ work:
 </p>
   </div>
 </div>
-
-<br>
-<br>
-
-# Download my [**CV**⬇](/files/cv_latex.pdf) (updated 5/7/2026) 

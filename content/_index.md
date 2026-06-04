@@ -24,12 +24,12 @@ sections:
           text: "see open positions"
           url: /people/
     design:
+      size: none
       background:
         image:
           filename: log_alt.jpg
           filters:
             brightness: 0.5
-          size: cover
           position: center
           parallax: true
           text_color_light: true
