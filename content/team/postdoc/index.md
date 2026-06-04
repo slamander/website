@@ -1,6 +1,6 @@
 ---
 # Display name
-title: "Open Position!!!"
+title: "Postdoc"
 
 type: publication
 person: "true"
@@ -27,7 +27,7 @@ profiles:
     link: "mailto:jbaecher@gmail.com"
 
 user_groups:
-  - Postdoctoral Researchers
+  - Open Positions
 ---
 
 We are actively recruiting a Postdoctoral Research Associate in Quantitative Ecology and Data Science. The position is for a 1 year term (beginning Fall 2026), with the possibility for extension a second and third year based on performance. We will begin evaluating applications on April 31st, but applications will be accepted until the position is filled.For informal inquiries, please contact Drs. J. Alex Baecher (jbaecher@gmail.com) or T.J. Clark-Wolf (t.j.clark-wolf@usu.edu).

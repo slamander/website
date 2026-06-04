@@ -18,19 +18,37 @@ profiles:
   - icon: envelope
     icon_pack: fas
     link: "mailto:emily_jones105@mymail.eku.edu"
+  - icon: academicons/researchgate
+    icon_pack: ai
+    link: https://www.researchgate.net/profile/Emily-Jones-72
+  - icon: brands/facebook
+    icon_pack: fab
+    link: https://www.facebook.com/emily.jones.61102
 
 user_groups:
   - Alumni
 
 work:
-  - position: Undergraduate Research Assistant
+  - position: Staff Scientist
+    company_name: Arcadis
+    company_url: "http://www.arcadis.com/"
+    company_logo: "https://media.licdn.com/dms/image/v2/D560BAQENjWtigNGe9w/company-logo_200_200/company-logo_200_200/0/1720420615682/arcadis_logo?e=1782345600&v=beta&t=tjeo8XEJcITBJ3mshZrn1DzXod1HHr7caJatmt11Eak"
+    date_start: 2026-04-01
+    date_end: 
+    
+  - position: Master's Student, Biology
     company_name: Eastern Kentucky University
+    company_url: "https://eku.edu/"
+    company_logo: "/media/EKU_Seal.png"
+    date_start: 2019-08-19
+    date_end: '2021-11-01'
+
+  - position: Undergraduate Research Assistant
+    company_name: Eastern Kentucky University, Division of Natural Areas
     company_url: "https://eku.edu/"
     company_logo: "/media/EKU_Seal.png"
     date_start: 2015-08-01
     date_end: '2021-11-01'
-    summary: |
-      [Dept. Biological Sciences](https://envs.emory.edu/)
       
 ---
 

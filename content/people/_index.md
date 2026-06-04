@@ -14,6 +14,8 @@ sections:
         - Field Technicians
         - Undergraduate Students
         - High School Students
+        - Open Positions
+        - Collaborators
         - Alumni
     design:
       show_interests: false

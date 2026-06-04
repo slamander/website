@@ -1,6 +1,6 @@
 ---
 # Display name
-title: "Open Positions!!!"
+title: "Undergrad researchers"
 
 type: publication
 person: "true"
@@ -27,7 +27,7 @@ profiles:
     link: "mailto:jbaecher@gmail.com"
 
 user_groups:
-  - Undergraduate Students
+  - Open Positions
 ---
 
 THe Quest Lab is actively recruiting a undergraduate researchers for ENVS research credit or work-study stipend via federal work study (FAFSA). Engaged students will be eligible for a full time paid field/lab technician position during the summers of 2017 & 2018. Additionally, for support see the [Lester Scholarship](https://envs.emory.edu/undergraduate/scholarships-ENVS/lester-scholarship.htmlp) for a Grant-in-Aid of undergraduate research. 
