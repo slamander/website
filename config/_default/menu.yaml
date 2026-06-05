@@ -17,9 +17,12 @@ main:
   - name: Resources
     url: '/post/'
     weight: 60
+  # - name: Network
+  #   url: /network/
+  #   weight: 70
   - name: Diversity
     url: '/dei/'
-    weight: 70
+    weight: 80
   - name: Join us
     url: '/join/'
-    weight: 80
+    weight: 90

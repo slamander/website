@@ -38,7 +38,7 @@ profiles:
     link: https://ecoclimateglobal.org/docs/cv/Klinges-20260417.pdf
 
 user_groups:
-  - Collaborators
+  - Microclimate
 
 work:
   - position: Assistant Professor (incoming)

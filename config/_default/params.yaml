@@ -1,5 +1,6 @@
 # Website theme and appearance
 appearance:
+  theme_default: day
   theme_day: minimal
   theme_night: minimal
   font: native
