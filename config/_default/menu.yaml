@@ -5,20 +5,20 @@ main:
   - name: Team
     url: '/people/'
     weight: 20
-  - name: Network
-    url: /network/
-    weight: 30
   - name: Research
     url: '/project/'
-    weight: 40
+    weight: 30
   - name: Publications
     url: '/publication/'
-    weight: 50
+    weight: 40
   - name: Teaching
     url: '/teaching/'
-    weight: 60
+    weight: 50
   - name: Resources
     url: '/post/'
+    weight: 60
+  - name: Network
+    url: /network/
     weight: 70
   - name: Diversity
     url: '/dei/'
