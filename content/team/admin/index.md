@@ -25,6 +25,9 @@ profiles:
   - icon: envelope
     icon_pack: fas
     link: mailto:alexbaecher@emory.edu
+  - icon: link
+    icon_pack: fas
+    link: www.questlab.eco
   - icon: academicons/google-scholar
     icon_pack: ai
     link: https://scholar.google.com/citations?user=zl3lDnEAAAAJ&hl=en

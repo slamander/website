@@ -29,7 +29,7 @@ profiles:
     link: https://www.researchgate.net/profile/Akshay-Vinod-Anand-2
 
 user_groups:
-  - Alumni
+  - Disease ecology
 
 work:
   - position: PhD Student, Interdisciplinary Ecology

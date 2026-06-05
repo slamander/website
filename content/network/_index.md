@@ -8,9 +8,14 @@ sections:
     content:
       title: Quest lab network
       user_groups:
+        - Range shifts
+        - Biodiversity informatics
+        - Ecological modeling
         - Microclimate
-        - Collaborators
-        - Research Networks
+        - Disease ecology
+        - Herpetology
+        - Invasive species
+      
     design:
       show_interests: false
       show_role: true
