@@ -11,14 +11,13 @@ sections:
         - Range shifts
         - Biodiversity informatics
         - Ecological modeling
-        - Microclimate
-        - Disease ecology
         - Herpetology
         - Invasive species
+        - Microclimate
+        - Disease ecology
       
     design:
       show_interests: false
       show_role: true
       show_social: true
-             
 ---

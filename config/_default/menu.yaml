@@ -1,28 +1,28 @@
 main:
   - name: Home
     url: '/'
-    weight: 10
+    weight: 1
   - name: Team
     url: '/people/'
-    weight: 20
-  - name: Research
-    url: '/project/'
-    weight: 30
-  - name: Publications
-    url: '/publication/'
-    weight: 40
-  - name: Teaching
-    url: '/teaching/'
-    weight: 50
-  - name: Resources
-    url: '/post/'
-    weight: 60
+    weight: 2
   - name: Network
     url: /network/
-    weight: 70
+    weight: 3
+  - name: Research
+    url: '/project/'
+    weight: 4
+  - name: Publications
+    url: '/publication/'
+    weight: 5
+  - name: Teaching
+    url: '/teaching/'
+    weight: 6
+  - name: Resources
+    url: '/post/'
+    weight: 7
   - name: Diversity
     url: '/dei/'
-    weight: 80
+    weight: 8
   - name: Join us
     url: '/join/'
-    weight: 90
+    weight: 9

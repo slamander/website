@@ -15,8 +15,6 @@ sections:
         - Undergraduate Students
         - High School Students
         - Open Positions
-        - Collaborators
-        - Microclimate
         - Alumni
     design:
       show_interests: false
