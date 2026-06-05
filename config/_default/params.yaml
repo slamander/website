@@ -31,7 +31,7 @@ header:
     show_logo: true
     show_language: false
     show_day_night: true
-    show_search: true
+    show_search: false
     highlight_active_link: true
     logo:
       filename: icon.png   # <-- add this
@@ -126,7 +126,7 @@ contact:
     link: https://github.com/slamander
   - icon: academicons/cv
     icon_pack: ai
-    link: https://drive.google.com/uc?export=download&id=1Yg3FypCUXo8jY3Fh6QPhoP-gXiyY3gjW
+    link: /files/cv_latex.pdf
 
 # Site search
 search:

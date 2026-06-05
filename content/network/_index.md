@@ -6,7 +6,7 @@ date: 2026-01-25
 sections:
   - block: people
     content:
-      title: Quest lab network
+      title: Quest lab network <br> (🪏 under construction 🪏)
       user_groups:
         - Range shifts
         - Biodiversity informatics
