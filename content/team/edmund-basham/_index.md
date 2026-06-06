@@ -31,7 +31,7 @@ profiles:
 
 highlight_name: false
 user_groups:
-  - Herpetology
+  - Amphibian ecology
 ---
 
 We have collaborated on: *Basham 2022 BR*.
