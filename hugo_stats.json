@@ -62,7 +62,6 @@
       "[&:not(dark)]:hidden",
       "__dimensions_badge_embed__",
       "active",
-      "ai-cv",
       "altmetric-embed",
       "article-metadata",
       "article-style",
