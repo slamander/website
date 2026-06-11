@@ -13,7 +13,7 @@ sections:
         <br> 
 
         <p align="center">
-        If you're not mentioned, I haven't forgotten... Let me know at jbaecher@gmail.com!
+        If you're not here, I haven't forgotten you... Let me know at jbaecher@gmail.com!
         </p>
 
       user_groups:
