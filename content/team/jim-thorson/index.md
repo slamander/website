@@ -42,7 +42,7 @@ profiles:
     link: https://sites.google.com/site/thorsonresearch/cv?authuser=0
   
 user_groups:
-  - Spatial ecology
+  - Ecological modeling
 
 ---
 
