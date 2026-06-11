@@ -1,6 +1,6 @@
 ---
 # Display name
-title: Dr. Todd Pierson
+title: Dr. TJ Clark-Wolf
 
 type: publication
 person: "true"
@@ -13,12 +13,12 @@ authors:
 superuser: false
 
 # Role/position
-role: Assistant Professor of Applied Ecology
+role: Associate Professor
 
 # Organizations/Affiliations
 organizations:
-  - name: "Emory University"
-    url: "https://envs.emory.edu/"
+  - name: "Kennesaw State University"
+    url: "https://www.kennesaw.edu/"
 
 # Social/Academic Networking
 profiles:

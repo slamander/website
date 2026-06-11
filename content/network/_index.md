@@ -7,22 +7,23 @@ sections:
   - block: people
     content:
       title: Lab network
-      subtitle: (under construction🪏)
+      subtitle: "***Friends, Collaborators, and Nemeses*** <br> <br> (under construction🪏)"
       text: |
-        **...a place to find friends, collaborators, and** ***future nemeses***
-
         <br>
         <br> 
 
-        If you're not mentioned, I haven't forgotten... Let me know! [✉️](mailto:jbaecher@gmail.com)
+        <p align="center">
+        If you're not mentioned, I haven't forgotten... Let me know! [✉️](mailto:jbaecher@gmail.com)</p>
 
       user_groups:
         - Research groups
         - Range shifts
         - Biodiversity informatics
         - Ecological modeling
+        - Spatial ecology
         - Amphibian ecology
         - Herpetology
+        - Bird ecology
         - Invasive species
         - Microclimate
         - Disease ecology

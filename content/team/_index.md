@@ -9,12 +9,11 @@ sections:
       title: Quest lab team
       user_groups:
         - Principal Investigator
-        - Postdoctoral Researchers
-        - Graduate Students
-        - Field Technicians
-        - Undergraduate Students
-        - High School Students
         - Open Positions
+        - Postdoctoral Researchers
+        # - Graduate Students
+        # - Undergraduate Students
+        # - High School Students
         - Alumni
     design:
       show_interests: false
