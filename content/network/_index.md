@@ -13,7 +13,8 @@ sections:
         <br> 
 
         <p align="center">
-        If you're not mentioned, I haven't forgotten... Let me know! [✉️](mailto:jbaecher@gmail.com)</p>
+        If you're not mentioned, I haven't forgotten... Let me know at jbaecher@gmail.com!
+        </p>
 
       user_groups:
         - Research groups

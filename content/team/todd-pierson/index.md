@@ -1,6 +1,6 @@
 ---
 # Display name
-title: Dr. TJ Clark-Wolf
+title: Dr. Todd Pierson
 
 type: publication
 person: "true"

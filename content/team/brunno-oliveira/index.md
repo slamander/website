@@ -16,16 +16,16 @@ interests:
 profiles:
   - icon: envelope
     icon_pack: fas
-    link: "mailto:brunno.oliveira@me.com"
+    link: mailto:brunno.oliveira@me.com
   - icon: link
     icon_pack: fas
-    link: "https://oliveirabrunno.wordpress.com/"
+    link: https://oliveirabrunno.wordpress.com/
   - icon: academicons/google-scholar
     icon_pack: ai
-    link: "https://scholar.google.com/citations?user=3kXLg6YAAAAJ&hl=en"
+    link: https://scholar.google.com/citations?user=3kXLg6YAAAAJ&hl=en
   - icon: academicons/orcid
     icon_pack: ai
-    link: "https://orcid.org/0000-0002-2982-149X"
+    link: https://orcid.org/0000-0002-2982-149X
 
 highlight_name: false
 user_groups:
