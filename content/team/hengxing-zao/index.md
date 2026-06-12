@@ -17,38 +17,29 @@ role: Postdoctoral Research Associate in Quantitative Ecology and Data Science
 
 # Organizations/Affiliations
 organizations:
-  - name: "Emory University"
+  - name: "Emory University & Utah State University"
     url: "https://envs.emory.edu/"
 
 # Social/Academic Networking
 profiles:
-  # - icon: envelope
-  #   icon_pack: fas
-  #   link: mailto:alexbaecher@emory.edu
-  # - icon: link
-  #   icon_pack: fas
-  #   link: www.questlab.eco
-  # - icon: academicons/google-scholar
-  #   icon_pack: ai
-  #   link: https://scholar.google.com/citations?user=zl3lDnEAAAAJ&hl=en
-  # - icon: academicons/orcid
-  #   icon_pack: ai
-  #   link: https://orcid.org/0000-0003-0247-5758
-  # - icon: academicons/researchgate
-  #   icon_pack: ai
-  #   link: https://www.researchgate.net/profile/J-Baecher?ev=hdr_xprf
-  # - icon: brands/github
-  #   icon_pack: fab
-  #   link: https://github.com/slamander
-  # - icon: academicons/cv
-  #   icon_pack: ai
-  #   link: /files/cv_latex.pdf
-  # - icon: brands/facebook
-  #   icon_pack: fab
-  #   link: https://www.facebook.com/baechermander
-  # - icon: brands/bluesky
-  #   icon_pack: fab
-  #   link: https://bsky.app/profile/alexbaecher.bsky.social
+  - icon: envelope
+    icon_pack: fas
+    link: mailto:hxzou.ecology@gmail.com
+  - icon: link
+    icon_pack: fas
+    link: https://hengxingzou.github.io/
+  - icon: academicons/google-scholar
+    icon_pack: ai
+    link: https://scholar.google.com/citations?user=SJUUl-0AAAAJ&hl=en
+  - icon: brands/github
+    icon_pack: fab
+    link: https://github.com/github.com/hengxingzou
+  - icon: academicons/cv
+    icon_pack: ai
+    link: https://hengxingzou.github.io/files/CV_HengxingZou.pdf
+  - icon: brands/bluesky
+    icon_pack: fab
+    link: https://bsky.app/profile/hengxingzou.bsky.social
   
 user_groups:
   - Postdoctoral Researchers
@@ -128,3 +119,5 @@ user_groups:
 #     summary: |
 #       [Dept. Biology](https://biology.uark.edu/)
 ---
+
+Hengxing Zou is interested in how changes in species distribution over space and time affect species interactions. Using survey data of bird populations, he has been investigating how spatial range shifts over half a century may have affected functional diversity and predator-prey interactions in local communities. He has also developed new methods of collecting interaction data from participatory science platforms using large language models. Previously, Hengxing was a Postdoctoral Fellow at the Institute for Global Change Biology at the University of Michigan. Hengxing received his PhD from Rice University, where he used a combination of theoretical models and controlled experiments to investigate the consequences of species timing on their interactions and community composition.
