@@ -24,22 +24,22 @@ organizations:
 profiles:
   - icon: envelope
     icon_pack: fas
-    link: mailto:hxzou.ecology@gmail.com
+    link: "mailto:hxzou.ecology@gmail.com"
   - icon: link
     icon_pack: fas
-    link: https://hengxingzou.github.io/
+    link: "https://hengxingzou.github.io/"
   - icon: academicons/google-scholar
     icon_pack: ai
-    link: https://scholar.google.com/citations?user=SJUUl-0AAAAJ&hl=en
+    link: "https://scholar.google.com/citations?user=SJUUl-0AAAAJ&hl=en"
   - icon: brands/github
     icon_pack: fab
-    link: https://github.com/github.com/hengxingzou
+    link: "https://github.com/github.com/hengxingzou"
   - icon: academicons/cv
     icon_pack: ai
-    link: https://hengxingzou.github.io/files/CV_HengxingZou.pdf
+    link: "https://hengxingzou.github.io/files/CV_HengxingZou.pdf"
   - icon: brands/bluesky
     icon_pack: fab
-    link: https://bsky.app/profile/hengxingzou.bsky.social
+    link: "https://bsky.app/profile/hengxingzou.bsky.social"
   
 user_groups:
   - Postdoctoral Researchers
