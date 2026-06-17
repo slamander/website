@@ -39,10 +39,7 @@
     <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:2rem; margin-bottom:2rem;">
       {{ range $query }}
         {{ $avatar := (.Resources.ByType "image").GetMatch "*avatar*" }}
-        {{ $link := "" }}
-        {{ with site.GetPage (printf "/team/%s" (path.Base .File.Dir)) }}
-          {{ $link = .RelPermalink }}
-        {{ end }}
+        {{ $link := .RelPermalink }}
 
         <div style="text-align:center; width:200px;">
           {{ if $avatar }}
