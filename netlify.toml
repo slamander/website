@@ -1,5 +1,5 @@
 [build]
-  command = "hugo --gc -b $URL"
+command = "hugo --gc -b https://questlab.eco"
   publish = "dist"
 
 [build.environment]
