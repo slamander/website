@@ -194,7 +194,7 @@ library(kableExtra)
 
 # SELECT PRESENTATIONS
 
-   **Reverse chronological** • ***†Student mentee presenter***• **Total presentations:** ***41*** ([***see all***](https://drive.google.com/uc?export=download&id=1IEIzljscjUXfYkjzYkFtWCCD6iwYBgSQ))
+   **Reverse chronological • †Student mentee presenter • Total presentations:** ***41*** ([***see all***](https://drive.google.com/uc?export=download&id=1IEIzljscjUXfYkjzYkFtWCCD6iwYBgSQ))
 
 12. **Baecher, JA**. ***2026***. *Ecology of rapid change: From behavior to movements to range dynamics*. ***Emory University***, *Atlanta, GA* [***slides***](https://drive.google.com/uc?export=download&id=1vUtZ8b9n1s9lPKrPQhpeAffjUDFqGToZ) [***video***](https://drive.google.com/file/d/1VGHDytkEY54jy6FvXvcOUSdMpeQiE7Pd/view?usp=sharing)
 
@@ -313,19 +313,20 @@ library(kableExtra)
 
   **Publically available at Questlab [website](questlab.eco)**
 
--    ***Mixed Effects Models in R*** [\faGlobe](https://questlab.dev/post/mixed-effects-models-in-r/) \hfill 2025 
+-    ***Mixed Effects Models in R*** [\faGlobe](https://questlab.eco/post/mixed-effects-models-in-r/) \hfill 2025 
   -    Open source and continuously updated *Rshiny* tool
--    ***Spatial Structures in Ecological Models*** [\faGlobe](https://questlab.dev/post/ecological-spatial-structures/) \hfill 2025 
+-    ***Spatial Structures in Ecological Models*** [\faGlobe](https://questlab.eco/post/ecological-spatial-structures/) \hfill 2025 
   -    Comprehensive tutorial for spatially-explicit modeling with descriptions
--    ***Intro to R Coding:*** 
-  -      Part 1: basics [\faGlobe](https://questlab.dev/post/r-intro/), Part 2: advanced [\faGlobe](https://questlab.dev/post/r-intro-pt2/) \hfill 2022 
--    ***Machine learning the “Tidy” way*** [\faGlobe](https://questlab.dev/post/ml-tidymodels/) \hfill 2021 
+-    ***Intro to R Coding:***  \hfill 2022 
+  -    Part 1: basics [\faGlobe](https://questlab.eco/post/r-intro/)
+  -    Part 2: advanced [\faGlobe](https://questlab.eco/post/r-intro-pt2/)
+-    ***Machine learning the “Tidy” way*** [\faGlobe](https://questlab.eco/post/ml-tidymodels/)
   -    Tutorial for developing AI/ML models with *tidymodels* and *carot*
--    ***Linear regression with gradient decent*** [\faGlobe](https://questlab.dev/post/gradient-descent/) \hfill 2021 
+-    ***Linear regression with gradient decent*** [\faGlobe](https://questlab.eco/post/gradient-descent/) \hfill 2021 
   -    Tutorial for developing custom linear models with maximum likelihood and gradient descent
--    ***Mapping ecological flow in R*** [\faGlobe](https://questlab.dev/post/connectivity-script/) \hfill 2020 
+-    ***Mapping ecological flow in R*** [\faGlobe](https://questlab.eco/post/connectivity-script/) \hfill 2020 
   -    Tutorial for connectivity modeling with randomized shortest paths, least cost, and circuit theory
--    ***Empirical Dynamic Models for forecasting*** [\faGlobe](https://questlab.dev/post/edm-script/) \hfill 2016 
+-    ***Empirical Dynamic Models for forecasting*** [\faGlobe](https://questlab.eco/post/edm-script/) \hfill 2016 
   -    Tutorial for forecasting non-linear timeseries data
 
 # FUNDING
@@ -335,7 +336,7 @@ library(kableExtra)
 ```{r funding-table}
 funding <- tribble(
   ~Amount, ~Organization, ~Fund, ~Year,
-  "$680,000", "Emory University", "Lab Start-up Fund", "2026",
+  # "$680,000", "Emory University", "Lab Start-up Fund", "2026",
   "$130,000", "US Geological Survey", "Climate Adaptation Postdoctoral Fellows", "2025",
   "$195,000", "University of Florida", "Doctoral Preeminence Fellowship Award", "2019",
   "$4,000", "University of Florida", "Robin Nadeau Graduate Research Award", "2019",
@@ -361,12 +362,13 @@ kable(funding,
                 font_size = 11)
 ```
 
-   **Total Funding:** ***\$1,024,000*** -  
+<!--    **Total Funding:** ***\$1,024,000*** -   -->
 
 # PROFESSIONAL ACTIVITIES
 
 - **Peer Review** (Total Requested: ***38*** \| Total Reviewed: ***25***)
   - *Biological Conservation, Conservation Science and Practice, Ecography, Ecology, Ecology & Evolution, Frontiers in Ecology and Environment, Herpetological Bulletin, Herpetological Conservation Biology, Herpetological Review, Hydrobiologia, Natural Areas Journal, Nature Ecology & Evolution, Oecologia, Scientific Reports, Wildlife Society Bulletin*
+  -  
   -  
 - **Professional Membership**
   - ***Ecological Society of America*** \hfill 2019 – Present 
@@ -380,6 +382,7 @@ kable(funding,
   - ***Society of Freshwater Ecology*** \hfill 2012 – 2014 
     - Instars Fellow (2012 & 2013)
   -  
+  -  
 - **Working Groups**
   - [***BioShifts***](https://www.fondationbiodiversite.fr/en/the-frb-in-action/programs-and-projects/le-cesab/bioshifts/) (Member, Group Leader) \hfill 2022 – Present 
   - ***DirtClim*** (Core team) \hfill 2019 – Present 
@@ -388,8 +391,7 @@ kable(funding,
   - [***ZooMu Network***](https://zoomunetwork.org/) (Member) \hfill 2024 – Present 
   - ***USGS CAP Fellows National Synthesis Effort*** (Postdoctoral Fellow) \hfill 2025 – Present 
   - [***Southeast RISCC***](https://southeastriscc.org/) (Member) \hfill 2022 – Present 
-
- 
+  -  
 
 # NON-FUNDED PROPOSALS
 
