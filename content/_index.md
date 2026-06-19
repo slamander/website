@@ -62,8 +62,6 @@ sections:
         </p>
         
         **Interested?** Take a look at some of our [research projects](/project/) and [publications](/publications/) (seen below). To inquire about opportunities, reach out to Alex [✉️](mailto:jbaecher@gmail.com).
-      spacing:
-        padding: ["50px", "15px", "0px", "0px"]
       design:
       background:
         color: ''
