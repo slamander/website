@@ -23,6 +23,9 @@ main:
   - name: Diversity
     url: '/dei/'
     weight: 80
+  - name: Activities
+    url: /photos/
+    weight: 90
   - name: Join us
     url: '/join/'
-    weight: 90
+    weight: 100
