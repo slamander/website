@@ -31,7 +31,7 @@ sections:
           parallax: true
           text_color_light: false
 
-  - block: markdown
+  - block: people
     content:
       title: Welcome to Qμest lab
       text: |
@@ -40,15 +40,13 @@ sections:
         <img src="/media/icon.png?v=F" alt="Quest at Emory shield" width="300">
         </p>
 
-        The Qμest lab is led by [**Dr. J Alex Baecher**](/team/admin/) ([⬇️ *vita*](/files/cv_latex.pdf) or [✉️](mailto:jbaecher@gmail.com)) and found in Emory's Dept. of Environmental Science ([**ENVS**](https://envs.emory.edu/index.html)). We are an applied ecological research group, broadly interested in the processes that determine the distribution of biodiversity in space and time. Our work integrates field studies, laboratory experiments, big data, cutting-edge modeling techniques, and high-performance computing to address questions related to conservation, invasions, disease, and global change. 
-
-      design:
-      columns: '1'
-      spacing:
-        padding: ["0px", "0", "0px", "0"]
-      background:
-        color: ''
-        text_color_light: false 
+        ### The Qμest lab is led by [**Dr. J Alex Baecher**](/team/admin/) ([⬇️ *vita*](/files/cv_latex.pdf) or [✉️](mailto:jbaecher@gmail.com)) and found in Emory's Dept. of Environmental Science ([**ENVS**](https://envs.emory.edu/index.html)). We are an applied ecological research group, broadly interested in the processes that determine the distribution of biodiversity in space and time. Our work integrates field studies, laboratory experiments, big data, cutting-edge modeling techniques, and high-performance computing to address questions related to conservation, invasions, disease, and global change. 
+      user_groups:
+        - Principal Investigator
+    design:
+      show_interests: false
+      show_role: true
+      show_social: true
 
   - block: markdown
     content:
@@ -64,10 +62,9 @@ sections:
         </p>
         
         **Interested?** Take a look at some of our [research projects](/project/) and [publications](/publications/) (seen below). To inquire about opportunities, reach out to Alex [✉️](mailto:jbaecher@gmail.com).
-      design:
-      columns: '1'
       spacing:
-        padding: ["0px", "0", "0px", "0"]
+        padding: ["50px", "15px", "0px", "0px"]
+      design:
       background:
         color: ''
         text_color_light: false 
@@ -81,6 +78,8 @@ sections:
         enable: true
         text: "See all projects →"
         link: project/
+      spacing:
+        padding: ["0px", "0px", "0px", "0px"]
       filters:
         folders:
           - project
