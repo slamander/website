@@ -34,50 +34,50 @@ library(kableExtra)
 ```
 
 ::: contact-info
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; \faEnvelope: [alexbaecher\@emory.edu](mailto:alexbaecher@emory.edu) • \faPhone: (352) 226-3983 • \faGlobe: [www.questlab.eco](https://questlab.eco)  
+                  \faEnvelope: [alexbaecher\@emory.edu](mailto:alexbaecher@emory.edu) • \faPhone: (352) 226-3983 • \faGlobe: [www.questlab.eco](https://questlab.eco)
 :::
 
 ::: contact-info
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\faGithub: [*slamander*](https://www.github.com/slamander) • \faOrcid: [0000-0003-0247-5758](https://orcid.org/0000-0003-0247-5758) • \faGraduationCap: [google scholar](https://scholar.google.com/citations?user=zl3lDnEAAAAJ&hl=en) 
-::: 
+                        \faGithub: [*slamander*](https://www.github.com/slamander) • \faOrcid: [0000-0003-0247-5758](https://orcid.org/0000-0003-0247-5758) • \faGraduationCap: [google scholar](https://scholar.google.com/citations?user=zl3lDnEAAAAJ&hl=en)
+:::
 
-&nbsp;
+ 
 
 # APPOINTMENTS
 
 - **Assistant Professor of Applied Ecology** \hfill Aug 2026 – Present 
   - *Emory University* \| Department of Environmental Science
-- &nbsp;
+-  
 - **Postdoctoral Fellow in Quantitative Ecology** \hfill July 2025 – July 2026 
-  - *Utah State University* \| Department of Rangeland Resources
-- &nbsp;
+  - *Utah State University* \| Department of Wildland Resources
+-  
 - **Postdoctoral Research Associate** \hfill Aug 2024 – July 2025 
   - *University of Florida* \| Institute for Food and Agricultural Science
-- &nbsp;
+-  
 - **Doctoral Preeminence Fellow** \hfill Aug 2019 – Aug 2024 
   - *University of Florida* \| Department of Wildlife Ecology
-- &nbsp;
+-  
 - **Conservation and Research Technician** \hfill Jan 2018 – July 2019 
   - *Memphis Zoo* \| Department of Conservation and Research
-- &nbsp;
+-  
 - **NSF REU Research Coordinator** \hfill May 2017 – Aug 2017 
   - *Eastern Kentucky University* \| Department of Biology
-- &nbsp;
+-  
 - **Graduate Teaching Assistant** \hfill May 2015 – Aug 2017 
   - *Eastern Kentucky University* \| Department of Biology
-- &nbsp;
+-  
 - **Research Assistant** \hfill Mar 2012 – Mar 2015 
   - *University of Arkansas* \| Department of Biology
-- &nbsp;
+-  
 
 # EDUCATION
 
 - **Doctor of Philosophy, Interdisciplinary Ecology** \hfill Aug 2024 
   - *University of Florida*
-- &nbsp;
+-  
 - **Master of Science, Biology** \hfill Dec 2017 
   - *Eastern Kentucky University*
-- &nbsp;
+-  
 - **Bachelor of Science, Biology** \hfill May 2014 
   - *University of Arkansas*
 
@@ -317,9 +317,9 @@ library(kableExtra)
   -    Open source and continuously updated *Rshiny* tool
 -    ***Spatial Structures in Ecological Models*** [\faGlobe](https://questlab.eco/post/ecological-spatial-structures/) \hfill 2025 
   -    Comprehensive tutorial for spatially-explicit modeling with descriptions
--    ***Intro to R Coding:***  \hfill 2022 
-  -    Part 1: basics [\faGlobe](https://questlab.eco/post/r-intro/)
-  -    Part 2: advanced [\faGlobe](https://questlab.eco/post/r-intro-pt2/)
+-    ***Intro to R Coding:*** \hfill 2022 
+  -    Part 1: basics [\faGlobe](https://questlab.eco/post/r-intro/)
+  -    Part 2: advanced [\faGlobe](https://questlab.eco/post/r-intro-pt2/)
 -    ***Machine learning the “Tidy” way*** [\faGlobe](https://questlab.eco/post/ml-tidymodels/)
   -    Tutorial for developing AI/ML models with *tidymodels* and *carot*
 -    ***Linear regression with gradient decent*** [\faGlobe](https://questlab.eco/post/gradient-descent/) \hfill 2021 
@@ -428,36 +428,27 @@ kable(non_funding,
    **Since PhD (2019 - Present)**
 
 - ***Robert Guralnick, PhD*** \hfill 2019 – Present 
-
   - **Curator of Biodiversity Informatics** \| *Florida Natural History Museum*
-    -     \faPhone: (352) 273-1980 • \faEnvelope: [***robgur\@gmail.com***](mailto:robgur@gmail.com) • [***Guralnick lab***](mailto:robgur@gmail.com)\
-
--  
+    -     \faPhone: (352) 273-1980 • \faEnvelope: [***robgur\@gmail.com***](mailto:robgur@gmail.com) • [***Guralnick lab***](mailto:robgur@gmail.com)
+    - 
 
 - ***Brett Scheffers, PhD*** \hfill 2019 – Present 
-
   - **Associate Professor** \| *Dept of Wildlife Ecology, University of Florida*
   - **Director** \| *Florida Climate Institute, University of Florida*
-    -     \faPhone: (352) 846-0570 • \faEnvelope: [***brett.scheffers\@ufl.edu***](mailto:brett.scheffers@ufl.edu) • \faGlobe: [***Scheffers lab***](http://schefferslab.com/)\
-
--  
+    -     \faPhone: (352) 846-0570 • \faEnvelope: [***brett.scheffers\@ufl.edu***](mailto:brett.scheffers@ufl.edu) • \faGlobe: [***Scheffers lab***](http://schefferslab.com/)
+    - 
 
 - ***Lindsay Campbell, PhD*** \hfill 2024 – Present 
-
   - **Assistant Professor** \| *Florida Medical Entomology Lab, University of Florida*
-    -     \faPhone: (772) 226-6666 • \faEnvelope: [***lcampbell2\@ufl.edu***](mailto:lcampbell2@ufl.edu) • \faGlobe: [***Campbell lab***](http://lcampbelllab.wixsite.com/campbell-lab)\
-
--  
+    -     \faPhone: (772) 226-6666 • \faEnvelope: [***lcampbell2\@ufl.edu***](mailto:lcampbell2@ufl.edu) • \faGlobe: [***Campbell lab***](http://lcampbelllab.wixsite.com/campbell-lab)
+    - 
 
 - ***TJ Clark-Wolf, PhD*** \hfill 2025 – Present 
-
   - **Assistant Professor** \| *Dept of Wildland Resources & Ecology Center, Utah State University*
-    -     \faPhoneSlash: email preferred • \faEnvelope: [***t.j.clark-wolf\@usu.edu***](mailto:t.j.clark-wolf@usu.edu) • \faGlobe: [***Clark-Wolf lab***](https://www.clarkwolflab.com/)\
-
--  
+    -     \faPhoneSlash: email preferred • \faEnvelope: [***t.j.clark-wolf\@usu.edu***](mailto:t.j.clark-wolf@usu.edu) • \faGlobe: [***Clark-Wolf lab***](https://www.clarkwolflab.com/)
+    - 
 
 - ***Erica Stuber, PhD*** \hfill 2025 – Present 
-
   - **Assistant Unit Leader** \| *USGS UT Cooperative Fish and Wildlife Research Unit*
   - **Assistant Professor** \| *Dept of Wildland Resources & Ecology Center*
     -     \faPhoneSlash: email preferred • \faEnvelope: [***erica.stuber\@usu.edu***](mailto:erica.stuber@usu.edu) • \faGlobe: [***Stuber lab***](https://efstuber.wixsite.com/xscaleeco)
