@@ -54,7 +54,7 @@ user_groups:
   - Principal Investigator
 
 work:
-  - position: Assistant Professor of Applied Ecology (incoming)
+  - position: Assistant Professor of Applied Ecology
     company_name: Emory University
     company_url: "https://emory.edu/"
     company_logo: "/media/Emory_University_Seal.png"
@@ -63,12 +63,12 @@ work:
     summary: |
       [Dept. Environmental Science](https://envs.emory.edu/)
 
-  - position: Postdoctoral Research Fellow (outgoing)
+  - position: Postdoctoral Research Fellow
     company_name: Utah State University
     company_url: 'https://www.usu.edu/'
     company_logo: 'https://upload.wikimedia.org/wikipedia/en/b/ba/Utah_State_University_seal.svg'
     date_start: 2025-08-01
-    date_end: ''
+    date_end: 2026-07-01
     summary: |2-
       [Clark-Wolf lab](https://www.clarkwolflab.com/) & [Stuber lab](https://efstuber.wixsite.com/xscaleeco/)
 

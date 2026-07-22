@@ -10,7 +10,7 @@ sections:
       title: "Opportunities in the Quest Lab!"
       text: |
 
-        The Quest Lab is actively recruiting undergraduate researchers and a postdoctoral researcher for the Fall 2026 semester. We will also be recruiting a PhD student for the Spring 2026 semester. Please send out all inquiries to [Dr. J Alex Baecher](mailto:jbaecher@gmail.com)!
+        The Quest Lab is actively recruiting undergraduate researchers for the Fall 2026 semester and a PhD student for the Fall 2027 semester. Please send out all inquiries to [Dr. J Alex Baecher](mailto:jbaecher@gmail.com)!
 
         <br>
 
@@ -20,12 +20,6 @@ sections:
 
 
         <br>
-
-        <h3> Postdoctoral Research Associate in Quantitative Ecology and Data Science </h3>
-
-        We are actively recruiting a Postdoctoral Research Associate in Quantitative Ecology and Data Science. The candidate will join an interdisciplinary research team spanning Emory University, Utah State University, and the U.S. Geological Surveyis. The position is for a 1 year term (beginning Fall 2026), with the possibility for extension a second and third year based on performance. We will begin evaluating applications on April 31st (2026), but applications will be accepted until the position is filled.For informal inquiries, please contact [Dr. J Alex Baecher](mailto:jbaecher@gmail.com) and [Dr. T.J. Clark-Wolf](mailto:t.j.clark-wolf@usu.edu).
-
-        For a description of this position, [see this advertisement](https://drive.google.com/uc?export=download&id=1HJuT6Lp9kmi9fPX3jk1r_CSoxGB1kEuf).
 
         <br>
 
