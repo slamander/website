@@ -83,7 +83,7 @@ library(kableExtra)
 
 # PUBLICATIONS
 
-   **Reverse chronological** • **§Mentee co-author** • **Citations:** ***438*** • **h-index:** ***8***
+   **Reverse chronological** • **§Mentee co-author** • **Citations:** ***535*** • **h-index:** ***9***
 
 ## Published
 
