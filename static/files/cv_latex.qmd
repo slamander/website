@@ -45,7 +45,7 @@ library(kableExtra)
 
 # APPOINTMENTS
 
-- **Assistant Professor of Applied Ecology** \hfill Aug 2026 – Present 
+- **Assistant Professor of Applied Ecology **[\faGlobe](https://envs.emory.edu/people/bios/baecher-alex.html) \hfill Aug 2026 – Present 
   - *Emory University* \| Department of Environmental Science
 -  
 - **Postdoctoral Fellow in Quantitative Ecology** \hfill July 2025 – July 2026 
@@ -176,7 +176,7 @@ library(kableExtra)
 
 <!-- -->
 
-4.  Klinges, DH, **JA Baecher**, L Soifer, BR Scheffers. ***In review***. *Land modification defines climate change as experienced by life on earth*. ***Science***
+4.  Klinges, DH, **JA Baecher**, L Soifer, BR Scheffers. ***In revision***. *Land modification defines climate change as experienced by life on earth*. ***Science***
 
 <!-- -->
 
@@ -366,8 +366,8 @@ kable(funding,
 
 # PROFESSIONAL ACTIVITIES
 
-- **Peer Review** (Total Requested: ***38*** \| Total Reviewed: ***25***)
-  - *Biological Conservation, Conservation Science and Practice, Ecography, Ecology, Ecology & Evolution, Frontiers in Ecology and Environment, Herpetological Bulletin, Herpetological Conservation Biology, Herpetological Review, Hydrobiologia, Natural Areas Journal, Nature Ecology & Evolution, Oecologia, Scientific Reports, Wildlife Society Bulletin*
+- **Peer Review** (Total Requested: ***41*** \| Total Reviewed: ***25***)
+  - *Biological Conservation, Conservation Science and Practice, Ecography, Ecology, Ecology & Evolution, Frontiers in Ecology and Environment, Herpetological Bulletin, Herpetological Conservation Biology, Herpetological Review, Hydrobiologia, Mathematical Bioscience, Natural Areas Journal, Nature Ecology & Evolution, Oecologia, Scientific Reports, Wildlife Society Bulletin*
   -  
   -  
 - **Professional Membership**
