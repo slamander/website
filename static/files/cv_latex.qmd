@@ -55,7 +55,7 @@ library(kableExtra)
   - **Utah State University** \| Department of Wildland Resources
 -  
 - ***Postdoctoral Research Associate*** \hfill Aug 2024 – July 2025 
-  - **University of Florida** \| Institute for Food and Agricultural Science
+  - **University of Florida** & **Florida Natural History Museum** 
 -  
 - ***Doctoral Preeminence Fellow*** \hfill Aug 2019 – Aug 2024 
   - **University of Florida** \| Department of Wildlife Ecology
@@ -86,7 +86,7 @@ library(kableExtra)
 
 # PUBLICATIONS
 
-   **Reverse chronological** • **§Mentee co-author** • **Citations:** ***535*** • **h-index:** ***9***
+   **Reverse chronological** • **§Mentee co-author** • **Citations:** ***568*** • **h-index:** ***9***
 
 ## Published
 
@@ -422,12 +422,14 @@ library(kableExtra)
 
 <!-- -->
 
- 
-
 # TEACHING
 
 ## Instructor of Record
 
+- **Emory University** \| Department of Environmental Sciences
+  - *Landscape Ecology* \hfill Spring 2027  
+  - *Intro Environmental Sciences* \hfill Spring 2027 
+- 
 - **University of Florida** \| School of Natural Resources and Environment
   - *Environmental Science Lab* \hfill Fall 2022 & 2023 
 
@@ -438,46 +440,46 @@ library(kableExtra)
 
 ## Guest Lectures
 
+- **Emory University** \| Department of Environmental Sciences
+  - *Field Methods and Quantitative Analysis in Ecology* \hfill Fall 2025 
+- 
 - **Utah State University** \| Department of Wildland Resources
   - *Landscape Ecology* \hfill Fall 2025 
--  
+- 
 - **University of Florida** \| School of Natural Resources and Environment
   - *Community Science for Ecologists* \hfill Spring 2025 
--  
-- **University of Florida** \| School of Natural Resources and Environment
   - *Ecology of Climate Change* \hfill Spring 2023 
--  
-- **University of Florida** \| School of Natural Resources and Environment
   - *Wildlife of Florida* \hfill Spring 2022 
--  
+-
 - **Eastern Kentucky University** \| Department of Biology
   - *Applied Learning in Biology* \hfill Spring 2016 
--  
+- 
 - **Radford University** \| Department of Biology
   - *Appalachian Herpetology* \hfill Spring 2016 
--  
 
-# STUDENT MENTORSHIP
+# MENTORSHIP
 
-   **Grad student** (MS, PhD) • Φ **author** • Ψ **conference** • Ω **committee** • → **career prep**
+   **Postdoctoral researcher** (postdoc) • **Grad student** (MS, PhD) • Φ **author** • Ψ **conference** • Ω **committee** • → **career prep**
 
 - **Eastern Kentucky University** \hfill 2015 – 2017
   - Alex Gibson, Emily Jones (Φ, Ψ, →MS), Sarah Ashbrook (Ψ), Peyton Blair (Ψ), [Peter Grap](https://www.linkedin.com/in/peter-grap-2238a0158/) (Ψ, →MS, →PhD), Kelley Hoefer (Ψ), Myesha James (Ψ), [Jacob Peters](https://geospatial.yale.edu/profile/jacob-peters) (Ψ, →MS, →PhD), [Julia Portmann](https://geospatial.yale.edu/profile/julia-portmann) (Ψ, →MS, →PhD), [Jocelyn Stalker](https://jocelynstalker.github.io/) (Φ, Ψ, →MS, →PhD)\
      
 - **Rhodes College** \hfill 2018 - 2019
-  - ([Madeline Estes](https://www.linkedin.com/in/madeline-estes-b65887140/), Ψ, Ω, →MS)\
+  - [Madeline Estes](https://www.linkedin.com/in/madeline-estes-b65887140/), (Ψ, Ω, →MS)\
      
 - **University of Florida** \hfill 2019 – 2025
   - Brittany Arthur, Noah Bowen, Sierra Scauzillo (Ψ, Ω), [V Anand Akshay](https://scholar.google.com/citations?user=Kw8YWeMAAAAJ&hl=en) (Φ, Ψ, PhD), [Amy Bauer](https://github.com/amybauer) (Φ, Ψ, PhD), [Yasmin Tavares](https://scholar.google.com/citations?user=bOuCqlYAAAAJ&hl=en) (MS, Φ, Ψ, →PhD), [Yesenia Sanchez](https://www.linkedin.com/in/yesenia-s%C3%A1nchez-aa1188273/) (Φ, Ψ)\
      
-- **Utah State University** \hfill 2025 – Present
-  - Jack Rasmussen (PhD), [Mallory Sandoval-Lambert](https://scholar.google.com/citations?user=W_sZJ2EAAAAJ&hl=en) (MS), [Adrien Bastidas](https://www.linkedin.com/in/adrien-bastidas-581b4127a/) (PhD)
+- **Utah State University** \hfill 2025 – 2026
+  - Jack Rasmussen (PhD), [Mallory Sandoval-Lambert](https://scholar.google.com/citations?user=W_sZJ2EAAAAJ&hl=en) (MS), [Adrien Bastidas](https://www.linkedin.com/in/adrien-bastidas-581b4127a/) (PhD)\
 
- 
+- **Emory University** \hfill 2026 – Present
+  - [Hengxing Zou](https://hengxingzou.github.io/) (postdoc), Joe Gadomski (→MS), Michelle Chang\
+
+<!--  -->
 
 # WORKSHOPS
-
-   **Reverse chronological**
+   **Reverse chronological**  
 
 1.  Fletcher, RJ, **JA Baecher**, M Lezzi, A Marx. ***2023***. *Application of connectivity modeling to identify and predict movement and range redistribution*. ***Species on the Move***, *Bonita Springs, FL* [***slides***](https://docs.google.com/presentation/d/1jsUhEewx3OWyfGIZvX3fCAWCGYeYyffM/edit?usp=sharing&ouid=118161165194611535602&rtpof=true&sd=true)
 
@@ -485,27 +487,21 @@ library(kableExtra)
 
 3.  Fletcher, RJ, **JA Baecher**, M Lezzi, A Marx. ***2022***. *Predicting the spread of invasive Burmese pythons in Florida*. ***Annual Meeting of the International Association of Landscape Ecologists - North America*** (virtual) [***video***](https://www.youtube.com/watch?v=6A4WQrwyIHI&ab_channel=RobertFletcher)
 
- 
+<!--  -->
 
 # EDUCATIONAL RESOURCES
 
   **Publically available at Questlab [website](questlab.eco)**
 
 -    ***Mixed Effects Models in R*** [\faGlobe](https://questlab.eco/post/mixed-effects-models-in-r/) \hfill 2025 
-  -    Open source and continuously updated *Rshiny* tool
 -    ***Spatial Structures in Ecological Models*** [\faGlobe](https://questlab.eco/post/ecological-spatial-structures/) \hfill 2025 
-  -    Comprehensive tutorial for spatially-explicit modeling with descriptions
--    ***Intro to R Coding:*** \hfill 2022 
-  -    Part 1: basics [\faGlobe](https://questlab.eco/post/r-intro/)
-  -    Part 2: advanced [\faGlobe](https://questlab.eco/post/r-intro-pt2/)
--    ***Machine learning the “Tidy” way*** [\faGlobe](https://questlab.eco/post/ml-tidymodels/)
-  -    Tutorial for developing AI/ML models with *tidymodels* and *carot*
+-    ***Intro to R Coding:*** Part 1: basics [\faGlobe](https://questlab.eco/post/r-intro/) Part 2: advanced [\faGlobe](https://questlab.eco/post/r-intro-pt2/) \hfill 2022 
+-    ***Machine learning the “Tidy” way*** [\faGlobe](https://questlab.eco/post/ml-tidymodels/) \hfill 2021 
 -    ***Linear regression with gradient decent*** [\faGlobe](https://questlab.eco/post/gradient-descent/) \hfill 2021 
-  -    Tutorial for developing custom linear models with maximum likelihood and gradient descent
 -    ***Mapping ecological flow in R*** [\faGlobe](https://questlab.eco/post/connectivity-script/) \hfill 2020 
-  -    Tutorial for connectivity modeling with randomized shortest paths, least cost, and circuit theory
 -    ***Empirical Dynamic Models for forecasting*** [\faGlobe](https://questlab.eco/post/edm-script/) \hfill 2016 
-  -    Tutorial for forecasting non-linear timeseries data
+- 
+- 
 
 # FUNDING
 
@@ -544,9 +540,8 @@ kable(funding,
 
 # PROFESSIONAL ACTIVITIES
 
-- **Peer Review** (Total Requested: ***41*** \| Total Reviewed: ***25***)
-  - *Biological Conservation, Conservation Science and Practice, Ecography, Ecology, Ecology & Evolution, Frontiers in Ecology and Environment, Herpetological Bulletin, Herpetological Conservation Biology, Herpetological Review, Hydrobiologia, Mathematical Bioscience, Natural Areas Journal, Nature Ecology & Evolution, Oecologia, Scientific Reports, Wildlife Society Bulletin*
-  -  
+- **Peer Review** (Total Requested: ***44*** \| Total Reviewed: ***26***)
+  - *Biological Conservation, Communications Health, Conservation Science and Practice, Ecography, Ecology, Ecology & Evolution, Frontiers in Ecology and Environment, Herpetological Bulletin, Herpetological Conservation Biology, Herpetological Review, Hydrobiologia, Mathematical Biosciences, Natural Areas Journal, Nature Ecology & Evolution, Oecologia, Scientific Reports, Wildlife Society Bulletin*
   -  
 - **Professional Membership**
   - ***Ecological Society of America*** \hfill 2019 – Present 
@@ -554,12 +549,12 @@ kable(funding,
   - ***USGS Climate Adaptation Science Center***
     - Doctoral Research Fellow \| Southeastern CASC \hfill 2019 – 2024 
     - Postdoctoral Research Fellow \| Southwestern CASC \hfill 2025 – 2026 
+    - National Synthesis Team \| National CASC \hfill 2025 - Present
   - ***American Society of Ichthyologists and Herpetologists*** \hfill 2014 – 2021 
   - ***Southeastern Partners in Amphibian and Reptile Conservation*** \hfill 2014 – 2021 
   - ***Society for the Study of Amphibians and Reptiles*** \hfill 2014 - 2021 
   - ***Society of Freshwater Ecology*** \hfill 2012 – 2014 
     - Instars Fellow (2012 & 2013)
-  -  
   -  
 - **Working Groups**
   - [***BioShifts***](https://www.fondationbiodiversite.fr/en/the-frb-in-action/programs-and-projects/le-cesab/bioshifts/) (Member, Group Leader) \hfill 2022 – Present 
@@ -569,7 +564,8 @@ kable(funding,
   - [***ZooMu Network***](https://zoomunetwork.org/) (Member) \hfill 2024 – Present 
   - ***USGS CAP Fellows National Synthesis Effort*** (Postdoctoral Fellow) \hfill 2025 – Present 
   - [***Southeast RISCC***](https://southeastriscc.org/) (Member) \hfill 2022 – Present 
-  -  
+  - 
+  - 
 
 # NON-FUNDED PROPOSALS
 
@@ -598,8 +594,18 @@ kable(non_funding,
 ```
 
 **Total Non-funded:** ***\$572,500***
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
 
- 
+<!--  -->
 
 # REFERENCES
 
