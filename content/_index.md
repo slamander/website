@@ -58,7 +58,6 @@ sections:
       text: | 
         **🚨We are currently recruiting!🚨**  
         - Fall 2026: [2-3 undergraduate researchers](/team/undergraduates/)   
-        - Fall 2026: [1 postdoctoral research associate](/team/postdoc/)   
         - Spring 2027: [1 PhD student](/team/phd-student/)  
 
         <p align="center"> 

@@ -1,6 +1,6 @@
 ---
 # Display name
-title: Dr. Hengxing Zao
+title: Dr. Hengxing Zou
 
 type: publication
 person: "true"
