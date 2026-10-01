@@ -13,7 +13,7 @@ authors:
 superuser: false
 
 # Role/position
-role: Research Assistant
+role: Post-bacc Researchers
 
 # Organizations/Affiliations
 organizations:
