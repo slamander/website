@@ -13,7 +13,7 @@ authors:
 superuser: false
 
 # Role/position
-role: Post-bacc Researchers
+role: "Post-bacc Researchers"
 
 # Organizations/Affiliations
 organizations:
