@@ -11,8 +11,9 @@ sections:
         - Principal Investigator
         - Open Positions
         - Postdoctoral Researchers
+        - Post-bacc Researchers
         # - Graduate Students
-        # - Undergraduate Students
+        - Undergraduate Students
         # - High School Students
         - Alumni
     design:
