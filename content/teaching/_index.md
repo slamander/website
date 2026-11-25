@@ -25,29 +25,16 @@ sections:
 
          - active learning exercises (e.g., case studies and debates)
 
-         </p>
-        </div>
-          <div>
-            <h3>Mentoring Philosophy:</h3>
-            <p>
-
-         Key practices:
-
-         - align students’ academic progress with personal goals and well-being
-
-         - foster independent problem-solving by providing space to explore and reflect
-
-         - encourage outside collaboration and/or mentorship
-
-         </p>
-        </div>
-        </div>
-
-
-         ## Student-led research
-        My students have gone on to pursue careers in academia, state/federal agencies, and the private sector. To date, I have mentored 20 students across career stages (15 undergraduate, 2 master's, 3 doctoral), including 12 women, 6 men, and 2 non-binary students. Together, we have produced 18 conference presentations, 1 undergraduate thesis, and 10 student co-authored peer-reviewed manuscripts. Half of my undergraduate mentees have pursued advanced degrees (7 M.S., 3 Ph.D.), with many crediting our mentoring relationship as pivotal to their development as scientists.
-
         ## Previous courses
+
+        ### **Landscape Ecology** | Emory University [syllabus](/media/spring_2027.png)
+        <img src="/media/image.png" alt="ENVS 385" style="width: 1000px; height: auto;">
+        By the end of the semester, students should be capable of the following:
+        1. Describe the historical development and conceptual foundations of landscape ecology;
+        2. Apply spatial analysis tools within the R programming environment;
+        3. Apply landscape perspectives to contemporary problems in the environmental sciences;
+        4. Critically interpret scientific literature and debates in landscape ecology; and
+        5. Demonstrate scientific communication and critical thinking skills.
 
         ### **Environmental Science** | University of Florida
         *Senior-level course | 2022 -- 2024*

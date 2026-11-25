@@ -9,10 +9,6 @@ date: 2025-11-22
 slug: Ecological Spatial Structures
 categories: ["r tutorials"]
 tags: ["spatial models", "spatial ecology", "Gaussian processes", "SPDE", "R-INLA", "geostatistics", "point-referenced data", "areal data", "CAR models", "spatial autocorrelation", "mgcv", "GAM", "species distribution models", "habitat selection", "movement ecology", "step selection functions", "telemetry", "GPS tracking", "point pattern analysis", "spatstat", "Bayesian spatial models", "spatial statistics", "kriging", "reduced-rank GP", "nearest neighbor GP", "spatial splines", "spatial cross-validation", "GLMM", "GLM", "hierarchical models", "spatial random effects", "mesh", "BYM model", "Matérn covariance", "tutorial", "ecological modeling", "biodiversity", "landscape ecology", "wildlife ecology", "conservation", "R programming", "quarto", "amt package", "momentuHMM", "spatial data science"]
-image:
-  caption: ""
-  focal_point: ""
-  preview_only: true
 ---
 
 ![](featured.png)

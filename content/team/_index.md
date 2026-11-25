@@ -12,10 +12,10 @@ sections:
         - Open Positions
         - Postdoctoral Researchers
         - Post-bacc Researchers
-        # - Graduate Students
         - Undergraduate Students
-        # - High School Students
         - Alumni
+      # - High School Students
+      # - Graduate Students
     design:
       show_interests: false
       show_role: true
